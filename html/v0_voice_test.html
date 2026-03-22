@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>大梁城——語音測試</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a0f00;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif TC', 'Noto Serif SC', 'STKaiti', 'KaiTi', serif;
+      padding: 24px;
+    }
+
+    #status-bar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(0,0,0,0.6);
+      color: #c8a96e;
+      font-size: 12px;
+      padding: 8px 16px;
+      text-align: center;
+      font-family: monospace;
+    }
+
+    #main-card {
+      background: #2d1a00;
+      border: 1px solid #8b6a3a;
+      border-radius: 16px;
+      padding: 40px 32px;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    }
+
+    #scene-label {
+      color: #8b6a3a;
+      font-size: 13px;
+      letter-spacing: 3px;
+      margin-bottom: 32px;
+      text-transform: uppercase;
+    }
+
+    #text-display {
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .sentence {
+      color: #f0ddb0;
+      font-size: 22px;
+      line-height: 1.8;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .sentence.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    #tap-btn {
+      background: #8b6a3a;
+      color: #fff8ee;
+      border: none;
+      border-radius: 50px;
+      padding: 16px 48px;
+      font-size: 18px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      letter-spacing: 1px;
+    }
+
+    #tap-btn:active {
+      background: #c8a96e;
+      transform: scale(0.97);
+    }
+
+    #tap-btn:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+
+    #voice-info {
+      margin-top: 24px;
+      color: #6b5030;
+      font-size: 12px;
+      font-family: monospace;
+      line-height: 1.6;
+    }
+
+    #done-msg {
+      display: none;
+      color: #c8a96e;
+      font-size: 16px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="status-bar">語音測試頁 ── 正在偵測廣東話語音……</div>
+
+<div id="main-card">
+  <div id="scene-label">大梁城 · 語音測試</div>
+
+  <div id="text-display">
+    <div class="sentence" id="s0">（點擊開始）</div>
+    <div class="sentence" id="s1" style="display:none">大梁城的早晨，又吵又香。</div>
+    <div class="sentence" id="s2" style="display:none">有人吆喝：「熱煎餅！」</div>
+    <div class="sentence" id="s3" style="display:none">河邊有船夫在喊叫。</div>
+  </div>
+
+  <button id="tap-btn">點這裡開始</button>
+  <div id="done-msg">✓ 測試完成</div>
+
+  <div id="voice-info">偵測中……</div>
+</div>
+
+<script>
+  const sentences = [
+    { id: 's1', text: '大梁城的早晨，又吵又香。' },
+    { id: 's2', text: '有人吆喝：熱煎餅！' },
+    { id: 's3', text: '河邊有船夫在喊叫。' },
+  ];
+
+  let current = -1;
+  let cantonVoice = null;
+  let isSpeaking = false;
+
+  const btn = document.getElementById('tap-btn');
+  const statusBar = document.getElementById('status-bar');
+  const voiceInfo = document.getElementById('voice-info');
+  const doneMsg = document.getElementById('done-msg');
+
+  // 偵測語音
+  function detectVoices() {
+    const voices = window.speechSynthesis.getVoices();
+    if (voices.length === 0) return;
+
+    const candidates = [];
+    voices.forEach(v => {
+      const lang = v.lang.toLowerCase();
+      const name = v.name.toLowerCase();
+      if (
+        lang.includes('yue') ||
+        lang.includes('zh-hk') ||
+        lang.includes('zh_hk') ||
+        name.includes('cantonese') ||
+        name.includes('hong kong') ||
+        name.includes('粵') ||
+        name.includes('廣東')
+      ) {
+        candidates.push(v);
+      }
+    });
+
+    // 備用：普通話
+    const mandarinVoices = voices.filter(v => {
+      const lang = v.lang.toLowerCase();
+      return lang.includes('zh') || lang.includes('cmn');
+    });
+
+    if (candidates.length > 0) {
+      cantonVoice = candidates[0];
+      statusBar.textContent = `✓ 廣東話語音：${cantonVoice.name} (${cantonVoice.lang})`;
+      voiceInfo.textContent = `使用：${cantonVoice.name}\n語言代碼：${cantonVoice.lang}`;
+    } else if (mandarinVoices.length > 0) {
+      cantonVoice = mandarinVoices[0];
+      statusBar.textContent = `⚠ 未找到廣東話，使用：${cantonVoice.name} (${cantonVoice.lang})`;
+      voiceInfo.textContent = `注意：未找到廣東話語音\n使用備用：${cantonVoice.name} (${cantonVoice.lang})\n\n全部可用語音（${voices.length}個）：\n` +
+        voices.map(v => `${v.name} [${v.lang}]`).join('\n');
+    } else {
+      statusBar.textContent = `✗ 未找到任何中文語音`;
+      voiceInfo.textContent = `可用語音（${voices.length}個）：\n` +
+        voices.map(v => `${v.name} [${v.lang}]`).join('\n');
+    }
+  }
+
+  window.speechSynthesis.onvoiceschanged = detectVoices;
+  detectVoices();
+
+  // 播放一句
+  function speak(text, callback) {
+    if (isSpeaking) window.speechSynthesis.cancel();
+    isSpeaking = true;
+    btn.disabled = true;
+
+    const utter = new SpeechSynthesisUtterance(text);
+    if (cantonVoice) utter.voice = cantonVoice;
+    utter.lang = cantonVoice ? cantonVoice.lang : 'zh-HK';
+    utter.rate = 0.85;
+    utter.pitch = 1.0;
+
+    utter.onend = () => {
+      isSpeaking = false;
+      btn.disabled = false;
+      if (callback) callback();
+    };
+
+    utter.onerror = (e) => {
+      isSpeaking = false;
+      btn.disabled = false;
+      statusBar.textContent = `語音錯誤：${e.error}`;
+    };
+
+    window.speechSynthesis.speak(utter);
+  }
+
+  // 顯示句子
+  function showSentence(index) {
+    const s = sentences[index];
+    const el = document.getElementById(s.id);
+    el.style.display = 'block';
+    setTimeout(() => el.classList.add('visible'), 50);
+    speak(s.text);
+  }
+
+  // 按鈕邏輯
+  btn.addEventListener('click', () => {
+    current++;
+
+    if (current === 0) {
+      // 隱藏提示
+      document.getElementById('s0').style.display = 'none';
+      btn.textContent = '下一句';
+      showSentence(0);
+      return;
+    }
+
+    if (current < sentences.length) {
+      showSentence(current);
+      return;
+    }
+
+    // 完成
+    btn.style.display = 'none';
+    doneMsg.style.display = 'block';
+    statusBar.textContent = '✓ 測試完成——請告訴我有沒有聲音、是什麼語言';
+  });
+</script>
+</body>
+</html>

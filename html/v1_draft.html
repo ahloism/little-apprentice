@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>小學徒大世界——大梁城</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #f5ede0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Noto Serif TC', 'Noto Serif SC', 'STKaiti', 'KaiTi', serif;
+      user-select: none;
+    }
+
+    /* ── 開場畫面 ── */
+    #splash {
+      position: fixed;
+      inset: 0;
+      background: #c8b08a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      z-index: 100;
+    }
+
+    #splash-title {
+      color: #3a2a10;
+      font-size: 32px;
+      letter-spacing: 4px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    #splash-btn {
+      background: #d4870a;
+      color: #fff8ee;
+      border: none;
+      border-radius: 50px;
+      padding: 18px 60px;
+      font-size: 20px;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 3px;
+      box-shadow: 0 4px 16px rgba(180,100,0,0.3);
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    #splash-btn:active { background: #b87000; transform: scale(0.97); }
+
+    /* ── 靜音按鈕 ── */
+    #mute-btn {
+      position: fixed;
+      top: 12px;
+      right: 16px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid #d4a855;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      transition: background 0.15s;
+    }
+
+    #mute-btn:active { background: #fdefc8; }
+
+    /* ── 圖像區 ── */
+    #image-area {
+      width: 100%;
+      max-width: 600px;
+      height: 220px;
+      position: relative;
+      border-radius: 0 0 20px 20px;
+      overflow: hidden;
+      flex-shrink: 0;
+      transition: background 0.4s;
+    }
+
+    .img-label {
+      position: absolute;
+      top: 12px; left: 12px;
+      background: rgba(0,0,0,0.35);
+      color: #fff;
+      font-size: 11px;
+      font-family: monospace;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 1px;
+    }
+
+    .img-name {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      text-align: center;
+      color: rgba(255,255,255,0.85);
+      font-size: 15px;
+      letter-spacing: 2px;
+      padding: 12px;
+      background: linear-gradient(transparent, rgba(0,0,0,0.25));
+    }
+
+    /* ── 進度條 ── */
+    #progress-bar-wrap {
+      width: 100%;
+      max-width: 600px;
+      padding: 10px 20px 0;
+    }
+
+    #progress-bar-bg {
+      background: #e0c99a;
+      border-radius: 4px;
+      height: 5px;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    #progress-bar-fill {
+      background: #d4870a;
+      height: 100%;
+      border-radius: 4px;
+      transition: width 0.4s ease;
+      width: 0%;
+    }
+
+    /* ── 主內容區 ── */
+    #main {
+      width: 100%;
+      max-width: 600px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 14px 20px 32px;
+      gap: 14px;
+      opacity: 1;
+      transition: opacity 0.3s ease;
+    }
+
+    #main.fade-out { opacity: 0; }
+
+    /* ── 節點標題 ── */
+    #node-title {
+      color: #7a5820;
+      font-size: 22px;
+      letter-spacing: 2px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* ── 文字區 ── */
+    #text-area {
+      background: #fffaf3;
+      border: 1px solid #e0c99a;
+      border-radius: 14px;
+      padding: 20px;
+      min-height: 130px;
+      max-height: 280px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      cursor: pointer;
+      scroll-behavior: smooth;
+    }
+
+    .story-line {
+      color: #3a2a10;
+      font-size: 19px;
+      line-height: 1.9;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      flex-shrink: 0;
+    }
+
+    .story-line.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .question-line {
+      color: #a07840;
+      font-size: 19px;
+      line-height: 1.7;
+      margin-top: 6px;
+    }
+
+    /* ── 點擊引導 ── */
+    #tap-hint {
+      display: none;
+      text-align: center;
+      font-size: 28px;
+      animation: bounce 1.2s infinite;
+      cursor: pointer;
+      color: #d4a855;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    /* ── 開始按鈕（第一節點）── */
+    #start-btn {
+      display: none;
+      background: #d4870a;
+      color: #fff8ee;
+      border: none;
+      border-radius: 50px;
+      padding: 18px 0;
+      width: 100%;
+      font-size: 20px;
+      font-family: inherit;
+      cursor: pointer;
+      letter-spacing: 3px;
+      box-shadow: 0 4px 16px rgba(180,100,0,0.25);
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    #start-btn:active { background: #b87000; transform: scale(0.97); }
+
+    /* ── 選項區 ── */
+    #options-area {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .option-btn {
+      background: #fff8ee;
+      border: 2px solid #d4a855;
+      border-radius: 12px;
+      padding: 14px 18px;
+      font-size: 19px;
+      font-family: inherit;
+      color: #3a2a10;
+      text-align: left;
+      cursor: pointer;
+      line-height: 1.6;
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+      transition: background 0.15s, border-color 0.15s, transform 0.1s;
+    }
+
+    .option-btn:active { background: #fdefc8; border-color: #c8900a; transform: scale(0.98); }
+    .option-btn.selected { background: #fdefc8; border-color: #c8900a; }
+    .option-btn:disabled { cursor: default; }
+
+    .opt-label {
+      display: inline-block;
+      width: 28px;
+      flex-shrink: 0;
+      color: #a07840;
+      font-weight: bold;
+    }
+
+    .opt-text {
+      flex: 1;
+    }
+
+    /* ── 完成畫面 ── */
+    #done-screen {
+      display: none;
+      text-align: center;
+      color: #a07840;
+      font-size: 17px;
+      line-height: 2;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 開場畫面 -->
+<div id="splash">
+  <div id="splash-title">小學徒大世界</div>
+  <button id="splash-btn">▶ 開始冒險</button>
+</div>
+
+<!-- 靜音按鈕 -->
+<button id="mute-btn" title="靜音">🔊</button>
+
+<!-- 圖像區 -->
+<div id="image-area">
+  <span class="img-label" id="img-code"></span>
+  <span class="img-name" id="img-name"></span>
+</div>
+
+<!-- 進度條 -->
+<div id="progress-bar-wrap">
+  <div id="progress-bar-bg">
+    <div id="progress-bar-fill"></div>
+  </div>
+</div>
+
+<!-- 主內容 -->
+<div id="main">
+  <div id="node-title"></div>
+  <div id="text-area"></div>
+  <div id="options-area"></div>
+  <button id="start-btn">▶ 開始</button>
+  <div id="tap-hint">👆</div>
+  <div id="done-screen">── 完成 ──</div>
+</div>
+
+<script>
+// ── 故事資料 ──────────────────────────────
+const nodes = [
+  {
+    id: '1.1.1', title: '大梁城早晨',
+    image: { code: 'S01', name: '大梁城街道', color: '#c8b08a' },
+    lines: ['大梁城的早晨，又吵又香。','有人吆喝：「熱煎餅！」','河邊有船夫在喊叫。'],
+    type: 'story'
+  },
+  {
+    id: '1.1.2', title: '阿禾來了',
+    image: { code: 'C01', name: '阿禾', color: '#b09878' },
+    lines: ['一個小男孩背著舊布包，站在街上張望。','他臉曬得黑黑的，眼睛卻很亮。','他叫阿禾，八歲，剛從鄉下來。'],
+    type: 'story'
+  },
+  {
+    id: '1.1.3', title: '阿禾先看哪裡',
+    image: { code: 'S02', name: '商行門口', color: '#b8a080' },
+    lines: ['阿禾的布包縫了又縫，背帶快要斷了。','他站在商行門口，不知道該先看哪裡。'],
+    type: 'choice',
+    question: '阿禾先看哪裡？',
+    options: [
+      { label: 'A', text: '低頭看看自己的布包', feedback: '布包裡只有幾件衣服。還有父親塞進去的一個饅頭。有點硬了。', image: { code: 'O01', name: '布包', color: '#a08868' } },
+      { label: 'B', text: '抬頭看看這間商行', feedback: '招牌寫著「廣順雜貨」四個大字。門口堆著麻袋和木箱。裡面傳來算盤聲。', image: { code: 'S02', name: '商行門口', color: '#b8a080' } },
+      { label: 'C', text: '左右看看街上的人', feedback: '橋上有人賣糖葫蘆，紅得發亮。市集裡有人扯著喉嚨叫賣。阿禾從來沒見過這麼多人。', image: { code: 'S02', name: '商行門口', color: '#b8a080' } }
+    ]
+  },
+  {
+    id: '1.1.5', title: '遇見阿水',
+    image: { code: 'C02', name: '阿水', color: '#90a870' },
+    lines: [
+      '一個少年從商行裡跑出來，差點撞上阿禾。',
+      '他比阿禾高半個頭，頭髮有點亂，衣服斜斜地紮著。',
+      '他上下打量阿禾一眼，嘴角慢慢翹起來。',
+      '「你就是新來的？瘦瘦的，看起來不太行。」',
+      '「我叫阿水，你以後叫我師兄就好。」',
+      '阿水把手搭在阿禾肩上，一點不客氣。'
+    ],
+    type: 'choice',
+    question: '阿禾應該怎麼做？',
+    options: [
+      { label: 'A', text: '點點頭，認真說：「請多關照，師兄。」', feedback: '阿水愣了一下，然後哈哈笑：「這個新來的還挺有禮貌。」他拍拍阿禾的肩膀：「跟住我就好，包你沒問題。」', image: { code: 'C02', name: '阿水', color: '#90a870' } },
+      { label: 'B', text: '看著阿水的亂髮，忍住沒有笑出來。', feedback: '阿水摸了摸自己的頭髮，假裝沒事：「看什麼看，趕快進去。」但嘴角還是翹著。', image: { code: 'C02', name: '阿水', color: '#90a870' } },
+      { label: 'C', text: '小聲問：「師兄，錢伯在哪裡？」', feedback: '阿水指了指裡面：「在裡面算帳呢。」他看了阿禾一眼，沒有再搭話，轉身走了進去。', image: { code: 'C02', name: '阿水', color: '#90a870' } }
+    ]
+  }
+];
+
+// ── UI元素 ──────────────────────────────
+const splash       = document.getElementById('splash');
+const splashBtn    = document.getElementById('splash-btn');
+const muteBtn      = document.getElementById('mute-btn');
+const imageArea    = document.getElementById('image-area');
+const imgCode      = document.getElementById('img-code');
+const imgName      = document.getElementById('img-name');
+const progressFill = document.getElementById('progress-bar-fill');
+const main         = document.getElementById('main');
+const nodeTitle    = document.getElementById('node-title');
+const textArea     = document.getElementById('text-area');
+const optionsArea  = document.getElementById('options-area');
+const startBtn     = document.getElementById('start-btn');
+const tapHint      = document.getElementById('tap-hint');
+const doneScreen   = document.getElementById('done-screen');
+
+// ── 語音 ──────────────────────────────
+let cantonVoice = null;
+let isMuted = false;
+
+function detectVoices() {
+  const voices = window.speechSynthesis.getVoices();
+  if (!voices.length) return;
+  const hk = voices.filter(v => {
+    const l = v.lang.toLowerCase(), n = v.name.toLowerCase();
+    return l.includes('zh-hk') || l.includes('yue') || n.includes('cantonese') || n.includes('hong kong');
+  });
+  cantonVoice = hk.length ? hk[0] : (voices.find(v => v.lang.toLowerCase().startsWith('zh')) || null);
+}
+window.speechSynthesis.onvoiceschanged = detectVoices;
+detectVoices();
+
+function speak(text, onEnd) {
+  window.speechSynthesis.cancel();
+  if (isMuted) { if (onEnd) setTimeout(onEnd, 0); return; }
+  const u = new SpeechSynthesisUtterance(text);
+  if (cantonVoice) u.voice = cantonVoice;
+  u.lang = cantonVoice ? cantonVoice.lang : 'zh-HK';
+  u.rate = 0.88;
+  if (onEnd) u.onend = onEnd;
+  window.speechSynthesis.speak(u);
+}
+
+muteBtn.addEventListener('click', () => {
+  isMuted = !isMuted;
+  muteBtn.textContent = isMuted ? '🔇' : '🔊';
+  if (isMuted) {
+    window.speechSynthesis.cancel();
+    if (phase === 'speaking') {
+      const node = nodes[nodeIdx];
+      if (lineIdx < node.lines.length) {
+        phase = 'waitNext';
+        if (nodeIdx < 2) tapHint.style.display = 'block';
+      } else {
+        afterLines();
+      }
+    } else if (phase === 'feedback') {
+      phase = 'continue';
+      if (nodeIdx < 2) tapHint.style.display = 'block';
+    }
+  }
+});
+
+function speakOptions(options, onDone) {
+  let i = 0;
+  function next() {
+    if (i >= options.length) { onDone(); return; }
+    const opt = options[i++];
+    speak(`${opt.label}，${opt.text}`, next);
+  }
+  next();
+}
+
+// ── 開場 ──────────────────────────────
+splashBtn.addEventListener('click', () => {
+  splash.style.display = 'none';
+  loadNode(0);
+});
+
+// ── 狀態 ──────────────────────────────
+let nodeIdx = 0;
+let lineIdx = 0;
+let phase = 'start';
+
+function setImage(img) {
+  imageArea.style.background = img.color;
+  imgCode.textContent = img.code;
+  imgName.textContent = img.name;
+}
+
+function updateProgress(i) {
+  const pct = ((i + 1) / nodes.length) * 100;
+  progressFill.style.width = pct + '%';
+}
+
+function addLine(text, isQuestion) {
+  const div = document.createElement('div');
+  div.className = isQuestion ? 'story-line question-line' : 'story-line';
+  div.textContent = text;
+  textArea.appendChild(div);
+  setTimeout(() => {
+    div.classList.add('visible');
+    textArea.scrollTop = textArea.scrollHeight;
+  }, 30);
+}
+
+// ── 載入節點（含過渡）──────────────────
+function loadNode(i) {
+  main.classList.add('fade-out');
+  setTimeout(() => {
+    nodeIdx = i; lineIdx = 0; phase = 'start';
+    textArea.innerHTML = '';
+    optionsArea.innerHTML = '';
+    optionsArea.style.display = 'none';
+    tapHint.style.display = 'none';
+    doneScreen.style.display = 'none';
+
+    if (i === 0) {
+      startBtn.style.display = 'block';
+    } else {
+      startBtn.style.display = 'none';
+      // 👆只在前兩個節點顯示
+      if (i < 2) {
+        phase = 'waitNext';
+        tapHint.style.display = 'block';
+      } else {
+        phase = 'waitNext';
+        tapHint.style.display = 'none';
+      }
+    }
+
+    const node = nodes[i];
+    nodeTitle.textContent = node.title;
+    setImage(node.image);
+    updateProgress(i);
+
+    main.classList.remove('fade-out');
+
+    // 非第一節點自動開始
+    if (i > 0) setTimeout(() => playNextLine(), 100);
+  }, 300);
+}
+
+// ── 開始按鈕 ──────────────────────────
+startBtn.addEventListener('click', () => {
+  startBtn.style.display = 'none';
+  if (nodeIdx < 2) tapHint.style.display = 'block';
+  phase = 'waitNext';
+  playNextLine();
+});
+
+// ── 點擊推進 ──────────────────────────
+textArea.addEventListener('click', handleTap);
+tapHint.addEventListener('click', handleTap);
+main.addEventListener('click', (e) => {
+  if (e.target === main) handleTap();
+});
+
+function handleTap() {
+  if (phase === 'speaking' || phase === 'choice' || phase === 'feedback' || phase === 'start') return;
+  if (phase === 'continue') { goNextNode(); return; }
+  if (phase === 'waitNext') { playNextLine(); return; }
+}
+
+function playNextLine() {
+  const node = nodes[nodeIdx];
+  if (lineIdx >= node.lines.length) { afterLines(); return; }
+
+  phase = 'speaking';
+  tapHint.style.display = 'none';
+
+  const text = node.lines[lineIdx++];
+  addLine(text, false);
+
+  speak(text, () => {
+    if (lineIdx < node.lines.length) {
+      phase = 'waitNext';
+      if (nodeIdx < 2) tapHint.style.display = 'block';
+    } else {
+      afterLines();
+    }
+  });
+}
+
+function afterLines() {
+  const node = nodes[nodeIdx];
+  tapHint.style.display = 'none';
+  if (node.type === 'choice') {
+    showOptions(node);
+  } else {
+    phase = 'continue';
+    if (nodeIdx < 2) tapHint.style.display = 'block';
+  }
+}
+
+function showOptions(node) {
+  phase = 'choice';
+  addLine(node.question, true);
+  optionsArea.style.display = 'flex';
+  node.options.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<span class="opt-label">${opt.label}</span><span class="opt-text">${opt.text}</span>`;
+    btn.addEventListener('click', () => selectOption(opt, btn));
+    optionsArea.appendChild(btn);
+  });
+  speak(node.question, () => {
+    speakOptions(node.options, () => {});
+  });
+}
+
+function selectOption(opt, btn) {
+  if (phase !== 'choice') return;
+  phase = 'feedback';
+  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
+  btn.classList.add('selected');
+  if (opt.image) setImage(opt.image);
+  // 不清空文字區，反饋接在後面
+  optionsArea.style.display = 'none';
+  addLine(opt.feedback, false);
+  speak(opt.feedback, () => {
+    phase = 'continue';
+    if (nodeIdx < 2) tapHint.style.display = 'block';
+  });
+}
+
+function goNextNode() {
+  const next = nodeIdx + 1;
+  if (next >= nodes.length) {
+    tapHint.style.display = 'none';
+    doneScreen.style.display = 'block';
+    return;
+  }
+  loadNode(next);
+}
+</script>
+</body>
+</html>
