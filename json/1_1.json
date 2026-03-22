@@ -16,7 +16,8 @@
           "text": "繼續",
           "next_scene": "1.1.2"
         }
-      ]
+      ],
+      "title": "大梁城早晨"
     },
     {
       "scene_id": "1.1.2",
@@ -32,7 +33,8 @@
           "text": "繼續",
           "next_scene": "1.1.3"
         }
-      ]
+      ],
+      "title": "阿禾來了"
     },
     {
       "scene_id": "1.1.3",
@@ -59,7 +61,8 @@
           "text": "左右看看街上的人",
           "next_scene": "1.1.3.C"
         }
-      ]
+      ],
+      "title": "阿禾先看哪裡"
     },
     {
       "scene_id": "1.1.3.A",
@@ -138,7 +141,8 @@
           "text": "小聲問：「師兄，錢伯在哪裡？」",
           "next_scene": "1.1.5.C"
         }
-      ]
+      ],
+      "title": "遇見阿水"
     },
     {
       "scene_id": "1.1.5.A",
@@ -219,7 +223,8 @@
           "text": "錢伯說了這麼多，其實是在告訴他可以放心",
           "next_scene": "1.1.7.C"
         }
-      ]
+      ],
+      "title": "錢伯出場"
     },
     {
       "scene_id": "1.1.7.A",
@@ -289,7 +294,8 @@
           "text": "錢伯的靴子很舊，但擦得很亮",
           "next_scene": "1.1.8.C"
         }
-      ]
+      ],
+      "title": "認識錢伯"
     },
     {
       "scene_id": "1.1.8.A",
@@ -353,7 +359,8 @@
           "text": "繼續",
           "next_scene": "1.1.10"
         }
-      ]
+      ],
+      "title": "錢伯交代任務"
     },
     {
       "scene_id": "1.1.10",
@@ -397,12 +404,13 @@
             "C"
           ]
         }
-      ]
+      ],
+      "title": "認識三樣貨物"
     },
     {
       "scene_id": "1.1.10.A",
       "type": "feedback",
-      "image": "C03",
+      "image": "O05",
       "visit_count_responses": [
         {
           "visit": 1,
@@ -435,7 +443,7 @@
     {
       "scene_id": "1.1.10.B",
       "type": "feedback",
-      "image": "C03",
+      "image": "O06",
       "visit_count_responses": [
         {
           "visit": 1,
@@ -468,7 +476,7 @@
     {
       "scene_id": "1.1.10.C",
       "type": "feedback",
-      "image": "C03",
+      "image": "O07",
       "visit_count_responses": [
         {
           "visit": 1,
@@ -526,7 +534,8 @@
           "text": "看看那串紅色的，覺得阿水說的不太對，但沒有開口。",
           "next_scene": "1.1.11.C"
         }
-      ]
+      ],
+      "title": "阿水亂解釋"
     },
     {
       "scene_id": "1.1.11.A",
@@ -609,12 +618,13 @@
           "text": "那盒黃色的，方方的像糖塊的",
           "next_scene": "1.1.12.C"
         }
-      ]
+      ],
+      "title": "倉庫取貨"
     },
     {
       "scene_id": "1.1.12.A",
       "type": "feedback",
-      "image": "S03",
+      "image": "O05",
       "lines": [
         "阿禾拿起那串紅色的。",
         "沒錯，就是糖葫蘆。",
@@ -630,7 +640,7 @@
     {
       "scene_id": "1.1.12.B",
       "type": "feedback",
-      "image": "S03",
+      "image": "O08",
       "lines": [
         "錢伯站在門口，看了一眼：「那是湯圓粉，不是糖葫蘆。」",
         "他說：「糖葫蘆是穿在竹簽上的。」"
@@ -645,7 +655,7 @@
     {
       "scene_id": "1.1.12.C",
       "type": "feedback",
-      "image": "S03",
+      "image": "O09",
       "lines": [
         "阿水從門口探頭進來：「拿錯了，那是麥芽糖。」",
         "他比劃了一下：「糖葫蘆是一串一串的，紅色的。」"
@@ -678,12 +688,13 @@
           "text": "剛才那包白色的糕點",
           "next_scene": "1.1.13.B"
         }
-      ]
+      ],
+      "title": "再找一次"
     },
     {
       "scene_id": "1.1.13.A",
       "type": "feedback",
-      "image": "S03",
+      "image": "O05",
       "lines": [
         "對了。阿禾把糖葫蘆小心放進包裹。",
         "錢伯點點頭，沒有說話。"
@@ -698,7 +709,7 @@
     {
       "scene_id": "1.1.13.B",
       "type": "feedback",
-      "image": "S03",
+      "image": "O05",
       "support_flag": true,
       "lines": [
         "阿水嘆了口氣，走進來，直接拿起那串紅色的遞給阿禾。",
@@ -724,7 +735,8 @@
         "心裡有點緊張，又有點期待。",
         "大梁城的街道在門外等著他們。"
       ],
-      "choices": []
+      "choices": [],
+      "title": "出發"
     }
   ]
 }
