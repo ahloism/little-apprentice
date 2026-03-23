@@ -37,7 +37,7 @@
     #speed-bar {
       width: 100%; max-width: 600px;
       display: flex; align-items: center; justify-content: flex-end;
-      gap: 8px; padding: 8px 20px 0; flex-shrink: 0;
+      gap: 8px; padding: 8px 56px 0 20px; flex-shrink: 0;
     }
     .speed-label { font-size: 13px; color: #9a7850; }
     .speed-btn {
@@ -236,8 +236,10 @@ function tts(text, cb) {
   const u = new SpeechSynthesisUtterance(text);
   if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
   u.rate = rate;
-  u.onend = () => cb && cb();
-  u.onerror = () => cb && cb();
+  let called = false;
+  const done = () => { if (!called) { called = true; cb && cb(); } };
+  u.onend = done;
+  u.onerror = done;
   window.speechSynthesis.speak(u);
 }
 
