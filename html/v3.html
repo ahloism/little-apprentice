@@ -6,7 +6,6 @@
   <title>小學徒大世界——大梁城</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
       background: #f5ede0;
       min-height: 100vh;
@@ -17,326 +16,145 @@
       user-select: none;
     }
 
-    /* ── 開場畫面 ── */
+    /* 開場 */
     #splash {
-      position: fixed;
-      inset: 0;
+      position: fixed; inset: 0;
       background: #c8b08a;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 24px;
-      z-index: 100;
-      overflow: hidden;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 24px; z-index: 100;
     }
-
-    #splash-cover {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-      margin: 0 auto;
-    }
-
+    #splash-cover { width: 100%; max-width: 600px; height: auto; border-radius: 12px; }
     #splash-btn {
-      background: #d4870a;
-      color: #fff8ee;
-      border: none;
-      border-radius: 50px;
-      padding: 18px 60px;
-      font-size: 22px;
-      font-family: inherit;
-      cursor: pointer;
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 18px 60px;
+      font-size: 22px; font-family: inherit; cursor: pointer;
       letter-spacing: 3px;
-      box-shadow: 0 4px 16px rgba(180,100,0,0.3);
-      transition: background 0.15s, transform 0.1s;
-      position: relative;
-      z-index: 2;
     }
-
     #splash-btn:active { background: #b87000; transform: scale(0.97); }
 
-    /* ── 語速控制 ── */
+    /* 語速 */
     #speed-bar {
-      width: 100%;
-      max-width: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 8px;
-      padding: 8px 20px 0;
-      flex-shrink: 0;
+      width: 100%; max-width: 600px;
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 8px; padding: 8px 20px 0; flex-shrink: 0;
     }
-
-    .speed-label {
-      font-size: 13px;
-      color: #9a7850;
-      letter-spacing: 1px;
-    }
-
+    .speed-label { font-size: 13px; color: #9a7850; }
     .speed-btn {
-      background: #fff8ee;
-      border: 1.5px solid #d4a855;
-      border-radius: 20px;
-      padding: 4px 12px;
-      font-size: 13px;
-      font-family: inherit;
-      color: #7a5820;
-      cursor: pointer;
-      transition: background 0.15s, border-color 0.15s;
+      background: #fff8ee; border: 1.5px solid #d4a855;
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 13px; font-family: inherit; color: #7a5820; cursor: pointer;
     }
+    .speed-btn.active { background: #d4870a; color: #fff8ee; border-color: #d4870a; }
 
-    .speed-btn.active {
-      background: #d4870a;
-      color: #fff8ee;
-      border-color: #d4870a;
-    }
-
-    .speed-btn:active { transform: scale(0.96); }
-
-    /* ── 靜音按鈕 ── */
+    /* 靜音 */
     #mute-btn {
-      position: fixed;
-      top: 12px;
-      right: 16px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid #d4a855;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: fixed; top: 12px; right: 16px;
+      background: rgba(255,255,255,0.7); border: 1px solid #d4a855;
+      border-radius: 50%; width: 40px; height: 40px;
+      font-size: 20px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
       z-index: 50;
-      transition: background 0.15s;
     }
 
-    #mute-btn:active { background: #fdefc8; }
-
-    /* ── 圖像區 ── */
+    /* 圖像 */
     #image-area {
-      width: 100%;
-      max-width: 600px;
-      height: 300px;
-      position: relative;
-      border-radius: 0 0 12px 12px;
-      overflow: hidden;
-      flex-shrink: 0;
-      background: #c8b08a;
-      transition: background 0.4s;
+      width: 100%; max-width: 600px; height: 300px;
+      border-radius: 0 0 12px 12px; overflow: hidden;
+      flex-shrink: 0; background: #c8b08a;
     }
-
-    #image-area img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
-      display: block;
-    }
-
-    /* ── 圖像Caption ── */
+    #image-area img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
     #img-caption {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      font-size: 18px;
-      font-style: italic;
-      color: #9a7850;
-      padding: 5px 20px 0;
-      letter-spacing: 1px;
-      flex-shrink: 0;
+      width: 100%; max-width: 600px;
+      text-align: center; font-size: 18px; font-style: italic;
+      color: #9a7850; padding: 5px 20px 0; flex-shrink: 0;
     }
 
-    /* ── 進度條 ── */
-    #progress-bar-wrap {
-      width: 100%;
-      max-width: 600px;
-      padding: 8px 20px 0;
-      flex-shrink: 0;
-    }
+    /* 進度條 */
+    #progress-wrap { width: 100%; max-width: 600px; padding: 8px 20px 0; flex-shrink: 0; }
+    #progress-bg { background: #e0c99a; border-radius: 4px; height: 5px; overflow: hidden; }
+    #progress-fill { background: #d4870a; height: 100%; border-radius: 4px; transition: width 0.4s; width: 0%; }
 
-    #progress-bar-bg {
-      background: #e0c99a;
-      border-radius: 4px;
-      height: 5px;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    #progress-bar-fill {
-      background: #d4870a;
-      height: 100%;
-      border-radius: 4px;
-      transition: width 0.4s ease;
-      width: 0%;
-    }
-
-    /* ── 主內容區 ── */
+    /* 主內容 */
     #main {
-      width: 100%;
-      max-width: 600px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      padding: 14px 20px 32px;
-      gap: 14px;
-      opacity: 1;
-      transition: opacity 0.3s ease;
+      width: 100%; max-width: 600px; flex: 1;
+      display: flex; flex-direction: column;
+      padding: 14px 20px 32px; gap: 14px;
+      opacity: 1; transition: opacity 0.3s;
     }
+    #main.fade { opacity: 0; }
 
-    #main.fade-out { opacity: 0; }
+    /* 標題 */
+    #node-title { color: #7a5820; font-size: 22px; letter-spacing: 2px; text-align: center; line-height: 1.5; min-height: 1.5em; }
 
-    /* ── 節點標題 ── */
-    #node-title {
-      color: #7a5820;
-      font-size: 22px;
-      letter-spacing: 2px;
-      text-align: center;
-      line-height: 1.5;
-    }
-
-    /* ── 文字區 ── */
+    /* 文字區 */
     #text-area {
-      background: #fffaf3;
-      border: 1px solid #e0c99a;
-      border-radius: 14px;
-      padding: 20px;
-      min-height: 130px;
-      max-height: 320px;
-      overflow-y: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      cursor: pointer;
-      scroll-behavior: smooth;
-      position: relative;
+      background: #fffaf3; border: 1px solid #e0c99a;
+      border-radius: 14px; padding: 20px;
+      min-height: 130px; max-height: 320px;
+      overflow-y: auto; display: flex; flex-direction: column;
+      gap: 10px; cursor: pointer; scroll-behavior: smooth;
     }
-
-    .story-line {
-      color: #3a2a10;
-      font-size: 22px;
-      line-height: 1.9;
-      opacity: 0;
-      transform: translateY(6px);
-      transition: opacity 0.35s ease, transform 0.35s ease;
-      flex-shrink: 0;
+    .line {
+      color: #3a2a10; font-size: 22px; line-height: 1.9;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.35s, transform 0.35s; flex-shrink: 0;
     }
+    .line.show { opacity: 1; transform: translateY(0); }
+    .line.question { color: #a07840; margin-top: 6px; }
 
-    .story-line.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    /* 高亮 */
+    .hl { display: inline; }
+    .hl.on { color: #d4870a; font-weight: bold; }
+    .opt-text .hl.on { color: #d4870a; font-weight: bold; }
 
-    /* ── 逐詞高亮 ── */
-    .word { display: inline; }
-    .word.highlight { color: #d4870a; font-weight: bold; }
-
-    .question-line {
-      color: #a07840;
-      font-size: 22px;
-      line-height: 1.7;
-      margin-top: 6px;
-    }
-
-    /* ── 點擊引導 ── */
+    /* 點擊提示 */
     #tap-hint {
-      display: none;
-      text-align: center;
-      font-size: 28px;
-      animation: bounce 1.2s infinite;
-      cursor: pointer;
-      color: #d4a855;
+      display: none; text-align: center; font-size: 28px;
+      color: #d4a855; cursor: pointer; animation: bounce 1.2s infinite;
     }
-
     @keyframes bounce {
-      0%, 100% { transform: translateY(0); opacity: 0.6; }
+      0%,100% { transform: translateY(0); opacity: 0.6; }
       50% { transform: translateY(-6px); opacity: 1; }
     }
 
-    /* ── 開始按鈕 ── */
+    /* 開始按鈕 */
     #start-btn {
-      display: none;
-      background: #d4870a;
-      color: #fff8ee;
-      border: none;
-      border-radius: 50px;
-      padding: 18px 0;
-      width: 100%;
-      font-size: 22px;
-      font-family: inherit;
-      cursor: pointer;
-      letter-spacing: 3px;
-      box-shadow: 0 4px 16px rgba(180,100,0,0.25);
-      transition: background 0.15s, transform 0.1s;
+      display: none; background: #d4870a; color: #fff8ee;
+      border: none; border-radius: 50px; padding: 18px 0; width: 100%;
+      font-size: 22px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
     }
-
     #start-btn:active { background: #b87000; transform: scale(0.97); }
 
-    /* ── 選項區 ── */
-    #options-area {
-      display: none;
-      flex-direction: column;
-      gap: 10px;
+    /* 選項 */
+    #options-area { display: none; flex-direction: column; gap: 10px; }
+    .opt-btn {
+      background: #fff8ee; border: 2px solid #d4a855;
+      border-radius: 12px; padding: 14px 18px;
+      font-size: 22px; font-family: inherit; color: #3a2a10;
+      text-align: left; cursor: pointer; line-height: 1.6;
+      display: flex; align-items: flex-start;
+      transition: background 0.15s, border-color 0.15s;
     }
-
-    .option-btn {
-      background: #fff8ee;
-      border: 2px solid #d4a855;
-      border-radius: 12px;
-      padding: 14px 18px;
-      font-size: 22px;
-      font-family: inherit;
-      color: #3a2a10;
-      text-align: left;
-      cursor: pointer;
-      line-height: 1.6;
-      display: flex;
-      align-items: flex-start;
-      gap: 0;
-      transition: background 0.15s, border-color 0.15s, transform 0.1s;
-    }
-
-    .option-btn:active { background: #fdefc8; border-color: #c8900a; transform: scale(0.98); }
-    .option-btn.selected { background: #fdefc8; border-color: #c8900a; }
-    .option-btn:disabled { cursor: default; }
-
-    .opt-label {
-      display: inline-block;
-      width: 28px;
-      flex-shrink: 0;
-      color: #a07840;
-      font-weight: bold;
-    }
-
+    .opt-btn:active { background: #fdefc8; border-color: #c8900a; transform: scale(0.98); }
+    .opt-btn.selected { background: #fdefc8; border-color: #c8900a; }
+    .opt-btn:disabled { cursor: default; }
+    .opt-label { width: 28px; flex-shrink: 0; color: #a07840; font-weight: bold; }
     .opt-text { flex: 1; }
 
-    /* ── 完成畫面 ── */
-    #done-screen {
-      display: none;
-      text-align: center;
-      color: #a07840;
-      font-size: 20px;
-      line-height: 2;
-      padding: 20px;
-    }
+    /* 完成 */
+    #done { display: none; text-align: center; color: #a07840; font-size: 20px; line-height: 2; padding: 20px; }
   </style>
 </head>
 <body>
 
-<!-- 開場畫面 -->
 <div id="splash">
   <img id="splash-cover" src="https://raw.githubusercontent.com/ahloism/little-apprentice/main/image/A02_%E5%B0%81%E9%9D%A2.png" alt="小學徒大世界" />
-  <button id="splash-btn">▶ 開始冒險</button>
+  <button id="splash-btn" disabled>載入中…</button>
 </div>
 
-<!-- 靜音按鈕 -->
-<button id="mute-btn" title="靜音">🔊</button>
+<button id="mute-btn">🔊</button>
 
-<!-- 語速控制 -->
 <div id="speed-bar">
   <span class="speed-label">語速</span>
   <button class="speed-btn" data-rate="0.7">慢</button>
@@ -344,466 +162,371 @@
   <button class="speed-btn" data-rate="1.1">快</button>
 </div>
 
-<!-- 圖像區 -->
-<div id="image-area">
-  <img id="img-el" src="" alt="" />
-</div>
-
-<!-- 圖像Caption -->
+<div id="image-area"><img id="img-el" src="" alt="" /></div>
 <div id="img-caption"></div>
+<div id="progress-wrap"><div id="progress-bg"><div id="progress-fill"></div></div></div>
 
-<!-- 進度條 -->
-<div id="progress-bar-wrap">
-  <div id="progress-bar-bg">
-    <div id="progress-bar-fill"></div>
-  </div>
-</div>
-
-<!-- 主內容 -->
 <div id="main">
   <div id="node-title"></div>
   <div id="text-area"></div>
   <div id="options-area"></div>
   <button id="start-btn">▶ 開始</button>
   <div id="tap-hint">👆</div>
-  <div id="done-screen">阿禾踏出了商行的門。<br>大梁城的街道在等著他。</div>
+  <div id="done">阿禾踏出了商行的門。<br>大梁城的街道在等著他。</div>
 </div>
 
 <script>
-const BASE_URL = 'https://raw.githubusercontent.com/ahloism/little-apprentice/main/image/';
+// ── 設定 ──────────────────────────────────────
 const JSON_URL = 'https://raw.githubusercontent.com/ahloism/little-apprentice/main/json/1_1.json';
-
-const IMAGE_MAP = {
-  'S01': BASE_URL + 'S01_%E5%A4%A7%E6%A2%81%E5%9F%8E%E8%A1%97%E9%81%93.png',
-  'S02': BASE_URL + 'S02_%E5%95%86%E8%A1%8C%E9%96%80%E5%8F%A3.png',
-  'S03': BASE_URL + 'S03_%E5%80%89%E5%BA%AB.png',
-  'C01': BASE_URL + 'C01_%E9%98%BF%E7%A6%BE.png',
-  'C02': BASE_URL + 'C02_%E9%98%BF%E6%B0%B4.png',
-  'C03': BASE_URL + 'C03_%E9%8C%A2%E4%BC%AF.png',
-  'O01': BASE_URL + 'O01_%E5%B8%83%E5%8C%85.png',
-  'O05': BASE_URL + 'O05_%E7%B3%96%E8%91%AB%E8%98%86.png',
-  'O08': BASE_URL + 'O08_%E6%B9%AF%E5%9C%93%E7%B2%89.png',
-  'O09': BASE_URL + 'O09_%E9%BA%A5%E8%8A%BD%E7%B3%96.png',
+const BASE = 'https://raw.githubusercontent.com/ahloism/little-apprentice/main/image/';
+const IMGS = {
+  S01: BASE+'S01_%E5%A4%A7%E6%A2%81%E5%9F%8E%E8%A1%97%E9%81%93.png',
+  S02: BASE+'S02_%E5%95%86%E8%A1%8C%E9%96%80%E5%8F%A3.png',
+  S03: BASE+'S03_%E5%80%89%E5%BA%AB.png',
+  C01: BASE+'C01_%E9%98%BF%E7%A6%BE.png',
+  C02: BASE+'C02_%E9%98%BF%E6%B0%B4.png',
+  C03: BASE+'C03_%E9%8C%A2%E4%BC%AF.png',
+  O01: BASE+'O01_%E5%B8%83%E5%8C%85.png',
+  O05: BASE+'O05_%E7%B3%96%E8%91%AB%E8%98%86.png',
+  O06: BASE+'O06_%E7%85%8E%E9%A4%85.png',
+  O07: BASE+'O07_%E8%8A%B1%E7%94%9F%E8%A2%8B.png',
+  O08: BASE+'O08_%E6%B9%AF%E5%9C%93%E7%B2%89.png',
+  O09: BASE+'O09_%E9%BA%A5%E8%8A%BD%E7%B3%96.png',
+};
+const NAMES = {
+  S01:'大梁城街道',S02:'商行門口',S03:'倉庫',
+  C01:'阿禾',C02:'阿水',C03:'錢伯',
+  O01:'布包',O05:'糖葫蘆',O06:'煎餅',O07:'花生袋',
+  O08:'湯圓粉',O09:'麥芽糖',
 };
 
-// ── UI元素 ──
-const splash      = document.getElementById('splash');
-const splashBtn   = document.getElementById('splash-btn');
-const muteBtn     = document.getElementById('mute-btn');
-const imageArea   = document.getElementById('image-area');
-const imgEl       = document.getElementById('img-el');
-const imgCaption  = document.getElementById('img-caption');
-const progressFill= document.getElementById('progress-bar-fill');
-const main        = document.getElementById('main');
-const nodeTitle   = document.getElementById('node-title');
-const textArea    = document.getElementById('text-area');
-const optionsArea = document.getElementById('options-area');
-const startBtn    = document.getElementById('start-btn');
-const tapHint     = document.getElementById('tap-hint');
-const doneScreen  = document.getElementById('done-screen');
-const speedBtns   = document.querySelectorAll('.speed-btn');
+// ── 狀態 ──────────────────────────────────────
+let db = {};           // scene_id → scene
+let muted = false;
+let rate = 0.88;
+let ttsVoice = null;
+let tapTimer = null;
+let tapCb = null;      // 單一點擊回調
+let visits = {};       // scene_id → count
+let explored = {};     // scene_id → Set
 
-// ── 狀態 ──
-let storyData = null;
-let sceneMap = {};
-let currentScene = null;
-let lineIdx = 0;
-let phase = 'start';
-let isMuted = false;
-let speechRate = 0.88;
-let tapHintTimer = null;
-let visitCounts = {};
-let exploredSets = {};
+// ── UI ────────────────────────────────────────
+const $ = id => document.getElementById(id);
+const splashEl = $('splash'), splashBtn = $('splash-btn');
+const muteBtn = $('mute-btn');
+const imgEl = $('img-el'), captionEl = $('img-caption');
+const progressFill = $('progress-fill');
+const mainEl = $('main'), titleEl = $('node-title');
+const textArea = $('text-area'), optArea = $('options-area');
+const startBtn = $('start-btn'), tapHint = $('tap-hint'), doneEl = $('done');
 
-// ── 語速控制 ──
-speedBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    speedBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    speechRate = parseFloat(btn.dataset.rate);
-    window.speechSynthesis.cancel();
-    if (phase === 'speaking') phase = 'waitNext';
-    showTapHintDelayed();
-  });
-});
-
-// ── 語音 ──
-let cantonVoice = null;
-
-function detectVoices() {
-  const voices = window.speechSynthesis.getVoices();
-  if (!voices.length) return;
-  const hk = voices.filter(v => {
-    const l = v.lang.toLowerCase(), n = v.name.toLowerCase();
-    return l.includes('zh-hk') || l.includes('yue') || n.includes('cantonese') || n.includes('hong kong');
-  });
-  cantonVoice = hk.length ? hk[0] : (voices.find(v => v.lang.toLowerCase().startsWith('zh')) || null);
+// ── 語音 ──────────────────────────────────────
+window.speechSynthesis.onvoiceschanged = findVoice;
+findVoice();
+function findVoice() {
+  const vs = window.speechSynthesis.getVoices();
+  ttsVoice = vs.find(v => v.lang.toLowerCase().includes('zh-hk') || v.name.toLowerCase().includes('cantonese'))
+          || vs.find(v => v.lang.toLowerCase().startsWith('zh'))
+          || null;
 }
-window.speechSynthesis.onvoiceschanged = detectVoices;
-detectVoices();
 
-function speak(text, onEnd) {
+function tts(text, cb) {
   window.speechSynthesis.cancel();
-  if (isMuted) { if (onEnd) setTimeout(onEnd, 0); return; }
+  if (muted || !text) { cb && setTimeout(cb, 0); return; }
   const u = new SpeechSynthesisUtterance(text);
-  if (cantonVoice) u.voice = cantonVoice;
-  u.lang = cantonVoice ? cantonVoice.lang : 'zh-HK';
-  u.rate = speechRate;
-  if (onEnd) u.onend = onEnd;
+  if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
+  u.rate = rate;
+  u.onend = () => cb && cb();
+  u.onerror = () => cb && cb();
   window.speechSynthesis.speak(u);
 }
 
-muteBtn.addEventListener('click', () => {
-  isMuted = !isMuted;
-  muteBtn.textContent = isMuted ? '🔇' : '🔊';
-  if (isMuted) window.speechSynthesis.cancel();
-});
-
-// ── 逐詞高亮 ──
-function speakWithHighlight(lineEl, text, onEnd) {
-  window.speechSynthesis.cancel();
-  if (isMuted) { if (onEnd) setTimeout(onEnd, 0); return; }
-
+// ── 高亮 ──────────────────────────────────────
+let hlN = 0;
+function speakHL(el, text, cb) {
+  const key = 'h'+(hlN++);
   const chars = text.split('');
-  lineEl.innerHTML = chars.map((c, i) =>
-    `<span class="word" id="w${i}">${c}</span>`
-  ).join('');
+  el.innerHTML = chars.map((c,i)=>`<span class="hl" id="${key}_${i}">${c}</span>`).join('');
 
-  const u = new SpeechSynthesisUtterance(text);
-  if (cantonVoice) u.voice = cantonVoice;
-  u.lang = cantonVoice ? cantonVoice.lang : 'zh-HK';
-  u.rate = speechRate;
+  if (muted) { cb && setTimeout(cb, 0); return; }
 
-  const totalMs = (text.length / speechRate) * 220;
-  const perChar = totalMs / chars.length;
-  let i = 0;
-  const timer = setInterval(() => {
-    if (i > 0) {
-      const prev = document.getElementById('w' + (i-1));
-      if (prev) prev.classList.remove('highlight');
-    }
-    const cur = document.getElementById('w' + i);
-    if (cur) cur.classList.add('highlight');
+  const perMs = (1/rate)*220;
+  let i = 0, alive = true;
+  function step() {
+    if (!alive) return;
+    if (i > 0) { const p = document.getElementById(`${key}_${i-1}`); if(p) p.classList.remove('on'); }
+    if (i >= chars.length) return;
+    const c = document.getElementById(`${key}_${i}`); if(c) c.classList.add('on');
     i++;
-    if (i >= chars.length) clearInterval(timer);
-  }, perChar);
-
-  u.onend = () => {
-    clearInterval(timer);
-    chars.forEach((_, idx) => {
-      const el = document.getElementById('w' + idx);
-      if (el) el.classList.remove('highlight');
-    });
-    if (onEnd) onEnd();
-  };
-  window.speechSynthesis.speak(u);
-}
-
-function speakOptions(options, onDone) {
-  let i = 0;
-  function next() {
-    if (i >= options.length) { onDone(); return; }
-    const opt = options[i++];
-    speak(`${opt.label}，${opt.text}`, next);
+    setTimeout(step, perMs);
   }
-  next();
+  step();
+
+  tts(text, () => {
+    alive = false;
+    chars.forEach((_,j) => { const e = document.getElementById(`${key}_${j}`); if(e) e.classList.remove('on'); });
+    cb && cb();
+  });
 }
 
-// ── 圖像 ──
-function setImage(code, name) {
-  const url = IMAGE_MAP[code];
-  if (url) {
-    imgEl.src = url;
-    imgEl.style.display = 'block';
-    imageArea.style.background = '#c8b08a';
-  } else {
-    imgEl.src = '';
-    imgEl.style.display = 'none';
-    imageArea.style.background = '#c8b08a';
-  }
-  imgCaption.textContent = name || '';
+// ── 圖像 ──────────────────────────────────────
+function setImg(code) {
+  if (IMGS[code]) { imgEl.src = IMGS[code]; imgEl.style.display = 'block'; }
+  else { imgEl.src = ''; imgEl.style.display = 'none'; }
+  captionEl.textContent = NAMES[code] || '';
 }
 
-// ── 進度條 ──
-function updateProgress() {
-  const scenes = storyData.scenes.filter(s => !s.scene_id.includes('.'));
-  const mainScenes = scenes.length;
-  const idx = scenes.findIndex(s => s.scene_id === currentScene.scene_id);
-  const pct = mainScenes > 0 ? ((idx + 1) / mainScenes) * 100 : 0;
-  progressFill.style.width = pct + '%';
+// ── 進度條 ────────────────────────────────────
+function setProgress(id) {
+  const ms = Object.values(db).filter(s => {
+    const parts = s.scene_id.split('.');
+    return parts.length === 3 && !s.scene_id.match(/\.[A-Z]$/);
+  });
+  const idx = ms.findIndex(s => s.scene_id === id);
+  progressFill.style.width = ms.length ? `${((idx+1)/ms.length)*100}%` : '0%';
 }
 
-// ── 點擊提示 ──
-function showTapHintDelayed() {
-  clearTimeout(tapHintTimer);
+// ── 點擊提示 ──────────────────────────────────
+function setTap(fn) {
+  tapCb = fn;
+  clearTimeout(tapTimer);
   tapHint.style.display = 'none';
-  tapHintTimer = setTimeout(() => {
-    if (phase === 'waitNext' || phase === 'continue') {
-      tapHint.style.display = 'block';
-    }
-  }, 2000);
+  tapTimer = setTimeout(() => { tapHint.style.display = 'block'; }, 2000);
 }
-
-function hideTapHint() {
-  clearTimeout(tapHintTimer);
+function clearTap() {
+  tapCb = null;
+  clearTimeout(tapTimer);
   tapHint.style.display = 'none';
 }
 
-// ── 載入JSON ──
-async function loadStory() {
-  try {
-    const res = await fetch(JSON_URL);
-    storyData = await res.json();
-    storyData.scenes.forEach(s => sceneMap[s.scene_id] = s);
+textArea.addEventListener('click', fireTap);
+tapHint.addEventListener('click', fireTap);
+mainEl.addEventListener('click', e => { if (e.target === mainEl) fireTap(); });
+function fireTap() { if (tapCb) { const fn = tapCb; clearTap(); fn(); } }
+
+// ── 載入 JSON ─────────────────────────────────
+fetch(JSON_URL)
+  .then(r => r.json())
+  .then(data => {
+    data.scenes.forEach(s => db[s.scene_id] = s);
+    splashBtn.textContent = '▶ 開始冒險';
     splashBtn.disabled = false;
-  } catch(e) {
-    console.error('JSON載入失敗', e);
-  }
-}
-
-// ── 開場 ──
-splashBtn.disabled = true;
-splashBtn.textContent = '載入中…';
-loadStory().then(() => {
-  splashBtn.textContent = '▶ 開始冒險';
-});
+  })
+  .catch(() => { splashBtn.textContent = '載入失敗'; });
 
 splashBtn.addEventListener('click', () => {
-  if (!storyData) return;
-  splash.style.display = 'none';
-  loadScene('1.1.1');
+  splashEl.style.display = 'none';
+  go('1.1.1');
 });
 
-// ── 載入場景 ──
-function loadScene(sceneId) {
-  main.classList.add('fade-out');
-  setTimeout(() => {
-    currentScene = sceneMap[sceneId];
-    if (!currentScene) { showDone(); return; }
+// ── go：載入場景 ──────────────────────────────
+function go(id, skipLines = false) {
+  const scene = db[id];
+  if (!scene) { showDone(); return; }
 
-    lineIdx = 0;
-    phase = 'start';
+  mainEl.classList.add('fade');
+
+  setImg(scene.image);
+
+  setTimeout(() => {
     textArea.innerHTML = '';
-    optionsArea.innerHTML = '';
-    optionsArea.style.display = 'none';
-    hideTapHint();
-    doneScreen.style.display = 'none';
+    optArea.innerHTML = '';
+    optArea.style.display = 'none';
+    startBtn.style.display = 'none';
+    doneEl.style.display = 'none';
+    clearTap();
+    window.speechSynthesis.cancel();
 
-    // 圖像
-    setImage(currentScene.image, getImageName(currentScene.image));
-    updateProgress();
-    nodeTitle.textContent = currentScene.scene_id;
+    setImg(scene.image);
+    setProgress(id);
+    titleEl.textContent = scene.title || '';
+    mainEl.classList.remove('fade');
 
-    main.classList.remove('fade-out');
+    const lines = getLines(scene);
 
-    // 第一個場景顯示開始按鈕
-    if (sceneId === '1.1.1') {
-      startBtn.style.display = 'block';
-      phase = 'waitStart';
-    } else {
-      startBtn.style.display = 'none';
-      setTimeout(() => playNextLine(), 100);
+    if (skipLines && scene.type === 'free_explore') {
+      showFreeExplore(scene);
+      return;
     }
-  }, 300);
+
+    if (id === '1.1.1') {
+      startBtn.style.display = 'block';
+      startBtn.onclick = () => {
+        startBtn.style.display = 'none';
+        playLine(scene, lines, 0);
+      };
+    } else {
+      setTimeout(() => playLine(scene, lines, 0), 80);
+    }
+  }, 280);
 }
 
-function getImageName(code) {
-  const names = {
-    'S01': '大梁城街道', 'S02': '商行門口', 'S03': '倉庫',
-    'C01': '阿禾', 'C02': '阿水', 'C03': '錢伯',
-    'O01': '布包', 'O05': '糖葫蘆', 'O08': '湯圓粉', 'O09': '麥芽糖'
-  };
-  return names[code] || '';
+// ── getLines ──────────────────────────────────
+function getLines(scene) {
+  if (!scene.visit_count_responses) return scene.lines || [];
+  const k = scene.scene_id;
+  visits[k] = (visits[k] || 0) + 1;
+  const n = visits[k];
+  const match = scene.visit_count_responses.find(r => r.visit === n)
+              || scene.visit_count_responses[scene.visit_count_responses.length - 1];
+  return match.lines;
 }
 
-// ── 開始按鈕 ──
-startBtn.addEventListener('click', () => {
-  startBtn.style.display = 'none';
-  phase = 'waitNext';
-  playNextLine();
-});
+// ── playLine：逐行播放 ────────────────────────
+function playLine(scene, lines, idx) {
+  if (idx >= lines.length) { afterLines(scene); return; }
 
-// ── 點擊推進 ──
-textArea.addEventListener('click', handleTap);
-tapHint.addEventListener('click', handleTap);
-main.addEventListener('click', (e) => {
-  if (e.target === main) handleTap();
-});
-
-function handleTap() {
-  if (phase === 'speaking' || phase === 'choice' || phase === 'waitStart') return;
-  if (phase === 'continue' || phase === 'feedback_done') { goNext(); return; }
-  if (phase === 'waitNext') { playNextLine(); return; }
-}
-
-// ── 逐行播放 ──
-function playNextLine() {
-  if (!currentScene) return;
-
-  // 處理visit_count_responses
-  let lines = currentScene.lines;
-  if (currentScene.visit_count_responses) {
-    const key = currentScene.scene_id;
-    visitCounts[key] = (visitCounts[key] || 0) + 1;
-    const count = visitCounts[key];
-    const responses = currentScene.visit_count_responses;
-    const match = responses.find(r => r.visit === count) || responses[responses.length - 1];
-    lines = match.lines;
-  }
-
-  if (lineIdx >= lines.length) {
-    afterLines();
-    return;
-  }
-
-  phase = 'speaking';
-  hideTapHint();
-
-  const text = lines[lineIdx++];
-  const isKeyLine = lineIdx <= 2;
-
+  const text = lines[idx];
   const div = document.createElement('div');
-  div.className = 'story-line';
+  div.className = 'line';
   textArea.appendChild(div);
-  setTimeout(() => {
-    div.classList.add('visible');
-    textArea.scrollTop = textArea.scrollHeight;
-  }, 30);
+  setTimeout(() => { div.classList.add('show'); textArea.scrollTop = textArea.scrollHeight; }, 30);
 
-  if (isKeyLine) {
+  const next = () => {
+    if (idx + 1 < lines.length) {
+      setTap(() => playLine(scene, lines, idx + 1));
+    } else {
+      afterLines(scene);
+    }
+  };
+
+  if (muted) {
     div.textContent = text;
-    speakWithHighlight(div, text, () => {
-      if (lineIdx < lines.length) {
-        phase = 'waitNext';
-        showTapHintDelayed();
-      } else {
-        afterLines();
-      }
-    });
+    setTap(next);
   } else {
-    div.textContent = text;
-    speak(text, () => {
-      if (lineIdx < lines.length) {
-        phase = 'waitNext';
-        showTapHintDelayed();
-      } else {
-        afterLines();
-      }
-    });
+    speakHL(div, text, next);
   }
 }
 
-function afterLines() {
-  hideTapHint();
-  const scene = currentScene;
-
+// ── afterLines ────────────────────────────────
+function afterLines(scene) {
+  clearTap();
   if (scene.type === 'free_explore') {
-    showFreeExploreOptions(scene);
-  } else if (scene.choices && scene.choices.length > 0 && scene.question) {
+    showFreeExplore(scene);
+  } else if (scene.question && scene.choices && scene.choices.length) {
     showOptions(scene);
   } else if (scene.choices && scene.choices.length === 1 && !scene.question) {
-    phase = 'continue';
-    showTapHintDelayed();
-  } else if (!scene.choices || scene.choices.length === 0) {
-    showDone();
-  } else {
-    phase = 'continue';
-    showTapHintDelayed();
-  }
-}
-
-// ── 顯示選項 ──
-function showOptions(scene) {
-  phase = 'choice';
-  const qDiv = document.createElement('div');
-  qDiv.className = 'story-line question-line visible';
-  qDiv.textContent = scene.question;
-  textArea.appendChild(qDiv);
-  textArea.scrollTop = textArea.scrollHeight;
-
-  optionsArea.style.display = 'flex';
-  scene.choices.forEach(opt => {
-    if (opt.unlock_condition) return; // D選項由free_explore處理
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.innerHTML = `<span class="opt-label">${opt.label || ''}</span><span class="opt-text">${opt.text}</span>`;
-    btn.addEventListener('click', () => selectOption(opt, btn, scene));
-    optionsArea.appendChild(btn);
-  });
-
-  speak(scene.question, () => {
-    speakOptions(scene.choices.filter(o => !o.unlock_condition), () => {});
-  });
-}
-
-// ── 自由探索選項 ──
-function showFreeExploreOptions(scene) {
-  phase = 'choice';
-  const qDiv = document.createElement('div');
-  qDiv.className = 'story-line question-line visible';
-  qDiv.textContent = scene.question;
-  textArea.appendChild(qDiv);
-  textArea.scrollTop = textArea.scrollHeight;
-
-  const key = scene.scene_id;
-  if (!exploredSets[key]) exploredSets[key] = new Set();
-  const explored = exploredSets[key];
-
-  optionsArea.style.display = 'flex';
-  optionsArea.innerHTML = '';
-
-  scene.choices.forEach(opt => {
-    if (opt.unlock_condition) {
-      // D選項——只在全部探索完才顯示
-      const allExplored = opt.unlock_condition.every(l => explored.has(l));
-      if (!allExplored) return;
-    }
-    const btn = document.createElement('button');
-    btn.className = 'option-btn';
-    btn.innerHTML = `<span class="opt-label">${opt.label || ''}</span><span class="opt-text">${opt.text}</span>`;
-    btn.addEventListener('click', () => {
-      if (opt.label && opt.label !== 'D') explored.add(opt.label);
-      selectOption(opt, btn, scene);
+    setTap(() => {
+      const nextId = scene.choices[0].next_scene;
+      const nextScene = db[nextId];
+      if (nextScene && nextScene.type === 'free_explore') {
+        go(nextId, true);
+      } else {
+        go(nextId);
+      }
     });
-    optionsArea.appendChild(btn);
-  });
-}
-
-function selectOption(opt, btn, scene) {
-  if (phase !== 'choice') return;
-  phase = 'feedback';
-  document.querySelectorAll('.option-btn').forEach(b => b.disabled = true);
-  btn.classList.add('selected');
-  optionsArea.style.display = 'none';
-
-  const nextScene = sceneMap[opt.next_scene];
-  if (nextScene) {
-    if (nextScene.image) setImage(nextScene.image, getImageName(nextScene.image));
-    loadScene(opt.next_scene);
-  } else {
-    phase = 'continue';
-    showTapHintDelayed();
-  }
-}
-
-// ── 繼續 ──
-function goNext() {
-  if (!currentScene) return;
-  const choices = currentScene.choices;
-  if (choices && choices.length === 1) {
-    const next = choices[0].next_scene;
-    if (next) loadScene(next);
-    else showDone();
   } else {
     showDone();
   }
 }
 
-function showDone() {
-  hideTapHint();
-  doneScreen.style.display = 'block';
-  phase = 'done';
+// ── showOptions ───────────────────────────────
+function showOptions(scene) {
+  const valid = scene.choices.filter(o => !o.unlock_condition);
+
+  const qDiv = document.createElement('div');
+  qDiv.className = 'line question show';
+  textArea.appendChild(qDiv);
+  textArea.scrollTop = textArea.scrollHeight;
+
+  optArea.style.display = 'flex';
+  valid.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
+    btn.addEventListener('click', () => pickOpt(opt, btn));
+    optArea.appendChild(btn);
+  });
+
+  speakHL(qDiv, scene.question, () => speakOpts(valid, 0));
 }
+
+function speakOpts(opts, idx) {
+  if (idx >= opts.length || muted) return;
+  const btn = optArea.querySelectorAll('.opt-btn')[idx];
+  if (!btn) { speakOpts(opts, idx+1); return; }
+  const textEl = btn.querySelector('.opt-text');
+  speakHL(textEl, opts[idx].text, () => speakOpts(opts, idx+1));
+}
+
+function pickOpt(opt, btn) {
+  window.speechSynthesis.cancel();
+  optArea.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
+  btn.classList.add('selected');
+  optArea.style.display = 'none';
+  clearTap();
+
+  // 切換圖像至反饋節點圖像
+  const next = db[opt.next_scene];
+  if (next && next.image) setImg(next.image);
+
+  go(opt.next_scene);
+}
+
+// ── showFreeExplore ───────────────────────────
+function showFreeExplore(scene) {
+  const k = scene.scene_id;
+  if (!explored[k]) explored[k] = new Set();
+  const exp = explored[k];
+
+  const qDiv = document.createElement('div');
+  qDiv.className = 'line question show';
+  textArea.appendChild(qDiv);
+  textArea.scrollTop = textArea.scrollHeight;
+
+  renderFEOpts(scene, exp, qDiv);
+}
+
+function renderFEOpts(scene, exp, qDiv) {
+  optArea.innerHTML = '';
+  optArea.style.display = 'flex';
+
+  const visible = [];
+  scene.choices.forEach(opt => {
+    if (opt.unlock_condition && !opt.unlock_condition.every(l => exp.has(l))) return;
+    visible.push(opt);
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
+    btn.addEventListener('click', () => {
+      window.speechSynthesis.cancel();
+      if (opt.label && opt.label !== 'D') exp.add(opt.label);
+      const next = db[opt.next_scene];
+      if (next && next.image) setImg(next.image);
+      go(opt.next_scene);
+    });
+    optArea.appendChild(btn);
+  });
+
+  speakHL(qDiv, scene.question, () => speakOpts(visible, 0));
+}
+
+// ── 完成 ──────────────────────────────────────
+function showDone() {
+  clearTap();
+  doneEl.style.display = 'block';
+  tts('阿禾踏出了商行的門。大梁城的街道在等著他。');
+}
+
+// ── 語速 ──────────────────────────────────────
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    rate = parseFloat(btn.dataset.rate);
+    window.speechSynthesis.cancel();
+  });
+});
+
+// ── 靜音 ──────────────────────────────────────
+muteBtn.addEventListener('click', () => {
+  muted = !muted;
+  muteBtn.textContent = muted ? '🔇' : '🔊';
+  if (muted) {
+    window.speechSynthesis.cancel();
+    if (!tapCb) { setTap(() => fireTap()); }
+  }
+});
 </script>
 </body>
 </html>
