@@ -1,0 +1,62 @@
+{
+  "event_id": "event_1",
+  "title": "送貨風波",
+  "stories": [
+    {
+      "story_id": "1.1",
+      "title": "商行取貨",
+      "file": "story_1_1.json",
+      "start_scene": "1.1.1",
+      "end_scene": "1.1.14",
+      "next_story": "1.2"
+    },
+    {
+      "story_id": "1.2",
+      "title": "市集小意外",
+      "file": "story_1_2.json",
+      "start_scene": "1.2.1",
+      "end_scene": "1.2.14",
+      "next_story": "1.3"
+    },
+    {
+      "story_id": "1.3",
+      "title": "橋邊打聽",
+      "file": "story_1_3.json",
+      "start_scene": "1.3.1",
+      "end_scene": "1.3.12",
+      "next_story": "1.4"
+    },
+    {
+      "story_id": "1.4",
+      "title": "橋邊推理",
+      "file": "story_1_4.json",
+      "start_scene": "1.4.1",
+      "end_scene": "1.4.18",
+      "next_story": "1.5"
+    },
+    {
+      "story_id": "1.5",
+      "title": "客棧說書",
+      "file": "story_1_5.json",
+      "start_scene": "1.5.1",
+      "end_scene": "1.5.12",
+      "next_story": "1.6"
+    },
+    {
+      "story_id": "1.6",
+      "title": "碼頭面對問題",
+      "file": "story_1_6.json",
+      "start_scene": "1.6.1",
+      "end_scene": "1.6.12",
+      "next_story": "1.7"
+    },
+    {
+      "story_id": "1.7",
+      "title": "帳房考問",
+      "file": "story_1_7.json",
+      "start_scene": "1.7.1",
+      "end_scene": "1.7.13",
+      "next_story": null
+    }
+  ]
+}

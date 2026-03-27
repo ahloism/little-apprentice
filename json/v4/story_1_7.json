@@ -1,0 +1,327 @@
+{
+  "story_id": "1.7",
+  "title": "帳房考問",
+  "start_scene": "1.7.1",
+  "notebook": {
+    "left_page": {
+      "story_title": "帳房考問",
+      "story_progress": [
+        "那扇平時關著的門開了。",
+        "阿水站在角落，一句話都不能說。",
+        "錢平一個問題接一個問題，最後說到花生——阿禾深吸一口氣。"
+      ],
+      "places_visited": ["帳房"],
+      "people_met": ["錢平", "錢伯", "阿水"]
+    },
+    "right_page": {
+      "learned_points": [
+        {"type": "concept", "content": "考較——重溫學習成果"},
+        {"type": "concept", "content": "勇於承擔——做錯了事，要認錯"},
+        {"type": "concept", "content": "不誠信，路也難行"}
+      ],
+      "anchor_image": "A05"
+    }
+  },
+  "scenes": [
+    {
+      "scene_id": "1.7.1",
+      "type": "transition",
+      "title": "進帳房",
+      "image": "S17",
+      "lines": [
+        "回到商行，天色已經不早了。",
+        "阿水推開商行的門，走廊盡頭站著一個挺拔的身影。",
+        "「那是錢平師兄，專管帳房的。」阿水低聲提醒。",
+        "那扇平時總是關著的厚重木門，此刻正緩緩開啟。",
+        "阿禾跟著走進去，帳房裡透著墨香，一切都顯得整齊、安靜。",
+        "錢伯已經坐在主位上，面色凝重。",
+        "阿水自覺地在角落站定，不敢多言。"
+      ],
+      "choices": [
+        {"text": "繼續", "next_scene": "1.7.2"}
+      ]
+    },
+    {
+      "scene_id": "1.7.2",
+      "type": "story",
+      "title": "開始考問",
+      "image": "C10",
+      "lines": [
+        "「今天考較阿禾。」錢平師兄翻開一本書冊。",
+        "「阿水，你不准說話，不准提示。」",
+        "錢平抬頭看著阿禾：「今天出去送貨，看到什麼、學到什麼，從頭說起。」"
+      ],
+      "choices": [
+        {"text": "繼續", "next_scene": "1.7.3"}
+      ]
+    },
+    {
+      "scene_id": "1.7.3",
+      "type": "assessment",
+      "title": "考問一：貨物",
+      "image": "O05",
+      "lines": [
+        "錢平在紙上畫了一串圓滾滾、紅通通的東西。",
+        "「這是你今天送的第一樣貨，叫什麼？」"
+      ],
+      "question": "阿禾回答：",
+      "choices": [
+        {"label": "A", "text": "糖葫蘆", "next_scene": "1.7.3.A"},
+        {"label": "B", "text": "糖蘆葫", "next_scene": "1.7.3.B"},
+        {"label": "C", "text": "葫蘆糖", "next_scene": "1.7.3.C"}
+      ]
+    },
+    {
+      "scene_id": "1.7.3.A",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["錢平微微點頭，筆尖在帳冊上勾了一下：「沒錯，記性不錯。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.4"}]
+    },
+    {
+      "scene_id": "1.7.3.B",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["錢平皺眉：「名字都記不準，怎麼點貨？是糖葫蘆。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.4"}]
+    },
+    {
+      "scene_id": "1.7.3.C",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["錢平搖搖頭：「名字錯了。是糖葫蘆，山楂串成像葫蘆一樣。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.4"}]
+    },
+    {
+      "scene_id": "1.7.4",
+      "type": "assessment",
+      "title": "考問二：橋邊判斷",
+      "image": "A01",
+      "lines": [
+        "「橋邊打聽老梁下落，三個人三個說法。」",
+        "「你最後決定信梅姐，理由是什麼？」"
+      ],
+      "question": "阿禾怎麼說？",
+      "choices": [
+        {"label": "A", "text": "梅姐就在攤旁看守，資訊最直接", "next_scene": "1.7.4.A"},
+        {"label": "B", "text": "因為她第一個跟我說話，感覺親切", "next_scene": "1.7.4.B"},
+        {"label": "C", "text": "因為阿乖和王三看起來不像好人", "next_scene": "1.7.4.C"}
+      ]
+    },
+    {
+      "scene_id": "1.7.4.A",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「對，位置決定資訊。」錢平點頭，「做生意要看誰在核心位置。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.5"}]
+    },
+    {
+      "scene_id": "1.7.4.B",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「先入為主是大忌。」錢平嚴肅道，「親切不代表準確。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.5"}]
+    },
+    {
+      "scene_id": "1.7.4.C",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「以貌取人會誤事。」錢平冷冷道，「別人的錯誤不能當作她的證據。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.5"}]
+    },
+    {
+      "scene_id": "1.7.5",
+      "type": "assessment",
+      "title": "考問三：辨識私心",
+      "image": "A01",
+      "lines": [
+        "「那阿乖和王三呢？」",
+        "「你是怎麼看穿他們不可信的？」"
+      ],
+      "question": "阿禾回答：",
+      "choices": [
+        {"label": "A", "text": "我看穿了他們說話時都帶著私心", "next_scene": "1.7.5.A"},
+        {"label": "B", "text": "因為他們指的方向最後證明是錯的", "next_scene": "1.7.5.B"},
+        {"label": "C", "text": "我只是跟著阿水的判斷走", "next_scene": "1.7.5.C"}
+      ]
+    },
+    {
+      "scene_id": "1.7.5.A",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「好。」錢平點頭，「能看出別人的求與欲，才能避開陷阱。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.6"}]
+    },
+    {
+      "scene_id": "1.7.5.B",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「那是事後聰明。」錢平搖頭，「事前就該觀察出不對勁。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.6"}]
+    },
+    {
+      "scene_id": "1.7.5.C",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「阿水不總是對的。」錢平看了角落一眼，「你要有自己的眼光。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.6"}]
+    },
+    {
+      "scene_id": "1.7.6",
+      "type": "assessment",
+      "title": "考問四：字帖真相",
+      "image": "A01",
+      "lines": [
+        "「梅姐交給你的那疊紙，最後杜先生怎麼說？」"
+      ],
+      "question": "那是...",
+      "choices": [
+        {"label": "A", "text": "老梁練習寫字的字帖", "next_scene": "1.7.6.A"},
+        {"label": "B", "text": "一封沒送出去的急信", "next_scene": "1.7.6.B"},
+        {"label": "C", "text": "杜先生說書用的草稿", "next_scene": "1.7.6.C"}
+      ]
+    },
+    {
+      "scene_id": "1.7.6.A",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「沒錯。五十歲的老梁還在學認字。」錢平嘆道，「你呢？」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.7"}]
+    },
+    {
+      "scene_id": "1.7.6.B",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「錯了。那是字帖，老梁在努力認字。你卻看成了信。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.7"}]
+    },
+    {
+      "scene_id": "1.7.6.C",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「不對。那是老梁努力練習的痕跡，是字帖。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.7"}]
+    },
+    {
+      "scene_id": "1.7.7",
+      "type": "assessment",
+      "title": "考問五：杜先生的教導",
+      "image": "A01",
+      "lines": [
+        "「杜先生沒有直接告訴你答案，他是怎麼做的？」"
+      ],
+      "question": "阿禾回答：",
+      "choices": [
+        {"label": "A", "text": "他用謎語和問題引導我自己思考", "next_scene": "1.7.7.A"},
+        {"label": "B", "text": "他直接在紙上寫下了正確答案", "next_scene": "1.7.7.B"},
+        {"label": "C", "text": "他只是笑笑，什麼都沒說", "next_scene": "1.7.7.C"}
+      ]
+    },
+    {
+      "scene_id": "1.7.7.A",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「這才是高明的老師。」錢平點頭。"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.8"}]
+    },
+    {
+      "scene_id": "1.7.7.B",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「那是餵飯，不是教導。杜先生是讓你自悟。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.8"}]
+    },
+    {
+      "scene_id": "1.7.7.C",
+      "type": "feedback",
+      "image": "C10",
+      "lines": ["「他出了謎語，你忘了嗎？他在引導你。」"],
+      "choices": [{"text": "繼續", "next_scene": "1.7.8"}]
+    },
+    {
+      "scene_id": "1.7.8",
+      "type": "assessment",
+      "title": "最終考問：花生的責任",
+      "image": "C10",
+      "lines": [
+        "錢平的聲音突然低了下來，錢伯也抬起了頭。",
+        "「最後，碼頭點貨。老梁說花生少了一包。」",
+        "「阿禾，當時你是怎麼做的？」"
+      ],
+      "question": "你的選擇是？",
+      "choices": [
+        {"label": "A", "text": "我立刻承認錯誤並道歉", "next_scene": "1.7.9"},
+        {"label": "B", "text": "我想推卸給石頭，說是他撞的我", "next_scene": "1.7.10"},
+        {"label": "C", "text": "我當時害怕得沉默不敢說話", "next_scene": "1.7.10"}
+      ]
+    },
+    {
+      "scene_id": "1.7.9",
+      "type": "hidden",
+      "title": "正直的反饋",
+      "image": "C03",
+      "lines": [
+        "錢伯終於開口，聲音沙啞卻溫暖：「知道錯了，也肯認，這才是商行的孩子。」",
+        "「一文錢也要算清，一包花生也不能馬虎。誠信是命根子。」"
+      ],
+      "choices": [{"text": "繼續", "next_scene": "1.7.11"}]
+    },
+    {
+      "scene_id": "1.7.10",
+      "type": "hidden",
+      "title": "嚴厲的警告",
+      "image": "C03",
+      "lines": [
+        "錢伯猛地一拍桌子：「石頭幫你撿回花生，那是他的善意！你卻想逃避？」",
+        "「現在，你自己看看這滿屋子的帳冊，哪一頁不靠『誠』字撐著？」",
+        "帳房內的空氣彷彿凝固，阿禾感到前所未有的壓力。"
+      ],
+      "choices": [{"text": "繼續", "next_scene": "1.7.11"}]
+    },
+    {
+      "scene_id": "1.7.11",
+      "type": "story",
+      "title": "終極訓誡",
+      "image": "C03",
+      "lines": [
+        "錢伯站起身，走到阿禾面前。",
+        "「大梁城的人，有可信，有不可信。你要學會分辨。」",
+        "「不識字，路難行；但不誠信，路也難行。」",
+        "「記住今天這包花生，比學一百個字都重要。」"
+      ],
+      "choices": [{"text": "繼續", "next_scene": "1.7.12"}]
+    },
+    {
+      "scene_id": "1.7.12",
+      "type": "story",
+      "title": "走出帳房",
+      "image": "S17",
+      "lines": [
+        "走出帳房時，夕陽最後一點餘暉正從天井落下。",
+        "走廊安靜得只能聽到腳步聲。",
+        "阿水湊過來，小聲問道：「你還好嗎？臉色都白了。」"
+      ],
+      "choices": [{"text": "繼續", "next_scene": "1.7.13"}
+      ]
+    },
+    {
+      "scene_id": "1.7.13",
+      "type": "transition",
+      "title": "銘記誠信",
+      "image": "S01",
+      "image_cues": [
+        {
+          "trigger_line_index": 1,
+          "image": "A05"
+        }
+      ],
+      "lines": [
+        "阿禾回頭看向商行正門上方的照壁。",
+        "那裡刻著兩個蒼勁的大字——誠信。",
+        "他深吸一口氣，將這兩個字印進了心底。"
+      ],
+      "choices": [],
+      "next_story": "null"
+    }
+  ]
+}
