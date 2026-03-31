@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>小學徒大世界——大梁城</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #f5ede0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Noto Serif TC', 'Noto Serif SC', 'STKaiti', 'KaiTi', serif;
+      user-select: none;
+    }
+
+    /* 開場 */
+    #splash {
+      position: fixed; inset: 0;
+      background: #c8b08a;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 24px; z-index: 100;
+    }
+    #splash-cover { width: 100%; max-width: 600px; height: auto; border-radius: 12px; }
+    #splash-btn {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 18px 60px;
+      font-size: 22px; font-family: inherit; cursor: pointer;
+      letter-spacing: 3px;
+    }
+    #splash-btn:active { background: #b87000; transform: scale(0.97); }
+    #splash-btn:disabled { background: #a08060; cursor: default; }
+
+    /* 語速 */
+    #speed-bar {
+      width: 100%; max-width: 600px;
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 8px; padding: 8px 56px 0 20px; flex-shrink: 0;
+    }
+    .speed-label { font-size: 13px; color: #9a7850; }
+    .speed-btn {
+      background: #fff8ee; border: 1.5px solid #d4a855;
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 13px; font-family: inherit; color: #7a5820; cursor: pointer;
+    }
+    .speed-btn.active { background: #d4870a; color: #fff8ee; border-color: #d4870a; }
+
+    /* 靜音 */
+    #mute-btn {
+      position: fixed; top: 12px; right: 16px;
+      background: rgba(255,255,255,0.7); border: 1px solid #d4a855;
+      border-radius: 50%; width: 40px; height: 40px;
+      font-size: 20px; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      z-index: 50;
+    }
+
+    /* 圖像 */
+    #image-area {
+      width: 100%; max-width: 600px; height: 300px;
+      border-radius: 0 0 12px 12px; overflow: hidden;
+      flex-shrink: 0; background: #c8b08a;
+    }
+    #image-area img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
+    #img-caption {
+      width: 100%; max-width: 600px;
+      text-align: center; font-size: 18px; font-style: italic;
+      color: #9a7850; padding: 5px 20px 0; flex-shrink: 0;
+    }
+
+    /* 進度條 */
+    #progress-wrap { width: 100%; max-width: 600px; padding: 8px 20px 0; flex-shrink: 0; }
+    #progress-bg { background: #e0c99a; border-radius: 4px; height: 5px; overflow: hidden; }
+    #progress-fill { background: #d4870a; height: 100%; border-radius: 4px; transition: width 0.4s; width: 0%; }
+
+    /* 主內容 */
+    #main {
+      width: 100%; max-width: 600px; flex: 1;
+      display: flex; flex-direction: column;
+      padding: 14px 20px 32px; gap: 14px;
+      opacity: 1; transition: opacity 0.3s;
+    }
+    #main.fade { opacity: 0; }
+
+    /* 標題 */
+    #node-title { color: #7a5820; font-size: 22px; letter-spacing: 2px; text-align: center; line-height: 1.5; min-height: 1.5em; }
+
+    /* 文字區 */
+    #text-area {
+      background: #fffaf3; border: 1px solid #e0c99a;
+      border-radius: 14px; padding: 20px;
+      min-height: 130px; max-height: 320px;
+      overflow-y: auto; display: flex; flex-direction: column;
+      gap: 10px; cursor: pointer; scroll-behavior: smooth;
+    }
+    .line {
+      color: #3a2a10; font-size: 22px; line-height: 1.9;
+      opacity: 0; transform: translateY(6px);
+      transition: opacity 0.35s, transform 0.35s; flex-shrink: 0;
+    }
+    .line.show { opacity: 1; transform: translateY(0); }
+    .line.question { color: #a07840; margin-top: 6px; }
+
+    /* 高亮 */
+    .hl { display: inline; }
+    .hl.on { color: #d4870a; font-weight: bold; }
+    .opt-text .hl.on { color: #d4870a; font-weight: bold; }
+
+    /* 點擊提示 */
+    #tap-hint {
+      display: none; text-align: center; font-size: 28px;
+      color: #d4a855; cursor: pointer; animation: bounce 1.2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); opacity: 0.6; }
+      50% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    /* 開始按鈕 */
+    #start-btn {
+      display: none; background: #d4870a; color: #fff8ee;
+      border: none; border-radius: 50px; padding: 18px 0; width: 100%;
+      font-size: 22px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
+    }
+    #start-btn:active { background: #b87000; transform: scale(0.97); }
+
+    /* 選項 */
+    #options-area { display: none; flex-direction: column; gap: 10px; }
+    .opt-btn {
+      background: #fff8ee; border: 2px solid #d4a855;
+      border-radius: 12px; padding: 14px 18px;
+      font-size: 22px; font-family: inherit; color: #3a2a10;
+      text-align: left; cursor: pointer; line-height: 1.6;
+      display: flex; align-items: flex-start;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .opt-btn:active { background: #fdefc8; border-color: #c8900a; transform: scale(0.98); }
+    .opt-btn.selected { background: #fdefc8; border-color: #c8900a; }
+    .opt-btn:disabled { cursor: default; }
+    .opt-label { width: 28px; flex-shrink: 0; color: #a07840; font-weight: bold; }
+    .opt-text { flex: 1; }
+
+    /* 完成畫面 */
+    #done { display: none; text-align: center; color: #a07840; font-size: 20px; line-height: 2; padding: 20px; }
+
+    /* ── 學徒筆記 ── */
+    #notebook-overlay {
+      position: fixed; inset: 0;
+      background: rgba(60, 35, 10, 0.7);
+      display: none; align-items: center; justify-content: center;
+      z-index: 200; padding: 16px;
+    }
+    #notebook-overlay.show { display: flex; }
+
+    #notebook {
+      width: 100%; max-width: 620px;
+      background: #fdf6e8;
+      border-radius: 16px;
+      border: 2px solid #c8a060;
+      box-shadow: 0 8px 32px rgba(80,40,0,0.3);
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      max-height: 90vh;
+    }
+
+    #notebook-header {
+      background: #8b5e2a; color: #fff8ee;
+      text-align: center; padding: 14px 20px;
+      font-size: 20px; letter-spacing: 3px; flex-shrink: 0;
+    }
+
+    #notebook-pages {
+      display: flex; flex: 1; overflow: hidden;
+    }
+
+    /* 左頁——故事進展 */
+    #notebook-left {
+      flex: 1; padding: 20px;
+      border-right: 1px dashed #c8a060;
+      overflow-y: auto;
+      background: #fffdf5;
+    }
+    .nb-section-title {
+      font-size: 15px; color: #8b5e2a; letter-spacing: 2px;
+      margin-bottom: 10px; padding-bottom: 6px;
+      border-bottom: 1px solid #e0c99a;
+    }
+    .nb-story-line {
+      font-size: 17px; color: #3a2a10; line-height: 1.9;
+      margin-bottom: 8px;
+    }
+    .nb-meta { font-size: 14px; color: #9a7850; margin-top: 12px; line-height: 2; }
+    .nb-tag {
+      display: inline-block; background: #f0e0c0;
+      border-radius: 20px; padding: 2px 10px;
+      font-size: 13px; color: #7a5820; margin: 2px;
+    }
+
+    /* 右頁——今次學了 */
+    #notebook-right {
+      flex: 1; padding: 20px;
+      overflow-y: auto;
+      background: #fffdf5;
+    }
+    .nb-learn-item {
+      margin-bottom: 14px; padding: 10px 12px;
+      background: #fff8ee; border-radius: 10px;
+      border: 1px solid #e0c99a;
+    }
+    .nb-learn-type {
+      font-size: 12px; color: #a07840; letter-spacing: 1px; margin-bottom: 4px;
+    }
+    .nb-learn-content { font-size: 17px; color: #3a2a10; line-height: 1.7; }
+    .nb-anchor-img {
+      width: 100%; border-radius: 10px; margin-top: 12px;
+      object-fit: cover; max-height: 120px;
+    }
+
+    /* 筆記底部按鈕 */
+    #notebook-footer {
+      background: #f5ede0; padding: 14px 20px;
+      text-align: center; flex-shrink: 0;
+      border-top: 1px solid #e0c99a;
+    }
+    #notebook-continue-btn {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 14px 50px;
+      font-size: 20px; font-family: inherit; cursor: pointer;
+      letter-spacing: 3px;
+    }
+    #notebook-continue-btn:active { background: #b87000; transform: scale(0.97); }
+
+    /* 載入過渡提示 */
+    #loading-overlay {
+      position: fixed; inset: 0;
+      background: #c8b08a;
+      display: none; align-items: center; justify-content: center;
+      z-index: 150; font-size: 22px; color: #fff8ee; letter-spacing: 2px;
+    }
+    #loading-overlay.show { display: flex; }
+  </style>
+</head>
+<body>
+
+<!-- 開場 -->
+<div id="splash">
+  <img id="splash-cover" src="https://raw.githubusercontent.com/ahloism/little-apprentice/main/image/A02_%E5%B0%81%E9%9D%A2.png" alt="小學徒大世界" />
+  <button id="splash-btn" disabled>載入中…</button>
+</div>
+
+<!-- 靜音 -->
+<button id="mute-btn">🔊</button>
+
+<!-- 語速 -->
+<div id="speed-bar">
+  <span class="speed-label">語速</span>
+  <button class="speed-btn" data-rate="0.7">慢</button>
+  <button class="speed-btn active" data-rate="0.88">正常</button>
+  <button class="speed-btn" data-rate="1.1">快</button>
+</div>
+
+<!-- 圖像 -->
+<div id="image-area"><img id="img-el" src="" alt="" /></div>
+<div id="img-caption"></div>
+<div id="progress-wrap"><div id="progress-bg"><div id="progress-fill"></div></div></div>
+
+<!-- 主內容 -->
+<div id="main">
+  <div id="node-title"></div>
+  <div id="text-area"></div>
+  <div id="options-area"></div>
+  <button id="start-btn">▶ 開始</button>
+  <div id="tap-hint">👆</div>
+  <div id="done">阿禾踏出了商行的門。<br>大梁城的街道在等著他們。</div>
+</div>
+
+<!-- 學徒筆記 -->
+<div id="notebook-overlay">
+  <div id="notebook">
+    <div id="notebook-header">學徒筆記</div>
+    <div id="notebook-pages">
+      <div id="notebook-left">
+        <div class="nb-section-title">今天發生了⋯⋯</div>
+        <div id="nb-story-lines"></div>
+        <div id="nb-meta" class="nb-meta"></div>
+      </div>
+      <div id="notebook-right">
+        <div class="nb-section-title">今次學了</div>
+        <div id="nb-learn-items"></div>
+        <img id="nb-anchor-img" class="nb-anchor-img" src="" alt="" style="display:none" />
+      </div>
+    </div>
+    <div id="notebook-footer">
+      <button id="notebook-continue-btn">繼續</button>
+    </div>
+  </div>
+</div>
+
+<!-- 載入提示 -->
+<div id="loading-overlay">載入中⋯⋯</div>
+
+<script>
+// ── 設定 ──────────────────────────────────────
+const GITHUB_BASE = 'https://raw.githubusercontent.com/ahloism/little-apprentice/main/';
+const JSON_BASE   = GITHUB_BASE + 'json/v4/';
+const IMG_BASE    = GITHUB_BASE + 'image/';
+
+// 圖像對照表
+const IMGS = {
+  // 小事件1.1
+  S01:'S01_%E5%A4%A7%E6%A2%81%E5%9F%8E%E8%A1%97%E9%81%93.png',
+  S02:'S02_%E5%95%86%E8%A1%8C%E9%96%80%E5%8F%A3.png',
+  S03:'S03_%E5%80%89%E5%BA%AB.png',
+  C01:'C01_%E9%98%BF%E7%A6%BE.png',
+  C02:'C02_%E9%98%BF%E6%B0%B4.png',
+  C03:'C03_%E9%8C%A2%E4%BC%AF.png',
+  O01:'O01_%E5%B8%83%E5%8C%85.png',
+  O02:'O02_%E7%AE%97%E7%9B%A4.png',
+  O03:'O03_%E9%91%B0%E5%8C%99%E4%B8%B2.png',
+  O04:'O04_%E8%88%8A%E9%9D%B4.png',
+  O05:'O05_%E7%B3%96%E8%91%AB%E8%98%86.png',
+  O06:'O06_%E7%85%8E%E9%A4%85.png',
+  O07:'O07_%E8%8A%B1%E7%94%9F%E8%A2%8B.png',
+  O08:'O08_%E6%B9%AF%E5%9C%93%E7%B2%89.png',
+  O09:'O09_%E9%BA%A5%E8%8A%BD%E7%B3%96.png',
+  // 小事件1.2
+  S04:'S04_%E5%B8%82%E9%9B%86%E8%A1%97%E9%81%93.png',
+  S05:'S05_%E9%9B%9C%E8%80%8D%E7%A9%BA%E5%9C%B0.png',
+  C04:'C04_%E7%9F%B3%E9%A0%AD.png',
+  O10:'O10_%E8%87%98%E8%85%B8.png',
+  O11:'O11_%E7%A3%A8%E5%88%80.png',
+  O12:'O12_%E6%B6%BC%E8%8C%B6.png',
+  O13:'O13_%E7%B9%A9%E5%AD%90%E5%B8%83%E6%96%99.png',
+  A01:'A01_%E9%98%BF%E7%A6%BE%E6%80%9D%E8%80%83%E4%B8%AD.png',
+  S07:'S07_%E6%A2%81%E6%B2%B3%E6%A9%8B%E9%82%8A.png',
+  // 小事件1.3
+  S08:'S08_%E6%A2%81%E6%B2%B3%E7%A2%BC%E9%A0%AD%E6%96%B9%E5%90%91.png',
+  S09:'S09_%E6%A9%8B%E4%B8%8A%E6%94%A4%E6%AA%94.png',
+  S10:'S10_%E8%80%81%E6%A2%81%E6%94%A4%E6%AA%94.png',
+  C05:'C05_%E6%A2%85%E5%A7%90.png',
+  C06:'C06_%E9%98%BF%E4%B9%96.png',
+  C07:'C07_%E7%8E%8B%E4%B8%89.png',
+  O14:'O14_%E8%8C%B6%E5%A3%BA.png',
+  O15:'O15_%E7%B9%A9%E5%AD%90.png',
+  O16:'O16_%E7%A9%BA%E7%AB%B9%E7%B0%8D.png',
+  O17:'O17_%E7%AD%86.png',
+  O18:'O18_%E9%98%BF%E4%B9%96%E7%9A%84%E7%B4%99.png',
+  W01:'W01_%E7%B3%9E.png',
+  // 小事件1.4
+  S11:'S11_%E5%8C%96%E7%B3%9E%E6%B1%A0%E9%96%80%E5%8F%A3.png',
+  S12:'S12_%E8%B3%AD%E5%9D%8A%E5%B7%B7%E5%8F%A3.png',
+  O19:'O19_%E5%AD%97%E5%B8%96.png',
+  W02:'W02_%E4%BF%A1.png',
+  W03:'W03_%E5%AE%B6.png',
+  W04:'W04_%E6%80%A5.png',
+  // 小事件1.5
+  S13:'S13_%E5%AE%A2%E6%A3%A7%E9%96%80%E5%8F%A3.png',
+  S14:'S14_%E5%AE%A2%E6%A3%A7%E5%85%A7%E9%83%A8.png',
+  S15:'S15_%E8%AA%AA%E6%9B%B8%E5%8F%B0.png',
+  C08:'C08_%E6%9D%9C%E5%85%88%E7%94%9F.png',
+  O20:'O20_%E8%8C%B6%E5%A3%BA%E8%8C%B6%E6%B0%B4%E5%8F%B0.png',
+  O21:'O21_%E7%B4%99%E6%89%87.png',
+  W05:'W05_%E7%97%85.png',
+  A03:'A03_%E8%AC%8E%E8%AA%9E%E4%B8%80%E7%A4%BA%E6%84%8F.png',
+  A04:'A04_%E8%AC%8E%E8%AA%9E%E4%BA%8C%E7%A4%BA%E6%84%8F.png',
+  // 小事件1.6
+  S16:'S16_%E7%A2%BC%E9%A0%AD.png',
+  C09:'C09_%E8%80%81%E6%A2%81.png',
+  O22:'O22_%E7%B2%97%E7%B9%A9%E6%9C%A8%E6%A8%81.png',
+  O23:'O23_%E8%8D%89%E5%B8%BD.png',
+  O25:'O25_%E8%80%81%E6%A2%81%E7%9A%84%E4%BF%A1.png',
+  // 小事件1.7
+  S17:'S17_%E5%B8%B3%E6%88%BF.png',
+  C10:'C10_%E9%8C%A2%E5%B9%B3.png',
+  A05:'A05_%E8%AA%A0%E4%BF%A1%E6%9C%A8%E5%8C%BE.png',
+};
+
+// 圖像名稱
+const NAMES = {
+  S01:'大梁城街道', S02:'商行門口', S03:'倉庫',
+  S04:'市集街道', S05:'雜耍空地', S07:'梁河橋邊',
+  S08:'梁河碼頭方向', S09:'橋上攤檔', S10:'老梁攤檔',
+  S11:'化糞池門口', S12:'賭坊巷口',
+  S13:'客棧門口', S14:'客棧內部', S15:'說書台',
+  S16:'碼頭', S17:'帳房',
+  C01:'阿禾', C02:'阿水', C03:'錢伯', C04:'石頭',
+  C05:'梅姐', C06:'阿乖', C07:'王三', C08:'杜先生',
+  C09:'老梁', C10:'錢平',
+  O01:'布包', O02:'算盤', O03:'鑰匙串', O04:'舊靴',
+  O05:'糖葫蘆', O06:'煎餅', O07:'花生袋',
+  O08:'湯圓粉', O09:'麥芽糖',
+  O10:'臘腸', O11:'磨刀', O12:'涼茶', O13:'繩子布料',
+  O14:'茶壺', O15:'繩子', O16:'空竹簍', O17:'筆',
+  O18:'阿乖的紙', O19:'字帖',
+  O20:'茶壺茶水台', O21:'紙扇',
+  O22:'粗繩木樁', O23:'草帽', O25:'老梁的信',
+  W01:'糞', W02:'信', W03:'家', W04:'急', W05:'病',
+  A01:'阿禾思考中', A02:'封面',
+  A03:'謎語一示意', A04:'謎語二示意', A05:'誠信木匾',
+};
+
+// ── 狀態 ──────────────────────────────────────
+let db = {};           // scene_id → scene
+let masterData = null; // story_master 資料
+let currentStoryId = null;
+let muted = false;
+let rate = 0.88;
+let ttsVoice = null;
+let tapTimer = null;
+let tapCb = null;
+let visits = {};       // scene_id → count
+let explored = {};     // scene_id → Set
+
+// ── UI 元素 ───────────────────────────────────
+const $ = id => document.getElementById(id);
+const splashEl = $('splash'), splashBtn = $('splash-btn');
+const muteBtn = $('mute-btn');
+const imgEl = $('img-el'), captionEl = $('img-caption');
+const progressFill = $('progress-fill');
+const mainEl = $('main'), titleEl = $('node-title');
+const textArea = $('text-area'), optArea = $('options-area');
+const startBtn = $('start-btn'), tapHint = $('tap-hint'), doneEl = $('done');
+const notebookOverlay = $('notebook-overlay');
+const loadingOverlay = $('loading-overlay');
+
+// ── 語音 ──────────────────────────────────────
+window.speechSynthesis.onvoiceschanged = findVoice;
+findVoice();
+function findVoice() {
+  const vs = window.speechSynthesis.getVoices();
+  ttsVoice = vs.find(v => v.lang.toLowerCase().includes('zh-hk') || v.name.toLowerCase().includes('cantonese'))
+          || vs.find(v => v.lang.toLowerCase().startsWith('zh'))
+          || null;
+}
+
+function tts(text, cb) {
+  window.speechSynthesis.cancel();
+  if (muted || !text) { cb && setTimeout(cb, 0); return; }
+  const u = new SpeechSynthesisUtterance(text);
+  if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
+  u.rate = rate;
+  let called = false;
+  const done = () => { if (!called) { called = true; cb && cb(); } };
+  u.onend = done;
+  u.onerror = done;
+  window.speechSynthesis.speak(u);
+}
+
+// ── 高亮 ──────────────────────────────────────
+let hlN = 0;
+function speakHL(el, text, cb) {
+  const key = 'h'+(hlN++);
+  const chars = text.split('');
+  el.innerHTML = chars.map((c,i)=>`<span class="hl" id="${key}_${i}">${c}</span>`).join('');
+
+  if (muted) { cb && setTimeout(cb, 0); return; }
+
+  const perMs = (1/rate)*220;
+  let i = 0, alive = true;
+  function step() {
+    if (!alive) return;
+    if (i > 0) { const p = document.getElementById(`${key}_${i-1}`); if(p) p.classList.remove('on'); }
+    if (i >= chars.length) return;
+    const c = document.getElementById(`${key}_${i}`); if(c) c.classList.add('on');
+    i++;
+    setTimeout(step, perMs);
+  }
+  step();
+
+  tts(text, () => {
+    alive = false;
+    chars.forEach((_,j) => { const e = document.getElementById(`${key}_${j}`); if(e) e.classList.remove('on'); });
+    cb && cb();
+  });
+}
+
+// ── 圖像 ──────────────────────────────────────
+function setImg(code) {
+  if (IMGS[code]) {
+    imgEl.src = IMG_BASE + IMGS[code];
+    imgEl.style.display = 'block';
+  } else {
+    imgEl.src = '';
+    imgEl.style.display = 'none';
+  }
+  captionEl.textContent = NAMES[code] || '';
+}
+
+// ── 進度條 ────────────────────────────────────
+function setProgress(id) {
+  const ms = Object.values(db).filter(s => {
+    const parts = s.scene_id.split('.');
+    return parts.length === 3 && !s.scene_id.match(/\.[A-Z]$/);
+  });
+  const idx = ms.findIndex(s => s.scene_id === id);
+  progressFill.style.width = ms.length ? `${((idx+1)/ms.length)*100}%` : '0%';
+}
+
+// ── 點擊提示 ──────────────────────────────────
+function setTap(fn) {
+  tapCb = fn;
+  clearTimeout(tapTimer);
+  tapHint.style.display = 'none';
+  tapTimer = setTimeout(() => { tapHint.style.display = 'block'; }, 2000);
+}
+function clearTap() {
+  tapCb = null;
+  clearTimeout(tapTimer);
+  tapHint.style.display = 'none';
+}
+
+textArea.addEventListener('click', fireTap);
+tapHint.addEventListener('click', fireTap);
+mainEl.addEventListener('click', e => { if (e.target === mainEl) fireTap(); });
+function fireTap() { if (tapCb) { const fn = tapCb; clearTap(); fn(); } }
+
+// ── 載入 JSON ─────────────────────────────────
+async function loadMaster() {
+  const res = await fetch(JSON_BASE + 'story_master.json');
+  masterData = await res.json();
+}
+
+async function loadStory(storyId) {
+  const story = masterData.stories.find(s => s.story_id === storyId);
+  if (!story) return;
+  const file = story.file;
+  const res = await fetch(JSON_BASE + file);
+  const data = await res.json();
+  data.scenes.forEach(s => { db[s.scene_id] = s; });
+  currentStoryId = storyId;
+}
+
+// 預載下一個小事件
+function prefetchNextStory(storyId) {
+  const story = masterData.stories.find(s => s.story_id === storyId);
+  if (!story || !story.next_story) return;
+  const next = masterData.stories.find(s => s.story_id === story.next_story);
+  if (!next) return;
+  fetch(JSON_BASE + next.file).then(r => r.json()).then(data => {
+    data.scenes.forEach(s => { db[s.scene_id] = s; });
+  }).catch(() => {});
+}
+
+// ── 開場 ──────────────────────────────────────
+loadMaster().then(async () => {
+  await loadStory('1.1');
+  splashBtn.textContent = '▶ 開始冒險';
+  splashBtn.disabled = false;
+  prefetchNextStory('1.1');
+}).catch(() => {
+  splashBtn.textContent = '載入失敗，請重試';
+});
+
+splashBtn.addEventListener('click', () => {
+  splashEl.style.display = 'none';
+  go('1.1.1');
+});
+
+// ── go：載入場景 ──────────────────────────────
+function go(id, skipLines = false) {
+  // 如果場景不在db，嘗試載入對應小事件
+  if (!db[id]) {
+    const storyId = id.split('.').slice(0,2).join('.');
+    loadingOverlay.classList.add('show');
+    loadStory(storyId).then(() => {
+      loadingOverlay.classList.remove('show');
+      prefetchNextStory(storyId);
+      goScene(id, skipLines);
+    }).catch(() => {
+      loadingOverlay.classList.remove('show');
+      showDone();
+    });
+    return;
+  }
+  goScene(id, skipLines);
+}
+
+function goScene(id, skipLines) {
+  const scene = db[id];
+  if (!scene) { showDone(); return; }
+
+  mainEl.classList.add('fade');
+  setImg(scene.image);
+
+  setTimeout(() => {
+    textArea.innerHTML = '';
+    optArea.innerHTML = '';
+    optArea.style.display = 'none';
+    startBtn.style.display = 'none';
+    doneEl.style.display = 'none';
+    clearTap();
+    window.speechSynthesis.cancel();
+
+    setImg(scene.image);
+    setProgress(id);
+    titleEl.textContent = scene.title || '';
+    mainEl.classList.remove('fade');
+
+    const lines = getLines(scene);
+
+    if (skipLines && scene.type === 'free_explore') {
+      showFreeExplore(scene);
+      return;
+    }
+
+    if (id === '1.1.1') {
+      startBtn.style.display = 'block';
+      startBtn.onclick = () => {
+        startBtn.style.display = 'none';
+        playLine(scene, lines, 0);
+      };
+    } else {
+      setTimeout(() => playLine(scene, lines, 0), 80);
+    }
+  }, 280);
+}
+
+// ── getLines ──────────────────────────────────
+function getLines(scene) {
+  if (!scene.visit_count_responses) return scene.lines || [];
+  const k = scene.scene_id;
+  visits[k] = (visits[k] || 0) + 1;
+  const n = visits[k];
+  const match = scene.visit_count_responses.find(r => r.visit === n)
+              || scene.visit_count_responses[scene.visit_count_responses.length - 1];
+  return match.lines;
+}
+
+// ── playLine：逐行播放 ────────────────────────
+function playLine(scene, lines, idx) {
+  if (idx >= lines.length) { afterLines(scene); return; }
+
+  const text = lines[idx];
+  const div = document.createElement('div');
+  div.className = 'line';
+  textArea.appendChild(div);
+  setTimeout(() => { div.classList.add('show'); textArea.scrollTop = textArea.scrollHeight; }, 30);
+
+  const next = () => {
+    if (idx + 1 < lines.length) {
+      setTap(() => playLine(scene, lines, idx + 1));
+    } else {
+      afterLines(scene);
+    }
+  };
+
+  if (muted) {
+    div.textContent = text;
+    setTap(next);
+  } else {
+    speakHL(div, text, next);
+  }
+}
+
+// ── afterLines ────────────────────────────────
+function afterLines(scene) {
+  clearTap();
+  if (scene.type === 'free_explore') {
+    showFreeExplore(scene);
+  } else if (scene.question && scene.choices && scene.choices.length) {
+    showOptions(scene);
+  } else if (scene.choices && scene.choices.length === 1 && !scene.question) {
+    const nextId = scene.choices[0].next_scene;
+    // 檢查是否為小事件結尾（next_scene為null或不存在）
+    if (!nextId) {
+      showNotebook(currentStoryId, () => {
+        const story = masterData.stories.find(s => s.story_id === currentStoryId);
+        if (story && story.next_story) {
+          const nextStoryData = masterData.stories.find(s => s.story_id === story.next_story);
+          if (nextStoryData) go(nextStoryData.start_scene);
+          else showDone();
+        } else {
+          showDone();
+        }
+      });
+    } else {
+      setTap(() => {
+        const nextScene = db[nextId];
+        if (nextScene && nextScene.type === 'free_explore') {
+          go(nextId, true);
+        } else {
+          go(nextId);
+        }
+      });
+    }
+  } else {
+    showDone();
+  }
+}
+
+// ── showOptions ───────────────────────────────
+function showOptions(scene) {
+  const valid = scene.choices.filter(o => !o.unlock_condition);
+
+  const qDiv = document.createElement('div');
+  qDiv.className = 'line question show';
+  textArea.appendChild(qDiv);
+  textArea.scrollTop = textArea.scrollHeight;
+
+  optArea.style.display = 'flex';
+  valid.forEach(opt => {
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
+    btn.addEventListener('click', () => pickOpt(opt, btn));
+    optArea.appendChild(btn);
+  });
+
+  speakHL(qDiv, scene.question, () => speakOpts(valid, 0));
+}
+
+function speakOpts(opts, idx) {
+  if (idx >= opts.length || muted) return;
+  const btn = optArea.querySelectorAll('.opt-btn')[idx];
+  if (!btn) { speakOpts(opts, idx+1); return; }
+  const textEl = btn.querySelector('.opt-text');
+  speakHL(textEl, opts[idx].text, () => speakOpts(opts, idx+1));
+}
+
+function pickOpt(opt, btn) {
+  window.speechSynthesis.cancel();
+  optArea.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
+  btn.classList.add('selected');
+  optArea.style.display = 'none';
+  clearTap();
+
+  const next = db[opt.next_scene];
+  if (next && next.image) setImg(next.image);
+
+  go(opt.next_scene);
+}
+
+// ── showFreeExplore（選一個即解鎖）────────────
+function showFreeExplore(scene) {
+  const k = scene.scene_id;
+  if (!explored[k]) explored[k] = new Set();
+  const exp = explored[k];
+
+  const qDiv = document.createElement('div');
+  qDiv.className = 'line question show';
+  textArea.appendChild(qDiv);
+  textArea.scrollTop = textArea.scrollHeight;
+
+  renderFEOpts(scene, exp, qDiv);
+}
+
+function renderFEOpts(scene, exp, qDiv) {
+  optArea.innerHTML = '';
+  optArea.style.display = 'flex';
+
+  const visible = [];
+  scene.choices.forEach(opt => {
+    // 解鎖條件：選了任意一個（exp.size >= 1）即解鎖D選項
+    if (opt.unlock_condition) {
+      if (exp.size < 1) return; // 未選過任何選項，不顯示
+    }
+    visible.push(opt);
+    const btn = document.createElement('button');
+    btn.className = 'opt-btn';
+    btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
+    btn.addEventListener('click', () => {
+      window.speechSynthesis.cancel();
+      if (opt.label && opt.label !== 'D') exp.add(opt.label);
+      const next = db[opt.next_scene];
+      if (next && next.image) setImg(next.image);
+      go(opt.next_scene);
+    });
+    optArea.appendChild(btn);
+  });
+
+  speakHL(qDiv, scene.question, () => speakOpts(visible, 0));
+}
+
+// ── 學徒筆記 ──────────────────────────────────
+function showNotebook(storyId, onContinue) {
+  const story = masterData.stories.find(s => s.story_id === storyId);
+  if (!story) { onContinue && onContinue(); return; }
+
+  // 取notebook資料（從已載入的scenes拿第一個scene的story JSON）
+  // notebook資料存在story JSON根層
+  const storyScene = db[story.start_scene];
+  // 尋找notebook資料：從db中找story_id對應的notebook
+  let notebookData = null;
+  // 因notebook存在JSON根層，需另外記錄
+  notebookData = storyNotebooks[storyId];
+
+  if (!notebookData) { onContinue && onContinue(); return; }
+
+  const left = notebookData.left_page;
+  const right = notebookData.right_page;
+
+  // 填左頁
+  const storyLinesEl = $('nb-story-lines');
+  storyLinesEl.innerHTML = '';
+  (left.story_progress || []).forEach(line => {
+    const p = document.createElement('div');
+    p.className = 'nb-story-line';
+    p.textContent = line;
+    storyLinesEl.appendChild(p);
+  });
+
+  // 地點和人物
+  const metaEl = $('nb-meta');
+  metaEl.innerHTML = '';
+  if (left.places_visited && left.places_visited.length) {
+    const row = document.createElement('div');
+    row.innerHTML = '去了：' + left.places_visited.map(p => `<span class="nb-tag">${p}</span>`).join('');
+    metaEl.appendChild(row);
+  }
+  if (left.people_met && left.people_met.length) {
+    const row = document.createElement('div');
+    row.innerHTML = '遇到：' + left.people_met.map(p => `<span class="nb-tag">${p}</span>`).join('');
+    metaEl.appendChild(row);
+  }
+
+  // 填右頁
+  const learnEl = $('nb-learn-items');
+  learnEl.innerHTML = '';
+  const typeLabel = { vocabulary:'詞彙', character:'字形', value:'品格', reasoning:'推理', social:'社會理解' };
+  (right.learned_points || []).forEach(item => {
+    const div = document.createElement('div');
+    div.className = 'nb-learn-item';
+    div.innerHTML = `<div class="nb-learn-type">${typeLabel[item.type] || item.type}</div>
+                     <div class="nb-learn-content">${item.content}</div>`;
+    learnEl.appendChild(div);
+  });
+
+  // 錨點圖像
+  const anchorImg = $('nb-anchor-img');
+  if (right.anchor_image && IMGS[right.anchor_image]) {
+    anchorImg.src = IMG_BASE + IMGS[right.anchor_image];
+    anchorImg.style.display = 'block';
+  } else {
+    anchorImg.style.display = 'none';
+  }
+
+  // 顯示筆記
+  notebookOverlay.classList.add('show');
+  window.speechSynthesis.cancel();
+
+  $('notebook-continue-btn').onclick = () => {
+    notebookOverlay.classList.remove('show');
+    onContinue && onContinue();
+  };
+}
+
+// notebook資料存儲（從JSON載入時同步儲存）
+const storyNotebooks = {};
+
+// 覆寫loadStory以同步儲存notebook
+const _origLoadStory = loadStory;
+async function loadStory(storyId) {
+  const story = masterData.stories.find(s => s.story_id === storyId);
+  if (!story) return;
+  const res = await fetch(JSON_BASE + story.file);
+  const data = await res.json();
+  data.scenes.forEach(s => { db[s.scene_id] = s; });
+  if (data.notebook) storyNotebooks[storyId] = data.notebook;
+  currentStoryId = storyId;
+}
+
+// ── 完成畫面 ──────────────────────────────────
+function showDone() {
+  clearTap();
+  doneEl.style.display = 'block';
+  tts('阿禾踏出了商行的門。大梁城的街道在等著他們。');
+}
+
+// ── 語速 ──────────────────────────────────────
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    rate = parseFloat(btn.dataset.rate);
+    window.speechSynthesis.cancel();
+  });
+});
+
+// ── 靜音 ──────────────────────────────────────
+muteBtn.addEventListener('click', () => {
+  muted = !muted;
+  muteBtn.textContent = muted ? '🔇' : '🔊';
+  if (muted) {
+    window.speechSynthesis.cancel();
+    if (!tapCb) { setTap(() => fireTap()); }
+  }
+});
+</script>
+</body>
+</html>
