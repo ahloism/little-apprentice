@@ -241,6 +241,37 @@
       z-index: 150; font-size: 22px; color: #fff8ee; letter-spacing: 2px;
     }
     #loading-overlay.show { display: flex; }
+    /* 並排圖像 */
+    #display-images {
+      display: none; width: 100%; max-width: 600px;
+      gap: 8px; padding: 0 20px; flex-shrink: 0;
+    }
+    #display-images.show { display: flex; }
+    #display-images img {
+      flex: 1; border-radius: 8px; object-fit: cover;
+      height: 120px; border: 2px solid transparent;
+      cursor: pointer; transition: border-color 0.2s;
+    }
+    #display-images img.selected { border-color: #d4870a; }
+
+    /* 開發者跳關 */
+    #dev-panel {
+      display: none; position: fixed; bottom: 20px; left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.85); border-radius: 12px;
+      padding: 12px 16px; z-index: 300;
+      display: none; flex-direction: column; gap: 8px; align-items: center;
+    }
+    #dev-panel.show { display: flex; }
+    #dev-input {
+      font-size: 18px; padding: 8px 12px; border-radius: 8px;
+      border: none; font-family: monospace; width: 160px; text-align: center;
+    }
+    #dev-go {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 8px; padding: 8px 20px;
+      font-size: 16px; cursor: pointer; font-family: inherit;
+    }
   </style>
 </head>
 <body>
@@ -264,6 +295,7 @@
 
 <!-- 圖像 -->
 <div id="image-area"><img id="img-el" src="" alt="" /></div>
+<div id="display-images" id="display-images"></div>
 <div id="img-caption"></div>
 <div id="progress-wrap"><div id="progress-bg"><div id="progress-fill"></div></div></div>
 
@@ -301,6 +333,12 @@
 
 <!-- 載入提示 -->
 <div id="loading-overlay">載入中⋯⋯</div>
+
+<!-- 開發者跳關 -->
+<div id="dev-panel">
+  <input id="dev-input" placeholder="輸入 scene_id" />
+  <button id="dev-go">跳去</button>
+</div>
 
 <script>
 // ── 設定 ──────────────────────────────────────
@@ -402,6 +440,81 @@ const NAMES = {
   A03:'謎語一示意', A04:'謎語二示意', A05:'誠信木匾',
 };
 
+// 音頻路徑
+const AUDIO_BASE = GITHUB_BASE + 'audio/';
+
+// 場景→底樂對照
+const SCENE_BGM = {
+  '1.1': 'BGM_01', '1.2': 'BGM_01', '1.3': 'BGM_01',
+  '1.4': 'BGM_01', '1.5': 'BGM_01', '1.6': 'BGM_01',
+  '1.7': 'BGM_03',
+};
+
+// 關鍵評估節點→切BGM_02
+const KEY_ASSESSMENT_SCENES = new Set([
+  '1.4.9',  // 最終決定
+  '1.6.7',  // 花生的事
+]);
+
+// 音量規則
+const BGM_VOLUME = {
+  transition: 0.5, story: 0.5,
+  explore: 0.6, free_explore: 0.6,
+  assessment: 0.25, hidden: 0.25, feedback: 0.4,
+};
+
+// ── 音樂系統 ──────────────────────────────────
+let bgmAudio = null;
+let currentBgm = null;
+
+function playBgm(key, volume = 0.5) {
+  if (currentBgm === key && bgmAudio && !bgmAudio.paused) {
+    bgmAudio.volume = volume;
+    return;
+  }
+  if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; }
+  currentBgm = key;
+  bgmAudio = new Audio(AUDIO_BASE + key + '.mp3');
+  bgmAudio.loop = true;
+  bgmAudio.volume = volume;
+  bgmAudio.play().catch(() => {});
+}
+
+function stopBgm() {
+  if (bgmAudio) { bgmAudio.pause(); }
+}
+
+function playBgmForScene(scene) {
+  if (muted) return;
+  const storyId = scene.scene_id.split('.').slice(0,2).join('.');
+
+  // 關鍵評估節點切BGM_02
+  if (KEY_ASSESSMENT_SCENES.has(scene.scene_id)) {
+    playBgm('BGM_02', 0.4);
+    return;
+  }
+
+  const bgmKey = SCENE_BGM[storyId] || 'BGM_01';
+  const vol = BGM_VOLUME[scene.type] || 0.5;
+  playBgm(bgmKey, vol);
+}
+
+function playSfx(key) {
+  if (muted) return;
+  const sfx = new Audio(AUDIO_BASE + key + '.mp3');
+  sfx.volume = 0.7;
+  sfx.play().catch(() => {});
+}
+
+function playNotebookBgm(onEnd) {
+  if (bgmAudio) { bgmAudio.pause(); }
+  currentBgm = null;
+  const nb = new Audio(AUDIO_BASE + 'BGM_04.mp3');
+  nb.volume = 0.6;
+  nb.play().catch(() => {});
+  nb.onended = () => { onEnd && onEnd(); };
+}
+
 // ── 狀態 ──────────────────────────────────────
 let db = {};           // scene_id → scene
 let masterData = null; // story_master 資料
@@ -425,6 +538,32 @@ const textArea = $('text-area'), optArea = $('options-area');
 const startBtn = $('start-btn'), tapHint = $('tap-hint'), doneEl = $('done');
 const notebookOverlay = $('notebook-overlay');
 const loadingOverlay = $('loading-overlay');
+const displayImagesEl = $('display-images');
+const devPanel = $('dev-panel');
+
+// ── 開發者跳關（長按靜音鍵3秒）────────────────
+let muteHoldTimer = null;
+muteBtn.addEventListener('mousedown', () => {
+  muteHoldTimer = setTimeout(() => { devPanel.classList.toggle('show'); }, 3000);
+});
+muteBtn.addEventListener('mouseup', () => clearTimeout(muteHoldTimer));
+muteBtn.addEventListener('touchstart', () => {
+  muteHoldTimer = setTimeout(() => { devPanel.classList.toggle('show'); }, 3000);
+});
+muteBtn.addEventListener('touchend', () => clearTimeout(muteHoldTimer));
+
+$('dev-go').addEventListener('click', () => {
+  const id = $('dev-input').value.trim();
+  if (!id) return;
+  devPanel.classList.remove('show');
+  $('dev-input').value = '';
+  const storyId = id.split('.').slice(0,2).join('.');
+  if (!db[id]) {
+    loadStory(storyId).then(() => go(id)).catch(() => alert('找不到場景：' + id));
+  } else {
+    go(id);
+  }
+});
 
 // ── 語音 ──────────────────────────────────────
 window.speechSynthesis.onvoiceschanged = findVoice;
@@ -518,6 +657,8 @@ mainEl.addEventListener('click', e => { if (e.target === mainEl) fireTap(); });
 function fireTap() { if (tapCb) { const fn = tapCb; clearTap(); fn(); } }
 
 // ── 載入 JSON ─────────────────────────────────
+const storyNotebooks = {};
+
 async function loadMaster() {
   const res = await fetch(JSON_BASE + 'story_master.json');
   masterData = await res.json();
@@ -526,10 +667,10 @@ async function loadMaster() {
 async function loadStory(storyId) {
   const story = masterData.stories.find(s => s.story_id === storyId);
   if (!story) return;
-  const file = story.file;
-  const res = await fetch(JSON_BASE + file);
+  const res = await fetch(JSON_BASE + story.file);
   const data = await res.json();
   data.scenes.forEach(s => { db[s.scene_id] = s; });
+  if (data.notebook) storyNotebooks[storyId] = data.notebook;
   currentStoryId = storyId;
 }
 
@@ -537,10 +678,12 @@ async function loadStory(storyId) {
 function prefetchNextStory(storyId) {
   const story = masterData.stories.find(s => s.story_id === storyId);
   if (!story || !story.next_story) return;
-  const next = masterData.stories.find(s => s.story_id === story.next_story);
+  const nextStoryId = story.next_story;
+  const next = masterData.stories.find(s => s.story_id === nextStoryId);
   if (!next) return;
   fetch(JSON_BASE + next.file).then(r => r.json()).then(data => {
     data.scenes.forEach(s => { db[s.scene_id] = s; });
+    if (data.notebook) storyNotebooks[nextStoryId] = data.notebook;
   }).catch(() => {});
 }
 
@@ -591,13 +734,19 @@ function goScene(id, skipLines) {
     optArea.style.display = 'none';
     startBtn.style.display = 'none';
     doneEl.style.display = 'none';
+    displayImagesEl.innerHTML = '';
+    displayImagesEl.classList.remove('show');
     clearTap();
     window.speechSynthesis.cancel();
 
     setImg(scene.image);
     setProgress(id);
     titleEl.textContent = scene.title || '';
+    titleEl.dataset.sceneId = id;
     mainEl.classList.remove('fade');
+
+    // 音樂
+    playBgmForScene(scene);
 
     const lines = getLines(scene);
 
@@ -633,6 +782,12 @@ function getLines(scene) {
 function playLine(scene, lines, idx) {
   if (idx >= lines.length) { afterLines(scene); return; }
 
+  // trigger_line_index 圖像切換
+  if (scene.image_cues) {
+    const cue = scene.image_cues.find(c => c.trigger_line_index === idx);
+    if (cue && cue.image) setImg(cue.image);
+  }
+
   const text = lines[idx];
   const div = document.createElement('div');
   div.className = 'line';
@@ -658,34 +813,36 @@ function playLine(scene, lines, idx) {
 // ── afterLines ────────────────────────────────
 function afterLines(scene) {
   clearTap();
+
+  // 小事件結尾：有next_story欄位（無論值為何）
+  if ('next_story' in scene) {
+    const doTransition = () => {
+      if (scene.next_story) {
+        const nextStoryData = masterData.stories.find(s => s.story_id === scene.next_story);
+        if (nextStoryData) go(nextStoryData.start_scene);
+        else showDone();
+      } else {
+        showDone();
+      }
+    };
+    setTap(() => showNotebook(currentStoryId, doTransition));
+    return;
+  }
+
   if (scene.type === 'free_explore') {
     showFreeExplore(scene);
   } else if (scene.question && scene.choices && scene.choices.length) {
     showOptions(scene);
   } else if (scene.choices && scene.choices.length === 1 && !scene.question) {
     const nextId = scene.choices[0].next_scene;
-    // 檢查是否為小事件結尾（next_scene為null或不存在）
-    if (!nextId) {
-      showNotebook(currentStoryId, () => {
-        const story = masterData.stories.find(s => s.story_id === currentStoryId);
-        if (story && story.next_story) {
-          const nextStoryData = masterData.stories.find(s => s.story_id === story.next_story);
-          if (nextStoryData) go(nextStoryData.start_scene);
-          else showDone();
-        } else {
-          showDone();
-        }
-      });
-    } else {
-      setTap(() => {
-        const nextScene = db[nextId];
-        if (nextScene && nextScene.type === 'free_explore') {
-          go(nextId, true);
-        } else {
-          go(nextId);
-        }
-      });
-    }
+    setTap(() => {
+      const nextScene = db[nextId];
+      if (nextScene && nextScene.type === 'free_explore') {
+        go(nextId, true);
+      } else {
+        go(nextId);
+      }
+    });
   } else {
     showDone();
   }
@@ -694,6 +851,29 @@ function afterLines(scene) {
 // ── showOptions ───────────────────────────────
 function showOptions(scene) {
   const valid = scene.choices.filter(o => !o.unlock_condition);
+
+  // display_images 並排圖像
+  if (scene.display_images && scene.display_images.length) {
+    displayImagesEl.innerHTML = '';
+    scene.display_images.forEach((code, i) => {
+      const img = document.createElement('img');
+      img.src = IMG_BASE + IMGS[code];
+      img.alt = NAMES[code] || code;
+      img.dataset.index = i;
+      img.addEventListener('click', () => {
+        displayImagesEl.querySelectorAll('img').forEach(im => im.classList.remove('selected'));
+        img.classList.add('selected');
+        // 對應選項
+        const opt = valid[i];
+        if (opt) {
+          const btn = optArea.querySelectorAll('.opt-btn')[i];
+          if (btn) pickOpt(opt, btn);
+        }
+      });
+      displayImagesEl.appendChild(img);
+    });
+    displayImagesEl.classList.add('show');
+  }
 
   const qDiv = document.createElement('div');
   qDiv.className = 'line question show';
@@ -708,6 +888,9 @@ function showOptions(scene) {
     btn.addEventListener('click', () => pickOpt(opt, btn));
     optArea.appendChild(btn);
   });
+
+  // 選項出現音效
+  playSfx('SFX_01');
 
   speakHL(qDiv, scene.question, () => speakOpts(valid, 0));
 }
@@ -725,11 +908,23 @@ function pickOpt(opt, btn) {
   optArea.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
   btn.classList.add('selected');
   optArea.style.display = 'none';
+  displayImagesEl.classList.remove('show');
   clearTap();
 
-  const next = db[opt.next_scene];
-  if (next && next.image) setImg(next.image);
+  // 答對答錯音效
+  const nextScene = db[opt.next_scene];
+  if (nextScene) {
+    if (nextScene.type === 'feedback' && nextScene.support_flag) {
+      playSfx('SFX_03');
+    } else if (nextScene.type === 'feedback') {
+      // 判斷正確：第一個choice的next通常是正確答案
+      const scene = Object.values(db).find(s => s.choices && s.choices.some(c => c.next_scene === opt.next_scene));
+      const isCorrect = scene && scene.choices[0] && scene.choices[0].next_scene === opt.next_scene;
+      playSfx(isCorrect ? 'SFX_02' : 'SFX_03');
+    }
+  }
 
+  if (nextScene && nextScene.image) setImg(nextScene.image);
   go(opt.next_scene);
 }
 
@@ -771,10 +966,9 @@ function renderFEOpts(scene, exp, qDiv) {
     optArea.appendChild(btn);
   });
 
+  playSfx('SFX_01');
   speakHL(qDiv, scene.question, () => speakOpts(visible, 0));
 }
-
-// ── 學徒筆記 ──────────────────────────────────
 function showNotebook(storyId, onContinue) {
   const story = masterData.stories.find(s => s.story_id === storyId);
   if (!story) { onContinue && onContinue(); return; }
@@ -837,9 +1031,11 @@ function showNotebook(storyId, onContinue) {
     anchorImg.style.display = 'none';
   }
 
-  // 顯示筆記
+  // 顯示筆記，播BGM_04
   notebookOverlay.classList.add('show');
   window.speechSynthesis.cancel();
+  stopBgm();
+  playNotebookBgm(() => {}); // BGM_04播完自然停，繼續按鈕由用戶控制
 
   $('notebook-continue-btn').onclick = () => {
     notebookOverlay.classList.remove('show');
@@ -847,24 +1043,10 @@ function showNotebook(storyId, onContinue) {
   };
 }
 
-// notebook資料存儲（從JSON載入時同步儲存）
-const storyNotebooks = {};
-
-// 覆寫loadStory以同步儲存notebook
-const _origLoadStory = loadStory;
-async function loadStory(storyId) {
-  const story = masterData.stories.find(s => s.story_id === storyId);
-  if (!story) return;
-  const res = await fetch(JSON_BASE + story.file);
-  const data = await res.json();
-  data.scenes.forEach(s => { db[s.scene_id] = s; });
-  if (data.notebook) storyNotebooks[storyId] = data.notebook;
-  currentStoryId = storyId;
-}
-
 // ── 完成畫面 ──────────────────────────────────
 function showDone() {
   clearTap();
+  stopBgm();
   doneEl.style.display = 'block';
   tts('阿禾踏出了商行的門。大梁城的街道在等著他們。');
 }
@@ -885,7 +1067,12 @@ muteBtn.addEventListener('click', () => {
   muteBtn.textContent = muted ? '🔇' : '🔊';
   if (muted) {
     window.speechSynthesis.cancel();
+    stopBgm();
     if (!tapCb) { setTap(() => fireTap()); }
+  } else {
+    // 恢復音樂
+    const sceneId = titleEl.dataset.sceneId;
+    if (sceneId && db[sceneId]) playBgmForScene(db[sceneId]);
   }
 });
 </script>
