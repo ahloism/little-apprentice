@@ -60,7 +60,7 @@
     {
       "scene_id": "1.4.2",
       "type": "assessment",
-      "title": "信哪個（第一次選擇）",
+      "title": "信哪個？",
       "image": "C02",
       "lines": [
         "阿禾低頭想了想。",
@@ -588,7 +588,7 @@
     {
       "scene_id": "1.4.9",
       "type": "assessment",
-      "title": "最終決定（第二次選擇）",
+      "title": "阿禾的決定",
       "image": "C02",
       "lines": [
         "阿水聽完，沉默了一會兒。",
@@ -623,7 +623,7 @@
       "scene_id": "1.4.10",
       "type": "story",
       "title": "化糞池",
-      "image": "O18",
+      "image": "S11",
       "image_cues": [
         {
           "trigger_line_index": 9,

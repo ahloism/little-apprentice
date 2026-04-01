@@ -27,7 +27,7 @@
       "scene_id": "1.7.1",
       "type": "transition",
       "title": "進帳房",
-      "image": "S17",
+      "image": "C10",
       "lines": [
         "回到商行，天色已經不早了。",
         "阿水推開商行的門，走廊盡頭站著一個挺拔的身影。",
@@ -58,7 +58,7 @@
     {
       "scene_id": "1.7.3",
       "type": "assessment",
-      "title": "考問一：貨物",
+      "title": "第一問",
       "image": "O05",
       "lines": [
         "錢平在紙上畫了一串圓滾滾、紅通通的東西。",
@@ -95,7 +95,7 @@
     {
       "scene_id": "1.7.4",
       "type": "assessment",
-      "title": "考問二：橋邊判斷",
+      "title": "橋邊的事",
       "image": "A01",
       "lines": [
         "「橋邊打聽老梁下落，三個人三個說法。」",
@@ -132,7 +132,7 @@
     {
       "scene_id": "1.7.5",
       "type": "assessment",
-      "title": "考問三：辨識私心",
+      "title": "相信的理由",
       "image": "A01",
       "lines": [
         "「那阿乖和王三呢？」",
@@ -169,7 +169,7 @@
     {
       "scene_id": "1.7.6",
       "type": "assessment",
-      "title": "考問四：字帖真相",
+      "title": "那張紙",
       "image": "A01",
       "lines": [
         "「梅姐交給你的那疊紙，最後杜先生怎麼說？」"
@@ -205,7 +205,7 @@
     {
       "scene_id": "1.7.7",
       "type": "assessment",
-      "title": "考問五：杜先生的教導",
+      "title": "杜先生的話",
       "image": "A01",
       "lines": [
         "「杜先生沒有直接告訴你答案，他是怎麼做的？」"
@@ -241,7 +241,7 @@
     {
       "scene_id": "1.7.8",
       "type": "assessment",
-      "title": "最終考問：花生的責任",
+      "title": "誰負責花生",
       "image": "C10",
       "lines": [
         "錢平的聲音突然低了下來，錢伯也抬起了頭。",
@@ -258,7 +258,7 @@
     {
       "scene_id": "1.7.9",
       "type": "hidden",
-      "title": "正直的反饋",
+      "title": "錢伯說話了",
       "image": "C03",
       "lines": [
         "錢伯終於開口，聲音沙啞卻溫暖：「知道錯了，也肯認，這才是商行的孩子。」",
@@ -269,7 +269,7 @@
     {
       "scene_id": "1.7.10",
       "type": "hidden",
-      "title": "嚴厲的警告",
+      "title": "錢平的警告",
       "image": "C03",
       "lines": [
         "錢伯猛地一拍桌子：「石頭幫你撿回花生，那是他的善意！你卻想逃避？」",
@@ -281,7 +281,7 @@
     {
       "scene_id": "1.7.11",
       "type": "story",
-      "title": "終極訓誡",
+      "title": "錢伯的訓勉",
       "image": "C03",
       "lines": [
         "錢伯站起身，走到阿禾面前。",
@@ -308,13 +308,7 @@
       "scene_id": "1.7.13",
       "type": "transition",
       "title": "銘記誠信",
-      "image": "S01",
-      "image_cues": [
-        {
-          "trigger_line_index": 1,
-          "image": "A05"
-        }
-      ],
+      "image": "A05",
       "lines": [
         "阿禾回頭看向商行正門上方的照壁。",
         "那裡刻著兩個蒼勁的大字——誠信。",
