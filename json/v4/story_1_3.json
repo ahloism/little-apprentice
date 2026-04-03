@@ -58,6 +58,10 @@
       "type": "explore",
       "title": "橋邊與河",
       "image": "S07",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "那道拱橋又高又長，橋身彎成一道弧，像一條臥在河上的長龍。",
         "橋面很寬，幾輛推車並排走也不嫌擠。",
@@ -177,6 +181,10 @@
       "type": "explore",
       "title": "認識梅姐",
       "image": "C05",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "老梁的攤檔旁邊，有個婆婆在忙著招呼客人。",
         "她手裡提著茶壺，來回走動，給這個添茶，給那個換碗。",
@@ -253,6 +261,11 @@
       "type": "assessment",
       "title": "梅姐說老梁去了客棧",
       "image": "C05",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿禾點點頭，說找老梁。",
         "梅姐正要開口，旁邊有客人招手叫她。",
@@ -331,6 +344,10 @@
       "type": "free_explore",
       "title": "老梁攤檔",
       "image": "S10",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "梅姐回去招呼自己的客人了，來回走動，腳步沒有停過。",
         "阿禾一個人站在攤前，低頭打量老梁的攤檔。",
@@ -375,20 +392,19 @@
           "visit": 1,
           "lines": [
             "這串糖葫蘆跟商行的一模一樣，山楂紅得深，糖衣厚厚的。",
-            "阿禾想起錢伯的商行就是賣貨給老梁的，難怪一樣。",
-            "他湊近聞了一下，甜味直往鼻子裡鑽。"
+            "阿禾想起錢伯的商行就是賣貨給老梁的，難怪一樣。"
           ]
         },
         {
           "visit": 2,
           "lines": [
-            "梅姐從旁邊走過，頭也沒抬：「老梁的糖葫蘆，橋邊最好吃的，每天早上賣完就沒了。」"
+            "梅姐從旁邊走過：「老梁的糖葫蘆是橋上最好的，就是貨不夠多。」"
           ]
         },
         {
           "visit": 3,
           "lines": [
-            "梅姐從旁邊走過，沒有停：「還看？老梁的東西都實在。」"
+            "梅姐說：「還看？等老梁回來就有了。」"
           ]
         }
       ],
@@ -407,21 +423,21 @@
         {
           "visit": 1,
           "lines": [
-            "繩子有粗有細，最粗的有阿禾拇指那麼寬。",
-            "他捏了捏，結實得很。",
-            "想起錢伯說過，好繩子要看紋路——這捆的紋路扭得很緊。"
+            "繩子有粗有細，捆得整整齊齊。",
+            "阿禾摸了一下，比市集那個攤子的硬一點。",
+            "他想起阿水說錢伯的繩子最結實——老梁的繩子，也是從錢伯那裡來的。"
           ]
         },
         {
           "visit": 2,
           "lines": [
-            "梅姐從旁邊走過，手裡還提著茶壺：「這繩子耐用，碼頭那邊的人也來買。」說完就走了。"
+            "梅姐經過：「老梁賣的東西都實在，不會坑人。」"
           ]
         },
         {
           "visit": 3,
           "lines": [
-            "梅姐從旁邊走過，沒有停：「還看？老梁的東西都實在。」"
+            "梅姐說：「還看？等老梁回來就有了。」"
           ]
         }
       ],
@@ -470,6 +486,10 @@
       "type": "explore",
       "title": "認識阿乖",
       "image": "C06",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "阿禾抱著包裹，站在攤前不知所措。",
         "梅姐說客棧，但沒說要等還是要去。阿水還沒回來，他只好留在原地。",
@@ -545,6 +565,11 @@
       "type": "assessment",
       "title": "阿乖的捉弄",
       "image": "C06",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary", "social_understanding"],
+        "support_option": ["A", "B"]
+      },
       "image_cues": [
         {
           "trigger_line_index": 5,
@@ -634,6 +659,10 @@
       "type": "explore",
       "title": "認識王三",
       "image": "C07",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿乖走了沒幾步，旁邊一個小販招招手。",
         "「喂，小孩，過來。」",
@@ -710,6 +739,11 @@
       "type": "assessment",
       "title": "王三說老梁去賭坊",
       "image": "C07",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": ["A", "C"]
+      },
       "lines": [
         "王三湊近阿禾，壓低聲音，一副說秘密的樣子。",
         "「對了，我叫王三，這橋邊的事沒有我不知道的。」",

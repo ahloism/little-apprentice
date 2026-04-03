@@ -54,6 +54,10 @@
       "type": "explore",
       "title": "碼頭環境",
       "image": "S16",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "碼頭比市集還嘈。貨箱、麻袋、竹籮，堆得像小山。河面上停著兩三艘大船，旗子在桅杆上飄。"
       ],
@@ -79,7 +83,7 @@
     {
       "scene_id": "1.6.2.A",
       "type": "feedback",
-      "image": "S16",
+      "image": "S11",
       "lines": [
         "阿禾望向大船，船身巨大的陰影壓在水面上，隨著波浪輕輕晃動。"
       ],
@@ -93,7 +97,7 @@
     {
       "scene_id": "1.6.2.B",
       "type": "feedback",
-      "image": "S16",
+      "image": "S11",
       "lines": [
         "漢子們渾身是汗，肩膀上的肌肉緊繃，每一步都踏得沉穩有力。"
       ],
@@ -107,7 +111,7 @@
     {
       "scene_id": "1.6.2.C",
       "type": "feedback",
-      "image": "S16",
+      "image": "S11",
       "lines": [
         "繩索磨得有些發白，但依然緊緊繃著，將大船穩在岸邊。"
       ],
@@ -148,6 +152,10 @@
       "type": "explore",
       "title": "認識老梁",
       "image": "C09",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "老梁摘下草帽，拿在手裡扇了扇，說話的時候眼睛笑著。"
       ],
@@ -257,9 +265,14 @@
       "type": "assessment",
       "title": "花生的事",
       "image": "C09",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["value_judgment"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
-        "阿禾記得那包花生——在市集的時候，袋子破了，花生滾了一地。",
-        "他慌著撿，之後阿水拉著他跑了。",
+        "阿禾記得那包花生——在市集的時候，阿水撞上石頭，袋子破了，花生滾了一地。他有撿，但沒全撿到。石頭後來把地上的撿起來拿走了。",
+        "阿禾不知道石頭帶著花生就在旁邊。",
         "老梁問：「少了一包花生，怎麼回事？」"
       ],
       "question": "阿禾應該怎麼做？",
@@ -305,6 +318,11 @@
       "type": "hidden",
       "title": "推卸給石頭",
       "image": "C04",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "價值判斷錯誤，選擇推卸責任並誣賴他人",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "「是石頭，」阿禾說，「他撞倒了我，所以花生灑了，是他弄的。」",
         "石頭轉過身，什麼也沒說，從麻袋裡摸出那包花生，放到老梁手裡。",
@@ -324,6 +342,11 @@
       "type": "hidden",
       "title": "沉默逃避",
       "image": "C04",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "價值判斷錯誤，選擇沉默逃避責任",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿禾低著頭，沒有說話。",
         "石頭轉過身，從麻袋裡摸出那包花生，放到老梁手裡，還是一句話也沒說。",
@@ -363,7 +386,7 @@
       "scene_id": "1.6.12",
       "type": "transition",
       "title": "離開碼頭",
-      "image": "S16",
+      "image": "S12",
       "lines": [
         "把貨交好，老梁拍了拍兩個孩子的肩膀：「快回去吧，錢伯等著呢。」",
         "阿禾和阿水沿著河岸走回去，號子聲在身後慢慢遠了。"

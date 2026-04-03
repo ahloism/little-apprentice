@@ -60,8 +60,13 @@
     {
       "scene_id": "1.4.2",
       "type": "assessment",
-      "title": "信哪個？",
+      "title": "信哪個（第一次選擇）",
       "image": "C02",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["information_integration"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿禾低頭想了想。",
         "他看了一眼梅姐——她還在招呼客人，茶壺提在手裡。",
@@ -137,6 +142,11 @@
       "type": "hidden",
       "title": "阿水追問為何信梅姐",
       "image": "C05",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選梅姐，追問理由",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿禾說：「我信梅姐，她說老梁去了客棧。」",
         "阿水沒有立刻說話。他低著頭，手指敲了敲包裹，像在想什麼。",
@@ -213,6 +223,11 @@
       "type": "hidden",
       "title": "阿水追問為何信阿乖",
       "image": "O18",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選阿乖（被誤導）",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿禾說：「我信阿乖，他說老梁在地圖指的地方。」",
         "阿水的眉頭皺起來，眼睛落在那張紙上，沉默了一會兒。",
@@ -288,6 +303,11 @@
       "type": "hidden",
       "title": "阿水追問為何信王三",
       "image": "C07",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選王三（被細節迷惑）",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿禾說：「我信王三，他說老梁去了賭坊。」",
         "阿水搖了搖頭，但沒有開口，手插在腰間，望了一眼王三的攤子方向。",
@@ -365,6 +385,11 @@
       "type": "hidden",
       "title": "不信阿乖和王三的理由",
       "image": "C02",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選梅姐後追問不信阿乖和王三的理由",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿水點點頭：「那另外兩個呢？你為什麼不信他們？」",
         "阿禾回頭看了看——王三正在跟客人講價，手比劃得很起勁。阿乖已經不見了，只剩他留下的那張紙還在阿禾手裡。想了想，才說——"
@@ -438,6 +463,11 @@
       "type": "hidden",
       "title": "不信梅姐和王三的理由",
       "image": "C02",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選阿乖後追問不信梅姐和王三的理由",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿水皺著眉：「那另外兩個呢？你為什麼不信他們？」",
         "阿禾回頭看了看——梅姐還坐在矮凳上，正低頭整理茶壺，神情平靜。又看了看王三的攤子——他還在跟人說話，手不停地比劃。想了想，才說——"
@@ -514,6 +544,11 @@
       "type": "hidden",
       "title": "不信梅姐和阿乖的理由",
       "image": "C02",
+      "collect": {
+        "type": "hidden_assessment",
+        "trigger": "選王三後追問不信梅姐和阿乖的理由",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "阿水搖搖頭：「那另外兩個呢？你為什麼不信他們？」",
         "阿禾回頭看了看——梅姐還坐在矮凳上，茶壺放在旁邊，眼睛望著河的方向。阿乖早就不見了，橋上人來人往，找不到他的背影。想了想，才說——"
@@ -588,8 +623,13 @@
     {
       "scene_id": "1.4.9",
       "type": "assessment",
-      "title": "阿禾的決定",
+      "title": "最終決定（第二次選擇）",
       "image": "C02",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["information_integration"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿水聽完，沉默了一會兒。",
         "他低著頭，手指敲著包裹，像在整理思路。",
@@ -623,7 +663,7 @@
       "scene_id": "1.4.10",
       "type": "story",
       "title": "化糞池",
-      "image": "S11",
+      "image": "O18",
       "image_cues": [
         {
           "trigger_line_index": 9,
@@ -739,6 +779,11 @@
       "type": "assessment",
       "title": "辨認字帖：「信」",
       "image": "W02",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "紙展開來，裡面有幾行字，寫得工工整整，但筆畫有點歪，像是用了很大力氣才寫出來的。",
         "阿禾盯著第一個字。",
@@ -812,6 +857,11 @@
       "type": "assessment",
       "title": "辨認字帖：「家」",
       "image": "W03",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿禾看著第二個字，眉頭皺起來。",
         "上面像一個屋頂，下面好像有隻動物在裡面。",
@@ -885,6 +935,11 @@
       "type": "assessment",
       "title": "辨認字帖：「急」",
       "image": "W04",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿禾盯著第三個字，這個比前兩個複雜，筆畫更多。",
         "下面好像有一個心字，像是心裡有什麼感覺。"

@@ -71,6 +71,10 @@
       "type": "explore",
       "title": "阿禾先看哪裡",
       "image": "S02",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "阿禾的布包縫了又縫，背帶快要斷了。",
         "他站在商行門口，不知道該先看哪裡。"
@@ -147,6 +151,11 @@
       "type": "assessment",
       "title": "遇見阿水",
       "image": "C02",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": "C"
+      },
       "lines": [
         "一個少年從商行裡跑出來，差點撞上阿禾。",
         "他比阿禾高半個頭，頭髮有點亂，衣服斜斜地紮著。",
@@ -224,6 +233,11 @@
       "type": "assessment",
       "title": "錢伯出場",
       "image": "C03",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "算盤聲停了。",
         "一個中年男人走出來，手裡的算盤還在動。",
@@ -304,6 +318,10 @@
       "type": "explore",
       "title": "認識錢伯",
       "image": "C03",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "錢伯說完，轉身走回去，算盤又響起來了。",
         "阿禾站在原地，偷偷打量了一下錢伯。"
@@ -397,6 +415,10 @@
       "type": "free_explore",
       "title": "認識三樣貨物",
       "image": "C03",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "兩個包裹放在桌上。",
         "阿禾盯著看，心裡默默記著名字。",
@@ -537,6 +559,11 @@
       "type": "assessment",
       "title": "阿水亂解釋",
       "image": "C02",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary", "social_understanding"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "阿水拍拍胸口，一臉自信。「這三樣我最清楚，讓我來說。」",
         "他指著糖葫蘆：「這個叫糖餅，是甜的。」",
@@ -612,6 +639,10 @@
       "type": "assessment",
       "title": "倉庫取貨",
       "image": "S03",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary"]
+      },
       "lines": [
         "錢伯說：「煎餅和花生已經打包好了。」",
         "「糖葫蘆在倉庫甜食格，你去拿。」",
@@ -692,6 +723,10 @@
       "type": "hidden",
       "title": "再找一次",
       "image": "S03",
+      "collect": {
+        "type": "hidden_remedial",
+        "trigger": "詞彙理解不足，未能認出糖葫蘆"
+      },
       "lines": [
         "阿禾重新看了看甜食格子。",
         "這次他知道糖葫蘆是穿在竹簽上的，紅色的。",

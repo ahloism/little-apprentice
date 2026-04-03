@@ -76,6 +76,10 @@
       "type": "explore",
       "title": "市集",
       "image": "S04",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "阿禾緊盯著阿水的背影，生怕一眨眼就跟丟了。",
         "但市集裡的東西實在太多，眼睛不聽話，一直往旁邊跑。",
@@ -153,6 +157,10 @@
       "type": "free_explore",
       "title": "自由探索市集",
       "image": "S04",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "市集裡的東西多得看不完。",
         "阿禾跟著阿水走，腳步沒停，眼睛卻一直往兩邊跑。",
@@ -314,6 +322,11 @@
       "type": "assessment",
       "title": "阿禾怎麼做",
       "image": "A01",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["value_judgment"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "鑼聲一陣一陣的，人群越圍越多。",
         "竿子頂端的小孩翻了個跟斗，穩穩落下，人群轟然叫好。",
@@ -427,6 +440,11 @@
       "type": "assessment",
       "title": "阿禾怎麼回應石頭",
       "image": "C04",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": ["C"]
+      },
       "lines": [
         "石頭站在原地，眉頭還皺著，看著阿禾沒有說話。",
         "貨箱歪了，地上滾了幾個散件。",
@@ -523,6 +541,11 @@
       "type": "assessment",
       "title": "撿花生",
       "image": "A01",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["value_judgment"],
+        "support_option": ["A", "C"]
+      },
       "lines": [
         "花生油紙包滾得到處都是。",
         "石頭就站在旁邊，低頭看著地上散落的貨物，沉默不動。",
@@ -622,6 +645,10 @@
       "type": "explore",
       "title": "問阿水",
       "image": "C02",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_info"
+      },
       "lines": [
         "兩個人跑出市集，才慢慢停下來。",
         "阿水回頭看了一眼，拍拍胸口：「嚇死我了，石頭哥突然蹲下來，我以為他要打人。」",

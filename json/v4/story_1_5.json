@@ -28,7 +28,7 @@
           "content": "不識字，路難行——老梁五十出頭仍在學字，阿禾識字夠多嗎？路會難行嗎？"
         }
       ],
-      "anchor_image": "O19"
+      "anchor_image": "A03"
     }
   },
   "scenes": [
@@ -53,6 +53,10 @@
       "type": "explore",
       "title": "客棧環境",
       "image": "S14",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "客棧裡比外頭靜，桌椅整齊，煙氣繞著樑柱慢慢散。",
         "一個角落架著說書台，台上擺著驚堂木；靠牆是茶水台，茶葉香飄出來；廊邊坐著兩個老頭，一聲不響地對弈。"
@@ -142,6 +146,10 @@
       "type": "explore",
       "title": "認識杜先生",
       "image": "C08",
+      "collect": {
+        "type": "exploration",
+        "exp_tag": "EXP_world"
+      },
       "lines": [
         "杜先生把扇子一收，開了眼，從上到下看了阿禾一眼，又看了阿水一眼。",
         "「哪裡的孩子，到客棧來幹什麼？」"
@@ -237,8 +245,13 @@
     {
       "scene_id": "1.5.6",
       "type": "assessment",
-      "title": "識字考驗",
+      "title": "識字考驗（信、家、急、病）",
       "image": "W05",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["vocabulary"],
+        "support_option": ["B", "C"]
+      },
       "lines": [
         "那疊紙上寫著四個大字：信　家　急　病",
         "「這是什麼字？」杜先生用扇子一一點過去。阿禾認出了三個，第四個他停下來了。",
@@ -308,8 +321,13 @@
     {
       "scene_id": "1.5.7",
       "type": "assessment",
-      "title": "杜先生出題了",
+      "title": "謎語一（頭）",
       "image": "C08",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["situation_understanding"],
+        "support_option": ["A", "C"]
+      },
       "image_cues": [
         {
           "trigger_line_index": 1,
@@ -318,8 +336,7 @@
       ],
       "lines": [
         "杜先生把紙疊好，放在一旁。他站起來，把折扇打開，清了清嗓子：",
-        "「想找老梁也可以，我出兩個謎語，你自己猜。」",
-        "「第一個：眼睛在上面，耳朵在旁邊，鼻子在中間，嘴巴在下頭——走路永遠走最前，是什麼？」",
+        "「聽好了，我出個謎語。眼睛在上面，耳朵在旁邊，鼻子在中間，嘴巴在下頭——走路永遠走最前，是什麼？」",
         "阿水湊過來低聲說：「我知道——」",
         "「你不准說！」杜先生用扇子一指，「讓他自己答。」"
       ],
@@ -387,10 +404,15 @@
     {
       "scene_id": "1.5.8",
       "type": "assessment",
-      "title": "再一個謎語",
+      "title": "謎語二（馬）",
       "image": "A04",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["situation_understanding"],
+        "support_option": ["A", "C"]
+      },
       "lines": [
-        "杜先生又搖起扇子：「再來一個。有頭有尾不是人，會跑會跳不會說。背上有人走天下，古時商路靠它多。」",
+        "杜先生又搖起扇子：「再來一個。四條腿，長得高，跑起來像風，人可以坐在背上——是什麼？」",
         "阿禾這次想得快一點。"
       ],
       "question": "謎底是——",
@@ -457,8 +479,13 @@
     {
       "scene_id": "1.5.9",
       "type": "assessment",
-      "title": "阿禾想了想",
+      "title": "拼出碼頭",
       "image": "A01",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["situation_understanding", "vocabulary"],
+        "support_option": ["A", "B"]
+      },
       "lines": [
         "「好，」杜先生站起來，把兩個字分別點在扇面上，「頭，加上馬——」",
         "他把扇子合上，再打開，讓阿禾看：「這兩個字合在一起，就是你要找的地方。」",
@@ -528,8 +555,13 @@
     {
       "scene_id": "1.5.10",
       "type": "assessment",
-      "title": "字帖的秘密",
+      "title": "字帖的秘密（社會理解）",
       "image": "O19",
+      "collect": {
+        "type": "assessment",
+        "dimension": ["social_understanding"],
+        "support_option": ["B", "C"]
+      },
       "image_cues": [
         {
           "trigger_line_index": 3,
