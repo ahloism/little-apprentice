@@ -664,12 +664,12 @@ function playSfx(key) {
 }
 
 function playNotebookBgm() {
-  if (bgmAudio) bgmAudio.pause();
-  currentBgm = null;
+  if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; }
+  currentBgm = 'BGM_04';
   if (musicMuted) return;
-  const nb = new Audio(AUDIO_BASE + 'BGM_04.mp3');
-  nb.volume = 0.6;
-  nb.play().catch(() => {});
+  bgmAudio = new Audio(AUDIO_BASE + 'BGM_04.mp3');
+  bgmAudio.volume = 0.6;
+  bgmAudio.play().catch(() => {});
 }
 
 // ════════════════════════════════════════════════
