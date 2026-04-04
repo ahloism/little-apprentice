@@ -28,7 +28,7 @@
           "content": "不識字，路難行——老梁五十出頭仍在學字，阿禾識字夠多嗎？路會難行嗎？"
         }
       ],
-      "anchor_image": "A03"
+      "anchor_image": "O19"
     }
   },
   "scenes": [
@@ -245,7 +245,7 @@
     {
       "scene_id": "1.5.6",
       "type": "assessment",
-      "title": "識字考驗（信、家、急、病）",
+      "title": "識字考驗",
       "image": "W05",
       "collect": {
         "type": "assessment",
@@ -321,7 +321,7 @@
     {
       "scene_id": "1.5.7",
       "type": "assessment",
-      "title": "謎語一（頭）",
+      "title": "杜先生出題了",
       "image": "C08",
       "collect": {
         "type": "assessment",
@@ -404,7 +404,7 @@
     {
       "scene_id": "1.5.8",
       "type": "assessment",
-      "title": "謎語二（馬）",
+      "title": "再一個謎語",
       "image": "A04",
       "collect": {
         "type": "assessment",
@@ -479,7 +479,7 @@
     {
       "scene_id": "1.5.9",
       "type": "assessment",
-      "title": "拼出碼頭",
+      "title": "阿禾想了想",
       "image": "A01",
       "collect": {
         "type": "assessment",
@@ -555,7 +555,7 @@
     {
       "scene_id": "1.5.10",
       "type": "assessment",
-      "title": "字帖的秘密（社會理解）",
+      "title": "字帖的秘密",
       "image": "O19",
       "collect": {
         "type": "assessment",

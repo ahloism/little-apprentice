@@ -60,7 +60,7 @@
     {
       "scene_id": "1.4.2",
       "type": "assessment",
-      "title": "信哪個（第一次選擇）",
+      "title": "信哪個？",
       "image": "C02",
       "collect": {
         "type": "assessment",
@@ -623,7 +623,7 @@
     {
       "scene_id": "1.4.9",
       "type": "assessment",
-      "title": "最終決定（第二次選擇）",
+      "title": "阿禾的決定",
       "image": "C02",
       "collect": {
         "type": "assessment",
@@ -746,7 +746,7 @@
     {
       "scene_id": "1.4.13",
       "type": "story",
-      "title": "梅姐給字帖",
+      "title": "梅姐的發現",
       "image": "C05",
       "image_cues": [
         {
@@ -782,7 +782,7 @@
       "collect": {
         "type": "assessment",
         "dimension": ["vocabulary"],
-        "support_option": ["B", "C"]
+        "support_option": ["A", "B"]
       },
       "lines": [
         "紙展開來，裡面有幾行字，寫得工工整整，但筆畫有點歪，像是用了很大力氣才寫出來的。",
@@ -790,22 +790,10 @@
         "左邊像一個人，右邊是幾橫幾豎，像嘴巴在說話。"
       ],
       "question": "這個字是什麼意思？",
-      "choices": [
-        {
-          "label": "A",
-          "text": "人說的話，寫下來送給別人的",
-          "next_scene": "1.4.14.A"
-        },
-        {
-          "label": "B",
-          "text": "人走路，從一個地方到另一個地方",
-          "next_scene": "1.4.14.B"
-        },
-        {
-          "label": "C",
-          "text": "人吃飯，每天都要做的事",
-          "next_scene": "1.4.14.C"
-        }
+     "choices": [
+       {"label": "A", "text": "人走路，從一個地方到另一個地方", "next_scene": "1.4.14.B"},
+       {"label": "B", "text": "人吃飯，每天都要做的事", "next_scene": "1.4.14.C"},
+       {"label": "C", "text": "人說的話，寫下來送給別人的", "next_scene": "1.4.14.A"}
       ]
     },
     {
@@ -860,7 +848,7 @@
       "collect": {
         "type": "assessment",
         "dimension": ["vocabulary"],
-        "support_option": ["B", "C"]
+        "support_option": ["A", "C"]
       },
       "lines": [
         "阿禾看著第二個字，眉頭皺起來。",
@@ -869,21 +857,9 @@
       ],
       "question": "這個字是什麼意思？",
       "choices": [
-        {
-          "label": "A",
-          "text": "住的地方，家人在的地方",
-          "next_scene": "1.4.15.A"
-        },
-        {
-          "label": "B",
-          "text": "田地，種東西的地方",
-          "next_scene": "1.4.15.B"
-        },
-        {
-          "label": "C",
-          "text": "市集，買賣東西的地方",
-          "next_scene": "1.4.15.C"
-        }
+        {"label": "A", "text": "田地，種東西的地方", "next_scene": "1.4.15.B"},
+        {"label": "B", "text": "住的地方，家人在的地方", "next_scene": "1.4.15.A"},
+        {"label": "C", "text": "市集，買賣東西的地方", "next_scene": "1.4.15.C"}
       ]
     },
     {
@@ -938,7 +914,7 @@
       "collect": {
         "type": "assessment",
         "dimension": ["vocabulary"],
-        "support_option": ["B", "C"]
+        "support_option": ["A", "B"]
       },
       "lines": [
         "阿禾盯著第三個字，這個比前兩個複雜，筆畫更多。",
@@ -946,21 +922,9 @@
       ],
       "question": "這個字是什麼意思？",
       "choices": [
-        {
-          "label": "A",
-          "text": "心裡很趕，事情來不及了",
-          "next_scene": "1.4.16.A"
-        },
-        {
-          "label": "B",
-          "text": "心裡很靜，什麼都不想",
-          "next_scene": "1.4.16.B"
-        },
-        {
-          "label": "C",
-          "text": "心裡很餓，想吃東西",
-          "next_scene": "1.4.16.C"
-        }
+        {"label": "A", "text": "心裡很靜，什麼都不想", "next_scene": "1.4.16.B"},
+        {"label": "B", "text": "心裡很餓，想吃東西", "next_scene": "1.4.16.C"},
+        {"label": "C", "text": "心裡很趕，事情來不及了", "next_scene": "1.4.16.A"}
       ]
     },
     {
