@@ -972,17 +972,19 @@ function renderFEOpts(scene, exp, qDiv) {
   speakHL(qDiv, scene.question, () => speakOpts(visible, 0));
 }
 function showNotebook(storyId, onContinue) {
-  const story = masterData.stories.find(s => s.story_id === storyId);
-  if (!story) { onContinue && onContinue(); return; }
+  // 若notebook尚未載入，先loadStory再顯示
+  if (!storyNotebooks[storyId]) {
+    loadStory(storyId).then(() => {
+      if (storyNotebooks[storyId]) _renderNotebook(storyId, onContinue);
+      else onContinue && onContinue();
+    }).catch(() => { onContinue && onContinue(); });
+    return;
+  }
+  _renderNotebook(storyId, onContinue);
+}
 
-  // 取notebook資料（從已載入的scenes拿第一個scene的story JSON）
-  // notebook資料存在story JSON根層
-  const storyScene = db[story.start_scene];
-  // 尋找notebook資料：從db中找story_id對應的notebook
-  let notebookData = null;
-  // 因notebook存在JSON根層，需另外記錄
-  notebookData = storyNotebooks[storyId];
-
+function _renderNotebook(storyId, onContinue) {
+  const notebookData = storyNotebooks[storyId];
   if (!notebookData) { onContinue && onContinue(); return; }
 
   const left = notebookData.left_page;
@@ -1033,13 +1035,14 @@ function showNotebook(storyId, onContinue) {
     anchorImg.style.display = 'none';
   }
 
-  // 顯示筆記，播BGM_04
+  // 顯示筆記，停BGM再播BGM_04
   notebookOverlay.classList.add('show');
   window.speechSynthesis.cancel();
   stopBgm();
-  playNotebookBgm(() => {}); // BGM_04播完自然停，繼續按鈕由用戶控制
+  playNotebookBgm(() => {});
 
   $('notebook-continue-btn').onclick = () => {
+    stopBgm();
     notebookOverlay.classList.remove('show');
     onContinue && onContinue();
   };
