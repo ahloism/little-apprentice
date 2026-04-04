@@ -16,7 +16,7 @@
       user-select: none;
     }
 
-    /* 開場 */
+    /* ── 開場 ── */
     #splash {
       position: fixed; inset: 0;
       background: #c8b08a;
@@ -34,11 +34,36 @@
     #splash-btn:active { background: #b87000; transform: scale(0.97); }
     #splash-btn:disabled { background: #a08060; cursor: default; }
 
-    /* 語速 */
+    /* ── 繼續/重新開始提示 ── */
+    #resume-overlay {
+      position: fixed; inset: 0;
+      background: #c8b08a;
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 20px; z-index: 100; padding: 20px;
+    }
+    #resume-overlay.show { display: flex; }
+    #resume-cover { width: 100%; max-width: 600px; height: auto; border-radius: 12px; }
+    #resume-title { font-size: 24px; color: #fff8ee; letter-spacing: 3px; text-align: center; }
+    #resume-subtitle { font-size: 18px; color: #f5ede0; text-align: center; opacity: 0.85; }
+    .resume-btn {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 16px 50px;
+      font-size: 20px; font-family: inherit; cursor: pointer;
+      letter-spacing: 3px; width: 100%; max-width: 320px;
+    }
+    .resume-btn:active { background: #b87000; transform: scale(0.97); }
+    #restart-btn-resume {
+      background: transparent; color: #fff8ee;
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    #restart-btn-resume:active { background: rgba(255,255,255,0.1); }
+
+    /* ── 語速 ── */
     #speed-bar {
       width: 100%; max-width: 600px;
       display: flex; align-items: center; justify-content: flex-end;
-      gap: 8px; padding: 8px 56px 0 20px; flex-shrink: 0;
+      gap: 8px; padding: 8px 100px 0 20px; flex-shrink: 0;
     }
     .speed-label { font-size: 13px; color: #9a7850; }
     .speed-btn {
@@ -48,17 +73,20 @@
     }
     .speed-btn.active { background: #d4870a; color: #fff8ee; border-color: #d4870a; }
 
-    /* 靜音 */
-    #mute-btn {
+    /* ── 控制按鈕（右上角）── */
+    #controls {
       position: fixed; top: 12px; right: 16px;
+      display: flex; gap: 8px; z-index: 50;
+    }
+    .ctrl-btn {
       background: rgba(255,255,255,0.7); border: 1px solid #d4a855;
       border-radius: 50%; width: 40px; height: 40px;
-      font-size: 20px; cursor: pointer;
+      font-size: 18px; cursor: pointer;
       display: flex; align-items: center; justify-content: center;
-      z-index: 50;
     }
+    .ctrl-btn.muted { background: rgba(200,160,80,0.3); }
 
-    /* 圖像 */
+    /* ── 圖像 ── */
     #image-area {
       width: 100%; max-width: 600px; height: 300px;
       border-radius: 0 0 12px 12px; overflow: hidden;
@@ -69,14 +97,28 @@
       width: 100%; max-width: 600px;
       text-align: center; font-size: 18px; font-style: italic;
       color: #9a7850; padding: 5px 20px 0; flex-shrink: 0;
+      min-height: 28px;
     }
 
-    /* 進度條 */
+    /* ── 並排圖像 ── */
+    #display-images {
+      display: none; width: 100%; max-width: 600px;
+      gap: 8px; padding: 0 20px; flex-shrink: 0;
+    }
+    #display-images.show { display: flex; }
+    #display-images img {
+      flex: 1; border-radius: 8px; object-fit: cover;
+      height: 120px; border: 2px solid transparent;
+      cursor: pointer; transition: border-color 0.2s;
+    }
+    #display-images img.selected { border-color: #d4870a; }
+
+    /* ── 進度條 ── */
     #progress-wrap { width: 100%; max-width: 600px; padding: 8px 20px 0; flex-shrink: 0; }
     #progress-bg { background: #e0c99a; border-radius: 4px; height: 5px; overflow: hidden; }
     #progress-fill { background: #d4870a; height: 100%; border-radius: 4px; transition: width 0.4s; width: 0%; }
 
-    /* 主內容 */
+    /* ── 主內容 ── */
     #main {
       width: 100%; max-width: 600px; flex: 1;
       display: flex; flex-direction: column;
@@ -85,10 +127,10 @@
     }
     #main.fade { opacity: 0; }
 
-    /* 標題 */
+    /* ── 標題 ── */
     #node-title { color: #7a5820; font-size: 22px; letter-spacing: 2px; text-align: center; line-height: 1.5; min-height: 1.5em; }
 
-    /* 文字區 */
+    /* ── 文字區 ── */
     #text-area {
       background: #fffaf3; border: 1px solid #e0c99a;
       border-radius: 14px; padding: 20px;
@@ -104,12 +146,12 @@
     .line.show { opacity: 1; transform: translateY(0); }
     .line.question { color: #a07840; margin-top: 6px; }
 
-    /* 高亮 */
+    /* ── 高亮 ── */
     .hl { display: inline; }
     .hl.on { color: #d4870a; font-weight: bold; }
     .opt-text .hl.on { color: #d4870a; font-weight: bold; }
 
-    /* 點擊提示 */
+    /* ── 點擊提示 ── */
     #tap-hint {
       display: none; text-align: center; font-size: 28px;
       color: #d4a855; cursor: pointer; animation: bounce 1.2s infinite;
@@ -119,7 +161,7 @@
       50% { transform: translateY(-6px); opacity: 1; }
     }
 
-    /* 開始按鈕 */
+    /* ── 開始按鈕 ── */
     #start-btn {
       display: none; background: #d4870a; color: #fff8ee;
       border: none; border-radius: 50px; padding: 18px 0; width: 100%;
@@ -127,7 +169,7 @@
     }
     #start-btn:active { background: #b87000; transform: scale(0.97); }
 
-    /* 選項 */
+    /* ── 選項 ── */
     #options-area { display: none; flex-direction: column; gap: 10px; }
     .opt-btn {
       background: #fff8ee; border: 2px solid #d4a855;
@@ -143,7 +185,7 @@
     .opt-label { width: 28px; flex-shrink: 0; color: #a07840; font-weight: bold; }
     .opt-text { flex: 1; }
 
-    /* 完成畫面 */
+    /* ── 完成畫面（大事件結束前的佔位）── */
     #done { display: none; text-align: center; color: #a07840; font-size: 20px; line-height: 2; padding: 20px; }
 
     /* ── 學徒筆記 ── */
@@ -154,72 +196,46 @@
       z-index: 200; padding: 16px;
     }
     #notebook-overlay.show { display: flex; }
-
     #notebook {
       width: 100%; max-width: 620px;
-      background: #fdf6e8;
-      border-radius: 16px;
+      background: #fdf6e8; border-radius: 16px;
       border: 2px solid #c8a060;
       box-shadow: 0 8px 32px rgba(80,40,0,0.3);
-      overflow: hidden;
-      display: flex; flex-direction: column;
+      overflow: hidden; display: flex; flex-direction: column;
       max-height: 90vh;
     }
-
     #notebook-header {
       background: #8b5e2a; color: #fff8ee;
       text-align: center; padding: 14px 20px;
       font-size: 20px; letter-spacing: 3px; flex-shrink: 0;
     }
-
-    #notebook-pages {
-      display: flex; flex: 1; overflow: hidden;
-    }
-
-    /* 左頁——故事進展 */
+    #notebook-pages { display: flex; flex: 1; overflow: hidden; }
     #notebook-left {
       flex: 1; padding: 20px;
       border-right: 1px dashed #c8a060;
-      overflow-y: auto;
-      background: #fffdf5;
+      overflow-y: auto; background: #fffdf5;
     }
+    #notebook-right { flex: 1; padding: 20px; overflow-y: auto; background: #fffdf5; }
     .nb-section-title {
       font-size: 15px; color: #8b5e2a; letter-spacing: 2px;
       margin-bottom: 10px; padding-bottom: 6px;
       border-bottom: 1px solid #e0c99a;
     }
-    .nb-story-line {
-      font-size: 17px; color: #3a2a10; line-height: 1.9;
-      margin-bottom: 8px;
-    }
+    .nb-story-line { font-size: 17px; color: #3a2a10; line-height: 1.9; margin-bottom: 8px; }
     .nb-meta { font-size: 14px; color: #9a7850; margin-top: 12px; line-height: 2; }
     .nb-tag {
       display: inline-block; background: #f0e0c0;
       border-radius: 20px; padding: 2px 10px;
       font-size: 13px; color: #7a5820; margin: 2px;
     }
-
-    /* 右頁——今次學了 */
-    #notebook-right {
-      flex: 1; padding: 20px;
-      overflow-y: auto;
-      background: #fffdf5;
-    }
     .nb-learn-item {
       margin-bottom: 14px; padding: 10px 12px;
       background: #fff8ee; border-radius: 10px;
       border: 1px solid #e0c99a;
     }
-    .nb-learn-type {
-      font-size: 12px; color: #a07840; letter-spacing: 1px; margin-bottom: 4px;
-    }
+    .nb-learn-type { font-size: 12px; color: #a07840; letter-spacing: 1px; margin-bottom: 4px; }
     .nb-learn-content { font-size: 17px; color: #3a2a10; line-height: 1.7; }
-    .nb-anchor-img {
-      width: 100%; border-radius: 10px; margin-top: 12px;
-      object-fit: cover; max-height: 120px;
-    }
-
-    /* 筆記底部按鈕 */
+    .nb-anchor-img { width: 100%; border-radius: 10px; margin-top: 12px; object-fit: cover; max-height: 120px; }
     #notebook-footer {
       background: #f5ede0; padding: 14px 20px;
       text-align: center; flex-shrink: 0;
@@ -228,39 +244,25 @@
     #notebook-continue-btn {
       background: #d4870a; color: #fff8ee; border: none;
       border-radius: 50px; padding: 14px 50px;
-      font-size: 20px; font-family: inherit; cursor: pointer;
-      letter-spacing: 3px;
+      font-size: 20px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
     }
     #notebook-continue-btn:active { background: #b87000; transform: scale(0.97); }
 
-    /* 載入過渡提示 */
+    /* ── 載入過渡 ── */
     #loading-overlay {
-      position: fixed; inset: 0;
-      background: #c8b08a;
+      position: fixed; inset: 0; background: #c8b08a;
       display: none; align-items: center; justify-content: center;
       z-index: 150; font-size: 22px; color: #fff8ee; letter-spacing: 2px;
     }
     #loading-overlay.show { display: flex; }
-    /* 並排圖像 */
-    #display-images {
-      display: none; width: 100%; max-width: 600px;
-      gap: 8px; padding: 0 20px; flex-shrink: 0;
-    }
-    #display-images.show { display: flex; }
-    #display-images img {
-      flex: 1; border-radius: 8px; object-fit: cover;
-      height: 120px; border: 2px solid transparent;
-      cursor: pointer; transition: border-color 0.2s;
-    }
-    #display-images img.selected { border-color: #d4870a; }
 
-    /* 開發者跳關 */
+    /* ── 開發者面板 ── */
     #dev-panel {
       display: none; position: fixed; bottom: 20px; left: 50%;
       transform: translateX(-50%);
       background: rgba(0,0,0,0.85); border-radius: 12px;
       padding: 12px 16px; z-index: 300;
-      display: none; flex-direction: column; gap: 8px; align-items: center;
+      flex-direction: column; gap: 8px; align-items: center;
     }
     #dev-panel.show { display: flex; }
     #dev-input {
@@ -272,6 +274,87 @@
       border-radius: 8px; padding: 8px 20px;
       font-size: 16px; cursor: pointer; font-family: inherit;
     }
+    #dev-clear {
+      background: #c0392b; color: #fff; border: none;
+      border-radius: 8px; padding: 8px 20px;
+      font-size: 16px; cursor: pointer; font-family: inherit;
+    }
+
+    /* ── 完結報告畫面 ── */
+    #report-screen {
+      display: none; position: fixed; inset: 0;
+      background: #f5ede0; overflow-y: auto;
+      z-index: 400; padding: 0 0 60px 0;
+    }
+    #report-screen.show { display: block; }
+    #report-header {
+      background: #8b5e2a; color: #fff8ee;
+      text-align: center; padding: 20px;
+      font-size: 22px; letter-spacing: 3px;
+    }
+    #report-subtitle {
+      text-align: center; color: #9a7850;
+      font-size: 16px; padding: 12px 20px 0;
+      letter-spacing: 1px;
+    }
+    .report-section {
+      width: 100%; max-width: 600px;
+      margin: 0 auto; padding: 16px 20px;
+    }
+    .report-section-title {
+      font-size: 16px; color: #8b5e2a; letter-spacing: 2px;
+      margin-bottom: 12px; padding-bottom: 8px;
+      border-bottom: 1px solid #e0c99a;
+    }
+    .dim-row {
+      background: #fffaf3; border: 1px solid #e0c99a;
+      border-radius: 12px; padding: 14px 16px; margin-bottom: 10px;
+    }
+    .dim-name { font-size: 16px; color: #7a5820; margin-bottom: 8px; letter-spacing: 1px; }
+    .dim-stars { font-size: 22px; margin-bottom: 6px; }
+    .dim-desc { font-size: 16px; color: #3a2a10; line-height: 1.7; }
+    #qualitative-section {
+      background: #fffaf3; border: 1px solid #e0c99a;
+      border-radius: 12px; padding: 16px;
+      font-size: 17px; color: #3a2a10; line-height: 1.9;
+      min-height: 80px;
+    }
+    #qualitative-loading {
+      text-align: center; color: #9a7850;
+      font-size: 16px; padding: 20px;
+    }
+    .report-btns {
+      width: 100%; max-width: 600px;
+      margin: 0 auto; padding: 8px 20px;
+      display: flex; flex-direction: column; gap: 12px;
+    }
+    .report-action-btn {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 16px 0; width: 100%;
+      font-size: 20px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
+    }
+    .report-action-btn:active { background: #b87000; transform: scale(0.97); }
+    .report-action-btn.secondary {
+      background: transparent; color: #8b5e2a;
+      border: 2px solid #c8a060; font-size: 18px;
+    }
+    .report-action-btn.secondary:active { background: #f0e0c0; }
+
+    /* 大事件完結前佔位 */
+    #event-end-screen {
+      display: none; position: fixed; inset: 0;
+      background: #c8b08a;
+      flex-direction: column; align-items: center; justify-content: center;
+      gap: 24px; z-index: 400; padding: 20px;
+    }
+    #event-end-screen.show { display: flex; }
+    #event-end-title { font-size: 28px; color: #fff8ee; letter-spacing: 4px; text-align: center; }
+    #event-end-subtitle { font-size: 18px; color: #f5ede0; text-align: center; opacity: 0.85; line-height: 1.8; }
+    #event-end-restart {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 16px 50px;
+      font-size: 20px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
+    }
   </style>
 </head>
 <body>
@@ -282,8 +365,20 @@
   <button id="splash-btn" disabled>載入中…</button>
 </div>
 
-<!-- 靜音 -->
-<button id="mute-btn">🔊</button>
+<!-- 繼續/重新開始 -->
+<div id="resume-overlay">
+  <img id="resume-cover" src="https://raw.githubusercontent.com/ahloism/little-apprentice/main/image/A02_%E5%B0%81%E9%9D%A2.png" alt="小學徒大世界" />
+  <div id="resume-title">小學徒大世界</div>
+  <div id="resume-subtitle">上次玩到一半，要繼續嗎？</div>
+  <button class="resume-btn" id="continue-btn">▶ 繼續冒險</button>
+  <button class="resume-btn" id="restart-btn-resume">重新開始</button>
+</div>
+
+<!-- 控制按鈕 -->
+<div id="controls">
+  <button class="ctrl-btn" id="music-btn" title="音樂">🎵</button>
+  <button class="ctrl-btn" id="voice-btn" title="語音">🔊</button>
+</div>
 
 <!-- 語速 -->
 <div id="speed-bar">
@@ -295,7 +390,7 @@
 
 <!-- 圖像 -->
 <div id="image-area"><img id="img-el" src="" alt="" /></div>
-<div id="display-images" id="display-images"></div>
+<div id="display-images"></div>
 <div id="img-caption"></div>
 <div id="progress-wrap"><div id="progress-bg"><div id="progress-fill"></div></div></div>
 
@@ -306,7 +401,7 @@
   <div id="options-area"></div>
   <button id="start-btn">▶ 開始</button>
   <div id="tap-hint">👆</div>
-  <div id="done">阿禾踏出了商行的門。<br>大梁城的街道在等著他們。</div>
+  <div id="done"></div>
 </div>
 
 <!-- 學徒筆記 -->
@@ -334,27 +429,80 @@
 <!-- 載入提示 -->
 <div id="loading-overlay">載入中⋯⋯</div>
 
-<!-- 開發者跳關 -->
+<!-- 開發者面板 -->
 <div id="dev-panel">
   <input id="dev-input" placeholder="輸入 scene_id" />
   <button id="dev-go">跳去</button>
+  <button id="dev-clear">清除存檔</button>
+</div>
+
+<!-- 完結報告畫面 -->
+<div id="report-screen">
+  <div id="report-header">大事件一完成！</div>
+  <div id="report-subtitle">阿禾的學習報告</div>
+  <div class="report-section">
+    <div class="report-section-title">能力表現</div>
+    <div id="quantitative-report"></div>
+  </div>
+  <div class="report-section">
+    <div class="report-section-title">學習觀察</div>
+    <div id="qualitative-section">
+      <div id="qualitative-loading">生成中⋯⋯</div>
+    </div>
+  </div>
+  <div class="report-btns">
+    <button class="report-action-btn" id="download-report-btn">📄 下載報告</button>
+    <button class="report-action-btn secondary" id="restart-from-report-btn">重新開始</button>
+  </div>
+</div>
+
+<!-- 大事件完結畫面 -->
+<div id="event-end-screen">
+  <div id="event-end-title">大事件二</div>
+  <div id="event-end-subtitle">即將來臨</div>
+  <button id="event-end-restart">重新開始大事件一</button>
 </div>
 
 <script>
-// ── 設定 ──────────────────────────────────────
+// ════════════════════════════════════════════════
+// 設定
+// ════════════════════════════════════════════════
 const GITHUB_BASE = 'https://raw.githubusercontent.com/ahloism/little-apprentice/main/';
 const JSON_BASE   = GITHUB_BASE + 'json/v4/';
 const IMG_BASE    = GITHUB_BASE + 'image/';
+const AUDIO_BASE  = GITHUB_BASE + 'audio/';
+
+// Cloudflare Workers端點（質性報告）
+const WORKERS_URL = 'https://little-apprentice-report.ahloism.workers.dev';
 
 // 圖像對照表
 const IMGS = {
-  // 小事件1.1
   S01:'S01_%E5%A4%A7%E6%A2%81%E5%9F%8E%E8%A1%97%E9%81%93.png',
   S02:'S02_%E5%95%86%E8%A1%8C%E9%96%80%E5%8F%A3.png',
   S03:'S03_%E5%80%89%E5%BA%AB.png',
+  S04:'S04_%E5%B8%82%E9%9B%86%E8%A1%97%E9%81%93.png',
+  S05:'S05_%E9%9B%9C%E8%80%8D%E7%A9%BA%E5%9C%B0.png',
+  S07:'S07_%E6%A2%81%E6%B2%B3%E6%A9%8B%E9%82%8A.png',
+  S08:'S08_%E6%A2%81%E6%B2%B3%E7%A2%BC%E9%A0%AD%E6%96%B9%E5%90%91.png',
+  S09:'S09_%E6%A9%8B%E4%B8%8A%E6%94%A4%E6%AA%94.png',
+  S10:'S10_%E8%80%81%E6%A2%81%E6%94%A4%E6%AA%94.png',
+  S11:'S11_%E5%8C%96%E7%B3%9E%E6%B1%A0%E9%96%80%E5%8F%A3.png',
+  S12:'S12_%E8%B3%AD%E5%9D%8A%E5%B7%B7%E5%8F%A3.png',
+  S13:'S13_%E5%AE%A2%E6%A3%A7%E9%96%80%E5%8F%A3.png',
+  S14:'S14_%E5%AE%A2%E6%A3%A7%E5%85%A7%E9%83%A8.png',
+  S15:'S15_%E8%AA%AA%E6%9B%B8%E5%8F%B0.png',
+  S16:'S16_%E7%A2%BC%E9%A0%AD.png',
+  S17:'S17_%E5%B8%B3%E6%88%BF.png',
   C01:'C01_%E9%98%BF%E7%A6%BE.png',
   C02:'C02_%E9%98%BF%E6%B0%B4.png',
   C03:'C03_%E9%8C%A2%E4%BC%AF.png',
+  C04:'C04_%E7%9F%B3%E9%A0%AD.png',
+  C05:'C05_%E6%A2%85%E5%A7%90.png',
+  C06:'C06_%E9%98%BF%E4%B9%96.png',
+  C07:'C07_%E7%8E%8B%E4%B8%89.png',
+  C08:'C08_%E6%9D%9C%E5%85%88%E7%94%9F.png',
+  C09:'C09_%E8%80%81%E6%A2%81.png',
+  C10:'C10_%E9%8C%A2%E5%B9%B3.png',
   O01:'O01_%E5%B8%83%E5%8C%85.png',
   O02:'O02_%E7%AE%97%E7%9B%A4.png',
   O03:'O03_%E9%91%B0%E5%8C%99%E4%B8%B2.png',
@@ -364,59 +512,33 @@ const IMGS = {
   O07:'O07_%E8%8A%B1%E7%94%9F%E8%A2%8B.png',
   O08:'O08_%E6%B9%AF%E5%9C%93%E7%B2%89.png',
   O09:'O09_%E9%BA%A5%E8%8A%BD%E7%B3%96.png',
-  // 小事件1.2
-  S04:'S04_%E5%B8%82%E9%9B%86%E8%A1%97%E9%81%93.png',
-  S05:'S05_%E9%9B%9C%E8%80%8D%E7%A9%BA%E5%9C%B0.png',
-  C04:'C04_%E7%9F%B3%E9%A0%AD.png',
   O10:'O10_%E8%87%98%E8%85%B8.png',
   O11:'O11_%E7%A3%A8%E5%88%80.png',
   O12:'O12_%E6%B6%BC%E8%8C%B6.png',
   O13:'O13_%E7%B9%A9%E5%AD%90%E5%B8%83%E6%96%99.png',
-  A01:'A01_%E9%98%BF%E7%A6%BE%E6%80%9D%E8%80%83%E4%B8%AD.png',
-  S07:'S07_%E6%A2%81%E6%B2%B3%E6%A9%8B%E9%82%8A.png',
-  // 小事件1.3
-  S08:'S08_%E6%A2%81%E6%B2%B3%E7%A2%BC%E9%A0%AD%E6%96%B9%E5%90%91.png',
-  S09:'S09_%E6%A9%8B%E4%B8%8A%E6%94%A4%E6%AA%94.png',
-  S10:'S10_%E8%80%81%E6%A2%81%E6%94%A4%E6%AA%94.png',
-  C05:'C05_%E6%A2%85%E5%A7%90.png',
-  C06:'C06_%E9%98%BF%E4%B9%96.png',
-  C07:'C07_%E7%8E%8B%E4%B8%89.png',
   O14:'O14_%E8%8C%B6%E5%A3%BA.png',
   O15:'O15_%E7%B9%A9%E5%AD%90.png',
   O16:'O16_%E7%A9%BA%E7%AB%B9%E7%B0%8D.png',
   O17:'O17_%E7%AD%86.png',
   O18:'O18_%E9%98%BF%E4%B9%96%E7%9A%84%E7%B4%99.png',
-  W01:'W01_%E7%B3%9E.png',
-  // 小事件1.4
-  S11:'S11_%E5%8C%96%E7%B3%9E%E6%B1%A0%E9%96%80%E5%8F%A3.png',
-  S12:'S12_%E8%B3%AD%E5%9D%8A%E5%B7%B7%E5%8F%A3.png',
   O19:'O19_%E5%AD%97%E5%B8%96.png',
-  W02:'W02_%E4%BF%A1.png',
-  W03:'W03_%E5%AE%B6.png',
-  W04:'W04_%E6%80%A5.png',
-  // 小事件1.5
-  S13:'S13_%E5%AE%A2%E6%A3%A7%E9%96%80%E5%8F%A3.png',
-  S14:'S14_%E5%AE%A2%E6%A3%A7%E5%85%A7%E9%83%A8.png',
-  S15:'S15_%E8%AA%AA%E6%9B%B8%E5%8F%B0.png',
-  C08:'C08_%E6%9D%9C%E5%85%88%E7%94%9F.png',
   O20:'O20_%E8%8C%B6%E5%A3%BA%E8%8C%B6%E6%B0%B4%E5%8F%B0.png',
   O21:'O21_%E7%B4%99%E6%89%87.png',
-  W05:'W05_%E7%97%85.png',
-  A03:'A03_%E8%AC%8E%E8%AA%9E%E4%B8%80%E7%A4%BA%E6%84%8F_%E9%A0%AD.png',
-  A04:'A04_%E8%AC%8E%E8%AA%9E%E4%BA%8C%E7%A4%BA%E6%84%8F_%E9%A6%AC.png',
-  // 小事件1.6
-  S16:'S16_%E7%A2%BC%E9%A0%AD.png',
-  C09:'C09_%E8%80%81%E6%A2%81.png',
   O22:'O22_%E7%B2%97%E7%B9%A9%E6%9C%A8%E6%A8%81.png',
   O23:'O23_%E8%8D%89%E5%B8%BD.png',
   O25:'O25_%E8%80%81%E6%A2%81%E7%9A%84%E4%BF%A1.png',
-  // 小事件1.7
-  S17:'S17_%E5%B8%B3%E6%88%BF.png',
-  C10:'C10_%E9%8C%A2%E5%B9%B3.png',
+  W01:'W01_%E7%B3%9E.png',
+  W02:'W02_%E4%BF%A1.png',
+  W03:'W03_%E5%AE%B6.png',
+  W04:'W04_%E6%80%A5.png',
+  W05:'W05_%E7%97%85.png',
+  A01:'A01_%E9%98%BF%E7%A6%BE%E6%80%9D%E8%80%83%E4%B8%AD.png',
+  A02:'A02_%E5%B0%81%E9%9D%A2.png',
+  A03:'A03_%E8%AC%8E%E8%AA%9E%E4%B8%80%E7%A4%BA%E6%84%8F_%E9%A0%AD.png',
+  A04:'A04_%E8%AC%8E%E8%AA%9E%E4%BA%8C%E7%A4%BA%E6%84%8F_%E9%A6%AC.png',
   A05:'A05_%E8%AA%A0%E4%BF%A1%E6%9C%A8%E5%8C%BE.png',
 };
 
-// 圖像名稱
 const NAMES = {
   S01:'大梁城街道', S02:'商行門口', S03:'倉庫',
   S04:'市集街道', S05:'雜耍空地', S07:'梁河橋邊',
@@ -440,37 +562,78 @@ const NAMES = {
   A03:'謎語一示意', A04:'謎語二示意', A05:'誠信木匾',
 };
 
-// 音頻路徑
-const AUDIO_BASE = GITHUB_BASE + 'audio/';
-
-// 場景→底樂對照
+// 場景→底樂
 const SCENE_BGM = {
-  '1.1': 'BGM_01', '1.2': 'BGM_01', '1.3': 'BGM_01',
-  '1.4': 'BGM_01', '1.5': 'BGM_01', '1.6': 'BGM_01',
-  '1.7': 'BGM_03',
+  '1.1':'BGM_01','1.2':'BGM_01','1.3':'BGM_01',
+  '1.4':'BGM_01','1.5':'BGM_01','1.6':'BGM_01','1.7':'BGM_03',
 };
-
-// 關鍵評估節點→切BGM_02
-const KEY_ASSESSMENT_SCENES = new Set([
-  '1.4.9',  // 最終決定
-  '1.6.7',  // 花生的事
-]);
-
-// 音量規則
+const KEY_ASSESSMENT_SCENES = new Set(['1.4.9','1.6.7']);
 const BGM_VOLUME = {
-  transition: 0.5, story: 0.5,
-  explore: 0.6, free_explore: 0.6,
-  assessment: 0.25, hidden: 0.25, feedback: 0.4,
+  transition:0.5, story:0.5, explore:0.6, free_explore:0.6,
+  assessment:0.25, hidden:0.25, feedback:0.4,
 };
 
-// ── 音樂系統 ──────────────────────────────────
+// 學徒筆記type中文對照
+const TYPE_LABEL = {
+  vocabulary:'詞彙', concept:'概念', character:'字形',
+  value:'品格', reasoning:'推理', social:'社會理解',
+};
+
+// 量化報告維度名稱
+const DIM_NAMES = {
+  vocabulary:'詞彙理解',
+  situation_understanding:'情境理解',
+  social_understanding:'社會理解',
+  information_integration:'資訊整合',
+  value_judgment:'價值判斷',
+};
+
+// 量化報告句子模板
+const REPORT_SENTENCES = {
+  vocabulary: [
+    '孩子能準確認出故事裡出現的詞語，理解字義自然流暢，在詞彙學習上表現穩固。',
+    '孩子能認出大部分故事詞語，偶爾需要多一點時間理解，繼續閱讀會讓詞彙更豐富。',
+    '孩子正在建立詞彙基礎，對部分字義仍需熟悉，多接觸中文故事會很有幫助。',
+    '孩子剛開始接觸這些詞語，這是學習的起點，多聽多讀會逐漸建立信心。',
+  ],
+  situation_understanding: [
+    '孩子能準確把握故事情境，理解事件前後的關聯，在情境閱讀上表現出色。',
+    '孩子能跟上故事的主要情境，對細節的連結仍有空間，繼續練習會更得心應手。',
+    '孩子正在學習把故事的不同部分連結起來，這是閱讀理解的重要一步。',
+    '孩子正開始建立對故事情境的感覺，多接觸有趣的中文故事會很有幫助。',
+  ],
+  social_understanding: [
+    '孩子能細心觀察人物的行為和關係，對社會情境的判斷準確而細緻。',
+    '孩子能理解人物之間的主要互動，對一些複雜的社會情境仍在探索中。',
+    '孩子正在學習觀察人物的動機和關係，這方面的理解會隨經驗慢慢成長。',
+    '孩子剛開始留意故事裡的人物關係，這是社會理解的起點，值得多加鼓勵。',
+  ],
+  information_integration: [
+    '孩子能有效整合故事裡的線索，作出有根據的判斷，邏輯思維表現穩固。',
+    '孩子能運用部分線索作判斷，對複雜資訊的整合仍在發展中，方向正確。',
+    '孩子正在學習把不同線索放在一起思考，這是很重要的思維能力，需要時間建立。',
+    '孩子剛開始接觸需要整合資訊的情境，多鼓勵孩子說出自己的想法會有幫助。',
+  ],
+  value_judgment: [
+    '孩子在故事的道德情境中表現出清晰的判斷力，能主動思考什麼是負責任的行為。',
+    '孩子能感受到故事裡的道德張力，對一些複雜情境的判斷仍在成熟中。',
+    '孩子正在建立自己的價值觀，在故事情境中開始思考責任和選擇，這很珍貴。',
+    '孩子剛開始在故事裡思考對與錯，這是價值觀培養的起點，值得家長一起討論。',
+  ],
+};
+
+// ════════════════════════════════════════════════
+// 音樂系統
+// ════════════════════════════════════════════════
 let bgmAudio = null;
 let currentBgm = null;
+let musicMuted = false;
+let voiceMuted = false;
 
 function playBgm(key, volume = 0.5) {
+  if (musicMuted) return;
   if (currentBgm === key && bgmAudio && !bgmAudio.paused) {
-    bgmAudio.volume = volume;
-    return;
+    bgmAudio.volume = volume; return;
   }
   if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; }
   currentBgm = key;
@@ -481,56 +644,212 @@ function playBgm(key, volume = 0.5) {
 }
 
 function stopBgm() {
-  if (bgmAudio) { bgmAudio.pause(); }
+  if (bgmAudio) bgmAudio.pause();
 }
 
 function playBgmForScene(scene) {
-  if (muted) return;
+  if (musicMuted) return;
   const storyId = scene.scene_id.split('.').slice(0,2).join('.');
-
-  // 關鍵評估節點切BGM_02
-  if (KEY_ASSESSMENT_SCENES.has(scene.scene_id)) {
-    playBgm('BGM_02', 0.4);
-    return;
-  }
-
+  if (KEY_ASSESSMENT_SCENES.has(scene.scene_id)) { playBgm('BGM_02', 0.4); return; }
   const bgmKey = SCENE_BGM[storyId] || 'BGM_01';
   const vol = BGM_VOLUME[scene.type] || 0.5;
   playBgm(bgmKey, vol);
 }
 
 function playSfx(key) {
-  if (muted) return;
+  if (musicMuted) return;
   const sfx = new Audio(AUDIO_BASE + key + '.mp3');
   sfx.volume = 0.7;
   sfx.play().catch(() => {});
 }
 
-function playNotebookBgm(onEnd) {
-  if (bgmAudio) { bgmAudio.pause(); }
+function playNotebookBgm() {
+  if (bgmAudio) bgmAudio.pause();
   currentBgm = null;
+  if (musicMuted) return;
   const nb = new Audio(AUDIO_BASE + 'BGM_04.mp3');
   nb.volume = 0.6;
   nb.play().catch(() => {});
-  nb.onended = () => { onEnd && onEnd(); };
 }
 
-// ── 狀態 ──────────────────────────────────────
-let db = {};           // scene_id → scene
-let masterData = null; // story_master 資料
+// ════════════════════════════════════════════════
+// localStorage — 進度存檔 & 評估數據
+// ════════════════════════════════════════════════
+function loadProgress() {
+  try { return JSON.parse(localStorage.getItem('la_progress')) || null; } catch { return null; }
+}
+function saveProgress(data) {
+  try { localStorage.setItem('la_progress', JSON.stringify(data)); } catch {}
+}
+function loadAssessment() {
+  try { return JSON.parse(localStorage.getItem('la_assessment')) || null; } catch { return null; }
+}
+function saveAssessment(data) {
+  try { localStorage.setItem('la_assessment', JSON.stringify(data)); } catch {}
+}
+function clearStorage() {
+  localStorage.removeItem('la_progress');
+  localStorage.removeItem('la_assessment');
+}
+
+// 初始化評估數據
+function initAssessment() {
+  const existing = loadAssessment();
+  if (existing) return existing;
+  const data = {
+    session_id: Math.random().toString(36).slice(2,10),
+    nodes: []
+  };
+  saveAssessment(data);
+  return data;
+}
+
+// 收集評估數據
+function collectData(scene, label) {
+  if (!scene.collect) return;
+  const c = scene.collect;
+  const data = loadAssessment() || initAssessment();
+
+  if (c.type === 'assessment') {
+    const supportOpts = Array.isArray(c.support_option) ? c.support_option : (c.support_option ? [c.support_option] : []);
+    data.nodes.push({
+      scene_id: scene.scene_id,
+      type: 'assessment',
+      dimension: c.dimension,
+      label: label,
+      support_flag: supportOpts.includes(label),
+    });
+  } else if (c.type === 'exploration') {
+    // 只記錄首次
+    const already = data.nodes.find(n => n.scene_id === scene.scene_id && n.type === 'exploration');
+    if (!already) {
+      data.nodes.push({
+        scene_id: scene.scene_id,
+        type: 'exploration',
+        exp_tag: c.exp_tag,
+        label: label,
+      });
+    }
+  } else if (c.type === 'hidden_assessment') {
+    data.nodes.push({
+      scene_id: scene.scene_id,
+      type: 'hidden_assessment',
+      trigger: c.trigger,
+      exp_tag: c.exp_tag,
+      label: label,
+    });
+  }
+  saveAssessment(data);
+}
+
+// 收集隱藏補救節點（進入即記錄）
+function collectHiddenRemedial(scene) {
+  if (!scene.collect || scene.collect.type !== 'hidden_remedial') return;
+  const data = loadAssessment() || initAssessment();
+  const already = data.nodes.find(n => n.scene_id === scene.scene_id);
+  if (!already) {
+    data.nodes.push({
+      scene_id: scene.scene_id,
+      type: 'hidden_remedial',
+      trigger: scene.collect.trigger,
+    });
+    saveAssessment(data);
+  }
+}
+
+// 更新進度存檔
+function updateProgress(currentNode, storyId) {
+  const prog = loadProgress() || { current_node: null, completed_events: [], notebook_entries: [] };
+  prog.current_node = currentNode;
+  // 記錄已完成的小事件
+  const eventId = currentNode.split('.').slice(0,2).join('.');
+  if (!prog.completed_events.includes(eventId)) {
+    // 不在這裡加，改在小事件完成時加
+  }
+  saveProgress(prog);
+}
+
+function markEventComplete(storyId) {
+  const prog = loadProgress() || { current_node: null, completed_events: [], notebook_entries: [] };
+  if (!prog.completed_events.includes(storyId)) prog.completed_events.push(storyId);
+  if (!prog.notebook_entries.includes(storyId)) prog.notebook_entries.push(storyId);
+  saveProgress(prog);
+}
+
+// 計算各維度分數
+function calcScores() {
+  const data = loadAssessment();
+  if (!data) return {};
+
+  const scores = {};
+  const maxes = {};
+  const dims = ['vocabulary','situation_understanding','social_understanding','information_integration','value_judgment'];
+  dims.forEach(d => { scores[d] = 0; maxes[d] = 0; });
+
+  data.nodes.filter(n => n.type === 'assessment').forEach(n => {
+    // 判斷正確程度：需要從JSON場景取得，這裡用support_flag反推
+    // support_flag=true 表示錯誤或部分正確（需支援）
+    // 這裡我們需要更精確的分數，但目前collect只有support_flag
+    // 用label和support_option的關係推算：非support的選項=正確
+    // 但我們沒有存分數，需要補救方案
+    // 暫時方案：support_flag=false → 1分，support_flag=true → 0分
+    // 日後可在collect加score欄位優化
+    const dims = n.dimension || [];
+    dims.forEach((dim, i) => {
+      if (!scores[dim] && scores[dim] !== 0) return;
+      const weight = i === 0 ? 1 : 0.5;
+      const score = n.support_flag ? 0 : 1;
+      scores[dim] = (scores[dim] || 0) + score * weight;
+      maxes[dim] = (maxes[dim] || 0) + weight;
+    });
+  });
+
+  const result = {};
+  dims.forEach(d => {
+    if (maxes[d] > 0) {
+      result[d] = scores[d] / maxes[d];
+    }
+  });
+  return result;
+}
+
+// 星級
+function getStars(pct) {
+  if (pct >= 0.75) return 5;
+  if (pct >= 0.50) return 4;
+  if (pct >= 0.25) return 3;
+  return 2;
+}
+
+// 程度級別
+function getLevel(pct) {
+  if (pct >= 0.75) return 0;
+  if (pct >= 0.50) return 1;
+  if (pct >= 0.25) return 2;
+  return 3;
+}
+
+// ════════════════════════════════════════════════
+// 狀態
+// ════════════════════════════════════════════════
+let db = {};
+let masterData = null;
 let currentStoryId = null;
-let muted = false;
 let rate = 0.88;
 let ttsVoice = null;
 let tapTimer = null;
 let tapCb = null;
-let visits = {};       // scene_id → count
-let explored = {};     // scene_id → Set
+let visits = {};
+let explored = {};
+let storyNotebooks = {};
 
-// ── UI 元素 ───────────────────────────────────
+// ════════════════════════════════════════════════
+// UI 元素
+// ════════════════════════════════════════════════
 const $ = id => document.getElementById(id);
 const splashEl = $('splash'), splashBtn = $('splash-btn');
-const muteBtn = $('mute-btn');
+const resumeOverlay = $('resume-overlay');
+const musicBtn = $('music-btn'), voiceBtn = $('voice-btn');
 const imgEl = $('img-el'), captionEl = $('img-caption');
 const progressFill = $('progress-fill');
 const mainEl = $('main'), titleEl = $('node-title');
@@ -540,17 +859,43 @@ const notebookOverlay = $('notebook-overlay');
 const loadingOverlay = $('loading-overlay');
 const displayImagesEl = $('display-images');
 const devPanel = $('dev-panel');
+const reportScreen = $('report-screen');
+const eventEndScreen = $('event-end-screen');
 
-// ── 開發者跳關（長按靜音鍵3秒）────────────────
+// ════════════════════════════════════════════════
+// 控制按鈕
+// ════════════════════════════════════════════════
+musicBtn.addEventListener('click', () => {
+  musicMuted = !musicMuted;
+  musicBtn.textContent = musicMuted ? '🔇' : '🎵';
+  musicBtn.classList.toggle('muted', musicMuted);
+  if (musicMuted) stopBgm();
+  else {
+    const sceneId = titleEl.dataset.sceneId;
+    if (sceneId && db[sceneId]) playBgmForScene(db[sceneId]);
+  }
+});
+
+voiceBtn.addEventListener('click', () => {
+  voiceMuted = !voiceMuted;
+  voiceBtn.textContent = voiceMuted ? '🔕' : '🔊';
+  voiceBtn.classList.toggle('muted', voiceMuted);
+  if (voiceMuted) {
+    window.speechSynthesis.cancel();
+    if (!tapCb) setTap(() => fireTap());
+  }
+});
+
+// 開發者面板（長按音樂按鈕3秒）
 let muteHoldTimer = null;
-muteBtn.addEventListener('mousedown', () => {
-  muteHoldTimer = setTimeout(() => { devPanel.classList.toggle('show'); }, 3000);
+['mousedown','touchstart'].forEach(ev => {
+  musicBtn.addEventListener(ev, () => {
+    muteHoldTimer = setTimeout(() => devPanel.classList.toggle('show'), 3000);
+  });
 });
-muteBtn.addEventListener('mouseup', () => clearTimeout(muteHoldTimer));
-muteBtn.addEventListener('touchstart', () => {
-  muteHoldTimer = setTimeout(() => { devPanel.classList.toggle('show'); }, 3000);
+['mouseup','touchend'].forEach(ev => {
+  musicBtn.addEventListener(ev, () => clearTimeout(muteHoldTimer));
 });
-muteBtn.addEventListener('touchend', () => clearTimeout(muteHoldTimer));
 
 $('dev-go').addEventListener('click', () => {
   const id = $('dev-input').value.trim();
@@ -560,12 +905,18 @@ $('dev-go').addEventListener('click', () => {
   const storyId = id.split('.').slice(0,2).join('.');
   if (!db[id]) {
     loadStory(storyId).then(() => go(id)).catch(() => alert('找不到場景：' + id));
-  } else {
-    go(id);
-  }
+  } else go(id);
 });
 
-// ── 語音 ──────────────────────────────────────
+$('dev-clear').addEventListener('click', () => {
+  clearStorage();
+  devPanel.classList.remove('show');
+  alert('存檔已清除');
+});
+
+// ════════════════════════════════════════════════
+// 語音
+// ════════════════════════════════════════════════
 window.speechSynthesis.onvoiceschanged = findVoice;
 findVoice();
 function findVoice() {
@@ -577,7 +928,7 @@ function findVoice() {
 
 function tts(text, cb) {
   window.speechSynthesis.cancel();
-  if (muted || !text) { cb && setTimeout(cb, 0); return; }
+  if (voiceMuted || !text) { cb && setTimeout(cb, 0); return; }
   const u = new SpeechSynthesisUtterance(text);
   if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
   u.rate = rate;
@@ -588,36 +939,64 @@ function tts(text, cb) {
   window.speechSynthesis.speak(u);
 }
 
-// ── 高亮 ──────────────────────────────────────
+// ════════════════════════════════════════════════
+// 高亮語音同步（修正版）
+// ════════════════════════════════════════════════
 let hlN = 0;
 function speakHL(el, text, cb) {
-  const key = 'h'+(hlN++);
-  const chars = text.split('');
-  el.innerHTML = chars.map((c,i)=>`<span class="hl" id="${key}_${i}">${c}</span>`).join('');
+  const key = 'h' + (hlN++);
+  const chars = [...text]; // 正確處理中文字符
+  el.innerHTML = chars.map((c, i) => `<span class="hl" id="${key}_${i}">${c}</span>`).join('');
 
-  if (muted) { cb && setTimeout(cb, 0); return; }
+  if (voiceMuted) { cb && setTimeout(cb, 0); return; }
 
-  const perMs = (1/rate)*220;
-  let i = 0, alive = true;
-  function step() {
-    if (!alive) return;
-    if (i > 0) { const p = document.getElementById(`${key}_${i-1}`); if(p) p.classList.remove('on'); }
-    if (i >= chars.length) return;
-    const c = document.getElementById(`${key}_${i}`); if(c) c.classList.add('on');
-    i++;
-    setTimeout(step, perMs);
+  // 使用Web Speech API的boundary事件做精確同步
+  const u = new SpeechSynthesisUtterance(text);
+  if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
+  u.rate = rate;
+
+  // 估算每字時長作為fallback
+  const totalMs = (text.length / rate) * 220;
+  const perMs = totalMs / chars.length;
+  let i = 0;
+  let hlInterval = null;
+
+  function startHL() {
+    hlInterval = setInterval(() => {
+      if (i > 0) {
+        const prev = document.getElementById(`${key}_${i-1}`);
+        if (prev) prev.classList.remove('on');
+      }
+      if (i >= chars.length) { clearInterval(hlInterval); return; }
+      const cur = document.getElementById(`${key}_${i}`);
+      if (cur) cur.classList.add('on');
+      i++;
+    }, perMs);
   }
-  step();
 
-  tts(text, () => {
-    alive = false;
-    chars.forEach((_,j) => { const e = document.getElementById(`${key}_${j}`); if(e) e.classList.remove('on'); });
-    cb && cb();
-  });
+  let called = false;
+  const done = () => {
+    if (!called) {
+      called = true;
+      clearInterval(hlInterval);
+      chars.forEach((_, j) => {
+        const e = document.getElementById(`${key}_${j}`);
+        if (e) e.classList.remove('on');
+      });
+      cb && cb();
+    }
+  };
+
+  u.onstart = () => startHL();
+  u.onend = done;
+  u.onerror = done;
+  window.speechSynthesis.speak(u);
 }
 
-// ── 圖像 ──────────────────────────────────────
-function setImg(code, hideCaption) {
+// ════════════════════════════════════════════════
+// 圖像
+// ════════════════════════════════════════════════
+function setImg(code) {
   if (IMGS[code]) {
     imgEl.src = IMG_BASE + IMGS[code];
     imgEl.style.display = 'block';
@@ -625,10 +1004,18 @@ function setImg(code, hideCaption) {
     imgEl.src = '';
     imgEl.style.display = 'none';
   }
-  captionEl.textContent = hideCaption ? '' : (NAMES[code] || '');
+  // 評估節點不顯示caption
+  captionEl.textContent = '';
 }
 
-// ── 進度條 ────────────────────────────────────
+function setImgWithCaption(code, isAssessment) {
+  setImg(code);
+  if (!isAssessment) captionEl.textContent = NAMES[code] || '';
+}
+
+// ════════════════════════════════════════════════
+// 進度條
+// ════════════════════════════════════════════════
 function setProgress(id) {
   const ms = Object.values(db).filter(s => {
     const parts = s.scene_id.split('.');
@@ -638,7 +1025,9 @@ function setProgress(id) {
   progressFill.style.width = ms.length ? `${((idx+1)/ms.length)*100}%` : '0%';
 }
 
-// ── 點擊提示 ──────────────────────────────────
+// ════════════════════════════════════════════════
+// 點擊提示
+// ════════════════════════════════════════════════
 function setTap(fn) {
   tapCb = fn;
   clearTimeout(tapTimer);
@@ -650,15 +1039,26 @@ function clearTap() {
   clearTimeout(tapTimer);
   tapHint.style.display = 'none';
 }
-
 textArea.addEventListener('click', fireTap);
 tapHint.addEventListener('click', fireTap);
 mainEl.addEventListener('click', e => { if (e.target === mainEl) fireTap(); });
 function fireTap() { if (tapCb) { const fn = tapCb; clearTap(); fn(); } }
 
-// ── 載入 JSON ─────────────────────────────────
-const storyNotebooks = {};
+// ════════════════════════════════════════════════
+// 語速
+// ════════════════════════════════════════════════
+document.querySelectorAll('.speed-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    rate = parseFloat(btn.dataset.rate);
+    window.speechSynthesis.cancel();
+  });
+});
 
+// ════════════════════════════════════════════════
+// JSON 載入
+// ════════════════════════════════════════════════
 async function loadMaster() {
   const res = await fetch(JSON_BASE + 'story_master.json');
   masterData = await res.json();
@@ -674,27 +1074,70 @@ async function loadStory(storyId) {
   currentStoryId = storyId;
 }
 
-// 預載下一個小事件
 function prefetchNextStory(storyId) {
   const story = masterData.stories.find(s => s.story_id === storyId);
   if (!story || !story.next_story) return;
-  const nextStoryId = story.next_story;
-  const next = masterData.stories.find(s => s.story_id === nextStoryId);
+  const next = masterData.stories.find(s => s.story_id === story.next_story);
   if (!next) return;
   fetch(JSON_BASE + next.file).then(r => r.json()).then(data => {
     data.scenes.forEach(s => { db[s.scene_id] = s; });
-    if (data.notebook) storyNotebooks[nextStoryId] = data.notebook;
+    if (data.notebook) storyNotebooks[story.next_story] = data.notebook;
   }).catch(() => {});
 }
 
-// ── 開場 ──────────────────────────────────────
+// ════════════════════════════════════════════════
+// 開場邏輯（含 reload 判斷）
+// ════════════════════════════════════════════════
 loadMaster().then(async () => {
   await loadStory('1.1');
+  prefetchNextStory('1.1');
+
+  const prog = loadProgress();
+
+  // 大事件一已完成
+  if (prog && prog.completed_events && prog.completed_events.includes('1.7')) {
+    splashEl.style.display = 'none';
+    showEventEndScreen();
+    return;
+  }
+
+  // 有進度可繼續
+  if (prog && prog.current_node) {
+    splashEl.style.display = 'none';
+    resumeOverlay.classList.add('show');
+
+    $('continue-btn').onclick = async () => {
+      resumeOverlay.classList.remove('show');
+      // 載入對應小事件
+      const storyId = prog.current_node.split('.').slice(0,2).join('.');
+      const startOfEvent = masterData.stories.find(s => s.story_id === storyId);
+      if (!db[prog.current_node] && startOfEvent) {
+        loadingOverlay.classList.add('show');
+        await loadStory(storyId).catch(() => {});
+        loadingOverlay.classList.remove('show');
+      }
+      // 從小事件開頭開始（不從節點中途）
+      const startScene = startOfEvent ? startOfEvent.start_scene : prog.current_node;
+      go(startScene);
+    };
+
+    $('restart-btn-resume').onclick = () => {
+      clearStorage();
+      initAssessment();
+      resumeOverlay.classList.remove('show');
+      go('1.1.1');
+    };
+    return;
+  }
+
+  // 全新開始
   splashBtn.textContent = '▶ 開始冒險';
   splashBtn.disabled = false;
-  prefetchNextStory('1.1');
+  initAssessment();
+
 }).catch(() => {
   splashBtn.textContent = '載入失敗，請重試';
+  splashBtn.disabled = false;
 });
 
 splashBtn.addEventListener('click', () => {
@@ -702,9 +1145,10 @@ splashBtn.addEventListener('click', () => {
   go('1.1.1');
 });
 
-// ── go：載入場景 ──────────────────────────────
+// ════════════════════════════════════════════════
+// go：載入場景
+// ════════════════════════════════════════════════
 function go(id, skipLines = false) {
-  // 如果場景不在db，嘗試載入對應小事件
   if (!db[id]) {
     const storyId = id.split('.').slice(0,2).join('.');
     loadingOverlay.classList.add('show');
@@ -725,9 +1169,18 @@ function goScene(id, skipLines) {
   const scene = db[id];
   if (!scene) { showDone(); return; }
 
-  const isAssessment = scene.type === 'assessment';
+  // 更新進度存檔
+  updateProgress(id);
+
+  // 補救型隱藏節點進入即記錄
+  if (scene.collect && scene.collect.type === 'hidden_remedial') {
+    collectHiddenRemedial(scene);
+  }
+
   mainEl.classList.add('fade');
-  setImg(scene.image, isAssessment);
+
+  const isAssessment = scene.type === 'assessment';
+  setImgWithCaption(scene.image, isAssessment);
 
   setTimeout(() => {
     textArea.innerHTML = '';
@@ -740,13 +1193,12 @@ function goScene(id, skipLines) {
     clearTap();
     window.speechSynthesis.cancel();
 
-    setImg(scene.image, isAssessment);
+    setImgWithCaption(scene.image, isAssessment);
     setProgress(id);
     titleEl.textContent = scene.title || '';
     titleEl.dataset.sceneId = id;
     mainEl.classList.remove('fade');
 
-    // 音樂
     playBgmForScene(scene);
 
     const lines = getLines(scene);
@@ -768,7 +1220,9 @@ function goScene(id, skipLines) {
   }, 280);
 }
 
-// ── getLines ──────────────────────────────────
+// ════════════════════════════════════════════════
+// getLines
+// ════════════════════════════════════════════════
 function getLines(scene) {
   if (!scene.visit_count_responses) return scene.lines || [];
   const k = scene.scene_id;
@@ -779,14 +1233,15 @@ function getLines(scene) {
   return match.lines;
 }
 
-// ── playLine：逐行播放 ────────────────────────
+// ════════════════════════════════════════════════
+// playLine
+// ════════════════════════════════════════════════
 function playLine(scene, lines, idx) {
   if (idx >= lines.length) { afterLines(scene); return; }
 
-  // trigger_line_index 圖像切換
   if (scene.image_cues) {
     const cue = scene.image_cues.find(c => c.trigger_line_index === idx);
-    if (cue && cue.image) setImg(cue.image, scene.type === 'assessment');
+    if (cue && cue.image) setImgWithCaption(cue.image, scene.type === 'assessment');
   }
 
   const text = lines[idx];
@@ -803,7 +1258,7 @@ function playLine(scene, lines, idx) {
     }
   };
 
-  if (muted) {
+  if (voiceMuted) {
     div.textContent = text;
     setTap(next);
   } else {
@@ -811,19 +1266,23 @@ function playLine(scene, lines, idx) {
   }
 }
 
-// ── afterLines ────────────────────────────────
+// ════════════════════════════════════════════════
+// afterLines
+// ════════════════════════════════════════════════
 function afterLines(scene) {
   clearTap();
 
-  // 小事件結尾：有next_story欄位（無論值為何）
+  // 小事件結尾
   if ('next_story' in scene) {
+    markEventComplete(currentStoryId);
     const doTransition = () => {
-      if (scene.next_story) {
+      if (scene.next_story && scene.next_story !== 'null') {
         const nextStoryData = masterData.stories.find(s => s.story_id === scene.next_story);
         if (nextStoryData) go(nextStoryData.start_scene);
         else showDone();
       } else {
-        showDone();
+        // 大事件一結束
+        showReport();
       }
     };
     const notebookStoryId = scene.scene_id.split('.').slice(0,2).join('.');
@@ -839,37 +1298,33 @@ function afterLines(scene) {
     const nextId = scene.choices[0].next_scene;
     setTap(() => {
       const nextScene = db[nextId];
-      if (nextScene && nextScene.type === 'free_explore') {
-        go(nextId, true);
-      } else {
-        go(nextId);
-      }
+      if (nextScene && nextScene.type === 'free_explore') go(nextId, true);
+      else go(nextId);
     });
   } else {
     showDone();
   }
 }
 
-// ── showOptions ───────────────────────────────
+// ════════════════════════════════════════════════
+// showOptions
+// ════════════════════════════════════════════════
 function showOptions(scene) {
   const valid = scene.choices.filter(o => !o.unlock_condition);
 
-  // display_images 並排圖像
   if (scene.display_images && scene.display_images.length) {
     displayImagesEl.innerHTML = '';
     scene.display_images.forEach((code, i) => {
       const img = document.createElement('img');
-      img.src = IMG_BASE + IMGS[code];
+      img.src = IMG_BASE + (IMGS[code] || '');
       img.alt = NAMES[code] || code;
-      img.dataset.index = i;
       img.addEventListener('click', () => {
         displayImagesEl.querySelectorAll('img').forEach(im => im.classList.remove('selected'));
         img.classList.add('selected');
-        // 對應選項
         const opt = valid[i];
         if (opt) {
           const btn = optArea.querySelectorAll('.opt-btn')[i];
-          if (btn) pickOpt(opt, btn);
+          if (btn) pickOpt(scene, opt, btn);
         }
       });
       displayImagesEl.appendChild(img);
@@ -887,25 +1342,23 @@ function showOptions(scene) {
     const btn = document.createElement('button');
     btn.className = 'opt-btn';
     btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
-    btn.addEventListener('click', () => pickOpt(opt, btn));
+    btn.addEventListener('click', () => pickOpt(scene, opt, btn));
     optArea.appendChild(btn);
   });
 
-  // 選項出現音效
   playSfx('SFX_01');
-
   speakHL(qDiv, scene.question, () => speakOpts(valid, 0));
 }
 
 function speakOpts(opts, idx) {
-  if (idx >= opts.length || muted) return;
+  if (idx >= opts.length || voiceMuted) return;
   const btn = optArea.querySelectorAll('.opt-btn')[idx];
   if (!btn) { speakOpts(opts, idx+1); return; }
   const textEl = btn.querySelector('.opt-text');
   speakHL(textEl, opts[idx].text, () => speakOpts(opts, idx+1));
 }
 
-function pickOpt(opt, btn) {
+function pickOpt(scene, opt, btn) {
   window.speechSynthesis.cancel();
   optArea.querySelectorAll('.opt-btn').forEach(b => b.disabled = true);
   btn.classList.add('selected');
@@ -913,24 +1366,28 @@ function pickOpt(opt, btn) {
   displayImagesEl.classList.remove('show');
   clearTap();
 
-  // 答對答錯音效
+  // 收集評估數據
+  collectData(scene, opt.label);
+
+  // 音效
   const nextScene = db[opt.next_scene];
-  if (nextScene) {
-    if (nextScene.type === 'feedback' && nextScene.support_flag) {
-      playSfx('SFX_03');
-    } else if (nextScene.type === 'feedback') {
-      // 判斷正確：第一個choice的next通常是正確答案
-      const scene = Object.values(db).find(s => s.choices && s.choices.some(c => c.next_scene === opt.next_scene));
-      const isCorrect = scene && scene.choices[0] && scene.choices[0].next_scene === opt.next_scene;
-      playSfx(isCorrect ? 'SFX_02' : 'SFX_03');
+  if (nextScene && nextScene.type === 'feedback') {
+    // 判斷是否正確：若scene有collect，用support_flag判斷
+    if (scene.collect && scene.collect.type === 'assessment') {
+      const supportOpts = Array.isArray(scene.collect.support_option)
+        ? scene.collect.support_option
+        : (scene.collect.support_option ? [scene.collect.support_option] : []);
+      playSfx(supportOpts.includes(opt.label) ? 'SFX_03' : 'SFX_02');
     }
   }
 
-  if (nextScene && nextScene.image) setImg(nextScene.image, false);
+  if (nextScene && nextScene.image) setImgWithCaption(nextScene.image, false);
   go(opt.next_scene);
 }
 
-// ── showFreeExplore（選一個即解鎖）────────────
+// ════════════════════════════════════════════════
+// showFreeExplore
+// ════════════════════════════════════════════════
 function showFreeExplore(scene) {
   const k = scene.scene_id;
   if (!explored[k]) explored[k] = new Set();
@@ -950,19 +1407,20 @@ function renderFEOpts(scene, exp, qDiv) {
 
   const visible = [];
   scene.choices.forEach(opt => {
-    // 解鎖條件：選了任意一個（exp.size >= 1）即解鎖D選項
-    if (opt.unlock_condition) {
-      if (exp.size < 1) return; // 未選過任何選項，不顯示
-    }
+    if (opt.unlock_condition && exp.size < 1) return;
     visible.push(opt);
     const btn = document.createElement('button');
     btn.className = 'opt-btn';
     btn.innerHTML = `<span class="opt-label">${opt.label||''}</span><span class="opt-text">${opt.text}</span>`;
     btn.addEventListener('click', () => {
       window.speechSynthesis.cancel();
-      if (opt.label && opt.label !== 'D') exp.add(opt.label);
+      if (opt.label && opt.label !== 'D') {
+        exp.add(opt.label);
+        // 收集探索數據（首次）
+        collectData(scene, opt.label);
+      }
       const next = db[opt.next_scene];
-      if (next && next.image) setImg(next.image);
+      if (next && next.image) setImgWithCaption(next.image, false);
       go(opt.next_scene);
     });
     optArea.appendChild(btn);
@@ -971,8 +1429,11 @@ function renderFEOpts(scene, exp, qDiv) {
   playSfx('SFX_01');
   speakHL(qDiv, scene.question, () => speakOpts(visible, 0));
 }
+
+// ════════════════════════════════════════════════
+// 學徒筆記
+// ════════════════════════════════════════════════
 function showNotebook(storyId, onContinue) {
-  // 若notebook尚未載入，先loadStory再顯示
   if (!storyNotebooks[storyId]) {
     loadStory(storyId).then(() => {
       if (storyNotebooks[storyId]) _renderNotebook(storyId, onContinue);
@@ -990,7 +1451,7 @@ function _renderNotebook(storyId, onContinue) {
   const left = notebookData.left_page;
   const right = notebookData.right_page;
 
-  // 填左頁
+  // 左頁
   const storyLinesEl = $('nb-story-lines');
   storyLinesEl.innerHTML = '';
   (left.story_progress || []).forEach(line => {
@@ -1000,7 +1461,6 @@ function _renderNotebook(storyId, onContinue) {
     storyLinesEl.appendChild(p);
   });
 
-  // 地點和人物
   const metaEl = $('nb-meta');
   metaEl.innerHTML = '';
   if (left.places_visited && left.places_visited.length) {
@@ -1014,14 +1474,13 @@ function _renderNotebook(storyId, onContinue) {
     metaEl.appendChild(row);
   }
 
-  // 填右頁
+  // 右頁
   const learnEl = $('nb-learn-items');
   learnEl.innerHTML = '';
-  const typeLabel = { vocabulary:'詞彙', concept:'概念', character:'字形', value:'品格', reasoning:'推理', social:'社會理解' };
   (right.learned_points || []).forEach(item => {
     const div = document.createElement('div');
     div.className = 'nb-learn-item';
-    div.innerHTML = `<div class="nb-learn-type">${typeLabel[item.type] || item.type}</div>
+    div.innerHTML = `<div class="nb-learn-type">${TYPE_LABEL[item.type] || item.type}</div>
                      <div class="nb-learn-content">${item.content}</div>`;
     learnEl.appendChild(div);
   });
@@ -1035,11 +1494,10 @@ function _renderNotebook(storyId, onContinue) {
     anchorImg.style.display = 'none';
   }
 
-  // 顯示筆記，停BGM再播BGM_04
   notebookOverlay.classList.add('show');
   window.speechSynthesis.cancel();
   stopBgm();
-  playNotebookBgm(() => {});
+  playNotebookBgm();
 
   $('notebook-continue-btn').onclick = () => {
     stopBgm();
@@ -1048,38 +1506,135 @@ function _renderNotebook(storyId, onContinue) {
   };
 }
 
-// ── 完成畫面 ──────────────────────────────────
+// ════════════════════════════════════════════════
+// 完成畫面（佔位，大事件完成後才顯示報告）
+// ════════════════════════════════════════════════
 function showDone() {
   clearTap();
   stopBgm();
   doneEl.style.display = 'block';
+  doneEl.textContent = '阿禾踏出了商行的門。大梁城的街道在等著他們。';
   tts('阿禾踏出了商行的門。大梁城的街道在等著他們。');
 }
 
-// ── 語速 ──────────────────────────────────────
-document.querySelectorAll('.speed-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    rate = parseFloat(btn.dataset.rate);
-    window.speechSynthesis.cancel();
-  });
-});
+// ════════════════════════════════════════════════
+// 完結報告
+// ════════════════════════════════════════════════
+function showReport() {
+  stopBgm();
+  window.speechSynthesis.cancel();
 
-// ── 靜音 ──────────────────────────────────────
-muteBtn.addEventListener('click', () => {
-  muted = !muted;
-  muteBtn.textContent = muted ? '🔇' : '🔊';
-  if (muted) {
-    window.speechSynthesis.cancel();
-    stopBgm();
-    if (!tapCb) { setTap(() => fireTap()); }
-  } else {
-    // 恢復音樂
-    const sceneId = titleEl.dataset.sceneId;
-    if (sceneId && db[sceneId]) playBgmForScene(db[sceneId]);
+  // 標記大事件一完成
+  const prog = loadProgress() || { current_node: null, completed_events: [], notebook_entries: [] };
+  if (!prog.completed_events.includes('1.7')) prog.completed_events.push('1.7');
+  saveProgress(prog);
+
+  // 計算量化分數
+  const scores = calcScores();
+  const dims = ['vocabulary','situation_understanding','social_understanding','information_integration','value_judgment'];
+
+  const quantEl = $('quantitative-report');
+  quantEl.innerHTML = '';
+
+  dims.forEach(dim => {
+    const pct = scores[dim] !== undefined ? scores[dim] : 0.5;
+    const stars = getStars(pct);
+    const level = getLevel(pct);
+    const sentence = REPORT_SENTENCES[dim][level];
+    const starStr = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+
+    const row = document.createElement('div');
+    row.className = 'dim-row';
+    row.innerHTML = `<div class="dim-name">${DIM_NAMES[dim]}</div>
+                     <div class="dim-stars">${starStr}</div>
+                     <div class="dim-desc">${sentence}</div>`;
+    quantEl.appendChild(row);
+  });
+
+  reportScreen.classList.add('show');
+
+  // 生成質性報告
+  generateQualitativeReport(scores);
+
+  // 下載按鈕
+  $('download-report-btn').onclick = () => {
+    window.print();
+  };
+
+  // 重新開始
+  $('restart-from-report-btn').onclick = () => {
+    clearStorage();
+    initAssessment();
+    reportScreen.classList.remove('show');
+    location.reload();
+  };
+}
+
+async function generateQualitativeReport(scores) {
+  const qualEl = $('qualitative-section');
+  const loadingEl = $('qualitative-loading');
+
+  // 整理傳入數據
+  const data = loadAssessment();
+  if (!data) { loadingEl.textContent = '暫無探索數據。'; return; }
+
+  const dims = ['vocabulary','situation_understanding','social_understanding','information_integration','value_judgment'];
+  const levelNames = ['第一級','第二級','第三級','第四級'];
+
+  const abilityLines = dims.map(d => {
+    const pct = scores[d] !== undefined ? scores[d] : 0.5;
+    return `${DIM_NAMES[d]}：${levelNames[getLevel(pct)]}`;
+  }).join('\n');
+
+  const worldExp = data.nodes.filter(n => n.exp_tag === 'EXP_world').map(n => n.label).join('、');
+  const infoExp = data.nodes.filter(n => n.exp_tag === 'EXP_info').map(n => n.label).join('、');
+  const hidden = data.nodes.filter(n => n.type === 'hidden_remedial' || n.type === 'hidden_assessment')
+    .map(n => n.trigger).join('；');
+
+  const prompt = `能力表現：
+${abilityLines}
+
+探索行為：
+環境探索：${worldExp || '無記錄'}
+信息探索：${infoExp || '無記錄'}
+${hidden ? `隱藏節點：${hidden}` : ''}`;
+
+  try {
+    const res = await fetch(WORKERS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ prompt }),
+    });
+    const json = await res.json();
+    const text = json.text || json.response || '';
+    if (text) {
+      qualEl.innerHTML = '';
+      text.split('\n').filter(l => l.trim()).forEach(line => {
+        const p = document.createElement('p');
+        p.style.marginBottom = '12px';
+        p.textContent = line;
+        qualEl.appendChild(p);
+      });
+    } else {
+      loadingEl.textContent = '報告生成失敗，請截圖量化部分作記錄。';
+    }
+  } catch {
+    loadingEl.textContent = '無法連接報告服務，請截圖量化部分作記錄。';
   }
-});
+}
+
+// ════════════════════════════════════════════════
+// 大事件完結畫面
+// ════════════════════════════════════════════════
+function showEventEndScreen() {
+  eventEndScreen.classList.add('show');
+  $('event-end-restart').onclick = () => {
+    clearStorage();
+    initAssessment();
+    eventEndScreen.classList.remove('show');
+    location.reload();
+  };
+}
 </script>
 </body>
 </html>
