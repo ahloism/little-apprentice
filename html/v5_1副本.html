@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>小學徒大世界 V5.1</title>
+  <style>
+    :root {
+      --bg: #f5efe4;
+      --panel: #fffaf2;
+      --panel-2: #f0e4cf;
+      --ink: #2f2419;
+      --accent: #8b5e34;
+      --accent-2: #b98349;
+      --danger: #b94a48;
+      --border: #d8c5a8;
+      --shadow: 0 8px 24px rgba(47, 36, 25, 0.12);
+      --radius: 18px;
+      --room-max: 1024px;
+      --header-h: 64px;
+      --footer-h: 72px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0; padding: 0; min-height: 100%;
+      background: var(--bg); color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang TC", "Noto Sans TC", sans-serif;
+    }
+
+    body { display: flex; justify-content: center; align-items: stretch; }
+
+    #app {
+      width: 100%; min-height: 100vh;
+      display: flex; justify-content: center; padding: 12px;
+    }
+
+    .shell {
+      position: relative;
+      width: min(100%, var(--room-max));
+      min-height: calc(100vh - 24px);
+      background: linear-gradient(180deg, #f8f1e5 0%, #f2e7d6 100%);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .topbar, .bottombar {
+      position: absolute; left: 0; right: 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 16px;
+      background: rgba(255, 250, 242, 0.92);
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar { top: 0; min-height: var(--header-h); border-bottom: 1px solid var(--border); }
+    .bottombar { bottom: 0; min-height: var(--footer-h); border-top: 1px solid var(--border); gap: 12px; justify-content: center; }
+
+    .brand { font-size: 18px; font-weight: 700; letter-spacing: 0.02em; }
+
+    .topbar-actions, .footer-actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+    button {
+      border: 1px solid var(--border); background: var(--panel); color: var(--ink);
+      border-radius: 999px; padding: 10px 14px; font-size: 14px; font-weight: 600; cursor: pointer;
+    }
+    button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+    button.secondary { background: var(--panel-2); }
+    button.danger { background: #fff0ef; border-color: #e3b4b1; color: var(--danger); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    .rooms {
+      position: relative; min-height: calc(100vh - 24px);
+      padding-top: calc(var(--header-h) + 10px);
+      padding-bottom: calc(var(--footer-h) + 10px);
+    }
+
+    .room {
+      display: none;
+      min-height: calc(100vh - 24px - var(--header-h) - var(--footer-h) - 20px);
+      padding: 20px;
+    }
+    .room.is-active { display: block; }
+
+    .panel {
+      background: rgba(255, 250, 242, 0.9);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      box-shadow: var(--shadow); padding: 16px;
+    }
+
+    .stack { display: grid; gap: 16px; }
+    .hero { display: grid; gap: 12px; }
+
+    .title { margin: 0; font-size: clamp(24px, 4vw, 34px); line-height: 1.2; }
+    .subtitle, .muted { margin: 0; color: rgba(47, 36, 25, 0.72); line-height: 1.6; }
+
+    .story-layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 16px; }
+    .story-visual, .story-content, .map-stage, .report-stage { min-height: 320px; }
+
+    .image-frame {
+      width: 100%; aspect-ratio: 16 / 9; border-radius: 20px;
+      border: 1px dashed var(--border);
+      background: linear-gradient(135deg, #eadac2, #f7efe4);
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 16px;
+      color: rgba(47, 36, 25, 0.6); font-weight: 600;
+    }
+
+    .line-box, .choice-box, .dev-log, .map-grid, .report-grid { display: grid; gap: 12px; }
+    .choice-list { display: grid; gap: 10px; margin-top: 12px; }
+    .choice-item { width: 100%; text-align: left; border-radius: 14px; padding: 14px; }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: 6px;
+      border-radius: 999px; padding: 6px 10px;
+      background: #f1e5d2; font-size: 12px; font-weight: 700; color: #6c4d2d; width: fit-content;
+    }
+
+    .map-canvas, .report-placeholder {
+      width: 100%; min-height: 420px; border-radius: 20px;
+      border: 1px dashed var(--border);
+      background: linear-gradient(135deg, #efe2cc, #f9f3ea);
+      display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 20px;
+      color: rgba(47, 36, 25, 0.65); font-weight: 600;
+    }
+
+    /* ── 大地圖 CSS ── */
+    .map-wrapper { position: relative; width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; overflow: hidden; }
+
+    .map-layer {
+      position: absolute; width: 100%; height: 100%;
+      object-fit: cover; border-radius: 16px;
+    }
+    .map-bw { filter: grayscale(100%); }
+    .map-color { /* clip-path controlled by JS */ }
+
+    .map-location-pin {
+      position: absolute; transform: translate(-50%, -50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      border: 2px solid white; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; background: rgba(255,250,242,0.9);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      transition: transform 0.2s;
+    }
+    .map-location-pin:hover:not(.mist) { transform: translate(-50%, -50%) scale(1.1); }
+    .map-location-pin.mist { filter: blur(4px); opacity: 0.6; cursor: default; }
+    .map-location-pin.unlocked { background: #f5c842; }
+
+    .map-asui-character {
+      position: absolute; transform: translate(-50%, -50%);
+      width: 56px; height: 56px; border-radius: 50%;
+      background: var(--accent);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; border: 3px solid white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .map-continue-btn {
+      position: absolute; transform: translateX(-50%);
+      background: var(--accent); color: white;
+      border: none; border-radius: 999px;
+      padding: 8px 18px; font-size: 14px; font-weight: 700;
+      cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      white-space: nowrap;
+    }
+
+    .map-coin-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(245, 200, 66, 0.95);
+      border: 2px solid #c8a020; border-radius: 999px;
+      padding: 6px 14px; font-size: 14px; font-weight: 700;
+      color: #4a3000; box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      z-index: 20; pointer-events: none;
+    }
+
+    .map-action-card {
+      position: absolute; transform: translateX(-50%);
+      background: rgba(255,250,242,0.96);
+      border: 1px solid var(--border); border-radius: 14px;
+      padding: 8px 12px; font-size: 12px; font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      white-space: nowrap; z-index: 15;
+    }
+
+    .map-action-card button { font-size: 12px; padding: 5px 12px; border-radius: 999px; }
+
+    /* ── 開場動畫 CSS ── */
+    #opening-room { position: relative; padding: 0; overflow: hidden; }
+
+    .opening-layer {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 1s ease;
+    }
+
+    #opening-video { width: 100%; height: 100%; object-fit: cover; }
+    .opening-cover-img { width: 100%; height: 100%; object-fit: cover; }
+
+    .opening-buttons {
+      position: absolute; bottom: 20%; left: 50%; transform: translateX(-50%);
+      display: flex; gap: 16px; flex-direction: column; align-items: center;
+      transition: opacity 0.8s ease;
+    }
+
+    .opening-status {
+      position: absolute; bottom: 20px; left: 20px; right: 20px; z-index: 10;
+    }
+
+    /* ── 狀態卡 ── */
+    .status-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .status-card { border: 1px solid var(--border); border-radius: 16px; padding: 12px; background: rgba(255,255,255,0.7); }
+    .status-label { display: block; font-size: 12px; color: rgba(47,36,25,0.6); margin-bottom: 6px; }
+    .status-value { font-size: 15px; font-weight: 700; }
+
+    /* ── 開發者面板 ── */
+    .dev-panel {
+      position: absolute; right: 16px; bottom: calc(var(--footer-h) + 22px);
+      width: min(420px, calc(100% - 32px)); max-height: 58vh; overflow: auto;
+      z-index: 40; display: none;
+      border: 1px solid #d6b893; background: rgba(45, 34, 24, 0.94); color: #f7eddc;
+      border-radius: 18px; box-shadow: 0 20px 40px rgba(0,0,0,0.28); padding: 14px;
+    }
+    .dev-panel.is-visible { display: block; }
+    .dev-panel h3 { margin: 0 0 10px 0; font-size: 16px; }
+    .dev-panel pre { margin: 0; white-space: pre-wrap; word-break: break-word; font-size: 12px; line-height: 1.5; }
+
+    .hidden-a11y {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    @media (max-width: 900px) {
+      .story-layout { grid-template-columns: 1fr; }
+      .status-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 430px) {
+      #app { padding: 0; }
+      .shell { min-height: 100vh; border-radius: 0; border-left: 0; border-right: 0; }
+      .room { padding: 14px; }
+      .topbar, .bottombar { padding: 10px 12px; }
+      button { font-size: 13px; padding: 9px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="shell">
+      <header class="topbar">
+        <div>
+          <div class="brand">小學徒大世界 V5.1</div>
+          <p id="app-status" class="muted">載入中…</p>
+        </div>
+        <div class="topbar-actions">
+          <button id="login-btn" class="secondary">Google 登入</button>
+          <button id="logout-btn" class="secondary" disabled>登出</button>
+        </div>
+      </header>
+
+      <main class="rooms">
+
+        <!-- 開場房間 -->
+        <section id="opening-room" class="room is-active" data-room="opening">
+          <div id="opening-video-layer" class="opening-layer">
+            <video id="opening-video" src="video/video_01_封面.mp4" playsinline muted autoplay></video>
+          </div>
+          <div id="opening-cover-layer" class="opening-layer" style="opacity:0">
+            <img src="image/A02_封面.png" class="opening-cover-img" alt="小學徒大世界封面">
+            <div id="opening-buttons" class="opening-buttons" style="opacity:0">
+              <button id="start-app-btn" class="primary">開始冒險</button>
+              <button id="go-map-btn" class="secondary" style="display:none">重新開始</button>
+              <button id="go-report-btn" class="secondary" style="display:none">直接看報告</button>
+            </div>
+          </div>
+          <div class="opening-status panel status-grid">
+            <div class="status-card">
+              <span class="status-label">Firebase</span>
+              <span id="firebase-status" class="status-value">未初始化</span>
+            </div>
+            <div class="status-card">
+              <span class="status-label">JSON 載入</span>
+              <span id="json-status" class="status-value">尚未開始</span>
+            </div>
+            <div class="status-card">
+              <span class="status-label">目前房間</span>
+              <span id="room-status" class="status-value">opening-room</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- 主線房間 -->
+        <section id="story-room" class="room" data-room="story">
+          <div class="stack">
+            <div class="story-layout">
+              <div class="panel story-visual">
+                <span class="pill">Story Room</span>
+                <div id="scene-image-frame" class="image-frame">場景圖片顯示區</div>
+              </div>
+              <div class="panel story-content">
+                <div class="line-box">
+                  <span id="scene-type-pill" class="pill">scene type: pending</span>
+                  <h2 id="scene-title" class="title">Scene Renderer</h2>
+                  <div id="scene-lines" class="subtitle">等待載入場景資料。</div>
+                </div>
+                <div class="choice-box">
+                  <div id="choice-list" class="choice-list">
+                    <button class="choice-item secondary" disabled>等待載入選項</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 大地圖房間 -->
+        <section id="map-room" class="room" data-room="map">
+          <div class="stack">
+            <div class="panel map-stage">
+              <div id="map-canvas" class="map-canvas">大地圖載入中…</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 報告房間 -->
+        <section id="report-room" class="room" data-room="report">
+          <div class="stack">
+            <div class="panel report-stage">
+              <span class="pill">Report Room</span>
+              <h2 class="title">報告房間</h2>
+              <div id="report-placeholder" class="report-placeholder">報告內容顯示區</div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <footer class="bottombar">
+        <div class="footer-actions">
+          <button id="room-opening-btn" class="secondary">Opening</button>
+          <button id="room-story-btn" class="secondary">Story</button>
+          <button id="room-map-btn" class="secondary">Map</button>
+          <button id="room-report-btn" class="secondary">Report</button>
+        </div>
+        <div class="footer-actions">
+          <button id="tts-btn" class="secondary">播放 TTS</button>
+          <button id="mute-btn" class="secondary" aria-describedby="dev-hint">靜音</button>
+          <span id="dev-hint" class="hidden-a11y">長按靜音按鈕三秒可開啟開發者面板</span>
+        </div>
+      </footer>
+
+      <aside id="dev-panel" class="dev-panel" aria-live="polite">
+        <h3>開發者面板</h3>
+        <pre id="dev-log">[dev] panel ready</pre>
+      </aside>
+    </div>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-app.js";
+    import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+    import { getFirestore, doc, getDoc, setDoc, collection, addDoc, serverTimestamp } from "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+    /****************************************************************
+     * Firebase Config — Ah Lo填入
+     ****************************************************************/
+    const firebaseConfig = {
+     apiKey: "AIzaSyCqbC0UxuQJpqqZT0KLxRqNYyJDYm-8fnQ",
+     authDomain: "little-apprentice.firebaseapp.com",
+     projectId: "little-apprentice",
+     storageBucket: "little-apprentice.firebasestorage.app",
+     messagingSenderId: "854629298975",
+     appId: "1:854629298975:web:d8c376bcad938c7945f62a",
+     measurementId: "G-4GGG1CHRW5"
+    };
+
+    let firebaseApp = null;
+    let auth = null;
+    let db = null;
+    let currentUser = null;
+    let authReady = false;
+
+    /****************************************************************
+     * App State
+     ****************************************************************/
+    const appState = {
+      currentRoom: 'opening-room',
+      currentSceneId: null,
+      currentStoryId: 'story_1_1',
+      manifest: null,
+      configGlobal: null,
+      mapDaliang: null,
+      asuiDialogues: null,
+      storyData: null,
+      evaluationData: null,
+      presentationData: null,
+      progressData: null,
+      sceneIndex: new Map(),
+      manifestIndex: new Map(),
+      evaluationIndex: new Map(),
+      presentationIndex: new Map(),
+      visitedSubScenes: {},
+      exploredScenes: {},
+      hiddenAssessmentBuffer: {},
+      isMuted: false,
+      ttsAudio: null,
+      webSpeechUtterance: null
+    };
+
+    /****************************************************************
+     * DOM References
+     ****************************************************************/
+    const dom = {
+      appStatus: document.getElementById('app-status'),
+      firebaseStatus: document.getElementById('firebase-status'),
+      jsonStatus: document.getElementById('json-status'),
+      roomStatus: document.getElementById('room-status'),
+      sceneTitle: document.getElementById('scene-title'),
+      sceneLines: document.getElementById('scene-lines'),
+      sceneTypePill: document.getElementById('scene-type-pill'),
+      choiceList: document.getElementById('choice-list'),
+      sceneImageFrame: document.getElementById('scene-image-frame'),
+      mapCanvas: document.getElementById('map-canvas'),
+      reportPlaceholder: document.getElementById('report-placeholder'),
+      devPanel: document.getElementById('dev-panel'),
+      devLog: document.getElementById('dev-log'),
+      loginBtn: document.getElementById('login-btn'),
+      logoutBtn: document.getElementById('logout-btn'),
+      startAppBtn: document.getElementById('start-app-btn'),
+      goMapBtn: document.getElementById('go-map-btn'),
+      goReportBtn: document.getElementById('go-report-btn'),
+      roomOpeningBtn: document.getElementById('room-opening-btn'),
+      roomStoryBtn: document.getElementById('room-story-btn'),
+      roomMapBtn: document.getElementById('room-map-btn'),
+      roomReportBtn: document.getElementById('room-report-btn'),
+      ttsBtn: document.getElementById('tts-btn'),
+      muteBtn: document.getElementById('mute-btn')
+    };
+
+    /****************************************************************
+     * Firebase
+     ****************************************************************/
+    function hasFirebaseConfig() {
+      return Object.keys(firebaseConfig).length > 0;
+    }
+
+    async function initFirebase() {
+      try {
+        if (!hasFirebaseConfig()) {
+          dom.firebaseStatus.textContent = '等待填入設定';
+          logDev('[firebase] empty config, skip init');
+          return;
+        }
+        firebaseApp = initializeApp(firebaseConfig);
+        auth = getAuth(firebaseApp);
+        db = getFirestore(firebaseApp);
+        dom.firebaseStatus.textContent = '已初始化';
+        logDev('[firebase] initialized');
+
+        onAuthStateChanged(auth, async (user) => {
+          try {
+            authReady = true;
+            if (user) {
+              currentUser = user;
+              dom.loginBtn.disabled = true;
+              dom.logoutBtn.disabled = false;
+              await ensureBaseJsonLoaded();
+              await loadUserProgress(user.uid);
+              determineStartRoom();
+            } else {
+              currentUser = null;
+              dom.loginBtn.disabled = false;
+              dom.logoutBtn.disabled = true;
+              showRoom('opening-room');
+              showNewPlayerUI();
+            }
+            updateCoinDisplay();
+          } catch (error) {
+            await logError(error, 'onAuthStateChanged');
+          }
+        });
+      } catch (error) {
+        dom.firebaseStatus.textContent = '初始化失敗';
+        logDev(`[firebase] init error: ${error.message}`);
+      }
+    }
+
+    async function signInWithGoogle() {
+      if (!auth) { logDev('[auth] auth not ready'); return; }
+      try {
+        const provider = new GoogleAuthProvider();
+        await signInWithPopup(auth, provider);
+      } catch (error) {
+        await logError(error, 'signInWithGoogle');
+        logDev(`[auth] sign-in failed: ${error.message}`);
+      }
+    }
+
+    async function signOutUser() {
+      if (!auth) return;
+      try { await signOut(auth); }
+      catch (error) { await logError(error, 'signOutUser'); }
+    }
+
+    /****************************************************************
+     * Firestore
+     ****************************************************************/
+    async function loadUserProgress(uid) {
+      if (!db) return;
+      const snap = await getDoc(doc(db, 'users', uid, 'progress', 'current'));
+      if (snap.exists()) {
+        appState.progressData = snap.data();
+        appState.exploredScenes = appState.progressData.explored_scenes || {};
+        appState.visitedSubScenes = appState.progressData.visited_sub_scenes || {};
+        logDev('[progress] loaded');
+      } else {
+        appState.progressData = null;
+        logDev('[progress] new player');
+      }
+    }
+
+    async function saveProgress(sceneId) {
+      if (!currentUser || !db) return;
+      await setDoc(doc(db, 'users', currentUser.uid, 'progress', 'current'), {
+        current_scene: sceneId,
+        completed_events: appState.progressData?.completed_events || [],
+        coins: appState.progressData?.coins || 0,
+        unlocked_games: appState.progressData?.unlocked_games || [],
+        puzzle_pieces: appState.progressData?.puzzle_pieces || [],
+        map_segments: appState.progressData?.map_segments || {},
+        explored_scenes: appState.exploredScenes || {},
+        visited_sub_scenes: appState.visitedSubScenes || {},
+        updated_at: serverTimestamp()
+      }, { merge: true });
+    }
+
+    async function saveAssessment(sceneId, label, dimension, supportFlag) {
+      if (!currentUser || !db) return;
+      await setDoc(
+        doc(db, 'users', currentUser.uid, 'assessment', appState.currentStoryId, 'scenes', sceneId),
+        { label, dimension, support_flag: supportFlag, timestamp: serverTimestamp() }
+      );
+    }
+
+    async function logError(error, context = '') {
+      try {
+        if (!db) { console.error(error); return; }
+        await addDoc(collection(db, 'errors'), {
+          message: error.message, context,
+          user_id: currentUser?.uid || 'anonymous',
+          timestamp: serverTimestamp()
+        });
+      } catch (e) { console.error('Error logging failed:', e); }
+    }
+
+    /****************************************************************
+     * JSON Loader
+     ****************************************************************/
+    async function loadJson(url) {
+      const r = await fetch(url);
+      if (!r.ok) throw new Error(`Failed to load ${url}: ${r.status}`);
+      return r.json();
+    }
+
+    async function ensureBaseJsonLoaded() {
+      if (appState.configGlobal && appState.manifest && appState.evaluationData && appState.presentationData) return;
+      await loadStoryBundle(appState.currentStoryId);
+    }
+
+    async function loadStoryBundle(storyId = 'story_1_1') {
+      dom.jsonStatus.textContent = '載入中';
+      logDev(`[loader] loading ${storyId}`);
+      const key = storyId.replace('story_', '');
+      const paths = {
+        configGlobal: 'json/v5/config_global.json',
+        mapDaliang: 'json/v5/map_daliang.json',
+        asuiDialogues: 'json/v5/asui_dialogues.json',
+        storyData: `json/v5/story_data_${key}.json`,
+        manifest: `json/v5/manifest_${key}.json`,
+        evaluationData: `json/v5/evaluation_data_${key}.json`,
+        presentationData: `json/v5/presentation_schema_${key}.json`
+      };
+      const results = await Promise.allSettled(Object.values(paths).map(loadJson));
+      const keys = Object.keys(paths);
+      results.forEach((r, i) => {
+        const k = keys[i];
+        const stateKey = k;
+        appState[stateKey] = r.status === 'fulfilled' ? r.value : null;
+        logDev(`[loader] ${r.status === 'fulfilled' ? 'ok' : 'miss'}: ${paths[k]}`);
+      });
+      buildIndexes();
+      dom.jsonStatus.textContent = '載入完成';
+    }
+
+    function buildIndexes() {
+      appState.sceneIndex.clear();
+      appState.manifestIndex.clear();
+      appState.evaluationIndex.clear();
+      appState.presentationIndex.clear();
+
+      for (const s of (appState.storyData?.scenes || appState.storyData?.story || []))
+        if (s?.scene_id) appState.sceneIndex.set(s.scene_id, s);
+      for (const s of (appState.manifest?.scenes || []))
+        if (s?.scene_id) appState.manifestIndex.set(s.scene_id, s);
+      for (const s of (appState.evaluationData?.scenes || appState.evaluationData?.evaluations || []))
+        if (s?.scene_id) appState.evaluationIndex.set(s.scene_id, s);
+      for (const s of (appState.presentationData?.scenes || appState.presentationData?.presentation || []))
+        if (s?.scene_id) appState.presentationIndex.set(s.scene_id, s);
+
+      logDev(`[index] scene=${appState.sceneIndex.size}, manifest=${appState.manifestIndex.size}, eval=${appState.evaluationIndex.size}, pres=${appState.presentationIndex.size}`);
+    }
+
+    /****************************************************************
+     * Resume Logic
+     ****************************************************************/
+    function determineStartRoom() {
+      const progress = appState.progressData;
+      showRoom('opening-room');
+      if (!progress || !progress.current_scene) {
+        showNewPlayerUI();
+      } else {
+        showResumeUI(progress.current_scene);
+      }
+    }
+
+    function showNewPlayerUI() {
+      dom.startAppBtn.textContent = '開始冒險';
+      dom.startAppBtn.style.display = '';
+      dom.goMapBtn.style.display = 'none';
+      dom.goReportBtn.style.display = 'none';
+      document.getElementById('opening-buttons').style.opacity = '1';
+      logDev('[resume] new player UI');
+    }
+
+    function showResumeUI(lastScene) {
+      dom.startAppBtn.textContent = '繼續冒險';
+      dom.startAppBtn.style.display = '';
+      dom.goMapBtn.textContent = '重新開始';
+      dom.goMapBtn.style.display = '';
+      dom.goReportBtn.style.display = 'none';
+      document.getElementById('opening-buttons').style.opacity = '1';
+      dom.startAppBtn.onclick = async () => {
+        await ensureBaseJsonLoaded();
+        showRoom('story-room');
+        renderCurrentScene(lastScene);
+      };
+      dom.goMapBtn.onclick = async () => {
+        resetProgressState();
+        await ensureBaseJsonLoaded();
+        showRoom('story-room');
+        renderCurrentScene(getStartSceneId());
+      };
+      logDev(`[resume] resume UI for ${lastScene}`);
+    }
+
+    function resetProgressState() {
+      appState.progressData = null;
+      appState.visitedSubScenes = {};
+      appState.exploredScenes = {};
+      appState.hiddenAssessmentBuffer = {};
+      updateCoinDisplay();
+    }
+
+    /****************************************************************
+     * Opening Animation
+     ****************************************************************/
+    function playOpeningSequence() {
+      const video = document.getElementById('opening-video');
+      const videoLayer = document.getElementById('opening-video-layer');
+      const coverLayer = document.getElementById('opening-cover-layer');
+
+      if (!video) return;
+
+      const showCover = () => {
+        videoLayer.style.opacity = '0';
+        coverLayer.style.opacity = '1';
+        // 按鈕顯示由 showNewPlayerUI / showResumeUI 控制
+      };
+
+      video.addEventListener('ended', showCover, { once: true });
+      video.addEventListener('error', showCover, { once: true });
+
+      // Firebase設定未填時直接顯示封面（不等影片）
+      if (!hasFirebaseConfig()) {
+        setTimeout(() => {
+          videoLayer.style.opacity = '0';
+          coverLayer.style.opacity = '1';
+          showNewPlayerUI();
+        }, 100);
+      }
+    }
+
+    /****************************************************************
+     * Coin System
+     ****************************************************************/
+    function updateCoinDisplay() {
+      const coins = appState.progressData?.coins || 0;
+      dom.appStatus.textContent = currentUser
+        ? `${currentUser.displayName || 'Google User'}｜銅錢 ${coins}`
+        : `小學徒大世界 V5.1`;
+    }
+
+    function awardCoins(manifestScene, isCorrect) {
+      const base = manifestScene?.reward?.base || 0;
+      const bonus = manifestScene?.reward?.bonus || 0;
+      const earned = isCorrect ? base + bonus : base;
+      appState.progressData = appState.progressData || {};
+      appState.progressData.coins = (appState.progressData.coins || 0) + earned;
+      updateCoinDisplay();
+      saveProgress(appState.currentSceneId);
+      logDev(`[coins] +${earned}`);
+    }
+
+    /****************************************************************
+     * Scene Renderer
+     ****************************************************************/
+    function getStartSceneId() { return appState.manifest?.start_scene || null; }
+    function getEventIdFromStoryId(storyId) { return storyId.replace('story_', ''); }
+
+    function renderCurrentScene(sceneId) {
+      if (!sceneId) {
+        dom.sceneTitle.textContent = '找不到起始場景';
+        dom.sceneLines.textContent = 'manifest.start_scene 未設或尚未載入。';
+        return;
+      }
+      const storyScene = appState.sceneIndex.get(sceneId) || null;
+      const manifestScene = appState.manifestIndex.get(sceneId) || null;
+      const evaluationScene = appState.evaluationIndex.get(sceneId) || null;
+      const presentationScene = appState.presentationIndex.get(sceneId) || null;
+
+      appState.currentSceneId = sceneId;
+      const sceneType = manifestScene?.type || 'feedback';
+      dom.sceneTypePill.textContent = `scene type: ${sceneType}`;
+      dom.sceneTitle.textContent = storyScene?.title || `Scene ${sceneId}`;
+      dom.sceneLines.innerHTML = buildSceneLinesMarkup(storyScene);
+      dom.sceneImageFrame.textContent = presentationScene?.image
+        ? `圖片：${presentationScene.image}` : '場景圖片顯示區';
+
+      executeSceneEntry(sceneType, sceneId, storyScene, manifestScene, evaluationScene);
+      renderSceneChoices(sceneType, storyScene, manifestScene, evaluationScene);
+      updateCoinDisplay();
+      saveProgress(sceneId);
+      logDev(`[scene] ${sceneId} as ${sceneType}`);
+    }
+
+    function executeSceneEntry(sceneType, sceneId, storyScene, manifestScene, evaluationScene) {
+      switch (sceneType) {
+        case 'explore':
+          if (!appState.exploredScenes[sceneId]) {
+            appState.exploredScenes[sceneId] = true;
+            awardCoins({ reward: { base: manifestScene?.reward?.base || 0 } }, false);
+          }
+          break;
+        case 'free_explore':
+          markVisitedSubScene(sceneId);
+          break;
+        case 'hidden_assessment':
+          appState.hiddenAssessmentBuffer[sceneId] = { dimension: evaluationScene?.dimension || null, collected: true };
+          break;
+        case 'event_end':
+          awardCoins({ reward: { base: manifestScene?.reward?.base || 0 } }, false);
+          completeCurrentEvent(manifestScene);
+          break;
+      }
+    }
+
+    function buildSceneLinesMarkup(scene) {
+      if (!scene) return '尚未找到 story data 對應內容。';
+      if (!Array.isArray(scene.lines) || scene.lines.length === 0) return '此場景目前沒有 lines。';
+      return scene.lines.map(line => `<p>${escapeHtml(String(line))}</p>`).join('');
+    }
+
+    function renderSceneChoices(sceneType, storyScene, manifestScene, evaluationScene) {
+      dom.choiceList.innerHTML = '';
+      switch (sceneType) {
+        case 'story': case 'feedback': renderStoryChoices(storyScene); break;
+        case 'explore': renderExploreChoices(storyScene); break;
+        case 'free_explore': renderFreeExploreChoices(storyScene, manifestScene); break;
+        case 'assessment': renderAssessmentChoices(storyScene, manifestScene, evaluationScene, { remedial: false, hidden: false }); break;
+        case 'assessment_remedial': renderAssessmentChoices(storyScene, manifestScene, evaluationScene, { remedial: true, hidden: false }); break;
+        case 'hidden_assessment': renderAssessmentChoices(storyScene, manifestScene, evaluationScene, { remedial: false, hidden: true }); break;
+        case 'event_end': renderEventEndChoice(manifestScene); break;
+        default: renderPlaceholderChoice(`未處理的 scene type：${sceneType}`);
+      }
+    }
+
+    function renderStoryChoices(storyScene) {
+      const choices = Array.isArray(storyScene?.choices) ? storyScene.choices : [];
+      if (choices.length === 0) {
+        createChoiceButton('繼續', () => { if (storyScene?.next_scene) renderCurrentScene(storyScene.next_scene); }, 'primary');
+        return;
+      }
+      choices.forEach((c, i) => createChoiceButton(`${i + 1}. ${c.text || '未命名'}`, () => handleSimpleNext(c)));
+    }
+
+    function renderExploreChoices(storyScene) {
+      const choices = Array.isArray(storyScene?.choices) ? storyScene.choices : [];
+      if (choices.length === 0) { renderPlaceholderChoice('explore 場景暫未提供 choices'); return; }
+      choices.forEach((c, i) => createChoiceButton(`${i + 1}. ${c.text || '未命名'}`, () => handleSimpleNext(c)));
+    }
+
+    function renderFreeExploreChoices(storyScene, manifestScene) {
+      const choices = Array.isArray(storyScene?.choices) ? storyScene.choices : [];
+      const allVisited = hasVisitedAllRequiredChoices(storyScene, manifestScene);
+      choices.forEach((c, i) => {
+        const label = c.label || String.fromCharCode(65 + i);
+        if (label === 'D' && !allVisited) return;
+        createChoiceButton(`${label}. ${c.text || '未命名'}`, async () => {
+          if (label === 'D') awardCoins(manifestScene, true);
+          handleSimpleNext(c);
+        });
+      });
+      if (!allVisited) renderPlaceholderChoice('完成其餘探索後才會顯示 D 選項');
+    }
+
+    function renderAssessmentChoices(storyScene, manifestScene, evaluationScene, options = {}) {
+      const choices = Array.isArray(storyScene?.choices) ? storyScene.choices : [];
+      if (choices.length === 0) { renderPlaceholderChoice('assessment 場景暫未提供 choices'); return; }
+      choices.forEach((c, i) => {
+        const label = c.label || String.fromCharCode(65 + i);
+        createChoiceButton(`${label}. ${c.text || '未命名'}`, async () => {
+          const dimension = evaluationScene?.dimension || null;
+          const supportFlag = checkSupportFlag(storyScene?.scene_id, label);
+          const isCorrect = isCorrectAnswer(evaluationScene, label);
+          if (!options.hidden) {
+            await saveAssessment(storyScene?.scene_id, label, dimension, supportFlag);
+            awardCoins(manifestScene, isCorrect);
+          } else {
+            appState.hiddenAssessmentBuffer[storyScene?.scene_id] = { label, dimension, supportFlag };
+          }
+          handleSimpleNext(c);
+        });
+      });
+    }
+
+    function renderEventEndChoice(manifestScene) {
+      createChoiceButton('完成本節', async () => {
+        completeCurrentEvent(manifestScene);
+        showRoom('report-room');
+        renderReportRoom();
+      }, 'primary');
+    }
+
+    function createChoiceButton(text, onClick, variant = 'secondary') {
+      const btn = document.createElement('button');
+      btn.className = `choice-item ${variant}`;
+      btn.textContent = text;
+      btn.addEventListener('click', async () => {
+        try { await onClick(); }
+        catch (error) { await logError(error, `choice:${text}`); }
+      });
+      dom.choiceList.appendChild(btn);
+    }
+
+    function handleSimpleNext(choice) {
+      if (choice?.next_scene) renderCurrentScene(choice.next_scene);
+    }
+
+    function checkSupportFlag(sceneId, label) {
+      const e = appState.evaluationIndex.get(sceneId);
+      return e?.support_option?.includes(label) || false;
+    }
+
+    function isCorrectAnswer(evaluationScene, label) {
+      if (!evaluationScene) return true;
+      return !(evaluationScene.support_option || []).includes(label);
+    }
+
+    function markVisitedSubScene(sceneId) {
+      const eventId = getEventIdFromStoryId(appState.currentStoryId);
+      appState.visitedSubScenes[eventId] = appState.visitedSubScenes[eventId] || {};
+      appState.visitedSubScenes[eventId][sceneId] = true;
+    }
+
+    function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
+      const eventId = getEventIdFromStoryId(appState.currentStoryId);
+      const visited = appState.visitedSubScenes[eventId] || {};
+      const required = Array.isArray(manifestScene?.required_sub_scenes)
+        ? manifestScene.required_sub_scenes
+        : (Array.isArray(storyScene?.choices)
+          ? storyScene.choices
+              .filter((c, i) => (c.label || String.fromCharCode(65 + i)) !== 'D')
+              .map(c => c.next_scene).filter(Boolean)
+          : []);
+      if (required.length === 0) return true;
+      return required.every(id => Boolean(visited[id]));
+    }
+
+    function completeCurrentEvent(manifestScene) {
+      const eventId = getEventIdFromStoryId(appState.currentStoryId);
+      appState.progressData = appState.progressData || {};
+      appState.progressData.completed_events = appState.progressData.completed_events || [];
+      if (!appState.progressData.completed_events.includes(eventId))
+        appState.progressData.completed_events.push(eventId);
+      saveProgress(appState.currentSceneId);
+      logDev(`[event] completed ${eventId}`);
+    }
+
+    /****************************************************************
+     * Map Room
+     ****************************************************************/
+    function renderMapRoom() {
+      const mapData = appState.mapDaliang;
+      if (!mapData) {
+        dom.mapCanvas.textContent = '地圖資料未載入';
+        return;
+      }
+
+      const progress = appState.progressData || {};
+      const completedEvents = progress.completed_events || [];
+      const unlockedGames = progress.unlocked_games || [];
+      const mapImage = mapData.map_image || 'M01_大事件一地圖.png';
+
+      dom.mapCanvas.innerHTML = '';
+
+      // ── 外層wrapper ──
+      const wrapper = document.createElement('div');
+      wrapper.className = 'map-wrapper';
+
+      // ── 層一：黑白底圖 ──
+      const bwImg = document.createElement('img');
+      bwImg.className = 'map-layer map-bw';
+      bwImg.src = `image/${mapImage}`;
+      bwImg.alt = '大梁城地圖';
+      wrapper.appendChild(bwImg);
+
+      // ── 層二：彩色底圖（只顯示已通關地點區域） ──
+      const colorImg = document.createElement('img');
+      colorImg.className = 'map-layer map-color';
+      colorImg.src = `image/${mapImage}`;
+      colorImg.alt = '';
+      // 預設完全隱藏，稍後根據已解鎖地點建立clip-path
+      colorImg.style.clipPath = 'inset(100%)';
+      wrapper.appendChild(colorImg);
+
+      // ── 層三：地點圖標層 ──
+      const locationsLayer = document.createElement('div');
+      locationsLayer.className = 'map-locations';
+      locationsLayer.style.cssText = 'position:absolute;inset:0;';
+
+      const locationEmojis = { warehouse: '🏪', market: '🛒', bridge: '🌉', inn: '🏮', dock: '⚓' };
+
+      // 收集已解鎖地點的圓形區域，用於彩色層clip-path
+      const colorRegions = [];
+
+      for (const loc of (mapData.locations || [])) {
+        const appearsAfterKey = loc.appears_after_event
+          ? loc.appears_after_event.replace(/^story_/, '')
+          : null;
+        const eventAppeared = !appearsAfterKey || completedEvents.includes(appearsAfterKey);
+        const isUnlocked = unlockedGames.includes(loc.location_id);
+
+        const pin = document.createElement('div');
+        pin.className = 'map-location-pin';
+        pin.style.left = `${loc.map_x}%`;
+        pin.style.top = `${loc.map_y}%`;
+        pin.textContent = locationEmojis[loc.location_id] || '📍';
+
+        if (!eventAppeared) {
+          // 狀態一：未到達——迷霧
+          pin.classList.add('mist');
+          pin.title = '尚未到達';
+        } else if (isUnlocked) {
+          // 狀態三：已解鎖——彩色，顯示重玩按鈕卡
+          pin.classList.add('unlocked');
+          pin.title = loc.display_name;
+          // 加入彩色顯示區域
+          colorRegions.push(`circle(8% at ${loc.map_x}% ${loc.map_y}%)`);
+          // 操作卡
+          const card = document.createElement('div');
+          card.className = 'map-action-card';
+          card.style.left = `${loc.map_x}%`;
+          card.style.top = `${Math.min(loc.map_y + 10, 88)}%`;
+          card.innerHTML = `<span>${loc.display_name}</span>`;
+          const replayBtn = document.createElement('button');
+          replayBtn.className = 'secondary';
+          replayBtn.textContent = '重玩';
+          replayBtn.addEventListener('click', () => logDev(`[map] 重玩 ${loc.display_name}`));
+          card.appendChild(replayBtn);
+          locationsLayer.appendChild(card);
+        } else {
+          // 狀態二：已到達未解鎖——黑白，顯示解鎖按鈕卡
+          pin.title = loc.display_name;
+          const coins = appState.progressData?.coins || 0;
+          const canAfford = coins >= (loc.unlock_cost || 0);
+          // 操作卡
+          const card = document.createElement('div');
+          card.className = 'map-action-card';
+          card.style.left = `${loc.map_x}%`;
+          card.style.top = `${Math.min(loc.map_y + 10, 88)}%`;
+          card.innerHTML = `<span>${loc.display_name}</span><span>🪙 ${loc.unlock_cost} 銅錢</span>`;
+          const unlockBtn = document.createElement('button');
+          unlockBtn.className = canAfford ? 'primary' : 'secondary';
+          unlockBtn.textContent = canAfford ? '解鎖小遊戲' : '銅錢不足';
+          unlockBtn.disabled = !canAfford;
+          unlockBtn.addEventListener('click', () => {
+            if (canAfford) logDev(`[map] 解鎖 ${loc.display_name}`);
+          });
+          card.appendChild(unlockBtn);
+          locationsLayer.appendChild(card);
+        }
+
+        locationsLayer.appendChild(pin);
+      }
+
+      // 更新彩色層clip-path——顯示所有已解鎖地點的圓形區域
+      if (colorRegions.length > 0) {
+        // 多個圓形無法直接用CSS clip-path合併，用漸進方式：先顯示最大覆蓋範圍
+        // V5.2升級時可改用SVG mask取得精確多區域效果
+        colorImg.style.clipPath = colorRegions[0];
+      }
+
+      wrapper.appendChild(locationsLayer);
+
+      // ── 層四：阿水層 ──
+      const asuiLayer = document.createElement('div');
+      asuiLayer.className = 'map-asui';
+      asuiLayer.style.cssText = 'position:absolute;inset:0;pointer-events:none;';
+
+      const asui = document.createElement('div');
+      asui.className = 'map-asui-character';
+      asui.style.left = `${mapData.asui_position?.x || 18}%`;
+      asui.style.top = `${mapData.asui_position?.y || 72}%`;
+      asui.textContent = '🧒';
+      asui.title = '阿水';
+      asui.style.pointerEvents = 'auto';
+      asuiLayer.appendChild(asui);
+      wrapper.appendChild(asuiLayer);
+
+      // ── UI層：銅錢badge + 繼續冒險按鈕 ──
+      const uiLayer = document.createElement('div');
+      uiLayer.className = 'map-ui';
+      uiLayer.style.cssText = 'position:absolute;inset:0;pointer-events:none;';
+
+      // 銅錢badge
+      const coinBadge = document.createElement('div');
+      coinBadge.className = 'map-coin-badge';
+      coinBadge.textContent = `🪙 ${progress.coins || 0} 銅錢`;
+      uiLayer.appendChild(coinBadge);
+
+      // 繼續冒險按鈕——指向下一個未完成主線事件的地點
+      const nextLocation = findNextStoryLocation(mapData, completedEvents);
+      if (nextLocation) {
+        const continueBtn = document.createElement('button');
+        continueBtn.className = 'map-continue-btn';
+        continueBtn.textContent = mapData.main_story_label || '繼續冒險';
+        continueBtn.style.left = `${nextLocation.map_x}%`;
+        continueBtn.style.top = `${Math.max(nextLocation.map_y - 10, 5)}%`;
+        continueBtn.style.pointerEvents = 'auto';
+        continueBtn.addEventListener('click', async () => {
+          await ensureBaseJsonLoaded();
+          showRoom('story-room');
+          renderCurrentScene(getStartSceneId());
+        });
+        uiLayer.appendChild(continueBtn);
+      }
+      wrapper.appendChild(uiLayer);
+
+      dom.mapCanvas.appendChild(wrapper);
+      logDev(`[map] rendered ${(mapData.locations || []).length} locations`);
+    }
+
+    function findNextStoryLocation(mapData, completedEvents) {
+      for (const loc of (mapData.locations || [])) {
+        // 同renderMapRoom：appears_after_event是"story_1_1"，completed_events存"1_1"
+        const appearsAfterKey = loc.appears_after_event
+          ? loc.appears_after_event.replace(/^story_/, '')
+          : null;
+        // 沒有前置事件要求、或前置事件尚未完成，這個地點就是下一個目標
+        if (!appearsAfterKey || !completedEvents.includes(appearsAfterKey)) return loc;
+      }
+      return null;
+    }
+
+    /****************************************************************
+     * Report Room
+     ****************************************************************/
+    function renderReportRoom() {
+      const storyId = appState.currentStoryId || 'unknown_story';
+      dom.reportPlaceholder.textContent = `報告房間：${storyId} 完成，待補Gemini報告邏輯`;
+      logDev(`[report] ${storyId}`);
+    }
+
+    /****************************************************************
+     * TTS
+     ****************************************************************/
+    async function playTTS({ text = '', mp3Url = '' } = {}) {
+      if (appState.isMuted) return;
+      stopTTS();
+      if (mp3Url) {
+        try {
+          const audio = new Audio(mp3Url);
+          appState.ttsAudio = audio;
+          audio.addEventListener('error', () => speakWithWebSpeech(text), { once: true });
+          await audio.play();
+          return;
+        } catch { /* fallback */ }
+      }
+      speakWithWebSpeech(text);
+    }
+
+    function speakWithWebSpeech(text) {
+      if (!('speechSynthesis' in window)) return;
+      const u = new SpeechSynthesisUtterance(text || '小學徒大世界');
+      const voices = window.speechSynthesis.getVoices();
+      const cantoneseVoice = voices.find(v => /yue|hk|cantonese|zh-HK/i.test(`${v.lang} ${v.name}`));
+      if (cantoneseVoice) u.voice = cantoneseVoice;
+      u.lang = cantoneseVoice?.lang || 'zh-HK';
+      u.rate = 0.95;
+      appState.webSpeechUtterance = u;
+      window.speechSynthesis.speak(u);
+    }
+
+    function stopTTS() {
+      if (appState.ttsAudio) { appState.ttsAudio.pause(); appState.ttsAudio = null; }
+      if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+      appState.webSpeechUtterance = null;
+    }
+
+    /****************************************************************
+     * Developer Panel
+     ****************************************************************/
+    let muteHoldTimer = null;
+
+    function setupDeveloperPanelTrigger() {
+      const startHold = () => {
+        clearTimeout(muteHoldTimer);
+        muteHoldTimer = window.setTimeout(() => {
+          dom.devPanel.classList.toggle('is-visible');
+          logDev('[dev] panel toggled');
+        }, 3000);
+      };
+      const cancelHold = () => clearTimeout(muteHoldTimer);
+      dom.muteBtn.addEventListener('pointerdown', startHold);
+      dom.muteBtn.addEventListener('pointerup', cancelHold);
+      dom.muteBtn.addEventListener('pointerleave', cancelHold);
+      dom.muteBtn.addEventListener('pointercancel', cancelHold);
+    }
+
+    /****************************************************************
+     * Room Routing
+     ****************************************************************/
+    function showRoom(roomId) {
+      document.querySelectorAll('.room').forEach(r => r.classList.toggle('is-active', r.id === roomId));
+      appState.currentRoom = roomId;
+      dom.roomStatus.textContent = roomId;
+      if (roomId === 'map-room') renderMapRoom();
+      if (roomId === 'report-room') renderReportRoom();
+      logDev(`[room] → ${roomId}`);
+    }
+
+    /****************************************************************
+     * Utilities
+     ****************************************************************/
+    function logDev(message) {
+      const ts = new Date().toLocaleTimeString('en-AU', { hour12: false });
+      dom.devLog.textContent += `\n[${ts}] ${message}`;
+      console.log(message);
+    }
+
+    function escapeHtml(text) {
+      return text.replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;')
+                 .replaceAll('"','&quot;').replaceAll("'","&#039;");
+    }
+
+    /****************************************************************
+     * Event Binding
+     ****************************************************************/
+    function bindEvents() {
+      dom.loginBtn.addEventListener('click', signInWithGoogle);
+      dom.logoutBtn.addEventListener('click', signOutUser);
+
+      dom.startAppBtn.addEventListener('click', async () => {
+        await ensureBaseJsonLoaded();
+        showRoom('story-room');
+        renderCurrentScene(getStartSceneId());
+      });
+
+      dom.goMapBtn.addEventListener('click', async () => {
+        resetProgressState();
+        await ensureBaseJsonLoaded();
+        showRoom('story-room');
+        renderCurrentScene(getStartSceneId());
+      });
+
+      dom.goReportBtn.addEventListener('click', async () => {
+        await ensureBaseJsonLoaded();
+        showRoom('report-room');
+      });
+
+      dom.roomOpeningBtn.addEventListener('click', () => showRoom('opening-room'));
+      dom.roomStoryBtn.addEventListener('click', () => showRoom('story-room'));
+      dom.roomMapBtn.addEventListener('click', () => showRoom('map-room'));
+      dom.roomReportBtn.addEventListener('click', () => showRoom('report-room'));
+
+      dom.ttsBtn.addEventListener('click', () => {
+        const text = [dom.sceneTitle.textContent, dom.sceneLines.textContent].filter(Boolean).join('。');
+        playTTS({ text });
+      });
+
+      dom.muteBtn.addEventListener('click', () => {
+        appState.isMuted = !appState.isMuted;
+        dom.muteBtn.textContent = appState.isMuted ? '取消靜音' : '靜音';
+        if (appState.isMuted) stopTTS();
+      });
+    }
+
+    /****************************************************************
+     * Bootstrap
+     ****************************************************************/
+    async function bootstrap() {
+      logDev('[app] bootstrap start');
+      bindEvents();
+      setupDeveloperPanelTrigger();
+      playOpeningSequence();
+      await initFirebase();
+      logDev('[app] bootstrap done');
+    }
+
+    bootstrap();
+  </script>
+</body>
+</html>
