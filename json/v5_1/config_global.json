@@ -1,0 +1,26 @@
+{
+  "config_id": "global",
+  "scoring_rules": {
+    "primary_weight": 1,
+    "secondary_weight": 0.5,
+    "star_thresholds": {
+      "5_stars": 0.75,
+      "4_stars": 0.50,
+      "3_stars": 0.25,
+      "2_stars": 0
+    },
+    "level_thresholds": {
+      "level_4": 0.75,
+      "level_3": 0.50,
+      "level_2": 0.25,
+      "level_1": 0
+    }
+  },
+  "dimensions": [
+    "vocabulary",
+    "context_understanding",
+    "social_understanding",
+    "information_integration",
+    "value_judgment"
+  ]
+}
