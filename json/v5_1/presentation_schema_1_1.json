@@ -1,0 +1,164 @@
+{
+  "presentation_id": "story_1_1",
+  "default_bgm": "bgm_01",
+  "default_advance_label": "繼續",
+  "default_voice_mode": "narration",
+  "default_highlight": "line",
+  "notebook_overlay": {
+    "mode": "dynamic_accumulation",
+    "trigger": "mid_or_end_of_event"
+  },
+  "scenes": [
+    {
+      "scene_id": "1_1_1",
+      "image": "S01",
+      "bgm": "bgm_01"
+    },
+    {
+      "scene_id": "1_1_2",
+      "image": "C01"
+    },
+    {
+      "scene_id": "1_1_3",
+      "image": "S02"
+    },
+    {
+      "scene_id": "1_1_3_A",
+      "image": "O01"
+    },
+    {
+      "scene_id": "1_1_3_B",
+      "image": "S02"
+    },
+    {
+      "scene_id": "1_1_3_C",
+      "image": "S02"
+    },
+    {
+      "scene_id": "1_1_5",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_5_A",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_5_B",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_5_C",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_7",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_7_A",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_7_B",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_7_C",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_8",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_8_A",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_8_B",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_8_C",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_9",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_10",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_10_A",
+      "image": "O05",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_1_10_B",
+      "image": "O06",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_1_10_C",
+      "image": "O07",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_1_11",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_11_A",
+      "image": "C03"
+    },
+    {
+      "scene_id": "1_1_11_B",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_11_C",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_1_12",
+      "image": "S03",
+      "display_images": [
+        "O05",
+        "O08",
+        "O09"
+      ]
+    },
+    {
+      "scene_id": "1_1_12_A",
+      "image": "O05"
+    },
+    {
+      "scene_id": "1_1_12_B",
+      "image": "O08",
+      "advance_label": "再找一次"
+    },
+    {
+      "scene_id": "1_1_12_C",
+      "image": "O09",
+      "advance_label": "再找一次"
+    },
+    {
+      "scene_id": "1_1_13",
+      "image": "S03"
+    },
+    {
+      "scene_id": "1_1_13_A",
+      "image": "O05"
+    },
+    {
+      "scene_id": "1_1_13_B",
+      "image": "O05"
+    },
+    {
+      "scene_id": "1_1_14",
+      "image": "S02"
+    }
+  ]
+}

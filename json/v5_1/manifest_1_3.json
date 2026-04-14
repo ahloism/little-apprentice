@@ -1,0 +1,96 @@
+{
+  "manifest_id": "story_1_3",
+  "story_id": "story_1_3",
+  "start_scene": "1_3_1",
+  "location": "bridge",
+  "game_ref": "game_bridge",
+  "scenes": [
+    {
+      "scene_id": "1_3_1",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_3_2",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_3_3",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_3_4",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_3_5",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_3_6",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_3_7",
+      "type": "free_explore",
+      "exp_tag": "exp_world",
+      "unlock_condition": "min_explored",
+      "unlock_threshold": 1,
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_3_8",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_3_9",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_3_10",
+      "type": "explore",
+      "exp_tag": "exp_info",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_3_11",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_3_12",
+      "type": "event_end",
+      "reward": {
+        "base": 3
+      },
+      "next_story": "story_1_4"
+    }
+  ]
+}

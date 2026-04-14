@@ -1,0 +1,144 @@
+{
+  "presentation_id": "story_1_2",
+  "default_bgm": "bgm_01",
+  "default_advance_label": "繼續",
+  "default_voice_mode": "narration",
+  "default_highlight": "line",
+  "notebook_overlay": {
+    "mode": "dynamic_accumulation",
+    "trigger": "mid_or_end_of_event"
+  },
+  "scenes": [
+    {
+      "scene_id": "1_2_1",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_2",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_3",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_3_A",
+      "image": "O10"
+    },
+    {
+      "scene_id": "1_2_3_B",
+      "image": "O11"
+    },
+    {
+      "scene_id": "1_2_3_C",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_4",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_4_A",
+      "image": "O12",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_2_4_B",
+      "image": "O13",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_2_4_C",
+      "image": "S04",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_2_5",
+      "image": "S05"
+    },
+    {
+      "scene_id": "1_2_6",
+      "image": "A01"
+    },
+    {
+      "scene_id": "1_2_6_A",
+      "image": "S05"
+    },
+    {
+      "scene_id": "1_2_6_B",
+      "image": "S05"
+    },
+    {
+      "scene_id": "1_2_6_C",
+      "image": "S05"
+    },
+    {
+      "scene_id": "1_2_7",
+      "image": "S04"
+    },
+    {
+      "scene_id": "1_2_8",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_9",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_9_A",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_9_B",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_9_C",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_10",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_11",
+      "image": "A01"
+    },
+    {
+      "scene_id": "1_2_11_A",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_11_B",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_11_C",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_12",
+      "image": "C04"
+    },
+    {
+      "scene_id": "1_2_13",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_2_13_A",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_2_13_B",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_2_13_C",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_2_14",
+      "image": "S07"
+    }
+  ]
+}

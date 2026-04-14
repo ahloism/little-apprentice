@@ -1,0 +1,161 @@
+{
+  "presentation_id": "story_1_3",
+  "default_bgm": "bgm_01",
+  "default_advance_label": "繼續",
+  "default_voice_mode": "narration",
+  "default_highlight": "line",
+  "notebook_overlay": {
+    "mode": "dynamic_accumulation",
+    "trigger": "mid_or_end_of_event"
+  },
+  "scenes": [
+    {
+      "scene_id": "1_3_1",
+      "image": "S07",
+      "bgm": "bgm_01"
+    },
+    {
+      "scene_id": "1_3_2",
+      "image": "S07"
+    },
+    {
+      "scene_id": "1_3_2_A",
+      "image": "S08"
+    },
+    {
+      "scene_id": "1_3_2_B",
+      "image": "S09"
+    },
+    {
+      "scene_id": "1_3_2_C",
+      "image": "S07"
+    },
+    {
+      "scene_id": "1_3_3",
+      "image": "C02"
+    },
+    {
+      "scene_id": "1_3_4",
+      "image": "S10"
+    },
+    {
+      "scene_id": "1_3_5",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_5_A",
+      "image": "O14"
+    },
+    {
+      "scene_id": "1_3_5_B",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_5_C",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_6",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_6_A",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_6_B",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_6_C",
+      "image": "C05"
+    },
+    {
+      "scene_id": "1_3_7",
+      "image": "S10"
+    },
+    {
+      "scene_id": "1_3_7_A",
+      "image": "O05",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_3_7_B",
+      "image": "O15",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_3_7_C",
+      "image": "O16",
+      "advance_label": "返回"
+    },
+    {
+      "scene_id": "1_3_8",
+      "image": "C06"
+    },
+    {
+      "scene_id": "1_3_8_A",
+      "image": "C06"
+    },
+    {
+      "scene_id": "1_3_8_B",
+      "image": "O17"
+    },
+    {
+      "scene_id": "1_3_8_C",
+      "image": "C06"
+    },
+    {
+      "scene_id": "1_3_9",
+      "image": "C06"
+    },
+    {
+      "scene_id": "1_3_9_A",
+      "image": "O18"
+    },
+    {
+      "scene_id": "1_3_9_B",
+      "image": "O18"
+    },
+    {
+      "scene_id": "1_3_9_C",
+      "image": "O18"
+    },
+    {
+      "scene_id": "1_3_10",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_10_A",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_10_B",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_10_C",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_11",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_11_A",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_11_B",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_11_C",
+      "image": "C07"
+    },
+    {
+      "scene_id": "1_3_12",
+      "image": "C02"
+    }
+  ]
+}

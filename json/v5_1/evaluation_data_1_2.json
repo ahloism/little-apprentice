@@ -1,0 +1,66 @@
+{
+  "evaluation_id": "story_1_2",
+  "notebook_right": {
+    "learned_points": [
+      {
+        "type": "vocabulary",
+        "content": "臘腸——豬肉灌進腸衣曬乾，油光發亮"
+      },
+      {
+        "type": "vocabulary",
+        "content": "涼茶——草藥熬的，紅色是洛神花，綠色是薄荷"
+      },
+      {
+        "type": "concept",
+        "content": "責任——做錯了事，要面對，不能逃避"
+      }
+    ],
+    "anchor_image": "O12"
+  },
+  "scenes": [
+    {
+      "scene_id": "1_2_3",
+      "collect_type": "exploration"
+    },
+    {
+      "scene_id": "1_2_4",
+      "collect_type": "exploration"
+    },
+    {
+      "scene_id": "1_2_6",
+      "collect_type": "assessment",
+      "dimension": [
+        "value_judgment"
+      ],
+      "support_option": [
+        "B",
+        "C"
+      ]
+    },
+    {
+      "scene_id": "1_2_9",
+      "collect_type": "assessment",
+      "dimension": [
+        "social_understanding"
+      ],
+      "support_option": [
+        "C"
+      ]
+    },
+    {
+      "scene_id": "1_2_11",
+      "collect_type": "assessment",
+      "dimension": [
+        "value_judgment"
+      ],
+      "support_option": [
+        "A",
+        "C"
+      ]
+    },
+    {
+      "scene_id": "1_2_13",
+      "collect_type": "exploration"
+    }
+  ]
+}

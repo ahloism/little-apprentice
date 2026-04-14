@@ -1,0 +1,69 @@
+{
+  "manifest_id": "story_1_6",
+  "story_id": "story_1_6",
+  "start_scene": "1_6_1",
+  "location": "dock",
+  "game_ref": "game_dock",
+  "scenes": [
+    {
+      "scene_id": "1_6_1",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_6_2",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_6_3",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_6_4",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_6_5",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_6_6",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_6_7",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_6_9",
+      "type": "hidden_assessment"
+    },
+    {
+      "scene_id": "1_6_10",
+      "type": "hidden_assessment"
+    },
+    {
+      "scene_id": "1_6_11",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_6_12",
+      "type": "event_end",
+      "reward": {
+        "base": 3
+      },
+      "next_story": "story_1_7"
+    }
+  ]
+}

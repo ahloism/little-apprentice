@@ -1,0 +1,87 @@
+{
+  "manifest_id": "story_1_4",
+  "story_id": "story_1_4",
+  "start_scene": "1_4_1",
+  "location": "bridge",
+  "game_ref": "game_bridge",
+  "scenes": [
+    {
+      "scene_id": "1_4_1",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_2",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    { "scene_id": "1_4_3", "type": "hidden_assessment" },
+    { "scene_id": "1_4_4", "type": "hidden_assessment" },
+    { "scene_id": "1_4_5", "type": "hidden_assessment" },
+    { "scene_id": "1_4_6", "type": "hidden_assessment" },
+    { "scene_id": "1_4_7", "type": "hidden_assessment" },
+    { "scene_id": "1_4_8", "type": "hidden_assessment" },
+    {
+      "scene_id": "1_4_9",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_4_10",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_11",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_12",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_13",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_14",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_4_15",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_4_16",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_4_17",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_4_18",
+      "type": "event_end",
+      "reward": {
+        "base": 3
+      },
+      "next_story": "story_1_5"
+    }
+  ]
+}

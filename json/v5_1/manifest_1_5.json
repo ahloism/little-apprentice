@@ -1,0 +1,89 @@
+{
+  "manifest_id": "story_1_5",
+  "story_id": "story_1_5",
+  "start_scene": "1_5_1",
+  "location": "inn",
+  "game_ref": "game_inn",
+  "scenes": [
+    {
+      "scene_id": "1_5_1",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_5_2",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_5_3",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_5_4",
+      "type": "explore",
+      "exp_tag": "exp_world",
+      "reward": {
+        "base": 2
+      }
+    },
+    {
+      "scene_id": "1_5_5",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_5_6",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_5_7",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_5_8",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_5_9",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_5_10",
+      "type": "assessment",
+      "reward": {
+        "base": 2,
+        "bonus": 1
+      }
+    },
+    {
+      "scene_id": "1_5_11",
+      "type": "story"
+    },
+    {
+      "scene_id": "1_5_12",
+      "type": "event_end",
+      "reward": {
+        "base": 3
+      },
+      "next_story": "story_1_6"
+    }
+  ]
+}

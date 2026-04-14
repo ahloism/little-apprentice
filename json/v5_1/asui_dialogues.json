@@ -1,0 +1,92 @@
+{
+  "dialogues_id": "asui_dialogues",
+  "dialogues": [
+    {
+      "trigger": "first_map_entry",
+      "type": "fixed",
+      "text": "【待填——介紹大地圖機制：地點、銅錢、小遊戲、拼圖】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_1",
+      "type": "fixed",
+      "text": "【待填——完成1.1商行取貨後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_2",
+      "type": "fixed",
+      "text": "【待填——完成1.2市集小意外後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_3",
+      "type": "fixed",
+      "text": "【待填——完成1.3橋邊打聽後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_4",
+      "type": "fixed",
+      "text": "【待填——完成1.4橋邊推理後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_5",
+      "type": "fixed",
+      "text": "【待填——完成1.5客棧說書後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_6",
+      "type": "fixed",
+      "text": "【待填——完成1.6碼頭面對問題後的對白】"
+    },
+    {
+      "trigger": "after_event",
+      "event_id": "story_1_7",
+      "type": "fixed",
+      "text": "【待填——完成1.7帳房考問後的對白，大事件一完結】"
+    },
+    {
+      "trigger": "coins_insufficient",
+      "type": "fixed",
+      "text": "【待填——銅錢不夠解鎖小遊戲時的提示對白】"
+    },
+    {
+      "trigger": "puzzle_almost_complete",
+      "type": "fixed",
+      "condition": "puzzle_pieces >= 4",
+      "text": "【待填——快集齊拼圖時的對白】"
+    },
+    {
+      "trigger": "puzzle_complete",
+      "type": "fixed",
+      "text": "【待填——集齊五塊拼圖解鎖大事件二的對白】"
+    },
+    {
+      "trigger": "after_assessment",
+      "type": "personalized",
+      "event_id": "story_1_4",
+      "scene_id": "1_4_2",
+      "label": "A",
+      "text": "【待填——1.4選梅姐的個人化對白】"
+    },
+    {
+      "trigger": "after_assessment",
+      "type": "personalized",
+      "event_id": "story_1_4",
+      "scene_id": "1_4_2",
+      "label": "B",
+      "text": "【待填——1.4選阿乖的個人化對白】"
+    },
+    {
+      "trigger": "after_assessment",
+      "type": "personalized",
+      "event_id": "story_1_4",
+      "scene_id": "1_4_2",
+      "label": "C",
+      "text": "【待填——1.4選王三的個人化對白】"
+    }
+  ]
+}
