@@ -811,9 +811,10 @@
         const label = c.label || String.fromCharCode(65 + i);
         if (label === 'D' && !allVisited) return;
         createChoiceButton(`${label}. ${c.text || '未命名'}`, async () => {
-          if (label === 'D') awardCoins(manifestScene, true);
-          handleSimpleNext(c);
-        });
+              if (label === 'D') awardCoins(manifestScene, true);
+              if (label !== 'D') markVisitedSubScene(c.next_scene);
+              handleSimpleNext(c);
+             });
       });
       if (!allVisited) renderPlaceholderChoice('完成其餘探索後才會顯示 D 選項');
     }
