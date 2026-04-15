@@ -645,14 +645,21 @@
       dom.goReportBtn.style.display = 'none';
       document.getElementById('opening-buttons').style.opacity = '1';
       dom.startAppBtn.onclick = async () => {
-        await ensureBaseJsonLoaded();
+        const storyId = 'story_' + lastScene.split('_').slice(0,2).join('_');
+        await loadStoryBundle(storyId);
         const manifestScene = appState.manifestIndex?.get(lastScene);
         if (manifestScene?.type === 'event_end') {
           showRoom('map-room');
         } else {
-          showRoom('story-room');
           renderCurrentScene(lastScene);
+          showRoom('story-room');
         }
+      };
+      dom.goMapBtn.onclick = async () => {
+        resetProgressState();
+        await loadStoryBundle('story_1_1');
+        showRoom('story-room');
+        renderCurrentScene(getStartSceneId());
       };
       dom.goMapBtn.onclick = async () => {
         resetProgressState();
