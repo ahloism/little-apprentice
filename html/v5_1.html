@@ -736,7 +736,7 @@
       appState.currentSceneId = sceneId;
       const sceneType = manifestScene?.type || 'feedback';
       dom.sceneTypePill.textContent = `scene type: ${sceneType}`;
-      dom.sceneTitle.textContent = storyScene?.title || `Scene ${sceneId}`;
+      dom.sceneTitle.textContent = storyScene?.title || '';
       dom.sceneLines.innerHTML = buildSceneLinesMarkup(storyScene);
       dom.sceneImageFrame.textContent = presentationScene?.image
         ? `圖片：${presentationScene.image}` : '場景圖片顯示區';
