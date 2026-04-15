@@ -429,7 +429,8 @@
   <video id="opening-video" src="../video/video_01_封面.mp4" playsinline muted autoplay></video>
   <img id="opening-cover" src="../image/A02_封面.png" alt="小學徒大世界封面">
   <div id="opening-buttons">
-    <button class="opening-btn" id="start-btn">▶ 開始冒險</button>
+    <button class="opening-btn" id="opening-login-btn" onclick="signInWithGoogle()" style="display:none">🔑 Google登入</button>
+    <button class="opening-btn" id="start-btn" style="display:none">▶ 開始冒險</button>
     <button class="opening-btn secondary" id="resume-btn" style="display:none">繼續冒險</button>
     <button class="opening-btn secondary" id="restart-btn" style="display:none">重新開始</button>
   </div>
@@ -584,6 +585,7 @@
     startBtn: $('start-btn'),
     resumeBtn: $('resume-btn'),
     restartBtn: $('restart-btn'),
+    openingLoginBtn: $('opening-login-btn'),
     openingButtons: $('opening-buttons'),
     openingCover: $('opening-cover'),
     openingVideo: $('opening-video'),
@@ -800,12 +802,14 @@
   function determineStartUI() {
     // 未登入——只顯示登入提示，不顯示開始按鈕
     if (!currentUser) {
+      dom.openingLoginBtn.style.display = '';
       dom.startBtn.style.display = 'none';
       dom.resumeBtn.style.display = 'none';
       dom.restartBtn.style.display = 'none';
       dom.openingButtons.classList.add('show');
       return;
     }
+    dom.openingLoginBtn.style.display = 'none';
     const prog = S.progressData;
     if (!prog || !prog.current_scene) {
       // 新玩家
