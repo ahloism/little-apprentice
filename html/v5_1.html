@@ -771,8 +771,18 @@
 
     function buildSceneLinesMarkup(scene) {
       if (!scene) return '尚未找到 story data 對應內容。';
-      if (!Array.isArray(scene.lines) || scene.lines.length === 0) return '此場景目前沒有 lines。';
-      return scene.lines.map(line => `<p>${escapeHtml(String(line))}</p>`).join('');
+      let lines = scene.lines;
+      if (!Array.isArray(lines) || lines.length === 0) {
+        if (Array.isArray(scene.visit_count_responses)) {
+          const eventId = getEventIdFromStoryId(appState.currentStoryId);
+          const visitCount = appState.visitedSubScenes[eventId]?.[scene.scene_id] || 0;
+          const match = scene.visit_count_responses.find(r => r.visit === visitCount)
+            || scene.visit_count_responses[scene.visit_count_responses.length - 1];
+          lines = match?.lines || [];
+        }
+      }
+      if (!Array.isArray(lines) || lines.length === 0) return '此場景目前沒有 lines。';
+      return lines.map(line => `<p>${escapeHtml(String(line))}</p>`).join('');
     }
 
     function renderSceneChoices(sceneType, storyScene, manifestScene, evaluationScene) {
