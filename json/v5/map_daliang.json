@@ -1,19 +1,18 @@
 {
   "map_id": "daliang",
   "display_name": "大梁城",
-  "map_image": "M01_大事件一地圖.png",
+  "map_image": "M01_大事件一地圖",
   "main_story_label": "繼續冒險",
-  "asui_position": {
-    "x": 18,
-    "y": 72
-  },
+  "asui_position": { "x": 18, "y": 72 },
   "locations": [
     {
       "location_id": "warehouse",
       "display_name": "商行",
+      "map_segment": 1,
       "map_x": 13,
       "map_y": 18,
-      "map_segment": 1,
+      "icon": "🏪",
+      "story_id": "story_1_1",
       "appears_after_event": "story_1_1",
       "game_ref": "game_warehouse",
       "unlock_cost": 15
@@ -21,9 +20,11 @@
     {
       "location_id": "market",
       "display_name": "市集",
+      "map_segment": 2,
       "map_x": 42,
       "map_y": 15,
-      "map_segment": 2,
+      "icon": "🛒",
+      "story_id": "story_1_2",
       "appears_after_event": "story_1_2",
       "game_ref": "game_market",
       "unlock_cost": 20
@@ -31,9 +32,11 @@
     {
       "location_id": "bridge",
       "display_name": "橋邊",
+      "map_segment": 3,
       "map_x": 47,
       "map_y": 48,
-      "map_segment": 3,
+      "icon": "🌉",
+      "story_id": "story_1_3",
       "appears_after_event": "story_1_3",
       "game_ref": "game_bridge",
       "unlock_cost": 25
@@ -41,9 +44,11 @@
     {
       "location_id": "inn",
       "display_name": "客棧",
+      "map_segment": 4,
       "map_x": 73,
       "map_y": 25,
-      "map_segment": 4,
+      "icon": "🏨",
+      "story_id": "story_1_5",
       "appears_after_event": "story_1_5",
       "game_ref": "game_inn",
       "unlock_cost": 20
@@ -51,9 +56,11 @@
     {
       "location_id": "dock",
       "display_name": "碼頭",
+      "map_segment": 5,
       "map_x": 68,
       "map_y": 75,
-      "map_segment": 5,
+      "icon": "⚓",
+      "story_id": "story_1_6",
       "appears_after_event": "story_1_6",
       "game_ref": "game_dock",
       "unlock_cost": 25

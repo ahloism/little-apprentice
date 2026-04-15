@@ -63,6 +63,22 @@
     .opening-btn.secondary:active { background: rgba(255,255,255,0.1); }
 
     /* ════════════════════════════════
+       語速
+    ════════════════════════════════ */
+    #speed-bar {
+      width: 100%; max-width: 600px;
+      display: flex; align-items: center; justify-content: flex-end;
+      gap: 8px; padding: 8px 60px 0 20px; flex-shrink: 0;
+    }
+    .speed-label { font-size: 13px; color: #9a7850; }
+    .speed-btn {
+      background: #fff8ee; border: 1.5px solid #d4a855;
+      border-radius: 20px; padding: 4px 12px;
+      font-size: 13px; font-family: inherit; color: #7a5820; cursor: pointer;
+    }
+    .speed-btn.active { background: #d4870a; color: #fff8ee; border-color: #d4870a; }
+
+    /* ════════════════════════════════
        控制按鈕（右上角）
     ════════════════════════════════ */
     #controls {
@@ -87,6 +103,90 @@
       border-radius: 20px; padding: 6px 12px;
       font-size: 13px; color: #7a5820; font-weight: bold;
     }
+
+    /* ════════════════════════════════
+       並排圖像
+    ════════════════════════════════ */
+    #display-images {
+      display: none; width: 100%; max-width: 600px;
+      gap: 8px; padding: 0 20px; flex-shrink: 0;
+    }
+    #display-images.show { display: flex; }
+    #display-images img {
+      flex: 1; border-radius: 8px; object-fit: cover;
+      height: 120px; border: 2px solid transparent; cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    #display-images img.selected { border-color: #d4870a; }
+
+    /* ════════════════════════════════
+       文字高亮
+    ════════════════════════════════ */
+    .hl { display: inline; }
+    .hl.on { color: #d4870a; font-weight: bold; }
+    .opt-text .hl.on { color: #d4870a; font-weight: bold; }
+
+    /* ════════════════════════════════
+       學徒筆記
+    ════════════════════════════════ */
+    #notebook-overlay {
+      position: fixed; inset: 0;
+      background: rgba(60,35,10,0.7);
+      display: none; align-items: center; justify-content: center;
+      z-index: 200; padding: 16px;
+    }
+    #notebook-overlay.show { display: flex; }
+    #notebook {
+      width: 100%; max-width: 620px;
+      background: #fdf6e8; border-radius: 16px;
+      border: 2px solid #c8a060;
+      box-shadow: 0 8px 32px rgba(80,40,0,0.3);
+      overflow: hidden; display: flex; flex-direction: column;
+      max-height: 90vh;
+    }
+    #notebook-header {
+      background: #8b5e2a; color: #fff8ee;
+      text-align: center; padding: 14px 20px;
+      font-size: 20px; letter-spacing: 3px; flex-shrink: 0;
+    }
+    #notebook-pages { display: flex; flex: 1; overflow: hidden; }
+    #notebook-left {
+      flex: 1; padding: 20px;
+      border-right: 1px dashed #c8a060;
+      overflow-y: auto; background: #fffdf5;
+    }
+    #notebook-right { flex: 1; padding: 20px; overflow-y: auto; background: #fffdf5; }
+    .nb-section-title {
+      font-size: 15px; color: #8b5e2a; letter-spacing: 2px;
+      margin-bottom: 10px; padding-bottom: 6px;
+      border-bottom: 1px solid #e0c99a;
+    }
+    .nb-story-line { font-size: 17px; color: #3a2a10; line-height: 1.9; margin-bottom: 8px; }
+    .nb-meta { font-size: 14px; color: #9a7850; margin-top: 12px; line-height: 2; }
+    .nb-tag {
+      display: inline-block; background: #f0e0c0;
+      border-radius: 20px; padding: 2px 10px;
+      font-size: 13px; color: #7a5820; margin: 2px;
+    }
+    .nb-learn-item {
+      margin-bottom: 14px; padding: 10px 12px;
+      background: #fff8ee; border-radius: 10px;
+      border: 1px solid #e0c99a;
+    }
+    .nb-learn-type { font-size: 12px; color: #a07840; letter-spacing: 1px; margin-bottom: 4px; }
+    .nb-learn-content { font-size: 17px; color: #3a2a10; line-height: 1.7; }
+    .nb-anchor-img { width: 100%; border-radius: 10px; margin-top: 12px; object-fit: cover; max-height: 120px; }
+    #notebook-footer {
+      background: #f5ede0; padding: 14px 20px;
+      text-align: center; flex-shrink: 0;
+      border-top: 1px solid #e0c99a;
+    }
+    #notebook-continue-btn {
+      background: #d4870a; color: #fff8ee; border: none;
+      border-radius: 50px; padding: 14px 50px;
+      font-size: 20px; font-family: inherit; cursor: pointer; letter-spacing: 3px;
+    }
+    #notebook-continue-btn:active { background: #b87000; transform: scale(0.97); }
 
     /* ════════════════════════════════
        主內容（故事房間）
@@ -320,7 +420,8 @@
     <button onclick="signOutUser()" style="background:none;border:none;color:#7a5820;cursor:pointer;font-size:13px;padding:0;">登出</button>
   </div>
   <button class="ctrl-btn" id="login-btn" onclick="signInWithGoogle()" title="Google登入">👤</button>
-  <button class="ctrl-btn" id="mute-btn" title="靜音">🔊</button>
+  <button class="ctrl-btn" id="music-btn" title="音樂">🎵</button>
+  <button class="ctrl-btn" id="voice-btn" title="語音">🔊</button>
 </div>
 
 <!-- ════ 開場畫面 ════ -->
@@ -339,7 +440,14 @@
   <div id="image-area">
     <img id="scene-img" src="" alt="">
   </div>
+  <div id="display-images"></div>
   <div id="img-caption"></div>
+  <div id="speed-bar">
+    <span class="speed-label">語速</span>
+    <button class="speed-btn" data-rate="0.7">慢</button>
+    <button class="speed-btn active" data-rate="0.88">正常</button>
+    <button class="speed-btn" data-rate="1.1">快</button>
+  </div>
   <div id="progress-wrap">
     <div id="progress-bg"><div id="progress-fill"></div></div>
   </div>
@@ -349,6 +457,28 @@
     <div id="tap-hint">👆</div>
     <div id="options-area"></div>
     <button id="continue-btn">繼續</button>
+  </div>
+</div>
+
+<!-- ════ 學徒筆記 ════ -->
+<div id="notebook-overlay">
+  <div id="notebook">
+    <div id="notebook-header">學徒筆記</div>
+    <div id="notebook-pages">
+      <div id="notebook-left">
+        <div class="nb-section-title">今天發生了什麼</div>
+        <div id="nb-story-lines"></div>
+        <div id="nb-meta" class="nb-meta"></div>
+      </div>
+      <div id="notebook-right">
+        <div class="nb-section-title">學到了什麼</div>
+        <div id="nb-learn-items"></div>
+        <img id="nb-anchor-img" class="nb-anchor-img" style="display:none" alt="">
+      </div>
+    </div>
+    <div id="notebook-footer">
+      <button id="notebook-continue-btn">繼續</button>
+    </div>
   </div>
 </div>
 
@@ -408,6 +538,13 @@
   ════════════════════════════════ */
   let firebaseApp = null, auth = null, db = null, currentUser = null;
 
+  // 語速
+  let ttsRate = 0.88;
+  let ttsVoice = null;
+
+  // tap hint
+  let tapCb = null, tapTimer = null;
+
   const S = {
     currentScreen: 'opening',   // opening | story | map | report
     currentStoryId: 'story_1_1',
@@ -461,12 +598,18 @@
     mapWrapper: $('map-wrapper'),
     reportContent: $('report-content'),
     coinDisplay: $('coin-display'),
-    muteBtn: $('mute-btn'),
     loginBtn: $('login-btn'),
     userDisplay: $('user-display'),
     userName: $('user-name'),
     devPanel: $('dev-panel'),
     devLog: $('dev-log'),
+    displayImages: $('display-images'),
+    notebookOverlay: $('notebook-overlay'),
+    nbStoryLines: $('nb-story-lines'),
+    nbMeta: $('nb-meta'),
+    nbLearnItems: $('nb-learn-items'),
+    nbAnchorImg: $('nb-anchor-img'),
+    notebookContinueBtn: $('notebook-continue-btn'),
   };
 
   /* ════════════════════════════════
@@ -487,6 +630,7 @@
     dom.reportScreen.classList.toggle('hidden', name !== 'report');
     S.currentScreen = name;
     if (name === 'map') renderMap();
+    if (name === 'report') renderReport();
     log(`[screen] → ${name}`);
   };
 
@@ -718,11 +862,6 @@
     video.addEventListener('ended', showCover, { once: true });
     video.addEventListener('error', showCover, { once: true });
     video.play().catch(showCover);
-
-    // Firebase未設定時fallback
-    setTimeout(() => {
-      if (!cover.classList.contains('show')) showCover();
-    }, 500);
   }
 
   /* ════════════════════════════════
@@ -739,8 +878,17 @@
     S.currentSceneId = sceneId;
     log(`[scene] ${sceneId} as ${sceneType}`);
 
+    // BGM
+    playBgmForScene(sceneId, sceneType);
+
+    // 進度條
+    updateProgressBar();
+
     // 圖像
     renderImage(presScene);
+
+    // 並排圖像
+    renderDisplayImages(presScene);
 
     // 執行進場邏輯
     executeEntry(sceneType, sceneId, mScene);
@@ -761,6 +909,27 @@
     } else {
       dom.sceneImg.src = '';
       dom.imgCaption.textContent = '';
+    }
+  }
+
+  function renderDisplayImages(presScene) {
+    const imgs = presScene?.display_images;
+    if (imgs && Array.isArray(imgs) && imgs.length > 0) {
+      dom.displayImages.innerHTML = '';
+      imgs.forEach(code => {
+        const img = document.createElement('img');
+        img.src = IMG_BASE + code + '.png';
+        img.alt = code;
+        img.addEventListener('click', () => {
+          dom.displayImages.querySelectorAll('img').forEach(i => i.classList.remove('selected'));
+          img.classList.add('selected');
+        });
+        dom.displayImages.appendChild(img);
+      });
+      dom.displayImages.classList.add('show');
+    } else {
+      dom.displayImages.classList.remove('show');
+      dom.displayImages.innerHTML = '';
     }
   }
 
@@ -801,6 +970,7 @@
   /* ─── 內容渲染 ─── */
   function renderContent(sceneType, sceneId, storyScene, mScene, evalScene) {
     // 清空
+    clearTap();
     dom.nodeTitle.textContent = '';
     dom.textArea.innerHTML = '';
     dom.tapHint.style.display = 'none';
@@ -857,6 +1027,9 @@
       dom.textArea.appendChild(div);
       setTimeout(() => div.classList.add('show'), i * 120);
     });
+    // TTS朗讀全部行文字
+    const fullText = lines.join('。');
+    setTimeout(() => speakText(fullText), 100);
   }
 
   function renderStoryScene(sceneId, storyScene) {
@@ -865,6 +1038,7 @@
     const nextScene = storyScene?.next_scene;
     if (nextScene) {
       showContinueBtn(() => goScene(nextScene));
+      setTap(() => goScene(nextScene));
     } else if (Array.isArray(storyScene?.choices) && storyScene.choices.length > 0) {
       showChoices(storyScene.choices);
     } else {
@@ -919,7 +1093,9 @@
     renderLines(lines, storyScene?.title || '');
     if (storyScene?.question) addQuestionLine(storyScene.question);
     const choices = storyScene?.choices || [];
-    const supportOptions = evalScene?.support_options || [];
+    const supportOptions = evalScene?.support_option
+      ? (Array.isArray(evalScene.support_option) ? evalScene.support_option : [evalScene.support_option])
+      : [];
 
     choices.forEach((c, i) => {
       const label = c.label || String.fromCharCode(65 + i);
@@ -951,10 +1127,10 @@
     const lines = storyScene?.lines || [];
     renderLines(lines, storyScene?.title || '');
     showContinueBtn(() => {
-      showScreen('map');
+      showNotebook(() => {
+        showScreen('map');
+      });
     }, '完成本節');
-    // 之後加大地圖回調
-    setTimeout(() => {}, 600);
   }
 
   /* ─── 輔助 ─── */
@@ -1072,14 +1248,15 @@
   function renderMapLocation(wrapper, loc, completedEvents) {
     const appearsKey = loc.appears_after_event?.replace(/^story_/, '');
     const isVisible = !appearsKey || completedEvents.includes(appearsKey);
-    const isCompleted = completedEvents.includes(loc.story_id?.replace(/^story_/, ''));
+    const storyKey = loc.story_id?.replace(/^story_/, '');
+    const isCompleted = storyKey ? completedEvents.includes(storyKey) : false;
     const coins = getCoins();
     const canUnlock = coins >= (loc.unlock_cost || 0);
 
     const pin = document.createElement('div');
     pin.className = 'map-location-pin' + (isVisible ? ' unlocked' : ' mist');
-    pin.style.left = loc.map_x + '%';
-    pin.style.top = loc.map_y + '%';
+    pin.style.left = (loc.map_x || 50) + '%';
+    pin.style.top = (loc.map_y || 50) + '%';
     pin.textContent = loc.icon || '📍';
     wrapper.appendChild(pin);
 
@@ -1088,12 +1265,12 @@
     // 行動卡
     const card = document.createElement('div');
     card.className = 'map-action-card';
-    card.style.left = loc.map_x + '%';
-    card.style.top = (loc.map_y + 7) + '%';
+    card.style.left = (loc.map_x || 50) + '%';
+    card.style.top = ((loc.map_y || 50) + 7) + '%';
     card.style.display = 'none';
 
     const nameDiv = document.createElement('div');
-    nameDiv.textContent = loc.name || loc.location_id;
+    nameDiv.textContent = loc.display_name || loc.location_id;
     card.appendChild(nameDiv);
 
     if (isCompleted) {
@@ -1120,7 +1297,6 @@
     wrapper.appendChild(card);
 
     pin.onclick = () => {
-      // 收起其他卡
       wrapper.querySelectorAll('.map-action-card').forEach(c => c.style.display = 'none');
       card.style.display = card.style.display === 'none' ? 'flex' : 'none';
     };
@@ -1168,19 +1344,246 @@
   }
 
   /* ════════════════════════════════
+     SFX
+  ════════════════════════════════ */
+  function playSfx(key) {
+    if (musicMuted) return;
+    const sfx = new Audio(AUDIO_BASE + key + '.mp3');
+    sfx.volume = 0.7;
+    sfx.play().catch(() => {});
+  }
+
+  /* ════════════════════════════════
+     進度條
+  ════════════════════════════════ */
+  function updateProgressBar() {
+    const manifest = S.manifest;
+    if (!manifest?.scenes) return;
+    const scenes = manifest.scenes;
+    const idx = scenes.findIndex(s => s.scene_id === S.currentSceneId);
+    const pct = idx >= 0 ? Math.round((idx / scenes.length) * 100) : 0;
+    $('progress-fill').style.width = pct + '%';
+  }
+
+  /* ════════════════════════════════
+     Tap Hint
+  ════════════════════════════════ */
+  function setTap(fn) {
+    tapCb = fn;
+    clearTimeout(tapTimer);
+    dom.tapHint.style.display = 'none';
+    tapTimer = setTimeout(() => { dom.tapHint.style.display = 'block'; }, 2000);
+  }
+  function clearTap() {
+    tapCb = null;
+    clearTimeout(tapTimer);
+    dom.tapHint.style.display = 'none';
+  }
+  function fireTap() { if (tapCb) { const fn = tapCb; clearTap(); fn(); } }
+
+  dom.textArea.addEventListener('click', fireTap);
+  dom.tapHint.addEventListener('click', fireTap);
+
+  /* ════════════════════════════════
+     語速
+  ════════════════════════════════ */
+  document.querySelectorAll('.speed-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.speed-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      ttsRate = parseFloat(btn.dataset.rate);
+      window.speechSynthesis.cancel();
+    });
+  });
+
+  // 初始化TTS聲音
+  function initVoice() {
+    const vs = window.speechSynthesis.getVoices();
+    ttsVoice = vs.find(v => /yue|hk|cantonese|zh-HK/i.test(v.lang + ' ' + v.name))
+      || vs.find(v => v.lang.toLowerCase().startsWith('zh'))
+      || null;
+  }
+  window.speechSynthesis.onvoiceschanged = initVoice;
+  initVoice();
+
+  /* ════════════════════════════════
+     學徒筆記
+  ════════════════════════════════ */
+  function showNotebook(onContinue) {
+    const storyScene = S.storyData;
+    const evalData = S.evaluationData;
+    const presData = S.presentationData;
+
+    // 左頁——從story_data收集notebook_left
+    dom.nbStoryLines.innerHTML = '';
+    dom.nbMeta.innerHTML = '';
+
+    // 收集所有scene的notebook_left
+    const storyProgress = [];
+    const placesVisited = new Set();
+    const peopleMet = new Set();
+
+    for (const s of (S.storyData?.scenes || [])) {
+      if (s.notebook_left) {
+        (s.notebook_left.story_progress || []).forEach(l => storyProgress.push(l));
+        (s.notebook_left.places_visited || []).forEach(p => placesVisited.add(p));
+        (s.notebook_left.people_met || []).forEach(p => peopleMet.add(p));
+      }
+    }
+
+    storyProgress.forEach(line => {
+      const p = document.createElement('div');
+      p.className = 'nb-story-line';
+      p.textContent = line;
+      dom.nbStoryLines.appendChild(p);
+    });
+
+    if (placesVisited.size) {
+      const row = document.createElement('div');
+      row.innerHTML = '去了：' + [...placesVisited].map(p => `<span class="nb-tag">${p}</span>`).join('');
+      dom.nbMeta.appendChild(row);
+    }
+    if (peopleMet.size) {
+      const row = document.createElement('div');
+      row.innerHTML = '遇到：' + [...peopleMet].map(p => `<span class="nb-tag">${p}</span>`).join('');
+      dom.nbMeta.appendChild(row);
+    }
+
+    // 右頁——從evaluation_data收集notebook_right
+    dom.nbLearnItems.innerHTML = '';
+    dom.nbAnchorImg.style.display = 'none';
+
+    const TYPE_LABEL = {
+      vocabulary: '詞彙', context_understanding: '語境理解',
+      social_understanding: '社會理解', information_integration: '資訊整合',
+      value_judgment: '價值判斷'
+    };
+
+    let anchorImage = null;
+    for (const s of (S.evaluationData?.scenes || [])) {
+      if (s.notebook_right) {
+        (s.notebook_right.learned_points || []).forEach(item => {
+          const div = document.createElement('div');
+          div.className = 'nb-learn-item';
+          div.innerHTML = `<div class="nb-learn-type">${TYPE_LABEL[item.type] || item.type}</div>
+                           <div class="nb-learn-content">${escHtml(item.content || '')}</div>`;
+          dom.nbLearnItems.appendChild(div);
+        });
+        if (s.notebook_right.anchor_image) anchorImage = s.notebook_right.anchor_image;
+      }
+    }
+
+    if (anchorImage) {
+      dom.nbAnchorImg.src = IMG_BASE + anchorImage + '.png';
+      dom.nbAnchorImg.style.display = 'block';
+    }
+
+    dom.notebookOverlay.classList.add('show');
+    stopBgm();
+    playNotebookBgm();
+
+    dom.notebookContinueBtn.onclick = () => {
+      dom.notebookOverlay.classList.remove('show');
+      stopBgm();
+      onContinue && onContinue();
+    };
+  }
+
+  function playNotebookBgm() {
+    if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; }
+    currentBgm = 'BGM_04';
+    if (musicMuted) return;
+    bgmAudio = new Audio(AUDIO_BASE + 'BGM_04.mp3');
+    bgmAudio.volume = 0.6;
+    bgmAudio.play().catch(() => {});
+  }
+
+  /* ════════════════════════════════
+     BGM
+  ════════════════════════════════ */
+  const SCENE_BGM = {
+    '1_1': 'BGM_01', '1_2': 'BGM_01', '1_3': 'BGM_01',
+    '1_4': 'BGM_01', '1_5': 'BGM_01', '1_6': 'BGM_01', '1_7': 'BGM_03',
+  };
+  const BGM_VOLUME = { story: 0.5, explore: 0.5, free_explore: 0.5, assessment: 0.4, event_end: 0.3 };
+  const ASSESSMENT_SCENES = new Set(); // 可按需加入特定scene id用BGM_02
+
+  let bgmAudio = null;
+  let currentBgm = null;
+  let musicMuted = false;
+  let voiceMuted = false;
+
+  function playBgm(key, volume = 0.5) {
+    if (musicMuted) return;
+    if (currentBgm === key && bgmAudio && !bgmAudio.paused) { bgmAudio.volume = volume; return; }
+    if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; }
+    currentBgm = key;
+    bgmAudio = new Audio(AUDIO_BASE + key + '.mp3');
+    bgmAudio.loop = true;
+    bgmAudio.volume = volume;
+    bgmAudio.play().catch(() => {});
+  }
+
+  function stopBgm() {
+    if (bgmAudio) { bgmAudio.pause(); bgmAudio.src = ''; bgmAudio = null; }
+    currentBgm = null;
+  }
+
+  function playBgmForScene(sceneId, sceneType) {
+    if (musicMuted) return;
+    if (ASSESSMENT_SCENES.has(sceneId)) { playBgm('BGM_02', 0.4); return; }
+    const eventKey = S.currentStoryId.replace('story_', '');
+    const bgmKey = SCENE_BGM[eventKey] || 'BGM_01';
+    const vol = BGM_VOLUME[sceneType] || 0.5;
+    playBgm(bgmKey, vol);
+  }
+
+  /* ════════════════════════════════
      TTS
   ════════════════════════════════ */
-  function speakText(text) {
-    if (S.isMuted || !text) return;
+  function speakText(text, cb) {
+    if (voiceMuted || !text) { cb && setTimeout(cb, 0); return; }
     stopTTS();
-    if (!('speechSynthesis' in window)) return;
+    if (!('speechSynthesis' in window)) { cb && setTimeout(cb, 0); return; }
     const u = new SpeechSynthesisUtterance(text);
-    const voices = window.speechSynthesis.getVoices();
-    const v = voices.find(v => /yue|hk|cantonese|zh-HK/i.test(v.lang + ' ' + v.name));
-    if (v) u.voice = v;
-    u.lang = v?.lang || 'zh-HK';
-    u.rate = 0.95;
-    S.ttsAudio = u;
+    if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
+    u.rate = ttsRate;
+    let called = false;
+    const done = () => { if (!called) { called = true; cb && cb(); } };
+    u.onend = done; u.onerror = done;
+    window.speechSynthesis.speak(u);
+  }
+
+  // 高亮語音同步
+  let hlN = 0;
+  function speakHL(el, text, cb) {
+    if (voiceMuted) { cb && setTimeout(cb, 0); return; }
+    const key = 'h' + (hlN++);
+    const chars = [...text];
+    el.innerHTML = chars.map((c, i) => `<span class="hl" id="${key}_${i}">${c}</span>`).join('');
+    const u = new SpeechSynthesisUtterance(text);
+    if (ttsVoice) { u.voice = ttsVoice; u.lang = ttsVoice.lang; } else u.lang = 'zh-HK';
+    u.rate = ttsRate;
+    const totalMs = (text.length / ttsRate) * 220;
+    const perMs = totalMs / chars.length;
+    let i = 0, hlInterval = null;
+    function startHL() {
+      hlInterval = setInterval(() => {
+        if (i > 0) { const p = document.getElementById(`${key}_${i-1}`); if (p) p.classList.remove('on'); }
+        if (i >= chars.length) { clearInterval(hlInterval); return; }
+        const c = document.getElementById(`${key}_${i}`); if (c) c.classList.add('on');
+        i++;
+      }, perMs);
+    }
+    let called = false;
+    const done = () => {
+      if (!called) {
+        called = true; clearInterval(hlInterval);
+        chars.forEach((_, j) => { const e = document.getElementById(`${key}_${j}`); if (e) e.classList.remove('on'); });
+        cb && cb();
+      }
+    };
+    u.onstart = startHL; u.onend = done; u.onerror = done;
     window.speechSynthesis.speak(u);
   }
 
@@ -1190,19 +1593,36 @@
   }
 
   /* ════════════════════════════════
-     靜音 & 開發者面板
+     音樂 & 語音按鈕 & 開發者面板
   ════════════════════════════════ */
+  const musicBtn = document.getElementById('music-btn');
+  const voiceBtn = document.getElementById('voice-btn');
   let muteHoldTimer = null;
-  dom.muteBtn.addEventListener('click', () => {
-    S.isMuted = !S.isMuted;
-    dom.muteBtn.textContent = S.isMuted ? '🔇' : '🔊';
-    if (S.isMuted) stopTTS();
+
+  musicBtn.addEventListener('click', () => {
+    musicMuted = !musicMuted;
+    musicBtn.textContent = musicMuted ? '🔇' : '🎵';
+    musicBtn.classList.toggle('muted', musicMuted);
+    if (musicMuted) stopBgm();
+    else if (S.currentSceneId) {
+      const mScene = S.manifestIndex.get(S.currentSceneId);
+      playBgmForScene(S.currentSceneId, mScene?.type);
+    }
   });
-  dom.muteBtn.addEventListener('pointerdown', () => {
+
+  voiceBtn.addEventListener('click', () => {
+    voiceMuted = !voiceMuted;
+    voiceBtn.textContent = voiceMuted ? '🔕' : '🔊';
+    voiceBtn.classList.toggle('muted', voiceMuted);
+    if (voiceMuted) stopTTS();
+  });
+
+  // 長按音樂按鈕3秒開發者面板
+  musicBtn.addEventListener('pointerdown', () => {
     muteHoldTimer = setTimeout(() => dom.devPanel.classList.toggle('show'), 3000);
   });
-  dom.muteBtn.addEventListener('pointerup', () => clearTimeout(muteHoldTimer));
-  dom.muteBtn.addEventListener('pointerleave', () => clearTimeout(muteHoldTimer));
+  musicBtn.addEventListener('pointerup', () => clearTimeout(muteHoldTimer));
+  musicBtn.addEventListener('pointerleave', () => clearTimeout(muteHoldTimer));
 
   window.devClearProgress = async function() {
     if (!currentUser || !db) { resetProgress(); log('[dev] progress reset (local)'); return; }
@@ -1215,15 +1635,6 @@
       resetProgress();
       log('[dev] progress cleared');
     } catch (e) { log('[dev] clear error: ' + e.message); }
-  };
-
-  /* ════════════════════════════════
-     showScreen override（加report）
-  ════════════════════════════════ */
-  const _showScreen = window.showScreen;
-  window.showScreen = function(name) {
-    _showScreen(name);
-    if (name === 'report') renderReport();
   };
 
   /* ════════════════════════════════
