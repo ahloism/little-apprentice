@@ -1096,6 +1096,20 @@ function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
       const storyId = appState.currentStoryId || 'unknown_story';
       dom.reportPlaceholder.textContent = `報告房間：${storyId} 完成，待補Gemini報告邏輯`;
       logDev(`[report] ${storyId}`);
+      const nextStory = appState.nextStoryId;
+      const btn = document.createElement('button');
+      btn.textContent = nextStory ? '繼續冒險' : '返回大地圖';
+      btn.className = 'choice-btn primary';
+      btn.style.marginTop = '1rem';
+      btn.onclick = () => {
+        if (nextStory) {
+          appState.nextStoryId = null;
+          loadStoryBundle(nextStory).then(() => showRoom('story-room'));
+        } else {
+          showRoom('map-room');
+        }
+      };
+      dom.reportPlaceholder.appendChild(btn);
     }
 
     /****************************************************************
