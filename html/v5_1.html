@@ -646,8 +646,13 @@
       document.getElementById('opening-buttons').style.opacity = '1';
       dom.startAppBtn.onclick = async () => {
         await ensureBaseJsonLoaded();
-        showRoom('story-room');
-        renderCurrentScene(lastScene);
+        const manifestScene = appState.manifestIndex?.get(lastScene);
+        if (manifestScene?.type === 'event_end') {
+          showRoom('map-room');
+        } else {
+          showRoom('story-room');
+          renderCurrentScene(lastScene);
+        }
       };
       dom.goMapBtn.onclick = async () => {
         resetProgressState();
