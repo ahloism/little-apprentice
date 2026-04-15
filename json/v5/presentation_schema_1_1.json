@@ -11,154 +11,154 @@
   "scenes": [
     {
       "scene_id": "1_1_1",
-      "image": "S01",
+      "image": "S01_大梁城街道",
       "bgm": "bgm_01"
     },
     {
       "scene_id": "1_1_2",
-      "image": "C01"
+      "image": "C01_阿禾"
     },
     {
       "scene_id": "1_1_3",
-      "image": "S02"
+      "image": "S02_商行門口"
     },
     {
       "scene_id": "1_1_3_A",
-      "image": "O01"
+      "image": "O01_布包"
     },
     {
       "scene_id": "1_1_3_B",
-      "image": "S02"
+      "image": "S02_商行門口"
     },
     {
       "scene_id": "1_1_3_C",
-      "image": "S02"
+      "image": "S02_商行門口"
     },
     {
       "scene_id": "1_1_5",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_5_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_5_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_5_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_7",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_7_A",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_7_B",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_7_C",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_8",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_8_A",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_8_B",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_8_C",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_9",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_10",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_10_A",
-      "image": "O05",
+      "image": "O05_糖葫蘆",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_1_10_B",
-      "image": "O06",
+      "image": "O06_煎餅",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_1_10_C",
-      "image": "O07",
+      "image": "O07_花生袋",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_1_11",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_11_A",
-      "image": "C03"
+      "image": "C03_錢伯"
     },
     {
       "scene_id": "1_1_11_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_11_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_1_12",
-      "image": "S03",
+      "image": "S03_倉庫",
       "display_images": [
-        "O05",
-        "O08",
-        "O09"
+        "O05_糖葫蘆",
+        "O08_湯圓粉",
+        "O09_麥芽糖"
       ]
     },
     {
       "scene_id": "1_1_12_A",
-      "image": "O05"
+      "image": "O05_糖葫蘆"
     },
     {
       "scene_id": "1_1_12_B",
-      "image": "O08",
+      "image": "O08_湯圓粉",
       "advance_label": "再找一次"
     },
     {
       "scene_id": "1_1_12_C",
-      "image": "O09",
+      "image": "O09_麥芽糖",
       "advance_label": "再找一次"
     },
     {
       "scene_id": "1_1_13",
-      "image": "S03"
+      "image": "S03_倉庫"
     },
     {
       "scene_id": "1_1_13_A",
-      "image": "O05"
+      "image": "O05_糖葫蘆"
     },
     {
       "scene_id": "1_1_13_B",
-      "image": "O05"
+      "image": "O05_糖葫蘆"
     },
     {
       "scene_id": "1_1_14",
-      "image": "S02"
+      "image": "S02_商行門口"
     }
   ]
 }

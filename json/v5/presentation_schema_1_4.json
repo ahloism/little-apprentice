@@ -11,128 +11,128 @@
   "scenes": [
     {
       "scene_id": "1_4_1",
-      "image": "C02",
+      "image": "C02_阿水",
       "bgm": "bgm_01"
     },
     {
       "scene_id": "1_4_2",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_2_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_2_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_2_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_3",
-      "image": "C05"
+      "image": "C05_梅姐"
     },
     {
       "scene_id": "1_4_3_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_3_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_3_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_4",
-      "image": "O18"
+      "image": "O18_阿禾的紙"
     },
     {
       "scene_id": "1_4_4_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_4_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_4_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_5",
-      "image": "C07"
+      "image": "C07_王三"
     },
     {
       "scene_id": "1_4_5_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_5_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_5_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_6",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_6_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_6_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_6_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_7",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_7_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_7_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_7_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_8",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_8_A",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_8_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_8_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_9",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_10",
-      "image": "O18",
+      "image": "O18_阿禾的紙",
       "image_cues": [
         {
           "trigger_line_index": 9,
@@ -142,15 +142,15 @@
     },
     {
       "scene_id": "1_4_11",
-      "image": "S12"
+      "image": "S12_賭坊巷口"
     },
     {
       "scene_id": "1_4_12",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_13",
-      "image": "C05",
+      "image": "C05_梅姐",
       "image_cues": [
         {
           "trigger_line_index": 3,
@@ -160,59 +160,59 @@
     },
     {
       "scene_id": "1_4_14",
-      "image": "W02"
+      "image": "W02_信"
     },
     {
       "scene_id": "1_4_14_A",
-      "image": "W02"
+      "image": "W02_信"
     },
     {
       "scene_id": "1_4_14_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_14_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_15",
-      "image": "W03"
+      "image": "W03_家"
     },
     {
       "scene_id": "1_4_15_A",
-      "image": "W03"
+      "image": "W03_家"
     },
     {
       "scene_id": "1_4_15_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_15_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_16",
-      "image": "W04"
+      "image": "W04_急"
     },
     {
       "scene_id": "1_4_16_A",
-      "image": "W04"
+      "image": "W04_急"
     },
     {
       "scene_id": "1_4_16_B",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_16_C",
-      "image": "C02"
+      "image": "C02_阿水"
     },
     {
       "scene_id": "1_4_17",
-      "image": "C05"
+      "image": "C05_梅姐"
     },
     {
       "scene_id": "1_4_18",
-      "image": "C02"
+      "image": "C02_阿水"
     }
   ]
 }
