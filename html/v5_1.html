@@ -877,20 +877,21 @@
       appState.visitedSubScenes[eventId][sceneId] = true;
     }
 
-    function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
-      const eventId = getEventIdFromStoryId(appState.currentStoryId);
-      const visited = appState.visitedSubScenes[eventId] || {};
-      const required = Array.isArray(manifestScene?.required_sub_scenes)
-        ? manifestScene.required_sub_scenes
-        : (Array.isArray(storyScene?.choices)
-          ? storyScene.choices
-              .filter((c, i) => (c.label || String.fromCharCode(65 + i)) !== 'D')
-              .map(c => c.next_scene).filter(Boolean)
-          : []);
-      if (required.length === 0) return true;
-      return required.every(id => Boolean(visited[id]));
-    }
-
+function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
+  const eventId = getEventIdFromStoryId(appState.currentStoryId);
+  const visited = appState.visitedSubScenes[eventId] || {};
+  const required = Array.isArray(manifestScene?.required_sub_scenes)
+    ? manifestScene.required_sub_scenes
+    : (Array.isArray(storyScene?.choices)
+        ? storyScene.choices
+            .filter((c, i) => (c.label || String.fromCharCode(65 + i)) !== 'D')
+            .map(c => c.next_scene).filter(Boolean)
+        : []);
+  if (required.length === 0) return true;
+  const threshold = manifestScene?.unlock_threshold ?? required.length;
+  const visitedCount = required.filter(id => Boolean(visited[id])).length;
+  return visitedCount >= threshold;
+}
     function completeCurrentEvent(manifestScene) {
       const eventId = getEventIdFromStoryId(appState.currentStoryId);
       appState.progressData = appState.progressData || {};
