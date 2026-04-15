@@ -903,15 +903,16 @@ function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
   const visitedCount = required.filter(id => Boolean(visited[id])).length;
   return visitedCount >= threshold;
 }
-    function completeCurrentEvent(manifestScene) {
-      const eventId = getEventIdFromStoryId(appState.currentStoryId);
-      appState.progressData = appState.progressData || {};
-      appState.progressData.completed_events = appState.progressData.completed_events || [];
-      if (!appState.progressData.completed_events.includes(eventId))
-        appState.progressData.completed_events.push(eventId);
-      saveProgress(appState.currentSceneId);
-      logDev(`[event] completed ${eventId}`);
-    }
+  function completeCurrentEvent(manifestScene) {
+    const eventId = getEventIdFromStoryId(appState.currentStoryId);
+    appState.progressData = appState.progressData || {};
+    appState.progressData.completed_events = appState.progressData.completed_events || [];
+    if (!appState.progressData.completed_events.includes(eventId))
+      appState.progressData.completed_events.push(eventId);
+    if (manifestScene?.next_story) appState.nextStoryId = manifestScene.next_story;
+    saveProgress(appState.currentSceneId);
+    logDev(`[event] completed ${eventId}`);
+}
 
     /****************************************************************
      * Map Room
