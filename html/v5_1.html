@@ -577,13 +577,13 @@
       logDev(`[loader] loading ${storyId}`);
       const key = storyId.replace('story_', '');
       const paths = {
-        configGlobal: '../json/v5/5/config_global.json',
-        mapDaliang: '../json/v5/5/map_daliang.json',
-        asuiDialogues: '../json/v5/5/asui_dialogues.json',
-        storyData: `../json/v5/5/story_data_${key}.json`,
-        manifest: `../json/v5/5/manifest_${key}.json`,
-        evaluationData: `../json/v5/5/evaluation_data_${key}.json`,
-        presentationData: `../json/v5/5/presentation_schema_${key}.json`
+        configGlobal: '../json/v5/config_global.json',
+        mapDaliang: '../json/v5/map_daliang.json',
+        asuiDialogues: '../json/v5/asui_dialogues.json',
+        storyData: `../json/v5/story_data_${key}.json`,
+        manifest: `../json/v5/manifest_${key}.json`,
+        evaluationData: `../json/v5/evaluation_data_${key}.json`,
+        presentationData: `../json/v5/presentation_schema_${key}.json`
       };
       const results = await Promise.allSettled(Object.values(paths).map(loadJson));
       const keys = Object.keys(paths);
