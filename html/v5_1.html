@@ -798,7 +798,14 @@
      開場 UI
   ════════════════════════════════ */
   function determineStartUI() {
-    const prog = S.progressData;
+    // 未登入——只顯示登入提示，不顯示開始按鈕
+    if (!currentUser) {
+      dom.startBtn.style.display = 'none';
+      dom.resumeBtn.style.display = 'none';
+      dom.restartBtn.style.display = 'none';
+      dom.openingButtons.classList.add('show');
+      return;
+    }
     if (!prog || !prog.current_scene) {
       // 新玩家
       dom.startBtn.style.display = '';
