@@ -1095,6 +1095,7 @@ function hasVisitedAllRequiredChoices(storyScene, manifestScene) {
      ****************************************************************/
     function renderReportRoom() {
       const storyId = appState.currentStoryId || 'unknown_story';
+      dom.reportPlaceholder.innerHTML = '';
       dom.reportPlaceholder.textContent = `報告房間：${storyId} 完成，待補Gemini報告邏輯`;
       logDev(`[report] ${storyId}`);
       const nextStory = appState.nextStoryId;
