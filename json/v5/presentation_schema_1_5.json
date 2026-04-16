@@ -11,48 +11,48 @@
   "scenes": [
     {
       "scene_id": "1_5_1",
-      "image": "S13_客棧門口",
+      "image": "S13",
       "bgm": "bgm_01"
     },
     {
       "scene_id": "1_5_2",
-      "image": "S14_客棧內部"
+      "image": "S14"
     },
     {
       "scene_id": "1_5_2_A",
-      "image": "S15_說書台"
+      "image": "S15"
     },
     {
       "scene_id": "1_5_2_B",
-      "image": "O20_茶壺茶水台"
+      "image": "O20"
     },
     {
       "scene_id": "1_5_2_C",
-      "image": "S14_客棧內部"
+      "image": "S14"
     },
     {
       "scene_id": "1_5_3",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_4",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_4_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_4_B",
-      "image": "O21_紙扇"
+      "image": "O21"
     },
     {
       "scene_id": "1_5_4_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_5",
-      "image": "C08_杜先生",
+      "image": "C08",
       "image_cues": [
         {
           "trigger_line_index": 6,
@@ -62,23 +62,23 @@
     },
     {
       "scene_id": "1_5_6",
-      "image": "W05_病"
+      "image": "W05"
     },
     {
       "scene_id": "1_5_6_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_6_B",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_6_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_7",
-      "image": "C08_杜先生",
+      "image": "C08",
       "image_cues": [
         {
           "trigger_line_index": 1,
@@ -88,51 +88,51 @@
     },
     {
       "scene_id": "1_5_7_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_7_B",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_7_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_8",
-      "image": "A04_謎語二示意_馬"
+      "image": "A04"
     },
     {
       "scene_id": "1_5_8_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_8_B",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_8_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_9",
-      "image": "A01_阿禾思考中"
+      "image": "A01"
     },
     {
       "scene_id": "1_5_9_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_9_B",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_9_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_10",
-      "image": "O19_字帖",
+      "image": "O19",
       "image_cues": [
         {
           "trigger_line_index": 3,
@@ -142,23 +142,29 @@
     },
     {
       "scene_id": "1_5_10_A",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_10_B",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_10_C",
-      "image": "C08_杜先生"
+      "image": "C08"
     },
     {
       "scene_id": "1_5_11",
-      "image": "C08_杜先生"
+      "image": "C08",
+      "image_cues": [
+        {
+          "trigger_line_index": 4,
+          "image": "O19"
+        }
+      ]
     },
     {
       "scene_id": "1_5_12",
-      "image": "S13_客棧門口"
+      "image": "S13"
     }
   ]
 }

@@ -11,28 +11,28 @@
   "scenes": [
     {
       "scene_id": "1_6_1",
-      "image": "S16_碼頭",
+      "image": "S16",
       "bgm": "bgm_01"
     },
     {
       "scene_id": "1_6_2",
-      "image": "S16_碼頭"
+      "image": "S16"
     },
     {
       "scene_id": "1_6_2_A",
-      "image": "S16_碼頭"
+      "image": "S16"
     },
     {
       "scene_id": "1_6_2_B",
-      "image": "S16_碼頭"
+      "image": "S16"
     },
     {
       "scene_id": "1_6_2_C",
-      "image": "S16_碼頭"
+      "image": "S16"
     },
     {
       "scene_id": "1_6_3",
-      "image": "C04_石頭",
+      "image": "C04",
       "image_cues": [
         {
           "trigger_line_index": 2,
@@ -42,27 +42,27 @@
     },
     {
       "scene_id": "1_6_4",
-      "image": "C09_老梁"
+      "image": "C09"
     },
     {
       "scene_id": "1_6_4_A",
-      "image": "O23_草帽"
+      "image": "O23"
     },
     {
       "scene_id": "1_6_4_B",
-      "image": "C09_老梁"
+      "image": "C09"
     },
     {
       "scene_id": "1_6_4_C",
-      "image": "C09_老梁"
+      "image": "C09"
     },
     {
       "scene_id": "1_6_5",
-      "image": "C09_老梁"
+      "image": "C09"
     },
     {
       "scene_id": "1_6_6",
-      "image": "C09_老梁",
+      "image": "C09",
       "image_cues": [
         {
           "trigger_line_index": 2,
@@ -72,27 +72,33 @@
     },
     {
       "scene_id": "1_6_7",
-      "image": "C09_老梁"
+      "image": "C09"
     },
     {
       "scene_id": "1_6_8",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_6_9",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_6_10",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_6_11",
-      "image": "C09_老梁"
+      "image": "C09",
+      "image_cues": [
+        {
+          "trigger_line_index": 2,
+          "image": "O25"
+        }
+      ]
     },
     {
       "scene_id": "1_6_12",
-      "image": "S16_碼頭"
+      "image": "S16"
     }
   ]
 }

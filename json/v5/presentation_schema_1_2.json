@@ -11,134 +11,152 @@
   "scenes": [
     {
       "scene_id": "1_2_1",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_2",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_3",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_3_A",
-      "image": "O10_臘腸"
+      "image": "O10"
     },
     {
       "scene_id": "1_2_3_B",
-      "image": "O11_磨刀"
+      "image": "O11"
     },
     {
       "scene_id": "1_2_3_C",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_4",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_4_A",
-      "image": "O12_涼茶",
+      "image": "O12",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_2_4_B",
-      "image": "O13_繩子布料",
+      "image": "O13",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_2_4_C",
-      "image": "S04_市集街道",
+      "image": "S04",
       "advance_label": "返回"
     },
     {
       "scene_id": "1_2_5",
-      "image": "S05_雜耍空地"
+      "image": "S04",
+      "image_cues": [
+        {
+          "trigger_line_index": 3,
+          "image": "S05"
+        }
+      ]
     },
     {
       "scene_id": "1_2_6",
-      "image": "A01_阿禾思考中"
+      "image": "A01"
     },
     {
       "scene_id": "1_2_6_A",
-      "image": "S05_雜耍空地"
+      "image": "S05"
     },
     {
       "scene_id": "1_2_6_B",
-      "image": "S05_雜耍空地"
+      "image": "S05"
     },
     {
       "scene_id": "1_2_6_C",
-      "image": "S05_雜耍空地"
+      "image": "S05"
     },
     {
       "scene_id": "1_2_7",
-      "image": "S04_市集街道"
+      "image": "S04"
     },
     {
       "scene_id": "1_2_8",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_9",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_9_A",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_9_B",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_9_C",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_10",
-      "image": "C04_石頭"
+      "image": "C04",
+      "image_cues": [
+        {
+          "trigger_line_index": 4,
+          "image": "O07"
+        }
+      ]
     },
     {
       "scene_id": "1_2_11",
-      "image": "A01_阿禾思考中"
+      "image": "A01"
     },
     {
       "scene_id": "1_2_11_A",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_11_B",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_11_C",
-      "image": "C04_石頭"
+      "image": "C04"
     },
     {
       "scene_id": "1_2_12",
-      "image": "C04_石頭"
+      "image": "C04",
+      "image_cues": [
+        {
+          "trigger_line_index": 4,
+          "image": "S04"
+        }
+      ]
     },
     {
       "scene_id": "1_2_13",
-      "image": "C02_阿水"
+      "image": "C02"
     },
     {
       "scene_id": "1_2_13_A",
-      "image": "C02_阿水"
+      "image": "C02"
     },
     {
       "scene_id": "1_2_13_B",
-      "image": "C02_阿水"
+      "image": "C02"
     },
     {
       "scene_id": "1_2_13_C",
-      "image": "C02_阿水"
+      "image": "C02"
     },
     {
       "scene_id": "1_2_14",
-      "image": "S07_梁河橋邊"
+      "image": "S07"
     }
   ]
 }
