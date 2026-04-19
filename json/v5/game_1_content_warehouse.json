@@ -1,0 +1,394 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_warehouse",
+  "game_name": "商行收貨",
+  "location": "warehouse",
+  "character": "cin_baak",
+  "fixed_sentence": "阿禾聽完後，去拿起___。",
+  "feedback_templates": {
+    "correct": [
+      "不錯。",
+      "做得好。",
+      "嗯。"
+    ],
+    "wrong": [
+      "做事要小心。",
+      "不要馬虎。",
+      "仔細看清楚。"
+    ]
+  },
+  "vocabulary_bank": {
+    "white_rice": {
+      "word": "白米",
+      "description": "白色圓粒，煮飯用的主糧",
+      "features": {
+        "appearance": "白色圓粒",
+        "usage": "煮飯用的主糧",
+        "source": "稻穀脫殼而成"
+      }
+    },
+    "tea_leaves": {
+      "word": "茶葉",
+      "description": "乾乾薄片，泡熱水喝的葉子",
+      "features": {
+        "appearance": "乾乾薄片",
+        "usage": "泡熱水喝",
+        "source": "從茶樹摘下來曬乾"
+      }
+    },
+    "cotton_cloth": {
+      "word": "棉布",
+      "description": "軟軟一匹，用來做衣服的布",
+      "features": {
+        "appearance": "軟軟一匹布",
+        "usage": "用來做衣服",
+        "source": "棉花紡成線再織成布"
+      }
+    },
+    "pork": {
+      "word": "豬肉",
+      "description": "粉紅一塊，切開來煮菜的肉",
+      "features": {
+        "appearance": "粉紅一塊肉",
+        "usage": "切開來煮菜",
+        "source": "從豬身上切下來"
+      }
+    },
+    "duck_eggs": {
+      "word": "鴨蛋",
+      "description": "一顆一顆，有蛋殼包著的食物",
+      "features": {
+        "appearance": "一顆一顆有蛋殼",
+        "usage": "可以蒸蛋或煮熟吃",
+        "source": "鴨子生出來的蛋"
+      }
+    },
+    "tofu": {
+      "word": "豆腐",
+      "description": "白白方方，軟軟的豆做食物",
+      "features": {
+        "appearance": "白白方方、軟軟的",
+        "usage": "煮湯炒菜都能用",
+        "source": "黃豆磨漿再做成"
+      }
+    },
+    "rapeseed_oil": {
+      "word": "菜油",
+      "description": "黃亮亮一罐，煎炒時要用的油",
+      "features": {
+        "appearance": "黃亮亮一罐油",
+        "usage": "煎炒時要用",
+        "source": "菜籽榨出來的油"
+      }
+    },
+    "candles": {
+      "word": "蠟燭",
+      "description": "長長一枝，點火後會發亮",
+      "features": {
+        "appearance": "長長一枝",
+        "usage": "點火照亮",
+        "source": "蠟做成的"
+      }
+    },
+    "lap_cheong": {
+      "word": "臘腸",
+      "description": "長長一條，曬乾後帶鹹香的肉",
+      "features": {
+        "appearance": "長長一條，油亮發紅",
+        "usage": "切片蒸熟來吃",
+        "source": "豬肉灌進腸衣後曬乾"
+      }
+    },
+    "salt": {
+      "word": "食鹽",
+      "description": "白白細粒，煮菜時加味用",
+      "features": {
+        "appearance": "白白細粒",
+        "usage": "煮菜時加味",
+        "source": "曬海水或煮鹵水得來"
+      }
+    },
+    "hemp_rope": {
+      "word": "麻繩",
+      "description": "粗粗一捆，用來綁東西的繩子",
+      "features": {
+        "appearance": "粗粗一捆繩子",
+        "usage": "用來綁東西",
+        "source": "麻纖維搓成"
+      }
+    },
+    "copper_coins": {
+      "word": "銅錢",
+      "description": "圓圓扁扁，中間有孔的錢",
+      "features": {
+        "appearance": "圓圓扁扁，中間有孔",
+        "usage": "買東西付錢",
+        "source": "用銅鑄成"
+      }
+    },
+    "ginger": {
+      "word": "薑",
+      "description": "彎彎塊狀，切開有辣香味的根",
+      "features": {
+        "appearance": "彎彎塊狀",
+        "usage": "去腥提味",
+        "source": "長在土裡的根莖"
+      }
+    },
+    "sauce": {
+      "word": "醬",
+      "description": "濃濃一罐，用來拌味的調料",
+      "features": {
+        "appearance": "濃濃一罐",
+        "usage": "拌味下飯",
+        "source": "豆或穀物發酵做成"
+      }
+    },
+    "sugar": {
+      "word": "糖",
+      "description": "甜甜的細粒或小塊，能調出甜味",
+      "features": {
+        "appearance": "白色細粒或小塊",
+        "usage": "把東西調成甜味",
+        "source": "甘蔗熬煮後做成"
+      }
+    },
+    "silk": {
+      "word": "絲綢",
+      "description": "滑滑亮亮，能做上好衣裳的布",
+      "features": {
+        "appearance": "滑滑亮亮",
+        "usage": "做上好衣裳",
+        "source": "蠶吐絲織成"
+      }
+    },
+    "cotton": {
+      "word": "棉花",
+      "description": "白白蓬鬆，能塞枕頭和做衣服的料",
+      "features": {
+        "appearance": "白白蓬鬆",
+        "usage": "做衣服或塞枕頭",
+        "source": "棉桃裡開出來"
+      }
+    },
+    "pancake": {
+      "word": "煎餅",
+      "description": "薄薄一張，煎熟後能直接吃的餅",
+      "features": {
+        "appearance": "薄薄一張餅",
+        "usage": "煎熟後直接吃",
+        "source": "麵糊倒在鏊子上煎成"
+      }
+    },
+    "lotus_root": {
+      "word": "蓮藕",
+      "description": "長在水底泥裡，切開有一個個小孔的根",
+      "features": {
+        "appearance": "切開有一個個小孔",
+        "usage": "煮湯炒菜都能用",
+        "source": "長在池塘泥裡"
+      }
+    },
+    "winter_bamboo_shoots": {
+      "word": "冬筍",
+      "description": "尖尖一枝，從竹根旁長出來的嫩芽",
+      "features": {
+        "appearance": "尖尖一枝，外殼層層包著",
+        "usage": "切片煮菜很鮮",
+        "source": "竹根旁長出來的嫩芽"
+      }
+    },
+    "chestnuts": {
+      "word": "栗子",
+      "description": "外殼硬硬，裡面粉粉甜甜的果實",
+      "features": {
+        "appearance": "圓圓褐色、有硬殼",
+        "usage": "煮熟或炒熟來吃",
+        "source": "樹上長出來的果子"
+      }
+    },
+    "shrimp": {
+      "word": "蝦",
+      "description": "彎彎小小，有殼有鬚的水裡東西",
+      "features": {
+        "appearance": "彎彎小小、有殼有鬚",
+        "usage": "煮湯炒菜都有鮮味",
+        "source": "從水裡撈上來"
+      }
+    },
+    "crab": {
+      "word": "蟹",
+      "description": "橫著走，有硬殼和大鉗子的水裡東西",
+      "features": {
+        "appearance": "有硬殼和大鉗子",
+        "usage": "蒸熟後能吃肉",
+        "source": "從河海邊抓來"
+      }
+    },
+    "roasted_peanuts": {
+      "word": "炒花生",
+      "description": "小小一粒，炒過後又香又脆的豆子",
+      "features": {
+        "appearance": "小小一粒，外殼淡褐",
+        "usage": "當零嘴吃",
+        "source": "花生炒熟而成"
+      }
+    },
+    "porcelain_bowl": {
+      "word": "瓷碗",
+      "description": "圓圓的碗，用來盛飯盛湯",
+      "features": {
+        "appearance": "圓圓光滑的碗",
+        "usage": "盛飯盛湯",
+        "source": "泥土燒成瓷器"
+      }
+    },
+    "iron_pot": {
+      "word": "鐵鍋",
+      "description": "黑黑沉沉，用來煮飯炒菜的鍋",
+      "features": {
+        "appearance": "黑黑沉沉",
+        "usage": "煮飯炒菜",
+        "source": "鐵打成鍋"
+      }
+    },
+    "candied_hawthorn": {
+      "word": "糖葫蘆",
+      "description": "一串一串，外面裹著糖衣的紅果子",
+      "features": {
+        "appearance": "一串一串、紅紅亮亮",
+        "usage": "拿著直接吃",
+        "source": "山楂串起來再裹糖"
+      }
+    },
+    "pear": {
+      "word": "梨",
+      "description": "淡黃圓圓，咬下去有很多汁的果子",
+      "features": {
+        "appearance": "淡黃圓圓",
+        "usage": "削皮後直接吃",
+        "source": "樹上結的果子"
+      }
+    },
+    "peach": {
+      "word": "桃",
+      "description": "圓圓帶毛，熟了會甜的果子",
+      "features": {
+        "appearance": "圓圓帶毛",
+        "usage": "洗乾淨後直接吃",
+        "source": "樹上結的果子"
+      }
+    },
+    "herbal_tea": {
+      "word": "涼茶",
+      "description": "草藥熬成，喝起來清涼的茶",
+      "features": {
+        "appearance": "一碗深色茶湯",
+        "usage": "喝了清熱解渴",
+        "source": "草藥熬煮而成"
+      }
+    }
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_warehouse_01",
+      "question_text": "錢伯說：「這樣貨白白的，一粒一粒，裝在袋裡最容易漏。煮飯時少不了它。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "white_rice",
+        "tea_leaves",
+        "cotton_cloth"
+      ],
+      "answer_restate": "白米——白色圓粒，煮飯用的主糧。"
+    },
+    {
+      "variation_id": "game_1_warehouse_02",
+      "question_text": "錢伯說：「這樣貨一顆一顆，外面有殼，搬時要穩，摔了就全白費。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "pork",
+        "duck_eggs",
+        "tofu"
+      ],
+      "answer_restate": "鴨蛋——一顆一顆有蛋殼，鴨子生出來的蛋。"
+    },
+    {
+      "variation_id": "game_1_warehouse_03",
+      "question_text": "錢伯說：「這樣貨長長一條，油亮發紅，用豬肉灌進腸衣曬乾的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "rapeseed_oil",
+        "candles",
+        "lap_cheong"
+      ],
+      "answer_restate": "臘腸——長長一條，油亮發紅，豬肉灌進腸衣後曬乾。"
+    },
+    {
+      "variation_id": "game_1_warehouse_04",
+      "question_text": "錢伯說：「這樣貨不是吃的，也不是付錢的，是專門用來把東西捆緊綁牢的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "salt",
+        "hemp_rope",
+        "copper_coins"
+      ],
+      "answer_restate": "麻繩——粗粗一捆，用來綁東西的繩子。"
+    },
+    {
+      "variation_id": "game_1_warehouse_05",
+      "question_text": "錢伯說：「這樣貨不是拿來去腥，也不是拿來拌鹹味的，是專門把東西調成甜味的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "ginger",
+        "sauce",
+        "sugar"
+      ],
+      "answer_restate": "糖——白色細粒或小塊，把東西調成甜味。"
+    },
+    {
+      "variation_id": "game_1_warehouse_06",
+      "question_text": "錢伯說：「這樣貨不是拿來吃的，也不只是做外面穿的，是能塞枕頭、做衣裳裡子的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "silk",
+        "cotton",
+        "pancake"
+      ],
+      "answer_restate": "棉花——白白蓬鬆，能塞枕頭和做衣服的料。"
+    },
+    {
+      "variation_id": "game_1_warehouse_07",
+      "question_text": "錢伯說：「這樣貨不是樹上結的果子，也不是從池塘泥裡挖出來的，是從竹根旁冒出來的嫩芽。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "lotus_root",
+        "winter_bamboo_shoots",
+        "chestnuts"
+      ],
+      "answer_restate": "冬筍——尖尖一枝，從竹根旁長出來的嫩芽。"
+    },
+    {
+      "variation_id": "game_1_warehouse_08",
+      "question_text": "錢伯說：「這樣貨不是地裡長出來再炒香的，也不是橫著走、有大鉗子的，是從水裡撈上來、彎彎小小帶鬚的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "shrimp",
+        "crab",
+        "roasted_peanuts"
+      ],
+      "answer_restate": "蝦——彎彎小小，有殼有鬚，從水裡撈上來。"
+    },
+    {
+      "variation_id": "game_1_warehouse_09",
+      "question_text": "錢伯說：「我要的不是拿來盛湯的，也不是拿來生火炒菜的。要的是能直接拿在手上吃，紅紅一串外面裹糖的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "porcelain_bowl",
+        "iron_pot",
+        "candied_hawthorn"
+      ],
+      "answer_restate": "糖葫蘆——一串一串，外面裹著糖衣的紅果子。"
+    },
+    {
+      "variation_id": "game_1_warehouse_10",
+      "question_text": "錢伯說：「我要的不是樹上結的兩樣果子。要的是草藥熬成的，裝在碗裡喝，入口帶點苦的。阿禾，去拿來。」",
+      "vocabulary_intro_ids": [
+        "pear",
+        "peach",
+        "herbal_tea"
+      ],
+      "answer_restate": "涼茶——草藥熬成，喝起來清涼的茶。"
+    }
+  ]
+}

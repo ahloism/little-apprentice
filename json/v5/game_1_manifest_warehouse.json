@@ -1,0 +1,137 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_warehouse",
+  "game_type": "listen_and_pick",
+  "location": "warehouse",
+  "character": "cin_baak",
+  "intro_behavior": {
+    "show_once_per_session": true,
+    "dismiss_after_view": true
+  },
+  "flow": {
+    "retry": false,
+    "end_on_answer": true
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_warehouse_01",
+      "type": "A",
+      "prompt_mode": "appearance",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_white_rice",
+      "option_ids": [
+        "opt_white_rice",
+        "opt_tea_leaves",
+        "opt_cotton_cloth"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_02",
+      "type": "A",
+      "prompt_mode": "appearance",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_duck_eggs",
+      "option_ids": [
+        "opt_pork",
+        "opt_duck_eggs",
+        "opt_tofu"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_03",
+      "type": "A",
+      "prompt_mode": "appearance",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_lap_cheong",
+      "option_ids": [
+        "opt_rapeseed_oil",
+        "opt_candles",
+        "opt_lap_cheong"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_04",
+      "type": "B",
+      "prompt_mode": "usage",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_hemp_rope",
+      "option_ids": [
+        "opt_salt",
+        "opt_hemp_rope",
+        "opt_copper_coins"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_05",
+      "type": "B",
+      "prompt_mode": "usage",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_sugar",
+      "option_ids": [
+        "opt_ginger",
+        "opt_sauce",
+        "opt_sugar"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_06",
+      "type": "B",
+      "prompt_mode": "usage",
+      "distractor_mode": "same_category",
+      "answer_option_id": "opt_cotton",
+      "option_ids": [
+        "opt_silk",
+        "opt_cotton",
+        "opt_pancake"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_07",
+      "type": "C",
+      "prompt_mode": "source",
+      "distractor_mode": "mixed",
+      "answer_option_id": "opt_winter_bamboo_shoots",
+      "option_ids": [
+        "opt_lotus_root",
+        "opt_winter_bamboo_shoots",
+        "opt_chestnuts"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_08",
+      "type": "C",
+      "prompt_mode": "source",
+      "distractor_mode": "mixed",
+      "answer_option_id": "opt_shrimp",
+      "option_ids": [
+        "opt_shrimp",
+        "opt_crab",
+        "opt_roasted_peanuts"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_09",
+      "type": "D",
+      "prompt_mode": "exclusion",
+      "distractor_mode": "cross_category",
+      "answer_option_id": "opt_candied_hawthorn",
+      "option_ids": [
+        "opt_porcelain_bowl",
+        "opt_iron_pot",
+        "opt_candied_hawthorn"
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_10",
+      "type": "D",
+      "prompt_mode": "exclusion",
+      "distractor_mode": "cross_category",
+      "answer_option_id": "opt_herbal_tea",
+      "option_ids": [
+        "opt_pear",
+        "opt_peach",
+        "opt_herbal_tea"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_warehouse",
+  "variations": [
+    {
+      "variation_id": "game_1_warehouse_01",
+      "dimension": "vocabulary",
+      "skill": "appearance_recognition",
+      "options": [
+        {
+          "option_id": "opt_white_rice",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_tea_leaves",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_cotton_cloth",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_02",
+      "dimension": "vocabulary",
+      "skill": "appearance_recognition",
+      "options": [
+        {
+          "option_id": "opt_pork",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_duck_eggs",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_tofu",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_03",
+      "dimension": "vocabulary",
+      "skill": "appearance_recognition",
+      "options": [
+        {
+          "option_id": "opt_rapeseed_oil",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_candles",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_lap_cheong",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_04",
+      "dimension": "vocabulary",
+      "skill": "usage_recognition",
+      "options": [
+        {
+          "option_id": "opt_salt",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_hemp_rope",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_copper_coins",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_05",
+      "dimension": "vocabulary",
+      "skill": "usage_recognition",
+      "options": [
+        {
+          "option_id": "opt_ginger",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_sauce",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_sugar",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_06",
+      "dimension": "vocabulary",
+      "skill": "usage_recognition",
+      "options": [
+        {
+          "option_id": "opt_silk",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_cotton",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_pancake",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_07",
+      "dimension": "vocabulary",
+      "skill": "source_recognition",
+      "options": [
+        {
+          "option_id": "opt_lotus_root",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_winter_bamboo_shoots",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_chestnuts",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_08",
+      "dimension": "vocabulary",
+      "skill": "source_recognition",
+      "options": [
+        {
+          "option_id": "opt_shrimp",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_crab",
+          "role": "distractor",
+          "distractor_type": "same_category"
+        },
+        {
+          "option_id": "opt_roasted_peanuts",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_09",
+      "dimension": "vocabulary",
+      "skill": "exclusion_reasoning",
+      "options": [
+        {
+          "option_id": "opt_porcelain_bowl",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        },
+        {
+          "option_id": "opt_iron_pot",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        },
+        {
+          "option_id": "opt_candied_hawthorn",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_warehouse_10",
+      "dimension": "vocabulary",
+      "skill": "exclusion_reasoning",
+      "options": [
+        {
+          "option_id": "opt_pear",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        },
+        {
+          "option_id": "opt_peach",
+          "role": "distractor",
+          "distractor_type": "cross_category"
+        },
+        {
+          "option_id": "opt_herbal_tea",
+          "role": "correct"
+        }
+      ]
+    }
+  ]
+}
