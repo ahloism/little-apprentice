@@ -1,0 +1,126 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_dock",
+  "game_type": "measure_word_matching",
+  "location": "dock",
+  "intro_behavior": {
+    "show_once_per_session": true
+  },
+  "flow": {
+    "retry": false,
+    "end_on_answer": true,
+    "require_all_correct": true
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_dock_01",
+      "type": "A",
+      "prompt_mode": "count_measure",
+      "distractor_mode": "same_count_class",
+      "measure_option_ids": [
+        "opt_go3",
+        "opt_zek3",
+        "opt_gin6"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_02",
+      "type": "A",
+      "prompt_mode": "count_measure",
+      "distractor_mode": "same_count_class",
+      "measure_option_ids": [
+        "opt_tiu4",
+        "opt_gan1",
+        "opt_zoeng1"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_03",
+      "type": "A",
+      "prompt_mode": "count_measure",
+      "distractor_mode": "same_count_class",
+      "measure_option_ids": [
+        "opt_cyun3",
+        "opt_faai3",
+        "opt_pin3"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_04",
+      "type": "B",
+      "prompt_mode": "container_measure",
+      "distractor_mode": "same_container_class",
+      "measure_option_ids": [
+        "opt_doi6",
+        "opt_tung4",
+        "opt_laam4"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_05",
+      "type": "B",
+      "prompt_mode": "container_measure",
+      "distractor_mode": "same_container_class",
+      "measure_option_ids": [
+        "opt_soeng1",
+        "opt_lung4",
+        "opt_wu4"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_06",
+      "type": "B",
+      "prompt_mode": "container_measure",
+      "distractor_mode": "same_container_class",
+      "measure_option_ids": [
+        "opt_wun2",
+        "opt_zang2",
+        "opt_baau1"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_07",
+      "type": "C",
+      "prompt_mode": "collective_measure",
+      "distractor_mode": "same_collective_class",
+      "measure_option_ids": [
+        "opt_kwan2",
+        "opt_dip6",
+        "opt_pai1"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_08",
+      "type": "C",
+      "prompt_mode": "collective_measure",
+      "distractor_mode": "same_collective_class",
+      "measure_option_ids": [
+        "opt_deoi1",
+        "opt_dip6",
+        "opt_zaat3"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_09",
+      "type": "D",
+      "prompt_mode": "unit_measure",
+      "distractor_mode": "same_unit_class",
+      "measure_option_ids": [
+        "opt_gan1_weight",
+        "opt_loeng5",
+        "opt_cin4_weight"
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_10",
+      "type": "D",
+      "prompt_mode": "unit_measure",
+      "distractor_mode": "same_unit_class",
+      "measure_option_ids": [
+        "opt_cek3_length",
+        "opt_zoeng6",
+        "opt_cyun3_length"
+      ]
+    }
+  ]
+}

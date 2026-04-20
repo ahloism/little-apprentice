@@ -1,0 +1,196 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_dock",
+  "variations": [
+    {
+      "variation_id": "game_1_dock_01",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_candles",
+          "correct_measure_id": "opt_go3"
+        },
+        {
+          "item_id": "opt_crab",
+          "correct_measure_id": "opt_zek3"
+        },
+        {
+          "item_id": "opt_silk",
+          "correct_measure_id": "opt_gin6"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_02",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_hemp_rope",
+          "correct_measure_id": "opt_tiu4"
+        },
+        {
+          "item_id": "opt_lotus_root",
+          "correct_measure_id": "opt_gan1"
+        },
+        {
+          "item_id": "opt_cotton_cloth",
+          "correct_measure_id": "opt_zoeng1"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_03",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_candied_hawthorn",
+          "correct_measure_id": "opt_cyun3"
+        },
+        {
+          "item_id": "opt_tofu",
+          "correct_measure_id": "opt_faai3"
+        },
+        {
+          "item_id": "opt_wood_ear",
+          "correct_measure_id": "opt_pin3"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_04",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_white_rice",
+          "correct_measure_id": "opt_doi6"
+        },
+        {
+          "item_id": "opt_rapeseed_oil",
+          "correct_measure_id": "opt_tung4"
+        },
+        {
+          "item_id": "opt_pear",
+          "correct_measure_id": "opt_laam4"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_05",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_duck_eggs",
+          "correct_measure_id": "opt_soeng1"
+        },
+        {
+          "item_id": "opt_crab",
+          "correct_measure_id": "opt_lung4"
+        },
+        {
+          "item_id": "opt_herbal_tea",
+          "correct_measure_id": "opt_wu4"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_06",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_roasted_peanuts",
+          "correct_measure_id": "opt_wun2"
+        },
+        {
+          "item_id": "opt_tea_leaves",
+          "correct_measure_id": "opt_zang2"
+        },
+        {
+          "item_id": "opt_salt",
+          "correct_measure_id": "opt_baau1"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_07",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_hemp_rope",
+          "correct_measure_id": "opt_kwan2"
+        },
+        {
+          "item_id": "opt_cotton_cloth",
+          "correct_measure_id": "opt_dip6"
+        },
+        {
+          "item_id": "opt_candles",
+          "correct_measure_id": "opt_pai1"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_08",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_sweet_potato",
+          "correct_measure_id": "opt_deoi1"
+        },
+        {
+          "item_id": "opt_pancake",
+          "correct_measure_id": "opt_dip6"
+        },
+        {
+          "item_id": "opt_celery",
+          "correct_measure_id": "opt_zaat3"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_09",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_beef",
+          "correct_measure_id": "opt_gan1_weight"
+        },
+        {
+          "item_id": "opt_dried_shrimp",
+          "correct_measure_id": "opt_loeng5"
+        },
+        {
+          "item_id": "opt_ginger",
+          "correct_measure_id": "opt_cin4_weight"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_dock_10",
+      "dimension": "vocabulary",
+      "skill": "measure_word_matching",
+      "items": [
+        {
+          "item_id": "opt_silk",
+          "correct_measure_id": "opt_cek3_length"
+        },
+        {
+          "item_id": "opt_hemp_rope",
+          "correct_measure_id": "opt_zoeng6"
+        },
+        {
+          "item_id": "opt_tofu",
+          "correct_measure_id": "opt_cyun3_length"
+        }
+      ]
+    }
+  ]
+}

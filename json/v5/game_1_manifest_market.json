@@ -1,0 +1,150 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_market",
+  "game_type": "find_the_odd_one_out",
+  "location": "market",
+  "intro_behavior": {
+    "show_once_per_session": true,
+    "dismiss_after_view": true
+  },
+  "flow": {
+    "retry": false,
+    "end_on_answer": true
+  },
+  "pranksters": [
+    "aa_mou",
+    "sai_gau"
+  ],
+  "variations": [
+    {
+      "variation_id": "game_1_market_01",
+      "type": "A",
+      "stall_type": "vegetable_stall",
+      "vendor_id": "coi_po_po",
+      "answer_option_id": "opt_winter_melon",
+      "option_ids": [
+        "opt_bok_choy",
+        "opt_radish",
+        "opt_winter_melon"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_02",
+      "type": "A",
+      "stall_type": "vegetable_stall",
+      "vendor_id": "coi_po_po",
+      "answer_option_id": "opt_eggplant",
+      "option_ids": [
+        "opt_celery",
+        "opt_eggplant",
+        "opt_yardlong_bean"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_03",
+      "type": "A",
+      "stall_type": "vegetable_stall",
+      "vendor_id": "coi_po_po",
+      "answer_option_id": "opt_spinach",
+      "option_ids": [
+        "opt_sweet_potato",
+        "opt_taro",
+        "opt_spinach"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_04",
+      "type": "B",
+      "stall_type": "fish_meat_stall",
+      "vendor_id": "jyu_lou_daai",
+      "answer_option_id": "opt_pork",
+      "option_ids": [
+        "opt_carp",
+        "opt_grass_carp",
+        "opt_pork"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_05",
+      "type": "B",
+      "stall_type": "fish_meat_stall",
+      "vendor_id": "jyu_lou_daai",
+      "answer_option_id": "opt_shrimp",
+      "option_ids": [
+        "opt_chicken_leg",
+        "opt_beef",
+        "opt_shrimp"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_06",
+      "type": "B",
+      "stall_type": "fish_meat_stall",
+      "vendor_id": "jyu_lou_daai",
+      "answer_option_id": "opt_crab",
+      "option_ids": [
+        "opt_duck_meat",
+        "opt_mutton",
+        "opt_crab"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_07",
+      "type": "C",
+      "stall_type": "fruit_stall",
+      "vendor_id": "aa_ping",
+      "answer_option_id": "opt_jujube",
+      "option_ids": [
+        "opt_pear",
+        "opt_peach",
+        "opt_jujube"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_08",
+      "type": "C",
+      "stall_type": "fruit_stall",
+      "vendor_id": "aa_ping",
+      "answer_option_id": "opt_mint",
+      "option_ids": [
+        "opt_orange",
+        "opt_roselle",
+        "opt_mint"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_09",
+      "type": "D",
+      "stall_type": "dry_goods_stall",
+      "vendor_id": "maa_baak",
+      "answer_option_id": "opt_dried_shrimp",
+      "option_ids": [
+        "opt_shiitake",
+        "opt_wood_ear",
+        "opt_dried_shrimp"
+      ],
+      "task_type": "odd_one_out"
+    },
+    {
+      "variation_id": "game_1_market_10",
+      "type": "D",
+      "stall_type": "dry_goods_stall",
+      "vendor_id": "maa_baak",
+      "answer_option_id": "opt_lap_cheong",
+      "option_ids": [
+        "opt_tofu_skin",
+        "opt_dried_tofu",
+        "opt_lap_cheong"
+      ],
+      "task_type": "odd_one_out"
+    }
+  ]
+}

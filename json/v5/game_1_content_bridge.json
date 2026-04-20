@@ -1,0 +1,356 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_bridge",
+  "game_name": "橋邊問路",
+  "location": "bridge",
+  "game_type": "fill_spatial_word",
+  "fixed_sentence": "那是什麼地方？",
+  "vocabulary_bank": {
+    "dung": {
+      "word": "東",
+      "description": "就是太陽升起那一邊，我想她應該在東。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "naam": {
+      "word": "南",
+      "description": "若我沒有記錯，應該是向南那邊。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "sai": {
+      "word": "西",
+      "description": "她像是在太陽落下那一邊，也就是西。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "bak": {
+      "word": "北",
+      "description": "我想她應該在北面，就是與南相反那邊。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "zo2": {
+      "word": "左",
+      "description": "她應該在左邊，就是我手杖這邊。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "jau6": {
+      "word": "右",
+      "description": "我看見她在右邊，就是另一側那邊。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "cin4": {
+      "word": "前",
+      "description": "她就在前面，不是在我身後。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "hau6": {
+      "word": "後",
+      "description": "她應該在後面，我轉身才看得到。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "ce4_deoi3_min6": {
+      "word": "斜對面",
+      "description": "不是正正對面，是斜斜地對著那邊。",
+      "features": {
+        "direction_type": "basic"
+      }
+    },
+    "paak_bin1": {
+      "word": "旁邊",
+      "description": "她就在旁邊，挨得很近，不用走遠。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "deoi3_min6": {
+      "word": "對面",
+      "description": "她在對面，要隔著這條路看過去。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "zung1_gaan1": {
+      "word": "中間",
+      "description": "她在中間，被兩邊的人和攤子夾著。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "fu6_gan6": {
+      "word": "附近",
+      "description": "她應該就在附近，不會離我太遠。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "gaak3_lei4": {
+      "word": "隔壁",
+      "description": "她在隔壁，就是緊貼著旁邊另一個位置。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "zyun2_gok3": {
+      "word": "轉角",
+      "description": "她應該在轉角，拐過去就會看到。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "zeon2_tau4": {
+      "word": "盡頭",
+      "description": "她在那條路的盡頭，要一直走到尾。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "jyun4_lou6": {
+      "word": "沿路",
+      "description": "你沿著這條路一直走，就會見到她。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "ce4_paak_bin1": {
+      "word": "斜旁",
+      "description": "她不在正旁邊，是斜斜在旁那一點。",
+      "features": {
+        "direction_type": "relative"
+      }
+    },
+    "mun4_hau2": {
+      "word": "門口",
+      "description": "她在門口，就站在出入口那裡。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "mun4_noi6": {
+      "word": "門內",
+      "description": "她在門內，要走進門才見到。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "jyun2_noi6": {
+      "word": "院內",
+      "description": "她在院內，不在街上，是院子裡面。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "sing4_mun4_noi6": {
+      "word": "城門內",
+      "description": "她在城門內，還未走到城外那邊。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "sing4_mun4_ngoi6": {
+      "word": "城門外",
+      "description": "她在城門外，要出了城門才找得到。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "coeng4_ngoi6": {
+      "word": "牆外",
+      "description": "她不在牆這邊，而是在牆外頭。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "kiu4_soeng6": {
+      "word": "橋上",
+      "description": "她在橋上，不在橋頭也不在橋下。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "kiu4_haa6": {
+      "word": "橋下",
+      "description": "她在橋下，是橋身底下那邊。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "kiu4_tau4": {
+      "word": "橋頭",
+      "description": "她在橋頭，就是橋開始那一段。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "dim3_noi6": {
+      "word": "店內",
+      "description": "她在店內，進了鋪子裡面。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "dim3_ngoi6": {
+      "word": "店外",
+      "description": "她在店外，還站在門外那邊。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    },
+    "jim4_haa6": {
+      "word": "簷下",
+      "description": "她在簷下，站在屋簷遮住的地方。",
+      "features": {
+        "direction_type": "inside_outside"
+      }
+    }
+  },
+  "feedback_templates": {
+    "correct": [
+      "啊，終於找到了！Thank you, Ah Wo. 原來是在[answer_restate]",
+      "「我就知道你會找到我！」兩人先互相埋怨了兩句，然後一起向阿禾道謝：「多謝你，原來是在[answer_restate]」"
+    ],
+    "wrong_edmund": [
+      "Edmund皺起眉頭：「No, no, no，我明明不是這樣說的。那裡是[answer_restate]」",
+      "Edmund急得扶一扶帽子：「你怎會聽成那樣？她是在[answer_restate]」"
+    ],
+    "wrong_margaret": [
+      "Margaret輕輕嘆氣：「不是那裡。那裡是[answer_restate]」",
+      "Margaret無奈地看了阿禾一眼：「我想我已經說得很清楚了。那裡是[answer_restate]」"
+    ]
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_bridge_01",
+      "speaker_id": "edmund",
+      "story_logic": "third_party_report",
+      "question_text": "剛才有個挑擔的人告訴我，她往東那邊走了。我只見到她帽子的影子一下子閃過。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "dung",
+        "naam",
+        "sai"
+      ],
+      "answer_restate": "東。"
+    },
+    {
+      "variation_id": "game_1_bridge_02",
+      "speaker_id": "margaret",
+      "story_logic": "meeting_point",
+      "question_text": "我們剛才說好，若再走散，就在北邊那一段橋欄旁再見。我現在只怕自己記錯。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "bak",
+        "zo2",
+        "jau6"
+      ],
+      "answer_restate": "北。"
+    },
+    {
+      "variation_id": "game_1_bridge_03",
+      "speaker_id": "edmund",
+      "story_logic": "far_sighting",
+      "question_text": "我遠遠看見她的人影，不是在我前面，也不是在我後頭，像是斜斜地對著我那邊。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "cin4",
+        "hau6",
+        "ce4_deoi3_min6"
+      ],
+      "answer_restate": "斜對面。"
+    },
+    {
+      "variation_id": "game_1_bridge_04",
+      "speaker_id": "margaret",
+      "story_logic": "third_party_report",
+      "question_text": "有個賣糖水的孩子指給我看，說Edmund站在兩個大竹簍之間，不偏左也不偏右。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "paak_bin1",
+        "deoi3_min6",
+        "zung1_gaan1"
+      ],
+      "answer_restate": "中間。"
+    },
+    {
+      "variation_id": "game_1_bridge_05",
+      "speaker_id": "edmund",
+      "story_logic": "meeting_point",
+      "question_text": "我們本來說好，若走散了，就在轉角那個賣茶的小攤旁再碰頭，不是附近隨便哪裡。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "fu6_gan6",
+        "gaak3_lei4",
+        "zyun2_gok3"
+      ],
+      "answer_restate": "轉角。"
+    },
+    {
+      "variation_id": "game_1_bridge_06",
+      "speaker_id": "margaret",
+      "story_logic": "far_sighting",
+      "question_text": "我剛才像是看見他站在那條巷子的最尾，不是沿著路中段，也不是斜旁那一帶。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "zeon2_tau4",
+        "jyun4_lou6",
+        "ce4_paak_bin1"
+      ],
+      "answer_restate": "盡頭。"
+    },
+    {
+      "variation_id": "game_1_bridge_07",
+      "speaker_id": "edmund",
+      "story_logic": "third_party_report",
+      "question_text": "有個看門的人說，她剛走進門裡，不是在門口停著，也不是在院內更深處。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "mun4_hau2",
+        "mun4_noi6",
+        "jyun2_noi6"
+      ],
+      "answer_restate": "門內。"
+    },
+    {
+      "variation_id": "game_1_bridge_08",
+      "speaker_id": "margaret",
+      "story_logic": "meeting_point",
+      "question_text": "我們說過，若真找不到，就在城門外等，不是城門內，也不是貼著牆外隨便站。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "sing4_mun4_noi6",
+        "sing4_mun4_ngoi6",
+        "coeng4_ngoi6"
+      ],
+      "answer_restate": "城門外。"
+    },
+    {
+      "variation_id": "game_1_bridge_09",
+      "speaker_id": "edmund",
+      "story_logic": "far_sighting",
+      "question_text": "我方才看見她在橋下那一帶，一閃而過，不是在橋頭，也不在橋上人堆裡。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "kiu4_soeng6",
+        "kiu4_haa6",
+        "kiu4_tau4"
+      ],
+      "answer_restate": "橋下。"
+    },
+    {
+      "variation_id": "game_1_bridge_10",
+      "speaker_id": "margaret",
+      "story_logic": "third_party_report",
+      "question_text": "有個店小二對我說，Edmund一直站在簷下避太陽，不在店內，也不在店外空地。那是什麼地方？",
+      "vocabulary_intro_ids": [
+        "dim3_noi6",
+        "dim3_ngoi6",
+        "jim4_haa6"
+      ],
+      "answer_restate": "簷下。"
+    }
+  ]
+}

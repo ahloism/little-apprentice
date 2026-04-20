@@ -1,0 +1,206 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_market",
+  "variations": [
+    {
+      "variation_id": "game_1_market_01",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_bok_choy",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_radish",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_winter_melon",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_02",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_celery",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_eggplant",
+          "role": "odd_item"
+        },
+        {
+          "option_id": "opt_yardlong_bean",
+          "role": "belongs"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_03",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_sweet_potato",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_taro",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_spinach",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_04",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_carp",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_grass_carp",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_pork",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_05",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_chicken_leg",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_beef",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_shrimp",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_06",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_duck_meat",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_mutton",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_crab",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_07",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_pear",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_peach",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_jujube",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_08",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_orange",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_roselle",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_mint",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_09",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_shiitake",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_wood_ear",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_dried_shrimp",
+          "role": "odd_item"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_market_10",
+      "dimension": "vocabulary",
+      "skill": "category_membership",
+      "task_type": "odd_one_out",
+      "options": [
+        {
+          "option_id": "opt_tofu_skin",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_dried_tofu",
+          "role": "belongs"
+        },
+        {
+          "option_id": "opt_lap_cheong",
+          "role": "odd_item"
+        }
+      ]
+    }
+  ]
+}

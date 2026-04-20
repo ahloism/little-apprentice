@@ -1,0 +1,408 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_market",
+  "game_name": "市集探案",
+  "location": "market",
+  "game_type": "find_the_odd_one_out",
+  "fixed_sentence": "阿禾看了看，有問題的是___。",
+  "pranksters": [
+    "aa_mou",
+    "sai_gau"
+  ],
+  "feedback_templates": {
+    "coi_po_po": {
+      "correct": [
+        "哎呀，幸好你眼利。",
+        "對啦對啦，你幫我找到了。"
+      ],
+      "wrong": [
+        "唉，這次你沒幫上忙，[answer_restate]",
+        "哎呀，不是這個。[answer_restate]"
+      ]
+    },
+    "jyu_lou_daai": {
+      "correct": [
+        "對，就是這樣，別讓它混在這裡。",
+        "眼力不錯，一下就看出來了。"
+      ],
+      "wrong": [
+        "不對，別亂指。[answer_restate]",
+        "看清楚再說。[answer_restate]"
+      ]
+    },
+    "aa_ping": {
+      "correct": [
+        "謝謝你，總算找出來了。",
+        "對，就是那樣，我剛才也在找。"
+      ],
+      "wrong": [
+        "不是這個呢。[answer_restate]",
+        "唉，還差一點。[answer_restate]"
+      ]
+    },
+    "maa_baak": {
+      "correct": [
+        "嗯，這樣才對。",
+        "你倒看得仔細。"
+      ],
+      "wrong": [
+        "慢慢看，別急。[answer_restate]",
+        "唉，老眼都看見了。[answer_restate]"
+      ]
+    }
+  },
+  "vocabulary_bank": {
+    "bok_choy": {
+      "word": "白菜",
+      "description": "白梗綠葉，一層一層包著的菜。",
+      "features": {
+        "appearance": "白梗綠葉，一層一層包著",
+        "category": "vegetable_leafy"
+      }
+    },
+    "radish": {
+      "word": "蘿蔔",
+      "description": "長長一條，從土裡拔出來的根菜。",
+      "features": {
+        "appearance": "長長一條，表皮光滑",
+        "category": "vegetable_root"
+      }
+    },
+    "winter_melon": {
+      "word": "冬瓜",
+      "description": "大大一條，外皮厚厚的瓜。",
+      "features": {
+        "appearance": "大大一條，外皮厚厚",
+        "category": "vegetable_gourd"
+      }
+    },
+    "celery": {
+      "word": "芹菜",
+      "description": "細長青綠，帶著一股清香的菜。",
+      "features": {
+        "appearance": "細長青綠，一節一節",
+        "category": "vegetable_stem"
+      }
+    },
+    "eggplant": {
+      "word": "茄子",
+      "description": "紫亮長條，肚子圓圓的菜。",
+      "features": {
+        "appearance": "紫亮長條，肚子圓圓",
+        "category": "vegetable_fruit"
+      }
+    },
+    "yardlong_bean": {
+      "word": "豆角",
+      "description": "細細長長，一條條垂下來的菜。",
+      "features": {
+        "appearance": "細細長長，一條條",
+        "category": "vegetable_pod"
+      }
+    },
+    "sweet_potato": {
+      "word": "番薯",
+      "description": "土黃外皮，裡面粉甜的塊根。",
+      "features": {
+        "appearance": "圓鼓鼓的塊根，土黃外皮",
+        "category": "vegetable_tuber"
+      }
+    },
+    "taro": {
+      "word": "芋頭",
+      "description": "外皮粗粗，裡面粉糯的塊根。",
+      "features": {
+        "appearance": "圓圓塊根，外皮粗粗",
+        "category": "vegetable_tuber"
+      }
+    },
+    "spinach": {
+      "word": "菠菜",
+      "description": "一束綠葉，葉片薄薄的菜。",
+      "features": {
+        "appearance": "一束綠葉，葉片薄薄",
+        "category": "vegetable_leafy"
+      }
+    },
+    "carp": {
+      "word": "鯉魚",
+      "description": "長身有鱗，在水裡游的魚。",
+      "features": {
+        "appearance": "長身有鱗，尾巴寬",
+        "category": "fish"
+      }
+    },
+    "grass_carp": {
+      "word": "草魚",
+      "description": "身子長長，背色偏深的魚。",
+      "features": {
+        "appearance": "身子長長，背色偏深",
+        "category": "fish"
+      }
+    },
+    "pork": {
+      "word": "豬肉",
+      "description": "粉紅一塊，切來煮菜的肉。",
+      "features": {
+        "appearance": "粉紅一塊，沒有魚鱗",
+        "category": "meat"
+      }
+    },
+    "chicken_leg": {
+      "word": "雞腿",
+      "description": "一隻肉厚厚的雞腿。",
+      "features": {
+        "appearance": "一隻腿形，肉厚厚",
+        "category": "meat"
+      }
+    },
+    "beef": {
+      "word": "牛肉",
+      "description": "紅紅一塊，紋理明顯的肉。",
+      "features": {
+        "appearance": "紅紅一塊，紋理明顯",
+        "category": "meat"
+      }
+    },
+    "shrimp": {
+      "word": "蝦",
+      "description": "彎彎小小，有殼有鬚的水產。",
+      "features": {
+        "appearance": "彎彎小小，有殼有鬚",
+        "category": "shellfish"
+      }
+    },
+    "duck_meat": {
+      "word": "鴨肉",
+      "description": "切好的肉塊，皮下常帶一層油。",
+      "features": {
+        "appearance": "肉塊帶皮，顏色偏深",
+        "category": "meat"
+      }
+    },
+    "mutton": {
+      "word": "羊肉",
+      "description": "紅褐色肉塊，帶一股濃味的肉。",
+      "features": {
+        "appearance": "紅褐色肉塊",
+        "category": "meat"
+      }
+    },
+    "crab": {
+      "word": "蟹",
+      "description": "有硬殼和大鉗子的水產。",
+      "features": {
+        "appearance": "有硬殼和大鉗子",
+        "category": "shellfish"
+      }
+    },
+    "pear": {
+      "word": "梨",
+      "description": "淡黃偏綠，咬下去很多汁的果子。",
+      "features": {
+        "appearance": "圓圓偏長，皮色淡黃",
+        "category": "fruit_fresh"
+      }
+    },
+    "peach": {
+      "word": "桃",
+      "description": "表皮有細毛，果肉甜甜的果子。",
+      "features": {
+        "appearance": "圓圓有細毛，帶粉色",
+        "category": "fruit_fresh"
+      }
+    },
+    "jujube": {
+      "word": "棗",
+      "description": "小小一顆，表皮會慢慢皺起來的果子。",
+      "features": {
+        "appearance": "小小一顆，表皮易皺",
+        "category": "fruit_dried"
+      }
+    },
+    "orange": {
+      "word": "橙",
+      "description": "圓圓橘色，剝開有一瓣一瓣的果子。",
+      "features": {
+        "appearance": "圓圓橘色，一瓣一瓣",
+        "category": "fruit_fresh"
+      }
+    },
+    "roselle": {
+      "word": "洛神花",
+      "description": "紅紅酸酸，常拿來泡成果飲的花萼。",
+      "features": {
+        "appearance": "紅紅皺皺，像小花",
+        "category": "fruit_drink"
+      }
+    },
+    "mint": {
+      "word": "薄荷",
+      "description": "一片片綠葉，聞起來清涼的香草。",
+      "features": {
+        "appearance": "一片片綠葉，邊緣有鋸齒",
+        "category": "herb"
+      }
+    },
+    "shiitake": {
+      "word": "冬菇",
+      "description": "乾乾一朵，泡開後能煮菜的菇。",
+      "features": {
+        "appearance": "乾乾一朵，菇傘圓圓",
+        "category": "dry_mushroom"
+      }
+    },
+    "wood_ear": {
+      "word": "木耳",
+      "description": "薄薄黑黑，泡開會軟的乾貨。",
+      "features": {
+        "appearance": "薄薄黑黑，皺皺的",
+        "category": "dry_mushroom"
+      }
+    },
+    "dried_shrimp": {
+      "word": "蝦米",
+      "description": "曬乾後小小一粒一粒的蝦。",
+      "features": {
+        "appearance": "小小橙粉色，一粒一粒",
+        "category": "dry_seafood"
+      }
+    },
+    "tofu_skin": {
+      "word": "腐竹",
+      "description": "黃黃長條，豆漿表面做成的乾貨。",
+      "features": {
+        "appearance": "黃黃長條，摺成一束",
+        "category": "dry_bean"
+      }
+    },
+    "dried_tofu": {
+      "word": "豆乾",
+      "description": "方方一塊，壓得結實的豆製品。",
+      "features": {
+        "appearance": "方方一塊，表面緊實",
+        "category": "dry_bean"
+      }
+    },
+    "lap_cheong": {
+      "word": "臘腸",
+      "description": "長長一條，曬乾後帶鹹香的肉。",
+      "features": {
+        "appearance": "長長一條，油亮發紅",
+        "category": "dry_meat"
+      }
+    }
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_market_01",
+      "vendor_id": "coi_po_po",
+      "question_text": "蔡婆婆指著菜筐直搖頭：「我這攤今天擺的是葉菜和根菜，怎麼混進一條大冬瓜？阿禾，快幫我找出來。」",
+      "vocabulary_intro_ids": [
+        "bok_choy",
+        "radish",
+        "winter_melon"
+      ],
+      "answer_restate": "冬瓜才是放錯的，它是瓜類，不是這攤今天在賣的葉菜和根菜。"
+    },
+    {
+      "variation_id": "game_1_market_02",
+      "vendor_id": "coi_po_po",
+      "question_text": "蔡婆婆彎腰整理菜籃，皺起眉頭：「這裡擺的是細長好切的菜，怎麼混進一樣紫皮圓肚的？你幫我看看。」",
+      "vocabulary_intro_ids": [
+        "celery",
+        "eggplant",
+        "yardlong_bean"
+      ],
+      "answer_restate": "茄子才是放錯的，它是果菜，和這兩樣細長的莖菜、豆菜不是同一攤。"
+    },
+    {
+      "variation_id": "game_1_market_03",
+      "vendor_id": "coi_po_po",
+      "question_text": "蔡婆婆把手叉在腰上：「番薯和芋頭都是從土裡挖出來的塊根，偏偏有一樣是綠葉菜，快替我指出來。」",
+      "vocabulary_intro_ids": [
+        "sweet_potato",
+        "taro",
+        "spinach"
+      ],
+      "answer_restate": "菠菜才是放錯的，它是葉菜，不是像番薯和芋頭那樣從土裡挖出來的塊根。"
+    },
+    {
+      "variation_id": "game_1_market_04",
+      "vendor_id": "jyu_lou_daai",
+      "question_text": "余老大一拍木盆，聲音大得嚇人：「我這盆裡裝的是活水魚，怎麼混進一塊豬肉？阿禾，你看清楚！」",
+      "vocabulary_intro_ids": [
+        "carp",
+        "grass_carp",
+        "pork"
+      ],
+      "answer_restate": "豬肉才是放錯的，它是肉，不是和鯉魚、草魚一樣的活水魚。"
+    },
+    {
+      "variation_id": "game_1_market_05",
+      "vendor_id": "jyu_lou_daai",
+      "question_text": "余老大把刀放下，指著案板說：「這邊掛的是肉，怎麼跑進一隻蝦？快幫我挑出來。」",
+      "vocabulary_intro_ids": [
+        "chicken_leg",
+        "beef",
+        "shrimp"
+      ],
+      "answer_restate": "蝦才是放錯的，它是水產，不是和雞腿、牛肉一樣掛在這邊賣的肉。"
+    },
+    {
+      "variation_id": "game_1_market_06",
+      "vendor_id": "jyu_lou_daai",
+      "question_text": "余老大皺著眉看著木盤：「今天切的是鴨肉和羊肉，誰把一隻蟹放上來了？阿禾，你替我指出來。」",
+      "vocabulary_intro_ids": [
+        "duck_meat",
+        "mutton",
+        "crab"
+      ],
+      "answer_restate": "蟹才是放錯的，它是帶硬殼的水產，不是和鴨肉、羊肉一樣的肉類。"
+    },
+    {
+      "variation_id": "game_1_market_07",
+      "vendor_id": "aa_ping",
+      "question_text": "阿萍把果籃扶正，輕聲嘆氣：「我這籃裡擺的是鮮果，怎麼混進一樣會皺起來的小棗子？你幫我找找。」",
+      "vocabulary_intro_ids": [
+        "pear",
+        "peach",
+        "jujube"
+      ],
+      "answer_restate": "棗才是放錯的，它這題是乾棗，不是和梨、桃一樣現擺現賣的鮮果。"
+    },
+    {
+      "variation_id": "game_1_market_08",
+      "vendor_id": "aa_ping",
+      "question_text": "阿萍無奈地笑了笑：「這邊擺的是能做果飲的材料，怎麼混進一把清涼葉子？阿禾，你看是哪樣不對。」",
+      "vocabulary_intro_ids": [
+        "orange",
+        "roselle",
+        "mint"
+      ],
+      "answer_restate": "薄荷才是放錯的，它是香草葉，不是和橙、洛神花一樣放在這邊做果飲的材料。"
+    },
+    {
+      "variation_id": "game_1_market_09",
+      "vendor_id": "maa_baak",
+      "question_text": "馬伯慢慢把簍子推近一點：「我這裡曬的是菌菇，怎麼混進一把蝦米？唉，你替我挑出來吧。」",
+      "vocabulary_intro_ids": [
+        "shiitake",
+        "wood_ear",
+        "dried_shrimp"
+      ],
+      "answer_restate": "蝦米才是放錯的，它是曬乾的海味，不是和冬菇、木耳一樣的菌菇乾貨。"
+    },
+    {
+      "variation_id": "game_1_market_10",
+      "vendor_id": "maa_baak",
+      "question_text": "馬伯低頭看了半天，嘆了一聲：「這邊擺的是豆做的乾貨，怎麼掛進一條臘腸？阿禾，替我看看。」",
+      "vocabulary_intro_ids": [
+        "tofu_skin",
+        "dried_tofu",
+        "lap_cheong"
+      ],
+      "answer_restate": "臘腸才是放錯的，它是肉做的，不是和腐竹、豆乾一樣的豆製乾貨。"
+    }
+  ]
+}

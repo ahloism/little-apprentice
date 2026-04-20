@@ -1,0 +1,216 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_bridge",
+  "variations": [
+    {
+      "variation_id": "game_1_bridge_01",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_dung",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_naam",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        },
+        {
+          "option_id": "opt_sai",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_02",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_bak",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_zo2",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        },
+        {
+          "option_id": "opt_jau6",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_03",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_cin4",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        },
+        {
+          "option_id": "opt_hau6",
+          "role": "distractor",
+          "distractor_type": "same_direction_class"
+        },
+        {
+          "option_id": "opt_ce4_deoi3_min6",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_04",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_paak_bin1",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        },
+        {
+          "option_id": "opt_deoi3_min6",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        },
+        {
+          "option_id": "opt_zung1_gaan1",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_05",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_fu6_gan6",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        },
+        {
+          "option_id": "opt_gaak3_lei4",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        },
+        {
+          "option_id": "opt_zyun2_gok3",
+          "role": "correct"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_06",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_zeon2_tau4",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_jyun4_lou6",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        },
+        {
+          "option_id": "opt_ce4_paak_bin1",
+          "role": "distractor",
+          "distractor_type": "same_relative_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_07",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_mun4_hau2",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        },
+        {
+          "option_id": "opt_mun4_noi6",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_jyun2_noi6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_08",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_sing4_mun4_noi6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        },
+        {
+          "option_id": "opt_sing4_mun4_ngoi6",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_coeng4_ngoi6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_09",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_kiu4_soeng6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        },
+        {
+          "option_id": "opt_kiu4_haa6",
+          "role": "correct"
+        },
+        {
+          "option_id": "opt_kiu4_tau4",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        }
+      ]
+    },
+    {
+      "variation_id": "game_1_bridge_10",
+      "dimension": "context_understanding",
+      "skill": "spatial_word_discrimination",
+      "options": [
+        {
+          "option_id": "opt_dim3_noi6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        },
+        {
+          "option_id": "opt_dim3_ngoi6",
+          "role": "distractor",
+          "distractor_type": "same_inside_outside_class"
+        },
+        {
+          "option_id": "opt_jim4_haa6",
+          "role": "correct"
+        }
+      ]
+    }
+  ]
+}

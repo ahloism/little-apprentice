@@ -1,0 +1,215 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_inn",
+  "game_name": "杜先生聽書",
+  "location": "inn",
+  "game_type": "emotion_recognition",
+  "fixed_sentence": "你說，此人心裡是什麼感覺？",
+  "character": "dou_sin_saang",
+  "vocabulary_bank": {
+    "hoi1_sam1": {
+      "word": "開心",
+      "description": "心裡很高興，想笑，覺得事情很好。",
+      "features": {
+        "emotion_type": "positive"
+      }
+    },
+    "giu1_ngou6": {
+      "word": "驕傲",
+      "description": "覺得自己很厲害，心裡有點得意。",
+      "features": {
+        "emotion_type": "positive"
+      }
+    },
+    "gam2_gik1": {
+      "word": "感激",
+      "description": "別人幫了自己，心裡很感動，也很想多謝對方。",
+      "features": {
+        "emotion_type": "positive"
+      }
+    },
+    "hoi6_paa3": {
+      "word": "害怕",
+      "description": "心裡很驚，怕出事，身體都會緊起來。",
+      "features": {
+        "emotion_type": "negative"
+      }
+    },
+    "sam1_heoi1": {
+      "word": "心虛",
+      "description": "表面裝作沒事，其實心裡知道自己不對。",
+      "features": {
+        "emotion_type": "negative"
+      }
+    },
+    "daam1_sam1": {
+      "word": "擔心",
+      "description": "心裡掛住一件事，怕它會變得不好。",
+      "features": {
+        "emotion_type": "negative"
+      }
+    },
+    "jau6_ging1_jau6_hei2": {
+      "word": "又驚又喜",
+      "description": "先嚇一跳，接著又很高興，兩種感覺一起來。",
+      "features": {
+        "emotion_type": "complex"
+      }
+    },
+    "gaan3_gaai3": {
+      "word": "尷尬",
+      "description": "不知道怎樣接下去，臉上和心裡都不自在。",
+      "features": {
+        "emotion_type": "complex"
+      }
+    },
+    "jau6_paa3_jau6_soeng2": {
+      "word": "又怕又想",
+      "description": "心裡一邊害怕，一邊又忍不住想再看或再試。",
+      "features": {
+        "emotion_type": "complex"
+      }
+    },
+    "bat1_gam1_sam1": {
+      "word": "不甘心",
+      "description": "明明快成功了卻停下來，心裡很不服氣。",
+      "features": {
+        "emotion_type": "complex"
+      }
+    }
+  },
+  "feedback_templates": {
+    "correct": [
+      "嗯，還算看得出來。",
+      "不錯，比老夫預期的好一點。",
+      "對了，這點眼力還是有的。"
+    ],
+    "wrong": [
+      "唉，看來你沒有認真聽。[answer_restate]",
+      "老夫說得這麼清楚，還是猜錯。[answer_restate]",
+      "差得遠了。[answer_restate]"
+    ]
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_inn_01",
+      "story_idiom": "守株待兔",
+      "emotion_class": "A",
+      "question_text": "有個農夫，耕田耕得好好的，忽然一隻兔子自己撞到樹上，啪一聲倒地不起。他愣了一下，四周望一望，居然沒人搶，心裡樂得很，像中了頭獎似的。第二天他索性把鋤頭一丟，搬張小凳子坐在樹旁，還帶了乾糧，像在等外賣。唉，這世道，有人勤力，有人等運到。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi1_sam1",
+        "giu1_ngou6",
+        "gam2_gik1"
+      ],
+      "answer_restate": "此人感到的是開心。"
+    },
+    {
+      "variation_id": "game_1_inn_02",
+      "story_idiom": "刻舟求劍",
+      "emotion_class": "A",
+      "question_text": "有人坐船過河，一不小心把劍掉進水裡，他卻不慌不忙，拿刀在船邊刻了一道記號，還點點頭說：「記住了。」旁人問他做什麼，他一臉自信，彷彿發明了什麼新方法，還說等船靠岸再去拿。那人很神氣，覺得自己很聰明，鼻孔朝天的。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi1_sam1",
+        "giu1_ngou6",
+        "gam2_gik1"
+      ],
+      "answer_restate": "此人感到的是驕傲。"
+    },
+    {
+      "variation_id": "game_1_inn_03",
+      "story_idiom": "鐵杵磨針",
+      "emotion_class": "A",
+      "question_text": "李白年少時偷懶讀書，走到山下，看見一位老婆婆正拿著一根粗粗的鐵杵，在石頭上磨來磨去。他忍不住問：「這樣磨，要磨到幾時？」老婆婆慢慢說：「磨成針。」李白點點頭，然後幫婆婆一起磨鐵杵，磨了一會，竟然已成針，婆婆十分開心，因為李白幫她完成了三年的工作。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi1_sam1",
+        "giu1_ngou6",
+        "gam2_gik1"
+      ],
+      "answer_restate": "此人感到的是感激。"
+    },
+    {
+      "variation_id": "game_1_inn_04",
+      "story_idiom": "掩耳盜鈴",
+      "emotion_class": "B",
+      "question_text": "有個人想偷門口的鈴鐺，卻怕一拿就響，被人發現。他想了想，居然用手把自己的耳朵捂住，還試了兩下，確定自己聽不到聲音，才小心翼翼去動手。動作慢得像在拆炸彈，還不時回頭看。老夫說到這裡，都替他緊張。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi6_paa3",
+        "sam1_heoi1",
+        "daam1_sam1"
+      ],
+      "answer_restate": "此人感到的是害怕。"
+    },
+    {
+      "variation_id": "game_1_inn_05",
+      "story_idiom": "狐假虎威",
+      "emotion_class": "B",
+      "question_text": "狐狸跟在老虎後面走進森林，見到小動物們全都嚇得四散奔逃，狐狸立刻挺起胸口，走得比誰都慢，還不時回頭瞄一眼老虎在不在。有人問牠為什麼這麼威風，牠還裝作沒聽見。狐狸看起來很威猛，其實內心很不是滋味。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi6_paa3",
+        "sam1_heoi1",
+        "daam1_sam1"
+      ],
+      "answer_restate": "此人感到的是心虛。"
+    },
+    {
+      "variation_id": "game_1_inn_06",
+      "story_idiom": "杞人憂天",
+      "emotion_class": "B",
+      "question_text": "有個人整天抬頭看天，眉頭皺得像打結一樣，忽然對旁人說：「萬一這天塌下來怎麼辦？」他越想越不對，連飯都吃不下，晚上還翻來覆去睡不著，彷彿明天就要世界末日。旁人怎麼勸，他都搖頭。晚上看著天，他竟把雙手撐起，說有事時可以撐著天。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "hoi6_paa3",
+        "sam1_heoi1",
+        "daam1_sam1"
+      ],
+      "answer_restate": "此人感到的是擔心。"
+    },
+    {
+      "variation_id": "game_1_inn_07",
+      "story_idiom": "塞翁失馬",
+      "emotion_class": "C",
+      "question_text": "有個老人家的馬忽然跑掉了，鄰居們紛紛來安慰，老人卻只是淡淡說：「未必是壞事。」過了幾天，那匹馬居然帶著一匹更好的馬回來。兒子一看，眼睛一亮，先愣了一秒，然後高興得跳起來，圍著馬跑來跑去，完全忘記前幾天哭過。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "jau6_ging1_jau6_hei2",
+        "gaan3_gaai3",
+        "bat1_gam1_sam1"
+      ],
+      "answer_restate": "此人感到的是又驚又喜。"
+    },
+    {
+      "variation_id": "game_1_inn_08",
+      "story_idiom": "自相矛盾",
+      "emotion_class": "C",
+      "question_text": "有個賣兵器的人，一會兒說自己的盾天下最堅固，什麼都刺不穿，一會兒又說自己的矛最鋒利，什麼都能刺破。旁人忽然問一句：「那用你的矛刺你的盾，會怎樣？」他頓時站在那裡，嘴巴開了又合，像卡住一樣。唉，話說太滿，路就走窄了。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "gaan3_gaai3",
+        "jau6_ging1_jau6_hei2",
+        "bat1_gam1_sam1"
+      ],
+      "answer_restate": "此人感到的是尷尬。"
+    },
+    {
+      "variation_id": "game_1_inn_09",
+      "story_idiom": "杯弓蛇影",
+      "emotion_class": "C",
+      "question_text": "有個人晚上喝酒，看見杯中有條影子，彎彎曲曲像蛇，嚇得差點把杯子丟掉。他明明怕得要命，卻又忍不住再看一眼，越看越覺得那條「蛇」在動，連手都在發抖。看一眼，身一抖；又看一眼，手又一抖。整晚一路抖震一路偷看。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "jau6_paa3_jau6_soeng2",
+        "gaan3_gaai3",
+        "bat1_gam1_sam1"
+      ],
+      "answer_restate": "此人感到的是又怕又想。"
+    },
+    {
+      "variation_id": "game_1_inn_10",
+      "story_idiom": "半途而廢",
+      "emotion_class": "C",
+      "question_text": "有個人學了一半的技藝，覺得太辛苦，就把工具一丟，說改天再說。可走到門口，他又回頭看了一眼，腳步停了又動，動了又停，好像還捨不得。老夫見過太多這樣的人，差一口氣，卻偏偏放下，想離開，又想回頭。你說，此人心裡是什麼感覺？",
+      "vocabulary_intro_ids": [
+        "bat1_gam1_sam1",
+        "gaan3_gaai3",
+        "jau6_paa3_jau6_soeng2"
+      ],
+      "answer_restate": "此人感到的是不甘心。"
+    }
+  ]
+}

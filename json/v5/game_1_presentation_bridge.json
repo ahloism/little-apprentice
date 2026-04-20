@@ -1,0 +1,331 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_bridge",
+  "character_assets": {
+    "edmund": {
+      "image": "edmund.png"
+    },
+    "margaret": {
+      "image": "margaret.png"
+    },
+    "edmund_margaret_reunion": {
+      "image": "edmund_margaret_reunion.png"
+    }
+  },
+  "vocabulary_assets": {
+    "dung": {
+      "audio": "vocab_dung.mp3"
+    },
+    "naam": {
+      "audio": "vocab_naam.mp3"
+    },
+    "sai": {
+      "audio": "vocab_sai.mp3"
+    },
+    "bak": {
+      "audio": "vocab_bak.mp3"
+    },
+    "zo2": {
+      "audio": "vocab_zo2.mp3"
+    },
+    "jau6": {
+      "audio": "vocab_jau6.mp3"
+    },
+    "cin4": {
+      "audio": "vocab_cin4.mp3"
+    },
+    "hau6": {
+      "audio": "vocab_hau6.mp3"
+    },
+    "ce4_deoi3_min6": {
+      "audio": "vocab_ce4_deoi3_min6.mp3"
+    },
+    "paak_bin1": {
+      "audio": "vocab_paak_bin1.mp3"
+    },
+    "deoi3_min6": {
+      "audio": "vocab_deoi3_min6.mp3"
+    },
+    "zung1_gaan1": {
+      "audio": "vocab_zung1_gaan1.mp3"
+    },
+    "fu6_gan6": {
+      "audio": "vocab_fu6_gan6.mp3"
+    },
+    "gaak3_lei4": {
+      "audio": "vocab_gaak3_lei4.mp3"
+    },
+    "zyun2_gok3": {
+      "audio": "vocab_zyun2_gok3.mp3"
+    },
+    "zeon2_tau4": {
+      "audio": "vocab_zeon2_tau4.mp3"
+    },
+    "jyun4_lou6": {
+      "audio": "vocab_jyun4_lou6.mp3"
+    },
+    "ce4_paak_bin1": {
+      "audio": "vocab_ce4_paak_bin1.mp3"
+    },
+    "mun4_hau2": {
+      "audio": "vocab_mun4_hau2.mp3"
+    },
+    "mun4_noi6": {
+      "audio": "vocab_mun4_noi6.mp3"
+    },
+    "jyun2_noi6": {
+      "audio": "vocab_jyun2_noi6.mp3"
+    },
+    "sing4_mun4_noi6": {
+      "audio": "vocab_sing4_mun4_noi6.mp3"
+    },
+    "sing4_mun4_ngoi6": {
+      "audio": "vocab_sing4_mun4_ngoi6.mp3"
+    },
+    "coeng4_ngoi6": {
+      "audio": "vocab_coeng4_ngoi6.mp3"
+    },
+    "kiu4_soeng6": {
+      "audio": "vocab_kiu4_soeng6.mp3"
+    },
+    "kiu4_haa6": {
+      "audio": "vocab_kiu4_haa6.mp3"
+    },
+    "kiu4_tau4": {
+      "audio": "vocab_kiu4_tau4.mp3"
+    },
+    "dim3_noi6": {
+      "audio": "vocab_dim3_noi6.mp3"
+    },
+    "dim3_ngoi6": {
+      "audio": "vocab_dim3_ngoi6.mp3"
+    },
+    "jim4_haa6": {
+      "audio": "vocab_jim4_haa6.mp3"
+    }
+  },
+  "option_assets": {
+    "opt_dung": {
+      "word": "東",
+      "caption": "東",
+      "audio": "option_dung.mp3"
+    },
+    "opt_naam": {
+      "word": "南",
+      "caption": "南",
+      "audio": "option_naam.mp3"
+    },
+    "opt_sai": {
+      "word": "西",
+      "caption": "西",
+      "audio": "option_sai.mp3"
+    },
+    "opt_bak": {
+      "word": "北",
+      "caption": "北",
+      "audio": "option_bak.mp3"
+    },
+    "opt_zo2": {
+      "word": "左",
+      "caption": "左",
+      "audio": "option_zo2.mp3"
+    },
+    "opt_jau6": {
+      "word": "右",
+      "caption": "右",
+      "audio": "option_jau6.mp3"
+    },
+    "opt_cin4": {
+      "word": "前",
+      "caption": "前",
+      "audio": "option_cin4.mp3"
+    },
+    "opt_hau6": {
+      "word": "後",
+      "caption": "後",
+      "audio": "option_hau6.mp3"
+    },
+    "opt_ce4_deoi3_min6": {
+      "word": "斜對面",
+      "caption": "斜對面",
+      "audio": "option_ce4_deoi3_min6.mp3"
+    },
+    "opt_paak_bin1": {
+      "word": "旁邊",
+      "caption": "旁邊",
+      "audio": "option_paak_bin1.mp3"
+    },
+    "opt_deoi3_min6": {
+      "word": "對面",
+      "caption": "對面",
+      "audio": "option_deoi3_min6.mp3"
+    },
+    "opt_zung1_gaan1": {
+      "word": "中間",
+      "caption": "中間",
+      "audio": "option_zung1_gaan1.mp3"
+    },
+    "opt_fu6_gan6": {
+      "word": "附近",
+      "caption": "附近",
+      "audio": "option_fu6_gan6.mp3"
+    },
+    "opt_gaak3_lei4": {
+      "word": "隔壁",
+      "caption": "隔壁",
+      "audio": "option_gaak3_lei4.mp3"
+    },
+    "opt_zyun2_gok3": {
+      "word": "轉角",
+      "caption": "轉角",
+      "audio": "option_zyun2_gok3.mp3"
+    },
+    "opt_zeon2_tau4": {
+      "word": "盡頭",
+      "caption": "盡頭",
+      "audio": "option_zeon2_tau4.mp3"
+    },
+    "opt_jyun4_lou6": {
+      "word": "沿路",
+      "caption": "沿路",
+      "audio": "option_jyun4_lou6.mp3"
+    },
+    "opt_ce4_paak_bin1": {
+      "word": "斜旁",
+      "caption": "斜旁",
+      "audio": "option_ce4_paak_bin1.mp3"
+    },
+    "opt_mun4_hau2": {
+      "word": "門口",
+      "caption": "門口",
+      "audio": "option_mun4_hau2.mp3"
+    },
+    "opt_mun4_noi6": {
+      "word": "門內",
+      "caption": "門內",
+      "audio": "option_mun4_noi6.mp3"
+    },
+    "opt_jyun2_noi6": {
+      "word": "院內",
+      "caption": "院內",
+      "audio": "option_jyun2_noi6.mp3"
+    },
+    "opt_sing4_mun4_noi6": {
+      "word": "城門內",
+      "caption": "城門內",
+      "audio": "option_sing4_mun4_noi6.mp3"
+    },
+    "opt_sing4_mun4_ngoi6": {
+      "word": "城門外",
+      "caption": "城門外",
+      "audio": "option_sing4_mun4_ngoi6.mp3"
+    },
+    "opt_coeng4_ngoi6": {
+      "word": "牆外",
+      "caption": "牆外",
+      "audio": "option_coeng4_ngoi6.mp3"
+    },
+    "opt_kiu4_soeng6": {
+      "word": "橋上",
+      "caption": "橋上",
+      "audio": "option_kiu4_soeng6.mp3"
+    },
+    "opt_kiu4_haa6": {
+      "word": "橋下",
+      "caption": "橋下",
+      "audio": "option_kiu4_haa6.mp3"
+    },
+    "opt_kiu4_tau4": {
+      "word": "橋頭",
+      "caption": "橋頭",
+      "audio": "option_kiu4_tau4.mp3"
+    },
+    "opt_dim3_noi6": {
+      "word": "店內",
+      "caption": "店內",
+      "audio": "option_dim3_noi6.mp3"
+    },
+    "opt_dim3_ngoi6": {
+      "word": "店外",
+      "caption": "店外",
+      "audio": "option_dim3_ngoi6.mp3"
+    },
+    "opt_jim4_haa6": {
+      "word": "簷下",
+      "caption": "簷下",
+      "audio": "option_jim4_haa6.mp3"
+    }
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_bridge_01",
+      "speaker_image": "edmund.png",
+      "scene_image": "bridge_scene_01.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "edmund_game_1_bridge_01.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_02",
+      "speaker_image": "margaret.png",
+      "scene_image": "bridge_scene_02.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "margaret_game_1_bridge_02.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_03",
+      "speaker_image": "edmund.png",
+      "scene_image": "bridge_scene_03.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "edmund_game_1_bridge_03.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_04",
+      "speaker_image": "margaret.png",
+      "scene_image": "bridge_scene_04.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "margaret_game_1_bridge_04.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_05",
+      "speaker_image": "edmund.png",
+      "scene_image": "bridge_scene_05.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "edmund_game_1_bridge_05.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_06",
+      "speaker_image": "margaret.png",
+      "scene_image": "bridge_scene_06.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "margaret_game_1_bridge_06.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_07",
+      "speaker_image": "edmund.png",
+      "scene_image": "bridge_scene_07.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "edmund_game_1_bridge_07.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_08",
+      "speaker_image": "margaret.png",
+      "scene_image": "bridge_scene_08.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "margaret_game_1_bridge_08.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_09",
+      "speaker_image": "edmund.png",
+      "scene_image": "bridge_scene_09.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "edmund_game_1_bridge_09.mp3"
+    },
+    {
+      "variation_id": "game_1_bridge_10",
+      "speaker_image": "margaret.png",
+      "scene_image": "bridge_scene_10.png",
+      "reunion_image": "edmund_margaret_reunion.png",
+      "question_audio": "margaret_game_1_bridge_10.mp3"
+    }
+  ]
+}

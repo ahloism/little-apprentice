@@ -1,0 +1,155 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_inn",
+  "character_assets": {
+    "dou_sin_saang": {
+      "image": "dou_sin_saang.png"
+    }
+  },
+  "vocabulary_assets": {
+    "hoi1_sam1": {
+      "image": "vocab_hoi1_sam1.png",
+      "audio": "vocab_hoi1_sam1.mp3"
+    },
+    "giu1_ngou6": {
+      "image": "vocab_giu1_ngou6.png",
+      "audio": "vocab_giu1_ngou6.mp3"
+    },
+    "gam2_gik1": {
+      "image": "vocab_gam2_gik1.png",
+      "audio": "vocab_gam2_gik1.mp3"
+    },
+    "hoi6_paa3": {
+      "image": "vocab_hoi6_paa3.png",
+      "audio": "vocab_hoi6_paa3.mp3"
+    },
+    "sam1_heoi1": {
+      "image": "vocab_sam1_heoi1.png",
+      "audio": "vocab_sam1_heoi1.mp3"
+    },
+    "daam1_sam1": {
+      "image": "vocab_daam1_sam1.png",
+      "audio": "vocab_daam1_sam1.mp3"
+    },
+    "jau6_ging1_jau6_hei2": {
+      "image": "vocab_jau6_ging1_jau6_hei2.png",
+      "audio": "vocab_jau6_ging1_jau6_hei2.mp3"
+    },
+    "gaan3_gaai3": {
+      "image": "vocab_gaan3_gaai3.png",
+      "audio": "vocab_gaan3_gaai3.mp3"
+    },
+    "jau6_paa3_jau6_soeng2": {
+      "image": "vocab_jau6_paa3_jau6_soeng2.png",
+      "audio": "vocab_jau6_paa3_jau6_soeng2.mp3"
+    },
+    "bat1_gam1_sam1": {
+      "image": "vocab_bat1_gam1_sam1.png",
+      "audio": "vocab_bat1_gam1_sam1.mp3"
+    }
+  },
+  "option_assets": {
+    "opt_hoi1_sam1": {
+      "word": "開心",
+      "caption": "開心",
+      "audio": "option_hoi1_sam1.mp3"
+    },
+    "opt_giu1_ngou6": {
+      "word": "驕傲",
+      "caption": "驕傲",
+      "audio": "option_giu1_ngou6.mp3"
+    },
+    "opt_gam2_gik1": {
+      "word": "感激",
+      "caption": "感激",
+      "audio": "option_gam2_gik1.mp3"
+    },
+    "opt_hoi6_paa3": {
+      "word": "害怕",
+      "caption": "害怕",
+      "audio": "option_hoi6_paa3.mp3"
+    },
+    "opt_sam1_heoi1": {
+      "word": "心虛",
+      "caption": "心虛",
+      "audio": "option_sam1_heoi1.mp3"
+    },
+    "opt_daam1_sam1": {
+      "word": "擔心",
+      "caption": "擔心",
+      "audio": "option_daam1_sam1.mp3"
+    },
+    "opt_jau6_ging1_jau6_hei2": {
+      "word": "又驚又喜",
+      "caption": "又驚又喜",
+      "audio": "option_jau6_ging1_jau6_hei2.mp3"
+    },
+    "opt_gaan3_gaai3": {
+      "word": "尷尬",
+      "caption": "尷尬",
+      "audio": "option_gaan3_gaai3.mp3"
+    },
+    "opt_jau6_paa3_jau6_soeng2": {
+      "word": "又怕又想",
+      "caption": "又怕又想",
+      "audio": "option_jau6_paa3_jau6_soeng2.mp3"
+    },
+    "opt_bat1_gam1_sam1": {
+      "word": "不甘心",
+      "caption": "不甘心",
+      "audio": "option_bat1_gam1_sam1.mp3"
+    }
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_inn_01",
+      "story_image": "inn_story_01.png",
+      "question_audio": "dou_sin_saang_game_1_inn_01.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_02",
+      "story_image": "inn_story_02.png",
+      "question_audio": "dou_sin_saang_game_1_inn_02.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_03",
+      "story_image": "inn_story_03.png",
+      "question_audio": "dou_sin_saang_game_1_inn_03.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_04",
+      "story_image": "inn_story_04.png",
+      "question_audio": "dou_sin_saang_game_1_inn_04.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_05",
+      "story_image": "inn_story_05.png",
+      "question_audio": "dou_sin_saang_game_1_inn_05.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_06",
+      "story_image": "inn_story_06.png",
+      "question_audio": "dou_sin_saang_game_1_inn_06.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_07",
+      "story_image": "inn_story_07.png",
+      "question_audio": "dou_sin_saang_game_1_inn_07.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_08",
+      "story_image": "inn_story_08.png",
+      "question_audio": "dou_sin_saang_game_1_inn_08.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_09",
+      "story_image": "inn_story_09.png",
+      "question_audio": "dou_sin_saang_game_1_inn_09.mp3"
+    },
+    {
+      "variation_id": "game_1_inn_10",
+      "story_image": "inn_story_10.png",
+      "question_audio": "dou_sin_saang_game_1_inn_10.mp3"
+    }
+  ]
+}

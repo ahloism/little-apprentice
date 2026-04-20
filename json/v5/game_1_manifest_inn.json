@@ -1,0 +1,135 @@
+{
+  "schema_version": "v5_1_minigame_01",
+  "game_id": "game_1_inn",
+  "game_type": "emotion_recognition",
+  "location": "inn",
+  "intro_behavior": {
+    "show_once_per_session": true
+  },
+  "flow": {
+    "retry": false,
+    "end_on_answer": true
+  },
+  "variations": [
+    {
+      "variation_id": "game_1_inn_01",
+      "type": "A",
+      "prompt_mode": "positive_emotion",
+      "distractor_mode": "same_positive_class",
+      "answer_option_id": "opt_hoi1_sam1",
+      "option_ids": [
+        "opt_hoi1_sam1",
+        "opt_giu1_ngou6",
+        "opt_gam2_gik1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_02",
+      "type": "A",
+      "prompt_mode": "positive_emotion",
+      "distractor_mode": "same_positive_class",
+      "answer_option_id": "opt_giu1_ngou6",
+      "option_ids": [
+        "opt_hoi1_sam1",
+        "opt_giu1_ngou6",
+        "opt_gam2_gik1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_03",
+      "type": "A",
+      "prompt_mode": "positive_emotion",
+      "distractor_mode": "same_positive_class",
+      "answer_option_id": "opt_gam2_gik1",
+      "option_ids": [
+        "opt_hoi1_sam1",
+        "opt_giu1_ngou6",
+        "opt_gam2_gik1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_04",
+      "type": "B",
+      "prompt_mode": "negative_emotion",
+      "distractor_mode": "same_negative_class",
+      "answer_option_id": "opt_hoi6_paa3",
+      "option_ids": [
+        "opt_hoi6_paa3",
+        "opt_sam1_heoi1",
+        "opt_daam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_05",
+      "type": "B",
+      "prompt_mode": "negative_emotion",
+      "distractor_mode": "same_negative_class",
+      "answer_option_id": "opt_sam1_heoi1",
+      "option_ids": [
+        "opt_hoi6_paa3",
+        "opt_sam1_heoi1",
+        "opt_daam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_06",
+      "type": "B",
+      "prompt_mode": "negative_emotion",
+      "distractor_mode": "same_negative_class",
+      "answer_option_id": "opt_daam1_sam1",
+      "option_ids": [
+        "opt_hoi6_paa3",
+        "opt_sam1_heoi1",
+        "opt_daam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_07",
+      "type": "C",
+      "prompt_mode": "complex_emotion",
+      "distractor_mode": "same_complex_class",
+      "answer_option_id": "opt_jau6_ging1_jau6_hei2",
+      "option_ids": [
+        "opt_jau6_ging1_jau6_hei2",
+        "opt_gaan3_gaai3",
+        "opt_bat1_gam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_08",
+      "type": "C",
+      "prompt_mode": "complex_emotion",
+      "distractor_mode": "same_complex_class",
+      "answer_option_id": "opt_gaan3_gaai3",
+      "option_ids": [
+        "opt_gaan3_gaai3",
+        "opt_jau6_ging1_jau6_hei2",
+        "opt_bat1_gam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_09",
+      "type": "C",
+      "prompt_mode": "complex_emotion",
+      "distractor_mode": "same_complex_class",
+      "answer_option_id": "opt_jau6_paa3_jau6_soeng2",
+      "option_ids": [
+        "opt_jau6_paa3_jau6_soeng2",
+        "opt_gaan3_gaai3",
+        "opt_bat1_gam1_sam1"
+      ]
+    },
+    {
+      "variation_id": "game_1_inn_10",
+      "type": "C",
+      "prompt_mode": "complex_emotion",
+      "distractor_mode": "same_complex_class",
+      "answer_option_id": "opt_bat1_gam1_sam1",
+      "option_ids": [
+        "opt_bat1_gam1_sam1",
+        "opt_gaan3_gaai3",
+        "opt_jau6_paa3_jau6_soeng2"
+      ]
+    }
+  ]
+}
