@@ -1,0 +1,71 @@
+{
+  "filename": "1_2_10_3.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "水",
+      "start_ms": 262.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "摸",
+      "start_ms": 475.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "摸",
+      "start_ms": 687.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "鼻子",
+      "start_ms": 875.0,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1587.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "小",
+      "start_ms": 1587.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "聲",
+      "start_ms": 1850.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "對",
+      "start_ms": 2075.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 2225.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 2475.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "說",
+      "start_ms": 2662.5,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "：",
+      "start_ms": 2987.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

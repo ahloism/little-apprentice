@@ -1,0 +1,46 @@
+{
+  "filename": "1_2_12_4.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "兩個",
+      "start_ms": 87.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "人",
+      "start_ms": 462.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "鑽進",
+      "start_ms": 675.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "人群",
+      "start_ms": 1075.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1825.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "不見",
+      "start_ms": 1825.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2237.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2575.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

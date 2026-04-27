@@ -1,0 +1,66 @@
+{
+  "filename": "vocab_fu6_gan6.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 50.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "應該",
+      "start_ms": 300.0,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "就",
+      "start_ms": 640.937,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "在",
+      "start_ms": 822.75,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "附近",
+      "start_ms": 970.437,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "，",
+      "start_ms": 1606.8119,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "不會",
+      "start_ms": 1709.062,
+      "duration_ms": 261.375
+    },
+    {
+      "word": "離",
+      "start_ms": 1970.437,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "我",
+      "start_ms": 2129.562,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "太",
+      "start_ms": 2288.625,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "遠",
+      "start_ms": 2515.937,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "。",
+      "start_ms": 2856.812,
+      "duration_ms": 79.562
+    }
+  ]
+}

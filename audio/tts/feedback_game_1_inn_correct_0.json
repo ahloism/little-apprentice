@@ -1,0 +1,36 @@
+{
+  "filename": "feedback_game_1_inn_correct_0.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "嗯",
+      "start_ms": 50.0,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "，",
+      "start_ms": 538.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "還",
+      "start_ms": 538.625,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "算",
+      "start_ms": 743.187,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "看得出來",
+      "start_ms": 925.0,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "。",
+      "start_ms": 1743.187,
+      "duration_ms": 79.562
+    }
+  ]
+}

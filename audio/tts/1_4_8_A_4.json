@@ -1,0 +1,26 @@
+{
+  "filename": "1_4_8_A_4.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "沒有",
+      "start_ms": 275.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "再說",
+      "start_ms": 637.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "。",
+      "start_ms": 1200.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "filename": "1_3_10_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "乖",
+      "start_ms": 262.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "走",
+      "start_ms": 475.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "了",
+      "start_ms": 687.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "沒",
+      "start_ms": 850.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "幾",
+      "start_ms": 1062.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "步",
+      "start_ms": 1237.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1737.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "旁邊",
+      "start_ms": 1737.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "一",
+      "start_ms": 2150.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "個",
+      "start_ms": 2275.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "小",
+      "start_ms": 2387.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "販招",
+      "start_ms": 2650.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "招手",
+      "start_ms": 3100.0,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3712.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

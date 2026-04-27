@@ -1,0 +1,61 @@
+{
+  "filename": "1_4_14_B_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "點",
+      "start_ms": 462.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "點頭",
+      "start_ms": 687.5,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1412.5,
+      "duration_ms": 37.5
+    },
+    {
+      "word": "繼續",
+      "start_ms": 1450.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "看下",
+      "start_ms": 1800.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "一",
+      "start_ms": 2212.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "個",
+      "start_ms": 2362.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "字",
+      "start_ms": 2487.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2862.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

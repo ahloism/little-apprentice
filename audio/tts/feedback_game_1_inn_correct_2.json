@@ -1,0 +1,46 @@
+{
+  "filename": "feedback_game_1_inn_correct_2.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "對了",
+      "start_ms": 50.0,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "，",
+      "start_ms": 709.062,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "這",
+      "start_ms": 902.25,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "點眼力",
+      "start_ms": 1084.0619,
+      "duration_ms": 454.562
+    },
+    {
+      "word": "還是",
+      "start_ms": 1538.625,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "有",
+      "start_ms": 1890.937,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "的",
+      "start_ms": 2038.625,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "。",
+      "start_ms": 2231.812,
+      "duration_ms": 79.562
+    }
+  ]
+}

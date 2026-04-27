@@ -1,0 +1,76 @@
+{
+  "filename": "1_3_5_A_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 87.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "見",
+      "start_ms": 262.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 462.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 700.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "看",
+      "start_ms": 900.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "著",
+      "start_ms": 1150.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "壺",
+      "start_ms": 1350.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1775.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "順手",
+      "start_ms": 1775.0,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "拍",
+      "start_ms": 2250.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "了",
+      "start_ms": 2475.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "拍",
+      "start_ms": 2612.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "它",
+      "start_ms": 2862.5,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "：",
+      "start_ms": 3187.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

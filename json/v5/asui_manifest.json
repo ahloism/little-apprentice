@@ -1,0 +1,276 @@
+{
+  "manifest_id": "asui_manifest",
+  "version": "2.0",
+  "rules": [
+    {
+      "rule_id": "auto_A1",
+      "dialogue_id": "A1",
+      "trigger_type": "auto",
+      "trigger_condition": "first_map_entry",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A2",
+      "dialogue_id": "A2",
+      "trigger_type": "auto",
+      "trigger_condition": "first_location_appear",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A3",
+      "dialogue_id": "A3",
+      "trigger_type": "auto",
+      "trigger_condition": "first_coins_earned",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A4",
+      "dialogue_id": "A4",
+      "trigger_type": "auto",
+      "trigger_condition": "first_unlock_available",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A5",
+      "dialogue_id": "A5",
+      "trigger_type": "auto",
+      "trigger_condition": "first_game_complete",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A6",
+      "dialogue_id": "A6",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_1",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A7",
+      "dialogue_id": "A7",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_2",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A8",
+      "dialogue_id": "A8",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_3",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A9",
+      "dialogue_id": "A9",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_4_choice_A",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A10",
+      "dialogue_id": "A10",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_4_choice_B",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A11",
+      "dialogue_id": "A11",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_4_choice_C",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A12",
+      "dialogue_id": "A12",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_5",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A13",
+      "dialogue_id": "A13",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_6",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A14",
+      "dialogue_id": "A14",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_7",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A15",
+      "dialogue_id": "A15",
+      "trigger_type": "auto",
+      "trigger_condition": "map_colored_gte_4",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_A16",
+      "dialogue_id": "A16",
+      "trigger_type": "auto",
+      "trigger_condition": "map_all_colored",
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T1",
+      "dialogue_ids": ["T1", "T2", "T3"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "main_story_incomplete",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T2",
+      "dialogue_ids": ["T4", "T5", "T6"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "unlock_available_coins_sufficient",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T3",
+      "dialogue_ids": ["T7", "T8", "T9"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "unlock_available_coins_insufficient",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T4",
+      "dialogue_ids": ["T10", "T11", "T12"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "all_unlocked_story_incomplete",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T5",
+      "dialogue_ids": ["T13", "T14", "T15"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "all_colored_story_complete",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "tap_T6",
+      "dialogue_ids": ["T16", "T17", "T18"],
+      "trigger_type": "tap_asui",
+      "trigger_condition": "any_location_colored AND every_3_taps",
+      "repeat": true,
+      "rotate": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R1",
+      "dialogue_id": "R1",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_warehouse_sufficient",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R2",
+      "dialogue_id": "R2",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_market_sufficient",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R3",
+      "dialogue_id": "R3",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_bridge_sufficient",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R4",
+      "dialogue_id": "R4",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_inn_sufficient",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R5",
+      "dialogue_id": "R5",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_dock_sufficient",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_R6",
+      "dialogue_id": "R6",
+      "trigger_type": "auto",
+      "trigger_condition": "tap_location_insufficient_coins",
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_G1",
+      "dialogue_id": "G1",
+      "trigger_type": "auto",
+      "trigger_condition": "first_minigame_entry",
+      "repeat": false,
+      "room": "minigame"
+    },
+    {
+      "rule_id": "auto_G2",
+      "dialogue_id": "G2",
+      "trigger_type": "auto",
+      "trigger_condition": "minigame_complete_good",
+      "repeat": true,
+      "room": "minigame"
+    },
+    {
+      "rule_id": "auto_G3",
+      "dialogue_id": "G3",
+      "trigger_type": "auto",
+      "trigger_condition": "minigame_complete_average",
+      "repeat": true,
+      "room": "minigame"
+    },
+    {
+      "rule_id": "auto_M1",
+      "dialogue_id": "M1",
+      "trigger_type": "auto",
+      "trigger_condition": "story_1_1_asui_appears",
+      "repeat": false,
+      "room": "story"
+    },
+    {
+      "rule_id": "auto_return",
+      "dialogue_id": "return_to_map",
+      "trigger_type": "auto",
+      "trigger_condition": "return_to_map",
+      "repeat": true,
+      "room": "map"
+    }
+  ]
+}

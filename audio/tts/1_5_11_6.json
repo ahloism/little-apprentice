@@ -1,0 +1,91 @@
+{
+  "filename": "1_5_11_6.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「不",
+      "start_ms": 50.0,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "識字",
+      "start_ms": 186.375,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "，",
+      "start_ms": 834.062,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "路",
+      "start_ms": 834.062,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "難行",
+      "start_ms": 1061.375,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "。",
+      "start_ms": 1572.75,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "老",
+      "start_ms": 2334.062,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "梁",
+      "start_ms": 2572.75,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "明白",
+      "start_ms": 2731.812,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "這個",
+      "start_ms": 3072.75,
+      "duration_ms": 272.687
+    },
+    {
+      "word": "道理",
+      "start_ms": 3345.437,
+      "duration_ms": 488.625
+    },
+    {
+      "word": "，",
+      "start_ms": 3959.062,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "所以",
+      "start_ms": 3959.062,
+      "duration_ms": 386.375
+    },
+    {
+      "word": "他",
+      "start_ms": 4345.437,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "學",
+      "start_ms": 4550.0,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "。",
+      "start_ms": 4777.25,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "」",
+      "start_ms": 4981.812,
+      "duration_ms": 79.562
+    }
+  ]
+}

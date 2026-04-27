@@ -1,0 +1,61 @@
+{
+  "filename": "1_1_7_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "邊",
+      "start_ms": 275.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "走",
+      "start_ms": 512.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "邊",
+      "start_ms": 712.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "撥",
+      "start_ms": 950.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1350.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "頭",
+      "start_ms": 1350.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "都",
+      "start_ms": 1600.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "沒有",
+      "start_ms": 1737.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "抬",
+      "start_ms": 2137.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2537.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "filename": "1_4_9_6.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「梅",
+      "start_ms": 41.687,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "姐",
+      "start_ms": 197.937,
+      "duration_ms": 197.875
+    },
+    {
+      "word": "一直",
+      "start_ms": 395.812,
+      "duration_ms": 302.062
+    },
+    {
+      "word": "在",
+      "start_ms": 697.937,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "這裡",
+      "start_ms": 916.687,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1458.3119,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "老",
+      "start_ms": 1864.562,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "梁",
+      "start_ms": 2093.75,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "叫",
+      "start_ms": 2302.062,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "她",
+      "start_ms": 2510.437,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "幫手",
+      "start_ms": 2729.187,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "，",
+      "start_ms": 3281.25,
+      "duration_ms": 41.687000000000005
+    },
+    {
+      "word": "她",
+      "start_ms": 3468.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "應該",
+      "start_ms": 3729.187,
+      "duration_ms": 364.562
+    },
+    {
+      "word": "知道",
+      "start_ms": 4114.562,
+      "duration_ms": 489.562
+    },
+    {
+      "word": "。」",
+      "start_ms": 4604.187,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

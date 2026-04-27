@@ -1,0 +1,273 @@
+{
+  "presentation_id": "story_1_6",
+  "default_bgm": "bgm_01",
+  "default_advance_label": "繼續",
+  "default_voice_mode": "narration",
+  "default_highlight": "line",
+  "notebook_overlay": {
+    "mode": "dynamic_accumulation",
+    "trigger": "mid_or_end_of_event"
+  },
+  "scenes": [
+    {
+      "scene_id": "1_6_1",
+      "image": "S16",
+      "bgm": "bgm_01",
+      "audio": {
+        "lines": [
+          "1_6_1_0.mp3",
+          "1_6_1_1.mp3",
+          "1_6_1_2.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_2",
+      "image": "S16",
+      "audio": {
+        "lines": [
+          "1_6_2_0.mp3"
+        ],
+        "question": "1_6_2_q.mp3",
+        "choices": [
+          "1_6_2_c_0.mp3",
+          "1_6_2_c_1.mp3",
+          "1_6_2_c_2.mp3"
+        ]
+      }
+    },
+    {
+      "scene_id": "1_6_2_A",
+      "image": "S16",
+      "audio": {
+        "lines": [
+          "1_6_2_A_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_2_B",
+      "image": "S16",
+      "audio": {
+        "lines": [
+          "1_6_2_B_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_2_C",
+      "image": "S16",
+      "audio": {
+        "lines": [
+          "1_6_2_C_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_3",
+      "image": "C04",
+      "image_cues": [
+        {
+          "trigger_line_index": 2,
+          "image": "C09"
+        }
+      ],
+      "audio": {
+        "lines": [
+          "1_6_3_0.mp3",
+          "1_6_3_1.mp3",
+          "1_6_3_2.mp3",
+          "1_6_3_3.mp3",
+          "1_6_3_4.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_4",
+      "image": "C09",
+      "audio": {
+        "lines": [
+          "1_6_4_0.mp3"
+        ],
+        "question": "1_6_4_q.mp3",
+        "choices": [
+          "1_6_4_c_0.mp3",
+          "1_6_4_c_1.mp3",
+          "1_6_4_c_2.mp3"
+        ]
+      }
+    },
+    {
+      "scene_id": "1_6_4_A",
+      "image": "O23",
+      "audio": {
+        "lines": [
+          "1_6_4_A_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_4_B",
+      "image": "C09",
+      "audio": {
+        "lines": [
+          "1_6_4_B_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_4_C",
+      "image": "C09",
+      "audio": {
+        "lines": [
+          "1_6_4_C_0.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_5",
+      "image": "C09",
+      "audio": {
+        "lines": [
+          "1_6_5_0.mp3",
+          "1_6_5_1.mp3",
+          "1_6_5_2.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_6",
+      "image": "C09",
+      "image_cues": [
+        {
+          "trigger_line_index": 2,
+          "image": "C04"
+        }
+      ],
+      "audio": {
+        "lines": [
+          "1_6_6_0.mp3",
+          "1_6_6_1.mp3",
+          "1_6_6_2.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_7",
+      "image": "C09",
+      "audio": {
+        "lines": [
+          "1_6_7_0.mp3",
+          "1_6_7_1.mp3",
+          "1_6_7_2.mp3"
+        ],
+        "question": "1_6_7_q.mp3",
+        "choices": [
+          "1_6_7_c_0.mp3",
+          "1_6_7_c_1.mp3",
+          "1_6_7_c_2.mp3"
+        ]
+      }
+    },
+    {
+      "scene_id": "1_6_8",
+      "image": "C04",
+      "audio": {
+        "lines": [
+          "1_6_8_0.mp3",
+          "1_6_8_1.mp3",
+          "1_6_8_2.mp3",
+          "1_6_8_3.mp3",
+          "1_6_8_4.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_9",
+      "image": "C04",
+      "audio": {
+        "lines": [
+          "1_6_9_0.mp3",
+          "1_6_9_1.mp3",
+          "1_6_9_2.mp3",
+          "1_6_9_3.mp3",
+          "1_6_9_4.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_10",
+      "image": "C04",
+      "audio": {
+        "lines": [
+          "1_6_10_0.mp3",
+          "1_6_10_1.mp3",
+          "1_6_10_2.mp3",
+          "1_6_10_3.mp3",
+          "1_6_10_4.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_11",
+      "image": "C09",
+      "image_cues": [
+        {
+          "trigger_line_index": 2,
+          "image": "O25"
+        }
+      ],
+      "audio": {
+        "lines": [
+          "1_6_11_0.mp3",
+          "1_6_11_1.mp3",
+          "1_6_11_2.mp3",
+          "1_6_11_3.mp3",
+          "1_6_11_4.mp3",
+          "1_6_11_5.mp3",
+          "1_6_11_6.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    },
+    {
+      "scene_id": "1_6_12",
+      "image": "S16",
+      "audio": {
+        "lines": [
+          "1_6_12_0.mp3",
+          "1_6_12_1.mp3"
+        ],
+        "question": null,
+        "choices": []
+      }
+    }
+  ]
+}

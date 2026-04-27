@@ -1,0 +1,56 @@
+{
+  "filename": "nb_1_4_lp_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "家",
+      "start_ms": 75.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "——",
+      "start_ms": 550.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "住",
+      "start_ms": 550.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "的",
+      "start_ms": 762.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "地方",
+      "start_ms": 900.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1637.5,
+      "duration_ms": 50.0
+    },
+    {
+      "word": "家人",
+      "start_ms": 1687.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "在",
+      "start_ms": 2100.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2262.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "地方",
+      "start_ms": 2387.5,
+      "duration_ms": 662.5
+    }
+  ]
+}

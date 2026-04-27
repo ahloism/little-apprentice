@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_cotton.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "白白",
+      "start_ms": 75.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "蓬鬆",
+      "start_ms": 462.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1137.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "能",
+      "start_ms": 1137.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "塞",
+      "start_ms": 1350.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "枕頭",
+      "start_ms": 1575.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "和",
+      "start_ms": 2000.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "做",
+      "start_ms": 2200.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "衣服",
+      "start_ms": 2400.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2775.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "料",
+      "start_ms": 2912.5,
+      "duration_ms": 362.5
+    }
+  ]
+}

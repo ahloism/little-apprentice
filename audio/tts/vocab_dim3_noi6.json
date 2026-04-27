@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_dim3_noi6.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 109.375,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "在",
+      "start_ms": 328.125,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "店",
+      "start_ms": 578.125,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "內",
+      "start_ms": 875.0,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "，",
+      "start_ms": 1484.375,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "進",
+      "start_ms": 1484.375,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "了",
+      "start_ms": 1750.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "鋪",
+      "start_ms": 1937.5,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "子",
+      "start_ms": 2234.375,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "裡面",
+      "start_ms": 2484.375,
+      "duration_ms": 859.375
+    },
+    {
+      "word": "。",
+      "start_ms": 3343.75,
+      "duration_ms": 109.375
+    }
+  ]
+}

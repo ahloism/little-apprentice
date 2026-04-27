@@ -1,0 +1,86 @@
+{
+  "filename": "1_3_1_3.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "河上",
+      "start_ms": 87.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "有",
+      "start_ms": 512.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "船",
+      "start_ms": 687.5,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1250.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "大",
+      "start_ms": 1250.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1437.5,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "小",
+      "start_ms": 1537.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1800.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2137.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "順流",
+      "start_ms": 2137.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "逆流",
+      "start_ms": 2575.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3237.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "來",
+      "start_ms": 3237.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "來",
+      "start_ms": 3475.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "往往",
+      "start_ms": 3662.5,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4362.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

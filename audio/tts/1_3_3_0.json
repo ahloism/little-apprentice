@@ -1,0 +1,61 @@
+{
+  "filename": "1_3_3_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "兩人",
+      "start_ms": 87.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "還",
+      "start_ms": 487.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "沒",
+      "start_ms": 687.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "走到",
+      "start_ms": 850.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "攤檔",
+      "start_ms": 1200.0,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2000.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 2000.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "水",
+      "start_ms": 2250.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "突然",
+      "start_ms": 2450.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "停下來",
+      "start_ms": 2775.0,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3525.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

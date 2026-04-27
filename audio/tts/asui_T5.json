@@ -1,0 +1,76 @@
+{
+  "filename": "asui_T5.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "你",
+      "start_ms": 43.75,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "有",
+      "start_ms": 189.562,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "銅錢",
+      "start_ms": 397.937,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "，",
+      "start_ms": 929.187,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "去",
+      "start_ms": 1262.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "過",
+      "start_ms": 1470.8119,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "的",
+      "start_ms": 1679.187,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "地方",
+      "start_ms": 1804.187,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "還有",
+      "start_ms": 2262.5,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "小",
+      "start_ms": 2700.0,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "任務",
+      "start_ms": 2939.562,
+      "duration_ms": 385.43699999999995
+    },
+    {
+      "word": "等",
+      "start_ms": 3335.437,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "著",
+      "start_ms": 3512.5,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "。",
+      "start_ms": 3804.187,
+      "duration_ms": 0.0
+    }
+  ]
+}

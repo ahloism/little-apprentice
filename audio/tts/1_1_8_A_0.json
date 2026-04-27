@@ -1,0 +1,51 @@
+{
+  "filename": "1_1_8_A_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "算盤",
+      "start_ms": 87.5,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "在",
+      "start_ms": 562.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "錢伯手",
+      "start_ms": 725.0,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 1400.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "像",
+      "start_ms": 1625.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "活",
+      "start_ms": 1925.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2050.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "一樣",
+      "start_ms": 2150.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2775.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

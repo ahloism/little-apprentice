@@ -1,0 +1,66 @@
+{
+  "filename": "1_7_3_1.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「這是",
+      "start_ms": 55.562,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "你",
+      "start_ms": 597.25,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "今天",
+      "start_ms": 861.125,
+      "duration_ms": 541.625
+    },
+    {
+      "word": "送",
+      "start_ms": 1402.75,
+      "duration_ms": 305.562
+    },
+    {
+      "word": "的",
+      "start_ms": 1722.25,
+      "duration_ms": 236.06199999999998
+    },
+    {
+      "word": "第一",
+      "start_ms": 1958.312,
+      "duration_ms": 472.25
+    },
+    {
+      "word": "樣",
+      "start_ms": 2430.562,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "貨",
+      "start_ms": 2708.312,
+      "duration_ms": 430.562
+    },
+    {
+      "word": "，",
+      "start_ms": 3180.562,
+      "duration_ms": 55.562
+    },
+    {
+      "word": "叫",
+      "start_ms": 3444.437,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "什麼",
+      "start_ms": 3736.125,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "？」",
+      "start_ms": 4375.0,
+      "duration_ms": 13.875
+    }
+  ]
+}

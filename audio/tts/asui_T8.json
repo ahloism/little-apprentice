@@ -1,0 +1,81 @@
+{
+  "filename": "asui_T8.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "想",
+      "start_ms": 43.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "解鎖",
+      "start_ms": 304.187,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "要",
+      "start_ms": 741.687,
+      "duration_ms": 197.875
+    },
+    {
+      "word": "有",
+      "start_ms": 939.562,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "銅錢",
+      "start_ms": 1137.5,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "——",
+      "start_ms": 1710.437,
+      "duration_ms": 10.437
+    },
+    {
+      "word": "先",
+      "start_ms": 2158.312,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "繼續",
+      "start_ms": 2397.937,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "冒險",
+      "start_ms": 2772.937,
+      "duration_ms": 479.18699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 3304.187,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "賺",
+      "start_ms": 3637.5,
+      "duration_ms": 260.43699999999995
+    },
+    {
+      "word": "多",
+      "start_ms": 3897.937,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "一點",
+      "start_ms": 4075.0,
+      "duration_ms": 333.312
+    },
+    {
+      "word": "再說",
+      "start_ms": 4408.312,
+      "duration_ms": 510.437
+    },
+    {
+      "word": "。",
+      "start_ms": 4918.75,
+      "duration_ms": 0.0
+    }
+  ]
+}

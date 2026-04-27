@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_yardlong_bean.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "細",
+      "start_ms": 87.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "細長",
+      "start_ms": 312.5,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "長",
+      "start_ms": 800.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1325.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一條",
+      "start_ms": 1325.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "條",
+      "start_ms": 1675.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "垂下",
+      "start_ms": 1875.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "來",
+      "start_ms": 2312.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2487.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "菜",
+      "start_ms": 2625.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3012.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

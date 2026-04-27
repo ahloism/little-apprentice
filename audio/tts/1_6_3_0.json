@@ -1,0 +1,91 @@
+{
+  "filename": "1_6_3_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "正東",
+      "start_ms": 450.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "張西",
+      "start_ms": 900.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "望",
+      "start_ms": 1337.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1850.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "忽然",
+      "start_ms": 1850.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "看到",
+      "start_ms": 2212.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "一",
+      "start_ms": 2587.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "個",
+      "start_ms": 2725.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "熟悉",
+      "start_ms": 2825.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3150.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "背影",
+      "start_ms": 3300.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "——",
+      "start_ms": 3987.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "是",
+      "start_ms": 3987.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "石頭",
+      "start_ms": 4212.5,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4800.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

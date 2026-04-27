@@ -1,0 +1,21 @@
+{
+  "filename": "1_7_5_A_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "錢平",
+      "start_ms": 87.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "搖頭",
+      "start_ms": 550.0,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1150.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

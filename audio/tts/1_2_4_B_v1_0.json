@@ -1,0 +1,76 @@
+{
+  "filename": "1_2_4_B_v1_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "那些",
+      "start_ms": 87.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "繩子",
+      "start_ms": 462.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "粗",
+      "start_ms": 875.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "細",
+      "start_ms": 1087.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "不同",
+      "start_ms": 1300.0,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1975.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "布料",
+      "start_ms": 2075.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "顏色",
+      "start_ms": 2425.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "也",
+      "start_ms": 2825.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "比",
+      "start_ms": 2975.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "商行",
+      "start_ms": 3137.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "的",
+      "start_ms": 3575.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "多",
+      "start_ms": 3712.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4050.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

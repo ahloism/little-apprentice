@@ -1,0 +1,36 @@
+{
+  "filename": "1_2_11_4.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「差不多",
+      "start_ms": 43.75,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "了",
+      "start_ms": 585.437,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "，",
+      "start_ms": 845.812,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "走",
+      "start_ms": 929.187,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "啦",
+      "start_ms": 1189.5619,
+      "duration_ms": 260.43699999999995
+    },
+    {
+      "word": "！」",
+      "start_ms": 1481.25,
+      "duration_ms": 20.812
+    }
+  ]
+}

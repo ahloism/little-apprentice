@@ -1,0 +1,426 @@
+{
+  "filename": "dou_sin_saang_game_1_inn_04.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "有",
+      "start_ms": 50.0,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "個人",
+      "start_ms": 277.25,
+      "duration_ms": 295.437
+    },
+    {
+      "word": "想",
+      "start_ms": 572.75,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "偷",
+      "start_ms": 765.937,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "門",
+      "start_ms": 925.0,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "口",
+      "start_ms": 1106.8119,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "的",
+      "start_ms": 1265.9369,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "鈴鐺",
+      "start_ms": 1368.1869,
+      "duration_ms": 284.06199999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 1777.25,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "卻",
+      "start_ms": 1856.812,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "怕",
+      "start_ms": 2050.0,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "一",
+      "start_ms": 2220.437,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "拿",
+      "start_ms": 2322.75,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "就",
+      "start_ms": 2493.187,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "響",
+      "start_ms": 2652.25,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "，",
+      "start_ms": 3106.812,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "被",
+      "start_ms": 3106.812,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "人",
+      "start_ms": 3277.25,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "發現",
+      "start_ms": 3436.375,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3936.375,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "他",
+      "start_ms": 4697.75,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "想",
+      "start_ms": 4925.0,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "了",
+      "start_ms": 5118.187,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "想",
+      "start_ms": 5220.437,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 5720.437,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "居然",
+      "start_ms": 5822.75,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "用",
+      "start_ms": 6140.937,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "手",
+      "start_ms": 6288.625,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "把",
+      "start_ms": 6470.437,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "自己",
+      "start_ms": 6629.562,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "的",
+      "start_ms": 6947.75,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "耳朵",
+      "start_ms": 7095.437,
+      "duration_ms": 284.06199999999995
+    },
+    {
+      "word": "捂",
+      "start_ms": 7379.562,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "住",
+      "start_ms": 7561.375,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "，",
+      "start_ms": 8015.937,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "還",
+      "start_ms": 8015.937,
+      "duration_ms": 204.5
+    },
+    {
+      "word": "試",
+      "start_ms": 8220.437,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "了",
+      "start_ms": 8390.937,
+      "duration_ms": 136.31199999999998
+    },
+    {
+      "word": "兩",
+      "start_ms": 8527.25,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "下",
+      "start_ms": 8709.062,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "，",
+      "start_ms": 9163.625,
+      "duration_ms": 90.937
+    },
+    {
+      "word": "確定",
+      "start_ms": 9254.562,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "自己",
+      "start_ms": 9606.812,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "聽",
+      "start_ms": 9879.562,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "不到",
+      "start_ms": 10095.437,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "聲音",
+      "start_ms": 10334.062,
+      "duration_ms": 443.187
+    },
+    {
+      "word": "，",
+      "start_ms": 10902.25,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "才",
+      "start_ms": 10902.25,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "小心翼翼",
+      "start_ms": 11118.187,
+      "duration_ms": 647.75
+    },
+    {
+      "word": "去",
+      "start_ms": 11765.937,
+      "duration_ms": 136.31199999999998
+    },
+    {
+      "word": "動手",
+      "start_ms": 11902.25,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "。",
+      "start_ms": 12402.25,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "動作",
+      "start_ms": 13163.625,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "慢",
+      "start_ms": 13538.625,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "得",
+      "start_ms": 13720.437,
+      "duration_ms": 90.937
+    },
+    {
+      "word": "像",
+      "start_ms": 13811.375,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "在",
+      "start_ms": 14015.937,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "拆",
+      "start_ms": 14163.625,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "炸彈",
+      "start_ms": 14345.437,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "，",
+      "start_ms": 14981.812,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "還",
+      "start_ms": 14981.812,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "不時",
+      "start_ms": 15209.062,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "回頭",
+      "start_ms": 15481.812,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "看",
+      "start_ms": 15845.437,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "。",
+      "start_ms": 16209.062,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "老夫",
+      "start_ms": 16970.437,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "說到",
+      "start_ms": 17345.437,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "這裡",
+      "start_ms": 17663.625,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "，",
+      "start_ms": 18288.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "都",
+      "start_ms": 18288.625,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "替",
+      "start_ms": 18447.75,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "他",
+      "start_ms": 18640.937,
+      "duration_ms": 204.5
+    },
+    {
+      "word": "緊張",
+      "start_ms": 18845.437,
+      "duration_ms": 534.062
+    },
+    {
+      "word": "。",
+      "start_ms": 19425.0,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "你",
+      "start_ms": 20186.375,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "說",
+      "start_ms": 20402.25,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 20834.062,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "此",
+      "start_ms": 20834.062,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "人",
+      "start_ms": 21038.625,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "心裡",
+      "start_ms": 21175.0,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "是",
+      "start_ms": 21493.187,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "什麼",
+      "start_ms": 21686.375,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "感覺",
+      "start_ms": 22004.562,
+      "duration_ms": 454.5
+    },
+    {
+      "word": "？",
+      "start_ms": 22459.062,
+      "duration_ms": 79.562
+    }
+  ]
+}

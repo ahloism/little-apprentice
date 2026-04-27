@@ -1,0 +1,101 @@
+{
+  "filename": "1_7_11_1.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「大",
+      "start_ms": 50.0,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "梁",
+      "start_ms": 393.75,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "城",
+      "start_ms": 628.125,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "的",
+      "start_ms": 846.875,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "人",
+      "start_ms": 1003.125,
+      "duration_ms": 390.625
+    },
+    {
+      "word": "，",
+      "start_ms": 1487.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "有",
+      "start_ms": 1487.5,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "可信",
+      "start_ms": 1768.75,
+      "duration_ms": 718.75
+    },
+    {
+      "word": "，",
+      "start_ms": 2612.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "有",
+      "start_ms": 2612.5,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "不可",
+      "start_ms": 2909.375,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "信",
+      "start_ms": 3362.5,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "。",
+      "start_ms": 3846.875,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "你",
+      "start_ms": 4893.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "要",
+      "start_ms": 5175.0,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "學會",
+      "start_ms": 5378.125,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "分辨",
+      "start_ms": 5893.75,
+      "duration_ms": 718.75
+    },
+    {
+      "word": "。",
+      "start_ms": 6831.25,
+      "duration_ms": 546.875
+    },
+    {
+      "word": "」",
+      "start_ms": 7378.125,
+      "duration_ms": 109.375
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "filename": "1_6_8_7.mp3",
+  "speaker": "老梁",
+  "words": [
+    {
+      "word": "「知道",
+      "start_ms": 50.0,
+      "duration_ms": 364.562
+    },
+    {
+      "word": "錯",
+      "start_ms": 414.562,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "了",
+      "start_ms": 622.937,
+      "duration_ms": 135.375
+    },
+    {
+      "word": "就",
+      "start_ms": 758.312,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "好",
+      "start_ms": 914.562,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "。",
+      "start_ms": 1393.75,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "」",
+      "start_ms": 1581.25,
+      "duration_ms": 72.937
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "filename": "1_6_4_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "老",
+      "start_ms": 87.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "梁",
+      "start_ms": 262.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "摘",
+      "start_ms": 512.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "下",
+      "start_ms": 675.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "草帽",
+      "start_ms": 862.5,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1587.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "拿",
+      "start_ms": 1587.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "在",
+      "start_ms": 1812.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "手",
+      "start_ms": 2000.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "裡",
+      "start_ms": 2212.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "扇",
+      "start_ms": 2387.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "了",
+      "start_ms": 2637.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "扇",
+      "start_ms": 2787.5,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3350.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "說話",
+      "start_ms": 3350.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "的",
+      "start_ms": 3762.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "時候",
+      "start_ms": 3850.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 4237.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "笑",
+      "start_ms": 4662.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "著",
+      "start_ms": 4900.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "。",
+      "start_ms": 5200.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

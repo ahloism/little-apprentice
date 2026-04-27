@@ -1,0 +1,71 @@
+{
+  "filename": "1_3_11_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "拿起",
+      "start_ms": 262.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "攤子",
+      "start_ms": 662.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "上",
+      "start_ms": 1087.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "一把",
+      "start_ms": 1325.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "草繩",
+      "start_ms": 1625.0,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2350.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "遞",
+      "start_ms": 2350.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "到",
+      "start_ms": 2512.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "阿",
+      "start_ms": 2675.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 2937.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "面前",
+      "start_ms": 3087.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "：",
+      "start_ms": 3762.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

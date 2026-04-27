@@ -1,0 +1,46 @@
+{
+  "filename": "1_6_3_6.mp3",
+  "speaker": "老梁",
+  "words": [
+    {
+      "word": "「哎呀",
+      "start_ms": 50.0,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "，",
+      "start_ms": 622.937,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "是",
+      "start_ms": 622.937,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "商行",
+      "start_ms": 831.25,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "的",
+      "start_ms": 1237.5,
+      "duration_ms": 83.312
+    },
+    {
+      "word": "孩子",
+      "start_ms": 1320.8119,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "！",
+      "start_ms": 1935.437,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "」",
+      "start_ms": 2122.937,
+      "duration_ms": 72.937
+    }
+  ]
+}

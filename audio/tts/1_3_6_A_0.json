@@ -1,0 +1,21 @@
+{
+  "filename": "1_3_6_A_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "把",
+      "start_ms": 500.0,
+      "duration_ms": 400.0
+    }
+  ]
+}

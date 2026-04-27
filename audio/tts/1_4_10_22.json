@@ -1,0 +1,71 @@
+{
+  "filename": "1_4_10_22.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "笑",
+      "start_ms": 87.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "完",
+      "start_ms": 375.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "，",
+      "start_ms": 925.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "他",
+      "start_ms": 925.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "拍拍",
+      "start_ms": 1137.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "阿",
+      "start_ms": 1575.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 1762.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1925.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "肩膀",
+      "start_ms": 2062.5,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2812.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "收",
+      "start_ms": 2812.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "起笑",
+      "start_ms": 3087.5,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3675.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

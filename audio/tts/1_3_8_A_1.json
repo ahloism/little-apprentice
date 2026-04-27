@@ -1,0 +1,91 @@
+{
+  "filename": "1_3_8_A_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 275.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "心想",
+      "start_ms": 437.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1187.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "這個",
+      "start_ms": 1187.5,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "人",
+      "start_ms": 1537.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "家裡",
+      "start_ms": 1750.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "應該",
+      "start_ms": 2100.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "不窮",
+      "start_ms": 2437.5,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3100.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "但",
+      "start_ms": 3100.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "好像",
+      "start_ms": 3312.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "不",
+      "start_ms": 3712.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "太",
+      "start_ms": 3837.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "愛",
+      "start_ms": 4062.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "整齊",
+      "start_ms": 4287.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4862.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

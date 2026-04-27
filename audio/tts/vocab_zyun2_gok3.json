@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_zyun2_gok3.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 50.0,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "應該",
+      "start_ms": 288.625,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "在",
+      "start_ms": 629.562,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "轉角",
+      "start_ms": 788.625,
+      "duration_ms": 454.562
+    },
+    {
+      "word": "，",
+      "start_ms": 1368.1869,
+      "duration_ms": 22.75
+    },
+    {
+      "word": "拐",
+      "start_ms": 1390.9369,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "過去",
+      "start_ms": 1618.1869,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "就",
+      "start_ms": 1947.75,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "會",
+      "start_ms": 2118.187,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "看到",
+      "start_ms": 2265.937,
+      "duration_ms": 534.062
+    },
+    {
+      "word": "。",
+      "start_ms": 2811.375,
+      "duration_ms": 79.562
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "filename": "1_1_14_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "把",
+      "start_ms": 462.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "糖葫蘆",
+      "start_ms": 687.5,
+      "duration_ms": 662.5
+    },
+    {
+      "word": "放進",
+      "start_ms": 1350.0,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "包裹",
+      "start_ms": 1812.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2537.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "走出",
+      "start_ms": 2537.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "倉庫",
+      "start_ms": 2925.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3512.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

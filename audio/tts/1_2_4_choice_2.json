@@ -1,0 +1,106 @@
+{
+  "filename": "1_2_4_c_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "前面",
+      "start_ms": 87.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "有人",
+      "start_ms": 462.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "在",
+      "start_ms": 825.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "買菜",
+      "start_ms": 975.0,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1775.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "來",
+      "start_ms": 1775.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "來",
+      "start_ms": 2000.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "回",
+      "start_ms": 2187.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "回",
+      "start_ms": 2337.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "說",
+      "start_ms": 2550.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2787.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "好幾",
+      "start_ms": 2937.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "句",
+      "start_ms": 3350.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "——",
+      "start_ms": 3850.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "做生意",
+      "start_ms": 3850.0,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "原來",
+      "start_ms": 4487.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "是",
+      "start_ms": 4825.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "這樣",
+      "start_ms": 5000.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "的",
+      "start_ms": 5450.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "？",
+      "start_ms": 5650.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

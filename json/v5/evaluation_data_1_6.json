@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_6",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "vocabulary",
-        "content": "貨單——記錄貨物數量的紙"
-      },
-      {
-        "type": "concept",
-        "content": "誠實——做錯了事，主動說出來，不推卸給別人"
-      },
-      {
-        "type": "concept",
-        "content": "石頭的善意——默默把花生撿起保管，行動比說話更有力量"
-      }
-    ],
-    "anchor_image": "C04"
-  },
   "scenes": [
     {
       "scene_id": "1_6_2",

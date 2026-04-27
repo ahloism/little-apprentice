@@ -1,0 +1,21 @@
+{
+  "filename": "1_5_5_10.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「信",
+      "start_ms": 50.0,
+      "duration_ms": 431.81199999999995
+    },
+    {
+      "word": "？",
+      "start_ms": 663.625,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "」",
+      "start_ms": 765.937,
+      "duration_ms": 79.562
+    }
+  ]
+}

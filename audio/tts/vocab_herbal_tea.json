@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_herbal_tea.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "草藥",
+      "start_ms": 87.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "熬",
+      "start_ms": 500.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "成",
+      "start_ms": 700.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1237.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "喝",
+      "start_ms": 1237.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "起來",
+      "start_ms": 1487.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "清涼",
+      "start_ms": 1862.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2300.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "茶",
+      "start_ms": 2425.0,
+      "duration_ms": 362.5
+    }
+  ]
+}

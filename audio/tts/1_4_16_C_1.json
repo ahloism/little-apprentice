@@ -1,0 +1,51 @@
+{
+  "filename": "1_4_16_C_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「是",
+      "start_ms": 43.75,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "心裡",
+      "start_ms": 252.062,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "很",
+      "start_ms": 689.562,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "趕",
+      "start_ms": 887.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1293.75,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "事情",
+      "start_ms": 1533.3119,
+      "duration_ms": 447.93699999999995
+    },
+    {
+      "word": "來不及",
+      "start_ms": 2012.5,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "了",
+      "start_ms": 2554.187,
+      "duration_ms": 302.062
+    },
+    {
+      "word": "。」",
+      "start_ms": 2856.25,
+      "duration_ms": 31.25
+    }
+  ]
+}

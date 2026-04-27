@@ -1,0 +1,91 @@
+{
+  "filename": "1_6_2_c_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "搬貨",
+      "start_ms": 75.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "的",
+      "start_ms": 450.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "人",
+      "start_ms": 575.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1100.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "肩膀",
+      "start_ms": 1100.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "寬",
+      "start_ms": 1600.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2050.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "手掌",
+      "start_ms": 2050.0,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "大",
+      "start_ms": 2587.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3050.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "步子",
+      "start_ms": 3050.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "很",
+      "start_ms": 3437.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "穩",
+      "start_ms": 3662.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 4112.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 4112.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "不看",
+      "start_ms": 4550.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "腳",
+      "start_ms": 4912.5,
+      "duration_ms": 287.5
+    }
+  ]
+}

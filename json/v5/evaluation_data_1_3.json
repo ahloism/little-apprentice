@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_3",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "vocabulary",
-        "content": "糞——很臭不乾淨的東西，字形下面有個田字"
-      },
-      {
-        "type": "concept",
-        "content": "有私心的人說的話，要小心"
-      },
-      {
-        "type": "concept",
-        "content": "梅姐最可信——她就在攤檔旁邊，老梁去哪她最清楚"
-      }
-    ],
-    "anchor_image": "W01"
-  },
   "scenes": [
     {
       "scene_id": "1_3_2",

@@ -1,0 +1,81 @@
+{
+  "filename": "1_7_11_3.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「記住",
+      "start_ms": 50.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "今天",
+      "start_ms": 612.5,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "這",
+      "start_ms": 1112.5,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "包",
+      "start_ms": 1315.625,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "花生",
+      "start_ms": 1565.625,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2425.0,
+      "duration_ms": 46.875
+    },
+    {
+      "word": "比",
+      "start_ms": 2471.875,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "學",
+      "start_ms": 2675.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "一百",
+      "start_ms": 2925.0,
+      "duration_ms": 359.375
+    },
+    {
+      "word": "個",
+      "start_ms": 3284.375,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "字",
+      "start_ms": 3518.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "都",
+      "start_ms": 3800.0,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "重要",
+      "start_ms": 4003.125,
+      "duration_ms": 640.625
+    },
+    {
+      "word": "。",
+      "start_ms": 4878.125,
+      "duration_ms": 359.375
+    },
+    {
+      "word": "」",
+      "start_ms": 5237.5,
+      "duration_ms": 109.375
+    }
+  ]
+}

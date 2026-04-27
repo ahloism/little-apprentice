@@ -1,0 +1,126 @@
+{
+  "filename": "1_2_3_choice_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "路邊",
+      "start_ms": 87.5,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "掛",
+      "start_ms": 537.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "著",
+      "start_ms": 737.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一排",
+      "start_ms": 925.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "臘腸",
+      "start_ms": 1250.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1912.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "油亮",
+      "start_ms": 1912.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "油亮",
+      "start_ms": 2325.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2725.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3037.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "風",
+      "start_ms": 3037.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "一",
+      "start_ms": 3250.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "吹",
+      "start_ms": 3362.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "就",
+      "start_ms": 3537.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "晃",
+      "start_ms": 3725.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "——",
+      "start_ms": 4225.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "那",
+      "start_ms": 4225.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "是",
+      "start_ms": 4412.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "什麼",
+      "start_ms": 4575.0,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "？",
+      "start_ms": 5062.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "吃",
+      "start_ms": 5937.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "的",
+      "start_ms": 6162.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "嗎",
+      "start_ms": 6300.0,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "？",
+      "start_ms": 6612.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

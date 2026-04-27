@@ -1,0 +1,56 @@
+{
+  "filename": "vocab_hau6.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 50.0,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "應該",
+      "start_ms": 288.625,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "在",
+      "start_ms": 629.562,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "後面",
+      "start_ms": 788.625,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "，",
+      "start_ms": 1436.375,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "我",
+      "start_ms": 1515.9369,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "轉身",
+      "start_ms": 1731.812,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "才",
+      "start_ms": 2095.437,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "看得到",
+      "start_ms": 2311.375,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2947.75,
+      "duration_ms": 79.562
+    }
+  ]
+}

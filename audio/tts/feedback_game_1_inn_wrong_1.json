@@ -1,0 +1,56 @@
+{
+  "filename": "feedback_game_1_inn_wrong_1.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "老夫",
+      "start_ms": 50.0,
+      "duration_ms": 386.375
+    },
+    {
+      "word": "說",
+      "start_ms": 436.375,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "得",
+      "start_ms": 618.187,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "這麼",
+      "start_ms": 731.812,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "清楚",
+      "start_ms": 1050.0,
+      "duration_ms": 534.062
+    },
+    {
+      "word": "，",
+      "start_ms": 1709.062,
+      "duration_ms": 22.75
+    },
+    {
+      "word": "還是",
+      "start_ms": 1731.812,
+      "duration_ms": 386.375
+    },
+    {
+      "word": "猜",
+      "start_ms": 2118.187,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "錯",
+      "start_ms": 2322.75,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "。",
+      "start_ms": 2675.0,
+      "duration_ms": 79.562
+    }
+  ]
+}

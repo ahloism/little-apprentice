@@ -1,0 +1,31 @@
+{
+  "filename": "1_4_3_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 43.75,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "為什麼",
+      "start_ms": 231.25,
+      "duration_ms": 572.937
+    },
+    {
+      "word": "信",
+      "start_ms": 814.562,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "她",
+      "start_ms": 1033.3119,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "？」",
+      "start_ms": 1345.8119,
+      "duration_ms": 10.437
+    }
+  ]
+}

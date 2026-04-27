@@ -1,7 +1,12 @@
 {
   "schema_version": "v5_1_minigame_01",
   "game_id": "game_1_inn",
-  "game_name": "杜先生聽書",
+  "game_name": "客棧聽書",
+  "entry_page": {
+    "title": "客棧聽書",
+    "intro_text": "杜先生正在說書，聽他講故事，猜猜故事裡的人心裡是什麼感覺。",
+    "speaker": "narrator"
+  },
   "location": "inn",
   "game_type": "emotion_recognition",
   "fixed_sentence": "你說，此人心裡是什麼感覺？",
@@ -12,70 +17,90 @@
       "description": "心裡很高興，想笑，覺得事情很好。",
       "features": {
         "emotion_type": "positive"
-      }
+      },
+      "intro_text": "心裡很高興，想笑，覺得事情很好。",
+      "speaker": "narrator"
     },
     "giu1_ngou6": {
       "word": "驕傲",
       "description": "覺得自己很厲害，心裡有點得意。",
       "features": {
         "emotion_type": "positive"
-      }
+      },
+      "intro_text": "覺得自己很厲害，心裡有點得意。",
+      "speaker": "narrator"
     },
     "gam2_gik1": {
       "word": "感激",
       "description": "別人幫了自己，心裡很感動，也很想多謝對方。",
       "features": {
         "emotion_type": "positive"
-      }
+      },
+      "intro_text": "別人幫了自己，心裡很感動，也很想多謝對方。",
+      "speaker": "narrator"
     },
     "hoi6_paa3": {
       "word": "害怕",
       "description": "心裡很驚，怕出事，身體都會緊起來。",
       "features": {
         "emotion_type": "negative"
-      }
+      },
+      "intro_text": "心裡很驚，怕出事，身體都會緊起來。",
+      "speaker": "narrator"
     },
     "sam1_heoi1": {
       "word": "心虛",
       "description": "表面裝作沒事，其實心裡知道自己不對。",
       "features": {
         "emotion_type": "negative"
-      }
+      },
+      "intro_text": "表面裝作沒事，其實心裡知道自己不對。",
+      "speaker": "narrator"
     },
     "daam1_sam1": {
       "word": "擔心",
       "description": "心裡掛住一件事，怕它會變得不好。",
       "features": {
         "emotion_type": "negative"
-      }
+      },
+      "intro_text": "心裡掛住一件事，怕它會變得不好。",
+      "speaker": "narrator"
     },
     "jau6_ging1_jau6_hei2": {
       "word": "又驚又喜",
       "description": "先嚇一跳，接著又很高興，兩種感覺一起來。",
       "features": {
         "emotion_type": "complex"
-      }
+      },
+      "intro_text": "先嚇一跳，接著又很高興，兩種感覺一起來。",
+      "speaker": "narrator"
     },
     "gaan3_gaai3": {
       "word": "尷尬",
       "description": "不知道怎樣接下去，臉上和心裡都不自在。",
       "features": {
         "emotion_type": "complex"
-      }
+      },
+      "intro_text": "不知道怎樣接下去，臉上和心裡都不自在。",
+      "speaker": "narrator"
     },
     "jau6_paa3_jau6_soeng2": {
       "word": "又怕又想",
       "description": "心裡一邊害怕，一邊又忍不住想再看或再試。",
       "features": {
         "emotion_type": "complex"
-      }
+      },
+      "intro_text": "心裡一邊害怕，一邊又忍不住想再看或再試。",
+      "speaker": "narrator"
     },
     "bat1_gam1_sam1": {
       "word": "不甘心",
       "description": "明明快成功了卻停下來，心裡很不服氣。",
       "features": {
         "emotion_type": "complex"
-      }
+      },
+      "intro_text": "明明快成功了卻停下來，心裡很不服氣。",
+      "speaker": "narrator"
     }
   },
   "feedback_templates": {

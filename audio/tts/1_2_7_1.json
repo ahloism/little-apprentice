@@ -1,0 +1,91 @@
+{
+  "filename": "1_2_7_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "水",
+      "start_ms": 237.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "走",
+      "start_ms": 462.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "了",
+      "start_ms": 700.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1200.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 1200.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 1437.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "跟",
+      "start_ms": 1600.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "在",
+      "start_ms": 1812.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "後面",
+      "start_ms": 1975.0,
+      "duration_ms": 650.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2725.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "低",
+      "start_ms": 2725.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "著",
+      "start_ms": 2900.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "頭",
+      "start_ms": 3100.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "整理",
+      "start_ms": 3287.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "包裹",
+      "start_ms": 3662.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4275.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "filename": "vocab_mun4_hau2.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 50.0,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "在",
+      "start_ms": 288.625,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "門",
+      "start_ms": 436.375,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "口",
+      "start_ms": 595.437,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "，",
+      "start_ms": 1061.375,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "就",
+      "start_ms": 1254.5619,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "站",
+      "start_ms": 1447.75,
+      "duration_ms": 204.5
+    },
+    {
+      "word": "在",
+      "start_ms": 1652.25,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "出入口",
+      "start_ms": 1811.375,
+      "duration_ms": 465.875
+    },
+    {
+      "word": "那",
+      "start_ms": 2277.25,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "裡",
+      "start_ms": 2459.062,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "。",
+      "start_ms": 2777.25,
+      "duration_ms": 79.562
+    }
+  ]
+}

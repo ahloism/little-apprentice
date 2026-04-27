@@ -1,0 +1,121 @@
+{
+  "filename": "nb_1_5_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "杜先生",
+      "start_ms": 75.0,
+      "duration_ms": 662.5
+    },
+    {
+      "word": "靠",
+      "start_ms": 737.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "窗",
+      "start_ms": 950.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "坐",
+      "start_ms": 1187.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "著",
+      "start_ms": 1387.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1787.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "看",
+      "start_ms": 1787.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2050.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "看",
+      "start_ms": 2200.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "那",
+      "start_ms": 2412.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "張",
+      "start_ms": 2575.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "紙",
+      "start_ms": 2850.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3312.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "沒有",
+      "start_ms": 3312.5,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "說",
+      "start_ms": 3662.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "是",
+      "start_ms": 3862.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "什麼",
+      "start_ms": 4000.0,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 4650.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "只是",
+      "start_ms": 4650.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "笑",
+      "start_ms": 5000.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "了",
+      "start_ms": 5237.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "一下",
+      "start_ms": 5387.5,
+      "duration_ms": 512.5
+    },
+    {
+      "word": "。",
+      "start_ms": 5900.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

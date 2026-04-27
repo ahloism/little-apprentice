@@ -1,0 +1,51 @@
+{
+  "filename": "1_1_5_A_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "水",
+      "start_ms": 262.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "愣",
+      "start_ms": 462.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "了",
+      "start_ms": 687.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "一下",
+      "start_ms": 837.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1475.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "然後",
+      "start_ms": 1475.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "哈哈笑",
+      "start_ms": 1850.0,
+      "duration_ms": 800.0
+    },
+    {
+      "word": "：",
+      "start_ms": 2650.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

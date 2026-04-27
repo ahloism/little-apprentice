@@ -1,0 +1,36 @@
+{
+  "filename": "1_1_13_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "格子",
+      "start_ms": 75.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 450.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "還有",
+      "start_ms": 637.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "兩樣",
+      "start_ms": 1037.5,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 1512.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2087.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

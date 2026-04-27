@@ -1,0 +1,56 @@
+{
+  "filename": "vocab_dried_tofu.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "方方",
+      "start_ms": 87.5,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "一塊",
+      "start_ms": 575.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1237.5,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "壓",
+      "start_ms": 1337.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "得",
+      "start_ms": 1537.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "結實",
+      "start_ms": 1687.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2000.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "豆",
+      "start_ms": 2125.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "製品",
+      "start_ms": 2325.0,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2962.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

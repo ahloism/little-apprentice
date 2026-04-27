@@ -1,0 +1,41 @@
+{
+  "filename": "1_2_11_B_4.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "跟",
+      "start_ms": 475.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "著",
+      "start_ms": 712.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "站",
+      "start_ms": 900.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "起來",
+      "start_ms": 1137.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "。",
+      "start_ms": 1700.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

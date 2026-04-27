@@ -1,0 +1,46 @@
+{
+  "filename": "1_7_11_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "錢伯站",
+      "start_ms": 87.5,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "起身",
+      "start_ms": 725.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1375.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "走到",
+      "start_ms": 1375.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "阿",
+      "start_ms": 1812.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 2087.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "面前",
+      "start_ms": 2250.0,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2937.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

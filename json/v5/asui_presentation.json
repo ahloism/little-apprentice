@@ -1,0 +1,171 @@
+{
+  "presentation_id": "asui_presentation",
+  "version": "2.0",
+  "defaults": {
+    "position": "bottom",
+    "dismiss": "tap",
+    "layer": "global_overlay"
+  },
+  "overrides": [
+    {
+      "applies_to": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "confirm_buttons": {
+        "confirm": "去！",
+        "cancel": "算了"
+      }
+    },
+    {
+      "applies_to": [
+        "M1"
+      ],
+      "display_mode": "sequential_lines",
+      "dismiss": "tap_per_line"
+    }
+  ],
+  "dialogue_assets": {
+    "A1": {
+      "audio": "asui_A1.mp3"
+    },
+    "A2": {
+      "audio": "asui_A2.mp3"
+    },
+    "A3": {
+      "audio": "asui_A3.mp3"
+    },
+    "A4": {
+      "audio": "asui_A4.mp3"
+    },
+    "A5": {
+      "audio": "asui_A5.mp3"
+    },
+    "A6": {
+      "audio": "asui_A6.mp3"
+    },
+    "A7": {
+      "audio": "asui_A7.mp3"
+    },
+    "A8": {
+      "audio": "asui_A8.mp3"
+    },
+    "A9": {
+      "audio": "asui_A9.mp3"
+    },
+    "A10": {
+      "audio": "asui_A10.mp3"
+    },
+    "A11": {
+      "audio": "asui_A11.mp3"
+    },
+    "A12": {
+      "audio": "asui_A12.mp3"
+    },
+    "A13": {
+      "audio": "asui_A13.mp3"
+    },
+    "A14": {
+      "audio": "asui_A14.mp3"
+    },
+    "A15": {
+      "audio": "asui_A15.mp3"
+    },
+    "A16": {
+      "audio": "asui_A16.mp3"
+    },
+    "T1": {
+      "audio": "asui_T1.mp3"
+    },
+    "T2": {
+      "audio": "asui_T2.mp3"
+    },
+    "T3": {
+      "audio": "asui_T3.mp3"
+    },
+    "T4": {
+      "audio": "asui_T4.mp3"
+    },
+    "T5": {
+      "audio": "asui_T5.mp3"
+    },
+    "T6": {
+      "audio": "asui_T6.mp3"
+    },
+    "T7": {
+      "audio": "asui_T7.mp3"
+    },
+    "T8": {
+      "audio": "asui_T8.mp3"
+    },
+    "T9": {
+      "audio": "asui_T9.mp3"
+    },
+    "T10": {
+      "audio": "asui_T10.mp3"
+    },
+    "T11": {
+      "audio": "asui_T11.mp3"
+    },
+    "T12": {
+      "audio": "asui_T12.mp3"
+    },
+    "T13": {
+      "audio": "asui_T13.mp3"
+    },
+    "T14": {
+      "audio": "asui_T14.mp3"
+    },
+    "T15": {
+      "audio": "asui_T15.mp3"
+    },
+    "T16": {
+      "audio": "asui_T16.mp3"
+    },
+    "T17": {
+      "audio": "asui_T17.mp3"
+    },
+    "T18": {
+      "audio": "asui_T18.mp3"
+    },
+    "R1": {
+      "audio": "asui_R1.mp3"
+    },
+    "R2": {
+      "audio": "asui_R2.mp3"
+    },
+    "R3": {
+      "audio": "asui_R3.mp3"
+    },
+    "R4": {
+      "audio": "asui_R4.mp3"
+    },
+    "R5": {
+      "audio": "asui_R5.mp3"
+    },
+    "R6": {
+      "audio": "asui_R6.mp3"
+    },
+    "G1": {
+      "audio": "asui_G1.mp3"
+    },
+    "G2": {
+      "audio": "asui_G2.mp3"
+    },
+    "G3": {
+      "audio": "asui_G3.mp3"
+    },
+    "M1": {
+      "audio": [
+        "asui_M1_0.mp3",
+        "asui_M1_1.mp3"
+      ]
+    },
+    "return_to_map": {
+      "audio": "asui_return_to_map.mp3"
+    }
+  }
+}

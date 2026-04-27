@@ -1,0 +1,111 @@
+{
+  "filename": "1_3_2_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "那",
+      "start_ms": 87.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "道",
+      "start_ms": 275.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "拱橋",
+      "start_ms": 450.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "又",
+      "start_ms": 887.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "高",
+      "start_ms": 1075.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "又",
+      "start_ms": 1275.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "長",
+      "start_ms": 1475.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2062.5,
+      "duration_ms": 37.5
+    },
+    {
+      "word": "橋",
+      "start_ms": 2100.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "身",
+      "start_ms": 2350.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "彎成一道",
+      "start_ms": 2575.0,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "弧",
+      "start_ms": 3275.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3737.5,
+      "duration_ms": 75.0
+    },
+    {
+      "word": "像",
+      "start_ms": 3812.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "一條",
+      "start_ms": 4025.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "臥",
+      "start_ms": 4312.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "在",
+      "start_ms": 4562.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "河上",
+      "start_ms": 4750.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "的",
+      "start_ms": 5175.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "長龍",
+      "start_ms": 5287.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "。",
+      "start_ms": 5962.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

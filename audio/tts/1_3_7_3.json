@@ -1,0 +1,76 @@
+{
+  "filename": "1_3_7_3.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "角落",
+      "start_ms": 87.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "裡",
+      "start_ms": 450.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "放",
+      "start_ms": 637.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "著",
+      "start_ms": 925.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1075.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "個",
+      "start_ms": 1187.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "空竹簍",
+      "start_ms": 1325.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1887.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "靜",
+      "start_ms": 1887.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "靜",
+      "start_ms": 2125.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "地立",
+      "start_ms": 2312.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "在",
+      "start_ms": 2700.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "那裡",
+      "start_ms": 2875.0,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3475.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "filename": "1_2_9_B_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "水",
+      "start_ms": 250.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "在",
+      "start_ms": 475.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "旁邊",
+      "start_ms": 675.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "低聲",
+      "start_ms": 1175.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "說",
+      "start_ms": 1575.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "：",
+      "start_ms": 1912.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

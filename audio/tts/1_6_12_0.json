@@ -1,0 +1,81 @@
+{
+  "filename": "1_6_12_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "把",
+      "start_ms": 75.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "貨",
+      "start_ms": 237.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "交",
+      "start_ms": 450.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "好",
+      "start_ms": 675.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1162.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "老",
+      "start_ms": 1162.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "梁",
+      "start_ms": 1375.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "拍",
+      "start_ms": 1587.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "了",
+      "start_ms": 1812.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "拍",
+      "start_ms": 1962.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "兩個",
+      "start_ms": 2187.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "孩子",
+      "start_ms": 2550.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2950.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "肩膀",
+      "start_ms": 3087.5,
+      "duration_ms": 650.0
+    },
+    {
+      "word": "：",
+      "start_ms": 3737.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

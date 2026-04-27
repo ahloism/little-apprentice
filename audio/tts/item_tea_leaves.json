@@ -1,0 +1,11 @@
+{
+  "filename": "item_tea_leaves.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "茶",
+      "start_ms": 87.5,
+      "duration_ms": 387.5
+    }
+  ]
+}

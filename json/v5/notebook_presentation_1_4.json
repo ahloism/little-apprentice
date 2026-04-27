@@ -1,0 +1,51 @@
+{
+  "event_id": "1_4",
+  "left": {
+    "title": "nb_1_4_title_left.mp3",
+    "story_progress": [
+      "nb_1_4_0.mp3",
+      "nb_1_4_1.mp3",
+      "nb_1_4_2.mp3"
+    ],
+    "places": "nb_1_4_3.mp3",
+    "people": "nb_1_4_4.mp3"
+  },
+  "reflections": {
+    "title": "nb_1_4_reflection_title.mp3",
+    "scenes": {
+      "1_4_2": {
+        "A": "nb_1_4_1_4_2_A.mp3",
+        "B": "nb_1_4_1_4_2_B.mp3",
+        "C": "nb_1_4_1_4_2_C.mp3"
+      },
+      "1_4_9": {
+        "A": "nb_1_4_1_4_9_A.mp3",
+        "B": "nb_1_4_1_4_9_B.mp3",
+        "C": "nb_1_4_1_4_9_C.mp3"
+      },
+      "1_4_14": {
+        "A": "nb_1_4_1_4_14_A.mp3",
+        "B": "nb_1_4_1_4_14_B.mp3",
+        "C": "nb_1_4_1_4_14_C.mp3"
+      },
+      "1_4_15": {
+        "A": "nb_1_4_1_4_15_A.mp3",
+        "B": "nb_1_4_1_4_15_B.mp3",
+        "C": "nb_1_4_1_4_15_C.mp3"
+      },
+      "1_4_16": {
+        "A": "nb_1_4_1_4_16_A.mp3",
+        "B": "nb_1_4_1_4_16_B.mp3",
+        "C": "nb_1_4_1_4_16_C.mp3"
+      }
+    }
+  },
+  "right": {
+    "title": "nb_1_4_title_right.mp3",
+    "learned_points": [
+      "nb_1_4_lp_0.mp3",
+      "nb_1_4_lp_1.mp3",
+      "nb_1_4_lp_2.mp3"
+    ]
+  }
+}

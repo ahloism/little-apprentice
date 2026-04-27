@@ -1,0 +1,26 @@
+{
+  "filename": "1_7_6_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "杜先生",
+      "start_ms": 75.0,
+      "duration_ms": 712.5
+    },
+    {
+      "word": "說書用",
+      "start_ms": 787.5,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1375.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "草稿",
+      "start_ms": 1487.5,
+      "duration_ms": 625.0
+    }
+  ]
+}

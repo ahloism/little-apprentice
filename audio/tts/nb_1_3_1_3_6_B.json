@@ -1,0 +1,241 @@
+{
+  "filename": "nb_1_3_1_3_6_B.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "我",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "聽見",
+      "start_ms": 250.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "梅",
+      "start_ms": 650.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "姐",
+      "start_ms": 825.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "說",
+      "start_ms": 1025.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "了",
+      "start_ms": 1250.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "「",
+      "start_ms": 1362.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "客棧",
+      "start_ms": 1362.5,
+      "duration_ms": 650.0
+    },
+    {
+      "word": "」",
+      "start_ms": 2137.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2350.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "心裡",
+      "start_ms": 2350.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "就",
+      "start_ms": 2800.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "先",
+      "start_ms": 2987.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "把",
+      "start_ms": 3225.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "這",
+      "start_ms": 3425.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "兩個",
+      "start_ms": 3625.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "字記住",
+      "start_ms": 3975.0,
+      "duration_ms": 787.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4762.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "她",
+      "start_ms": 5637.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "雖然",
+      "start_ms": 5800.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "說",
+      "start_ms": 6237.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "得",
+      "start_ms": 6412.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "快",
+      "start_ms": 6525.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "，",
+      "start_ms": 7050.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "但",
+      "start_ms": 7050.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "不像是",
+      "start_ms": 7262.5,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "在",
+      "start_ms": 7787.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "故意",
+      "start_ms": 7975.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "帶",
+      "start_ms": 8375.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "我",
+      "start_ms": 8612.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "亂",
+      "start_ms": 8825.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "走",
+      "start_ms": 9075.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "。",
+      "start_ms": 9437.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "你",
+      "start_ms": 10275.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "呢",
+      "start_ms": 10562.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "？",
+      "start_ms": 10825.0,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "你",
+      "start_ms": 11662.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "會",
+      "start_ms": 11887.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "相信",
+      "start_ms": 12050.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "一",
+      "start_ms": 12487.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "個",
+      "start_ms": 12612.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "忙著",
+      "start_ms": 12737.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "做事",
+      "start_ms": 13200.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "的",
+      "start_ms": 13550.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "人",
+      "start_ms": 13675.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "嗎",
+      "start_ms": 13875.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "？",
+      "start_ms": 14162.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

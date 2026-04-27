@@ -1,0 +1,46 @@
+{
+  "filename": "1_4_10_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 43.75,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "去",
+      "start_ms": 189.562,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 502.062,
+      "duration_ms": 62.5
+    },
+    {
+      "word": "我",
+      "start_ms": 647.937,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "在",
+      "start_ms": 866.687,
+      "duration_ms": 229.125
+    },
+    {
+      "word": "這",
+      "start_ms": 1095.8119,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "等",
+      "start_ms": 1314.5619,
+      "duration_ms": 270.812
+    },
+    {
+      "word": "。」",
+      "start_ms": 1595.8119,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "filename": "1_4_8_C_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「王三",
+      "start_ms": 41.687,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "的",
+      "start_ms": 468.75,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 625.0,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "不",
+      "start_ms": 1072.9369,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "也",
+      "start_ms": 1250.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一直",
+      "start_ms": 1437.5,
+      "duration_ms": 354.18699999999995
+    },
+    {
+      "word": "看",
+      "start_ms": 1791.687,
+      "duration_ms": 260.375
+    },
+    {
+      "word": "你",
+      "start_ms": 2052.062,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "的",
+      "start_ms": 2218.75,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "包裹",
+      "start_ms": 2364.562,
+      "duration_ms": 583.312
+    },
+    {
+      "word": "？」",
+      "start_ms": 2958.312,
+      "duration_ms": 10.437
+    }
+  ]
+}

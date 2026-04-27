@@ -1,0 +1,26 @@
+{
+  "filename": "1_5_3_2.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「找",
+      "start_ms": 50.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "人",
+      "start_ms": 300.0,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "？",
+      "start_ms": 640.937,
+      "duration_ms": 193.125
+    },
+    {
+      "word": "」",
+      "start_ms": 834.062,
+      "duration_ms": 79.562
+    }
+  ]
+}

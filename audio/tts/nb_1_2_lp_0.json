@@ -1,0 +1,61 @@
+{
+  "filename": "nb_1_2_lp_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "臘腸",
+      "start_ms": 87.5,
+      "duration_ms": 725.0
+    },
+    {
+      "word": "——",
+      "start_ms": 900.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "豬肉",
+      "start_ms": 900.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "灌",
+      "start_ms": 1300.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "進",
+      "start_ms": 1512.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "腸衣",
+      "start_ms": 1700.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "曬乾",
+      "start_ms": 2075.0,
+      "duration_ms": 712.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2887.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "油光",
+      "start_ms": 2887.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "發",
+      "start_ms": 3350.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "亮",
+      "start_ms": 3575.0,
+      "duration_ms": 437.5
+    }
+  ]
+}

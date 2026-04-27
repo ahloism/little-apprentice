@@ -1,0 +1,81 @@
+{
+  "filename": "1_3_7_c_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "那",
+      "start_ms": 87.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "捆",
+      "start_ms": 262.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "繩子",
+      "start_ms": 512.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "——",
+      "start_ms": 1175.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "粗細",
+      "start_ms": 1175.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "不同",
+      "start_ms": 1625.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2287.5,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "跟",
+      "start_ms": 2387.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "錢",
+      "start_ms": 2612.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "伯",
+      "start_ms": 2825.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2987.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "繩子",
+      "start_ms": 3100.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "比",
+      "start_ms": 3512.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "怎樣",
+      "start_ms": 3675.0,
+      "duration_ms": 650.0
+    },
+    {
+      "word": "？",
+      "start_ms": 4325.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

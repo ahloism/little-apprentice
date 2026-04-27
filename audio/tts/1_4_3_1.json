@@ -1,0 +1,71 @@
+{
+  "filename": "1_4_3_1.mp3",
+  "speaker": "阿禾",
+  "words": [
+    {
+      "word": "「我",
+      "start_ms": 54.187,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "信",
+      "start_ms": 262.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "梅",
+      "start_ms": 512.5,
+      "duration_ms": 236.125
+    },
+    {
+      "word": "姐",
+      "start_ms": 762.5,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 1220.8119,
+      "duration_ms": 27.75
+    },
+    {
+      "word": "她",
+      "start_ms": 1498.625,
+      "duration_ms": 305.562
+    },
+    {
+      "word": "說",
+      "start_ms": 1818.062,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "老",
+      "start_ms": 2109.75,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "梁",
+      "start_ms": 2401.375,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "去",
+      "start_ms": 2679.187,
+      "duration_ms": 236.06199999999998
+    },
+    {
+      "word": "了",
+      "start_ms": 2915.25,
+      "duration_ms": 222.25
+    },
+    {
+      "word": "客棧",
+      "start_ms": 3137.5,
+      "duration_ms": 777.75
+    },
+    {
+      "word": "。」",
+      "start_ms": 3915.25,
+      "duration_ms": 27.75
+    }
+  ]
+}

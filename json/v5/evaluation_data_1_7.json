@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_7",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "concept",
-        "content": "考較——重溫學習成果"
-      },
-      {
-        "type": "concept",
-        "content": "勇於承擔——做錯了事，要認錯"
-      },
-      {
-        "type": "concept",
-        "content": "不誠信，路也難行"
-      }
-    ],
-    "anchor_image": "A05"
-  },
   "scenes": [
     {
       "scene_id": "1_7_3",

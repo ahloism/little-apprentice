@@ -1,0 +1,91 @@
+{
+  "filename": "1_5_11_8.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「去",
+      "start_ms": 50.0,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "碼頭",
+      "start_ms": 265.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "找",
+      "start_ms": 618.187,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "他",
+      "start_ms": 777.25,
+      "duration_ms": 409.06199999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 1311.375,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "把",
+      "start_ms": 1425.0,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "這個",
+      "start_ms": 1606.8119,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "還給",
+      "start_ms": 1913.625,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "他",
+      "start_ms": 2243.187,
+      "duration_ms": 295.437
+    },
+    {
+      "word": "。",
+      "start_ms": 2538.625,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "他",
+      "start_ms": 3300.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "還",
+      "start_ms": 3550.0,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "要",
+      "start_ms": 3743.187,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "用",
+      "start_ms": 3879.562,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "呢",
+      "start_ms": 4038.625,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4481.812,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "」",
+      "start_ms": 4800.0,
+      "duration_ms": 79.562
+    }
+  ]
+}

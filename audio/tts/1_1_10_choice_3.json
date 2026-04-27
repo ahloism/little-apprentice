@@ -1,0 +1,51 @@
+{
+  "filename": "1_1_10_c_3.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "三",
+      "start_ms": 87.5,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "樣",
+      "start_ms": 387.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "都",
+      "start_ms": 587.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "看",
+      "start_ms": 737.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "完了",
+      "start_ms": 1012.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1662.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "可以",
+      "start_ms": 1662.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "出發",
+      "start_ms": 2037.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "了",
+      "start_ms": 2462.5,
+      "duration_ms": 325.0
+    }
+  ]
+}

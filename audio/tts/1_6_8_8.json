@@ -1,0 +1,71 @@
+{
+  "filename": "1_6_8_8.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 275.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "鬆了一口氣",
+      "start_ms": 437.5,
+      "duration_ms": 1162.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1712.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "心裡",
+      "start_ms": 1712.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "有",
+      "start_ms": 2150.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "點",
+      "start_ms": 2350.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "說",
+      "start_ms": 2587.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "不",
+      "start_ms": 2775.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "清楚",
+      "start_ms": 2912.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3312.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "感覺",
+      "start_ms": 3425.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3925.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

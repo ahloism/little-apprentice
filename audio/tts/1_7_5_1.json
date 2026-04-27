@@ -1,0 +1,56 @@
+{
+  "filename": "1_7_5_1.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 54.187,
+      "duration_ms": 222.18699999999998
+    },
+    {
+      "word": "是",
+      "start_ms": 276.375,
+      "duration_ms": 319.437
+    },
+    {
+      "word": "怎麼",
+      "start_ms": 595.812,
+      "duration_ms": 597.25
+    },
+    {
+      "word": "看",
+      "start_ms": 1193.0619,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "穿",
+      "start_ms": 1484.75,
+      "duration_ms": 347.187
+    },
+    {
+      "word": "他們",
+      "start_ms": 1831.937,
+      "duration_ms": 555.562
+    },
+    {
+      "word": "不可",
+      "start_ms": 2387.5,
+      "duration_ms": 513.875
+    },
+    {
+      "word": "信",
+      "start_ms": 2901.375,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "的",
+      "start_ms": 3165.25,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "？」",
+      "start_ms": 3456.937,
+      "duration_ms": 0.0
+    }
+  ]
+}

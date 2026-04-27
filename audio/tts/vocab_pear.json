@@ -1,0 +1,66 @@
+{
+  "filename": "vocab_pear.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "淡",
+      "start_ms": 87.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "黃",
+      "start_ms": 300.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "偏",
+      "start_ms": 512.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "綠",
+      "start_ms": 737.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1037.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "咬",
+      "start_ms": 1037.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "下去",
+      "start_ms": 1287.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "很",
+      "start_ms": 1687.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "多汁",
+      "start_ms": 1900.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2237.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "果子",
+      "start_ms": 2375.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2962.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

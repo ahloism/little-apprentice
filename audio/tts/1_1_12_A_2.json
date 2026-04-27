@@ -1,0 +1,46 @@
+{
+  "filename": "1_1_12_A_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "把",
+      "start_ms": 250.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "它",
+      "start_ms": 450.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "小心",
+      "start_ms": 662.5,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "放進",
+      "start_ms": 1150.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "包裹",
+      "start_ms": 1575.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 2025.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2387.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

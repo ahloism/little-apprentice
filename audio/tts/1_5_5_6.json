@@ -1,0 +1,81 @@
+{
+  "filename": "1_5_5_6.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "的",
+      "start_ms": 262.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 375.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "忽然",
+      "start_ms": 900.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "落在",
+      "start_ms": 1225.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "阿",
+      "start_ms": 1637.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 1900.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "手",
+      "start_ms": 2087.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "裡",
+      "start_ms": 2325.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2500.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "那",
+      "start_ms": 2600.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "疊",
+      "start_ms": 2812.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "紙",
+      "start_ms": 3050.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "上",
+      "start_ms": 3212.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3675.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

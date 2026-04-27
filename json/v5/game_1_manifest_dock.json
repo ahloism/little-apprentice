@@ -3,6 +3,10 @@
   "game_id": "game_1_dock",
   "game_type": "measure_word_matching",
   "location": "dock",
+  "visual_state": {
+    "has_second_state": true,
+    "trigger": "before_fixed_sentence"
+  },
   "intro_behavior": {
     "show_once_per_session": true
   },
@@ -17,110 +21,120 @@
       "type": "A",
       "prompt_mode": "count_measure",
       "distractor_mode": "same_count_class",
-      "measure_option_ids": [
-        "opt_go3",
-        "opt_zek3",
-        "opt_gin6"
-      ]
+      "combo_option_ids": [
+        "combo_dock_01_A",
+        "combo_dock_01_B",
+        "combo_dock_01_C"
+      ],
+      "answer_combo_id": "combo_dock_01_A"
     },
     {
       "variation_id": "game_1_dock_02",
       "type": "A",
       "prompt_mode": "count_measure",
       "distractor_mode": "same_count_class",
-      "measure_option_ids": [
-        "opt_tiu4",
-        "opt_gan1",
-        "opt_zoeng1"
-      ]
+      "combo_option_ids": [
+        "combo_dock_02_A",
+        "combo_dock_02_B",
+        "combo_dock_02_C"
+      ],
+      "answer_combo_id": "combo_dock_02_A"
     },
     {
       "variation_id": "game_1_dock_03",
       "type": "A",
       "prompt_mode": "count_measure",
       "distractor_mode": "same_count_class",
-      "measure_option_ids": [
-        "opt_cyun3",
-        "opt_faai3",
-        "opt_pin3"
-      ]
+      "combo_option_ids": [
+        "combo_dock_03_A",
+        "combo_dock_03_B",
+        "combo_dock_03_C"
+      ],
+      "answer_combo_id": "combo_dock_03_A"
     },
     {
       "variation_id": "game_1_dock_04",
       "type": "B",
       "prompt_mode": "container_measure",
       "distractor_mode": "same_container_class",
-      "measure_option_ids": [
-        "opt_doi6",
-        "opt_tung4",
-        "opt_laam4"
-      ]
+      "combo_option_ids": [
+        "combo_dock_04_A",
+        "combo_dock_04_B",
+        "combo_dock_04_C"
+      ],
+      "answer_combo_id": "combo_dock_04_A"
     },
     {
       "variation_id": "game_1_dock_05",
       "type": "B",
       "prompt_mode": "container_measure",
       "distractor_mode": "same_container_class",
-      "measure_option_ids": [
-        "opt_soeng1",
-        "opt_lung4",
-        "opt_wu4"
-      ]
+      "combo_option_ids": [
+        "combo_dock_05_A",
+        "combo_dock_05_B",
+        "combo_dock_05_C"
+      ],
+      "answer_combo_id": "combo_dock_05_A"
     },
     {
       "variation_id": "game_1_dock_06",
       "type": "B",
       "prompt_mode": "container_measure",
       "distractor_mode": "same_container_class",
-      "measure_option_ids": [
-        "opt_wun2",
-        "opt_zang2",
-        "opt_baau1"
-      ]
+      "combo_option_ids": [
+        "combo_dock_06_A",
+        "combo_dock_06_B",
+        "combo_dock_06_C"
+      ],
+      "answer_combo_id": "combo_dock_06_A"
     },
     {
       "variation_id": "game_1_dock_07",
       "type": "C",
       "prompt_mode": "collective_measure",
       "distractor_mode": "same_collective_class",
-      "measure_option_ids": [
-        "opt_kwan2",
-        "opt_dip6",
-        "opt_pai1"
-      ]
+      "combo_option_ids": [
+        "combo_dock_07_A",
+        "combo_dock_07_B",
+        "combo_dock_07_C"
+      ],
+      "answer_combo_id": "combo_dock_07_A"
     },
     {
       "variation_id": "game_1_dock_08",
       "type": "C",
       "prompt_mode": "collective_measure",
       "distractor_mode": "same_collective_class",
-      "measure_option_ids": [
-        "opt_deoi1",
-        "opt_dip6",
-        "opt_zaat3"
-      ]
+      "combo_option_ids": [
+        "combo_dock_08_A",
+        "combo_dock_08_B",
+        "combo_dock_08_C"
+      ],
+      "answer_combo_id": "combo_dock_08_A"
     },
     {
       "variation_id": "game_1_dock_09",
       "type": "D",
       "prompt_mode": "unit_measure",
       "distractor_mode": "same_unit_class",
-      "measure_option_ids": [
-        "opt_gan1_weight",
-        "opt_loeng5",
-        "opt_cin4_weight"
-      ]
+      "combo_option_ids": [
+        "combo_dock_09_A",
+        "combo_dock_09_B",
+        "combo_dock_09_C"
+      ],
+      "answer_combo_id": "combo_dock_09_A"
     },
     {
       "variation_id": "game_1_dock_10",
       "type": "D",
       "prompt_mode": "unit_measure",
       "distractor_mode": "same_unit_class",
-      "measure_option_ids": [
-        "opt_cek3_length",
-        "opt_zoeng6",
-        "opt_cyun3_length"
-      ]
+      "combo_option_ids": [
+        "combo_dock_10_A",
+        "combo_dock_10_B",
+        "combo_dock_10_C"
+      ],
+      "answer_combo_id": "combo_dock_10_A"
     }
   ]
 }

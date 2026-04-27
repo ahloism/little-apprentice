@@ -1,0 +1,76 @@
+{
+  "filename": "nb_1_2_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "低頭",
+      "start_ms": 450.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "整理",
+      "start_ms": 862.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "包裹",
+      "start_ms": 1262.5,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2025.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "「",
+      "start_ms": 2262.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "砰",
+      "start_ms": 2262.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "」",
+      "start_ms": 2787.5,
+      "duration_ms": 50.0
+    },
+    {
+      "word": "——",
+      "start_ms": 2837.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "撞上",
+      "start_ms": 2837.5,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "了",
+      "start_ms": 3337.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "石頭",
+      "start_ms": 3462.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4037.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

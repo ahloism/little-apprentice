@@ -1,0 +1,66 @@
+{
+  "filename": "1_7_13_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "那",
+      "start_ms": 87.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "裡",
+      "start_ms": 275.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "刻",
+      "start_ms": 450.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 662.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "兩個",
+      "start_ms": 825.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "蒼",
+      "start_ms": 1237.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "勁",
+      "start_ms": 1525.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1675.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "大字",
+      "start_ms": 1800.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "——",
+      "start_ms": 2537.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "誠信",
+      "start_ms": 2537.5,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3287.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

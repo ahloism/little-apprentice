@@ -1,0 +1,91 @@
+{
+  "filename": "1_4_12_7.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "橋",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "上人",
+      "start_ms": 250.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "來人",
+      "start_ms": 662.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "往",
+      "start_ms": 1062.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1550.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "風",
+      "start_ms": 1550.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "從",
+      "start_ms": 1812.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "河面",
+      "start_ms": 1987.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "吹",
+      "start_ms": 2375.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "過來",
+      "start_ms": 2575.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3262.5,
+      "duration_ms": 50.0
+    },
+    {
+      "word": "帶",
+      "start_ms": 3312.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "著",
+      "start_ms": 3500.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一點",
+      "start_ms": 3687.5,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "水",
+      "start_ms": 3987.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "腥味",
+      "start_ms": 4162.5,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4762.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "filename": "1_3_1_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 275.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "抬",
+      "start_ms": 450.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "起頭",
+      "start_ms": 675.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1387.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "眼前",
+      "start_ms": 1387.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "突然",
+      "start_ms": 1825.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "開闊",
+      "start_ms": 2125.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "——",
+      "start_ms": 2750.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一條",
+      "start_ms": 2750.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "寬闊",
+      "start_ms": 3137.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3537.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "大",
+      "start_ms": 3675.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "河橫",
+      "start_ms": 3862.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "在",
+      "start_ms": 4300.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "面前",
+      "start_ms": 4450.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "，",
+      "start_ms": 5200.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "水面",
+      "start_ms": 5200.0,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "波光",
+      "start_ms": 5687.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "粼粼",
+      "start_ms": 6100.0,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 6775.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一",
+      "start_ms": 6775.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "眼",
+      "start_ms": 6937.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "望",
+      "start_ms": 7150.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "不到",
+      "start_ms": 7350.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "對岸",
+      "start_ms": 7625.0,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "。",
+      "start_ms": 8325.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

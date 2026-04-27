@@ -1,0 +1,56 @@
+{
+  "filename": "1_4_5_A_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "水",
+      "start_ms": 237.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "想",
+      "start_ms": 450.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "了",
+      "start_ms": 712.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "一下",
+      "start_ms": 850.0,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1487.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "皺",
+      "start_ms": 1487.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "起",
+      "start_ms": 1700.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "眉頭",
+      "start_ms": 1862.5,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "：",
+      "start_ms": 2487.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

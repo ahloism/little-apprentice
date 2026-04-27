@@ -1,0 +1,46 @@
+{
+  "filename": "vocab_sauce.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "濃",
+      "start_ms": 87.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "濃",
+      "start_ms": 287.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一罐",
+      "start_ms": 475.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1175.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "用來",
+      "start_ms": 1175.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "拌味",
+      "start_ms": 1537.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1925.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "調料",
+      "start_ms": 2050.0,
+      "duration_ms": 625.0
+    }
+  ]
+}

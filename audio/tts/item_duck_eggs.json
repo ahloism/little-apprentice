@@ -1,0 +1,11 @@
+{
+  "filename": "item_duck_eggs.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "鴨蛋",
+      "start_ms": 87.5,
+      "duration_ms": 762.5
+    }
+  ]
+}

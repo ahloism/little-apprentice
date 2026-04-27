@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_crab.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "有",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "硬",
+      "start_ms": 250.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "殼",
+      "start_ms": 525.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "和",
+      "start_ms": 750.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "大",
+      "start_ms": 937.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "鉗子",
+      "start_ms": 1150.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1550.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "水產",
+      "start_ms": 1650.0,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2400.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "filename": "1_5_6_c_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "受傷",
+      "start_ms": 87.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "了",
+      "start_ms": 662.5,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1125.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "跌倒",
+      "start_ms": 1125.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "撞到",
+      "start_ms": 1487.5,
+      "duration_ms": 637.5
+    }
+  ]
+}

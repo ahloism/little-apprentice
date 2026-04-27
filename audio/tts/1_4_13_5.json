@@ -1,0 +1,76 @@
+{
+  "filename": "1_4_13_5.mp3",
+  "speaker": "梅姐",
+  "words": [
+    {
+      "word": "「這個",
+      "start_ms": 52.75,
+      "duration_ms": 708.312
+    },
+    {
+      "word": "……",
+      "start_ms": 900.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "老梁",
+      "start_ms": 900.0,
+      "duration_ms": 513.875
+    },
+    {
+      "word": "今天",
+      "start_ms": 1413.875,
+      "duration_ms": 402.75
+    },
+    {
+      "word": "帶走",
+      "start_ms": 1816.687,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "了",
+      "start_ms": 2275.0,
+      "duration_ms": 236.125
+    },
+    {
+      "word": "嗎",
+      "start_ms": 2511.125,
+      "duration_ms": 347.187
+    },
+    {
+      "word": "？",
+      "start_ms": 2858.312,
+      "duration_ms": 97.25
+    },
+    {
+      "word": "還是",
+      "start_ms": 3833.312,
+      "duration_ms": 472.25
+    },
+    {
+      "word": "忘",
+      "start_ms": 4305.562,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 4597.25,
+      "duration_ms": 180.5
+    },
+    {
+      "word": "帶",
+      "start_ms": 4777.75,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "？",
+      "start_ms": 5236.125,
+      "duration_ms": 291.625
+    },
+    {
+      "word": "」",
+      "start_ms": 5527.75,
+      "duration_ms": 97.25
+    }
+  ]
+}

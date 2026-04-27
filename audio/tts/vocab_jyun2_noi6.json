@@ -1,0 +1,71 @@
+{
+  "filename": "vocab_jyun2_noi6.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 50.0,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "在",
+      "start_ms": 288.625,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "院",
+      "start_ms": 436.375,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "內",
+      "start_ms": 584.062,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "，",
+      "start_ms": 1061.375,
+      "duration_ms": 90.875
+    },
+    {
+      "word": "不在",
+      "start_ms": 1152.25,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "街",
+      "start_ms": 1470.4369,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "上",
+      "start_ms": 1652.25,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "，",
+      "start_ms": 2129.562,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "是",
+      "start_ms": 2129.562,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "院子",
+      "start_ms": 2379.562,
+      "duration_ms": 329.5
+    },
+    {
+      "word": "裡面",
+      "start_ms": 2709.062,
+      "duration_ms": 488.625
+    },
+    {
+      "word": "。",
+      "start_ms": 3197.75,
+      "duration_ms": 79.562
+    }
+  ]
+}

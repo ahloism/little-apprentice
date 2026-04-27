@@ -1,0 +1,91 @@
+{
+  "filename": "nb_1_3_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "老梁",
+      "start_ms": 87.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "不在",
+      "start_ms": 512.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1175.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 1175.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "水",
+      "start_ms": 1387.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "跑掉",
+      "start_ms": 1587.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2050.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2550.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 2550.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 2787.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "一",
+      "start_ms": 2937.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "個人",
+      "start_ms": 3087.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "站",
+      "start_ms": 3400.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "在",
+      "start_ms": 3637.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "攤",
+      "start_ms": 3800.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "前",
+      "start_ms": 4075.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4462.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

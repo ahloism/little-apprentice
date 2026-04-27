@@ -1,0 +1,31 @@
+{
+  "filename": "1_4_1_6.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「說",
+      "start_ms": 43.75,
+      "duration_ms": 302.062
+    },
+    {
+      "word": "，",
+      "start_ms": 345.812,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "怎樣",
+      "start_ms": 512.5,
+      "duration_ms": 447.93699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 960.437,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "？」",
+      "start_ms": 1252.0619,
+      "duration_ms": 31.25
+    }
+  ]
+}

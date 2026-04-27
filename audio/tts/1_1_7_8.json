@@ -1,0 +1,41 @@
+{
+  "filename": "1_1_7_8.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「還",
+      "start_ms": 50.0,
+      "duration_ms": 359.375
+    },
+    {
+      "word": "行",
+      "start_ms": 409.375,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "，",
+      "start_ms": 1034.375,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "有",
+      "start_ms": 1143.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "力氣",
+      "start_ms": 1425.0,
+      "duration_ms": 609.375
+    },
+    {
+      "word": "。",
+      "start_ms": 2237.5,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "」",
+      "start_ms": 2690.625,
+      "duration_ms": 109.375
+    }
+  ]
+}

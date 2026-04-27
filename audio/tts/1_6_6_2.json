@@ -1,0 +1,31 @@
+{
+  "filename": "1_6_6_2.mp3",
+  "speaker": "老梁",
+  "words": [
+    {
+      "word": "「少",
+      "start_ms": 50.0,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "了",
+      "start_ms": 331.25,
+      "duration_ms": 114.562
+    },
+    {
+      "word": "一包",
+      "start_ms": 445.812,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "。",
+      "start_ms": 1039.5619,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "」",
+      "start_ms": 1352.0619,
+      "duration_ms": 72.937
+    }
+  ]
+}

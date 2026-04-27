@@ -1,0 +1,76 @@
+{
+  "filename": "1_2_9_choice_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "低下頭",
+      "start_ms": 75.0,
+      "duration_ms": 800.0
+    },
+    {
+      "word": "：",
+      "start_ms": 1012.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "「",
+      "start_ms": 1137.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "對不起",
+      "start_ms": 1137.5,
+      "duration_ms": 737.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1975.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "石頭",
+      "start_ms": 1975.0,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "哥",
+      "start_ms": 2450.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2900.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "我",
+      "start_ms": 2900.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "不是",
+      "start_ms": 3112.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "故意",
+      "start_ms": 3400.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "的",
+      "start_ms": 3837.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4050.0,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "」",
+      "start_ms": 4537.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

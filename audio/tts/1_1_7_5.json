@@ -1,0 +1,31 @@
+{
+  "filename": "1_1_7_5.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「手",
+      "start_ms": 50.0,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "伸",
+      "start_ms": 471.875,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "出來",
+      "start_ms": 737.5,
+      "duration_ms": 578.125
+    },
+    {
+      "word": "。",
+      "start_ms": 1550.0,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "」",
+      "start_ms": 1831.25,
+      "duration_ms": 109.375
+    }
+  ]
+}

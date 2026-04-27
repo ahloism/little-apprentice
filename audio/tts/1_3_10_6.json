@@ -1,0 +1,71 @@
+{
+  "filename": "1_3_10_6.mp3",
+  "speaker": "王三",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 43.75,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "看看",
+      "start_ms": 200.0,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "，",
+      "start_ms": 772.937,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "要",
+      "start_ms": 970.812,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "什麼",
+      "start_ms": 1137.5,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "都",
+      "start_ms": 1554.1869,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "有",
+      "start_ms": 1720.812,
+      "duration_ms": 270.812
+    },
+    {
+      "word": "，",
+      "start_ms": 2022.937,
+      "duration_ms": 41.687000000000005
+    },
+    {
+      "word": "需要",
+      "start_ms": 2293.75,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "什麼",
+      "start_ms": 2731.25,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "儘管",
+      "start_ms": 3147.937,
+      "duration_ms": 416.625
+    },
+    {
+      "word": "說",
+      "start_ms": 3564.562,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "。」",
+      "start_ms": 3856.25,
+      "duration_ms": 0.0
+    }
+  ]
+}

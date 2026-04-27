@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_1",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "vocabulary",
-        "content": "糖葫蘆——山楂串在竹簽上，外面裹著糖衣"
-      },
-      {
-        "type": "vocabulary",
-        "content": "煎餅——薄薄的麵餅，熱的時候最香"
-      },
-      {
-        "type": "vocabulary",
-        "content": "炒花生——炒過的花生，搖起來沙沙作響"
-      }
-    ],
-    "anchor_image": "O05"
-  },
   "scenes": [
     {
       "scene_id": "1_1_3",
@@ -25,14 +8,23 @@
     {
       "scene_id": "1_1_5",
       "collect_type": "assessment",
-      "dimension": ["social_understanding"],
-      "support_option": ["C"]
+      "dimension": [
+        "social_understanding"
+      ],
+      "support_option": [
+        "C"
+      ]
     },
     {
       "scene_id": "1_1_7",
       "collect_type": "assessment",
-      "dimension": ["social_understanding"],
-      "support_option": ["B", "C"]
+      "dimension": [
+        "social_understanding"
+      ],
+      "support_option": [
+        "B",
+        "C"
+      ]
     },
     {
       "scene_id": "1_1_8",
@@ -45,14 +37,25 @@
     {
       "scene_id": "1_1_11",
       "collect_type": "assessment",
-      "dimension": ["vocabulary", "social_understanding"],
-      "support_option": ["B", "C"]
+      "dimension": [
+        "vocabulary",
+        "social_understanding"
+      ],
+      "support_option": [
+        "B",
+        "C"
+      ]
     },
     {
       "scene_id": "1_1_12",
       "collect_type": "assessment",
-      "dimension": ["vocabulary"],
-      "support_option": ["B", "C"]
+      "dimension": [
+        "vocabulary"
+      ],
+      "support_option": [
+        "B",
+        "C"
+      ]
     },
     {
       "scene_id": "1_1_13",

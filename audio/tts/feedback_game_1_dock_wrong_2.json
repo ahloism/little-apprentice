@@ -1,0 +1,16 @@
+{
+  "filename": "feedback_game_1_dock_wrong_2.mp3",
+  "speaker": "石頭",
+  "words": [
+    {
+      "word": "再",
+      "start_ms": 50.0,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "看",
+      "start_ms": 393.75,
+      "duration_ms": 531.25
+    }
+  ]
+}

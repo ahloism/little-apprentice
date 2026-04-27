@@ -1,0 +1,71 @@
+{
+  "filename": "1_1_13_c_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "那",
+      "start_ms": 100.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "串",
+      "start_ms": 275.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "紅色",
+      "start_ms": 525.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "的",
+      "start_ms": 887.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1225.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一粒",
+      "start_ms": 1225.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "粒",
+      "start_ms": 1562.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "穿",
+      "start_ms": 1737.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "在",
+      "start_ms": 1987.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "竹",
+      "start_ms": 2162.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "簽",
+      "start_ms": 2312.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "上",
+      "start_ms": 2550.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2812.5,
+      "duration_ms": 212.5
+    }
+  ]
+}

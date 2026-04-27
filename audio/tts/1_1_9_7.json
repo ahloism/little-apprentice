@@ -1,0 +1,46 @@
+{
+  "filename": "1_1_9_7.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「記清楚",
+      "start_ms": 50.0,
+      "duration_ms": 1062.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1284.375,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "一樣",
+      "start_ms": 1503.125,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "都",
+      "start_ms": 1971.875,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "不能",
+      "start_ms": 2175.0,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "少",
+      "start_ms": 2596.875,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "。",
+      "start_ms": 3331.25,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "」",
+      "start_ms": 3628.125,
+      "duration_ms": 109.375
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_candles.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "長",
+      "start_ms": 87.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "長",
+      "start_ms": 337.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "一枝",
+      "start_ms": 537.5,
+      "duration_ms": 512.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1137.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "點火",
+      "start_ms": 1137.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "後",
+      "start_ms": 1550.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "會",
+      "start_ms": 1737.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "發",
+      "start_ms": 1925.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "亮",
+      "start_ms": 2212.5,
+      "duration_ms": 450.0
+    }
+  ]
+}

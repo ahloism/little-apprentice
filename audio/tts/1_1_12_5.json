@@ -1,0 +1,81 @@
+{
+  "filename": "1_1_12_5.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "貨",
+      "start_ms": 87.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "架",
+      "start_ms": 300.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "一排",
+      "start_ms": 462.5,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "排",
+      "start_ms": 812.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1062.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1387.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "每",
+      "start_ms": 1387.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "格",
+      "start_ms": 1625.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "都",
+      "start_ms": 1850.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "放",
+      "start_ms": 1987.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "著",
+      "start_ms": 2250.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "不同",
+      "start_ms": 2425.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2750.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 2875.0,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3425.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

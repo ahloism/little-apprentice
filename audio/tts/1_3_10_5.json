@@ -1,0 +1,71 @@
+{
+  "filename": "1_3_10_5.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "說完",
+      "start_ms": 87.5,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "，",
+      "start_ms": 875.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "他",
+      "start_ms": 875.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 1112.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "一",
+      "start_ms": 1525.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "亮",
+      "start_ms": 1650.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2175.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "指",
+      "start_ms": 2175.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 2387.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "自己",
+      "start_ms": 2612.5,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2912.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "攤子",
+      "start_ms": 3037.5,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "：",
+      "start_ms": 3675.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

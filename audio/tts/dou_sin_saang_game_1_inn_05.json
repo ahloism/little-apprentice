@@ -1,0 +1,381 @@
+{
+  "filename": "dou_sin_saang_game_1_inn_05.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "狐狸",
+      "start_ms": 50.0,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "跟",
+      "start_ms": 379.562,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "在",
+      "start_ms": 550.0,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "老虎",
+      "start_ms": 686.375,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "後面",
+      "start_ms": 1015.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "走進",
+      "start_ms": 1368.1869,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "森林",
+      "start_ms": 1675.0,
+      "duration_ms": 397.75
+    },
+    {
+      "word": "，",
+      "start_ms": 2197.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "見到",
+      "start_ms": 2197.75,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "小",
+      "start_ms": 2504.562,
+      "duration_ms": 204.5
+    },
+    {
+      "word": "動物",
+      "start_ms": 2709.062,
+      "duration_ms": 261.375
+    },
+    {
+      "word": "們",
+      "start_ms": 2970.437,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "全",
+      "start_ms": 3152.25,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "都",
+      "start_ms": 3345.437,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "嚇",
+      "start_ms": 3470.437,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "得",
+      "start_ms": 3663.625,
+      "duration_ms": 90.937
+    },
+    {
+      "word": "四散",
+      "start_ms": 3754.562,
+      "duration_ms": 386.375
+    },
+    {
+      "word": "奔逃",
+      "start_ms": 4140.937,
+      "duration_ms": 431.81199999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 4697.75,
+      "duration_ms": 90.875
+    },
+    {
+      "word": "狐狸",
+      "start_ms": 4788.625,
+      "duration_ms": 261.375
+    },
+    {
+      "word": "立刻",
+      "start_ms": 5050.0,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "挺起",
+      "start_ms": 5322.75,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "胸口",
+      "start_ms": 5629.562,
+      "duration_ms": 465.937
+    },
+    {
+      "word": "，",
+      "start_ms": 6220.437,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "走",
+      "start_ms": 6220.437,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "得",
+      "start_ms": 6402.25,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "比",
+      "start_ms": 6527.25,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "誰",
+      "start_ms": 6675.0,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "都",
+      "start_ms": 6845.437,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "慢",
+      "start_ms": 6947.75,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "，",
+      "start_ms": 7413.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "還",
+      "start_ms": 7413.625,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "不時",
+      "start_ms": 7629.562,
+      "duration_ms": 261.375
+    },
+    {
+      "word": "回頭",
+      "start_ms": 7890.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "瞄",
+      "start_ms": 8243.187,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "一",
+      "start_ms": 8379.562,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "眼",
+      "start_ms": 8515.937,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "老虎",
+      "start_ms": 8697.75,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "在",
+      "start_ms": 9015.937,
+      "duration_ms": 136.31199999999998
+    },
+    {
+      "word": "不在",
+      "start_ms": 9152.25,
+      "duration_ms": 454.562
+    },
+    {
+      "word": "。",
+      "start_ms": 9618.187,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "有人",
+      "start_ms": 10379.562,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "問",
+      "start_ms": 10731.812,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "牠",
+      "start_ms": 10879.562,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "為什麼",
+      "start_ms": 11061.375,
+      "duration_ms": 443.187
+    },
+    {
+      "word": "這麼",
+      "start_ms": 11504.562,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "威風",
+      "start_ms": 11811.375,
+      "duration_ms": 465.937
+    },
+    {
+      "word": "，",
+      "start_ms": 12402.25,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "牠",
+      "start_ms": 12606.812,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "還",
+      "start_ms": 12822.75,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "裝作",
+      "start_ms": 12993.187,
+      "duration_ms": 340.875
+    },
+    {
+      "word": "沒",
+      "start_ms": 13334.062,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "聽見",
+      "start_ms": 13470.437,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "。",
+      "start_ms": 13993.187,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "狐狸",
+      "start_ms": 14754.562,
+      "duration_ms": 329.5
+    },
+    {
+      "word": "看起來",
+      "start_ms": 15084.062,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "很",
+      "start_ms": 15595.437,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "威猛",
+      "start_ms": 15777.25,
+      "duration_ms": 488.625
+    },
+    {
+      "word": "，",
+      "start_ms": 16390.937,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "其實",
+      "start_ms": 16618.187,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "內心",
+      "start_ms": 16981.812,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "很",
+      "start_ms": 17334.062,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "不是",
+      "start_ms": 17515.937,
+      "duration_ms": 261.312
+    },
+    {
+      "word": "滋味",
+      "start_ms": 17777.25,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "。",
+      "start_ms": 18288.625,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "你",
+      "start_ms": 19050.0,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "說",
+      "start_ms": 19265.937,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 19697.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "此",
+      "start_ms": 19697.75,
+      "duration_ms": 204.5
+    },
+    {
+      "word": "人",
+      "start_ms": 19902.25,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "心裡",
+      "start_ms": 20038.625,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "是",
+      "start_ms": 20356.812,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "什麼",
+      "start_ms": 20550.0,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "感覺",
+      "start_ms": 20868.187,
+      "duration_ms": 454.562
+    },
+    {
+      "word": "？",
+      "start_ms": 21322.75,
+      "duration_ms": 79.562
+    }
+  ]
+}

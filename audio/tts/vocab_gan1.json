@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_gan1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "用來",
+      "start_ms": 75.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "量",
+      "start_ms": 462.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "細長",
+      "start_ms": 687.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "而",
+      "start_ms": 1262.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "硬",
+      "start_ms": 1450.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "挺",
+      "start_ms": 1725.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1900.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 2025.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2600.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

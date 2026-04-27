@@ -1,0 +1,81 @@
+{
+  "filename": "asui_T14.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "大",
+      "start_ms": 41.687,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "梁",
+      "start_ms": 187.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "城",
+      "start_ms": 375.0,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "走遍",
+      "start_ms": 593.75,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 1010.437,
+      "duration_ms": 291.625
+    },
+    {
+      "word": "，",
+      "start_ms": 1302.0619,
+      "duration_ms": 83.312
+    },
+    {
+      "word": "厲害",
+      "start_ms": 1395.8119,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "！",
+      "start_ms": 1989.562,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "小",
+      "start_ms": 2741.687,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "任務",
+      "start_ms": 2970.812,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "還可以",
+      "start_ms": 3377.062,
+      "duration_ms": 708.312
+    },
+    {
+      "word": "再",
+      "start_ms": 4095.812,
+      "duration_ms": 260.43699999999995
+    },
+    {
+      "word": "去",
+      "start_ms": 4356.25,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "挑戰",
+      "start_ms": 4522.937,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "。",
+      "start_ms": 5054.187,
+      "duration_ms": 31.25
+    }
+  ]
+}

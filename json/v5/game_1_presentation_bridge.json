@@ -3,105 +3,135 @@
   "game_id": "game_1_bridge",
   "character_assets": {
     "edmund": {
-      "image": "edmund.png"
+      "image": "C11_Edmund.png"
     },
     "margaret": {
-      "image": "margaret.png"
+      "image": "C12_Margaret.png"
     },
     "edmund_margaret_reunion": {
-      "image": "edmund_margaret_reunion.png"
+      "image": "A26_Edmund_Margaret重逢.png"
     }
   },
   "vocabulary_assets": {
     "dung": {
-      "audio": "vocab_dung.mp3"
+      "audio": "vocab_dung.mp3",
+      "speaker": "edmund"
     },
     "naam": {
-      "audio": "vocab_naam.mp3"
+      "audio": "vocab_naam.mp3",
+      "speaker": "edmund"
     },
     "sai": {
-      "audio": "vocab_sai.mp3"
+      "audio": "vocab_sai.mp3",
+      "speaker": "edmund"
     },
     "bak": {
-      "audio": "vocab_bak.mp3"
+      "audio": "vocab_bak.mp3",
+      "speaker": "margaret"
     },
     "zo2": {
-      "audio": "vocab_zo2.mp3"
+      "audio": "vocab_zo2.mp3",
+      "speaker": "margaret"
     },
     "jau6": {
-      "audio": "vocab_jau6.mp3"
+      "audio": "vocab_jau6.mp3",
+      "speaker": "margaret"
     },
     "cin4": {
-      "audio": "vocab_cin4.mp3"
+      "audio": "vocab_cin4.mp3",
+      "speaker": "edmund"
     },
     "hau6": {
-      "audio": "vocab_hau6.mp3"
+      "audio": "vocab_hau6.mp3",
+      "speaker": "edmund"
     },
     "ce4_deoi3_min6": {
-      "audio": "vocab_ce4_deoi3_min6.mp3"
+      "audio": "vocab_ce4_deoi3_min6.mp3",
+      "speaker": "edmund"
     },
     "paak_bin1": {
-      "audio": "vocab_paak_bin1.mp3"
+      "audio": "vocab_paak_bin1.mp3",
+      "speaker": "margaret"
     },
     "deoi3_min6": {
-      "audio": "vocab_deoi3_min6.mp3"
+      "audio": "vocab_deoi3_min6.mp3",
+      "speaker": "margaret"
     },
     "zung1_gaan1": {
-      "audio": "vocab_zung1_gaan1.mp3"
+      "audio": "vocab_zung1_gaan1.mp3",
+      "speaker": "margaret"
     },
     "fu6_gan6": {
-      "audio": "vocab_fu6_gan6.mp3"
+      "audio": "vocab_fu6_gan6.mp3",
+      "speaker": "edmund"
     },
     "gaak3_lei4": {
-      "audio": "vocab_gaak3_lei4.mp3"
+      "audio": "vocab_gaak3_lei4.mp3",
+      "speaker": "edmund"
     },
     "zyun2_gok3": {
-      "audio": "vocab_zyun2_gok3.mp3"
+      "audio": "vocab_zyun2_gok3.mp3",
+      "speaker": "edmund"
     },
     "zeon2_tau4": {
-      "audio": "vocab_zeon2_tau4.mp3"
+      "audio": "vocab_zeon2_tau4.mp3",
+      "speaker": "margaret"
     },
     "jyun4_lou6": {
-      "audio": "vocab_jyun4_lou6.mp3"
+      "audio": "vocab_jyun4_lou6.mp3",
+      "speaker": "margaret"
     },
     "ce4_paak_bin1": {
-      "audio": "vocab_ce4_paak_bin1.mp3"
+      "audio": "vocab_ce4_paak_bin1.mp3",
+      "speaker": "margaret"
     },
     "mun4_hau2": {
-      "audio": "vocab_mun4_hau2.mp3"
+      "audio": "vocab_mun4_hau2.mp3",
+      "speaker": "edmund"
     },
     "mun4_noi6": {
-      "audio": "vocab_mun4_noi6.mp3"
+      "audio": "vocab_mun4_noi6.mp3",
+      "speaker": "edmund"
     },
     "jyun2_noi6": {
-      "audio": "vocab_jyun2_noi6.mp3"
+      "audio": "vocab_jyun2_noi6.mp3",
+      "speaker": "edmund"
     },
     "sing4_mun4_noi6": {
-      "audio": "vocab_sing4_mun4_noi6.mp3"
+      "audio": "vocab_sing4_mun4_noi6.mp3",
+      "speaker": "margaret"
     },
     "sing4_mun4_ngoi6": {
-      "audio": "vocab_sing4_mun4_ngoi6.mp3"
+      "audio": "vocab_sing4_mun4_ngoi6.mp3",
+      "speaker": "margaret"
     },
     "coeng4_ngoi6": {
-      "audio": "vocab_coeng4_ngoi6.mp3"
+      "audio": "vocab_coeng4_ngoi6.mp3",
+      "speaker": "margaret"
     },
     "kiu4_soeng6": {
-      "audio": "vocab_kiu4_soeng6.mp3"
+      "audio": "vocab_kiu4_soeng6.mp3",
+      "speaker": "edmund"
     },
     "kiu4_haa6": {
-      "audio": "vocab_kiu4_haa6.mp3"
+      "audio": "vocab_kiu4_haa6.mp3",
+      "speaker": "edmund"
     },
     "kiu4_tau4": {
-      "audio": "vocab_kiu4_tau4.mp3"
+      "audio": "vocab_kiu4_tau4.mp3",
+      "speaker": "edmund"
     },
     "dim3_noi6": {
-      "audio": "vocab_dim3_noi6.mp3"
+      "audio": "vocab_dim3_noi6.mp3",
+      "speaker": "margaret"
     },
     "dim3_ngoi6": {
-      "audio": "vocab_dim3_ngoi6.mp3"
+      "audio": "vocab_dim3_ngoi6.mp3",
+      "speaker": "margaret"
     },
     "jim4_haa6": {
-      "audio": "vocab_jim4_haa6.mp3"
+      "audio": "vocab_jim4_haa6.mp3",
+      "speaker": "margaret"
     }
   },
   "option_assets": {
@@ -259,73 +289,533 @@
   "variations": [
     {
       "variation_id": "game_1_bridge_01",
-      "speaker_image": "edmund.png",
-      "scene_image": "bridge_scene_01.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "edmund_game_1_bridge_01.mp3"
+      "speaker_image": "C11_Edmund.png",
+      "scene_image": "S22_橋邊問路場景01.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "edmund_game_1_bridge_01.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_02",
-      "speaker_image": "margaret.png",
-      "scene_image": "bridge_scene_02.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "margaret_game_1_bridge_02.mp3"
+      "speaker_image": "C12_Margaret.png",
+      "scene_image": "S23_橋邊問路場景02.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "margaret_game_1_bridge_02.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_03",
-      "speaker_image": "edmund.png",
-      "scene_image": "bridge_scene_03.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "edmund_game_1_bridge_03.mp3"
+      "speaker_image": "C11_Edmund.png",
+      "scene_image": "S24_橋邊問路場景03.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "edmund_game_1_bridge_03.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_04",
-      "speaker_image": "margaret.png",
-      "scene_image": "bridge_scene_04.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "margaret_game_1_bridge_04.mp3"
+      "speaker_image": "C12_Margaret.png",
+      "scene_image": "S25_橋邊問路場景04.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "margaret_game_1_bridge_04.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_05",
-      "speaker_image": "edmund.png",
-      "scene_image": "bridge_scene_05.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "edmund_game_1_bridge_05.mp3"
+      "speaker_image": "C11_Edmund.png",
+      "scene_image": "S26_橋邊問路場景05.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "edmund_game_1_bridge_05.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_06",
-      "speaker_image": "margaret.png",
-      "scene_image": "bridge_scene_06.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "margaret_game_1_bridge_06.mp3"
+      "speaker_image": "C12_Margaret.png",
+      "scene_image": "S27_橋邊問路場景06.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "margaret_game_1_bridge_06.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_07",
-      "speaker_image": "edmund.png",
-      "scene_image": "bridge_scene_07.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "edmund_game_1_bridge_07.mp3"
+      "speaker_image": "C11_Edmund.png",
+      "scene_image": "S28_橋邊問路場景07.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "edmund_game_1_bridge_07.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_08",
-      "speaker_image": "margaret.png",
-      "scene_image": "bridge_scene_08.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "margaret_game_1_bridge_08.mp3"
+      "speaker_image": "C12_Margaret.png",
+      "scene_image": "S29_橋邊問路場景08.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "margaret_game_1_bridge_08.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_09",
-      "speaker_image": "edmund.png",
-      "scene_image": "bridge_scene_09.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "edmund_game_1_bridge_09.mp3"
+      "speaker_image": "C11_Edmund.png",
+      "scene_image": "S30_橋邊問路場景09.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "edmund_game_1_bridge_09.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_0_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_edmund_1_edmund.mp3",
+                "speaker": "edmund"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "variation_id": "game_1_bridge_10",
-      "speaker_image": "margaret.png",
-      "scene_image": "bridge_scene_10.png",
-      "reunion_image": "edmund_margaret_reunion.png",
-      "question_audio": "margaret_game_1_bridge_10.mp3"
+      "speaker_image": "C12_Margaret.png",
+      "scene_image": "S31_橋邊問路場景10.png",
+      "reunion_image": "A26_Edmund_Margaret重逢.png",
+      "question_audio": "margaret_game_1_bridge_10.mp3",
+      "feedback_audio": {
+        "correct": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_0.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_correct_1.mp3",
+                "speaker": "narrator"
+              }
+            ]
+          }
+        ],
+        "wrong": [
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_0_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          },
+          {
+            "parts": [
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+                "speaker": "narrator"
+              },
+              {
+                "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+                "speaker": "margaret"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }

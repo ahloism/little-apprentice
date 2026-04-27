@@ -1,0 +1,241 @@
+{
+  "filename": "nb_1_2_1_2_9_B.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "我",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "先",
+      "start_ms": 250.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "蹲下來",
+      "start_ms": 525.0,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "把",
+      "start_ms": 1075.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "散落",
+      "start_ms": 1300.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1725.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 1875.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "撿",
+      "start_ms": 2237.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "起來",
+      "start_ms": 2437.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3125.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "想",
+      "start_ms": 3125.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "著",
+      "start_ms": 3425.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "能",
+      "start_ms": 3575.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "補",
+      "start_ms": 3775.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一點",
+      "start_ms": 3962.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "是",
+      "start_ms": 4275.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "一點",
+      "start_ms": 4437.5,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4987.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "有時候",
+      "start_ms": 5850.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "說",
+      "start_ms": 6437.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "對不起",
+      "start_ms": 6675.0,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "重要",
+      "start_ms": 7150.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 7862.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "動手",
+      "start_ms": 7862.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "收拾",
+      "start_ms": 8225.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "也",
+      "start_ms": 8587.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "重要",
+      "start_ms": 8762.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "。",
+      "start_ms": 9325.0,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "你",
+      "start_ms": 10162.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "呢",
+      "start_ms": 10450.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "？",
+      "start_ms": 10712.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "遇到",
+      "start_ms": 11587.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "自己",
+      "start_ms": 11875.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "撞",
+      "start_ms": 12237.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "亂",
+      "start_ms": 12512.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "的",
+      "start_ms": 12662.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "局面",
+      "start_ms": 12775.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 13462.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "你",
+      "start_ms": 13462.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "會",
+      "start_ms": 13650.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "先",
+      "start_ms": 13800.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "說",
+      "start_ms": 14050.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "，",
+      "start_ms": 14450.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "還是",
+      "start_ms": 14450.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "先",
+      "start_ms": 14862.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "做",
+      "start_ms": 15125.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "？",
+      "start_ms": 15462.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

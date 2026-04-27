@@ -1,0 +1,36 @@
+{
+  "filename": "1_3_10_1.mp3",
+  "speaker": "王三",
+  "words": [
+    {
+      "word": "「喂",
+      "start_ms": 41.687,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "，",
+      "start_ms": 281.25,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "小孩",
+      "start_ms": 364.562,
+      "duration_ms": 510.437
+    },
+    {
+      "word": "，",
+      "start_ms": 895.812,
+      "duration_ms": 83.312
+    },
+    {
+      "word": "過來",
+      "start_ms": 1031.25,
+      "duration_ms": 447.93699999999995
+    },
+    {
+      "word": "。」",
+      "start_ms": 1500.0,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

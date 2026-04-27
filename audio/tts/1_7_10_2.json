@@ -1,0 +1,121 @@
+{
+  "filename": "1_7_10_2.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「現在",
+      "start_ms": 50.0,
+      "duration_ms": 812.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1034.375,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "你",
+      "start_ms": 1034.375,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "自己",
+      "start_ms": 1300.0,
+      "duration_ms": 390.625
+    },
+    {
+      "word": "看看",
+      "start_ms": 1690.625,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "這",
+      "start_ms": 2253.125,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "滿",
+      "start_ms": 2456.25,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "屋子",
+      "start_ms": 2737.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3112.5,
+      "duration_ms": 140.625
+    },
+    {
+      "word": "帳冊",
+      "start_ms": 3253.125,
+      "duration_ms": 671.875
+    },
+    {
+      "word": "，",
+      "start_ms": 4096.875,
+      "duration_ms": 46.875
+    },
+    {
+      "word": "哪",
+      "start_ms": 4143.75,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "一頁",
+      "start_ms": 4440.625,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "不",
+      "start_ms": 4768.75,
+      "duration_ms": 171.875
+    },
+    {
+      "word": "靠",
+      "start_ms": 4940.625,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "『",
+      "start_ms": 5268.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "誠",
+      "start_ms": 5268.75,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "』",
+      "start_ms": 5565.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "字",
+      "start_ms": 5565.625,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "撐",
+      "start_ms": 5784.375,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "著",
+      "start_ms": 6096.875,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "？",
+      "start_ms": 6456.25,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "」",
+      "start_ms": 6706.25,
+      "duration_ms": 109.375
+    }
+  ]
+}

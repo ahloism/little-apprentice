@@ -1,0 +1,71 @@
+{
+  "filename": "vocab_zeon2_tau4.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 109.375,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "在",
+      "start_ms": 328.125,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "那",
+      "start_ms": 578.125,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "條",
+      "start_ms": 843.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "路",
+      "start_ms": 1125.0,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "的",
+      "start_ms": 1343.75,
+      "duration_ms": 171.875
+    },
+    {
+      "word": "盡頭",
+      "start_ms": 1515.625,
+      "duration_ms": 734.375
+    },
+    {
+      "word": "，",
+      "start_ms": 2406.25,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "要",
+      "start_ms": 2406.25,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一直",
+      "start_ms": 2593.75,
+      "duration_ms": 359.375
+    },
+    {
+      "word": "走到",
+      "start_ms": 2953.125,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "尾",
+      "start_ms": 3437.5,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "。",
+      "start_ms": 3921.875,
+      "duration_ms": 109.375
+    }
+  ]
+}

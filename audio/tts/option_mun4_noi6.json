@@ -1,0 +1,16 @@
+{
+  "filename": "option_mun4_noi6.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "門",
+      "start_ms": 100.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "內",
+      "start_ms": 337.5,
+      "duration_ms": 375.0
+    }
+  ]
+}

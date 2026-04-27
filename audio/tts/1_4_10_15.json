@@ -1,0 +1,81 @@
+{
+  "filename": "1_4_10_15.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "回到",
+      "start_ms": 87.5,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "橋",
+      "start_ms": 387.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "邊",
+      "start_ms": 625.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1100.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 1100.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "水",
+      "start_ms": 1300.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1500.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "眼",
+      "start_ms": 1625.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "就",
+      "start_ms": 1862.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "看到",
+      "start_ms": 2025.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "他",
+      "start_ms": 2412.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2887.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "咧嘴",
+      "start_ms": 2887.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "笑起來",
+      "start_ms": 3300.0,
+      "duration_ms": 762.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4062.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

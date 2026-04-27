@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_hemp_rope.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "粗",
+      "start_ms": 87.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "粗",
+      "start_ms": 300.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "一捆",
+      "start_ms": 512.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1175.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "用來",
+      "start_ms": 1175.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "綁",
+      "start_ms": 1550.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 1825.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2212.5,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "繩子",
+      "start_ms": 2312.5,
+      "duration_ms": 612.5
+    }
+  ]
+}

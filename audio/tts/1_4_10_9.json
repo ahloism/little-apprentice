@@ -1,0 +1,106 @@
+{
+  "filename": "1_4_10_9.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "前面",
+      "start_ms": 87.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "是",
+      "start_ms": 487.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "一",
+      "start_ms": 675.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "堵",
+      "start_ms": 825.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "矮牆",
+      "start_ms": 975.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1687.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "牆角",
+      "start_ms": 1687.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "有",
+      "start_ms": 2150.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "一扇",
+      "start_ms": 2275.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "木門",
+      "start_ms": 2612.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3275.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "縫隙",
+      "start_ms": 3275.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 3675.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "透出",
+      "start_ms": 3837.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "一股",
+      "start_ms": 4225.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "說",
+      "start_ms": 4512.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "不清楚",
+      "start_ms": 4725.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "的",
+      "start_ms": 5250.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "氣味",
+      "start_ms": 5350.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "。",
+      "start_ms": 5925.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

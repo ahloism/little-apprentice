@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_5",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "vocabulary",
-        "content": "病——左邊有個斜斜的蓋，下面像有人縮在裡面，身體不舒服"
-      },
-      {
-        "type": "vocabulary",
-        "content": "碼頭——馬字加部首是碼，碼加頭是碼頭，船靠岸卸貨的地方"
-      },
-      {
-        "type": "concept",
-        "content": "不識字，路難行——老梁五十出頭仍在學字，阿禾識字夠多嗎？路會難行嗎？"
-      }
-    ],
-    "anchor_image": "O19"
-  },
   "scenes": [
     {
       "scene_id": "1_5_2",

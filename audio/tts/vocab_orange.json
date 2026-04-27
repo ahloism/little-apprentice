@@ -1,0 +1,71 @@
+{
+  "filename": "vocab_orange.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "圓",
+      "start_ms": 87.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "圓",
+      "start_ms": 287.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "橘色",
+      "start_ms": 487.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1000.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "剝開",
+      "start_ms": 1000.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "有",
+      "start_ms": 1437.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1587.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "瓣",
+      "start_ms": 1700.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1925.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "瓣",
+      "start_ms": 2025.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2262.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "果子",
+      "start_ms": 2387.5,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2987.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

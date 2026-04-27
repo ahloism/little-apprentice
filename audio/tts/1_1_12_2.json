@@ -1,0 +1,66 @@
+{
+  "filename": "1_1_12_2.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「糖葫蘆",
+      "start_ms": 50.0,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "在",
+      "start_ms": 800.0,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "倉庫",
+      "start_ms": 1065.625,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "甜",
+      "start_ms": 1596.875,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "食",
+      "start_ms": 1862.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "格",
+      "start_ms": 2050.0,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "，",
+      "start_ms": 2534.375,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "你",
+      "start_ms": 2534.375,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "去",
+      "start_ms": 2878.125,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "拿",
+      "start_ms": 3065.625,
+      "duration_ms": 390.625
+    },
+    {
+      "word": "。",
+      "start_ms": 3643.75,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "」",
+      "start_ms": 4112.5,
+      "duration_ms": 109.375
+    }
+  ]
+}

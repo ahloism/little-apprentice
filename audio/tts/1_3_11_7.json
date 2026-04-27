@@ -1,0 +1,91 @@
+{
+  "filename": "1_3_11_7.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "說完",
+      "start_ms": 87.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "，",
+      "start_ms": 862.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "他",
+      "start_ms": 862.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "搖",
+      "start_ms": 1112.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "著",
+      "start_ms": 1287.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "頭",
+      "start_ms": 1462.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "走開",
+      "start_ms": 1637.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2075.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2562.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "像",
+      "start_ms": 2562.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "個",
+      "start_ms": 2812.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "很",
+      "start_ms": 2937.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "惋惜",
+      "start_ms": 3150.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3475.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "老",
+      "start_ms": 3587.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "朋友",
+      "start_ms": 3775.0,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4375.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "filename": "nb_1_2_title_right.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "今次",
+      "start_ms": 87.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "學",
+      "start_ms": 500.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "了",
+      "start_ms": 750.0,
+      "duration_ms": 362.5
+    }
+  ]
+}

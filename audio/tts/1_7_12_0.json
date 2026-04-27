@@ -1,0 +1,76 @@
+{
+  "filename": "1_7_12_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "走出",
+      "start_ms": 87.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "帳房",
+      "start_ms": 450.0,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "時",
+      "start_ms": 912.5,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1387.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "夕陽",
+      "start_ms": 1387.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "最後",
+      "start_ms": 1775.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "一點",
+      "start_ms": 2125.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "餘",
+      "start_ms": 2462.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "暉",
+      "start_ms": 2650.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "正",
+      "start_ms": 2862.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "從",
+      "start_ms": 3087.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "天井",
+      "start_ms": 3287.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "落下",
+      "start_ms": 3687.5,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "。",
+      "start_ms": 4212.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

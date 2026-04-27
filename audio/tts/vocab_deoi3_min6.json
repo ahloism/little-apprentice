@@ -1,0 +1,66 @@
+{
+  "filename": "vocab_deoi3_min6.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 93.75,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "在",
+      "start_ms": 312.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "對面",
+      "start_ms": 562.5,
+      "duration_ms": 796.875
+    },
+    {
+      "word": "，",
+      "start_ms": 1500.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "要",
+      "start_ms": 1500.0,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "隔",
+      "start_ms": 1734.375,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "著",
+      "start_ms": 2015.625,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "這條",
+      "start_ms": 2234.375,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "路",
+      "start_ms": 2734.375,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "看",
+      "start_ms": 2984.375,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "過去",
+      "start_ms": 3281.25,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3968.75,
+      "duration_ms": 109.375
+    }
+  ]
+}

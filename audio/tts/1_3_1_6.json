@@ -1,0 +1,46 @@
+{
+  "filename": "1_3_1_6.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "水",
+      "start_ms": 262.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "指",
+      "start_ms": 487.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 700.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "前面",
+      "start_ms": 912.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "一道",
+      "start_ms": 1337.5,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "拱橋",
+      "start_ms": 1662.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "：",
+      "start_ms": 2225.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

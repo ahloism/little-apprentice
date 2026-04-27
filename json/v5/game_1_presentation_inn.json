@@ -3,48 +3,48 @@
   "game_id": "game_1_inn",
   "character_assets": {
     "dou_sin_saang": {
-      "image": "dou_sin_saang.png"
+      "image": "C08_杜先生.png"
     }
   },
   "vocabulary_assets": {
     "hoi1_sam1": {
-      "image": "vocab_hoi1_sam1.png",
+      "image": "A16_阿禾表情——開心.png",
       "audio": "vocab_hoi1_sam1.mp3"
     },
     "giu1_ngou6": {
-      "image": "vocab_giu1_ngou6.png",
+      "image": "A17_阿禾表情——驕傲.png",
       "audio": "vocab_giu1_ngou6.mp3"
     },
     "gam2_gik1": {
-      "image": "vocab_gam2_gik1.png",
+      "image": "A18_阿禾表情——感激.png",
       "audio": "vocab_gam2_gik1.mp3"
     },
     "hoi6_paa3": {
-      "image": "vocab_hoi6_paa3.png",
+      "image": "A19_阿禾表情——害怕.png",
       "audio": "vocab_hoi6_paa3.mp3"
     },
     "sam1_heoi1": {
-      "image": "vocab_sam1_heoi1.png",
+      "image": "A20_阿禾表情——心虛.png",
       "audio": "vocab_sam1_heoi1.mp3"
     },
     "daam1_sam1": {
-      "image": "vocab_daam1_sam1.png",
+      "image": "A21_阿禾表情——擔心.png",
       "audio": "vocab_daam1_sam1.mp3"
     },
     "jau6_ging1_jau6_hei2": {
-      "image": "vocab_jau6_ging1_jau6_hei2.png",
+      "image": "A22_阿禾表情——又驚又喜.png",
       "audio": "vocab_jau6_ging1_jau6_hei2.mp3"
     },
     "gaan3_gaai3": {
-      "image": "vocab_gaan3_gaai3.png",
+      "image": "A23_阿禾表情——尷尬.png",
       "audio": "vocab_gaan3_gaai3.mp3"
     },
     "jau6_paa3_jau6_soeng2": {
-      "image": "vocab_jau6_paa3_jau6_soeng2.png",
+      "image": "A24_阿禾表情——又怕又想.png",
       "audio": "vocab_jau6_paa3_jau6_soeng2.mp3"
     },
     "bat1_gam1_sam1": {
-      "image": "vocab_bat1_gam1_sam1.png",
+      "image": "A25_阿禾表情——不甘心.png",
       "audio": "vocab_bat1_gam1_sam1.mp3"
     }
   },
@@ -103,53 +103,73 @@
   "variations": [
     {
       "variation_id": "game_1_inn_01",
-      "story_image": "inn_story_01.png",
+      "story_image": "A06_守株待兔故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_01.mp3"
     },
     {
       "variation_id": "game_1_inn_02",
-      "story_image": "inn_story_02.png",
+      "story_image": "A07_刻舟求劍故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_02.mp3"
     },
     {
       "variation_id": "game_1_inn_03",
-      "story_image": "inn_story_03.png",
+      "story_image": "A08_鐵杵磨針故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_03.mp3"
     },
     {
       "variation_id": "game_1_inn_04",
-      "story_image": "inn_story_04.png",
+      "story_image": "A09_掩耳盜鈴故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_04.mp3"
     },
     {
       "variation_id": "game_1_inn_05",
-      "story_image": "inn_story_05.png",
+      "story_image": "A10_狐假虎威故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_05.mp3"
     },
     {
       "variation_id": "game_1_inn_06",
-      "story_image": "inn_story_06.png",
+      "story_image": "A11_杞人憂天故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_06.mp3"
     },
     {
       "variation_id": "game_1_inn_07",
-      "story_image": "inn_story_07.png",
+      "story_image": "A12_塞翁失馬故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_07.mp3"
     },
     {
       "variation_id": "game_1_inn_08",
-      "story_image": "inn_story_08.png",
+      "story_image": "A13_自相矛盾故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_08.mp3"
     },
     {
       "variation_id": "game_1_inn_09",
-      "story_image": "inn_story_09.png",
+      "story_image": "A14_杯弓蛇影故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_09.mp3"
     },
     {
       "variation_id": "game_1_inn_10",
-      "story_image": "inn_story_10.png",
+      "story_image": "A15_半途而廢故事插圖.png",
       "question_audio": "dou_sin_saang_game_1_inn_10.mp3"
     }
-  ]
+  ],
+  "feedback_assets": {
+    "correct_0": {
+      "audio": "feedback_game_1_inn_correct_0.mp3"
+    },
+    "correct_1": {
+      "audio": "feedback_game_1_inn_correct_1.mp3"
+    },
+    "correct_2": {
+      "audio": "feedback_game_1_inn_correct_2.mp3"
+    },
+    "wrong_0": {
+      "audio": "feedback_game_1_inn_wrong_0.mp3"
+    },
+    "wrong_1": {
+      "audio": "feedback_game_1_inn_wrong_1.mp3"
+    },
+    "wrong_2": {
+      "audio": "feedback_game_1_inn_wrong_2.mp3"
+    }
+  }
 }

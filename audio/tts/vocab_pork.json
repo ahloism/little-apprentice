@@ -1,0 +1,56 @@
+{
+  "filename": "vocab_pork.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "粉紅",
+      "start_ms": 87.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "一塊",
+      "start_ms": 500.0,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1150.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "切",
+      "start_ms": 1150.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "來",
+      "start_ms": 1387.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "煮",
+      "start_ms": 1587.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "菜",
+      "start_ms": 1787.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2025.0,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "肉",
+      "start_ms": 2162.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2387.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

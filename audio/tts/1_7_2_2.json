@@ -1,0 +1,56 @@
+{
+  "filename": "1_7_2_2.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「阿",
+      "start_ms": 54.187,
+      "duration_ms": 236.06199999999998
+    },
+    {
+      "word": "水",
+      "start_ms": 290.25,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 748.625,
+      "duration_ms": 55.562
+    },
+    {
+      "word": "你",
+      "start_ms": 984.75,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "不准",
+      "start_ms": 1318.0619,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "說話",
+      "start_ms": 1776.375,
+      "duration_ms": 694.437
+    },
+    {
+      "word": "，",
+      "start_ms": 2526.375,
+      "duration_ms": 55.562
+    },
+    {
+      "word": "不准",
+      "start_ms": 2734.75,
+      "duration_ms": 541.625
+    },
+    {
+      "word": "提示",
+      "start_ms": 3276.375,
+      "duration_ms": 666.687
+    },
+    {
+      "word": "。」",
+      "start_ms": 3956.937,
+      "duration_ms": 97.25
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "filename": "1_5_1_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "客棧",
+      "start_ms": 87.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "在",
+      "start_ms": 525.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "梁河",
+      "start_ms": 687.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "橋頭",
+      "start_ms": 1075.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "轉角處",
+      "start_ms": 1475.0,
+      "duration_ms": 825.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2437.5,
+      "duration_ms": 25.0
+    },
+    {
+      "word": "招牌",
+      "start_ms": 2462.5,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "是",
+      "start_ms": 2912.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "紅",
+      "start_ms": 3112.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "底",
+      "start_ms": 3325.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "黑字",
+      "start_ms": 3487.5,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 4200.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "門",
+      "start_ms": 4200.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "前",
+      "start_ms": 4412.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "掛",
+      "start_ms": 4600.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "著",
+      "start_ms": 4787.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "幾",
+      "start_ms": 5000.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "盞",
+      "start_ms": 5162.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "紅",
+      "start_ms": 5412.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "燈籠",
+      "start_ms": 5600.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "，",
+      "start_ms": 6262.5,
+      "duration_ms": 75.0
+    },
+    {
+      "word": "白天",
+      "start_ms": 6337.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "也",
+      "start_ms": 6737.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "亮",
+      "start_ms": 6900.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "著",
+      "start_ms": 7137.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "。",
+      "start_ms": 7400.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -22,5 +22,108 @@
     "social_understanding",
     "information_integration",
     "value_judgment"
-  ]
+  ],
+  "tts": {
+    "provider": "azure",
+    "language": "zh-HK",
+    "voices": {
+      "narrator": "zh-HK-HiuMaanNeural",
+      "阿禾": "zh-HK-HiuGaaiNeural",
+      "阿水": "zh-HK-HiuGaaiNeural",
+      "錢伯": "zh-HK-WanLungNeural",
+      "錢平": "zh-HK-HiuGaaiNeural",
+      "杜先生": "zh-HK-WanLungNeural",
+      "老梁": "zh-HK-WanLungNeural",
+      "石頭": "zh-HK-WanLungNeural",
+      "梅姐": "zh-HK-HiuMaanNeural",
+      "阿乖": "zh-HK-HiuGaaiNeural",
+      "王三": "zh-HK-HiuGaaiNeural",
+      "蔡婆婆": "zh-HK-HiuMaanNeural",
+      "余老大": "zh-HK-WanLungNeural",
+      "阿萍": "zh-HK-HiuMaanNeural",
+      "馬伯": "zh-HK-WanLungNeural",
+      "阿毛": "zh-HK-HiuGaaiNeural",
+      "細狗": "zh-HK-HiuGaaiNeural",
+      "Edmund": "zh-HK-WanLungNeural",
+      "Margaret": "zh-HK-HiuMaanNeural"
+    },
+    "ssml_params": {
+      "narrator": {
+        "rate": "+0%",
+        "pitch": "+0st"
+      },
+      "阿禾": {
+        "rate": "-10%",
+        "pitch": "+0st"
+      },
+      "阿水": {
+        "rate": "+20%",
+        "pitch": "+1.5st"
+      },
+      "錢伯": {
+        "rate": "-20%",
+        "pitch": "-3st"
+      },
+      "錢平": {
+        "rate": "-10%",
+        "pitch": "-1.5st"
+      },
+      "杜先生": {
+        "rate": "+10%",
+        "pitch": "+0st"
+      },
+      "老梁": {
+        "rate": "+20%",
+        "pitch": "+1st"
+      },
+      "石頭": {
+        "rate": "-20%",
+        "pitch": "-3st"
+      },
+      "梅姐": {
+        "rate": "-10%",
+        "pitch": "-1.5st"
+      },
+      "阿乖": {
+        "rate": "+10%",
+        "pitch": "-3st"
+      },
+      "王三": {
+        "rate": "+20%",
+        "pitch": "+1st"
+      },
+      "蔡婆婆": {
+        "rate": "+10%",
+        "pitch": "+3st"
+      },
+      "余老大": {
+        "rate": "+0%",
+        "pitch": "-3st"
+      },
+      "阿萍": {
+        "rate": "-10%",
+        "pitch": "+0st"
+      },
+      "馬伯": {
+        "rate": "-20%",
+        "pitch": "-3st"
+      },
+      "阿毛": {
+        "rate": "+20%",
+        "pitch": "+3st"
+      },
+      "細狗": {
+        "rate": "+10%",
+        "pitch": "+0st"
+      },
+      "Edmund": {
+        "rate": "+10%",
+        "pitch": "+1st"
+      },
+      "Margaret": {
+        "rate": "-20%",
+        "pitch": "-1st"
+      }
+    }
+  }
 }

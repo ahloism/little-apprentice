@@ -1,0 +1,51 @@
+{
+  "filename": "1_5_10_5.mp3",
+  "speaker": "阿禾",
+  "words": [
+    {
+      "word": "「梅",
+      "start_ms": 55.562,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "姐",
+      "start_ms": 263.875,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "說",
+      "start_ms": 555.562,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "老",
+      "start_ms": 847.25,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "梁",
+      "start_ms": 1166.6869,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "忘",
+      "start_ms": 1430.5619,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 1722.25,
+      "duration_ms": 236.125
+    },
+    {
+      "word": "帶",
+      "start_ms": 1972.25,
+      "duration_ms": 361.125
+    },
+    {
+      "word": "——」",
+      "start_ms": 2375.0,
+      "duration_ms": 69.437
+    }
+  ]
+}

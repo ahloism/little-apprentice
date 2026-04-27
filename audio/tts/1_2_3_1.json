@@ -1,0 +1,96 @@
+{
+  "filename": "1_2_3_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "但",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "市集",
+      "start_ms": 275.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 675.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "的",
+      "start_ms": 837.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 987.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "實在",
+      "start_ms": 1362.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "太",
+      "start_ms": 1725.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "多",
+      "start_ms": 1975.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2450.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "眼睛",
+      "start_ms": 2450.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "不",
+      "start_ms": 2900.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "聽話",
+      "start_ms": 3012.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3750.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一直",
+      "start_ms": 3750.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "往",
+      "start_ms": 4050.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "旁邊",
+      "start_ms": 4275.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "跑",
+      "start_ms": 4712.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "。",
+      "start_ms": 5100.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

@@ -2,6 +2,11 @@
   "schema_version": "v5_1_minigame_01",
   "game_id": "game_1_market",
   "game_name": "市集探案",
+  "entry_page": {
+    "title": "市集探案",
+    "intro_text": "市集的攤檔混進了不該有的東西，幫攤主找出來吧。",
+    "speaker": "narrator"
+  },
   "location": "market",
   "game_type": "find_the_odd_one_out",
   "fixed_sentence": "阿禾看了看，有問題的是___。",
@@ -58,7 +63,9 @@
       "features": {
         "appearance": "白梗綠葉，一層一層包著",
         "category": "vegetable_leafy"
-      }
+      },
+      "intro_text": "白梗綠葉，一層一層包著的菜。",
+      "speaker": "narrator"
     },
     "radish": {
       "word": "蘿蔔",
@@ -66,7 +73,9 @@
       "features": {
         "appearance": "長長一條，表皮光滑",
         "category": "vegetable_root"
-      }
+      },
+      "intro_text": "長長一條，從土裡拔出來的根菜。",
+      "speaker": "narrator"
     },
     "winter_melon": {
       "word": "冬瓜",
@@ -74,7 +83,9 @@
       "features": {
         "appearance": "大大一條，外皮厚厚",
         "category": "vegetable_gourd"
-      }
+      },
+      "intro_text": "大大一條，外皮厚厚的瓜。",
+      "speaker": "narrator"
     },
     "celery": {
       "word": "芹菜",
@@ -82,7 +93,9 @@
       "features": {
         "appearance": "細長青綠，一節一節",
         "category": "vegetable_stem"
-      }
+      },
+      "intro_text": "細長青綠，帶著一股清香的菜。",
+      "speaker": "narrator"
     },
     "eggplant": {
       "word": "茄子",
@@ -90,7 +103,9 @@
       "features": {
         "appearance": "紫亮長條，肚子圓圓",
         "category": "vegetable_fruit"
-      }
+      },
+      "intro_text": "紫亮長條，肚子圓圓的菜。",
+      "speaker": "narrator"
     },
     "yardlong_bean": {
       "word": "豆角",
@@ -98,7 +113,9 @@
       "features": {
         "appearance": "細細長長，一條條",
         "category": "vegetable_pod"
-      }
+      },
+      "intro_text": "細細長長，一條條垂下來的菜。",
+      "speaker": "narrator"
     },
     "sweet_potato": {
       "word": "番薯",
@@ -106,7 +123,9 @@
       "features": {
         "appearance": "圓鼓鼓的塊根，土黃外皮",
         "category": "vegetable_tuber"
-      }
+      },
+      "intro_text": "土黃外皮，裡面粉甜的塊根。",
+      "speaker": "narrator"
     },
     "taro": {
       "word": "芋頭",
@@ -114,7 +133,9 @@
       "features": {
         "appearance": "圓圓塊根，外皮粗粗",
         "category": "vegetable_tuber"
-      }
+      },
+      "intro_text": "外皮粗粗，裡面粉糯的塊根。",
+      "speaker": "narrator"
     },
     "spinach": {
       "word": "菠菜",
@@ -122,7 +143,9 @@
       "features": {
         "appearance": "一束綠葉，葉片薄薄",
         "category": "vegetable_leafy"
-      }
+      },
+      "intro_text": "一束綠葉，葉片薄薄的菜。",
+      "speaker": "narrator"
     },
     "carp": {
       "word": "鯉魚",
@@ -130,7 +153,9 @@
       "features": {
         "appearance": "長身有鱗，尾巴寬",
         "category": "fish"
-      }
+      },
+      "intro_text": "長身有鱗，在水裡游的魚。",
+      "speaker": "narrator"
     },
     "grass_carp": {
       "word": "草魚",
@@ -138,7 +163,9 @@
       "features": {
         "appearance": "身子長長，背色偏深",
         "category": "fish"
-      }
+      },
+      "intro_text": "身子長長，背色偏深的魚。",
+      "speaker": "narrator"
     },
     "pork": {
       "word": "豬肉",
@@ -146,7 +173,9 @@
       "features": {
         "appearance": "粉紅一塊，沒有魚鱗",
         "category": "meat"
-      }
+      },
+      "intro_text": "粉紅一塊，切來煮菜的肉。",
+      "speaker": "narrator"
     },
     "chicken_leg": {
       "word": "雞腿",
@@ -154,7 +183,9 @@
       "features": {
         "appearance": "一隻腿形，肉厚厚",
         "category": "meat"
-      }
+      },
+      "intro_text": "一隻肉厚厚的雞腿。",
+      "speaker": "narrator"
     },
     "beef": {
       "word": "牛肉",
@@ -162,7 +193,9 @@
       "features": {
         "appearance": "紅紅一塊，紋理明顯",
         "category": "meat"
-      }
+      },
+      "intro_text": "紅紅一塊，紋理明顯的肉。",
+      "speaker": "narrator"
     },
     "shrimp": {
       "word": "蝦",
@@ -170,7 +203,9 @@
       "features": {
         "appearance": "彎彎小小，有殼有鬚",
         "category": "shellfish"
-      }
+      },
+      "intro_text": "彎彎小小，有殼有鬚的水產。",
+      "speaker": "narrator"
     },
     "duck_meat": {
       "word": "鴨肉",
@@ -178,7 +213,9 @@
       "features": {
         "appearance": "肉塊帶皮，顏色偏深",
         "category": "meat"
-      }
+      },
+      "intro_text": "切好的肉塊，皮下常帶一層油。",
+      "speaker": "narrator"
     },
     "mutton": {
       "word": "羊肉",
@@ -186,7 +223,9 @@
       "features": {
         "appearance": "紅褐色肉塊",
         "category": "meat"
-      }
+      },
+      "intro_text": "紅褐色肉塊，帶一股濃味的肉。",
+      "speaker": "narrator"
     },
     "crab": {
       "word": "蟹",
@@ -194,7 +233,9 @@
       "features": {
         "appearance": "有硬殼和大鉗子",
         "category": "shellfish"
-      }
+      },
+      "intro_text": "有硬殼和大鉗子的水產。",
+      "speaker": "narrator"
     },
     "pear": {
       "word": "梨",
@@ -202,7 +243,9 @@
       "features": {
         "appearance": "圓圓偏長，皮色淡黃",
         "category": "fruit_fresh"
-      }
+      },
+      "intro_text": "淡黃偏綠，咬下去很多汁的果子。",
+      "speaker": "narrator"
     },
     "peach": {
       "word": "桃",
@@ -210,7 +253,9 @@
       "features": {
         "appearance": "圓圓有細毛，帶粉色",
         "category": "fruit_fresh"
-      }
+      },
+      "intro_text": "表皮有細毛，果肉甜甜的果子。",
+      "speaker": "narrator"
     },
     "jujube": {
       "word": "棗",
@@ -218,7 +263,9 @@
       "features": {
         "appearance": "小小一顆，表皮易皺",
         "category": "fruit_dried"
-      }
+      },
+      "intro_text": "小小一顆，表皮會慢慢皺起來的果子。",
+      "speaker": "narrator"
     },
     "orange": {
       "word": "橙",
@@ -226,7 +273,9 @@
       "features": {
         "appearance": "圓圓橘色，一瓣一瓣",
         "category": "fruit_fresh"
-      }
+      },
+      "intro_text": "圓圓橘色，剝開有一瓣一瓣的果子。",
+      "speaker": "narrator"
     },
     "roselle": {
       "word": "洛神花",
@@ -234,7 +283,9 @@
       "features": {
         "appearance": "紅紅皺皺，像小花",
         "category": "fruit_drink"
-      }
+      },
+      "intro_text": "紅紅酸酸，常拿來泡成果飲的花萼。",
+      "speaker": "narrator"
     },
     "mint": {
       "word": "薄荷",
@@ -242,7 +293,9 @@
       "features": {
         "appearance": "一片片綠葉，邊緣有鋸齒",
         "category": "herb"
-      }
+      },
+      "intro_text": "一片片綠葉，聞起來清涼的香草。",
+      "speaker": "narrator"
     },
     "shiitake": {
       "word": "冬菇",
@@ -250,7 +303,9 @@
       "features": {
         "appearance": "乾乾一朵，菇傘圓圓",
         "category": "dry_mushroom"
-      }
+      },
+      "intro_text": "乾乾一朵，泡開後能煮菜的菇。",
+      "speaker": "narrator"
     },
     "wood_ear": {
       "word": "木耳",
@@ -258,7 +313,9 @@
       "features": {
         "appearance": "薄薄黑黑，皺皺的",
         "category": "dry_mushroom"
-      }
+      },
+      "intro_text": "薄薄黑黑，泡開會軟的乾貨。",
+      "speaker": "narrator"
     },
     "dried_shrimp": {
       "word": "蝦米",
@@ -266,7 +323,9 @@
       "features": {
         "appearance": "小小橙粉色，一粒一粒",
         "category": "dry_seafood"
-      }
+      },
+      "intro_text": "曬乾後小小一粒一粒的蝦。",
+      "speaker": "narrator"
     },
     "tofu_skin": {
       "word": "腐竹",
@@ -274,7 +333,9 @@
       "features": {
         "appearance": "黃黃長條，摺成一束",
         "category": "dry_bean"
-      }
+      },
+      "intro_text": "黃黃長條，豆漿表面做成的乾貨。",
+      "speaker": "narrator"
     },
     "dried_tofu": {
       "word": "豆乾",
@@ -282,7 +343,9 @@
       "features": {
         "appearance": "方方一塊，表面緊實",
         "category": "dry_bean"
-      }
+      },
+      "intro_text": "方方一塊，壓得結實的豆製品。",
+      "speaker": "narrator"
     },
     "lap_cheong": {
       "word": "臘腸",
@@ -290,7 +353,9 @@
       "features": {
         "appearance": "長長一條，油亮發紅",
         "category": "dry_meat"
-      }
+      },
+      "intro_text": "長長一條，曬乾後帶鹹香的肉。",
+      "speaker": "narrator"
     }
   },
   "variations": [

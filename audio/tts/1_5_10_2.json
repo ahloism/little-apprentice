@@ -1,0 +1,46 @@
+{
+  "filename": "1_5_10_2.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「我",
+      "start_ms": 50.0,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "問",
+      "start_ms": 277.25,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "你",
+      "start_ms": 413.625,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "，",
+      "start_ms": 856.812,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "這是",
+      "start_ms": 1038.625,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "什麼",
+      "start_ms": 1368.1869,
+      "duration_ms": 397.75
+    },
+    {
+      "word": "？",
+      "start_ms": 1868.187,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "」",
+      "start_ms": 2050.0,
+      "duration_ms": 79.562
+    }
+  ]
+}

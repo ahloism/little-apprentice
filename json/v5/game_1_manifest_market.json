@@ -3,9 +3,12 @@
   "game_id": "game_1_market",
   "game_type": "find_the_odd_one_out",
   "location": "market",
+  "visual_state": {
+    "has_second_state": true,
+    "trigger": "before_fixed_sentence"
+  },
   "intro_behavior": {
-    "show_once_per_session": true,
-    "dismiss_after_view": true
+    "show_once_per_session": true
   },
   "flow": {
     "retry": false,

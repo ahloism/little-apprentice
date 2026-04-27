@@ -1,0 +1,31 @@
+{
+  "filename": "1_3_3_2.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「哎",
+      "start_ms": 43.75,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "，",
+      "start_ms": 252.062,
+      "duration_ms": 62.5
+    },
+    {
+      "word": "不行",
+      "start_ms": 335.437,
+      "duration_ms": 385.43699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 741.687,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "。」",
+      "start_ms": 991.687,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

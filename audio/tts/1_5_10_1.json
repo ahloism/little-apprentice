@@ -1,0 +1,46 @@
+{
+  "filename": "1_5_10_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "杜先生",
+      "start_ms": 75.0,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "把",
+      "start_ms": 775.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "扇子",
+      "start_ms": 975.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1400.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "指",
+      "start_ms": 1550.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "那疊",
+      "start_ms": 1700.0,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "紙",
+      "start_ms": 2187.5,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2512.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

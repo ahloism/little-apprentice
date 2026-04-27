@@ -1,0 +1,56 @@
+{
+  "filename": "1_2_8_4.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "水",
+      "start_ms": 262.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "從",
+      "start_ms": 475.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "旁邊",
+      "start_ms": 700.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "湊過來",
+      "start_ms": 1112.5,
+      "duration_ms": 787.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2025.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "對",
+      "start_ms": 2025.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "大漢",
+      "start_ms": 2200.0,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "說",
+      "start_ms": 2675.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "：",
+      "start_ms": 2962.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

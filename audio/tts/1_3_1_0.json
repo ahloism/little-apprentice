@@ -1,0 +1,71 @@
+{
+  "filename": "1_3_1_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "市集",
+      "start_ms": 87.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "的",
+      "start_ms": 512.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "叫賣",
+      "start_ms": 650.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "聲漸漸",
+      "start_ms": 1062.5,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "遠",
+      "start_ms": 1750.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "了",
+      "start_ms": 1950.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2412.5,
+      "duration_ms": 12.5
+    },
+    {
+      "word": "風",
+      "start_ms": 2425.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "卻",
+      "start_ms": 2662.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "大",
+      "start_ms": 2887.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "了",
+      "start_ms": 3100.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "起來",
+      "start_ms": 3262.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3800.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

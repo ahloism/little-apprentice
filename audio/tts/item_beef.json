@@ -1,0 +1,11 @@
+{
+  "filename": "item_beef.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "牛肉",
+      "start_ms": 87.5,
+      "duration_ms": 500.0
+    }
+  ]
+}

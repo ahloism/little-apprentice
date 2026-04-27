@@ -3,6 +3,11 @@
   "game_id": "game_1_bridge",
   "game_type": "fill_spatial_word",
   "location": "bridge",
+  "visual_state": {
+    "has_second_state": true,
+    "trigger": "before_fixed_sentence",
+    "correct_trigger": "on_correct"
+  },
   "intro_behavior": {
     "show_once_per_session": true
   },

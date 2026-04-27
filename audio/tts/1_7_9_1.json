@@ -1,0 +1,86 @@
+{
+  "filename": "1_7_9_1.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「知道",
+      "start_ms": 50.0,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "錯",
+      "start_ms": 581.25,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "了",
+      "start_ms": 862.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1456.25,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "也",
+      "start_ms": 1456.25,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "肯",
+      "start_ms": 1753.125,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "認",
+      "start_ms": 1987.5,
+      "duration_ms": 390.625
+    },
+    {
+      "word": "，",
+      "start_ms": 2550.0,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "這",
+      "start_ms": 2815.625,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "才",
+      "start_ms": 3034.375,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "是",
+      "start_ms": 3300.0,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "商行",
+      "start_ms": 3534.375,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "的",
+      "start_ms": 4128.125,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "孩子",
+      "start_ms": 4253.125,
+      "duration_ms": 703.125
+    },
+    {
+      "word": "。",
+      "start_ms": 5190.625,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "」",
+      "start_ms": 5471.875,
+      "duration_ms": 109.375
+    }
+  ]
+}

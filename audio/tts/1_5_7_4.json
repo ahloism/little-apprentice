@@ -1,0 +1,31 @@
+{
+  "filename": "1_5_7_4.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 50.0,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "不准",
+      "start_ms": 322.75,
+      "duration_ms": 329.5
+    },
+    {
+      "word": "說",
+      "start_ms": 652.25,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "！",
+      "start_ms": 1061.375,
+      "duration_ms": 204.56199999999998
+    },
+    {
+      "word": "」",
+      "start_ms": 1265.9369,
+      "duration_ms": 79.562
+    }
+  ]
+}

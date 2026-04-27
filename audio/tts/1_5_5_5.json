@@ -1,0 +1,31 @@
+{
+  "filename": "1_5_5_5.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「剛",
+      "start_ms": 50.0,
+      "duration_ms": 261.375
+    },
+    {
+      "word": "走",
+      "start_ms": 311.375,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "不久",
+      "start_ms": 470.437,
+      "duration_ms": 477.25
+    },
+    {
+      "word": "。",
+      "start_ms": 1129.5619,
+      "duration_ms": 238.625
+    },
+    {
+      "word": "」",
+      "start_ms": 1368.1869,
+      "duration_ms": 79.562
+    }
+  ]
+}

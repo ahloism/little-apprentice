@@ -1,0 +1,31 @@
+{
+  "filename": "1_1_11_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "指",
+      "start_ms": 262.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 475.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "糖葫蘆",
+      "start_ms": 687.5,
+      "duration_ms": 800.0
+    },
+    {
+      "word": "：",
+      "start_ms": 1487.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

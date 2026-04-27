@@ -1,0 +1,101 @@
+{
+  "filename": "1_4_15_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "想",
+      "start_ms": 250.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "了",
+      "start_ms": 500.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "想",
+      "start_ms": 662.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1162.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "鄉下",
+      "start_ms": 1162.5,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1612.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "屋子",
+      "start_ms": 1800.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 2125.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2625.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "爸爸",
+      "start_ms": 2625.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "養",
+      "start_ms": 3025.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "的",
+      "start_ms": 3212.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "豬",
+      "start_ms": 3337.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "也",
+      "start_ms": 3500.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "住",
+      "start_ms": 3687.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "在",
+      "start_ms": 3875.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "裡面",
+      "start_ms": 4062.5,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4700.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

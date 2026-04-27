@@ -1,0 +1,101 @@
+{
+  "filename": "1_7_9_2.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「一",
+      "start_ms": 50.0,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "文錢",
+      "start_ms": 268.75,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "也",
+      "start_ms": 753.125,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "要",
+      "start_ms": 940.625,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "算",
+      "start_ms": 1128.125,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "清",
+      "start_ms": 1393.75,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2003.125,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "一包",
+      "start_ms": 2284.375,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "花生",
+      "start_ms": 2721.875,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "也",
+      "start_ms": 3237.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "不能",
+      "start_ms": 3425.0,
+      "duration_ms": 390.625
+    },
+    {
+      "word": "馬虎",
+      "start_ms": 3815.625,
+      "duration_ms": 656.25
+    },
+    {
+      "word": "。",
+      "start_ms": 4487.5,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "誠信",
+      "start_ms": 5534.375,
+      "duration_ms": 656.25
+    },
+    {
+      "word": "是",
+      "start_ms": 6190.625,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "命",
+      "start_ms": 6487.5,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "根子",
+      "start_ms": 6784.375,
+      "duration_ms": 671.875
+    },
+    {
+      "word": "。",
+      "start_ms": 7690.625,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "」",
+      "start_ms": 7971.875,
+      "duration_ms": 109.375
+    }
+  ]
+}

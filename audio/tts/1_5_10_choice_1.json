@@ -1,0 +1,56 @@
+{
+  "filename": "1_5_10_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "字帖",
+      "start_ms": 87.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "是",
+      "start_ms": 462.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "客人",
+      "start_ms": 650.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "落下",
+      "start_ms": 1012.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1400.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1737.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "老梁",
+      "start_ms": 1737.5,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "幫忙",
+      "start_ms": 2212.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "收",
+      "start_ms": 2625.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 2837.5,
+      "duration_ms": 312.5
+    }
+  ]
+}

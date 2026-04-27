@@ -1,0 +1,81 @@
+{
+  "filename": "feedback_game_1_bridge_correct_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "啊",
+      "start_ms": 62.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "，",
+      "start_ms": 487.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "終於",
+      "start_ms": 487.5,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "找到",
+      "start_ms": 925.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "了",
+      "start_ms": 1375.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "！",
+      "start_ms": 1762.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "Thank",
+      "start_ms": 2637.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "you",
+      "start_ms": 2900.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": ",",
+      "start_ms": 3350.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "Ah",
+      "start_ms": 3350.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "Wo",
+      "start_ms": 3537.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": ".",
+      "start_ms": 3912.5,
+      "duration_ms": 87.5
+    },
+    {
+      "word": "原來",
+      "start_ms": 4787.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "是",
+      "start_ms": 5162.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "在",
+      "start_ms": 5400.0,
+      "duration_ms": 400.0
+    }
+  ]
+}

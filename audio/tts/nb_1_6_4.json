@@ -1,0 +1,21 @@
+{
+  "filename": "nb_1_6_4.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "老梁",
+      "start_ms": 87.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "、",
+      "start_ms": 887.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "石頭",
+      "start_ms": 887.5,
+      "duration_ms": 675.0
+    }
+  ]
+}

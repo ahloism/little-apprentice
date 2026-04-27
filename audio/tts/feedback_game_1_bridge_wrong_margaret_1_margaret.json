@@ -1,0 +1,76 @@
+{
+  "filename": "feedback_game_1_bridge_wrong_margaret_1_margaret.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "「我",
+      "start_ms": 93.75,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "想",
+      "start_ms": 296.875,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "我",
+      "start_ms": 609.375,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "已經",
+      "start_ms": 796.875,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "說",
+      "start_ms": 1250.0,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "得",
+      "start_ms": 1531.25,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "很",
+      "start_ms": 1687.5,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "清楚",
+      "start_ms": 1968.75,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2531.25,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "。",
+      "start_ms": 2953.125,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "那",
+      "start_ms": 4046.875,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "裡",
+      "start_ms": 4312.5,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "是",
+      "start_ms": 4578.125,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "」",
+      "start_ms": 5093.75,
+      "duration_ms": 109.375
+    }
+  ]
+}

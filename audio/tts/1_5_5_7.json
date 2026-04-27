@@ -1,0 +1,41 @@
+{
+  "filename": "1_5_5_7.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 50.0,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "拿",
+      "start_ms": 277.25,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "的",
+      "start_ms": 436.375,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "是",
+      "start_ms": 538.625,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "什麼",
+      "start_ms": 720.437,
+      "duration_ms": 397.75
+    },
+    {
+      "word": "？",
+      "start_ms": 1300.0,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "」",
+      "start_ms": 1493.1869,
+      "duration_ms": 79.562
+    }
+  ]
+}

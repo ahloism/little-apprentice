@@ -1,0 +1,56 @@
+{
+  "filename": "vocab_ginger.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "彎",
+      "start_ms": 87.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "彎塊",
+      "start_ms": 325.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "狀",
+      "start_ms": 775.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1300.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "切開",
+      "start_ms": 1300.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "有",
+      "start_ms": 1725.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "辣",
+      "start_ms": 1900.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "香味",
+      "start_ms": 2100.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "的",
+      "start_ms": 2487.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "根",
+      "start_ms": 2637.5,
+      "duration_ms": 412.5
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "filename": "feedback_game_1_inn_wrong_2.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "差",
+      "start_ms": 50.0,
+      "duration_ms": 284.06199999999995
+    },
+    {
+      "word": "得",
+      "start_ms": 334.062,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "遠",
+      "start_ms": 504.562,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "了",
+      "start_ms": 663.625,
+      "duration_ms": 306.81199999999995
+    },
+    {
+      "word": "。",
+      "start_ms": 1038.625,
+      "duration_ms": 79.562
+    }
+  ]
+}

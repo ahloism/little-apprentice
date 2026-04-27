@@ -1,0 +1,26 @@
+{
+  "filename": "1_3_7_B_v2_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "梅",
+      "start_ms": 100.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "姐",
+      "start_ms": 275.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "經過",
+      "start_ms": 475.0,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "：",
+      "start_ms": 1075.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

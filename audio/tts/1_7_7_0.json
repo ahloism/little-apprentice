@@ -1,0 +1,71 @@
+{
+  "filename": "1_7_7_0.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「杜先生",
+      "start_ms": 55.562,
+      "duration_ms": 763.875
+    },
+    {
+      "word": "沒有",
+      "start_ms": 819.437,
+      "duration_ms": 527.75
+    },
+    {
+      "word": "直接",
+      "start_ms": 1361.125,
+      "duration_ms": 513.875
+    },
+    {
+      "word": "告訴",
+      "start_ms": 1888.875,
+      "duration_ms": 527.75
+    },
+    {
+      "word": "你",
+      "start_ms": 2416.687,
+      "duration_ms": 222.18699999999998
+    },
+    {
+      "word": "答案",
+      "start_ms": 2638.875,
+      "duration_ms": 763.875
+    },
+    {
+      "word": "，",
+      "start_ms": 3500.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "他",
+      "start_ms": 3791.687,
+      "duration_ms": 388.875
+    },
+    {
+      "word": "是",
+      "start_ms": 4180.562,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "怎麼",
+      "start_ms": 4472.25,
+      "duration_ms": 527.75
+    },
+    {
+      "word": "做",
+      "start_ms": 5000.0,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "的",
+      "start_ms": 5277.75,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "？」",
+      "start_ms": 5555.562,
+      "duration_ms": 0.0
+    }
+  ]
+}

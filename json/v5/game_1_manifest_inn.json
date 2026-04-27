@@ -3,6 +3,10 @@
   "game_id": "game_1_inn",
   "game_type": "emotion_recognition",
   "location": "inn",
+  "visual_state": {
+    "has_second_state": true,
+    "trigger": "before_fixed_sentence"
+  },
   "intro_behavior": {
     "show_once_per_session": true
   },

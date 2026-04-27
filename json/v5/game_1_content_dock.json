@@ -2,6 +2,11 @@
   "schema_version": "v5_1_minigame_01",
   "game_id": "game_1_dock",
   "game_name": "碼頭點貨",
+  "entry_page": {
+    "title": "碼頭點貨",
+    "intro_text": "石頭把一張貨單遞給阿禾，一句話也沒說，只是抬了抬下巴。阿禾低頭看看貨單，發現量詞全部空白——要他自己填。",
+    "speaker": "narrator"
+  },
   "location": "dock",
   "game_type": "measure_word_matching",
   "fixed_sentence": "石頭遞來貨單，阿禾逐一填上量詞。",
@@ -12,203 +17,261 @@
       "description": "用來量一般單件東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量一般單件東西。",
+      "speaker": "narrator"
     },
     "zek3": {
       "word": "隻",
       "description": "用來量動物或一對中的單個物件。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量動物或一對中的單個物件。",
+      "speaker": "narrator"
     },
     "gin6": {
       "word": "件",
       "description": "用來量衣物或某些成件貨物。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量衣物或某些成件貨物。",
+      "speaker": "narrator"
     },
     "tiu4": {
       "word": "條",
       "description": "用來量長長的東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量長長的東西。",
+      "speaker": "narrator"
     },
     "gan1": {
       "word": "根",
       "description": "用來量細長而硬挺的東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量細長而硬挺的東西。",
+      "speaker": "narrator"
     },
     "zoeng1": {
       "word": "張",
       "description": "用來量平面展開的東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量平面展開的東西。",
+      "speaker": "narrator"
     },
     "cyun3": {
       "word": "串",
       "description": "用來量一串串連起來的東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量一串串連起來的東西。",
+      "speaker": "narrator"
     },
     "faai3": {
       "word": "塊",
       "description": "用來量一塊塊分開的東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量一塊塊分開的東西。",
+      "speaker": "narrator"
     },
     "pin3": {
       "word": "片",
       "description": "用來量薄薄的一片東西。",
       "features": {
         "measure_type": "count"
-      }
+      },
+      "intro_text": "用來量薄薄的一片東西。",
+      "speaker": "narrator"
     },
     "doi6": {
       "word": "袋",
       "description": "用來量裝在袋裡的東西。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量裝在袋裡的東西。",
+      "speaker": "narrator"
     },
     "tung4": {
       "word": "桶",
       "description": "用來量裝在桶裡的液體或貨物。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量裝在桶裡的液體或貨物。",
+      "speaker": "narrator"
     },
     "laam4": {
       "word": "籃",
       "description": "用來量放在籃子裡的東西。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量放在籃子裡的東西。",
+      "speaker": "narrator"
     },
     "soeng1": {
       "word": "箱",
       "description": "用來量裝在箱裡的貨物。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量裝在箱裡的貨物。",
+      "speaker": "narrator"
     },
     "lung4": {
       "word": "籠",
       "description": "用來量裝在籠裡的東西。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量裝在籠裡的東西。",
+      "speaker": "narrator"
     },
     "wu4": {
       "word": "壺",
       "description": "用來量裝在壺裡的液體。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量裝在壺裡的液體。",
+      "speaker": "narrator"
     },
     "wun2": {
       "word": "碗",
       "description": "用來量盛在碗裡的食物。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量盛在碗裡的食物。",
+      "speaker": "narrator"
     },
     "zang2": {
       "word": "盞",
       "description": "用來量一小盞茶或燈。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量一小盞茶或燈。",
+      "speaker": "narrator"
     },
     "baau1": {
       "word": "包",
       "description": "用來量包起來的一份東西。",
       "features": {
         "measure_type": "container"
-      }
+      },
+      "intro_text": "用來量包起來的一份東西。",
+      "speaker": "narrator"
     },
     "kwan2": {
       "word": "捆",
       "description": "用來量綁成一束的貨物。",
       "features": {
         "measure_type": "collective"
-      }
+      },
+      "intro_text": "用來量綁成一束的貨物。",
+      "speaker": "narrator"
     },
     "dip6": {
       "word": "疊",
       "description": "用來量一層層疊起來的東西。",
       "features": {
         "measure_type": "collective"
-      }
+      },
+      "intro_text": "用來量一層層疊起來的東西。",
+      "speaker": "narrator"
     },
     "pai1": {
       "word": "批",
       "description": "用來量一批一起運來的貨。",
       "features": {
         "measure_type": "collective"
-      }
+      },
+      "intro_text": "用來量一批一起運來的貨。",
+      "speaker": "narrator"
     },
     "deoi1": {
       "word": "堆",
       "description": "用來量堆在一起的東西。",
       "features": {
         "measure_type": "collective"
-      }
+      },
+      "intro_text": "用來量堆在一起的東西。",
+      "speaker": "narrator"
     },
     "zaat3": {
       "word": "紮",
       "description": "用來量紮成一束的東西。",
       "features": {
         "measure_type": "collective"
-      }
+      },
+      "intro_text": "用來量紮成一束的東西。",
+      "speaker": "narrator"
     },
     "gan1_weight": {
       "word": "斤",
       "description": "用來量較重的貨物重量。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量較重的貨物重量。",
+      "speaker": "narrator"
     },
     "loeng5": {
       "word": "兩",
       "description": "用來量比斤更小的重量。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量比斤更小的重量。",
+      "speaker": "narrator"
     },
     "cin4_weight": {
       "word": "錢",
       "description": "用來量很少分量的藥材或細碎貨物。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量很少分量的藥材或細碎貨物。",
+      "speaker": "narrator"
     },
     "cek3_length": {
       "word": "尺",
       "description": "用來量較短的長度。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量較短的長度。",
+      "speaker": "narrator"
     },
     "zoeng6": {
       "word": "丈",
       "description": "用來量很長的長度。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量很長的長度。",
+      "speaker": "narrator"
     },
     "cyun3_length": {
       "word": "寸",
       "description": "用來量比尺更短的小段長度。",
       "features": {
         "measure_type": "unit"
-      }
+      },
+      "intro_text": "用來量比尺更短的小段長度。",
+      "speaker": "narrator"
     }
   },
   "feedback_templates": {
@@ -244,29 +307,33 @@
           "correct_measure_id": "opt_gin6"
         }
       ],
-      "measure_option_ids": [
-        "opt_go3",
-        "opt_zek3",
-        "opt_gin6"
-      ],
-      "option_orders": [
-        [
-          "opt_go3",
-          "opt_zek3",
-          "opt_gin6"
-        ],
-        [
-          "opt_zek3",
-          "opt_gin6",
-          "opt_go3"
-        ],
-        [
-          "opt_gin6",
-          "opt_go3",
-          "opt_zek3"
-        ]
-      ],
-      "answer_restate": "應是一個蠟燭、一隻蟹、一件絲綢。"
+      "answer_restate": "應是一個蠟燭、一隻蟹、一件絲綢。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_01_A",
+          "measures": [
+            "opt_go3",
+            "opt_zek3",
+            "opt_gin6"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_01_B",
+          "measures": [
+            "opt_zek3",
+            "opt_gin6",
+            "opt_go3"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_01_C",
+          "measures": [
+            "opt_gin6",
+            "opt_go3",
+            "opt_zek3"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_02",
@@ -288,29 +355,33 @@
           "correct_measure_id": "opt_zoeng1"
         }
       ],
-      "measure_option_ids": [
-        "opt_tiu4",
-        "opt_gan1",
-        "opt_zoeng1"
-      ],
-      "option_orders": [
-        [
-          "opt_tiu4",
-          "opt_gan1",
-          "opt_zoeng1"
-        ],
-        [
-          "opt_gan1",
-          "opt_zoeng1",
-          "opt_tiu4"
-        ],
-        [
-          "opt_zoeng1",
-          "opt_tiu4",
-          "opt_gan1"
-        ]
-      ],
-      "answer_restate": "應是一條麻繩、一根蓮藕、一張棉布。"
+      "answer_restate": "應是一條麻繩、一根蓮藕、一張棉布。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_02_A",
+          "measures": [
+            "opt_tiu4",
+            "opt_gan1",
+            "opt_zoeng1"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_02_B",
+          "measures": [
+            "opt_gan1",
+            "opt_zoeng1",
+            "opt_tiu4"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_02_C",
+          "measures": [
+            "opt_zoeng1",
+            "opt_tiu4",
+            "opt_gan1"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_03",
@@ -332,29 +403,33 @@
           "correct_measure_id": "opt_pin3"
         }
       ],
-      "measure_option_ids": [
-        "opt_cyun3",
-        "opt_faai3",
-        "opt_pin3"
-      ],
-      "option_orders": [
-        [
-          "opt_cyun3",
-          "opt_faai3",
-          "opt_pin3"
-        ],
-        [
-          "opt_faai3",
-          "opt_pin3",
-          "opt_cyun3"
-        ],
-        [
-          "opt_pin3",
-          "opt_cyun3",
-          "opt_faai3"
-        ]
-      ],
-      "answer_restate": "應是一串糖葫蘆、一塊豆腐、一片木耳。"
+      "answer_restate": "應是一串糖葫蘆、一塊豆腐、一片木耳。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_03_A",
+          "measures": [
+            "opt_cyun3",
+            "opt_faai3",
+            "opt_pin3"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_03_B",
+          "measures": [
+            "opt_faai3",
+            "opt_pin3",
+            "opt_cyun3"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_03_C",
+          "measures": [
+            "opt_pin3",
+            "opt_cyun3",
+            "opt_faai3"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_04",
@@ -376,29 +451,33 @@
           "correct_measure_id": "opt_laam4"
         }
       ],
-      "measure_option_ids": [
-        "opt_doi6",
-        "opt_tung4",
-        "opt_laam4"
-      ],
-      "option_orders": [
-        [
-          "opt_doi6",
-          "opt_tung4",
-          "opt_laam4"
-        ],
-        [
-          "opt_tung4",
-          "opt_laam4",
-          "opt_doi6"
-        ],
-        [
-          "opt_laam4",
-          "opt_doi6",
-          "opt_tung4"
-        ]
-      ],
-      "answer_restate": "應是一袋白米、一桶菜油、一籃梨。"
+      "answer_restate": "應是一袋白米、一桶菜油、一籃梨。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_04_A",
+          "measures": [
+            "opt_doi6",
+            "opt_tung4",
+            "opt_laam4"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_04_B",
+          "measures": [
+            "opt_tung4",
+            "opt_laam4",
+            "opt_doi6"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_04_C",
+          "measures": [
+            "opt_laam4",
+            "opt_doi6",
+            "opt_tung4"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_05",
@@ -420,29 +499,33 @@
           "correct_measure_id": "opt_wu4"
         }
       ],
-      "measure_option_ids": [
-        "opt_soeng1",
-        "opt_lung4",
-        "opt_wu4"
-      ],
-      "option_orders": [
-        [
-          "opt_soeng1",
-          "opt_lung4",
-          "opt_wu4"
-        ],
-        [
-          "opt_lung4",
-          "opt_wu4",
-          "opt_soeng1"
-        ],
-        [
-          "opt_wu4",
-          "opt_soeng1",
-          "opt_lung4"
-        ]
-      ],
-      "answer_restate": "應是一箱鴨蛋、一籠蟹、一壺涼茶。"
+      "answer_restate": "應是一箱鴨蛋、一籠蟹、一壺涼茶。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_05_A",
+          "measures": [
+            "opt_soeng1",
+            "opt_lung4",
+            "opt_wu4"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_05_B",
+          "measures": [
+            "opt_lung4",
+            "opt_wu4",
+            "opt_soeng1"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_05_C",
+          "measures": [
+            "opt_wu4",
+            "opt_soeng1",
+            "opt_lung4"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_06",
@@ -464,29 +547,33 @@
           "correct_measure_id": "opt_baau1"
         }
       ],
-      "measure_option_ids": [
-        "opt_wun2",
-        "opt_zang2",
-        "opt_baau1"
-      ],
-      "option_orders": [
-        [
-          "opt_wun2",
-          "opt_zang2",
-          "opt_baau1"
-        ],
-        [
-          "opt_zang2",
-          "opt_baau1",
-          "opt_wun2"
-        ],
-        [
-          "opt_baau1",
-          "opt_wun2",
-          "opt_zang2"
-        ]
-      ],
-      "answer_restate": "應是一碗炒花生、一盞茶、一包食鹽。"
+      "answer_restate": "應是一碗炒花生、一盞茶、一包食鹽。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_06_A",
+          "measures": [
+            "opt_wun2",
+            "opt_zang2",
+            "opt_baau1"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_06_B",
+          "measures": [
+            "opt_zang2",
+            "opt_baau1",
+            "opt_wun2"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_06_C",
+          "measures": [
+            "opt_baau1",
+            "opt_wun2",
+            "opt_zang2"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_07",
@@ -508,29 +595,33 @@
           "correct_measure_id": "opt_pai1"
         }
       ],
-      "measure_option_ids": [
-        "opt_kwan2",
-        "opt_dip6",
-        "opt_pai1"
-      ],
-      "option_orders": [
-        [
-          "opt_kwan2",
-          "opt_dip6",
-          "opt_pai1"
-        ],
-        [
-          "opt_dip6",
-          "opt_pai1",
-          "opt_kwan2"
-        ],
-        [
-          "opt_pai1",
-          "opt_kwan2",
-          "opt_dip6"
-        ]
-      ],
-      "answer_restate": "應是一捆麻繩、一疊棉布、一批蠟燭。"
+      "answer_restate": "應是一捆麻繩、一疊棉布、一批蠟燭。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_07_A",
+          "measures": [
+            "opt_kwan2",
+            "opt_dip6",
+            "opt_pai1"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_07_B",
+          "measures": [
+            "opt_dip6",
+            "opt_pai1",
+            "opt_kwan2"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_07_C",
+          "measures": [
+            "opt_pai1",
+            "opt_kwan2",
+            "opt_dip6"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_08",
@@ -552,29 +643,33 @@
           "correct_measure_id": "opt_zaat3"
         }
       ],
-      "measure_option_ids": [
-        "opt_deoi1",
-        "opt_dip6",
-        "opt_zaat3"
-      ],
-      "option_orders": [
-        [
-          "opt_deoi1",
-          "opt_dip6",
-          "opt_zaat3"
-        ],
-        [
-          "opt_dip6",
-          "opt_zaat3",
-          "opt_deoi1"
-        ],
-        [
-          "opt_zaat3",
-          "opt_deoi1",
-          "opt_dip6"
-        ]
-      ],
-      "answer_restate": "應是一堆番薯、一疊煎餅、一紮芹菜。"
+      "answer_restate": "應是一堆番薯、一疊煎餅、一紮芹菜。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_08_A",
+          "measures": [
+            "opt_deoi1",
+            "opt_dip6",
+            "opt_zaat3"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_08_B",
+          "measures": [
+            "opt_dip6",
+            "opt_zaat3",
+            "opt_deoi1"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_08_C",
+          "measures": [
+            "opt_zaat3",
+            "opt_deoi1",
+            "opt_dip6"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_09",
@@ -596,29 +691,33 @@
           "correct_measure_id": "opt_cin4_weight"
         }
       ],
-      "measure_option_ids": [
-        "opt_gan1_weight",
-        "opt_loeng5",
-        "opt_cin4_weight"
-      ],
-      "option_orders": [
-        [
-          "opt_gan1_weight",
-          "opt_loeng5",
-          "opt_cin4_weight"
-        ],
-        [
-          "opt_loeng5",
-          "opt_cin4_weight",
-          "opt_gan1_weight"
-        ],
-        [
-          "opt_cin4_weight",
-          "opt_gan1_weight",
-          "opt_loeng5"
-        ]
-      ],
-      "answer_restate": "應是一斤牛肉、一兩蝦米、一錢薑。"
+      "answer_restate": "應是一斤牛肉、一兩蝦米、一錢薑。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_09_A",
+          "measures": [
+            "opt_gan1_weight",
+            "opt_loeng5",
+            "opt_cin4_weight"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_09_B",
+          "measures": [
+            "opt_loeng5",
+            "opt_cin4_weight",
+            "opt_gan1_weight"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_09_C",
+          "measures": [
+            "opt_cin4_weight",
+            "opt_gan1_weight",
+            "opt_loeng5"
+          ]
+        }
+      ]
     },
     {
       "variation_id": "game_1_dock_10",
@@ -640,29 +739,33 @@
           "correct_measure_id": "opt_cyun3_length"
         }
       ],
-      "measure_option_ids": [
-        "opt_cek3_length",
-        "opt_zoeng6",
-        "opt_cyun3_length"
-      ],
-      "option_orders": [
-        [
-          "opt_cek3_length",
-          "opt_zoeng6",
-          "opt_cyun3_length"
-        ],
-        [
-          "opt_zoeng6",
-          "opt_cyun3_length",
-          "opt_cek3_length"
-        ],
-        [
-          "opt_cyun3_length",
-          "opt_cek3_length",
-          "opt_zoeng6"
-        ]
-      ],
-      "answer_restate": "應是一尺絲綢、一丈麻繩、一寸豆腐。"
+      "answer_restate": "應是一尺絲綢、一丈麻繩、一寸豆腐。",
+      "combo_options": [
+        {
+          "combo_id": "combo_dock_10_A",
+          "measures": [
+            "opt_cek3_length",
+            "opt_zoeng6",
+            "opt_cyun3_length"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_10_B",
+          "measures": [
+            "opt_zoeng6",
+            "opt_cyun3_length",
+            "opt_cek3_length"
+          ]
+        },
+        {
+          "combo_id": "combo_dock_10_C",
+          "measures": [
+            "opt_cyun3_length",
+            "opt_cek3_length",
+            "opt_zoeng6"
+          ]
+        }
+      ]
     }
   ]
 }

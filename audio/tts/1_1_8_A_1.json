@@ -1,0 +1,61 @@
+{
+  "filename": "1_1_8_A_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "禾",
+      "start_ms": 287.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "數",
+      "start_ms": 450.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "了",
+      "start_ms": 687.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "數",
+      "start_ms": 875.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1437.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一秒",
+      "start_ms": 1437.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "撥",
+      "start_ms": 1812.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "了",
+      "start_ms": 2025.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "七下",
+      "start_ms": 2175.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2737.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

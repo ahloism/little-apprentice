@@ -1,0 +1,46 @@
+{
+  "filename": "vocab_faai3.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "用來",
+      "start_ms": 75.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "量",
+      "start_ms": 500.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "一塊",
+      "start_ms": 750.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "塊",
+      "start_ms": 1075.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "分開",
+      "start_ms": 1300.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1712.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "東西",
+      "start_ms": 1850.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2412.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

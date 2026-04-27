@@ -1,0 +1,46 @@
+{
+  "filename": "1_1_5_A_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「這個",
+      "start_ms": 41.687,
+      "duration_ms": 354.125
+    },
+    {
+      "word": "新來",
+      "start_ms": 395.812,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "的",
+      "start_ms": 802.062,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "還",
+      "start_ms": 989.562,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "挺",
+      "start_ms": 1239.5619,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "有",
+      "start_ms": 1468.75,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "禮貌",
+      "start_ms": 1687.5,
+      "duration_ms": 479.18699999999995
+    },
+    {
+      "word": "。」",
+      "start_ms": 2187.5,
+      "duration_ms": 31.25
+    }
+  ]
+}

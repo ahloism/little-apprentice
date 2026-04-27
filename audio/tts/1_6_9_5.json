@@ -1,0 +1,61 @@
+{
+  "filename": "1_6_9_5.mp3",
+  "speaker": "老梁",
+  "words": [
+    {
+      "word": "「石頭",
+      "start_ms": 50.0,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "撿起來",
+      "start_ms": 477.062,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "保管",
+      "start_ms": 945.812,
+      "duration_ms": 322.93699999999995
+    },
+    {
+      "word": "著",
+      "start_ms": 1268.75,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "，",
+      "start_ms": 1602.0619,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "是",
+      "start_ms": 1602.0619,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "他",
+      "start_ms": 1810.437,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1997.937,
+      "duration_ms": 93.75
+    },
+    {
+      "word": "錯",
+      "start_ms": 2091.687,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "？",
+      "start_ms": 2435.437,
+      "duration_ms": 166.625
+    },
+    {
+      "word": "」",
+      "start_ms": 2602.062,
+      "duration_ms": 72.937
+    }
+  ]
+}

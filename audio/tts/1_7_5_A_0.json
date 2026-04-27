@@ -1,0 +1,31 @@
+{
+  "filename": "1_7_5_A_0.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「那",
+      "start_ms": 54.187,
+      "duration_ms": 236.06199999999998
+    },
+    {
+      "word": "是",
+      "start_ms": 290.25,
+      "duration_ms": 361.125
+    },
+    {
+      "word": "事後",
+      "start_ms": 665.25,
+      "duration_ms": 583.312
+    },
+    {
+      "word": "聰明",
+      "start_ms": 1262.5,
+      "duration_ms": 583.312
+    },
+    {
+      "word": "。」",
+      "start_ms": 1887.5,
+      "duration_ms": 13.875
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "filename": "1_5_9_0.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「好",
+      "start_ms": 50.0,
+      "duration_ms": 420.437
+    },
+    {
+      "word": "，",
+      "start_ms": 652.25,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "」",
+      "start_ms": 845.437,
+      "duration_ms": 79.562
+    }
+  ]
+}

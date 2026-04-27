@@ -1,0 +1,36 @@
+{
+  "filename": "1_5_2_q.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "阿",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "禾",
+      "start_ms": 275.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "先",
+      "start_ms": 437.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "看",
+      "start_ms": 700.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "哪裡",
+      "start_ms": 925.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "？",
+      "start_ms": 1550.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

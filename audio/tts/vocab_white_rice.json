@@ -1,0 +1,41 @@
+{
+  "filename": "vocab_white_rice.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "白色",
+      "start_ms": 75.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "圓粒",
+      "start_ms": 450.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1012.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "煮飯",
+      "start_ms": 1012.5,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "用",
+      "start_ms": 1500.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1650.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "主糧",
+      "start_ms": 1775.0,
+      "duration_ms": 650.0
+    }
+  ]
+}

@@ -3,324 +3,324 @@
   "game_id": "game_1_market",
   "character_assets": {
     "coi_po_po": {
-      "image": "character_coi_po_po.png"
+      "image": "C13_蔡婆婆.png"
     },
     "jyu_lou_daai": {
-      "image": "character_jyu_lou_daai.png"
+      "image": "C14_余老大.png"
     },
     "aa_ping": {
-      "image": "character_aa_ping.png"
+      "image": "C15_阿萍.png"
     },
     "maa_baak": {
-      "image": "character_maa_baak.png"
+      "image": "C16_馬伯.png"
     },
     "aa_mou": {
-      "image": "character_aa_mou.png"
+      "image": "C17_阿毛.png"
     },
     "sai_gau": {
-      "image": "character_sai_gau.png"
+      "image": "C18_細狗.png"
     }
   },
   "vocabulary_assets": {
     "bok_choy": {
-      "image": "vocab_bok_choy.png",
+      "image": "O52_白菜.png",
       "audio": "vocab_bok_choy.mp3"
     },
     "radish": {
-      "image": "vocab_radish.png",
+      "image": "O53_蘿蔔.png",
       "audio": "vocab_radish.mp3"
     },
     "winter_melon": {
-      "image": "vocab_winter_melon.png",
+      "image": "O54_冬瓜.png",
       "audio": "vocab_winter_melon.mp3"
     },
     "celery": {
-      "image": "vocab_celery.png",
+      "image": "O55_芹菜.png",
       "audio": "vocab_celery.mp3"
     },
     "eggplant": {
-      "image": "vocab_eggplant.png",
+      "image": "O56_茄子.png",
       "audio": "vocab_eggplant.mp3"
     },
     "yardlong_bean": {
-      "image": "vocab_yardlong_bean.png",
+      "image": "O57_豆角.png",
       "audio": "vocab_yardlong_bean.mp3"
     },
     "sweet_potato": {
-      "image": "vocab_sweet_potato.png",
+      "image": "O58_番薯.png",
       "audio": "vocab_sweet_potato.mp3"
     },
     "taro": {
-      "image": "vocab_taro.png",
+      "image": "O59_芋頭.png",
       "audio": "vocab_taro.mp3"
     },
     "spinach": {
-      "image": "vocab_spinach.png",
+      "image": "O60_菠菜.png",
       "audio": "vocab_spinach.mp3"
     },
     "carp": {
-      "image": "vocab_carp.png",
+      "image": "O61_鯉魚.png",
       "audio": "vocab_carp.mp3"
     },
     "grass_carp": {
-      "image": "vocab_grass_carp.png",
+      "image": "O62_草魚.png",
       "audio": "vocab_grass_carp.mp3"
     },
     "pork": {
-      "image": "vocab_pork.png",
+      "image": "O29_豬肉.png",
       "audio": "vocab_pork.mp3"
     },
     "chicken_leg": {
-      "image": "vocab_chicken_leg.png",
+      "image": "O63_雞腿.png",
       "audio": "vocab_chicken_leg.mp3"
     },
     "beef": {
-      "image": "vocab_beef.png",
+      "image": "O64_牛肉.png",
       "audio": "vocab_beef.mp3"
     },
     "shrimp": {
-      "image": "vocab_shrimp.png",
+      "image": "O45_蝦.png",
       "audio": "vocab_shrimp.mp3"
     },
     "duck_meat": {
-      "image": "vocab_duck_meat.png",
+      "image": "O65_鴨肉.png",
       "audio": "vocab_duck_meat.mp3"
     },
     "mutton": {
-      "image": "vocab_mutton.png",
+      "image": "O66_羊肉.png",
       "audio": "vocab_mutton.mp3"
     },
     "crab": {
-      "image": "vocab_crab.png",
+      "image": "O46_蟹.png",
       "audio": "vocab_crab.mp3"
     },
     "pear": {
-      "image": "vocab_pear.png",
+      "image": "O49_梨.png",
       "audio": "vocab_pear.mp3"
     },
     "peach": {
-      "image": "vocab_peach.png",
+      "image": "O50_桃.png",
       "audio": "vocab_peach.mp3"
     },
     "jujube": {
-      "image": "vocab_jujube.png",
+      "image": "O67_棗.png",
       "audio": "vocab_jujube.mp3"
     },
     "orange": {
-      "image": "vocab_orange.png",
+      "image": "O68_橙.png",
       "audio": "vocab_orange.mp3"
     },
     "roselle": {
-      "image": "vocab_roselle.png",
+      "image": "O69_洛神花.png",
       "audio": "vocab_roselle.mp3"
     },
     "mint": {
-      "image": "vocab_mint.png",
+      "image": "O70_薄荷.png",
       "audio": "vocab_mint.mp3"
     },
     "shiitake": {
-      "image": "vocab_shiitake.png",
+      "image": "O71_冬菇.png",
       "audio": "vocab_shiitake.mp3"
     },
     "wood_ear": {
-      "image": "vocab_wood_ear.png",
+      "image": "O72_木耳.png",
       "audio": "vocab_wood_ear.mp3"
     },
     "dried_shrimp": {
-      "image": "vocab_dried_shrimp.png",
+      "image": "O73_蝦米.png",
       "audio": "vocab_dried_shrimp.mp3"
     },
     "tofu_skin": {
-      "image": "vocab_tofu_skin.png",
+      "image": "O74_腐竹.png",
       "audio": "vocab_tofu_skin.mp3"
     },
     "dried_tofu": {
-      "image": "vocab_dried_tofu.png",
+      "image": "O75_豆乾.png",
       "audio": "vocab_dried_tofu.mp3"
     },
     "lap_cheong": {
-      "image": "vocab_lap_cheong.png",
+      "image": "O10_臘腸.png",
       "audio": "vocab_lap_cheong.mp3"
     }
   },
   "option_assets": {
     "opt_bok_choy": {
       "word": "白菜",
-      "image": "option_bok_choy.png",
+      "image": "O52_白菜.png",
       "caption": "白菜",
       "audio": "option_bok_choy.mp3"
     },
     "opt_radish": {
       "word": "蘿蔔",
-      "image": "option_radish.png",
+      "image": "O53_蘿蔔.png",
       "caption": "蘿蔔",
       "audio": "option_radish.mp3"
     },
     "opt_winter_melon": {
       "word": "冬瓜",
-      "image": "option_winter_melon.png",
+      "image": "O54_冬瓜.png",
       "caption": "冬瓜",
       "audio": "option_winter_melon.mp3"
     },
     "opt_celery": {
       "word": "芹菜",
-      "image": "option_celery.png",
+      "image": "O55_芹菜.png",
       "caption": "芹菜",
       "audio": "option_celery.mp3"
     },
     "opt_eggplant": {
       "word": "茄子",
-      "image": "option_eggplant.png",
+      "image": "O56_茄子.png",
       "caption": "茄子",
       "audio": "option_eggplant.mp3"
     },
     "opt_yardlong_bean": {
       "word": "豆角",
-      "image": "option_yardlong_bean.png",
+      "image": "O57_豆角.png",
       "caption": "豆角",
       "audio": "option_yardlong_bean.mp3"
     },
     "opt_sweet_potato": {
       "word": "番薯",
-      "image": "option_sweet_potato.png",
+      "image": "O58_番薯.png",
       "caption": "番薯",
       "audio": "option_sweet_potato.mp3"
     },
     "opt_taro": {
       "word": "芋頭",
-      "image": "option_taro.png",
+      "image": "O59_芋頭.png",
       "caption": "芋頭",
       "audio": "option_taro.mp3"
     },
     "opt_spinach": {
       "word": "菠菜",
-      "image": "option_spinach.png",
+      "image": "O60_菠菜.png",
       "caption": "菠菜",
       "audio": "option_spinach.mp3"
     },
     "opt_carp": {
       "word": "鯉魚",
-      "image": "option_carp.png",
+      "image": "O61_鯉魚.png",
       "caption": "鯉魚",
       "audio": "option_carp.mp3"
     },
     "opt_grass_carp": {
       "word": "草魚",
-      "image": "option_grass_carp.png",
+      "image": "O62_草魚.png",
       "caption": "草魚",
       "audio": "option_grass_carp.mp3"
     },
     "opt_pork": {
       "word": "豬肉",
-      "image": "option_pork.png",
+      "image": "O29_豬肉.png",
       "caption": "豬肉",
       "audio": "option_pork.mp3"
     },
     "opt_chicken_leg": {
       "word": "雞腿",
-      "image": "option_chicken_leg.png",
+      "image": "O63_雞腿.png",
       "caption": "雞腿",
       "audio": "option_chicken_leg.mp3"
     },
     "opt_beef": {
       "word": "牛肉",
-      "image": "option_beef.png",
+      "image": "O64_牛肉.png",
       "caption": "牛肉",
       "audio": "option_beef.mp3"
     },
     "opt_shrimp": {
       "word": "蝦",
-      "image": "option_shrimp.png",
+      "image": "O45_蝦.png",
       "caption": "蝦",
       "audio": "option_shrimp.mp3"
     },
     "opt_duck_meat": {
       "word": "鴨肉",
-      "image": "option_duck_meat.png",
+      "image": "O65_鴨肉.png",
       "caption": "鴨肉",
       "audio": "option_duck_meat.mp3"
     },
     "opt_mutton": {
       "word": "羊肉",
-      "image": "option_mutton.png",
+      "image": "O66_羊肉.png",
       "caption": "羊肉",
       "audio": "option_mutton.mp3"
     },
     "opt_crab": {
       "word": "蟹",
-      "image": "option_crab.png",
+      "image": "O46_蟹.png",
       "caption": "蟹",
       "audio": "option_crab.mp3"
     },
     "opt_pear": {
       "word": "梨",
-      "image": "option_pear.png",
+      "image": "O49_梨.png",
       "caption": "梨",
       "audio": "option_pear.mp3"
     },
     "opt_peach": {
       "word": "桃",
-      "image": "option_peach.png",
+      "image": "O50_桃.png",
       "caption": "桃",
       "audio": "option_peach.mp3"
     },
     "opt_jujube": {
       "word": "棗",
-      "image": "option_jujube.png",
+      "image": "O67_棗.png",
       "caption": "棗",
       "audio": "option_jujube.mp3"
     },
     "opt_orange": {
       "word": "橙",
-      "image": "option_orange.png",
+      "image": "O68_橙.png",
       "caption": "橙",
       "audio": "option_orange.mp3"
     },
     "opt_roselle": {
       "word": "洛神花",
-      "image": "option_roselle.png",
+      "image": "O69_洛神花.png",
       "caption": "洛神花",
       "audio": "option_roselle.mp3"
     },
     "opt_mint": {
       "word": "薄荷",
-      "image": "option_mint.png",
+      "image": "O70_薄荷.png",
       "caption": "薄荷",
       "audio": "option_mint.mp3"
     },
     "opt_shiitake": {
       "word": "冬菇",
-      "image": "option_shiitake.png",
+      "image": "O71_冬菇.png",
       "caption": "冬菇",
       "audio": "option_shiitake.mp3"
     },
     "opt_wood_ear": {
       "word": "木耳",
-      "image": "option_wood_ear.png",
+      "image": "O72_木耳.png",
       "caption": "木耳",
       "audio": "option_wood_ear.mp3"
     },
     "opt_dried_shrimp": {
       "word": "蝦米",
-      "image": "option_dried_shrimp.png",
+      "image": "O73_蝦米.png",
       "caption": "蝦米",
       "audio": "option_dried_shrimp.mp3"
     },
     "opt_tofu_skin": {
       "word": "腐竹",
-      "image": "option_tofu_skin.png",
+      "image": "O74_腐竹.png",
       "caption": "腐竹",
       "audio": "option_tofu_skin.mp3"
     },
     "opt_dried_tofu": {
       "word": "豆乾",
-      "image": "option_dried_tofu.png",
+      "image": "O75_豆乾.png",
       "caption": "豆乾",
       "audio": "option_dried_tofu.mp3"
     },
     "opt_lap_cheong": {
       "word": "臘腸",
-      "image": "option_lap_cheong.png",
+      "image": "O10_臘腸.png",
       "caption": "臘腸",
       "audio": "option_lap_cheong.mp3"
     }
@@ -328,53 +328,103 @@
   "variations": [
     {
       "variation_id": "game_1_market_01",
-      "stall_image": "stall_vegetable.png",
+      "stall_image": "S18_蔬菜攤.png",
       "question_audio": "coi_po_po_game_1_market_01.mp3"
     },
     {
       "variation_id": "game_1_market_02",
-      "stall_image": "stall_vegetable.png",
+      "stall_image": "S18_蔬菜攤.png",
       "question_audio": "coi_po_po_game_1_market_02.mp3"
     },
     {
       "variation_id": "game_1_market_03",
-      "stall_image": "stall_vegetable.png",
+      "stall_image": "S18_蔬菜攤.png",
       "question_audio": "coi_po_po_game_1_market_03.mp3"
     },
     {
       "variation_id": "game_1_market_04",
-      "stall_image": "stall_fish_meat.png",
+      "stall_image": "S19_魚肉攤.png",
       "question_audio": "jyu_lou_daai_game_1_market_04.mp3"
     },
     {
       "variation_id": "game_1_market_05",
-      "stall_image": "stall_fish_meat.png",
+      "stall_image": "S19_魚肉攤.png",
       "question_audio": "jyu_lou_daai_game_1_market_05.mp3"
     },
     {
       "variation_id": "game_1_market_06",
-      "stall_image": "stall_fish_meat.png",
+      "stall_image": "S19_魚肉攤.png",
       "question_audio": "jyu_lou_daai_game_1_market_06.mp3"
     },
     {
       "variation_id": "game_1_market_07",
-      "stall_image": "stall_fruit.png",
+      "stall_image": "S20_水果攤.png",
       "question_audio": "aa_ping_game_1_market_07.mp3"
     },
     {
       "variation_id": "game_1_market_08",
-      "stall_image": "stall_fruit.png",
+      "stall_image": "S20_水果攤.png",
       "question_audio": "aa_ping_game_1_market_08.mp3"
     },
     {
       "variation_id": "game_1_market_09",
-      "stall_image": "stall_dry_goods.png",
+      "stall_image": "S21_乾貨攤.png",
       "question_audio": "maa_baak_game_1_market_09.mp3"
     },
     {
       "variation_id": "game_1_market_10",
-      "stall_image": "stall_dry_goods.png",
+      "stall_image": "S21_乾貨攤.png",
       "question_audio": "maa_baak_game_1_market_10.mp3"
     }
-  ]
+  ],
+  "feedback_assets": {
+    "coi_po_po_correct_0": {
+      "audio": "feedback_game_1_market_coi_po_po_correct_0.mp3"
+    },
+    "coi_po_po_correct_1": {
+      "audio": "feedback_game_1_market_coi_po_po_correct_1.mp3"
+    },
+    "coi_po_po_wrong_0": {
+      "audio": "feedback_game_1_market_coi_po_po_wrong_0.mp3"
+    },
+    "coi_po_po_wrong_1": {
+      "audio": "feedback_game_1_market_coi_po_po_wrong_1.mp3"
+    },
+    "jyu_lou_daai_correct_0": {
+      "audio": "feedback_game_1_market_jyu_lou_daai_correct_0.mp3"
+    },
+    "jyu_lou_daai_correct_1": {
+      "audio": "feedback_game_1_market_jyu_lou_daai_correct_1.mp3"
+    },
+    "jyu_lou_daai_wrong_0": {
+      "audio": "feedback_game_1_market_jyu_lou_daai_wrong_0.mp3"
+    },
+    "jyu_lou_daai_wrong_1": {
+      "audio": "feedback_game_1_market_jyu_lou_daai_wrong_1.mp3"
+    },
+    "aa_ping_correct_0": {
+      "audio": "feedback_game_1_market_aa_ping_correct_0.mp3"
+    },
+    "aa_ping_correct_1": {
+      "audio": "feedback_game_1_market_aa_ping_correct_1.mp3"
+    },
+    "aa_ping_wrong_0": {
+      "audio": "feedback_game_1_market_aa_ping_wrong_0.mp3"
+    },
+    "aa_ping_wrong_1": {
+      "audio": "feedback_game_1_market_aa_ping_wrong_1.mp3"
+    },
+    "maa_baak_correct_0": {
+      "audio": "feedback_game_1_market_maa_baak_correct_0.mp3"
+    },
+    "maa_baak_correct_1": {
+      "audio": "feedback_game_1_market_maa_baak_correct_1.mp3"
+    },
+    "maa_baak_wrong_0": {
+      "audio": "feedback_game_1_market_maa_baak_wrong_0.mp3"
+    },
+    "maa_baak_wrong_1": {
+      "audio": "feedback_game_1_market_maa_baak_wrong_1.mp3"
+    }
+  }
 }

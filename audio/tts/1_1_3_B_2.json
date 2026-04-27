@@ -1,0 +1,31 @@
+{
+  "filename": "1_1_3_B_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "裡面",
+      "start_ms": 87.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "傳來",
+      "start_ms": 487.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "算盤",
+      "start_ms": 887.5,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "聲",
+      "start_ms": 1412.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "。",
+      "start_ms": 1787.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

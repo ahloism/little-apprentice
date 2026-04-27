@@ -1,0 +1,41 @@
+{
+  "filename": "1_4_5_B_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「詳細",
+      "start_ms": 43.75,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "就",
+      "start_ms": 502.062,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "一定",
+      "start_ms": 720.812,
+      "duration_ms": 302.062
+    },
+    {
+      "word": "是",
+      "start_ms": 1043.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "真的",
+      "start_ms": 1293.75,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "嗎",
+      "start_ms": 1689.562,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "？」",
+      "start_ms": 1991.687,
+      "duration_ms": 0.0
+    }
+  ]
+}

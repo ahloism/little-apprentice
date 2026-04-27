@@ -1,0 +1,66 @@
+{
+  "filename": "asui_T12.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "做",
+      "start_ms": 43.75,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "得",
+      "start_ms": 200.0,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "不錯",
+      "start_ms": 345.812,
+      "duration_ms": 479.18699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 856.25,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "不過",
+      "start_ms": 1075.0,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "還有",
+      "start_ms": 1481.25,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "地方",
+      "start_ms": 1929.187,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "沒",
+      "start_ms": 2335.437,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "去",
+      "start_ms": 2512.5,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "——",
+      "start_ms": 2835.437,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "跟上",
+      "start_ms": 2939.562,
+      "duration_ms": 520.812
+    },
+    {
+      "word": "！",
+      "start_ms": 3470.812,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

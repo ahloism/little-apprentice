@@ -1,0 +1,51 @@
+{
+  "filename": "vocab_beef.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "紅",
+      "start_ms": 87.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "紅",
+      "start_ms": 300.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "一塊",
+      "start_ms": 500.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1187.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "紋理",
+      "start_ms": 1187.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "明顯",
+      "start_ms": 1562.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1962.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "肉",
+      "start_ms": 2087.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "。",
+      "start_ms": 2287.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

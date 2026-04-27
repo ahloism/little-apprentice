@@ -1,0 +1,36 @@
+{
+  "filename": "feedback_game_1_market_coi_po_po_correct_0.mp3",
+  "speaker": "蔡婆婆",
+  "words": [
+    {
+      "word": "哎呀",
+      "start_ms": 46.562,
+      "duration_ms": 477.25
+    },
+    {
+      "word": "，",
+      "start_ms": 626.125,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "幸好",
+      "start_ms": 626.125,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "你",
+      "start_ms": 1001.125,
+      "duration_ms": 147.75
+    },
+    {
+      "word": "眼利",
+      "start_ms": 1148.875,
+      "duration_ms": 568.187
+    },
+    {
+      "word": "。",
+      "start_ms": 1717.062,
+      "duration_ms": 79.562
+    }
+  ]
+}

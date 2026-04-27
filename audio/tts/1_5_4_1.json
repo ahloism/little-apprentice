@@ -1,0 +1,61 @@
+{
+  "filename": "1_5_4_1.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「哪裡",
+      "start_ms": 50.0,
+      "duration_ms": 397.75
+    },
+    {
+      "word": "的",
+      "start_ms": 447.75,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "孩子",
+      "start_ms": 550.0,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "，",
+      "start_ms": 1209.0619,
+      "duration_ms": 215.93699999999998
+    },
+    {
+      "word": "到",
+      "start_ms": 1425.0,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "客棧",
+      "start_ms": 1584.0619,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "來",
+      "start_ms": 1959.062,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "幹",
+      "start_ms": 2118.187,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "什麼",
+      "start_ms": 2300.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "？",
+      "start_ms": 2845.437,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "」",
+      "start_ms": 3027.25,
+      "duration_ms": 79.562
+    }
+  ]
+}

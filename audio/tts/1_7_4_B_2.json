@@ -1,0 +1,31 @@
+{
+  "filename": "1_7_4_B_2.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「親切",
+      "start_ms": 54.187,
+      "duration_ms": 541.625
+    },
+    {
+      "word": "不",
+      "start_ms": 595.812,
+      "duration_ms": 222.25
+    },
+    {
+      "word": "代表",
+      "start_ms": 818.062,
+      "duration_ms": 486.125
+    },
+    {
+      "word": "準確",
+      "start_ms": 1304.1869,
+      "duration_ms": 666.625
+    },
+    {
+      "word": "。」",
+      "start_ms": 1970.812,
+      "duration_ms": 0.0
+    }
+  ]
+}

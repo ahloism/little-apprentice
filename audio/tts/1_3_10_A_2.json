@@ -1,0 +1,61 @@
+{
+  "filename": "1_3_10_A_2.mp3",
+  "speaker": "王三",
+  "words": [
+    {
+      "word": "「要",
+      "start_ms": 41.687,
+      "duration_ms": 135.375
+    },
+    {
+      "word": "什麼",
+      "start_ms": 177.062,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "都",
+      "start_ms": 593.75,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "有",
+      "start_ms": 781.25,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1041.6869,
+      "duration_ms": 62.5
+    },
+    {
+      "word": "缺",
+      "start_ms": 1260.4369,
+      "duration_ms": 197.875
+    },
+    {
+      "word": "什麼",
+      "start_ms": 1458.3119,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "都",
+      "start_ms": 1906.25,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "找",
+      "start_ms": 2083.312,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "我",
+      "start_ms": 2343.75,
+      "duration_ms": 270.812
+    },
+    {
+      "word": "。」",
+      "start_ms": 2614.562,
+      "duration_ms": 20.812
+    }
+  ]
+}

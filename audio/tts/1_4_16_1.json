@@ -1,0 +1,71 @@
+{
+  "filename": "1_4_16_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "下面",
+      "start_ms": 87.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "好像",
+      "start_ms": 475.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "有",
+      "start_ms": 925.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "一",
+      "start_ms": 1037.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "個",
+      "start_ms": 1162.5,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "心字",
+      "start_ms": 1262.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2000.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "像是",
+      "start_ms": 2000.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "心裡",
+      "start_ms": 2400.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "有",
+      "start_ms": 2775.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "什麼",
+      "start_ms": 2937.5,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "感覺",
+      "start_ms": 3262.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "。",
+      "start_ms": 3800.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

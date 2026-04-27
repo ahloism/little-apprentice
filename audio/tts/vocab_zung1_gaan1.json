@@ -1,0 +1,71 @@
+{
+  "filename": "vocab_zung1_gaan1.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 109.375,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "在",
+      "start_ms": 328.125,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "中間",
+      "start_ms": 578.125,
+      "duration_ms": 828.125
+    },
+    {
+      "word": "，",
+      "start_ms": 1515.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "被",
+      "start_ms": 1515.625,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "兩",
+      "start_ms": 1750.0,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "邊",
+      "start_ms": 2031.25,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "的",
+      "start_ms": 2234.375,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "人和",
+      "start_ms": 2359.375,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "攤子",
+      "start_ms": 2828.125,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "夾",
+      "start_ms": 3359.375,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "著",
+      "start_ms": 3671.875,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "。",
+      "start_ms": 4000.0,
+      "duration_ms": 109.375
+    }
+  ]
+}

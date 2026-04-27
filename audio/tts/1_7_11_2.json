@@ -1,0 +1,81 @@
+{
+  "filename": "1_7_11_2.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「不",
+      "start_ms": 50.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "識字",
+      "start_ms": 237.5,
+      "duration_ms": 703.125
+    },
+    {
+      "word": "，",
+      "start_ms": 1112.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "路",
+      "start_ms": 1112.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "難行",
+      "start_ms": 1425.0,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "；",
+      "start_ms": 2268.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "但",
+      "start_ms": 2268.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "不",
+      "start_ms": 2550.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "誠信",
+      "start_ms": 2675.0,
+      "duration_ms": 718.75
+    },
+    {
+      "word": "，",
+      "start_ms": 3550.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "路",
+      "start_ms": 3550.0,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "也",
+      "start_ms": 3862.5,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "難行",
+      "start_ms": 4065.625,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "。",
+      "start_ms": 4784.375,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "」",
+      "start_ms": 5081.25,
+      "duration_ms": 109.375
+    }
+  ]
+}

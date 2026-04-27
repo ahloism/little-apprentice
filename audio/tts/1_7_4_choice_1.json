@@ -1,0 +1,56 @@
+{
+  "filename": "1_7_4_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "因為",
+      "start_ms": 75.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "她",
+      "start_ms": 437.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "第一",
+      "start_ms": 662.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "個",
+      "start_ms": 937.5,
+      "duration_ms": 137.5
+    },
+    {
+      "word": "跟",
+      "start_ms": 1075.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "我",
+      "start_ms": 1275.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "說話",
+      "start_ms": 1425.0,
+      "duration_ms": 637.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2187.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "感覺",
+      "start_ms": 2187.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "親切",
+      "start_ms": 2587.5,
+      "duration_ms": 475.0
+    }
+  ]
+}

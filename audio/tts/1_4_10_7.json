@@ -1,0 +1,51 @@
+{
+  "filename": "1_4_10_7.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "還",
+      "start_ms": 87.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "沒",
+      "start_ms": 287.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "走到",
+      "start_ms": 437.5,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1162.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "風",
+      "start_ms": 1162.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "先",
+      "start_ms": 1425.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "到",
+      "start_ms": 1662.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "了",
+      "start_ms": 1850.0,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "。",
+      "start_ms": 2212.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

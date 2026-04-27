@@ -1,0 +1,26 @@
+{
+  "filename": "1_2_13_C_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "壓低",
+      "start_ms": 275.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "聲音",
+      "start_ms": 687.5,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "：",
+      "start_ms": 1312.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

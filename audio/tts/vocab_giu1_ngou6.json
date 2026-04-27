@@ -1,0 +1,56 @@
+{
+  "filename": "vocab_giu1_ngou6.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "覺得",
+      "start_ms": 75.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "自己",
+      "start_ms": 412.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "很",
+      "start_ms": 750.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "厲害",
+      "start_ms": 962.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1687.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "心裡",
+      "start_ms": 1687.5,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "有",
+      "start_ms": 2137.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "點",
+      "start_ms": 2325.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "得意",
+      "start_ms": 2550.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "。",
+      "start_ms": 3075.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

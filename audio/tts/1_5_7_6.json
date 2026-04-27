@@ -1,0 +1,36 @@
+{
+  "filename": "1_5_7_6.mp3",
+  "speaker": "杜先生",
+  "words": [
+    {
+      "word": "「讓",
+      "start_ms": 50.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "他",
+      "start_ms": 300.0,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "自己",
+      "start_ms": 493.187,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "答",
+      "start_ms": 822.75,
+      "duration_ms": 261.312
+    },
+    {
+      "word": "。",
+      "start_ms": 1084.0619,
+      "duration_ms": 488.625
+    },
+    {
+      "word": "」",
+      "start_ms": 1572.75,
+      "duration_ms": 79.562
+    }
+  ]
+}

@@ -1,22 +1,5 @@
 {
   "evaluation_id": "story_1_4",
-  "notebook_right": {
-    "learned_points": [
-      {
-        "type": "vocabulary",
-        "content": "信——人說的話寫下來送給別人"
-      },
-      {
-        "type": "vocabulary",
-        "content": "家——住的地方，家人在的地方"
-      },
-      {
-        "type": "vocabulary",
-        "content": "急——心裡很趕，事情來不及了"
-      }
-    ],
-    "anchor_image": "W02"
-  },
   "scenes": [
     {
       "scene_id": "1_4_2",
