@@ -132,7 +132,11 @@
     },
     {
       "rule_id": "tap_T1",
-      "dialogue_ids": ["T1", "T2", "T3"],
+      "dialogue_ids": [
+        "T1",
+        "T2",
+        "T3"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "main_story_incomplete",
       "repeat": true,
@@ -141,7 +145,11 @@
     },
     {
       "rule_id": "tap_T2",
-      "dialogue_ids": ["T4", "T5", "T6"],
+      "dialogue_ids": [
+        "T4",
+        "T5",
+        "T6"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "unlock_available_coins_sufficient",
       "repeat": true,
@@ -150,7 +158,11 @@
     },
     {
       "rule_id": "tap_T3",
-      "dialogue_ids": ["T7", "T8", "T9"],
+      "dialogue_ids": [
+        "T7",
+        "T8",
+        "T9"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "unlock_available_coins_insufficient",
       "repeat": true,
@@ -159,7 +171,11 @@
     },
     {
       "rule_id": "tap_T4",
-      "dialogue_ids": ["T10", "T11", "T12"],
+      "dialogue_ids": [
+        "T10",
+        "T11",
+        "T12"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "all_unlocked_story_incomplete",
       "repeat": true,
@@ -168,7 +184,11 @@
     },
     {
       "rule_id": "tap_T5",
-      "dialogue_ids": ["T13", "T14", "T15"],
+      "dialogue_ids": [
+        "T13",
+        "T14",
+        "T15"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "all_colored_story_complete",
       "repeat": true,
@@ -177,7 +197,11 @@
     },
     {
       "rule_id": "tap_T6",
-      "dialogue_ids": ["T16", "T17", "T18"],
+      "dialogue_ids": [
+        "T16",
+        "T17",
+        "T18"
+      ],
       "trigger_type": "tap_asui",
       "trigger_condition": "any_location_colored AND every_3_taps",
       "repeat": true,
@@ -271,6 +295,22 @@
       "trigger_condition": "return_to_map",
       "repeat": true,
       "room": "map"
+    },
+    {
+      "rule_id": "auto_W1",
+      "dialogue_id": "W1",
+      "trigger_type": "auto",
+      "trigger_condition": "before_event_1_4",
+      "repeat": false,
+      "room": "story"
+    },
+    {
+      "rule_id": "auto_W2",
+      "dialogue_id": "W2",
+      "trigger_type": "auto",
+      "trigger_condition": "before_event_1_7",
+      "repeat": false,
+      "room": "story"
     }
   ]
 }

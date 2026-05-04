@@ -15,31 +15,49 @@
     {
       "scene_id": "1_4_3",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "information_integration"
+      ],
       "trigger": "選梅姐，追問理由"
     },
     {
       "scene_id": "1_4_4",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "information_integration"
+      ],
       "trigger": "選阿乖（被誤導）"
     },
     {
       "scene_id": "1_4_5",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "information_integration"
+      ],
       "trigger": "選王三（被細節迷惑）"
     },
     {
       "scene_id": "1_4_6",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "social_understanding"
+      ],
       "trigger": "選梅姐後追問不信阿乖和王三的理由"
     },
     {
       "scene_id": "1_4_7",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "social_understanding"
+      ],
       "trigger": "選阿乖後追問不信梅姐和王三的理由"
     },
     {
       "scene_id": "1_4_8",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "social_understanding"
+      ],
       "trigger": "選王三後追問不信梅姐和阿乖的理由"
     },
     {

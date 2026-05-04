@@ -69,8 +69,7 @@
     },
     {
       "scene_id": "1_7_10",
-      "collect_type": "hidden_assessment",
-      "trigger": "價值判斷錯誤，在帳房考問中仍未能誠實承擔責任"
+      "collect_type": "exploration"
     }
   ]
 }

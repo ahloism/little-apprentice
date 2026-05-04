@@ -161,11 +161,18 @@
     "M1": {
       "audio": [
         "asui_M1_0.mp3",
-        "asui_M1_1.mp3"
+        "asui_M1_1.mp3",
+        "asui_M1_2.mp3"
       ]
     },
     "return_to_map": {
       "audio": "asui_return_to_map.mp3"
+    },
+    "W1": {
+      "audio": "asui_W1.mp3"
+    },
+    "W2": {
+      "audio": "asui_W2.mp3"
     }
   }
 }

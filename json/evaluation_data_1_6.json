@@ -23,11 +23,17 @@
     {
       "scene_id": "1_6_9",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "value_judgment"
+      ],
       "trigger": "價值判斷錯誤，選擇推卸責任並誣賴他人"
     },
     {
       "scene_id": "1_6_10",
       "collect_type": "hidden_assessment",
+      "dimension": [
+        "value_judgment"
+      ],
       "trigger": "價值判斷錯誤，選擇沉默逃避責任"
     }
   ]

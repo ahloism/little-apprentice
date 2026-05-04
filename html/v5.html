@@ -1,0 +1,2321 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>小學徒大世界——大梁城</title>
+
+  <!-- Firebase SDK (compat v9) -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+  <style>
+    /* ========== 核心層：基礎樣式 ========== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #3a2a10;
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      font-family: 'Noto Serif TC', 'STKaiti', 'KaiTi', serif;
+      user-select: none;
+    }
+    .hidden { display: none !important; }
+
+    /* ========== 核心層：Opening房外層 ========== */
+    #opening-house {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #c8b08a;
+      z-index: 100;
+    }
+
+    /* ========== 核心層：書本外框 ========== */
+    #book-wrapper {
+      width: 100vw; height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    #global-ui {
+      width: 100%; height: 48px;
+      background: #5a3a10;
+      display: flex; align-items: center;
+      padding: 0 16px; gap: 12px;
+      flex-shrink: 0;
+    }
+    #book {
+      flex: 1; display: flex;
+      position: relative; overflow: hidden;
+    }
+    #book-open-animation {
+      position: absolute; inset: 0;
+      background: #c8b08a;
+      z-index: 10;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #page-left {
+      width: 50%; height: 100%;
+      background: #F5F0E8;
+      border-right: 2px solid #c8a060;
+      overflow-y: auto;
+    }
+    #page-right {
+      width: 50%; height: 100%;
+      background: #F5F0E8;
+      overflow-y: auto;
+    }
+
+    /* ========== 模塊：學習進度面板 ========== */
+
+    #progress-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #progress-panel {
+      width: 100%;
+      height: 100%;
+      background: var(--page-bg, #f5ead0);
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color, #c8b89a);
+      flex-shrink: 0;
+    }
+
+    #progress-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .progress-tab {
+      padding: 6px 16px;
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted, #999);
+    }
+
+    .progress-tab.active {
+      border-bottom: 2px solid var(--accent-color, #8b5e3c);
+      color: var(--text-color, #3a2a1a);
+      font-weight: bold;
+    }
+
+    #progress-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-color, #3a2a1a);
+      line-height: 1;
+    }
+
+    #progress-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .tab-content {
+      display: block;
+    }
+
+    .tab-content.hidden {
+      display: none;
+    }
+
+    .progress-event-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: var(--text-color, #3a2a1a);
+    }
+
+    .progress-chapter {
+      margin-bottom: 8px;
+      border: 1px solid var(--border-color, #c8b89a);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress-chapter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: var(--page-bg, #f5ead0);
+    }
+
+    .progress-chapter-header.unlocked {
+      cursor: pointer;
+    }
+
+    .progress-chapter-header.unlocked:hover {
+      background: var(--hover-bg, #ede0c4);
+    }
+
+    .progress-chapter-header.locked {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    .chapter-title {
+      font-size: 0.95rem;
+      color: var(--text-color, #3a2a1a);
+    }
+
+    .chapter-toggle-icon,
+    .chapter-arrow,
+    .lock-icon {
+      font-size: 0.85rem;
+      color: var(--text-muted, #999);
+    }
+
+    .progress-scenes {
+      padding: 8px 14px;
+      background: var(--page-bg-light, #fdf6e8);
+      border-top: 1px solid var(--border-color, #c8b89a);
+    }
+
+    .progress-scene {
+      margin-bottom: 6px;
+    }
+
+    .progress-scene-title {
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 4px 0;
+      color: var(--text-color, #3a2a1a);
+    }
+
+    .progress-scene-title:hover {
+      text-decoration: underline;
+    }
+
+    .progress-scene-summary {
+      font-size: 0.82rem;
+      color: var(--text-muted, #666);
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scene-tts-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    /* Notebook Popup */
+    #notebook-popup {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 210;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #notebook-popup-inner {
+      background: var(--page-bg, #f5ead0);
+      border-radius: 12px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    #notebook-popup-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--text-color, #3a2a1a);
+    }
+
+    .notebook-popup-section {
+      margin: 0 0 18px;
+      color: var(--text-color, #3a2a1a);
+    }
+
+    .notebook-popup-section h3 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      color: var(--accent-color, #8b5e3c);
+    }
+
+    .notebook-popup-section ul {
+      padding-left: 1.2em;
+      line-height: 1.7;
+    }
+
+    .notebook-popup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .notebook-popup-tag {
+      border: 1px solid var(--border-color, #c8b89a);
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--page-bg-light, #fdf6e8);
+    }
+
+    .notebook-tts-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 6px;
+    }
+
+    .notebook-anchor-image {
+      display: block;
+      width: min(240px, 70%);
+      margin: 10px auto 0;
+      object-fit: contain;
+    }
+
+    #dev-progress-panel-button {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      z-index: 300;
+      background: #8b5e3c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    /* ========== /模塊：學習進度面板 ========== */
+  </style>
+</head>
+<body>
+
+  <!-- Opening房（書外，登入前） -->
+  <div id="opening-house"></div>
+
+  <!-- 書本外框（登入後才顯示） -->
+  <div id="book-wrapper" class="hidden">
+
+    <!-- 全局UI層 -->
+    <div id="global-ui">
+      <button id="btn-bgm">♪</button>
+      <button id="btn-tts">語音</button>
+      <button id="btn-speed">正常</button>
+      <span id="display-coins">🪙 0</span>
+      <button id="btn-progress">進度</button>
+      <button id="btn-account">登入</button>
+    </div>
+
+    <div id="notebook-house" class="hidden">
+      <div id="notebook-title-left"></div>
+      <div id="notebook-story-progress"></div>
+      <div id="notebook-places"></div>
+      <div id="notebook-people"></div>
+      <div id="notebook-reflection-title"></div>
+      <div id="notebook-reflections"></div>
+      <div id="notebook-title-right"></div>
+      <div id="notebook-learned-points"></div>
+      <div id="notebook-anchor-image"></div>
+      <div id="notebook-advance-btn" class="hidden"></div>
+    </div>
+
+    <!-- 書本主體 -->
+    <div id="book">
+      <div id="book-open-animation" class="hidden">
+        <!-- 書本打開動畫內容由JS控制 -->
+      </div>
+      <div id="page-left"></div>
+      <div id="page-right"></div>
+      <!-- 大地圖（全幅，與雙頁並列） -->
+      <div id="map-house" class="hidden"></div>
+    </div>
+
+    <!-- Report房（全幅，使用全局UI但不在book內） -->
+    <div id="report-house" class="hidden"></div>
+
+  </div>
+
+  <!-- ========== 模塊：學習進度面板 ========== -->
+  <div id="progress-overlay" class="hidden">
+    <div id="progress-panel">
+      <div id="progress-header">
+        <div id="progress-tabs">
+          <button class="progress-tab active" data-tab="progress">學習進度</button>
+          <button class="progress-tab" data-tab="notebook">學徒筆記</button>
+        </div>
+        <button id="progress-close-btn">×</button>
+      </div>
+      <div id="progress-body">
+        <div class="tab-content active" id="tab-progress">
+          <div class="progress-event">
+            <div class="progress-event-title"></div>
+            <div class="progress-chapters"></div>
+          </div>
+        </div>
+        <div class="tab-content hidden" id="tab-notebook">
+          <div class="progress-event">
+            <div class="progress-event-title"></div>
+            <div class="progress-chapters"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="notebook-popup" class="hidden">
+      <div id="notebook-popup-inner">
+        <button id="notebook-popup-close">×</button>
+        <div id="notebook-popup-content"></div>
+      </div>
+    </div>
+  </div>
+  <!-- ========== /模塊：學習進度面板 ========== -->
+
+  <script>
+  // ========== 核心層：系統骨架 + 書本框架 ==========
+  // 規格依據：核心層規格文件.md §一
+
+  function showRoom(roomId) {
+    // 隱藏所有房間內容
+    const rooms = ['room-opening', 'room-story', 'room-map', 'room-game', 'room-report', 'notebook-house'];
+    rooms.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('hidden');
+    });
+    // 顯示指定房間
+    const target = document.getElementById(roomId);
+    if (target) target.classList.remove('hidden');
+  }
+
+  function playBookOpenAnimation(onComplete) {
+    const anim = document.getElementById('book-open-animation');
+    anim.classList.remove('hidden');
+    // 書本展開 CSS transition，800ms
+    setTimeout(() => {
+      anim.classList.add('hidden');
+      if (onComplete) onComplete();
+    }, 800);
+  }
+
+  // ========== 核心層：Firebase ==========
+  // 規格依據：核心層規格文件.md §二
+
+  const FIREBASE_CONFIG = {
+    // Ah Lo填入實際config
+    apiKey: "",
+    authDomain: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: ""
+  };
+
+  const _firebaseReady = FIREBASE_CONFIG.apiKey !== '';
+  let auth = null;
+  let db = null;
+
+  if (_firebaseReady) {
+    firebase.initializeApp(FIREBASE_CONFIG);
+    auth = firebase.auth();
+    db = firebase.firestore();
+  } else {
+    console.warn('[Dev] Firebase config未填，跳過Firebase初始化，核心層以mock模式運行');
+  }
+
+  if (auth) auth.onAuthStateChanged(async (user) => {
+    if (user) {
+      state.uid = user.uid;
+      document.getElementById('btn-account').textContent = user.displayName || user.email;
+      await initProgress(user.uid);
+    } else {
+      state.uid = null;
+      document.getElementById('btn-account').textContent = '登入';
+    }
+    if (document.getElementById('opening-buttons')) _renderOpeningButtons();
+  });
+
+  document.getElementById('btn-account').addEventListener('click', () => {
+    if (!auth) { console.warn('[Dev] Firebase未初始化'); return; }
+    if (state.uid) {
+      auth.signOut();
+    } else {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      auth.signInWithPopup(provider).catch(e => logError(e.message, 'signInWithPopup', null));
+    }
+  });
+
+  async function loadProgress(uid) {
+    try {
+      const doc = await db.collection('users').doc(uid).collection('progress').doc('current').get();
+      return doc.exists ? doc.data() : null;
+    } catch (e) {
+      logError(e.message, 'loadProgress', uid);
+      return null;
+    }
+  }
+
+  async function saveProgress(uid, data) {
+    try {
+      await db.collection('users').doc(uid).collection('progress').doc('current').set(
+        { ...data, updated_at: firebase.firestore.FieldValue.serverTimestamp() },
+        { merge: true }
+      );
+      localStorage.setItem('la_progress', JSON.stringify({ ...state, updated_at: Date.now() }));
+    } catch (e) {
+      logError(e.message, 'saveProgress', uid);
+    }
+  }
+
+  async function saveAssessment(uid, eventId, sceneId, data) {
+    try {
+      await db.collection('users').doc(uid)
+        .collection('assessment').doc(eventId)
+        .collection('scenes').doc(sceneId)
+        .set({ ...data, timestamp: firebase.firestore.FieldValue.serverTimestamp() });
+    } catch (e) {
+      logError(e.message, 'saveAssessment', uid);
+    }
+  }
+
+  async function logError(message, context, userId) {
+    if (!db) {
+      console.warn('[Dev] logError skipped:', message, context, userId);
+      return;
+    }
+    try {
+      await db.collection('errors').add({
+        message, context,
+        user_id: userId || null,
+        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+      });
+    } catch (e) {
+      console.error('logError failed:', e);
+    }
+  }
+
+  // ========== 核心層：JSON載入器 ==========
+  // 規格依據：核心層規格文件.md §三
+
+  const BASE_PATH = '../';
+  const BGM_BASE = 'audio/';
+  const SFX_BASE = 'audio/';
+  const TTS_BASE = 'audio/tts/';
+  const IMAGE_BASE = 'image/';
+  const JSON_BASE = 'json/';
+
+  const globalData = {
+    config: null,
+    map: null,
+    asui_dialogues: null,
+    asui_manifest: null,
+    asui_presentation: null,
+  };
+
+  const eventData = {
+    story: null,
+    manifest: null,
+    evaluation: null,
+    presentation: null,
+    notebook_content: null,
+    notebook_presentation: null,
+  };
+
+  const gameData = {
+    content: null,
+    manifest: null,
+    evaluation: null,
+    presentation: null,
+  };
+
+  async function loadJSON(path) {
+    const res = await fetch(BASE_PATH + path);
+    if (!res.ok) throw new Error(`JSON load failed: ${path}`);
+    return res.json();
+  }
+
+  async function loadGlobalData() {
+    try {
+      [
+        globalData.config,
+        globalData.map,
+        globalData.asui_dialogues,
+        globalData.asui_manifest,
+        globalData.asui_presentation,
+      ] = await Promise.all([
+        loadJSON('json/config_global.json'),
+        loadJSON('json/map_daliang.json'),
+        loadJSON('json/asui_dialogues.json'),
+        loadJSON('json/asui_manifest.json'),
+        loadJSON('json/asui_presentation.json'),
+      ]);
+      // 版本號檢查
+      const savedVersion = localStorage.getItem('la_json_version');
+      if (savedVersion && savedVersion !== String(globalData.config.json_version)) {
+        localStorage.removeItem('la_progress');
+        localStorage.removeItem('la_assessment');
+      }
+      localStorage.setItem('la_json_version', String(globalData.config.json_version));
+    } catch (e) {
+      logError(e.message, 'loadGlobalData', state.uid);
+    }
+  }
+
+  async function loadEventData(eventId) {
+    // eventId 格式：'1_1' 至 '1_7'
+    try {
+      [
+        eventData.story,
+        eventData.manifest,
+        eventData.evaluation,
+        eventData.presentation,
+        eventData.notebook_content,
+        eventData.notebook_presentation,
+      ] = await Promise.all([
+        loadJSON(`json/story_data_${eventId}.json`),
+        loadJSON(`json/manifest_${eventId}.json`),
+        loadJSON(`json/evaluation_data_${eventId}.json`),
+        loadJSON(`json/presentation_schema_${eventId}.json`),
+        loadJSON(`json/notebook_content_${eventId}.json`),
+        loadJSON(`json/notebook_presentation_${eventId}.json`),
+      ]);
+    } catch (e) {
+      logError(e.message, `loadEventData_${eventId}`, state.uid);
+    }
+  }
+
+  async function loadGameData(location) {
+    try {
+      [
+        gameData.content,
+        gameData.manifest,
+        gameData.evaluation,
+        gameData.presentation,
+      ] = await Promise.all([
+        loadJSON(`json/game_1_content_${location}.json`),
+        loadJSON(`json/game_1_manifest_${location}.json`),
+        loadJSON(`json/game_1_evaluation_${location}.json`),
+        loadJSON(`json/game_1_presentation_${location}.json`),
+      ]);
+    } catch (e) {
+      logError(e.message, `loadGameData_${location}`, state.uid);
+    }
+  }
+
+  // ========== 核心層：狀態管理 ==========
+  // 規格依據：核心層規格文件.md §四
+
+  const SPEED_RATE = { slow: 0.75, normal: 1.0, fast: 1.3 };
+
+  const SAVE_POINTS = {
+    '1_1': ['1_1_3','1_1_5','1_1_7','1_1_8','1_1_10'],
+    '1_2': ['1_2_3','1_2_4','1_2_9'],
+    '1_3': ['1_3_2','1_3_5','1_3_8'],
+    '1_4': [],
+    '1_5': ['1_5_2','1_5_4','1_5_7','1_5_8'],
+    '1_6': ['1_6_2','1_6_4'],
+    '1_7': [],
+  };
+
+  const state = {
+    uid: null,
+    current_scene: null,
+    coins: 0,
+    completed_events: [],
+    unlocked_games: [],
+    paid_games: [],
+    map_colored: [],
+    map_segments: {},
+    explored_scenes: [],
+    visited_sub_scenes: {},
+    assessment_nodes: [],
+    speed: 'normal',
+    bgm_on: true,
+    tts_on: true,
+  };
+
+  const _saveCooldown = {};
+
+  async function initProgress(uid) {
+    // 優先Firestore，快取作備援
+    let progress = await loadProgress(uid);
+    if (!progress) {
+      const cached = localStorage.getItem('la_progress');
+      if (cached) progress = JSON.parse(cached);
+    }
+    if (progress) {
+      Object.assign(state, progress);
+      state.uid = uid;
+    }
+    updateCoinDisplay();
+  }
+
+  async function saveCurrentProgress() {
+    if (!state.uid) return;
+    const key = 'scene_' + state.current_scene;
+    const now = Date.now();
+    if (_saveCooldown[key] && now - _saveCooldown[key] < 5000) return;
+    _saveCooldown[key] = now;
+    await saveProgress(state.uid, {
+      current_scene: state.current_scene,
+      coins: state.coins,
+      completed_events: state.completed_events,
+      unlocked_games: state.unlocked_games,
+      paid_games: state.paid_games,
+      map_colored: state.map_colored,
+      map_segments: state.map_segments,
+      explored_scenes: state.explored_scenes,
+      visited_sub_scenes: state.visited_sub_scenes,
+    });
+  }
+
+  function isSavePoint(sceneId) {
+    const eventId = sceneId.split('_').slice(0,2).join('_');
+    return (SAVE_POINTS[eventId] || []).includes(sceneId);
+  }
+
+  function addCoins(amount) {
+    state.coins += amount;
+    updateCoinDisplay();
+    const cooldownKey = 'coins';
+    const now = Date.now();
+    if (!_saveCooldown[cooldownKey] || now - _saveCooldown[cooldownKey] >= 5000) {
+      _saveCooldown[cooldownKey] = now;
+      saveProgress(state.uid, { coins: state.coins });
+    }
+  }
+
+  function markSceneVisited(sceneId) {
+    if (!state.explored_scenes.includes(sceneId)) {
+      state.explored_scenes.push(sceneId);
+    }
+  }
+
+  function getCurrentUserId() {
+    return state.uid;
+  }
+
+  function getCurrentScene() {
+    return state.current_scene;
+  }
+
+  function setCurrentScene(sceneId) {
+    state.current_scene = sceneId;
+  }
+
+  function getSavedSceneForEvent(eventId) {
+    return state.current_scene && state.current_scene.split('_').slice(0,2).join('_') === eventId
+      ? state.current_scene
+      : null;
+  }
+
+  function getVisitedSubSceneTags(parentSceneId) {
+    return new Set(state.visited_sub_scenes[parentSceneId] || []);
+  }
+
+  function markSubSceneVisited(parentSceneId, tag, sceneId) {
+    if (!state.visited_sub_scenes[parentSceneId]) state.visited_sub_scenes[parentSceneId] = [];
+    if (tag && !state.visited_sub_scenes[parentSceneId].includes(tag)) {
+      state.visited_sub_scenes[parentSceneId].push(tag);
+    }
+    markSceneVisited(sceneId || tag);
+  }
+
+  function markEventCompleted(eventId, location) {
+    if (!state.completed_events.includes(eventId)) state.completed_events.push(eventId);
+    if (location && !state.map_colored.includes(location)) state.map_colored.push(location);
+  }
+
+  function recordAssessment(eventId, sceneId, data) {
+    state.assessment_nodes.push({ sceneId, ...data });
+    const cooldownKey = 'assessment_' + sceneId;
+    const now = Date.now();
+    if (!_saveCooldown[cooldownKey] || now - _saveCooldown[cooldownKey] >= 5000) {
+      _saveCooldown[cooldownKey] = now;
+      saveAssessment(state.uid, eventId, sceneId, data);
+    }
+  }
+
+  function requestUnlock(location) {
+    const mapConfig = globalData.map.locations.find(l => l.location_id === location);
+    if (!mapConfig) return false;
+    const cost = mapConfig.unlock_cost || 0;
+    if (state.coins < cost) return false;
+    state.coins -= cost;
+    if (!state.unlocked_games.includes(location)) state.unlocked_games.push(location);
+    updateCoinDisplay();
+    saveProgress(state.uid, { coins: state.coins, unlocked_games: state.unlocked_games });
+    return true;
+  }
+
+  function showReloadOptions() {
+    if (typeof _renderOpeningButtons === 'function') _renderOpeningButtons();
+  }
+
+  // ========== 核心層：TTS引擎 ==========
+  // 規格依據：核心層規格文件.md §五
+
+  let _ttsAudio = null;
+  let _ttsHighlightTimer = null;
+  let _ttsStopped = false;
+
+  async function playLine(audioPath, timestampsPath, textElement) {
+    stopTTS();
+    _ttsStopped = false;
+    return new Promise(async (resolve) => {
+      let timestamps = null;
+      try {
+        const res = await fetch(BASE_PATH + timestampsPath);
+        if (res.ok) timestamps = await res.json();
+      } catch (e) { /* fallback */ }
+
+      _ttsAudio = new Audio(BASE_PATH + audioPath);
+      _ttsAudio.playbackRate = SPEED_RATE[state.speed];
+
+      // 逐字高亮
+      if (timestamps && textElement) {
+        _ttsAudio.addEventListener('play', () => {
+          _scheduleHighlights(timestamps.words, textElement);
+        });
+      }
+
+      _ttsAudio.addEventListener('ended', () => {
+        document.dispatchEvent(new Event('tts:ended'));
+        resolve();
+      });
+      _ttsAudio.addEventListener('error', async () => {
+        logError('TTS mp3 failed, fallback', audioPath, state.uid);
+        await _ttsWebSpeechFallback(textElement);
+        resolve();
+      });
+
+      try {
+        await _ttsAudio.play();
+      } catch (e) {
+        await _ttsWebSpeechFallback(textElement);
+        resolve();
+      }
+    });
+  }
+
+  async function playTTS(filename, options = {}) {
+    const mp3Path = TTS_BASE + filename;
+    const tsPath = TTS_BASE + filename.replace('.mp3', '.json');
+    const el = options.textElement || null;
+    if (options.duckBGM !== false) duckBGM({ volume: 0.12, fadeMs: 200 });
+    if (options.lockUI !== false) _lockUI(true);
+    await playLine(mp3Path, tsPath, el);
+    if (options.duckBGM !== false) restoreBGM({ fadeMs: 400 });
+    if (options.lockUI !== false) _lockUI(false);
+    if (options.onEnd) options.onEnd();
+  }
+
+  function stopTTS() {
+    _ttsStopped = true;
+    if (_ttsAudio) { _ttsAudio.pause(); _ttsAudio = null; }
+    if (_ttsHighlightTimer) { clearTimeout(_ttsHighlightTimer); _ttsHighlightTimer = null; }
+    window.speechSynthesis && window.speechSynthesis.cancel();
+  }
+
+  function setSpeed(speed) {
+    state.speed = speed;
+    if (_ttsAudio) _ttsAudio.playbackRate = SPEED_RATE[speed];
+  }
+
+  function _scheduleHighlights(words, el) {
+    if (!el || !words) return;
+    const spans = el.querySelectorAll('.hl');
+    words.forEach((w, i) => {
+      const adjusted = w.start_ms / (SPEED_RATE[state.speed]);
+      _ttsHighlightTimer = setTimeout(() => {
+        spans.forEach(s => s.classList.remove('on'));
+        if (spans[i]) spans[i].classList.add('on');
+      }, adjusted);
+    });
+  }
+
+  async function _ttsWebSpeechFallback(textElement) {
+    if (!window.speechSynthesis) return;
+    const text = textElement ? textElement.textContent : '';
+    const utt = new SpeechSynthesisUtterance(text);
+    utt.lang = 'zh-HK';
+    utt.rate = SPEED_RATE[state.speed];
+    return new Promise(resolve => {
+      utt.onend = resolve;
+      window.speechSynthesis.speak(utt);
+    });
+  }
+
+  function _lockUI(locked) {
+    // 鎖定非全局UI操作；全局UI豁免
+    const rooms = document.querySelectorAll('#page-left, #page-right');
+    rooms.forEach(el => el.style.pointerEvents = locked ? 'none' : '');
+  }
+
+  // ========== 核心層：音樂系統 ==========
+  // 規格依據：核心層規格文件.md §六
+
+  const BGM = {
+    BGM_01: BGM_BASE + 'BGM_01.mp3',
+    BGM_02: BGM_BASE + 'BGM_02.mp3',
+    BGM_03: BGM_BASE + 'BGM_03.mp3',
+    BGM_04: BGM_BASE + 'BGM_04.mp3',
+  };
+
+  const SFX = {
+    SFX_01: SFX_BASE + 'SFX_01.mp3',
+    SFX_02: SFX_BASE + 'SFX_02.mp3',
+    SFX_03: SFX_BASE + 'SFX_03.mp3',
+    SFX_04: SFX_BASE + 'SFX_04.mp3',
+    SFX_05: SFX_BASE + 'SFX_05.mp3',
+    SFX_06: SFX_BASE + 'SFX_06.mp3',
+    SFX_07: SFX_BASE + 'SFX_07.mp3',
+    SFX_08: SFX_BASE + 'SFX_08.mp3',
+  };
+
+  let _bgmAudio = null;
+  let _bgmTrack = null;
+  let _bgmTargetVolume = 1.0;
+  const _sfxCooldown = {};
+  const _sfxAudios = {};
+
+  async function initAudioManager() {
+    // 預載所有SFX
+    await preloadAudio(Object.values(SFX));
+  }
+
+  function unlockAudioContext() {
+    // iOS/Safari第一次user gesture解鎖
+    Object.values(_sfxAudios).forEach(a => { a.load(); });
+    if (_bgmAudio) _bgmAudio.load();
+  }
+
+  async function preloadAudio(audioList) {
+    audioList.forEach(path => {
+      const a = new Audio(BASE_PATH + path);
+      a.preload = 'auto';
+      _sfxAudios[path] = a;
+    });
+  }
+
+  function playBGM(trackId, options = {}) {
+    const path = BGM[trackId];
+    if (!path || !state.bgm_on) return;
+    if (_bgmTrack === trackId && _bgmAudio && !_bgmAudio.paused) return;
+    if (_bgmAudio) { _bgmAudio.pause(); }
+    _bgmAudio = new Audio(BASE_PATH + path);
+    _bgmAudio.loop = options.loop !== false;
+    _bgmAudio.volume = options.volume !== undefined ? options.volume : _bgmTargetVolume;
+    _bgmTrack = trackId;
+    _bgmAudio.play().catch(e => logError(e.message, 'playBGM', state.uid));
+  }
+
+  function stopBGM(options = {}) {
+    if (!_bgmAudio) return;
+    const fadeMs = options.fadeMs || 500;
+    _fadeVolume(_bgmAudio, _bgmAudio.volume, 0, fadeMs, () => {
+      _bgmAudio.pause();
+      _bgmAudio = null;
+      _bgmTrack = null;
+    });
+  }
+
+  function switchBGM(trackId, options = {}) {
+    stopBGM({ fadeMs: options.fadeMs || 500 });
+    setTimeout(() => playBGM(trackId, options), options.fadeMs || 500);
+  }
+
+  function duckBGM(options = {}) {
+    if (!_bgmAudio) return;
+    _fadeVolume(_bgmAudio, _bgmAudio.volume, options.volume || 0.12, options.fadeMs || 200);
+  }
+
+  function restoreBGM(options = {}) {
+    if (!_bgmAudio) return;
+    _fadeVolume(_bgmAudio, _bgmAudio.volume, _bgmTargetVolume, options.fadeMs || 400);
+  }
+
+  function playSFX(sfxId, options = {}) {
+    const path = SFX[sfxId];
+    if (!path) return Promise.resolve();
+    const cooldownMs = options.cooldownMs || 500;
+    const now = Date.now();
+    if (_sfxCooldown[sfxId] && now - _sfxCooldown[sfxId] < cooldownMs) return Promise.resolve();
+    _sfxCooldown[sfxId] = now;
+    const a = _sfxAudios[path] ? _sfxAudios[path].cloneNode() : new Audio(BASE_PATH + path);
+    a.volume = options.volume !== undefined ? options.volume : 1.0;
+    return new Promise(resolve => {
+      a.onended = resolve;
+      a.onerror = resolve;
+      a.play().catch(resolve);
+    });
+  }
+
+  function stopSFX(sfxId) {
+    const path = SFX[sfxId];
+    if (_sfxAudios[path]) _sfxAudios[path].pause();
+  }
+
+  function stopAllSFX() {
+    Object.values(_sfxAudios).forEach(a => a.pause());
+  }
+
+  function stopAllAudio() {
+    stopTTS(); stopBGM(); stopAllSFX();
+  }
+
+  function handleRoomTransition(newRoom, options = {}) {
+    stopAllAudio();
+    const bgmMap = {
+      'room-story': 'BGM_01',
+      'room-map': 'BGM_01',
+      'room-opening': 'BGM_04',
+      'room-report': 'BGM_01',
+      'notebook': 'BGM_04',
+    };
+    const bgm = bgmMap[newRoom];
+    if (bgm) setTimeout(() => playBGM(bgm), 300);
+  }
+
+  function setMuted(type, isMuted) {
+    if (type === 'bgm') {
+      state.bgm_on = !isMuted;
+      if (isMuted) stopBGM(); else playBGM(_bgmTrack || 'BGM_01');
+    }
+    if (type === 'tts') { state.tts_on = !isMuted; }
+    if (type === 'sfx') { /* sfx無全局靜音，略 */ }
+  }
+
+  function setVolume(type, value) {
+    if (type === 'bgm' && _bgmAudio) _bgmAudio.volume = value;
+    _bgmTargetVolume = value;
+  }
+
+  function _fadeVolume(audio, from, to, ms, onDone) {
+    const steps = 20;
+    const stepMs = ms / steps;
+    const diff = (to - from) / steps;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      audio.volume = Math.max(0, Math.min(1, from + diff * step));
+      if (step >= steps) {
+        clearInterval(timer);
+        if (onDone) onDone();
+      }
+    }, stepMs);
+  }
+
+  // ========== 核心層：Global UI ==========
+  // 規格依據：核心層規格文件.md §七
+
+  function updateCoinDisplay() {
+    document.getElementById('display-coins').textContent = '🪙 ' + state.coins;
+  }
+
+  function initGlobalUI() {
+    const btnBGM = document.getElementById('btn-bgm');
+    const btnTTS = document.getElementById('btn-tts');
+    const btnSpeed = document.getElementById('btn-speed');
+    const btnProgress = document.getElementById('btn-progress');
+
+    btnBGM.addEventListener('click', () => {
+      state.bgm_on = !state.bgm_on;
+      setMuted('bgm', !state.bgm_on);
+      btnBGM.textContent = state.bgm_on ? '♪' : '♪✕';
+      unlockAudioContext();
+    });
+
+    btnTTS.addEventListener('click', () => {
+      state.tts_on = !state.tts_on;
+      btnTTS.textContent = state.tts_on ? '語音' : '語音✕';
+      btnSpeed.disabled = !state.tts_on;
+      btnSpeed.style.opacity = state.tts_on ? '1' : '0.4';
+      unlockAudioContext();
+    });
+
+    const speeds = ['slow', 'normal', 'fast'];
+    const speedLabels = { slow: '慢', normal: '正常', fast: '快' };
+    btnSpeed.addEventListener('click', () => {
+      const idx = speeds.indexOf(state.speed);
+      const next = speeds[(idx + 1) % speeds.length];
+      setSpeed(next);
+      btnSpeed.textContent = speedLabels[next];
+      unlockAudioContext();
+    });
+
+    btnProgress.addEventListener('click', () => {
+      openProgressPanel();
+    });
+
+    updateCoinDisplay();
+  }
+
+  // ========== 核心層：Cloudflare Workers接口 ==========
+  // 規格依據：核心層規格文件.md §八
+
+  const WORKERS_ENDPOINT = 'https://little-apprentice-report.ahloism.workers.dev';
+
+  async function requestReport(uid, eventId, dimensions, exploration, hiddenNodes) {
+    try {
+      const res = await fetch(`${WORKERS_ENDPOINT}/report`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid, event_id: eventId, dimensions, exploration, hidden_nodes: hiddenNodes })
+      });
+      const data = await res.json();
+      return data.report || null;
+    } catch (e) {
+      logError(e.message, 'requestReport', uid);
+      return null;
+    }
+  }
+
+  async function requestNotify(uid, email, eventId, notebookSummary) {
+    try {
+      await fetch(`${WORKERS_ENDPOINT}/notify`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ uid, email, event_id: eventId, notebook_summary: notebookSummary })
+      });
+    } catch (e) {
+      logError(e.message, 'requestNotify', uid);
+    }
+  }
+
+  // ========== 模塊：Opening房 ==========
+  // 規格依據：Opening房規格文件.md
+
+  function initOpeningHouse() {
+    const container = document.getElementById('opening-house');
+    container.innerHTML = `
+      <video id="opening-video" src="../video/video_01_封面.mp4" playsinline muted style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;"></video>
+      <div id="opening-ui" class="hidden" style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px;">
+        <img src="../image/A02_封面.png" style="max-width:80%;max-height:50vh;object-fit:contain;" />
+        <div id="opening-buttons" style="display:flex;flex-direction:column;align-items:center;gap:16px;"></div>
+      </div>
+      <div id="opening-confirm" class="hidden" style="position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:320px;">
+          <p style="font-size:18px;margin-bottom:24px;">重新開始會清除所有進度，確定嗎？</p>
+          <div style="display:flex;gap:16px;justify-content:center;">
+            <button id="btn-confirm-restart" style="background:#d4870a;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:16px;cursor:pointer;">確定重新開始</button>
+            <button id="btn-cancel-restart" style="background:transparent;color:#333;border:2px solid #333;border-radius:8px;padding:12px 24px;font-size:16px;cursor:pointer;">取消</button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    const video = document.getElementById('opening-video');
+    const openingUI = document.getElementById('opening-ui');
+
+    // 影片結束後顯示UI
+    video.addEventListener('ended', () => {
+      openingUI.classList.remove('hidden');
+      playBGM('BGM_04');
+      _renderOpeningButtons();
+    });
+
+    // iOS autoplay需user gesture，若影片無法自動播放則直接顯示UI
+    video.play().catch(() => {
+      openingUI.classList.remove('hidden');
+      playBGM('BGM_04');
+      _renderOpeningButtons();
+    });
+
+    // 二次確認彈窗按鈕
+    document.getElementById('btn-confirm-restart').addEventListener('click', async () => {
+      await _doRestart();
+    });
+    document.getElementById('btn-cancel-restart').addEventListener('click', () => {
+      document.getElementById('opening-confirm').classList.add('hidden');
+    });
+  }
+
+  function _renderOpeningButtons() {
+    const btns = document.getElementById('opening-buttons');
+    btns.innerHTML = '';
+
+    if (!auth || !state.uid) {
+      // 未登入：Google官方登入按鈕
+      btns.innerHTML = `
+        <div id="g-signin-btn" style="cursor:pointer;">
+          <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" alt="Sign in with Google" style="height:50px;" />
+        </div>
+      `;
+      document.getElementById('g-signin-btn').addEventListener('click', () => {
+        unlockAudioContext();
+        if (!auth) return;
+        const provider = new firebase.auth.GoogleAuthProvider();
+        auth.signInWithPopup(provider).catch(e => logError(e.message, 'signInWithPopup', null));
+      });
+    } else if (!state.current_scene) {
+      // 已登入，無進度
+      btns.innerHTML = `<button id="btn-start" style="background:#d4870a;color:#fff;border:none;border-radius:12px;padding:16px 40px;font-size:22px;cursor:pointer;">開始冒險</button>`;
+      document.getElementById('btn-start').addEventListener('click', () => {
+        unlockAudioContext();
+        _enterStory('1_1_1');
+      });
+    } else {
+      // 已登入，有進度
+      const eventId = state.current_scene.split('_').slice(0,2).join('_');
+      loadEventData(eventId); // 靜默預載
+      btns.innerHTML = `
+        <button id="btn-continue" style="background:#d4870a;color:#fff;border:none;border-radius:12px;padding:16px 40px;font-size:22px;cursor:pointer;">繼續冒險</button>
+        <button id="btn-restart" style="background:transparent;color:#fff;border:2px solid #fff;border-radius:12px;padding:12px 32px;font-size:18px;cursor:pointer;">重新開始</button>
+      `;
+      document.getElementById('btn-continue').addEventListener('click', () => {
+        unlockAudioContext();
+        _enterStory(state.current_scene);
+      });
+      document.getElementById('btn-restart').addEventListener('click', () => {
+        document.getElementById('opening-confirm').classList.remove('hidden');
+      });
+    }
+  }
+
+  async function _enterStory(sceneId) {
+    playSFX('SFX_08');
+    document.getElementById('book-wrapper').classList.remove('hidden');
+    document.getElementById('opening-house').classList.add('hidden');
+    playBookOpenAnimation(() => {
+      showRoom('room-story');
+      handleRoomTransition('room-story');
+      // Story房載入指定scene（由Story房模塊處理）
+      document.dispatchEvent(new CustomEvent('story:load', { detail: { sceneId } }));
+    });
+  }
+
+  async function _doRestart() {
+    localStorage.removeItem('la_progress');
+    localStorage.removeItem('la_assessment');
+    if (auth && state.uid) {
+      try {
+        await db.collection('users').doc(state.uid).collection('progress').doc('current').delete();
+      } catch(e) { logError(e.message, 'restart_delete', state.uid); }
+    }
+    Object.assign(state, {
+      current_scene: null,
+      coins: 0,
+      completed_events: [],
+      unlocked_games: [],
+      paid_games: [],
+      map_colored: [],
+      map_segments: {},
+      explored_scenes: [],
+      visited_sub_scenes: {},
+      assessment_nodes: [],
+    });
+    document.getElementById('opening-confirm').classList.add('hidden');
+    _renderOpeningButtons();
+  }
+
+  // ========== 模塊：Story房 ==========
+  // 規格依據：Story房規格文件.md
+
+  const STORY_IMAGE_FILES = {
+    A01: 'A01_阿禾思考中.png',
+    A03: 'A03_謎語一示意_頭.png',
+    A04: 'A04_謎語二示意_馬.png',
+    A05: 'A05_誠信木匾.png',
+    C01: 'C01_阿禾.png',
+    C02: 'C02_阿水.png',
+    C03: 'C03_錢伯.png',
+    C04: 'C04_石頭.png',
+    C05: 'C05_梅姐.png',
+    C06: 'C06_阿乖.png',
+    C07: 'C07_王三.png',
+    C08: 'C08_杜先生.png',
+    C09: 'C09_老梁.png',
+    C10: 'C10_錢平.png',
+    O01: 'O01_布包.png',
+    O05: 'O05_糖葫蘆.png',
+    O06: 'O06_煎餅.png',
+    O07: 'O07_花生袋.png',
+    O08: 'O08_湯圓粉.png',
+    O09: 'O09_麥芽糖.png',
+    O10: 'O10_臘腸.png',
+    O11: 'O11_磨刀.png',
+    O12: 'O12_涼茶.png',
+    O13: 'O13_繩子布料.png',
+    O14: 'O14_茶壺.png',
+    O15: 'O15_繩子.png',
+    O16: 'O16_空竹簍.png',
+    O17: 'O17_筆.png',
+    O18: 'O18_阿乖的紙.png',
+    O19: 'O19_字帖.png',
+    O20: 'O20_茶壺茶水台.png',
+    O21: 'O21_紙扇.png',
+    O23: 'O23_草帽.png',
+    O25: 'O25_老梁的信.png',
+    S01: 'S01_大梁城街道.png',
+    S02: 'S02_商行門口.png',
+    S03: 'S03_倉庫.png',
+    S04: 'S04_市集街道.png',
+    S05: 'S05_雜耍空地.png',
+    S07: 'S07_梁河橋邊.png',
+    S08: 'S08_梁河碼頭方向.png',
+    S09: 'S09_橋上攤檔.png',
+    S10: 'S10_老梁攤檔.png',
+    S11: 'S11_化糞池門口.png',
+    S12: 'S12_賭坊巷口.png',
+    S13: 'S13_客棧門口.png',
+    S14: 'S14_客棧內部.png',
+    S15: 'S15_說書台.png',
+    S16: 'S16_碼頭.png',
+    S17: 'S17_帳房.png',
+    W02: 'W02_信.png',
+    W01: 'W01_糞.png',
+    W03: 'W03_家.png',
+    W04: 'W04_急.png',
+    W05: 'W05_病.png',
+  };
+
+  let _storyEventId = null;
+  let _storyParentSceneId = null;
+  const _storyVisitCounts = {};
+
+  function _ensureStoryDOM() {
+    const book = document.getElementById('book');
+    if (!document.getElementById('story-house')) {
+      const marker = document.createElement('div');
+      marker.id = 'story-house';
+      marker.className = 'hidden';
+      marker.style.display = 'contents';
+      book.appendChild(marker);
+    }
+
+    const left = document.getElementById('page-left');
+    const right = document.getElementById('page-right');
+    left.innerHTML = `
+      <div id="story-image-main" style="width:100%;aspect-ratio:16/9;background:#f6efe3;border-radius:8px;background-size:contain;background-repeat:no-repeat;background-position:center;position:relative;"></div>
+      <div id="story-image-overlay" style="width:100%;aspect-ratio:16/9;background-size:contain;background-repeat:no-repeat;background-position:center;position:absolute;left:0;right:0;top:0;pointer-events:none;transform:translateY(20px);opacity:0;transition:opacity .35s ease, transform .35s ease;"></div>
+      <div id="story-image-caption" style="min-height:24px;font-size:14px;color:#6b4e2e;text-align:center;margin-top:8px;"></div>
+      <div id="story-image-display" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin-top:14px;"></div>
+    `;
+    right.innerHTML = `
+      <div id="story-header" style="height:40px;display:flex;align-items:center;color:#6b4e2e;font-weight:700;">
+        <span id="story-event-label"></span>
+      </div>
+      <div id="story-text-area" style="height:calc(100% - 190px);overflow:auto;font-size:21px;line-height:1.8;color:#2f2418;"></div>
+      <div id="story-question-area" style="min-height:42px;margin-top:12px;font-size:22px;font-weight:700;color:#3a2a18;"></div>
+      <div id="story-choices-area" style="min-height:96px;display:flex;flex-direction:column;gap:10px;margin-top:12px;"></div>
+      <div id="story-advance-btn" style="min-height:54px;margin-top:12px;display:flex;justify-content:flex-end;align-items:center;"></div>
+    `;
+    left.style.position = 'relative';
+    left.style.boxSizing = 'border-box';
+    left.style.padding = '24px';
+    right.style.boxSizing = 'border-box';
+    right.style.padding = '24px';
+  }
+
+  function _storyList(data) {
+    if (!data) return [];
+    return Array.isArray(data) ? data : (data.scenes || []);
+  }
+
+  function _storyEvalList() {
+    if (!eventData.evaluation) return [];
+    return Array.isArray(eventData.evaluation) ? eventData.evaluation : (eventData.evaluation.nodes || eventData.evaluation.evaluation_nodes || []);
+  }
+
+  function _findByScene(list, sceneId) {
+    return (list || []).find(item => item.scene_id === sceneId) || null;
+  }
+
+  function _sceneEventId(sceneId) {
+    return String(sceneId || '').split('_').slice(0, 2).join('_');
+  }
+
+  function _normalizeStoryEventId(eventIdOrSceneId) {
+    const raw = String(eventIdOrSceneId || '').replace(/^story_/, '');
+    const parts = raw.split('_');
+    return parts.length >= 2 ? `${parts[0]}_${parts[1]}` : raw;
+  }
+
+  function _storyStartScene() {
+    return eventData.manifest?.start_scene || _storyList(eventData.story)[0]?.scene_id || '1_1_1';
+  }
+
+  function _storyLocationLabel() {
+    const chapter = (_storyEventId || '').replace('_', '.');
+    const location = eventData.manifest?.location || '';
+    return chapter ? `第${chapter}章·${location}` : location;
+  }
+
+  function _storyImagePath(imageId) {
+    if (!imageId) return '';
+    const file = STORY_IMAGE_FILES[imageId] || imageId;
+    return `${BASE_PATH}${IMAGE_BASE}${file}`;
+  }
+
+  function _setBackgroundImage(el, imageId) {
+    if (!el || !imageId) {
+      if (el) el.style.backgroundImage = '';
+      return;
+    }
+    el.style.backgroundImage = `url("${_storyImagePath(imageId)}")`;
+  }
+
+  function updateStoryImage(presentation) {
+    const main = document.getElementById('story-image-main');
+    const overlay = document.getElementById('story-image-overlay');
+    const display = document.getElementById('story-image-display');
+    const caption = document.getElementById('story-image-caption');
+
+    _setBackgroundImage(main, presentation?.image);
+    if (caption) caption.textContent = presentation?.caption || '';
+    if (overlay) {
+      overlay.style.opacity = '0';
+      overlay.style.transform = 'translateY(20px)';
+      overlay.style.backgroundImage = '';
+    }
+    if (display) {
+      const images = presentation?.display_images || [];
+      display.innerHTML = images.map(item => `
+        <div style="min-width:0;">
+          <div style="aspect-ratio:1/1;background:#f8f1e6;border-radius:8px;background-image:url('${_storyImagePath(item.image)}');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
+          <div style="font-size:13px;text-align:center;color:#6b4e2e;margin-top:4px;white-space:normal;">${item.caption || ''}</div>
+        </div>
+      `).join('');
+    }
+  }
+
+  function _triggerImageCue(presentation, lineIndex) {
+    const cue = (presentation?.image_cues || []).find(item => item.trigger_line_index === lineIndex);
+    const overlay = document.getElementById('story-image-overlay');
+    if (!cue || !overlay) return;
+    _setBackgroundImage(overlay, cue.image);
+    overlay.style.opacity = '1';
+    overlay.style.transform = 'translateY(0)';
+  }
+
+  function _lineText(line) {
+    return typeof line === 'string' ? line : (line?.text || '');
+  }
+
+  function _renderLines(lines, container) {
+    container.innerHTML = (lines || []).map((line, lineIndex) => {
+      const text = _lineText(line);
+      const chars = Array.from(text).map(ch => `<span class="hl">${ch}</span>`).join('');
+      return `<p data-line-index="${lineIndex}" style="margin:0 0 14px;">${chars}</p>`;
+    }).join('');
+  }
+
+  function _setQuestion(text) {
+    document.getElementById('story-question-area').textContent = text || '';
+  }
+
+  function _clearStoryControls() {
+    _setQuestion('');
+    document.getElementById('story-choices-area').innerHTML = '';
+    document.getElementById('story-advance-btn').innerHTML = '';
+  }
+
+  function _audioPath(filename) {
+    return filename ? `${TTS_BASE}${filename}` : '';
+  }
+
+  function _timestampPath(filename) {
+    return filename ? `${TTS_BASE}${filename.replace('.mp3', '.json')}` : '';
+  }
+
+  async function playLinesSequence(audioList, textLines, textContainer, presentation = {}) {
+    const lineEls = textContainer.querySelectorAll('p[data-line-index]');
+    for (let i = 0; i < (textLines || []).length; i++) {
+      _triggerImageCue(presentation, i);
+      const audio = audioList?.[i];
+      if (audio) {
+        await playLine(_audioPath(audio), _timestampPath(audio), lineEls[i]);
+      }
+    }
+  }
+
+  async function _playQuestionAndChoices(scene, presentation) {
+    const questionEl = document.getElementById('story-question-area');
+    const choicesArea = document.getElementById('story-choices-area');
+    _setQuestion(scene.question || '');
+    if (presentation?.audio?.question) {
+      questionEl.innerHTML = Array.from(scene.question || '').map(ch => `<span class="hl">${ch}</span>`).join('');
+      await playLine(_audioPath(presentation.audio.question), _timestampPath(presentation.audio.question), questionEl);
+      questionEl.textContent = scene.question || '';
+    }
+    playSFX('SFX_01');
+    choicesArea.querySelectorAll('button').forEach(btn => btn.disabled = true);
+    const choiceAudios = presentation?.audio?.choices || [];
+    for (let i = 0; i < choiceAudios.length; i++) {
+      const btn = choicesArea.querySelector(`[data-choice-index="${i}"]`);
+      if (btn) btn.classList.add('listening');
+      await playLine(_audioPath(choiceAudios[i]), _timestampPath(choiceAudios[i]), btn);
+      if (btn) btn.classList.remove('listening');
+    }
+    choicesArea.querySelectorAll('button').forEach(btn => btn.disabled = false);
+  }
+
+  function _choiceButton(choice, index, onClick, explored = false) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.dataset.choiceIndex = String(index);
+    btn.style.cssText = `text-align:left;border:2px solid ${explored ? '#a98d62' : '#d4870a'};background:${explored ? '#efe3cf' : '#fff8ec'};color:#2f2418;border-radius:10px;padding:12px 16px;font-size:18px;line-height:1.45;cursor:pointer;`;
+    btn.innerHTML = `<strong>${choice.label || String.fromCharCode(65 + index)}.</strong> ${choice.text || ''}${explored ? ' <span style="color:#7a6241;">（已探索）</span>' : ''}`;
+    btn.disabled = true;
+    btn.addEventListener('click', () => onClick(choice, index));
+    return btn;
+  }
+
+  function _renderChoices(scene, onClick, exploredLabels = new Set()) {
+    const area = document.getElementById('story-choices-area');
+    area.innerHTML = '';
+    (scene.choices || []).forEach((choice, index) => {
+      area.appendChild(_choiceButton(choice, index, onClick, exploredLabels.has(choice.label)));
+    });
+  }
+
+  function _renderAdvance(label, onClick) {
+    const area = document.getElementById('story-advance-btn');
+    area.innerHTML = '';
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.textContent = label || eventData.presentation?.default_advance_label || '繼續';
+    btn.style.cssText = 'background:#d4870a;color:#fff;border:none;border-radius:12px;padding:14px 34px;font-size:20px;cursor:pointer;';
+    btn.addEventListener('click', onClick);
+    area.appendChild(btn);
+  }
+
+  function _rewardAmount(manifestScene, correct = true, includeBonus = false) {
+    const reward = manifestScene?.reward || {};
+    return (reward.base || 0) + ((includeBonus && correct) ? (reward.bonus || 0) : 0);
+  }
+
+  function _markVisitedSubScene(parentSceneId, choice) {
+    const key = parentSceneId || _storyParentSceneId || 'story';
+    const tag = choice.exp_tag || choice.label || choice.next_scene;
+    markSubSceneVisited(key, tag, choice.next_scene || tag);
+  }
+
+  function _visitedLabels(sceneId) {
+    return getVisitedSubSceneTags(sceneId);
+  }
+
+  function _collectAssessmentPayload(scene, evaluation, choice = null, correct = null) {
+    return {
+      collect_type: evaluation?.collect_type || null,
+      dimension: evaluation?.dimension || [],
+      trigger: evaluation?.trigger || null,
+      label: choice?.label || null,
+      text: choice?.text || null,
+      correct,
+      timestamp: Date.now(),
+    };
+  }
+
+  function _isCorrectChoice(evaluation, choice) {
+    const support = evaluation?.support_option || [];
+    return !support.includes(choice?.label);
+  }
+
+  function _linesForVisit(scene) {
+    if (!scene.visit_count_responses) return scene.lines || [];
+    const key = scene.scene_id;
+    _storyVisitCounts[key] = (_storyVisitCounts[key] || 0) + 1;
+    const responses = scene.visit_count_responses;
+    const index = Math.min(_storyVisitCounts[key], responses.length) - 1;
+    return responses[index]?.lines || scene.lines || [];
+  }
+
+  async function enterStory(eventIdOrSceneId, explicitSceneId = null) {
+    _ensureStoryDOM();
+    const eventId = _normalizeStoryEventId(eventIdOrSceneId);
+    _storyEventId = eventId;
+    document.getElementById('book-wrapper').classList.remove('hidden');
+    document.getElementById('story-house').classList.remove('hidden');
+    showRoom('story-house');
+    handleRoomTransition('room-story');
+    await loadEventData(eventId);
+
+    const forcedStartEvents = new Set(['1_4', '1_7']);
+    const sameEventSavedScene = getSavedSceneForEvent(eventId);
+    const startScene = explicitSceneId || (forcedStartEvents.has(eventId) ? _storyStartScene() : (sameEventSavedScene || _storyStartScene()));
+    await checkAsuiStoryRules(eventId);
+    await renderScene(startScene);
+  }
+
+  async function renderScene(sceneId) {
+    _ensureStoryDOM();
+    const scene = _findByScene(_storyList(eventData.story), sceneId);
+    if (!scene) {
+      logError(`Scene not found: ${sceneId}`, 'renderScene', getCurrentUserId());
+      return;
+    }
+    if (!_storyEventId) _storyEventId = _sceneEventId(sceneId);
+
+    const presentation = _findByScene(_storyList(eventData.presentation), sceneId) || {};
+    const manifestScene = _findByScene(_storyList(eventData.manifest), sceneId);
+    const evaluation = _findByScene(_storyEvalList(), sceneId);
+    const type = manifestScene?.type || 'feedback';
+    const textArea = document.getElementById('story-text-area');
+
+    setCurrentScene(sceneId);
+    document.getElementById('story-event-label').textContent = _storyLocationLabel();
+    _clearStoryControls();
+    updateStoryImage(presentation);
+    _renderLines(_linesForVisit(scene), textArea);
+    if (isSavePoint(sceneId)) await saveCurrentProgress();
+
+    const handlers = {
+      story: handleStoryScene,
+      explore: handleExploreScene,
+      free_explore: handleFreeExploreScene,
+      assessment: handleAssessmentScene,
+      assessment_remedial: handleAssessmentRemedialScene,
+      hidden_assessment: handleHiddenAssessmentScene,
+      hidden_remedial: handleHiddenAssessmentScene,
+      event_end: handleEventEndScene,
+      feedback: handleFeedbackScene,
+    };
+    const handler = handlers[type] || handleFeedbackScene;
+    await handler(scene, presentation, manifestScene, evaluation);
+  }
+
+  async function handleStoryScene(scene, presentation, manifestScene) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    _renderAdvance(presentation?.advance_label, () => {
+      const amount = _rewardAmount(manifestScene);
+      if (amount) addCoins(amount);
+      if (scene.next_scene) renderScene(scene.next_scene);
+    });
+  }
+
+  async function handleExploreScene(scene, presentation, manifestScene) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    _renderChoices(scene, (choice) => {
+      const amount = _rewardAmount(manifestScene);
+      if (amount) addCoins(amount);
+      _markVisitedSubScene(scene.scene_id, { ...choice, exp_tag: manifestScene?.exp_tag || choice.label });
+      if (choice.next_scene) renderScene(choice.next_scene);
+    });
+    await _playQuestionAndChoices(scene, presentation);
+  }
+
+  async function handleFreeExploreScene(scene, presentation, manifestScene) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    const visited = _visitedLabels(scene.scene_id);
+    _renderChoices(scene, (choice) => {
+      _storyParentSceneId = scene.scene_id;
+      _markVisitedSubScene(scene.scene_id, { ...choice, exp_tag: choice.label });
+      if (choice.next_scene) renderScene(choice.next_scene);
+    }, visited);
+    await _playQuestionAndChoices(scene, presentation);
+
+    const threshold = manifestScene?.unlock_threshold || scene.choices?.length || 0;
+    if (visited.size >= threshold) {
+      _renderAdvance(presentation?.advance_label || '繼續', () => {
+        const allExplored = visited.size >= (scene.choices?.length || 0);
+        const amount = _rewardAmount(manifestScene, allExplored, allExplored);
+        if (amount) addCoins(amount);
+        if (scene.next_scene) renderScene(scene.next_scene);
+      });
+    }
+  }
+
+  async function handleAssessmentScene(scene, presentation, manifestScene, evaluation) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    _renderChoices(scene, async (choice) => {
+      const correct = _isCorrectChoice(evaluation, choice);
+      recordAssessment(_storyEventId, scene.scene_id, _collectAssessmentPayload(scene, evaluation, choice, correct));
+      await playSFX(correct ? 'SFX_02' : 'SFX_03');
+      const amount = _rewardAmount(manifestScene, correct, true);
+      if (amount) addCoins(amount);
+      if (choice.next_scene) renderScene(choice.next_scene);
+    });
+    await _playQuestionAndChoices(scene, presentation);
+  }
+
+  async function handleAssessmentRemedialScene(scene, presentation, manifestScene, evaluation) {
+    await handleAssessmentScene(scene, presentation, manifestScene, evaluation);
+  }
+
+  async function handleHiddenAssessmentScene(scene, presentation, manifestScene, evaluation) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    _renderAdvance(presentation?.advance_label, () => {
+      recordAssessment(_storyEventId, scene.scene_id, _collectAssessmentPayload(scene, evaluation, null, null));
+      if (scene.next_scene) renderScene(scene.next_scene);
+    });
+  }
+
+  async function handleEventEndScene(scene, presentation, manifestScene) {
+    const textArea = document.getElementById('story-text-area');
+    await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    const amount = _rewardAmount(manifestScene);
+    if (amount) addCoins(amount);
+    const location = eventData.manifest?.location;
+    markEventCompleted(_storyEventId, location);
+    await saveCurrentProgress();
+    if (typeof enterNotebook === 'function') {
+      enterNotebook(_storyEventId);
+    } else {
+      showRoom('room-map');
+      handleRoomTransition('room-map');
+    }
+  }
+
+  async function handleFeedbackScene(scene, presentation, manifestScene) {
+    await handleStoryScene(scene, presentation, manifestScene);
+  }
+
+  async function checkAsuiStoryRules(eventId) {
+    const conditionMap = {
+      '1_1': 'story_1_1_asui_appears',
+      '1_4': 'before_event_1_4',
+      '1_7': 'before_event_1_7',
+    };
+    const condition = conditionMap[_normalizeStoryEventId(eventId)];
+    if (!condition || !globalData.asui_manifest) return;
+    const rule = (globalData.asui_manifest.rules || []).find(item => item.room === 'story' && item.trigger_condition === condition);
+    if (!rule) return;
+    const seenKey = `asui_seen_${rule.rule_id}`;
+    if (rule.repeat === false && localStorage.getItem(seenKey)) return;
+    await _showAsuiStoryDialogue(rule);
+    if (rule.repeat === false) localStorage.setItem(seenKey, '1');
+  }
+
+  async function _showAsuiStoryDialogue(rule) {
+    const dialogue = (globalData.asui_dialogues?.dialogues || []).find(item => item.id === rule.dialogue_id);
+    const assets = globalData.asui_presentation?.dialogue_assets?.[rule.dialogue_id] || {};
+    if (!dialogue) return;
+    let overlay = document.getElementById('story-asui-overlay');
+    if (!overlay) {
+      overlay = document.createElement('div');
+      overlay.id = 'story-asui-overlay';
+      overlay.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(47,36,24,.92);color:#fff;padding:22px 28px;font-size:20px;line-height:1.7;cursor:pointer;';
+      document.body.appendChild(overlay);
+    }
+    overlay.classList.remove('hidden');
+    const lines = dialogue.lines || [dialogue.text || ''];
+    const audioList = Array.isArray(assets.audio) ? assets.audio : (assets.audio ? [assets.audio] : []);
+    for (let i = 0; i < lines.length; i++) {
+      overlay.innerHTML = `<strong>阿水</strong><div>${lines[i]}</div><div style="font-size:13px;opacity:.75;margin-top:8px;">點擊繼續</div>`;
+      if (audioList[i]) await playTTS(audioList[i], { textElement: overlay, lockUI: false });
+      await new Promise(resolve => overlay.addEventListener('click', resolve, { once: true }));
+    }
+    overlay.classList.add('hidden');
+  }
+
+  document.addEventListener('story:load', (event) => {
+    const sceneId = event.detail?.sceneId || getCurrentScene() || '1_1_1';
+    enterStory(_sceneEventId(sceneId), sceneId);
+  });
+
+  // ========== 模塊：學徒筆記層 ==========
+  // 規格依據：學徒筆記層規格文件.md
+
+  async function enterNotebook(eventId) {
+    showRoom('notebook-house');
+    handleRoomTransition('notebook');
+    await loadNotebookData(eventId);
+    await renderNotebook(eventId);
+  }
+
+  async function enterNotebookReview(eventId) {
+    _notebookReviewMode = true;
+    showRoom('notebook-house');
+    handleRoomTransition('notebook');
+    await loadNotebookData(eventId);
+    await renderNotebook(eventId, { reviewMode: true });
+  }
+
+  let _notebookReviewMode = false;
+  const _notebookDataCache = {};
+
+  async function loadNotebookData(eventId) {
+    if (_notebookDataCache[eventId]) return _notebookDataCache[eventId];
+    const [content, presentation] = await Promise.all([
+      loadJSON(`json/notebook_content_${eventId}.json`),
+      loadJSON(`json/notebook_presentation_${eventId}.json`)
+    ]);
+    _notebookDataCache[eventId] = { content, presentation };
+    return _notebookDataCache[eventId];
+  }
+
+  async function renderNotebook(eventId, options = {}) {
+    const { reviewMode = false } = options;
+    const { content, presentation } = _notebookDataCache[eventId];
+
+    const assessmentChoices = {};
+    (state.assessment_nodes || []).forEach(item => {
+      if (item.sceneId && item.label) assessmentChoices[item.sceneId] = item.label;
+    });
+
+    const reflectionList = selectReflections(eventId, assessmentChoices, content, presentation);
+
+    renderNotebookLeft(content, reflectionList);
+    renderNotebookRight(content);
+    _mountNotebookPages();
+
+    const advBtn = document.getElementById('notebook-advance-btn');
+    const chapterNum = eventId.split('_')[1] || '1';
+    advBtn.textContent = reviewMode ? '關閉筆記' : `完成第${chapterNum}章，回到大地圖`;
+    advBtn.classList.add('hidden');
+    advBtn.onclick = reviewMode ? _exitNotebookReview : exitNotebook;
+
+    if (!state.tts_on || reviewMode) {
+      advBtn.classList.remove('hidden');
+    } else {
+      await playNotebookTTS(eventId, reflectionList, presentation);
+      advBtn.classList.remove('hidden');
+    }
+  }
+
+  function renderNotebookLeft(content, reflectionList) {
+    const left = content.notebook_left || {};
+    document.getElementById('notebook-title-left').textContent = '今次的冒險……';
+
+    const progressEl = document.getElementById('notebook-story-progress');
+    progressEl.innerHTML = '';
+    (left.story_progress || []).forEach(sentence => {
+      const p = document.createElement('p');
+      p.textContent = sentence;
+      progressEl.appendChild(p);
+    });
+
+    const placesEl = document.getElementById('notebook-places');
+    placesEl.innerHTML = '';
+    (left.places_visited || []).forEach(place => {
+      const tag = document.createElement('span');
+      tag.className = 'notebook-tag';
+      tag.textContent = place;
+      placesEl.appendChild(tag);
+    });
+
+    const peopleEl = document.getElementById('notebook-people');
+    peopleEl.innerHTML = '';
+    (left.people_met || []).forEach(person => {
+      const tag = document.createElement('span');
+      tag.className = 'notebook-tag';
+      tag.textContent = person;
+      peopleEl.appendChild(tag);
+    });
+
+    document.getElementById('notebook-reflection-title').textContent = '阿禾的筆記';
+
+    const reflEl = document.getElementById('notebook-reflections');
+    reflEl.innerHTML = '';
+    reflectionList.forEach(r => {
+      const p = document.createElement('p');
+      p.className = 'notebook-reflection';
+      p.textContent = r.text;
+      reflEl.appendChild(p);
+    });
+  }
+
+  function renderNotebookRight(content) {
+    const right = content.notebook_right || {};
+    document.getElementById('notebook-title-right').textContent = '今次學到了……';
+
+    const lpEl = document.getElementById('notebook-learned-points');
+    lpEl.innerHTML = '';
+    (right.learned_points || []).forEach(lp => {
+      const p = document.createElement('p');
+      p.className = `notebook-lp notebook-lp-${lp.type || 'default'}`;
+      p.textContent = lp.content;
+      lpEl.appendChild(p);
+    });
+
+    const imgEl = document.getElementById('notebook-anchor-image');
+    imgEl.innerHTML = '';
+    if (right.anchor_image) {
+      const img = document.createElement('img');
+      img.src = _storyImagePath(right.anchor_image);
+      img.className = 'notebook-anchor-img';
+      imgEl.appendChild(img);
+    }
+  }
+
+  function _mountNotebookPages() {
+    const left = document.getElementById('page-left');
+    const right = document.getElementById('page-right');
+    left.innerHTML = '';
+    right.innerHTML = '';
+
+    const leftIds = ['notebook-title-left','notebook-story-progress','notebook-places','notebook-people','notebook-reflection-title','notebook-reflections'];
+    const rightIds = ['notebook-title-right','notebook-learned-points','notebook-anchor-image','notebook-advance-btn'];
+
+    leftIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) left.appendChild(el);
+    });
+    rightIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) right.appendChild(el);
+    });
+  }
+
+  function selectReflections(eventId, assessmentChoices, content, presentation) {
+    const DIMENSION_ORDER = [
+      'value_judgment',
+      'social_understanding',
+      'information_integration',
+      'context_understanding',
+      'vocabulary'
+    ];
+
+    const reflectionData = content.notebook_assessment_reflections || {};
+    const evalData = eventData.evaluation || {};
+    const scenes = Array.isArray(evalData)
+      ? evalData
+      : (evalData.scenes || evalData.nodes || evalData.evaluation_nodes || []);
+
+    const assessmentScenes = scenes
+      .filter(s => s.collect_type === 'assessment')
+      .sort((a, b) => {
+        const aDimension = Array.isArray(a.dimension) ? a.dimension[0] : a.dimension;
+        const bDimension = Array.isArray(b.dimension) ? b.dimension[0] : b.dimension;
+        const ai = DIMENSION_ORDER.indexOf(aDimension);
+        const bi = DIMENSION_ORDER.indexOf(bDimension);
+        return (ai === -1 ? 99 : ai) - (bi === -1 ? 99 : bi);
+      });
+
+    const result = [];
+    for (const scene of assessmentScenes) {
+      if (result.length >= 3) break;
+      const sceneId = scene.scene_id;
+      const label = assessmentChoices[sceneId];
+      if (!label) continue;
+      const text = reflectionData[sceneId]?.[label];
+      if (!text) continue;
+      const audio = presentation?.reflections?.scenes?.[sceneId]?.[label] || null;
+      result.push({ sceneId, label, text, audio });
+    }
+    return result;
+  }
+
+  async function playNotebookTTS(eventId, reflectionList, presentation) {
+    const left = presentation.left || {};
+    const right = presentation.right || {};
+    const sequence = [];
+
+    if (left.title) sequence.push({ file: left.title, elId: 'notebook-title-left' });
+    (left.story_progress || []).forEach((file, i) => {
+      sequence.push({ file, elId: 'notebook-story-progress', index: i });
+    });
+    if (left.places) sequence.push({ file: left.places, elId: 'notebook-places' });
+    if (left.people) sequence.push({ file: left.people, elId: 'notebook-people' });
+    if (presentation.reflections?.title) sequence.push({ file: presentation.reflections.title, elId: 'notebook-reflection-title' });
+    reflectionList.forEach(r => {
+      if (r.audio) sequence.push({ file: r.audio, elId: 'notebook-reflections' });
+    });
+    if (right.title) sequence.push({ file: right.title, elId: 'notebook-title-right' });
+    (right.learned_points || []).forEach((file, i) => {
+      sequence.push({ file, elId: 'notebook-learned-points', index: i });
+    });
+
+    for (const item of sequence) {
+      if (!state.tts_on) break;
+      await playTTS(item.file);
+    }
+  }
+
+  async function exitNotebook() {
+    stopTTS();
+    _notebookReviewMode = false;
+    showRoom('map-house');
+    handleRoomTransition('map');
+    if (typeof enterMap === 'function') enterMap();
+  }
+
+  function _exitNotebookReview() {
+    stopTTS();
+    _notebookReviewMode = false;
+    if (typeof openProgressPanel === 'function') openProgressPanel();
+  }
+
+  // ========== /模塊：學徒筆記層 ==========
+
+  // ========== 模塊：學習進度面板 ==========
+  // 規格依據：學習進度面板規格文件.md
+
+  const PROGRESS_CONTENT_PATH = 'json/progress_content_1.json';
+  let _progressContentCache = null;
+
+  // --- 開啟／關閉 ---
+
+  function openProgressPanel() {
+    document.getElementById('progress-overlay').classList.remove('hidden');
+    resetProgressPanel();
+    switchProgressTab('progress');
+    renderProgressTab();
+    renderNotebookTab();
+  }
+
+  function closeProgressPanel() {
+    document.getElementById('progress-overlay').classList.add('hidden');
+    closeNotebookPopup();
+  }
+
+  function resetProgressPanel() {
+    document.querySelectorAll('.progress-scenes').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.progress-scene-summary').forEach(el => el.classList.add('hidden'));
+    document.querySelectorAll('.chapter-toggle-icon').forEach(el => el.textContent = '▼');
+  }
+
+  // --- 分頁切換 ---
+
+  function switchProgressTab(tabName) {
+    document.querySelectorAll('.progress-tab').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
+    const tabButton = document.querySelector(`.progress-tab[data-tab="${tabName}"]`);
+    const tabContent = document.getElementById(`tab-${tabName}`);
+    if (tabButton) tabButton.classList.add('active');
+    if (tabContent) tabContent.classList.remove('hidden');
+  }
+
+  document.querySelectorAll('.progress-tab').forEach(btn => {
+    btn.addEventListener('click', () => switchProgressTab(btn.dataset.tab));
+  });
+
+  document.getElementById('progress-close-btn').addEventListener('click', closeProgressPanel);
+
+  // --- 學習進度分頁渲染 ---
+
+  async function renderProgressTab() {
+    try {
+      const data = await _loadProgressContent();
+      const container = document.querySelector('#tab-progress .progress-event');
+      container.querySelector('.progress-event-title').textContent = data.title || '';
+      const chaptersEl = container.querySelector('.progress-chapters');
+      chaptersEl.innerHTML = '';
+
+      (data.chapters || []).forEach(chapter => {
+        const isUnlocked = _isChapterCompleted(chapter.chapter_id);
+        const chapterEl = document.createElement('div');
+        chapterEl.className = `progress-chapter${isUnlocked ? '' : ' locked'}`;
+        chapterEl.dataset.chapterId = chapter.chapter_id;
+
+        if (isUnlocked) {
+          chapterEl.innerHTML = `
+            <div class="progress-chapter-header unlocked">
+              <span class="chapter-title">${_escapeHTML(chapter.title)}</span>
+              <span class="chapter-toggle-icon">▼</span>
+            </div>
+            <div class="progress-scenes hidden">
+              ${(chapter.scenes || []).map(scene => `
+                <div class="progress-scene" data-scene-id="${_escapeAttr(scene.scene_id)}">
+                  <div class="progress-scene-title">${_escapeHTML(scene.title)}</div>
+                  <div class="progress-scene-summary hidden">
+                    <span>${_escapeHTML(scene.summary)}</span>
+                    <button class="scene-tts-btn" data-text="${_escapeAttr(scene.summary)}">🔊</button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>`;
+
+          chapterEl.querySelector('.progress-chapter-header').addEventListener('click', () => {
+            const scenes = chapterEl.querySelector('.progress-scenes');
+            const icon = chapterEl.querySelector('.chapter-toggle-icon');
+            const isHidden = scenes.classList.toggle('hidden');
+            icon.textContent = isHidden ? '▼' : '▲';
+          });
+
+          chapterEl.querySelectorAll('.progress-scene-title').forEach(title => {
+            title.addEventListener('click', () => {
+              title.nextElementSibling.classList.toggle('hidden');
+            });
+          });
+
+          chapterEl.querySelectorAll('.scene-tts-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+              e.stopPropagation();
+              _speakProgressSummary(btn.dataset.text || '');
+            });
+          });
+        } else {
+          chapterEl.innerHTML = `
+            <div class="progress-chapter-header locked">
+              <span class="chapter-title">${_escapeHTML(chapter.title)}</span>
+              <span class="lock-icon">🔒</span>
+            </div>`;
+        }
+
+        chaptersEl.appendChild(chapterEl);
+      });
+    } catch (e) {
+      logError(e.message, 'renderProgressTab', state.uid);
+    }
+  }
+
+  // --- 學徒筆記分頁渲染 ---
+
+  async function renderNotebookTab() {
+    try {
+      const data = await _loadProgressContent();
+      const container = document.querySelector('#tab-notebook .progress-event');
+      container.querySelector('.progress-event-title').textContent = data.title || '';
+      const chaptersEl = container.querySelector('.progress-chapters');
+      chaptersEl.innerHTML = '';
+
+      (data.chapters || []).forEach(chapter => {
+        const isUnlocked = _isChapterCompleted(chapter.chapter_id);
+        const chapterEl = document.createElement('div');
+        chapterEl.className = `progress-chapter${isUnlocked ? '' : ' locked'}`;
+        chapterEl.dataset.chapterId = chapter.chapter_id;
+
+        if (isUnlocked) {
+          chapterEl.innerHTML = `
+            <div class="progress-chapter-header unlocked notebook-trigger">
+              <span class="chapter-title">${_escapeHTML(chapter.title)}</span>
+              <span class="chapter-arrow">›</span>
+            </div>`;
+          chapterEl.querySelector('.progress-chapter-header').addEventListener('click', () => {
+            openNotebookPopup(chapter.chapter_id);
+          });
+        } else {
+          chapterEl.innerHTML = `
+            <div class="progress-chapter-header locked">
+              <span class="chapter-title">${_escapeHTML(chapter.title)}</span>
+              <span class="lock-icon">🔒</span>
+            </div>`;
+        }
+
+        chaptersEl.appendChild(chapterEl);
+      });
+    } catch (e) {
+      logError(e.message, 'renderNotebookTab', state.uid);
+    }
+  }
+
+  // --- 學徒筆記 Pop up ---
+
+  async function openNotebookPopup(chapterId) {
+    try {
+      const content = await loadJSON(`json/notebook_content_${chapterId}.json`);
+      const presentation = await loadJSON(`json/notebook_presentation_${chapterId}.json`);
+      const popupContent = document.getElementById('notebook-popup-content');
+
+      if (typeof renderNotebookContent === 'function') {
+        popupContent.innerHTML = renderNotebookContent(content, presentation);
+      } else {
+        popupContent.innerHTML = _renderNotebookPopupContent(content, presentation);
+      }
+
+      _bindNotebookPopupTTS(popupContent);
+      document.getElementById('notebook-popup').classList.remove('hidden');
+    } catch (e) {
+      logError(e.message, `openNotebookPopup_${chapterId}`, state.uid);
+    }
+  }
+
+  function closeNotebookPopup() {
+    document.getElementById('notebook-popup').classList.add('hidden');
+    document.getElementById('notebook-popup-content').innerHTML = '';
+    stopTTS();
+  }
+
+  document.getElementById('notebook-popup-close').addEventListener('click', closeNotebookPopup);
+
+  function _speakProgressSummary(text) {
+    if (!text || !window.speechSynthesis) return;
+    const utter = new SpeechSynthesisUtterance(text);
+    utter.lang = 'zh-HK';
+    utter.rate = getCurrentTTSRate();
+    speechSynthesis.cancel();
+    speechSynthesis.speak(utter);
+  }
+
+  function getCurrentTTSRate() {
+    return SPEED_RATE[state.speed] || 1;
+  }
+
+  async function _loadProgressContent() {
+    if (!_progressContentCache) _progressContentCache = await loadJSON(PROGRESS_CONTENT_PATH);
+    return _progressContentCache;
+  }
+
+  function _isChapterCompleted(chapterId) {
+    const completed = state.completed_events || [];
+    return completed.includes(chapterId) || completed.includes(`story_${chapterId}`) || completed.includes(String(chapterId).replace('_', '.'));
+  }
+
+  function _renderNotebookPopupContent(content, presentation) {
+    const left = content.notebook_left || {};
+    const right = content.notebook_right || {};
+    const storyProgress = left.story_progress || [];
+    const places = left.places_visited || [];
+    const people = left.people_met || [];
+    const learnedPoints = right.learned_points || [];
+    const reflections = _selectNotebookReflections(content, presentation);
+    const anchorSrc = _storyImagePath(right.anchor_image);
+
+    return `
+      <div class="notebook-popup-section">
+        <h3>今次的冒險……</h3>
+        <ul>
+          ${storyProgress.map((line, index) => `
+            <li>${_escapeHTML(line)}${_notebookAudioButton(presentation?.left?.story_progress?.[index])}</li>
+          `).join('')}
+        </ul>
+      </div>
+      <div class="notebook-popup-section">
+        <h3>去了哪裡</h3>
+        <div class="notebook-popup-tags">
+          ${places.map(place => `<span class="notebook-popup-tag">${_escapeHTML(place)}</span>`).join('')}
+        </div>
+      </div>
+      <div class="notebook-popup-section">
+        <h3>遇見誰</h3>
+        <div class="notebook-popup-tags">
+          ${people.map(person => `<span class="notebook-popup-tag">${_escapeHTML(person)}</span>`).join('')}
+        </div>
+      </div>
+      <div class="notebook-popup-section">
+        <h3>阿禾的筆記${_notebookAudioButton(presentation?.reflections?.title)}</h3>
+        <ul>
+          ${reflections.map(item => `
+            <li>${_escapeHTML(item.text)}${_notebookAudioButton(item.audio)}</li>
+          `).join('')}
+        </ul>
+      </div>
+      <div class="notebook-popup-section">
+        <h3>今次學到了……</h3>
+        <ul>
+          ${learnedPoints.map((point, index) => `
+            <li>${_escapeHTML(point.content || point)}${_notebookAudioButton(presentation?.right?.learned_points?.[index])}</li>
+          `).join('')}
+        </ul>
+        ${anchorSrc ? `<img class="notebook-anchor-image" src="${_escapeAttr(anchorSrc)}" alt="">` : ''}
+      </div>
+    `;
+  }
+
+  function _selectNotebookReflections(content, presentation) {
+    const reflectionData = content.notebook_assessment_reflections || {};
+    const selected = {};
+    (state.assessment_nodes || []).forEach(item => {
+      if (item.sceneId && item.label) selected[item.sceneId] = item.label;
+    });
+
+    return Object.keys(reflectionData).reduce((items, sceneId) => {
+      if (items.length >= 3) return items;
+      const label = selected[sceneId];
+      const text = label ? reflectionData[sceneId]?.[label] : null;
+      if (!text) return items;
+      items.push({
+        sceneId,
+        label,
+        text,
+        audio: presentation?.reflections?.scenes?.[sceneId]?.[label] || null,
+      });
+      return items;
+    }, []);
+  }
+
+  function _notebookAudioButton(audio) {
+    return audio ? `<button class="notebook-tts-btn" data-audio="${_escapeAttr(audio)}">🔊</button>` : '';
+  }
+
+  function _bindNotebookPopupTTS(container) {
+    container.querySelectorAll('.notebook-tts-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const audio = btn.dataset.audio;
+        if (audio) playTTS(audio, { lockUI: false });
+      });
+    });
+  }
+
+  function _escapeHTML(value) {
+    return String(value ?? '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+
+  function _escapeAttr(value) {
+    return _escapeHTML(value);
+  }
+
+  function initProgressPanelDevEntry() {
+    const btnBGM = document.getElementById('btn-bgm');
+    if (!btnBGM) return;
+    let timer = null;
+    const clearTimer = () => {
+      if (timer) clearTimeout(timer);
+      timer = null;
+    };
+    const showDevButton = () => {
+      if (document.getElementById('dev-progress-panel-button')) return;
+      const btn = document.createElement('button');
+      btn.id = 'dev-progress-panel-button';
+      btn.textContent = '開啟進度面板';
+      btn.addEventListener('click', openProgressPanel);
+      document.body.appendChild(btn);
+    };
+    btnBGM.addEventListener('pointerdown', () => {
+      clearTimer();
+      timer = setTimeout(showDevButton, 3000);
+    });
+    btnBGM.addEventListener('pointerup', clearTimer);
+    btnBGM.addEventListener('pointerleave', clearTimer);
+  }
+
+  window.openProgressPanel = openProgressPanel;
+
+  // ========== /模塊：學習進度面板 ==========
+
+  // ========== 模塊：Map房 ==========
+  // 待實作
+
+  // ========== 模塊：阿水層 ==========
+  // 待實作
+
+  // ========== 模塊：小遊戲房 ==========
+  // 待實作
+
+  // ========== 模塊：Report房 ==========
+  // 待實作
+
+  // ========== 啟動 ==========
+  (async function init() {
+    await loadGlobalData();
+    initGlobalUI();
+    initProgressPanelDevEntry();
+    await initAudioManager();
+    // Firebase onAuthStateChanged 接管後續流程
+    initOpeningHouse();
+  })();
+
+  </script>
+</body>
+</html>
