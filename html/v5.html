@@ -1371,6 +1371,7 @@
   let _ttsStopped = false;
 
   async function playLine(audioPath, timestampsPath, textElement) {
+    if (!state.tts_on) return Promise.resolve();
     stopTTS();
     _ttsStopped = false;
     return new Promise(async (resolve) => {
@@ -1410,6 +1411,11 @@
   }
 
   async function playTTS(filename, options = {}) {
+    if (!state.tts_on) {
+      if (options.lockUI !== false) _lockUI(false);
+      if (options.onEnd) options.onEnd();
+      return;
+    }
     const mp3Path = TTS_BASE + filename;
     const tsPath = TTS_BASE + filename.replace('.mp3', '.json');
     const el = options.textElement || null;
@@ -1650,6 +1656,10 @@
       btnTTS.textContent = state.tts_on ? '語音' : '語音✕';
       btnSpeed.disabled = !state.tts_on;
       btnSpeed.style.opacity = state.tts_on ? '1' : '0.4';
+      if (!state.tts_on) {
+        stopTTS();
+        _lockUI(false);
+      }
       unlockAudioContext();
     });
 
@@ -1958,10 +1968,20 @@
     return eventData.manifest?.start_scene || _storyList(eventData.story)[0]?.scene_id || '1_1_1';
   }
 
+  const _LOCATION_NAMES = {
+    warehouse: '商行',
+    market: '市集',
+    bridge: '橋邊',
+    inn: '客棧',
+    dock: '碼頭',
+  };
+
   function _storyLocationLabel() {
-    const chapter = (_storyEventId || '').replace('_', '.');
+    const parts = (_storyEventId || '').split('_');
+    const chapterNum = parts[1] || '';
     const location = eventData.manifest?.location || '';
-    return chapter ? `第${chapter}章·${location}` : location;
+    const locationName = _LOCATION_NAMES[location] || location;
+    return chapterNum ? `第${chapterNum}章·${locationName}` : locationName;
   }
 
   function _storyImagePath(imageId) {
@@ -2045,6 +2065,7 @@
     const lineEls = textContainer.querySelectorAll('p[data-line-index]');
     for (let i = 0; i < (textLines || []).length; i++) {
       _triggerImageCue(presentation, i);
+      if (!state.tts_on) continue;
       const audio = audioList?.[i];
       if (audio) {
         await playLine(_audioPath(audio), _timestampPath(audio), lineEls[i]);
@@ -3263,7 +3284,7 @@
     const unlocked = state.unlocked_games || [];
     const allEventsComplete = completed.length >= 7;
     const hasUnlockable = asuiHasUnlockableLocation();
-    const allUnlocked = ['game_warehouse','game_market','game_bridge','game_inn','game_dock']
+    const allUnlocked = ['game_1_warehouse','game_1_market','game_1_bridge','game_1_inn','game_1_dock']
       .every(g => unlocked.includes(g));
     if (asuiMapColoredCount() >= 5) return 'map_all_colored';
     if (allEventsComplete && allUnlocked) return 'main_complete_all_unlocked';
@@ -3277,11 +3298,11 @@
     const unlocked = state.unlocked_games || [];
     const coins = state.coins || 0;
     const gameMap = {
-      '1_1': { game: 'game_warehouse', cost: 15 },
-      '1_2': { game: 'game_market', cost: 20 },
-      '1_3': { game: 'game_bridge', cost: 25 },
-      '1_5': { game: 'game_inn', cost: 20 },
-      '1_6': { game: 'game_dock', cost: 25 }
+      '1_1': { game: 'game_1_warehouse', cost: 15 },
+      '1_2': { game: 'game_1_market', cost: 20 },
+      '1_3': { game: 'game_1_bridge', cost: 25 },
+      '1_5': { game: 'game_1_inn', cost: 20 },
+      '1_6': { game: 'game_1_dock', cost: 25 }
     };
     return completed.some(e => {
       const entry = gameMap[String(e).replace(/^story_/, '')];
@@ -3680,16 +3701,33 @@
 
   function _recordGameAssessment(isCorrect, answerId) {
     const evalVar = gameState.evaluationVariation || {};
-    recordAssessment(gameState.gameId, gameState.variationId, {
+    recordGameAttempt(gameState.gameId, gameState.variationId, {
       source: 'minigame',
-      game_id: gameState.gameId,
-      variation_id: gameState.variationId,
       label: answerId,
       correct: isCorrect,
       dimension: evalVar.dimension,
       skill: evalVar.skill,
       vocabulary_intro_ids: gameState.contentVariation?.vocabulary_intro_ids || [],
     });
+  }
+
+  async function recordGameAttempt(gameId, variationId, data) {
+    if (!db || !state.uid) return;
+    try {
+      const attemptId = crypto.randomUUID();
+      await db.collection('users').doc(state.uid)
+        .collection('game_attempts').doc(gameId)
+        .collection('attempts').doc(attemptId)
+        .set({
+          ...data,
+          attempt_id: attemptId,
+          game_id: gameId,
+          variation_id: variationId,
+          timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
+    } catch (e) {
+      logError(e.message, 'recordGameAttempt', state.uid);
+    }
   }
 
   async function renderDockAnswer() {
@@ -4009,7 +4047,7 @@
 
   function _gameRefForLocation(locationId) {
     const loc = globalData.map?.locations?.find(item => item.location_id === locationId);
-    return loc?.game_ref || `game_${locationId}`;
+    return loc?.game_ref || `game_1_${locationId}`;
   }
 
   function _saveMapProgress() {
