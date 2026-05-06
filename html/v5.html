@@ -2071,6 +2071,7 @@
         await playLine(_audioPath(audio), _timestampPath(audio), lineEls[i]);
       }
     }
+    _lockUI(false);
   }
 
   async function _playQuestionAndChoices(scene, presentation) {
@@ -3044,7 +3045,7 @@
       case 'first_location_appear':
         return !fired.includes('A2') && (progress.completed_events?.length >= 1);
       case 'first_coins_earned':
-        return !fired.includes('A3') && progress.coins > 0;
+        return !fired.includes('A3') && progress.coins > 0 && (progress.completed_events?.length >= 1);
       case 'first_unlock_available':
         return !fired.includes('A4') && asuiHasUnlockableLocation();
       case 'after_event_1_1':
@@ -3336,10 +3337,8 @@
   }
 
   function getAsuiAssessmentChoice(sceneId) {
-    try {
-      const data = JSON.parse(localStorage.getItem('la_assessment') || '{}');
-      return data?.[sceneId]?.label || null;
-    } catch { return null; }
+    const node = (state.assessment_nodes || []).find(n => n.sceneId === sceneId);
+    return node?.label || null;
   }
 
   // --- TTS ---
@@ -4031,9 +4030,9 @@
   }
 
   function _nextStoryTarget(chapterId) {
-    const currentNode = state.current_node || state.current_scene;
-    const currentEvent = currentNode ? String(currentNode).split('_').slice(0, 2).join('_') : null;
-    return currentEvent === chapterId ? currentNode : chapterId;
+    const currentScene = state.current_scene;
+    const currentEvent = currentScene ? String(currentScene).split('_').slice(0, 2).join('_') : null;
+    return currentEvent === chapterId ? currentScene : chapterId;
   }
 
   function _isLocationColored(locationId) {
