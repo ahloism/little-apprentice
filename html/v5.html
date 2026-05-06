@@ -976,12 +976,13 @@
 
   const FIREBASE_CONFIG = {
     // Ah Lo填入實際config
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
+    apiKey: "AIzaSyAiXcaWGypMAi3z-PoVi3tjuUuqwA8rO_w",
+    authDomain: "little-apprentice.firebaseapp.com",
+    projectId: "little-apprentice",
+    storageBucket: "little-apprentice.firebasestorage.app",
+    messagingSenderId: "854629298975",
+    appId: "1:854629298975:web:d8c376bcad938c7945f62a",
+    measurementId: "G-4GGG1CHRW5"
   };
 
   const _firebaseReady = FIREBASE_CONFIG.apiKey !== '';
@@ -994,6 +995,7 @@
     db = firebase.firestore();
   } else {
     console.warn('[Dev] Firebase config未填，跳過Firebase初始化，核心層以mock模式運行');
+    console.warn('[Dev] Firebase config 未設定，登入功能未啟用；請填入 Firebase web app config。');
   }
 
   if (auth) auth.onAuthStateChanged(async (user) => {
@@ -1758,6 +1760,7 @@
         <div id="g-signin-btn" style="cursor:pointer;">
           <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" alt="Sign in with Google" style="height:50px;" />
         </div>
+        ${!_firebaseReady ? '<div style="color:#fff;background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:8px;font-size:14px;">Firebase config 未設定，登入功能未啟用</div>' : ''}
       `;
       document.getElementById('g-signin-btn').addEventListener('click', () => {
         unlockAudioContext();
