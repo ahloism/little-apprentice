@@ -5,77 +5,77 @@
     {
       "word": "「不",
       "start_ms": 50.0,
-      "duration_ms": 187.5
+      "duration_ms": 166.687
     },
     {
       "word": "識字",
-      "start_ms": 237.5,
-      "duration_ms": 703.125
+      "start_ms": 216.687,
+      "duration_ms": 625.0
     },
     {
       "word": "，",
-      "start_ms": 1112.5,
+      "start_ms": 994.437,
       "duration_ms": 0.0
     },
     {
       "word": "路",
-      "start_ms": 1112.5,
-      "duration_ms": 312.5
+      "start_ms": 994.437,
+      "duration_ms": 277.75
     },
     {
       "word": "難行",
-      "start_ms": 1425.0,
-      "duration_ms": 687.5
+      "start_ms": 1272.25,
+      "duration_ms": 611.125
     },
     {
       "word": "；",
-      "start_ms": 2268.75,
+      "start_ms": 2022.25,
       "duration_ms": 0.0
     },
     {
       "word": "但",
-      "start_ms": 2268.75,
-      "duration_ms": 281.25
+      "start_ms": 2022.25,
+      "duration_ms": 250.0
     },
     {
       "word": "不",
-      "start_ms": 2550.0,
-      "duration_ms": 125.0
+      "start_ms": 2272.25,
+      "duration_ms": 111.062
     },
     {
       "word": "誠信",
-      "start_ms": 2675.0,
-      "duration_ms": 718.75
+      "start_ms": 2383.312,
+      "duration_ms": 638.875
     },
     {
       "word": "，",
-      "start_ms": 3550.0,
+      "start_ms": 3161.125,
       "duration_ms": 0.0
     },
     {
       "word": "路",
-      "start_ms": 3550.0,
-      "duration_ms": 312.5
+      "start_ms": 3161.125,
+      "duration_ms": 277.75
     },
     {
       "word": "也",
-      "start_ms": 3862.5,
-      "duration_ms": 203.125
+      "start_ms": 3438.875,
+      "duration_ms": 180.562
     },
     {
       "word": "難行",
-      "start_ms": 4065.625,
-      "duration_ms": 687.5
+      "start_ms": 3619.437,
+      "duration_ms": 611.125
     },
     {
       "word": "。",
-      "start_ms": 4784.375,
-      "duration_ms": 296.875
+      "start_ms": 4258.312,
+      "duration_ms": 263.875
     },
     {
       "word": "」",
-      "start_ms": 5081.25,
-      "duration_ms": 109.375
+      "start_ms": 4522.25,
+      "duration_ms": 97.25
     }
   ]
 }

@@ -5,22 +5,22 @@
     {
       "word": "做",
       "start_ms": 50.0,
-      "duration_ms": 328.125
+      "duration_ms": 291.68699999999995
     },
     {
       "word": "得",
-      "start_ms": 378.125,
-      "duration_ms": 156.25
+      "start_ms": 341.687,
+      "duration_ms": 138.875
     },
     {
       "word": "好",
-      "start_ms": 534.375,
-      "duration_ms": 500.0
+      "start_ms": 480.562,
+      "duration_ms": 444.437
     },
     {
       "word": "。",
-      "start_ms": 1112.5,
-      "duration_ms": 109.375
+      "start_ms": 994.437,
+      "duration_ms": 97.25
     }
   ]
 }

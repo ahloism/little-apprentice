@@ -5,62 +5,62 @@
     {
       "word": "「糖葫蘆",
       "start_ms": 50.0,
-      "duration_ms": 750.0
+      "duration_ms": 666.687
     },
     {
       "word": "在",
-      "start_ms": 800.0,
-      "duration_ms": 265.625
+      "start_ms": 716.687,
+      "duration_ms": 236.06199999999998
     },
     {
       "word": "倉庫",
-      "start_ms": 1065.625,
-      "duration_ms": 531.25
+      "start_ms": 952.75,
+      "duration_ms": 472.25
     },
     {
       "word": "甜",
-      "start_ms": 1596.875,
-      "duration_ms": 265.625
+      "start_ms": 1425.0,
+      "duration_ms": 236.125
     },
     {
       "word": "食",
-      "start_ms": 1862.5,
-      "duration_ms": 187.5
+      "start_ms": 1661.125,
+      "duration_ms": 166.625
     },
     {
       "word": "格",
-      "start_ms": 2050.0,
-      "duration_ms": 328.125
+      "start_ms": 1827.75,
+      "duration_ms": 291.68699999999995
     },
     {
       "word": "，",
-      "start_ms": 2534.375,
+      "start_ms": 2258.312,
       "duration_ms": 0.0
     },
     {
       "word": "你",
-      "start_ms": 2534.375,
-      "duration_ms": 343.75
+      "start_ms": 2258.312,
+      "duration_ms": 305.562
     },
     {
       "word": "去",
-      "start_ms": 2878.125,
-      "duration_ms": 187.5
+      "start_ms": 2563.875,
+      "duration_ms": 166.687
     },
     {
       "word": "拿",
-      "start_ms": 3065.625,
-      "duration_ms": 390.625
+      "start_ms": 2730.562,
+      "duration_ms": 347.25
     },
     {
       "word": "。",
-      "start_ms": 3643.75,
-      "duration_ms": 468.75
+      "start_ms": 3244.437,
+      "duration_ms": 416.68699999999995
     },
     {
       "word": "」",
-      "start_ms": 4112.5,
-      "duration_ms": 109.375
+      "start_ms": 3661.125,
+      "duration_ms": 97.25
     }
   ]
 }

@@ -5,157 +5,157 @@
     {
       "word": "錢",
       "start_ms": 50.0,
-      "duration_ms": 390.625
+      "duration_ms": 347.25
     },
     {
       "word": "伯",
-      "start_ms": 440.625,
-      "duration_ms": 187.5
+      "start_ms": 397.25,
+      "duration_ms": 166.625
     },
     {
       "word": "說",
-      "start_ms": 628.125,
-      "duration_ms": 375.0
+      "start_ms": 563.875,
+      "duration_ms": 333.312
     },
     {
       "word": "：",
-      "start_ms": 1175.0,
-      "duration_ms": 125.0
+      "start_ms": 1050.0,
+      "duration_ms": 111.125
     },
     {
       "word": "「",
-      "start_ms": 1300.0,
+      "start_ms": 1161.125,
       "duration_ms": 0.0
     },
     {
       "word": "這樣",
-      "start_ms": 1300.0,
-      "duration_ms": 468.75
+      "start_ms": 1161.125,
+      "duration_ms": 416.625
     },
     {
       "word": "貨不是",
-      "start_ms": 1768.75,
-      "duration_ms": 578.125
+      "start_ms": 1577.75,
+      "duration_ms": 513.875
     },
     {
       "word": "吃",
-      "start_ms": 2346.875,
-      "duration_ms": 218.75
+      "start_ms": 2091.687,
+      "duration_ms": 194.437
     },
     {
       "word": "的",
-      "start_ms": 2565.625,
-      "duration_ms": 250.0
+      "start_ms": 2286.125,
+      "duration_ms": 222.25
     },
     {
       "word": "，",
-      "start_ms": 2971.875,
+      "start_ms": 2647.25,
       "duration_ms": 0.0
     },
     {
       "word": "也",
-      "start_ms": 2971.875,
-      "duration_ms": 250.0
+      "start_ms": 2647.25,
+      "duration_ms": 222.18699999999998
     },
     {
       "word": "不是",
-      "start_ms": 3221.875,
-      "duration_ms": 406.25
+      "start_ms": 2869.437,
+      "duration_ms": 361.125
     },
     {
       "word": "付錢",
-      "start_ms": 3628.125,
-      "duration_ms": 484.375
+      "start_ms": 3230.562,
+      "duration_ms": 430.562
     },
     {
       "word": "的",
-      "start_ms": 4112.5,
-      "duration_ms": 265.625
+      "start_ms": 3661.125,
+      "duration_ms": 236.125
     },
     {
       "word": "，",
-      "start_ms": 4550.0,
+      "start_ms": 4050.0,
       "duration_ms": 0.0
     },
     {
       "word": "是",
-      "start_ms": 4550.0,
-      "duration_ms": 312.5
+      "start_ms": 4050.0,
+      "duration_ms": 277.75
     },
     {
       "word": "專門",
-      "start_ms": 4862.5,
-      "duration_ms": 453.125
+      "start_ms": 4327.75,
+      "duration_ms": 402.75
     },
     {
       "word": "用來",
-      "start_ms": 5315.625,
-      "duration_ms": 421.875
+      "start_ms": 4730.562,
+      "duration_ms": 375.0
     },
     {
       "word": "把",
-      "start_ms": 5737.5,
-      "duration_ms": 281.25
-    },
-    {
-      "word": "東西",
-      "start_ms": 6018.75,
-      "duration_ms": 453.125
-    },
-    {
-      "word": "捆緊",
-      "start_ms": 6471.875,
-      "duration_ms": 500.0
-    },
-    {
-      "word": "綁牢",
-      "start_ms": 6971.875,
-      "duration_ms": 437.5
-    },
-    {
-      "word": "的",
-      "start_ms": 7409.375,
-      "duration_ms": 296.875
-    },
-    {
-      "word": "。",
-      "start_ms": 7706.25,
-      "duration_ms": 109.375
-    },
-    {
-      "word": "阿",
-      "start_ms": 8753.125,
-      "duration_ms": 312.5
-    },
-    {
-      "word": "禾",
-      "start_ms": 9065.625,
-      "duration_ms": 421.875
-    },
-    {
-      "word": "，",
-      "start_ms": 9659.375,
-      "duration_ms": 265.625
-    },
-    {
-      "word": "去",
-      "start_ms": 9925.0,
+      "start_ms": 5105.562,
       "duration_ms": 250.0
     },
     {
-      "word": "拿來",
-      "start_ms": 10175.0,
-      "duration_ms": 671.875
+      "word": "東西",
+      "start_ms": 5355.562,
+      "duration_ms": 402.75
+    },
+    {
+      "word": "捆緊",
+      "start_ms": 5758.312,
+      "duration_ms": 444.437
+    },
+    {
+      "word": "綁牢",
+      "start_ms": 6202.75,
+      "duration_ms": 388.875
+    },
+    {
+      "word": "的",
+      "start_ms": 6591.687,
+      "duration_ms": 263.875
     },
     {
       "word": "。",
-      "start_ms": 10925.0,
-      "duration_ms": 437.5
+      "start_ms": 6855.562,
+      "duration_ms": 97.25
+    },
+    {
+      "word": "阿",
+      "start_ms": 7786.125,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "禾",
+      "start_ms": 8063.875,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 8591.687,
+      "duration_ms": 236.06199999999998
+    },
+    {
+      "word": "去",
+      "start_ms": 8827.75,
+      "duration_ms": 222.25
+    },
+    {
+      "word": "拿來",
+      "start_ms": 9050.0,
+      "duration_ms": 597.25
+    },
+    {
+      "word": "。",
+      "start_ms": 9716.687,
+      "duration_ms": 388.875
     },
     {
       "word": "」",
-      "start_ms": 11362.5,
-      "duration_ms": 109.375
+      "start_ms": 10105.562,
+      "duration_ms": 97.25
     }
   ]
 }

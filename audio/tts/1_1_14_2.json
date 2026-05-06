@@ -5,47 +5,47 @@
     {
       "word": "「去",
       "start_ms": 50.0,
-      "duration_ms": 312.5
+      "duration_ms": 277.75
     },
     {
       "word": "吧",
-      "start_ms": 362.5,
-      "duration_ms": 500.0
+      "start_ms": 327.75,
+      "duration_ms": 444.437
     },
     {
       "word": "，",
-      "start_ms": 1034.375,
-      "duration_ms": 62.5
+      "start_ms": 925.0,
+      "duration_ms": 55.562
     },
     {
       "word": "早",
-      "start_ms": 1096.875,
-      "duration_ms": 281.25
+      "start_ms": 980.562,
+      "duration_ms": 250.0
     },
     {
       "word": "去",
-      "start_ms": 1378.125,
-      "duration_ms": 187.5
+      "start_ms": 1230.5619,
+      "duration_ms": 166.687
     },
     {
       "word": "早",
-      "start_ms": 1565.625,
-      "duration_ms": 234.375
+      "start_ms": 1397.25,
+      "duration_ms": 208.31199999999998
     },
     {
       "word": "回",
-      "start_ms": 1800.0,
-      "duration_ms": 421.875
+      "start_ms": 1605.5619,
+      "duration_ms": 375.0
     },
     {
       "word": "。",
-      "start_ms": 2456.25,
-      "duration_ms": 265.625
+      "start_ms": 2188.875,
+      "duration_ms": 236.125
     },
     {
       "word": "」",
-      "start_ms": 2721.875,
-      "duration_ms": 109.375
+      "start_ms": 2425.0,
+      "duration_ms": 97.25
     }
   ]
 }

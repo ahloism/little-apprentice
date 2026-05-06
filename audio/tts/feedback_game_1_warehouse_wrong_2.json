@@ -5,17 +5,17 @@
     {
       "word": "仔細",
       "start_ms": 50.0,
-      "duration_ms": 593.75
+      "duration_ms": 527.75
     },
     {
       "word": "看清楚",
-      "start_ms": 643.75,
-      "duration_ms": 1062.5
+      "start_ms": 577.75,
+      "duration_ms": 944.437
     },
     {
       "word": "。",
-      "start_ms": 1737.5,
-      "duration_ms": 109.375
+      "start_ms": 1550.0,
+      "duration_ms": 97.25
     }
   ]
 }

@@ -5,52 +5,52 @@
     {
       "word": "「記住",
       "start_ms": 50.0,
-      "duration_ms": 796.875
+      "duration_ms": 708.312
     },
     {
       "word": "，",
-      "start_ms": 1034.375,
-      "duration_ms": 234.375
+      "start_ms": 925.0,
+      "duration_ms": 208.31199999999998
     },
     {
       "word": "一",
-      "start_ms": 1268.75,
-      "duration_ms": 203.125
+      "start_ms": 1133.3119,
+      "duration_ms": 180.562
     },
     {
       "word": "文錢",
-      "start_ms": 1471.875,
-      "duration_ms": 500.0
+      "start_ms": 1313.875,
+      "duration_ms": 444.437
     },
     {
       "word": "也",
-      "start_ms": 1971.875,
-      "duration_ms": 218.75
+      "start_ms": 1758.312,
+      "duration_ms": 194.437
     },
     {
       "word": "要",
-      "start_ms": 2190.625,
-      "duration_ms": 203.125
+      "start_ms": 1952.75,
+      "duration_ms": 180.562
     },
     {
       "word": "算",
-      "start_ms": 2393.75,
-      "duration_ms": 265.625
+      "start_ms": 2133.312,
+      "duration_ms": 236.125
     },
     {
       "word": "清",
-      "start_ms": 2659.375,
-      "duration_ms": 437.5
+      "start_ms": 2369.437,
+      "duration_ms": 388.875
     },
     {
       "word": "。",
-      "start_ms": 3315.625,
-      "duration_ms": 265.625
+      "start_ms": 2952.75,
+      "duration_ms": 236.125
     },
     {
       "word": "」",
-      "start_ms": 3581.25,
-      "duration_ms": 109.375
+      "start_ms": 3188.875,
+      "duration_ms": 97.25
     }
   ]
 }

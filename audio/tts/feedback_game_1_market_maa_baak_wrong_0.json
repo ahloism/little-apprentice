@@ -5,32 +5,32 @@
     {
       "word": "慢慢",
       "start_ms": 50.0,
-      "duration_ms": 593.75
+      "duration_ms": 527.75
     },
     {
       "word": "看",
-      "start_ms": 643.75,
-      "duration_ms": 500.0
+      "start_ms": 577.75,
+      "duration_ms": 444.437
     },
     {
       "word": "，",
-      "start_ms": 1300.0,
+      "start_ms": 1161.125,
       "duration_ms": 0.0
     },
     {
       "word": "別",
-      "start_ms": 1300.0,
-      "duration_ms": 250.0
+      "start_ms": 1161.125,
+      "duration_ms": 222.18699999999998
     },
     {
       "word": "急",
-      "start_ms": 1550.0,
-      "duration_ms": 281.25
+      "start_ms": 1383.3119,
+      "duration_ms": 250.0
     },
     {
       "word": "。",
-      "start_ms": 1831.25,
-      "duration_ms": 109.375
+      "start_ms": 1633.3119,
+      "duration_ms": 97.25
     }
   ]
 }

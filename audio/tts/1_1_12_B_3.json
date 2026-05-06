@@ -5,52 +5,52 @@
     {
       "word": "「糖葫蘆",
       "start_ms": 50.0,
-      "duration_ms": 750.0
+      "duration_ms": 666.687
     },
     {
       "word": "是",
-      "start_ms": 800.0,
-      "duration_ms": 265.625
+      "start_ms": 716.687,
+      "duration_ms": 236.06199999999998
     },
     {
       "word": "穿",
-      "start_ms": 1065.625,
-      "duration_ms": 296.875
+      "start_ms": 952.75,
+      "duration_ms": 263.875
     },
     {
       "word": "在",
-      "start_ms": 1362.5,
-      "duration_ms": 218.75
+      "start_ms": 1216.6869,
+      "duration_ms": 194.437
     },
     {
       "word": "竹",
-      "start_ms": 1581.25,
-      "duration_ms": 218.75
+      "start_ms": 1411.125,
+      "duration_ms": 194.437
     },
     {
       "word": "簽",
-      "start_ms": 1800.0,
-      "duration_ms": 265.625
+      "start_ms": 1605.5619,
+      "duration_ms": 236.125
     },
     {
       "word": "上",
-      "start_ms": 2065.625,
-      "duration_ms": 281.25
-    },
-    {
-      "word": "的",
-      "start_ms": 2346.875,
+      "start_ms": 1841.687,
       "duration_ms": 250.0
     },
     {
+      "word": "的",
+      "start_ms": 2091.687,
+      "duration_ms": 222.25
+    },
+    {
       "word": "。",
-      "start_ms": 2612.5,
-      "duration_ms": 593.75
+      "start_ms": 2327.75,
+      "duration_ms": 527.75
     },
     {
       "word": "」",
-      "start_ms": 3206.25,
-      "duration_ms": 109.375
+      "start_ms": 2855.562,
+      "duration_ms": 97.25
     }
   ]
 }

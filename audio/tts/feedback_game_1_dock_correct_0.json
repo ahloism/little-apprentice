@@ -5,12 +5,12 @@
     {
       "word": "對",
       "start_ms": 50.0,
-      "duration_ms": 531.25
+      "duration_ms": 425.0
     },
     {
       "word": "。",
-      "start_ms": 675.0,
-      "duration_ms": 109.375
+      "start_ms": 550.0,
+      "duration_ms": 87.5
     }
   ]
 }
