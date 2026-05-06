@@ -1,0 +1,96 @@
+{
+  "filename": "vocab_bridge_gwong_coeng.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "廣場",
+      "start_ms": 109.375,
+      "duration_ms": 937.5
+    },
+    {
+      "word": "。",
+      "start_ms": 1046.875,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "空曠",
+      "start_ms": 2140.625,
+      "duration_ms": 546.875
+    },
+    {
+      "word": "的",
+      "start_ms": 2687.5,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "大",
+      "start_ms": 2843.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "空地",
+      "start_ms": 3093.75,
+      "duration_ms": 734.375
+    },
+    {
+      "word": "，",
+      "start_ms": 4000.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "人們",
+      "start_ms": 4000.0,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "在",
+      "start_ms": 4453.125,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "這裡",
+      "start_ms": 4656.25,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "聚集",
+      "start_ms": 5140.625,
+      "duration_ms": 640.625
+    },
+    {
+      "word": "、",
+      "start_ms": 5937.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "做",
+      "start_ms": 5937.5,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "買賣",
+      "start_ms": 6156.25,
+      "duration_ms": 578.125
+    },
+    {
+      "word": "或",
+      "start_ms": 6734.375,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "看",
+      "start_ms": 6984.375,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "熱鬧",
+      "start_ms": 7281.25,
+      "duration_ms": 656.25
+    },
+    {
+      "word": "。",
+      "start_ms": 7937.5,
+      "duration_ms": 109.375
+    }
+  ]
+}

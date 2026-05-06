@@ -1,0 +1,81 @@
+{
+  "filename": "vocab_bridge_gun_fu.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "官府",
+      "start_ms": 50.0,
+      "duration_ms": 613.625
+    },
+    {
+      "word": "。",
+      "start_ms": 686.375,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "官員",
+      "start_ms": 1447.75,
+      "duration_ms": 386.312
+    },
+    {
+      "word": "處理",
+      "start_ms": 1834.062,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "公務",
+      "start_ms": 2152.25,
+      "duration_ms": 306.812
+    },
+    {
+      "word": "的",
+      "start_ms": 2459.062,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "地方",
+      "start_ms": 2561.375,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "，",
+      "start_ms": 3197.75,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "大門",
+      "start_ms": 3390.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "前",
+      "start_ms": 3743.187,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "有",
+      "start_ms": 3936.375,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "衙",
+      "start_ms": 4061.375,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "差",
+      "start_ms": 4277.25,
+      "duration_ms": 204.562
+    },
+    {
+      "word": "站崗",
+      "start_ms": 4481.812,
+      "duration_ms": 545.437
+    },
+    {
+      "word": "。",
+      "start_ms": 5027.25,
+      "duration_ms": 79.562
+    }
+  ]
+}

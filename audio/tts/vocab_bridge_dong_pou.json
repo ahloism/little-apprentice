@@ -1,0 +1,66 @@
+{
+  "filename": "vocab_bridge_dong_pou.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "當鋪",
+      "start_ms": 109.375,
+      "duration_ms": 765.625
+    },
+    {
+      "word": "。",
+      "start_ms": 875.0,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "可以",
+      "start_ms": 1968.75,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "把",
+      "start_ms": 2390.625,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "東西",
+      "start_ms": 2671.875,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "押",
+      "start_ms": 3171.875,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "在",
+      "start_ms": 3656.25,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "這裡",
+      "start_ms": 3875.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "換錢",
+      "start_ms": 4375.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "的",
+      "start_ms": 4937.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "地方",
+      "start_ms": 5062.5,
+      "duration_ms": 812.5
+    },
+    {
+      "word": "。",
+      "start_ms": 5875.0,
+      "duration_ms": 109.375
+    }
+  ]
+}

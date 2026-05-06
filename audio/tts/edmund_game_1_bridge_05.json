@@ -5,166 +5,176 @@
     {
       "word": "我們",
       "start_ms": 50.0,
-      "duration_ms": 352.25
-    },
-    {
-      "word": "本來",
-      "start_ms": 402.25,
-      "duration_ms": 306.81199999999995
+      "duration_ms": 363.625
     },
     {
       "word": "說好",
-      "start_ms": 709.062,
-      "duration_ms": 511.375
+      "start_ms": 413.625,
+      "duration_ms": 488.625
     },
     {
       "word": "，",
-      "start_ms": 1345.4369,
+      "start_ms": 1027.25,
       "duration_ms": 45.437
     },
     {
       "word": "若",
-      "start_ms": 1390.9369,
-      "duration_ms": 193.125
+      "start_ms": 1072.75,
+      "duration_ms": 204.5
     },
     {
       "word": "走",
-      "start_ms": 1584.0619,
+      "start_ms": 1277.25,
       "duration_ms": 147.75
     },
     {
       "word": "散",
-      "start_ms": 1731.812,
-      "duration_ms": 193.187
+      "start_ms": 1425.0,
+      "duration_ms": 215.937
     },
     {
       "word": "了",
-      "start_ms": 1925.0,
-      "duration_ms": 284.06199999999995
+      "start_ms": 1640.937,
+      "duration_ms": 284.062
     },
     {
       "word": "，",
-      "start_ms": 2334.062,
-      "duration_ms": 90.937
+      "start_ms": 2050.0,
+      "duration_ms": 45.437
     },
     {
       "word": "就",
-      "start_ms": 2425.0,
+      "start_ms": 2095.437,
       "duration_ms": 170.437
     },
     {
       "word": "在",
-      "start_ms": 2595.437,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "轉角",
-      "start_ms": 2754.562,
-      "duration_ms": 352.25
-    },
-    {
-      "word": "那",
-      "start_ms": 3106.812,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "個",
-      "start_ms": 3265.937,
-      "duration_ms": 113.625
-    },
-    {
-      "word": "賣",
-      "start_ms": 3379.562,
-      "duration_ms": 193.187
-    },
-    {
-      "word": "茶",
-      "start_ms": 3572.75,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "的",
-      "start_ms": 3754.562,
-      "duration_ms": 102.25
-    },
-    {
-      "word": "小",
-      "start_ms": 3856.812,
-      "duration_ms": 204.56199999999998
-    },
-    {
-      "word": "攤",
-      "start_ms": 4061.375,
-      "duration_ms": 193.187
-    },
-    {
-      "word": "旁",
-      "start_ms": 4254.562,
-      "duration_ms": 215.875
-    },
-    {
-      "word": "再",
-      "start_ms": 4470.437,
-      "duration_ms": 147.75
-    },
-    {
-      "word": "碰頭",
-      "start_ms": 4618.187,
-      "duration_ms": 465.937
-    },
-    {
-      "word": "，",
-      "start_ms": 5209.062,
+      "start_ms": 2265.937,
       "duration_ms": 170.437
     },
     {
-      "word": "不是",
-      "start_ms": 5379.562,
-      "duration_ms": 284.06199999999995
+      "word": "掛",
+      "start_ms": 2436.375,
+      "duration_ms": 193.187
     },
     {
-      "word": "附近",
-      "start_ms": 5663.625,
-      "duration_ms": 329.562
+      "word": "著",
+      "start_ms": 2629.562,
+      "duration_ms": 159.062
     },
     {
-      "word": "隨便",
-      "start_ms": 5993.187,
+      "word": "各",
+      "start_ms": 2788.625,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "色",
+      "start_ms": 2947.75,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "布匹",
+      "start_ms": 3061.375,
+      "duration_ms": 443.187
+    },
+    {
+      "word": "、",
+      "start_ms": 3618.187,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "賣",
+      "start_ms": 3618.187,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "布料",
+      "start_ms": 3834.062,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "的",
+      "start_ms": 4152.25,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "地方",
+      "start_ms": 4265.937,
       "duration_ms": 340.875
     },
     {
-      "word": "哪裡",
-      "start_ms": 6334.062,
-      "duration_ms": 465.937
+      "word": "碰頭",
+      "start_ms": 4606.812,
+      "duration_ms": 420.437
     },
     {
       "word": "。",
-      "start_ms": 6800.0,
+      "start_ms": 5038.625,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "Margaret",
+      "start_ms": 5800.0,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "最",
+      "start_ms": 6311.375,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "喜歡",
+      "start_ms": 6493.187,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "那",
+      "start_ms": 6856.812,
+      "duration_ms": 215.937
+    },
+    {
+      "word": "種",
+      "start_ms": 7072.75,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "地方",
+      "start_ms": 7254.562,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "了",
+      "start_ms": 7606.812,
+      "duration_ms": 284.062
+    },
+    {
+      "word": "。",
+      "start_ms": 7902.25,
       "duration_ms": 79.562
     },
     {
       "word": "那",
-      "start_ms": 7561.375,
+      "start_ms": 8663.625,
       "duration_ms": 227.25
     },
     {
       "word": "是",
-      "start_ms": 7788.625,
+      "start_ms": 8890.937,
       "duration_ms": 181.812
     },
     {
       "word": "什麼",
-      "start_ms": 7970.437,
-      "duration_ms": 306.81199999999995
+      "start_ms": 9072.75,
+      "duration_ms": 306.812
     },
     {
       "word": "地方",
-      "start_ms": 8277.25,
+      "start_ms": 9379.562,
       "duration_ms": 500.0
     },
     {
       "word": "？",
-      "start_ms": 8777.25,
+      "start_ms": 9879.562,
       "duration_ms": 79.562
     }
   ]

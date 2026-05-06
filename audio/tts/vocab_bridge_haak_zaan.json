@@ -1,0 +1,91 @@
+{
+  "filename": "vocab_bridge_haak_zaan.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "客棧",
+      "start_ms": 50.0,
+      "duration_ms": 647.75
+    },
+    {
+      "word": "。",
+      "start_ms": 731.812,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "給",
+      "start_ms": 1493.187,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "外地人",
+      "start_ms": 1709.062,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "住宿",
+      "start_ms": 2209.062,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "的",
+      "start_ms": 2538.625,
+      "duration_ms": 90.937
+    },
+    {
+      "word": "地方",
+      "start_ms": 2629.562,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3254.562,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "有",
+      "start_ms": 3254.562,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "床",
+      "start_ms": 3447.75,
+      "duration_ms": 215.875
+    },
+    {
+      "word": "有",
+      "start_ms": 3663.625,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "飯",
+      "start_ms": 3800.0,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "，",
+      "start_ms": 4265.937,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "可以",
+      "start_ms": 4265.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "過",
+      "start_ms": 4618.187,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "夜",
+      "start_ms": 4788.625,
+      "duration_ms": 306.812
+    },
+    {
+      "word": "。",
+      "start_ms": 5106.812,
+      "duration_ms": 79.562
+    }
+  ]
+}

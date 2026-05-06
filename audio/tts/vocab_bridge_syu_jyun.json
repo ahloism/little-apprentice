@@ -1,0 +1,76 @@
+{
+  "filename": "vocab_bridge_syu_jyun.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "書院",
+      "start_ms": 109.375,
+      "duration_ms": 984.375
+    },
+    {
+      "word": "。",
+      "start_ms": 1093.75,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "讀書",
+      "start_ms": 2171.875,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "求學",
+      "start_ms": 2593.75,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "的",
+      "start_ms": 3109.375,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "地方",
+      "start_ms": 3265.625,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "，",
+      "start_ms": 4171.875,
+      "duration_ms": 46.875
+    },
+    {
+      "word": "學生",
+      "start_ms": 4218.75,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "在",
+      "start_ms": 4781.25,
+      "duration_ms": 203.125
+    },
+    {
+      "word": "這裡",
+      "start_ms": 4984.375,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "跟",
+      "start_ms": 5484.375,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "先生",
+      "start_ms": 5750.0,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "學習",
+      "start_ms": 6265.625,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "。",
+      "start_ms": 6859.375,
+      "duration_ms": 109.375
+    }
+  ]
+}

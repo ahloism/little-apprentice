@@ -1,0 +1,96 @@
+{
+  "filename": "vocab_bridge_cin_zong.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "錢莊",
+      "start_ms": 109.375,
+      "duration_ms": 937.5
+    },
+    {
+      "word": "。",
+      "start_ms": 1046.875,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "可以",
+      "start_ms": 2140.625,
+      "duration_ms": 421.875
+    },
+    {
+      "word": "換",
+      "start_ms": 2562.5,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "錢",
+      "start_ms": 2906.25,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "或",
+      "start_ms": 3187.5,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "存錢",
+      "start_ms": 3421.875,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "的",
+      "start_ms": 3937.5,
+      "duration_ms": 140.625
+    },
+    {
+      "word": "地方",
+      "start_ms": 4078.125,
+      "duration_ms": 734.375
+    },
+    {
+      "word": "，",
+      "start_ms": 4953.125,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "掌",
+      "start_ms": 4953.125,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "櫃",
+      "start_ms": 5281.25,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "算盤",
+      "start_ms": 5468.75,
+      "duration_ms": 546.875
+    },
+    {
+      "word": "打",
+      "start_ms": 6015.625,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "得",
+      "start_ms": 6281.25,
+      "duration_ms": 140.625
+    },
+    {
+      "word": "很",
+      "start_ms": 6421.875,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "快",
+      "start_ms": 6703.125,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "。",
+      "start_ms": 7156.25,
+      "duration_ms": 109.375
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "filename": "vocab_bridge_gaai_dou.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "街道",
+      "start_ms": 50.0,
+      "duration_ms": 602.25
+    },
+    {
+      "word": "。",
+      "start_ms": 720.437,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "城",
+      "start_ms": 1481.812,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "裡",
+      "start_ms": 1754.562,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "寬闊",
+      "start_ms": 1868.187,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "的",
+      "start_ms": 2220.437,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "通道",
+      "start_ms": 2300.0,
+      "duration_ms": 522.75
+    },
+    {
+      "word": "，",
+      "start_ms": 2947.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "兩旁",
+      "start_ms": 2947.75,
+      "duration_ms": 397.687
+    },
+    {
+      "word": "有",
+      "start_ms": 3345.437,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "店鋪",
+      "start_ms": 3470.437,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "和",
+      "start_ms": 3845.437,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "行人",
+      "start_ms": 3981.812,
+      "duration_ms": 454.562
+    },
+    {
+      "word": "。",
+      "start_ms": 4436.375,
+      "duration_ms": 79.562
+    }
+  ]
+}

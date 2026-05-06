@@ -1,0 +1,86 @@
+{
+  "filename": "vocab_bridge_soeng_hang.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "商行",
+      "start_ms": 50.0,
+      "duration_ms": 681.812
+    },
+    {
+      "word": "。",
+      "start_ms": 731.812,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "買賣",
+      "start_ms": 1493.187,
+      "duration_ms": 386.375
+    },
+    {
+      "word": "貨物",
+      "start_ms": 1879.562,
+      "duration_ms": 318.187
+    },
+    {
+      "word": "的",
+      "start_ms": 2197.75,
+      "duration_ms": 90.875
+    },
+    {
+      "word": "地方",
+      "start_ms": 2288.625,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2913.625,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "裡面",
+      "start_ms": 3095.437,
+      "duration_ms": 340.937
+    },
+    {
+      "word": "有",
+      "start_ms": 3436.375,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "掌",
+      "start_ms": 3561.375,
+      "duration_ms": 204.562
+    },
+    {
+      "word": "櫃",
+      "start_ms": 3765.937,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "和",
+      "start_ms": 3947.75,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "夥計",
+      "start_ms": 4129.562,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "打理",
+      "start_ms": 4493.187,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "生意",
+      "start_ms": 4822.75,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "。",
+      "start_ms": 5345.437,
+      "duration_ms": 79.562
+    }
+  ]
+}

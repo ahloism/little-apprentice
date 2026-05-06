@@ -5,146 +5,161 @@
     {
       "word": "我們",
       "start_ms": 109.375,
-      "duration_ms": 484.375
-    },
-    {
-      "word": "剛才",
-      "start_ms": 593.75,
-      "duration_ms": 531.25
+      "duration_ms": 453.125
     },
     {
       "word": "說好",
-      "start_ms": 1125.0,
+      "start_ms": 562.5,
       "duration_ms": 750.0
     },
     {
       "word": "，",
-      "start_ms": 2015.625,
+      "start_ms": 1437.5,
       "duration_ms": 0.0
     },
     {
       "word": "若",
-      "start_ms": 2015.625,
+      "start_ms": 1437.5,
       "duration_ms": 250.0
     },
     {
-      "word": "再",
-      "start_ms": 2265.625,
+      "word": "走",
+      "start_ms": 1687.5,
       "duration_ms": 218.75
     },
     {
-      "word": "走散",
-      "start_ms": 2484.375,
-      "duration_ms": 828.125
+      "word": "散",
+      "start_ms": 1906.25,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "了",
+      "start_ms": 2281.25,
+      "duration_ms": 390.625
     },
     {
       "word": "，",
-      "start_ms": 3437.5,
+      "start_ms": 2828.125,
       "duration_ms": 0.0
     },
     {
       "word": "就",
-      "start_ms": 3437.5,
+      "start_ms": 2828.125,
       "duration_ms": 234.375
     },
     {
       "word": "在",
-      "start_ms": 3671.875,
-      "duration_ms": 203.125
-    },
-    {
-      "word": "北邊",
-      "start_ms": 3875.0,
-      "duration_ms": 375.0
-    },
-    {
-      "word": "那",
-      "start_ms": 4250.0,
-      "duration_ms": 203.125
-    },
-    {
-      "word": "一段",
-      "start_ms": 4453.125,
-      "duration_ms": 375.0
-    },
-    {
-      "word": "橋",
-      "start_ms": 4828.125,
+      "start_ms": 3062.5,
       "duration_ms": 234.375
     },
     {
-      "word": "欄",
-      "start_ms": 5062.5,
-      "duration_ms": 265.625
+      "word": "有",
+      "start_ms": 3296.875,
+      "duration_ms": 187.5
     },
     {
-      "word": "旁",
-      "start_ms": 5328.125,
-      "duration_ms": 281.25
+      "word": "船",
+      "start_ms": 3484.375,
+      "duration_ms": 296.875
     },
     {
-      "word": "再見",
-      "start_ms": 5609.375,
-      "duration_ms": 796.875
+      "word": "靠岸",
+      "start_ms": 3781.25,
+      "duration_ms": 828.125
     },
     {
-      "word": "。",
-      "start_ms": 6406.25,
-      "duration_ms": 109.375
+      "word": "、",
+      "start_ms": 4734.375,
+      "duration_ms": 0.0
     },
     {
-      "word": "我",
-      "start_ms": 7500.0,
-      "duration_ms": 203.125
-    },
-    {
-      "word": "現在",
-      "start_ms": 7703.125,
+      "word": "工人",
+      "start_ms": 4734.375,
       "duration_ms": 500.0
     },
     {
-      "word": "只怕",
-      "start_ms": 8203.125,
-      "duration_ms": 578.125
+      "word": "搬",
+      "start_ms": 5234.375,
+      "duration_ms": 265.625
     },
     {
-      "word": "自己",
-      "start_ms": 8781.25,
+      "word": "貨",
+      "start_ms": 5500.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "的",
+      "start_ms": 5687.5,
+      "duration_ms": 140.625
+    },
+    {
+      "word": "地方",
+      "start_ms": 5828.125,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "等",
+      "start_ms": 6359.375,
       "duration_ms": 468.75
     },
     {
-      "word": "記錯",
-      "start_ms": 9250.0,
-      "duration_ms": 734.375
+      "word": "。",
+      "start_ms": 6828.125,
+      "duration_ms": 109.375
     },
     {
-      "word": "。",
-      "start_ms": 9984.375,
+      "word": "Edmund",
+      "start_ms": 7862.5,
+      "duration_ms": 921.875
+    },
+    {
+      "word": "，",
+      "start_ms": 8940.625,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "你",
+      "start_ms": 8940.625,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "可",
+      "start_ms": 9206.25,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "記得",
+      "start_ms": 9440.625,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "？",
+      "start_ms": 10034.375,
       "duration_ms": 109.375
     },
     {
       "word": "那",
-      "start_ms": 11078.125,
-      "duration_ms": 218.75
+      "start_ms": 11156.25,
+      "duration_ms": 203.125
     },
     {
       "word": "是",
-      "start_ms": 11296.875,
+      "start_ms": 11359.375,
       "duration_ms": 234.375
     },
     {
       "word": "什麼",
-      "start_ms": 11531.25,
+      "start_ms": 11593.75,
       "duration_ms": 421.875
     },
     {
       "word": "地方",
-      "start_ms": 11953.125,
+      "start_ms": 12015.625,
       "duration_ms": 859.375
     },
     {
       "word": "？",
-      "start_ms": 12812.5,
+      "start_ms": 12875.0,
       "duration_ms": 109.375
     }
   ]

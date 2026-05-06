@@ -8,153 +8,173 @@
       "duration_ms": 453.125
     },
     {
-      "word": "說",
+      "word": "說好",
       "start_ms": 562.5,
-      "duration_ms": 296.875
-    },
-    {
-      "word": "過",
-      "start_ms": 859.375,
-      "duration_ms": 453.125
-    },
-    {
-      "word": "，",
-      "start_ms": 1468.75,
-      "duration_ms": 0.0
-    },
-    {
-      "word": "若",
-      "start_ms": 1468.75,
-      "duration_ms": 281.25
-    },
-    {
-      "word": "真",
-      "start_ms": 1750.0,
-      "duration_ms": 234.375
-    },
-    {
-      "word": "找不到",
-      "start_ms": 1984.375,
-      "duration_ms": 921.875
-    },
-    {
-      "word": "，",
-      "start_ms": 3062.5,
-      "duration_ms": 0.0
-    },
-    {
-      "word": "就",
-      "start_ms": 3062.5,
-      "duration_ms": 250.0
-    },
-    {
-      "word": "在",
-      "start_ms": 3312.5,
-      "duration_ms": 218.75
-    },
-    {
-      "word": "城門",
-      "start_ms": 3531.25,
-      "duration_ms": 437.5
-    },
-    {
-      "word": "外等",
-      "start_ms": 3968.75,
       "duration_ms": 750.0
     },
     {
       "word": "，",
-      "start_ms": 4875.0,
-      "duration_ms": 78.125
-    },
-    {
-      "word": "不是",
-      "start_ms": 4953.125,
-      "duration_ms": 375.0
-    },
-    {
-      "word": "城門",
-      "start_ms": 5328.125,
-      "duration_ms": 468.75
-    },
-    {
-      "word": "內",
-      "start_ms": 5796.875,
-      "duration_ms": 453.125
-    },
-    {
-      "word": "，",
-      "start_ms": 6421.875,
+      "start_ms": 1437.5,
       "duration_ms": 0.0
     },
     {
-      "word": "也",
-      "start_ms": 6421.875,
-      "duration_ms": 234.375
+      "word": "若",
+      "start_ms": 1437.5,
+      "duration_ms": 250.0
     },
     {
-      "word": "不是",
-      "start_ms": 6656.25,
+      "word": "走",
+      "start_ms": 1687.5,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "散",
+      "start_ms": 1906.25,
       "duration_ms": 359.375
     },
     {
-      "word": "貼",
-      "start_ms": 7015.625,
-      "duration_ms": 218.75
+      "word": "了",
+      "start_ms": 2265.625,
+      "duration_ms": 390.625
     },
     {
-      "word": "著",
-      "start_ms": 7234.375,
-      "duration_ms": 187.5
+      "word": "，",
+      "start_ms": 2812.5,
+      "duration_ms": 0.0
     },
     {
-      "word": "牆",
-      "start_ms": 7421.875,
-      "duration_ms": 265.625
+      "word": "就",
+      "start_ms": 2812.5,
+      "duration_ms": 234.375
     },
     {
-      "word": "外",
-      "start_ms": 7687.5,
-      "duration_ms": 218.75
+      "word": "在",
+      "start_ms": 3046.875,
+      "duration_ms": 234.375
     },
     {
-      "word": "隨便",
-      "start_ms": 7906.25,
-      "duration_ms": 578.125
+      "word": "有人",
+      "start_ms": 3281.25,
+      "duration_ms": 453.125
     },
     {
-      "word": "站",
-      "start_ms": 8484.375,
-      "duration_ms": 515.625
+      "word": "站台",
+      "start_ms": 3734.375,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "上",
+      "start_ms": 4265.625,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "講故事",
+      "start_ms": 4578.125,
+      "duration_ms": 984.375
+    },
+    {
+      "word": "、",
+      "start_ms": 5703.125,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "台下",
+      "start_ms": 5703.125,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "坐",
+      "start_ms": 6203.125,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "滿",
+      "start_ms": 6453.125,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "聽眾",
+      "start_ms": 6734.375,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "的",
+      "start_ms": 7203.125,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "地方",
+      "start_ms": 7312.5,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "等",
+      "start_ms": 7843.75,
+      "duration_ms": 468.75
     },
     {
       "word": "。",
-      "start_ms": 9000.0,
+      "start_ms": 8312.5,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "Edmund",
+      "start_ms": 9390.625,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "一定",
+      "start_ms": 9984.375,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "坐下來",
+      "start_ms": 10453.125,
+      "duration_ms": 765.625
+    },
+    {
+      "word": "聽",
+      "start_ms": 11218.75,
+      "duration_ms": 328.125
+    },
+    {
+      "word": "書",
+      "start_ms": 11546.875,
+      "duration_ms": 296.875
+    },
+    {
+      "word": "了",
+      "start_ms": 11843.75,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "。",
+      "start_ms": 12296.875,
       "duration_ms": 109.375
     },
     {
       "word": "那",
-      "start_ms": 10093.75,
+      "start_ms": 13390.625,
       "duration_ms": 218.75
     },
     {
       "word": "是",
-      "start_ms": 10312.5,
+      "start_ms": 13609.375,
       "duration_ms": 234.375
     },
     {
       "word": "什麼",
-      "start_ms": 10546.875,
+      "start_ms": 13843.75,
       "duration_ms": 421.875
     },
     {
       "word": "地方",
-      "start_ms": 10968.75,
+      "start_ms": 14265.625,
       "duration_ms": 859.375
     },
     {
       "word": "？",
-      "start_ms": 11828.125,
+      "start_ms": 15125.0,
       "duration_ms": 109.375
     }
   ]

@@ -5,166 +5,131 @@
     {
       "word": "有",
       "start_ms": 50.0,
-      "duration_ms": 204.56199999999998
+      "duration_ms": 204.562
     },
     {
       "word": "個",
       "start_ms": 254.562,
-      "duration_ms": 136.375
-    },
-    {
-      "word": "看門",
-      "start_ms": 390.937,
-      "duration_ms": 352.25
-    },
-    {
-      "word": "的",
-      "start_ms": 743.187,
       "duration_ms": 102.25
     },
     {
-      "word": "人",
-      "start_ms": 845.437,
-      "duration_ms": 136.375
+      "word": "士兵",
+      "start_ms": 356.812,
+      "duration_ms": 375.0
     },
     {
-      "word": "說",
-      "start_ms": 981.812,
-      "duration_ms": 272.75
+      "word": "告訴",
+      "start_ms": 731.812,
+      "duration_ms": 306.812
     },
     {
-      "word": "，",
-      "start_ms": 1379.5619,
-      "duration_ms": 0.0
-    },
-    {
-      "word": "她",
-      "start_ms": 1379.5619,
-      "duration_ms": 238.625
-    },
-    {
-      "word": "剛",
-      "start_ms": 1618.1869,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "走進",
-      "start_ms": 1800.0,
-      "duration_ms": 306.81199999999995
-    },
-    {
-      "word": "門",
-      "start_ms": 2106.812,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "裡",
-      "start_ms": 2265.937,
-      "duration_ms": 318.187
-    },
-    {
-      "word": "，",
-      "start_ms": 2720.437,
-      "duration_ms": 193.187
-    },
-    {
-      "word": "不是",
-      "start_ms": 2913.625,
-      "duration_ms": 272.75
-    },
-    {
-      "word": "在",
-      "start_ms": 3186.375,
-      "duration_ms": 170.437
-    },
-    {
-      "word": "門",
-      "start_ms": 3356.812,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "口",
-      "start_ms": 3538.625,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "停",
-      "start_ms": 3697.75,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "著",
-      "start_ms": 3856.812,
-      "duration_ms": 261.375
-    },
-    {
-      "word": "，",
-      "start_ms": 4243.187,
-      "duration_ms": 0.0
-    },
-    {
-      "word": "也",
-      "start_ms": 4243.187,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "不是",
-      "start_ms": 4425.0,
-      "duration_ms": 295.437
-    },
-    {
-      "word": "在",
-      "start_ms": 4720.437,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "院",
-      "start_ms": 4902.25,
-      "duration_ms": 147.75
-    },
-    {
-      "word": "內",
-      "start_ms": 5050.0,
-      "duration_ms": 170.437
-    },
-    {
-      "word": "更深",
-      "start_ms": 5220.437,
-      "duration_ms": 363.625
-    },
-    {
-      "word": "處",
-      "start_ms": 5584.062,
+      "word": "我",
+      "start_ms": 1038.625,
       "duration_ms": 340.937
     },
     {
+      "word": "，",
+      "start_ms": 1504.562,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "Margaret",
+      "start_ms": 1629.562,
+      "duration_ms": 431.812
+    },
+    {
+      "word": "站",
+      "start_ms": 2061.375,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "在",
+      "start_ms": 2288.625,
+      "duration_ms": 170.437
+    },
+    {
+      "word": "進出",
+      "start_ms": 2459.062,
+      "duration_ms": 284.062
+    },
+    {
+      "word": "城市",
+      "start_ms": 2743.187,
+      "duration_ms": 340.875
+    },
+    {
+      "word": "的",
+      "start_ms": 3084.062,
+      "duration_ms": 136.375
+    },
+    {
+      "word": "大門",
+      "start_ms": 3220.437,
+      "duration_ms": 363.625
+    },
+    {
+      "word": "旁邊",
+      "start_ms": 3584.062,
+      "duration_ms": 477.25
+    },
+    {
+      "word": "，",
+      "start_ms": 4186.375,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "說",
+      "start_ms": 4186.375,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "要",
+      "start_ms": 4436.375,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "等",
+      "start_ms": 4550.0,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "一",
+      "start_ms": 4743.187,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "個人",
+      "start_ms": 4845.437,
+      "duration_ms": 397.75
+    },
+    {
       "word": "。",
-      "start_ms": 5936.375,
+      "start_ms": 5243.187,
       "duration_ms": 79.562
     },
     {
       "word": "那",
-      "start_ms": 6697.75,
+      "start_ms": 6004.562,
       "duration_ms": 227.25
     },
     {
       "word": "是",
-      "start_ms": 6925.0,
+      "start_ms": 6231.812,
       "duration_ms": 181.812
     },
     {
       "word": "什麼",
-      "start_ms": 7106.812,
-      "duration_ms": 306.81199999999995
+      "start_ms": 6413.625,
+      "duration_ms": 306.812
     },
     {
       "word": "地方",
-      "start_ms": 7413.625,
+      "start_ms": 6720.437,
       "duration_ms": 500.0
     },
     {
       "word": "？",
-      "start_ms": 7913.625,
+      "start_ms": 7220.437,
       "duration_ms": 79.562
     }
   ]

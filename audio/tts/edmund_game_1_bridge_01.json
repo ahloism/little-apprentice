@@ -3,158 +3,153 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "剛才",
-      "start_ms": 50.0,
-      "duration_ms": 386.375
-    },
-    {
       "word": "有",
-      "start_ms": 436.375,
-      "duration_ms": 147.687
-    },
-    {
-      "word": "個",
-      "start_ms": 584.062,
-      "duration_ms": 113.625
-    },
-    {
-      "word": "挑擔",
-      "start_ms": 697.75,
-      "duration_ms": 397.687
-    },
-    {
-      "word": "的",
-      "start_ms": 1095.4369,
-      "duration_ms": 102.25
-    },
-    {
-      "word": "人",
-      "start_ms": 1197.75,
-      "duration_ms": 159.062
-    },
-    {
-      "word": "告訴",
-      "start_ms": 1356.8119,
-      "duration_ms": 306.81199999999995
-    },
-    {
-      "word": "我",
-      "start_ms": 1663.625,
-      "duration_ms": 340.937
-    },
-    {
-      "word": "，",
-      "start_ms": 2129.562,
-      "duration_ms": 113.625
-    },
-    {
-      "word": "她",
-      "start_ms": 2243.187,
-      "duration_ms": 215.875
-    },
-    {
-      "word": "往",
-      "start_ms": 2459.062,
-      "duration_ms": 181.812
-    },
-    {
-      "word": "東",
-      "start_ms": 2640.937,
-      "duration_ms": 147.687
-    },
-    {
-      "word": "那邊",
-      "start_ms": 2788.625,
-      "duration_ms": 329.562
-    },
-    {
-      "word": "走",
-      "start_ms": 3118.187,
-      "duration_ms": 147.75
-    },
-    {
-      "word": "了",
-      "start_ms": 3265.937,
-      "duration_ms": 306.81199999999995
-    },
-    {
-      "word": "。",
-      "start_ms": 3584.062,
-      "duration_ms": 79.562
-    },
-    {
-      "word": "我",
-      "start_ms": 4345.437,
-      "duration_ms": 215.93699999999998
-    },
-    {
-      "word": "只見",
-      "start_ms": 4561.375,
-      "duration_ms": 352.25
-    },
-    {
-      "word": "到",
-      "start_ms": 4913.625,
-      "duration_ms": 136.375
-    },
-    {
-      "word": "她",
-      "start_ms": 5050.0,
+      "start_ms": 50.0,
       "duration_ms": 193.187
     },
     {
-      "word": "帽子",
-      "start_ms": 5243.187,
-      "duration_ms": 329.562
+      "word": "個",
+      "start_ms": 243.187,
+      "duration_ms": 113.625
+    },
+    {
+      "word": "賣",
+      "start_ms": 356.812,
+      "duration_ms": 193.187
+    },
+    {
+      "word": "餅",
+      "start_ms": 550.0,
+      "duration_ms": 159.062
     },
     {
       "word": "的",
-      "start_ms": 5572.75,
-      "duration_ms": 136.31199999999998
+      "start_ms": 709.062,
+      "duration_ms": 68.187
     },
     {
-      "word": "影子",
-      "start_ms": 5709.062,
+      "word": "小販",
+      "start_ms": 777.25,
       "duration_ms": 397.75
     },
     {
-      "word": "一下子",
-      "start_ms": 6106.812,
-      "duration_ms": 500.0
+      "word": "指給",
+      "start_ms": 1175.0,
+      "duration_ms": 272.75
     },
     {
-      "word": "閃過",
-      "start_ms": 6606.812,
-      "duration_ms": 522.75
+      "word": "我",
+      "start_ms": 1447.75,
+      "duration_ms": 147.687
+    },
+    {
+      "word": "看",
+      "start_ms": 1595.437,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "，",
+      "start_ms": 2072.75,
+      "duration_ms": 11.312
+    },
+    {
+      "word": "說",
+      "start_ms": 2084.062,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "Margaret",
+      "start_ms": 2334.062,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "走進",
+      "start_ms": 2709.062,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "一間",
+      "start_ms": 3038.625,
+      "duration_ms": 284.062
+    },
+    {
+      "word": "給",
+      "start_ms": 3322.75,
+      "duration_ms": 159.062
+    },
+    {
+      "word": "外地人",
+      "start_ms": 3481.812,
+      "duration_ms": 465.937
+    },
+    {
+      "word": "住宿",
+      "start_ms": 3947.75,
+      "duration_ms": 397.75
+    },
+    {
+      "word": "、",
+      "start_ms": 4447.75,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "有",
+      "start_ms": 4447.75,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "床",
+      "start_ms": 4629.562,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "有",
+      "start_ms": 4856.812,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "飯",
+      "start_ms": 4981.812,
+      "duration_ms": 181.812
+    },
+    {
+      "word": "的",
+      "start_ms": 5163.625,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "地方",
+      "start_ms": 5243.187,
+      "duration_ms": 477.25
     },
     {
       "word": "。",
-      "start_ms": 7140.937,
+      "start_ms": 5731.812,
       "duration_ms": 79.562
     },
     {
       "word": "那",
-      "start_ms": 7902.25,
+      "start_ms": 6493.187,
       "duration_ms": 227.25
     },
     {
       "word": "是",
-      "start_ms": 8129.562,
+      "start_ms": 6720.437,
       "duration_ms": 181.812
     },
     {
       "word": "什麼",
-      "start_ms": 8311.375,
-      "duration_ms": 306.81199999999995
+      "start_ms": 6902.25,
+      "duration_ms": 306.812
     },
     {
       "word": "地方",
-      "start_ms": 8618.187,
+      "start_ms": 7209.062,
       "duration_ms": 500.0
     },
     {
       "word": "？",
-      "start_ms": 9118.187,
+      "start_ms": 7709.062,
       "duration_ms": 79.562
     }
   ]

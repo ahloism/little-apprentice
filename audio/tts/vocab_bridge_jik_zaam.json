@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_bridge_jik_zaam.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "驛站",
+      "start_ms": 50.0,
+      "duration_ms": 465.937
+    },
+    {
+      "word": "。",
+      "start_ms": 527.25,
+      "duration_ms": 79.562
+    },
+    {
+      "word": "供",
+      "start_ms": 1288.625,
+      "duration_ms": 227.25
+    },
+    {
+      "word": "傳信",
+      "start_ms": 1515.937,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "人和",
+      "start_ms": 1868.187,
+      "duration_ms": 329.562
+    },
+    {
+      "word": "旅客",
+      "start_ms": 2197.75,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "歇腳",
+      "start_ms": 2572.75,
+      "duration_ms": 340.875
+    },
+    {
+      "word": "換馬",
+      "start_ms": 2913.625,
+      "duration_ms": 284.062
+    },
+    {
+      "word": "的",
+      "start_ms": 3197.75,
+      "duration_ms": 102.25
+    },
+    {
+      "word": "地方",
+      "start_ms": 3300.0,
+      "duration_ms": 511.375
+    },
+    {
+      "word": "。",
+      "start_ms": 3822.75,
+      "duration_ms": 79.562
+    }
+  ]
+}

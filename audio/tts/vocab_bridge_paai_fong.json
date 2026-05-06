@@ -1,0 +1,111 @@
+{
+  "filename": "vocab_bridge_paai_fong.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "牌",
+      "start_ms": 93.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "坊",
+      "start_ms": 375.0,
+      "duration_ms": 609.375
+    },
+    {
+      "word": "。",
+      "start_ms": 984.375,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "街",
+      "start_ms": 2062.5,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "上",
+      "start_ms": 2281.25,
+      "duration_ms": 359.375
+    },
+    {
+      "word": "高",
+      "start_ms": 2640.625,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "高",
+      "start_ms": 2875.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "的",
+      "start_ms": 3062.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "石門",
+      "start_ms": 3187.5,
+      "duration_ms": 796.875
+    },
+    {
+      "word": "，",
+      "start_ms": 4125.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "上面",
+      "start_ms": 4125.0,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "刻",
+      "start_ms": 4718.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "著",
+      "start_ms": 4968.75,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "字",
+      "start_ms": 5234.375,
+      "duration_ms": 406.25
+    },
+    {
+      "word": "，",
+      "start_ms": 5796.875,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "是",
+      "start_ms": 5796.875,
+      "duration_ms": 265.625
+    },
+    {
+      "word": "重要",
+      "start_ms": 6062.5,
+      "duration_ms": 453.125
+    },
+    {
+      "word": "地方",
+      "start_ms": 6515.625,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "的",
+      "start_ms": 7046.875,
+      "duration_ms": 171.875
+    },
+    {
+      "word": "標誌",
+      "start_ms": 7218.75,
+      "duration_ms": 703.125
+    },
+    {
+      "word": "。",
+      "start_ms": 7921.875,
+      "duration_ms": 109.375
+    }
+  ]
+}

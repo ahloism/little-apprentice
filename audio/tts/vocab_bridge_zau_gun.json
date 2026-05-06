@@ -1,0 +1,61 @@
+{
+  "filename": "vocab_bridge_zau_gun.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "酒館",
+      "start_ms": 109.375,
+      "duration_ms": 875.0
+    },
+    {
+      "word": "。",
+      "start_ms": 984.375,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "喝酒",
+      "start_ms": 2078.125,
+      "duration_ms": 515.625
+    },
+    {
+      "word": "吃飯",
+      "start_ms": 2593.75,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3093.75,
+      "duration_ms": 140.625
+    },
+    {
+      "word": "地方",
+      "start_ms": 3234.375,
+      "duration_ms": 765.625
+    },
+    {
+      "word": "，",
+      "start_ms": 4125.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "晚上",
+      "start_ms": 4125.0,
+      "duration_ms": 656.25
+    },
+    {
+      "word": "特別",
+      "start_ms": 4781.25,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "熱鬧",
+      "start_ms": 5218.75,
+      "duration_ms": 703.125
+    },
+    {
+      "word": "。",
+      "start_ms": 5921.875,
+      "duration_ms": 109.375
+    }
+  ]
+}

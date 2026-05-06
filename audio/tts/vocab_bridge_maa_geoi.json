@@ -1,0 +1,76 @@
+{
+  "filename": "vocab_bridge_maa_geoi.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "馬廄",
+      "start_ms": 125.0,
+      "duration_ms": 765.625
+    },
+    {
+      "word": "。",
+      "start_ms": 890.625,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "養",
+      "start_ms": 1984.375,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "馬",
+      "start_ms": 2234.375,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "的",
+      "start_ms": 2468.75,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "地方",
+      "start_ms": 2625.0,
+      "duration_ms": 750.0
+    },
+    {
+      "word": "，",
+      "start_ms": 3484.375,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "有",
+      "start_ms": 3484.375,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "草料",
+      "start_ms": 3718.75,
+      "duration_ms": 546.875
+    },
+    {
+      "word": "和",
+      "start_ms": 4265.625,
+      "duration_ms": 234.375
+    },
+    {
+      "word": "馬糞",
+      "start_ms": 4500.0,
+      "duration_ms": 484.375
+    },
+    {
+      "word": "的",
+      "start_ms": 4984.375,
+      "duration_ms": 109.375
+    },
+    {
+      "word": "氣味",
+      "start_ms": 5093.75,
+      "duration_ms": 734.375
+    },
+    {
+      "word": "。",
+      "start_ms": 5828.125,
+      "duration_ms": 109.375
+    }
+  ]
+}
