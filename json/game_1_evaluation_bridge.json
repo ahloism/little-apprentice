@@ -4,212 +4,102 @@
   "variations": [
     {
       "variation_id": "game_1_bridge_01",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_dung",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_naam",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        },
-        {
-          "option_id": "opt_sai",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        }
+        { "option_id": "opt_soeng_hang", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_si_zaap", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_haak_zaan", "role": "correct" }
       ]
     },
     {
       "variation_id": "game_1_bridge_02",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_bak",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_zo2",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        },
-        {
-          "option_id": "opt_jau6",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        }
+        { "option_id": "opt_maa_tau", "role": "correct" },
+        { "option_id": "opt_cong_fu", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_maa_geoi", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_03",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_cin4",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        },
-        {
-          "option_id": "opt_hau6",
-          "role": "distractor",
-          "distractor_type": "same_direction_class"
-        },
-        {
-          "option_id": "opt_ce4_deoi3_min6",
-          "role": "correct"
-        }
+        { "option_id": "opt_kiu", "role": "correct" },
+        { "option_id": "opt_hong_zi", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_gaai_dou", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_04",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_paak_bin1",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        },
-        {
-          "option_id": "opt_deoi3_min6",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        },
-        {
-          "option_id": "opt_zung1_gaan1",
-          "role": "correct"
-        }
+        { "option_id": "opt_caa_seoi_taan", "role": "correct" },
+        { "option_id": "opt_zau_gun", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_sik_si", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_05",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_fu6_gan6",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        },
-        {
-          "option_id": "opt_gaak3_lei4",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        },
-        {
-          "option_id": "opt_zyun2_gok3",
-          "role": "correct"
-        }
+        { "option_id": "opt_joek_pou", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_bou_zong", "role": "correct" },
+        { "option_id": "opt_loeng_dim", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_06",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_zeon2_tau4",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_jyun4_lou6",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        },
-        {
-          "option_id": "opt_ce4_paak_bin1",
-          "role": "distractor",
-          "distractor_type": "same_relative_class"
-        }
+        { "option_id": "opt_cin_zong", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_dong_pou", "role": "correct" },
+        { "option_id": "opt_dou_fong", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_07",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_mun4_hau2",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        },
-        {
-          "option_id": "opt_mun4_noi6",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_jyun2_noi6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        }
+        { "option_id": "opt_miu_jyu", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_sing_mun", "role": "correct" },
+        { "option_id": "opt_gun_fu", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_08",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_sing4_mun4_noi6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        },
-        {
-          "option_id": "opt_sing4_mun4_ngoi6",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_coeng4_ngoi6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        }
+        { "option_id": "opt_syu_jyun", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_caa_lau", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_syut_syu_toi", "role": "correct" }
       ]
     },
     {
       "variation_id": "game_1_bridge_09",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_kiu4_soeng6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        },
-        {
-          "option_id": "opt_kiu4_haa6",
-          "role": "correct"
-        },
-        {
-          "option_id": "opt_kiu4_tau4",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        }
+        { "option_id": "opt_jik_zaam", "role": "correct" },
+        { "option_id": "opt_ji_gun", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_faan_si_ci", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     },
     {
       "variation_id": "game_1_bridge_10",
-      "dimension": "context_understanding",
-      "skill": "spatial_word_discrimination",
+      "dimension": "vocabulary",
+      "skill": "place_word_recognition",
       "options": [
-        {
-          "option_id": "opt_dim3_noi6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        },
-        {
-          "option_id": "opt_dim3_ngoi6",
-          "role": "distractor",
-          "distractor_type": "same_inside_outside_class"
-        },
-        {
-          "option_id": "opt_jim4_haa6",
-          "role": "correct"
-        }
+        { "option_id": "opt_gwong_coeng", "role": "correct" },
+        { "option_id": "opt_paai_fong", "role": "distractor", "distractor_type": "same_place_class" },
+        { "option_id": "opt_sing_lau", "role": "distractor", "distractor_type": "same_place_class" }
       ]
     }
   ]

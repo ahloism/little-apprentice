@@ -8,7 +8,8 @@
       "trigger_type": "auto",
       "trigger_condition": "first_map_entry",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 1
     },
     {
       "rule_id": "auto_A2",
@@ -16,7 +17,8 @@
       "trigger_type": "auto",
       "trigger_condition": "first_location_appear",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 2
     },
     {
       "rule_id": "auto_A3",
@@ -24,7 +26,8 @@
       "trigger_type": "auto",
       "trigger_condition": "first_coins_earned",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 3
     },
     {
       "rule_id": "auto_A4",
@@ -32,15 +35,8 @@
       "trigger_type": "auto",
       "trigger_condition": "first_unlock_available",
       "repeat": false,
-      "room": "map"
-    },
-    {
-      "rule_id": "auto_A5",
-      "dialogue_id": "A5",
-      "trigger_type": "auto",
-      "trigger_condition": "first_game_complete",
-      "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 6
     },
     {
       "rule_id": "auto_A6",
@@ -48,7 +44,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_1",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A7",
@@ -56,7 +53,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_2",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A8",
@@ -64,7 +62,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_3",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A9",
@@ -72,7 +71,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_4_choice_A",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A10",
@@ -80,7 +80,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_4_choice_B",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A11",
@@ -88,7 +89,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_4_choice_C",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A12",
@@ -96,7 +98,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_5",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A13",
@@ -104,7 +107,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_6",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A14",
@@ -112,7 +116,8 @@
       "trigger_type": "auto",
       "trigger_condition": "after_event_1_7",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 4
     },
     {
       "rule_id": "auto_A15",
@@ -120,7 +125,8 @@
       "trigger_type": "auto",
       "trigger_condition": "map_colored_gte_4",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 5
     },
     {
       "rule_id": "auto_A16",
@@ -128,7 +134,8 @@
       "trigger_type": "auto",
       "trigger_condition": "map_all_colored",
       "repeat": false,
-      "room": "map"
+      "room": "map",
+      "priority": 5
     },
     {
       "rule_id": "tap_T1",
@@ -141,7 +148,8 @@
       "trigger_condition": "main_story_incomplete",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "tap_T2",
@@ -154,7 +162,8 @@
       "trigger_condition": "unlock_available_coins_sufficient",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "tap_T3",
@@ -167,7 +176,8 @@
       "trigger_condition": "unlock_available_coins_insufficient",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "tap_T4",
@@ -180,7 +190,8 @@
       "trigger_condition": "all_unlocked_story_incomplete",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "tap_T5",
@@ -193,7 +204,8 @@
       "trigger_condition": "all_colored_story_complete",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "tap_T6",
@@ -206,7 +218,8 @@
       "trigger_condition": "any_location_colored AND every_3_taps",
       "repeat": true,
       "rotate": true,
-      "room": "map"
+      "room": "map",
+      "priority": 10
     },
     {
       "rule_id": "auto_R1",
@@ -214,7 +227,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_warehouse_sufficient",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_R2",
@@ -222,7 +236,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_market_sufficient",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_R3",
@@ -230,7 +245,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_bridge_sufficient",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_R4",
@@ -238,7 +254,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_inn_sufficient",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_R5",
@@ -246,7 +263,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_dock_sufficient",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_R6",
@@ -254,7 +272,8 @@
       "trigger_type": "auto",
       "trigger_condition": "tap_location_insufficient_coins",
       "repeat": true,
-      "room": "map"
+      "room": "map",
+      "priority": 9
     },
     {
       "rule_id": "auto_G1",
@@ -262,23 +281,17 @@
       "trigger_type": "auto",
       "trigger_condition": "first_minigame_entry",
       "repeat": false,
-      "room": "minigame"
+      "room": "minigame",
+      "priority": 13
     },
     {
       "rule_id": "auto_G2",
       "dialogue_id": "G2",
       "trigger_type": "auto",
-      "trigger_condition": "minigame_complete_good",
-      "repeat": true,
-      "room": "minigame"
-    },
-    {
-      "rule_id": "auto_G3",
-      "dialogue_id": "G3",
-      "trigger_type": "auto",
-      "trigger_condition": "minigame_complete_average",
-      "repeat": true,
-      "room": "minigame"
+      "trigger_condition": "minigame_first_correct",
+      "repeat": false,
+      "room": "map",
+      "priority": 8
     },
     {
       "rule_id": "auto_M1",
@@ -286,15 +299,8 @@
       "trigger_type": "auto",
       "trigger_condition": "story_1_1_asui_appears",
       "repeat": false,
-      "room": "story"
-    },
-    {
-      "rule_id": "auto_return",
-      "dialogue_id": "return_to_map",
-      "trigger_type": "auto",
-      "trigger_condition": "return_to_map",
-      "repeat": true,
-      "room": "map"
+      "room": "story",
+      "priority": 11
     },
     {
       "rule_id": "auto_W1",
@@ -302,7 +308,8 @@
       "trigger_type": "auto",
       "trigger_condition": "before_event_1_4",
       "repeat": false,
-      "room": "story"
+      "room": "story",
+      "priority": 12
     },
     {
       "rule_id": "auto_W2",
@@ -310,7 +317,62 @@
       "trigger_type": "auto",
       "trigger_condition": "before_event_1_7",
       "repeat": false,
-      "room": "story"
+      "room": "story",
+      "priority": 12
+    },
+    {
+      "rule_id": "auto_A17",
+      "dialogue_id": "A17",
+      "trigger_type": "auto",
+      "trigger_condition": "after_event_1_1",
+      "priority": 7,
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_return_reload",
+      "dialogue_id": "return_to_map_reload",
+      "trigger_type": "auto",
+      "trigger_condition": "reload_return_to_map",
+      "priority": 99,
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_return_normal",
+      "dialogue_id": "return_to_map_normal",
+      "trigger_type": "auto",
+      "trigger_condition": "normal_return_to_map",
+      "priority": 99,
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_G3",
+      "dialogue_id": "G3",
+      "trigger_type": "auto",
+      "trigger_condition": "minigame_replay_correct",
+      "priority": 8,
+      "repeat": true,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_G4",
+      "dialogue_id": "G4",
+      "trigger_type": "auto",
+      "trigger_condition": "minigame_first_wrong",
+      "priority": 8,
+      "repeat": false,
+      "room": "map"
+    },
+    {
+      "rule_id": "auto_G5",
+      "dialogue_id": "G5",
+      "trigger_type": "auto",
+      "trigger_condition": "minigame_replay_wrong",
+      "priority": 8,
+      "repeat": true,
+      "room": "map"
     }
   ]
 }

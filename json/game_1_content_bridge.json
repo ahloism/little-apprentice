@@ -4,252 +4,162 @@
   "game_name": "橋邊問路",
   "entry_page": {
     "title": "橋邊問路",
-    "intro_text": "兩個外地人走散了，他們說了方向，幫他們找到對方在哪裡。",
+    "intro_text": "兩個外地人Edmund和Margaret又在大梁城走散了。他們各自向阿禾描述自己身處的地方，請阿禾幫忙找出他們在哪裡。",
     "speaker": "narrator"
   },
   "location": "bridge",
-  "game_type": "fill_spatial_word",
+  "game_type": "identify_place",
   "fixed_sentence": "那是什麼地方？",
   "vocabulary_bank": {
-    "dung": {
-      "word": "東",
-      "description": "就是太陽升起那一邊，我想她應該在東。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "就是太陽升起那一邊，我想她應該在東。"
+    "soeng_hang": {
+      "word": "商行",
+      "intro_text": "買賣貨物的地方，裡面有掌櫃和夥計打理生意。",
+      "features": { "place_type": "basic" }
     },
-    "naam": {
-      "word": "南",
-      "description": "若我沒有記錯，應該是向南那邊。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "若我沒有記錯，應該是向南那邊。"
+    "si_zaap": {
+      "word": "市集",
+      "intro_text": "很多攤檔聚在一起，熱熱鬧鬧地賣各種東西。",
+      "features": { "place_type": "basic" }
     },
-    "sai": {
-      "word": "西",
-      "description": "她像是在太陽落下那一邊，也就是西。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "她像是在太陽落下那一邊，也就是西。"
+    "haak_zaan": {
+      "word": "客棧",
+      "intro_text": "給外地人住宿的地方，有床有飯，可以過夜。",
+      "features": { "place_type": "basic" }
     },
-    "bak": {
-      "word": "北",
-      "description": "我想她應該在北面，就是與南相反那邊。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "我想她應該在北面，就是與南相反那邊。"
+    "maa_tau": {
+      "word": "碼頭",
+      "intro_text": "船隻停靠的地方，工人在這裡搬運貨物上落。",
+      "features": { "place_type": "basic" }
     },
-    "zo2": {
-      "word": "左",
-      "description": "她應該在左邊，就是我手杖這邊。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "她應該在左邊，就是我手杖這邊。"
+    "cong_fu": {
+      "word": "倉庫",
+      "intro_text": "存放貨物的大房間，裡面堆滿箱子和麻袋。",
+      "features": { "place_type": "basic" }
     },
-    "jau6": {
-      "word": "右",
-      "description": "我看見她在右邊，就是另一側那邊。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "我看見她在右邊，就是另一側那邊。"
+    "maa_geoi": {
+      "word": "馬廄",
+      "intro_text": "養馬的地方，有草料和馬糞的氣味。",
+      "features": { "place_type": "basic" }
     },
-    "cin4": {
-      "word": "前",
-      "description": "她就在前面，不是在我身後。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "她就在前面，不是在我身後。"
+    "kiu": {
+      "word": "橋",
+      "intro_text": "跨過河面讓人通行的建築，可以走到對岸。",
+      "features": { "place_type": "basic" }
     },
-    "hau6": {
-      "word": "後",
-      "description": "她應該在後面，我轉身才看得到。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "她應該在後面，我轉身才看得到。"
+    "hong_zi": {
+      "word": "巷子",
+      "intro_text": "兩排房子之間窄窄的通道，人要側身才過得去。",
+      "features": { "place_type": "basic" }
     },
-    "ce4_deoi3_min6": {
-      "word": "斜對面",
-      "description": "不是正正對面，是斜斜地對著那邊。",
-      "features": {
-        "direction_type": "basic"
-      },
-      "intro_text": "不是正正對面，是斜斜地對著那邊。"
+    "gaai_dou": {
+      "word": "街道",
+      "intro_text": "城裡寬闊的通道，兩旁有店鋪和行人。",
+      "features": { "place_type": "basic" }
     },
-    "paak_bin1": {
-      "word": "旁邊",
-      "description": "她就在旁邊，挨得很近，不用走遠。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她就在旁邊，挨得很近，不用走遠。"
+    "caa_seoi_taan": {
+      "word": "茶水攤",
+      "intro_text": "在街邊擺攤賣茶水的地方，有茶壺和茶碗，客人站著或坐著喝。",
+      "features": { "place_type": "commercial" }
     },
-    "deoi3_min6": {
-      "word": "對面",
-      "description": "她在對面，要隔著這條路看過去。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她在對面，要隔著這條路看過去。"
+    "zau_gun": {
+      "word": "酒館",
+      "intro_text": "喝酒吃飯的地方，晚上特別熱鬧。",
+      "features": { "place_type": "commercial" }
     },
-    "zung1_gaan1": {
-      "word": "中間",
-      "description": "她在中間，被兩邊的人和攤子夾著。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她在中間，被兩邊的人和攤子夾著。"
+    "sik_si": {
+      "word": "食肆",
+      "intro_text": "專門賣飯菜的地方，肚子餓了可以進去吃。",
+      "features": { "place_type": "commercial" }
     },
-    "fu6_gan6": {
-      "word": "附近",
-      "description": "她應該就在附近，不會離我太遠。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她應該就在附近，不會離我太遠。"
+    "joek_pou": {
+      "word": "藥鋪",
+      "intro_text": "賣草藥的地方，裡面有很多抽屜裝著各種藥材。",
+      "features": { "place_type": "commercial" }
     },
-    "gaak3_lei4": {
-      "word": "隔壁",
-      "description": "她在隔壁，就是緊貼著旁邊另一個位置。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她在隔壁，就是緊貼著旁邊另一個位置。"
+    "bou_zong": {
+      "word": "布莊",
+      "intro_text": "賣布料的地方，掛著各色各樣的布匹。",
+      "features": { "place_type": "commercial" }
     },
-    "zyun2_gok3": {
-      "word": "轉角",
-      "description": "她應該在轉角，拐過去就會看到。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她應該在轉角，拐過去就會看到。"
+    "loeng_dim": {
+      "word": "糧店",
+      "intro_text": "賣米糧的地方，有很多大袋米和雜糧。",
+      "features": { "place_type": "commercial" }
     },
-    "zeon2_tau4": {
-      "word": "盡頭",
-      "description": "她在那條路的盡頭，要一直走到尾。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她在那條路的盡頭，要一直走到尾。"
+    "cin_zong": {
+      "word": "錢莊",
+      "intro_text": "可以換錢或存錢的地方，掌櫃算盤打得很快。",
+      "features": { "place_type": "commercial" }
     },
-    "jyun4_lou6": {
-      "word": "沿路",
-      "description": "你沿著這條路一直走，就會見到她。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "你沿著這條路一直走，就會見到她。"
+    "dong_pou": {
+      "word": "當鋪",
+      "intro_text": "可以把東西押在這裡換錢的地方。",
+      "features": { "place_type": "commercial" }
     },
-    "ce4_paak_bin1": {
-      "word": "斜旁",
-      "description": "她不在正旁邊，是斜斜在旁那一點。",
-      "features": {
-        "direction_type": "relative"
-      },
-      "intro_text": "她不在正旁邊，是斜斜在旁那一點。"
+    "dou_fong": {
+      "word": "賭坊",
+      "intro_text": "有人在裡面賭錢的地方，門口常有人進進出出。",
+      "features": { "place_type": "commercial" }
     },
-    "mun4_hau2": {
-      "word": "門口",
-      "description": "她在門口，就站在出入口那裡。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在門口，就站在出入口那裡。"
+    "miu_jyu": {
+      "word": "廟宇",
+      "intro_text": "供奉神明的地方，有香爐和牌位，人們來這裡拜神。",
+      "features": { "place_type": "public" }
     },
-    "mun4_noi6": {
-      "word": "門內",
-      "description": "她在門內，要走進門才見到。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在門內，要走進門才見到。"
+    "sing_mun": {
+      "word": "城門",
+      "intro_text": "進出城市的大門，又高又厚，有士兵把守。",
+      "features": { "place_type": "public" }
     },
-    "jyun2_noi6": {
-      "word": "院內",
-      "description": "她在院內，不在街上，是院子裡面。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在院內，不在街上，是院子裡面。"
+    "gun_fu": {
+      "word": "官府",
+      "intro_text": "官員處理公務的地方，大門前有衙差站崗。",
+      "features": { "place_type": "public" }
     },
-    "sing4_mun4_noi6": {
-      "word": "城門內",
-      "description": "她在城門內，還未走到城外那邊。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在城門內，還未走到城外那邊。"
+    "syu_jyun": {
+      "word": "書院",
+      "intro_text": "讀書求學的地方，學生在這裡跟先生學習。",
+      "features": { "place_type": "public" }
     },
-    "sing4_mun4_ngoi6": {
-      "word": "城門外",
-      "description": "她在城門外，要出了城門才找得到。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在城門外，要出了城門才找得到。"
+    "caa_lau": {
+      "word": "茶樓",
+      "intro_text": "比茶館更大的喝茶地方，有點心可以叫來吃。",
+      "features": { "place_type": "public" }
     },
-    "coeng4_ngoi6": {
-      "word": "牆外",
-      "description": "她不在牆這邊，而是在牆外頭。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她不在牆這邊，而是在牆外頭。"
+    "syut_syu_toi": {
+      "word": "說書台",
+      "intro_text": "說書人站在台上講故事，台下坐滿來聽書的人。",
+      "features": { "place_type": "public" }
     },
-    "kiu4_soeng6": {
-      "word": "橋上",
-      "description": "她在橋上，不在橋頭也不在橋下。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在橋上，不在橋頭也不在橋下。"
+    "jik_zaam": {
+      "word": "驛站",
+      "intro_text": "供傳信人和旅客歇腳換馬的地方。",
+      "features": { "place_type": "city" }
     },
-    "kiu4_haa6": {
-      "word": "橋下",
-      "description": "她在橋下，是橋身底下那邊。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在橋下，是橋身底下那邊。"
+    "ji_gun": {
+      "word": "醫館",
+      "intro_text": "看病的地方，大夫在這裡替病人診脈開藥。",
+      "features": { "place_type": "city" }
     },
-    "kiu4_tau4": {
-      "word": "橋頭",
-      "description": "她在橋頭，就是橋開始那一段。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在橋頭，就是橋開始那一段。"
+    "faan_si_ci": {
+      "word": "化糞池",
+      "intro_text": "處理污物的地方，氣味很難聞，人們都不願靠近。",
+      "features": { "place_type": "city" }
     },
-    "dim3_noi6": {
-      "word": "店內",
-      "description": "她在店內，進了鋪子裡面。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在店內，進了鋪子裡面。"
+    "gwong_coeng": {
+      "word": "廣場",
+      "intro_text": "空曠的大空地，人們在這裡聚集、做買賣或看熱鬧。",
+      "features": { "place_type": "city" }
     },
-    "dim3_ngoi6": {
-      "word": "店外",
-      "description": "她在店外，還站在門外那邊。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在店外，還站在門外那邊。"
+    "paai_fong": {
+      "word": "牌坊",
+      "intro_text": "街上高高的石門，上面刻著字，是重要地方的標誌。",
+      "features": { "place_type": "city" }
     },
-    "jim4_haa6": {
-      "word": "簷下",
-      "description": "她在簷下，站在屋簷遮住的地方。",
-      "features": {
-        "direction_type": "inside_outside"
-      },
-      "intro_text": "她在簷下，站在屋簷遮住的地方。"
+    "sing_lau": {
+      "word": "城樓",
+      "intro_text": "建在城牆上的樓，可以俯瞰整個城市。",
+      "features": { "place_type": "city" }
     }
   },
   "feedback_templates": {
@@ -271,121 +181,81 @@
       "variation_id": "game_1_bridge_01",
       "speaker_id": "edmund",
       "story_logic": "third_party_report",
-      "question_text": "剛才有個挑擔的人告訴我，她往東那邊走了。我只見到她帽子的影子一下子閃過。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "dung",
-        "naam",
-        "sai"
-      ],
-      "answer_restate": "東。"
+      "question_text": "有個賣餅的小販指給我看，說Margaret走進一間給外地人住宿、有床有飯的地方。那是什麼地方？",
+      "vocabulary_intro_ids": ["soeng_hang", "si_zaap", "haak_zaan"],
+      "answer_restate": "客棧。"
     },
     {
       "variation_id": "game_1_bridge_02",
       "speaker_id": "margaret",
       "story_logic": "meeting_point",
-      "question_text": "我們剛才說好，若再走散，就在北邊那一段橋欄旁再見。我現在只怕自己記錯。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "bak",
-        "zo2",
-        "jau6"
-      ],
-      "answer_restate": "北。"
+      "question_text": "我們說好，若走散了，就在有船靠岸、工人搬貨的地方等。Edmund，你可記得？那是什麼地方？",
+      "vocabulary_intro_ids": ["maa_tau", "cong_fu", "maa_geoi"],
+      "answer_restate": "碼頭。"
     },
     {
       "variation_id": "game_1_bridge_03",
       "speaker_id": "edmund",
       "story_logic": "far_sighting",
-      "question_text": "我遠遠看見她的人影，不是在我前面，也不是在我後頭，像是斜斜地對著我那邊。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "cin4",
-        "hau6",
-        "ce4_deoi3_min6"
-      ],
-      "answer_restate": "斜對面。"
+      "question_text": "我遠遠看見Margaret走上一個橫跨河面、讓人走到對岸的建築。那是什麼地方？",
+      "vocabulary_intro_ids": ["kiu", "hong_zi", "gaai_dou"],
+      "answer_restate": "橋。"
     },
     {
       "variation_id": "game_1_bridge_04",
       "speaker_id": "margaret",
       "story_logic": "third_party_report",
-      "question_text": "有個賣糖水的孩子指給我看，說Edmund站在兩個大竹簍之間，不偏左也不偏右。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "paak_bin1",
-        "deoi3_min6",
-        "zung1_gaan1"
-      ],
-      "answer_restate": "中間。"
+      "question_text": "有個老婆婆說，Edmund走到街邊一個擺著茶壺茶碗、賣茶水的攤子旁邊，還站在那裡喝了一碗。那是什麼地方？",
+      "vocabulary_intro_ids": ["caa_seoi_taan", "zau_gun", "sik_si"],
+      "answer_restate": "茶水攤。"
     },
     {
       "variation_id": "game_1_bridge_05",
       "speaker_id": "edmund",
       "story_logic": "meeting_point",
-      "question_text": "我們本來說好，若走散了，就在轉角那個賣茶的小攤旁再碰頭，不是附近隨便哪裡。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "fu6_gan6",
-        "gaak3_lei4",
-        "zyun2_gok3"
-      ],
-      "answer_restate": "轉角。"
+      "question_text": "我們說好，若走散了，就在掛著各色布匹、賣布料的地方碰頭。Margaret最喜歡那種地方了。那是什麼地方？",
+      "vocabulary_intro_ids": ["joek_pou", "bou_zong", "loeng_dim"],
+      "answer_restate": "布莊。"
     },
     {
       "variation_id": "game_1_bridge_06",
       "speaker_id": "margaret",
       "story_logic": "far_sighting",
-      "question_text": "我剛才像是看見他站在那條巷子的最尾，不是沿著路中段，也不是斜旁那一帶。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "zeon2_tau4",
-        "jyun4_lou6",
-        "ce4_paak_bin1"
-      ],
-      "answer_restate": "盡頭。"
+      "question_text": "我好像看見Edmund走進一間可以把東西押在那裡換錢的地方，還把帽子拿在手上比劃。那是什麼地方？",
+      "vocabulary_intro_ids": ["cin_zong", "dong_pou", "dou_fong"],
+      "answer_restate": "當鋪。"
     },
     {
       "variation_id": "game_1_bridge_07",
       "speaker_id": "edmund",
       "story_logic": "third_party_report",
-      "question_text": "有個看門的人說，她剛走進門裡，不是在門口停著，也不是在院內更深處。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "mun4_hau2",
-        "mun4_noi6",
-        "jyun2_noi6"
-      ],
-      "answer_restate": "門內。"
+      "question_text": "有個士兵告訴我，Margaret站在進出城市的大門旁邊，說要等一個人。那是什麼地方？",
+      "vocabulary_intro_ids": ["miu_jyu", "sing_mun", "gun_fu"],
+      "answer_restate": "城門。"
     },
     {
       "variation_id": "game_1_bridge_08",
       "speaker_id": "margaret",
       "story_logic": "meeting_point",
-      "question_text": "我們說過，若真找不到，就在城門外等，不是城門內，也不是貼著牆外隨便站。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "sing4_mun4_noi6",
-        "sing4_mun4_ngoi6",
-        "coeng4_ngoi6"
-      ],
-      "answer_restate": "城門外。"
+      "question_text": "我們說好，若走散了，就在有人站台上講故事、台下坐滿聽眾的地方等。Edmund一定坐下來聽書了。那是什麼地方？",
+      "vocabulary_intro_ids": ["syu_jyun", "caa_lau", "syut_syu_toi"],
+      "answer_restate": "說書台。"
     },
     {
       "variation_id": "game_1_bridge_09",
       "speaker_id": "edmund",
       "story_logic": "far_sighting",
-      "question_text": "我方才看見她在橋下那一帶，一閃而過，不是在橋頭，也不在橋上人堆裡。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "kiu4_soeng6",
-        "kiu4_haa6",
-        "kiu4_tau4"
-      ],
-      "answer_restate": "橋下。"
+      "question_text": "我好像看見Margaret走進一個供旅客歇腳換馬的地方，還問了裡面的人一些事。那是什麼地方？",
+      "vocabulary_intro_ids": ["jik_zaam", "ji_gun", "faan_si_ci"],
+      "answer_restate": "驛站。"
     },
     {
       "variation_id": "game_1_bridge_10",
       "speaker_id": "margaret",
       "story_logic": "third_party_report",
-      "question_text": "有個店小二對我說，Edmund一直站在簷下避太陽，不在店內，也不在店外空地。那是什麼地方？",
-      "vocabulary_intro_ids": [
-        "dim3_noi6",
-        "dim3_ngoi6",
-        "jim4_haa6"
-      ],
-      "answer_restate": "簷下。"
+      "question_text": "有個孩子跑來告訴我，Edmund站在一個空曠的大空地上，四處張望，樣子很慌張。那是什麼地方？",
+      "vocabulary_intro_ids": ["gwong_coeng", "paai_fong", "sing_lau"],
+      "answer_restate": "廣場。"
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "schema_version": "v5_1_minigame_01",
   "game_id": "game_1_bridge",
-  "game_type": "fill_spatial_word",
+  "game_type": "identify_place",
   "location": "bridge",
   "visual_state": {
     "has_second_state": true,
@@ -19,122 +19,82 @@
     {
       "variation_id": "game_1_bridge_01",
       "type": "A",
-      "prompt_mode": "basic_direction",
-      "distractor_mode": "same_direction_class",
-      "answer_option_id": "opt_dung",
-      "option_ids": [
-        "opt_dung",
-        "opt_naam",
-        "opt_sai"
-      ]
+      "prompt_mode": "basic_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_haak_zaan",
+      "option_ids": ["opt_soeng_hang", "opt_si_zaap", "opt_haak_zaan"]
     },
     {
       "variation_id": "game_1_bridge_02",
       "type": "A",
-      "prompt_mode": "basic_direction",
-      "distractor_mode": "same_direction_class",
-      "answer_option_id": "opt_bak",
-      "option_ids": [
-        "opt_bak",
-        "opt_zo2",
-        "opt_jau6"
-      ]
+      "prompt_mode": "basic_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_maa_tau",
+      "option_ids": ["opt_maa_tau", "opt_cong_fu", "opt_maa_geoi"]
     },
     {
       "variation_id": "game_1_bridge_03",
       "type": "A",
-      "prompt_mode": "basic_direction",
-      "distractor_mode": "same_direction_class",
-      "answer_option_id": "opt_ce4_deoi3_min6",
-      "option_ids": [
-        "opt_cin4",
-        "opt_hau6",
-        "opt_ce4_deoi3_min6"
-      ]
+      "prompt_mode": "basic_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_kiu",
+      "option_ids": ["opt_kiu", "opt_hong_zi", "opt_gaai_dou"]
     },
     {
       "variation_id": "game_1_bridge_04",
       "type": "B",
-      "prompt_mode": "relative_position",
-      "distractor_mode": "same_relative_class",
-      "answer_option_id": "opt_zung1_gaan1",
-      "option_ids": [
-        "opt_paak_bin1",
-        "opt_deoi3_min6",
-        "opt_zung1_gaan1"
-      ]
+      "prompt_mode": "commercial_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_caa_seoi_taan",
+      "option_ids": ["opt_caa_seoi_taan", "opt_zau_gun", "opt_sik_si"]
     },
     {
       "variation_id": "game_1_bridge_05",
       "type": "B",
-      "prompt_mode": "relative_position",
-      "distractor_mode": "same_relative_class",
-      "answer_option_id": "opt_zyun2_gok3",
-      "option_ids": [
-        "opt_fu6_gan6",
-        "opt_gaak3_lei4",
-        "opt_zyun2_gok3"
-      ]
+      "prompt_mode": "commercial_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_bou_zong",
+      "option_ids": ["opt_joek_pou", "opt_bou_zong", "opt_loeng_dim"]
     },
     {
       "variation_id": "game_1_bridge_06",
       "type": "B",
-      "prompt_mode": "relative_position",
-      "distractor_mode": "same_relative_class",
-      "answer_option_id": "opt_zeon2_tau4",
-      "option_ids": [
-        "opt_zeon2_tau4",
-        "opt_jyun4_lou6",
-        "opt_ce4_paak_bin1"
-      ]
+      "prompt_mode": "commercial_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_dong_pou",
+      "option_ids": ["opt_cin_zong", "opt_dong_pou", "opt_dou_fong"]
     },
     {
       "variation_id": "game_1_bridge_07",
       "type": "C",
-      "prompt_mode": "inside_outside",
-      "distractor_mode": "same_inside_outside_class",
-      "answer_option_id": "opt_mun4_noi6",
-      "option_ids": [
-        "opt_mun4_hau2",
-        "opt_mun4_noi6",
-        "opt_jyun2_noi6"
-      ]
+      "prompt_mode": "public_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_sing_mun",
+      "option_ids": ["opt_miu_jyu", "opt_sing_mun", "opt_gun_fu"]
     },
     {
       "variation_id": "game_1_bridge_08",
       "type": "C",
-      "prompt_mode": "inside_outside",
-      "distractor_mode": "same_inside_outside_class",
-      "answer_option_id": "opt_sing4_mun4_ngoi6",
-      "option_ids": [
-        "opt_sing4_mun4_noi6",
-        "opt_sing4_mun4_ngoi6",
-        "opt_coeng4_ngoi6"
-      ]
+      "prompt_mode": "public_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_syut_syu_toi",
+      "option_ids": ["opt_syu_jyun", "opt_caa_lau", "opt_syut_syu_toi"]
     },
     {
       "variation_id": "game_1_bridge_09",
-      "type": "C",
-      "prompt_mode": "inside_outside",
-      "distractor_mode": "same_inside_outside_class",
-      "answer_option_id": "opt_kiu4_haa6",
-      "option_ids": [
-        "opt_kiu4_soeng6",
-        "opt_kiu4_haa6",
-        "opt_kiu4_tau4"
-      ]
+      "type": "D",
+      "prompt_mode": "city_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_jik_zaam",
+      "option_ids": ["opt_jik_zaam", "opt_ji_gun", "opt_faan_si_ci"]
     },
     {
       "variation_id": "game_1_bridge_10",
-      "type": "C",
-      "prompt_mode": "inside_outside",
-      "distractor_mode": "same_inside_outside_class",
-      "answer_option_id": "opt_jim4_haa6",
-      "option_ids": [
-        "opt_dim3_noi6",
-        "opt_dim3_ngoi6",
-        "opt_jim4_haa6"
-      ]
+      "type": "D",
+      "prompt_mode": "city_place",
+      "distractor_mode": "same_place_class",
+      "answer_option_id": "opt_gwong_coeng",
+      "option_ids": ["opt_gwong_coeng", "opt_paai_fong", "opt_sing_lau"]
     }
   ]
 }

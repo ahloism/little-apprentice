@@ -26,6 +26,33 @@
       ],
       "display_mode": "sequential_lines",
       "dismiss": "tap_per_line"
+    },
+    {
+      "applies_to": [
+        "return_to_map_reload"
+      ],
+      "confirm_buttons": {
+        "review": "回顧",
+        "continue": "繼續冒險"
+      }
+    },
+    {
+      "applies_to": [
+        "return_to_map_normal"
+      ],
+      "display_mode": "sequential_lines",
+      "dismiss": "tap_per_line",
+      "state_arrow": true
+    },
+    {
+      "applies_to": [
+        "return_to_map_normal"
+      ],
+      "state": "main_incomplete_unlock_available",
+      "confirm_buttons": {
+        "unlock": "解鎖",
+        "continue": "繼續冒險"
+      }
     }
   ],
   "dialogue_assets": {
@@ -40,9 +67,6 @@
     },
     "A4": {
       "audio": "asui_A4.mp3"
-    },
-    "A5": {
-      "audio": "asui_A5.mp3"
     },
     "A6": {
       "audio": "asui_A6.mp3"
@@ -165,14 +189,44 @@
         "asui_M1_2.mp3"
       ]
     },
-    "return_to_map": {
-      "audio": "asui_return_to_map.mp3"
-    },
     "W1": {
       "audio": "asui_W1.mp3"
     },
     "W2": {
       "audio": "asui_W2.mp3"
+    },
+    "G4": {
+      "audio": "asui_G4.mp3"
+    },
+    "G5": {
+      "audio": "asui_G5.mp3"
+    },
+    "return_to_map_reload": {
+      "audio": [
+        "asui_return_reload_base.mp3",
+        "asui_return_reload_1_1.mp3",
+        "asui_return_reload_1_2.mp3",
+        "asui_return_reload_1_3.mp3",
+        "asui_return_reload_1_4.mp3",
+        "asui_return_reload_1_5.mp3",
+        "asui_return_reload_1_6.mp3",
+        "asui_return_reload_1_7.mp3"
+      ]
+    },
+    "return_to_map_normal": {
+      "audio": {
+        "line_1": "asui_return_normal_line1.mp3",
+        "line_2": {
+          "main_incomplete_no_unlock": "asui_return_normal_s1.mp3",
+          "main_incomplete_unlock_available": "asui_return_normal_s2.mp3",
+          "main_complete_unlock_available": "asui_return_normal_s3.mp3",
+          "main_complete_all_unlocked": "asui_return_normal_s4.mp3",
+          "map_all_colored": "asui_return_normal_s5.mp3"
+        }
+      }
+    },
+    "A17": {
+      "audio": "asui_A17.mp3"
     }
   }
 }
