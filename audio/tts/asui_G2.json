@@ -4,68 +4,68 @@
   "words": [
     {
       "word": "做",
-      "start_ms": 43.75,
-      "duration_ms": 166.687
+      "start_ms": 50.0,
+      "duration_ms": 200.0
     },
     {
       "word": "得",
-      "start_ms": 220.812,
-      "duration_ms": 156.25
-    },
-    {
-      "word": "不錯",
-      "start_ms": 377.062,
-      "duration_ms": 479.18699999999995
-    },
-    {
-      "word": "！",
-      "start_ms": 887.5,
-      "duration_ms": 31.25
-    },
-    {
-      "word": "這個",
-      "start_ms": 1637.5,
-      "duration_ms": 343.75
-    },
-    {
-      "word": "地方",
-      "start_ms": 1981.25,
-      "duration_ms": 416.68699999999995
-    },
-    {
-      "word": "在",
-      "start_ms": 2408.312,
-      "duration_ms": 229.187
-    },
-    {
-      "word": "地",
-      "start_ms": 2637.5,
+      "start_ms": 262.5,
       "duration_ms": 187.5
     },
     {
+      "word": "不錯",
+      "start_ms": 450.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "！",
+      "start_ms": 1062.5,
+      "duration_ms": 37.5
+    },
+    {
+      "word": "這個",
+      "start_ms": 1962.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "地方",
+      "start_ms": 2375.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "在",
+      "start_ms": 2887.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "地",
+      "start_ms": 3162.5,
+      "duration_ms": 225.0
+    },
+    {
       "word": "圖",
-      "start_ms": 2825.0,
-      "duration_ms": 208.31199999999998
+      "start_ms": 3387.5,
+      "duration_ms": 250.0
     },
     {
       "word": "上",
-      "start_ms": 3043.75,
-      "duration_ms": 229.187
+      "start_ms": 3650.0,
+      "duration_ms": 275.0
     },
     {
       "word": "著色",
-      "start_ms": 3272.937,
-      "duration_ms": 375.0
+      "start_ms": 3925.0,
+      "duration_ms": 450.0
     },
     {
       "word": "了",
-      "start_ms": 3647.937,
-      "duration_ms": 302.062
+      "start_ms": 4375.0,
+      "duration_ms": 362.5
     },
     {
       "word": "。",
-      "start_ms": 3950.0,
-      "duration_ms": 41.687000000000005
+      "start_ms": 4737.5,
+      "duration_ms": 50.0
     }
   ]
 }

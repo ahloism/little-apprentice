@@ -4,138 +4,138 @@
   "words": [
     {
       "word": "王三",
-      "start_ms": 41.687,
-      "duration_ms": 395.812
+      "start_ms": 50.0,
+      "duration_ms": 475.0
     },
     {
       "word": "說",
-      "start_ms": 437.5,
-      "duration_ms": 197.937
+      "start_ms": 525.0,
+      "duration_ms": 237.5
     },
     {
       "word": "得",
-      "start_ms": 635.437,
-      "duration_ms": 145.81199999999998
+      "start_ms": 762.5,
+      "duration_ms": 175.0
     },
     {
       "word": "很",
-      "start_ms": 781.25,
-      "duration_ms": 177.06199999999998
+      "start_ms": 937.5,
+      "duration_ms": 212.5
     },
     {
       "word": "詳細",
-      "start_ms": 958.312,
-      "duration_ms": 520.812
+      "start_ms": 1150.0,
+      "duration_ms": 625.0
     },
     {
       "word": "，",
-      "start_ms": 1572.9369,
-      "duration_ms": 20.812
+      "start_ms": 1887.5,
+      "duration_ms": 25.0
     },
     {
       "word": "但",
-      "start_ms": 1895.812,
-      "duration_ms": 229.187
+      "start_ms": 2275.0,
+      "duration_ms": 275.0
     },
     {
       "word": "詳細",
-      "start_ms": 2125.0,
-      "duration_ms": 468.75
+      "start_ms": 2550.0,
+      "duration_ms": 562.5
     },
     {
       "word": "不",
-      "start_ms": 2593.75,
-      "duration_ms": 156.25
+      "start_ms": 3112.5,
+      "duration_ms": 187.5
     },
     {
       "word": "等於",
-      "start_ms": 2750.0,
-      "duration_ms": 343.75
+      "start_ms": 3300.0,
+      "duration_ms": 412.5
     },
     {
       "word": "真實",
-      "start_ms": 3093.75,
-      "duration_ms": 447.93699999999995
+      "start_ms": 3712.5,
+      "duration_ms": 537.5
     },
     {
       "word": "——",
-      "start_ms": 3562.5,
+      "start_ms": 4275.0,
       "duration_ms": 0.0
     },
     {
       "word": "說",
-      "start_ms": 3979.187,
-      "duration_ms": 208.31199999999998
+      "start_ms": 4775.0,
+      "duration_ms": 250.0
     },
     {
       "word": "得",
-      "start_ms": 4187.5,
-      "duration_ms": 166.687
+      "start_ms": 5025.0,
+      "duration_ms": 200.0
     },
     {
       "word": "越",
-      "start_ms": 4354.187,
-      "duration_ms": 187.5
+      "start_ms": 5225.0,
+      "duration_ms": 225.0
     },
     {
       "word": "多",
-      "start_ms": 4541.687,
-      "duration_ms": 302.062
+      "start_ms": 5450.0,
+      "duration_ms": 362.5
     },
     {
       "word": "，",
-      "start_ms": 4906.25,
-      "duration_ms": 10.437
+      "start_ms": 5887.5,
+      "duration_ms": 12.5
     },
     {
       "word": "有時候",
-      "start_ms": 5197.937,
-      "duration_ms": 708.312
+      "start_ms": 6237.5,
+      "duration_ms": 850.0
     },
     {
       "word": "反而",
-      "start_ms": 5906.25,
-      "duration_ms": 479.18699999999995
+      "start_ms": 7087.5,
+      "duration_ms": 575.0
     },
     {
       "word": "要",
-      "start_ms": 6395.812,
-      "duration_ms": 229.187
+      "start_ms": 7675.0,
+      "duration_ms": 275.0
     },
     {
       "word": "越小心",
-      "start_ms": 6625.0,
-      "duration_ms": 677.062
+      "start_ms": 7950.0,
+      "duration_ms": 812.5
     },
     {
       "word": "。",
-      "start_ms": 7322.937,
+      "start_ms": 8787.5,
       "duration_ms": 0.0
     },
     {
       "word": "這次",
-      "start_ms": 8043.75,
-      "duration_ms": 406.25
+      "start_ms": 9650.0,
+      "duration_ms": 487.5
     },
     {
       "word": "記住",
-      "start_ms": 8450.0,
-      "duration_ms": 416.68699999999995
+      "start_ms": 10137.5,
+      "duration_ms": 500.0
     },
     {
       "word": "了",
-      "start_ms": 8866.687,
-      "duration_ms": 187.5
+      "start_ms": 10637.5,
+      "duration_ms": 225.0
     },
     {
       "word": "嗎",
-      "start_ms": 9054.187,
-      "duration_ms": 229.187
+      "start_ms": 10862.5,
+      "duration_ms": 275.0
     },
     {
       "word": "？",
-      "start_ms": 9304.187,
-      "duration_ms": 10.437
+      "start_ms": 11162.5,
+      "duration_ms": 12.5
     }
   ]
 }

@@ -4,73 +4,73 @@
   "words": [
     {
       "word": "「王三",
-      "start_ms": 41.687,
-      "duration_ms": 437.5
+      "start_ms": 50.0,
+      "duration_ms": 525.0
     },
     {
       "word": "說話",
-      "start_ms": 479.187,
-      "duration_ms": 437.5
+      "start_ms": 575.0,
+      "duration_ms": 525.0
     },
     {
       "word": "詳細",
-      "start_ms": 916.687,
-      "duration_ms": 541.687
+      "start_ms": 1100.0,
+      "duration_ms": 650.0
     },
     {
       "word": "，",
-      "start_ms": 1500.0,
-      "duration_ms": 62.5
+      "start_ms": 1800.0,
+      "duration_ms": 75.0
     },
     {
       "word": "不",
-      "start_ms": 1739.562,
-      "duration_ms": 218.75
+      "start_ms": 2087.5,
+      "duration_ms": 262.5
     },
     {
       "word": "代表",
-      "start_ms": 1958.312,
-      "duration_ms": 375.0
+      "start_ms": 2350.0,
+      "duration_ms": 450.0
     },
     {
       "word": "說",
-      "start_ms": 2333.312,
-      "duration_ms": 229.187
+      "start_ms": 2800.0,
+      "duration_ms": 275.0
     },
     {
       "word": "的",
-      "start_ms": 2562.5,
-      "duration_ms": 135.437
+      "start_ms": 3075.0,
+      "duration_ms": 162.5
     },
     {
       "word": "是",
-      "start_ms": 2697.937,
-      "duration_ms": 218.75
+      "start_ms": 3237.5,
+      "duration_ms": 262.5
     },
     {
       "word": "真的",
-      "start_ms": 2916.687,
-      "duration_ms": 437.5
+      "start_ms": 3500.0,
+      "duration_ms": 525.0
     },
     {
       "word": "。",
-      "start_ms": 3354.187,
+      "start_ms": 4025.0,
       "duration_ms": 0.0
     },
     {
       "word": "記住",
-      "start_ms": 4052.062,
-      "duration_ms": 364.562
+      "start_ms": 4862.5,
+      "duration_ms": 437.5
     },
     {
       "word": "了",
-      "start_ms": 4416.687,
-      "duration_ms": 291.625
+      "start_ms": 5300.0,
+      "duration_ms": 350.0
     },
     {
       "word": "。」",
-      "start_ms": 4708.312,
-      "duration_ms": 41.687000000000005
+      "start_ms": 5650.0,
+      "duration_ms": 50.0
     }
   ]
 }

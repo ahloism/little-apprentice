@@ -4,58 +4,58 @@
   "words": [
     {
       "word": "「走",
-      "start_ms": 43.75,
-      "duration_ms": 260.43699999999995
+      "start_ms": 50.0,
+      "duration_ms": 312.5
     },
     {
       "word": "，",
-      "start_ms": 325.0,
-      "duration_ms": 10.437
+      "start_ms": 387.5,
+      "duration_ms": 12.5
     },
     {
       "word": "抄",
-      "start_ms": 439.562,
-      "duration_ms": 270.812
+      "start_ms": 525.0,
+      "duration_ms": 325.0
     },
     {
       "word": "市集",
-      "start_ms": 731.25,
-      "duration_ms": 458.312
+      "start_ms": 875.0,
+      "duration_ms": 550.0
     },
     {
       "word": "那",
-      "start_ms": 1189.5619,
-      "duration_ms": 218.75
+      "start_ms": 1425.0,
+      "duration_ms": 262.5
     },
     {
       "word": "條",
-      "start_ms": 1408.3119,
-      "duration_ms": 197.937
+      "start_ms": 1687.5,
+      "duration_ms": 237.5
     },
     {
       "word": "路",
-      "start_ms": 1637.5,
-      "duration_ms": 239.56199999999998
+      "start_ms": 1962.5,
+      "duration_ms": 287.5
     },
     {
       "word": "，",
-      "start_ms": 1887.5,
-      "duration_ms": 62.5
+      "start_ms": 2262.5,
+      "duration_ms": 75.0
     },
     {
       "word": "近",
-      "start_ms": 2022.937,
-      "duration_ms": 197.937
+      "start_ms": 2425.0,
+      "duration_ms": 237.5
     },
     {
       "word": "一半",
-      "start_ms": 2231.25,
-      "duration_ms": 479.18699999999995
+      "start_ms": 2675.0,
+      "duration_ms": 575.0
     },
     {
       "word": "！」",
-      "start_ms": 2720.812,
-      "duration_ms": 10.437
+      "start_ms": 3262.5,
+      "duration_ms": 12.5
     }
   ]
 }

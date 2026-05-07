@@ -4,88 +4,88 @@
   "words": [
     {
       "word": "「糖葫蘆",
-      "start_ms": 41.687,
-      "duration_ms": 687.5
+      "start_ms": 50.0,
+      "duration_ms": 825.0
     },
     {
       "word": "，",
-      "start_ms": 739.562,
-      "duration_ms": 31.25
+      "start_ms": 887.5,
+      "duration_ms": 37.5
     },
     {
       "word": "山楂",
-      "start_ms": 916.687,
-      "duration_ms": 510.437
+      "start_ms": 1100.0,
+      "duration_ms": 612.5
     },
     {
       "word": "做",
-      "start_ms": 1437.5,
-      "duration_ms": 197.937
+      "start_ms": 1725.0,
+      "duration_ms": 237.5
     },
     {
       "word": "的",
-      "start_ms": 1645.8119,
-      "duration_ms": 197.937
+      "start_ms": 1975.0,
+      "duration_ms": 237.5
     },
     {
       "word": "，",
-      "start_ms": 1854.187,
-      "duration_ms": 31.25
+      "start_ms": 2225.0,
+      "duration_ms": 37.5
     },
     {
       "word": "甜的",
-      "start_ms": 1906.25,
-      "duration_ms": 447.93699999999995
+      "start_ms": 2287.5,
+      "duration_ms": 537.5
     },
     {
       "word": "。",
-      "start_ms": 2354.187,
+      "start_ms": 2825.0,
       "duration_ms": 0.0
     },
     {
       "word": "老",
-      "start_ms": 3062.5,
-      "duration_ms": 166.687
+      "start_ms": 3675.0,
+      "duration_ms": 200.0
     },
     {
       "word": "梁",
-      "start_ms": 3239.562,
-      "duration_ms": 187.5
+      "start_ms": 3887.5,
+      "duration_ms": 225.0
     },
     {
       "word": "攤",
-      "start_ms": 3427.062,
-      "duration_ms": 250.0
+      "start_ms": 4112.5,
+      "duration_ms": 300.0
     },
     {
       "word": "檔",
-      "start_ms": 3677.062,
-      "duration_ms": 208.31199999999998
-    },
-    {
-      "word": "最",
-      "start_ms": 3895.812,
+      "start_ms": 4412.5,
       "duration_ms": 250.0
     },
     {
+      "word": "最",
+      "start_ms": 4675.0,
+      "duration_ms": 300.0
+    },
+    {
       "word": "賣",
-      "start_ms": 4145.812,
-      "duration_ms": 208.31199999999998
+      "start_ms": 4975.0,
+      "duration_ms": 250.0
     },
     {
       "word": "得",
-      "start_ms": 4354.187,
-      "duration_ms": 156.25
+      "start_ms": 5225.0,
+      "duration_ms": 187.5
     },
     {
       "word": "好",
-      "start_ms": 4510.437,
-      "duration_ms": 333.312
+      "start_ms": 5412.5,
+      "duration_ms": 400.0
     },
     {
       "word": "。」",
-      "start_ms": 4843.75,
-      "duration_ms": 31.25
+      "start_ms": 5812.5,
+      "duration_ms": 37.5
     }
   ]
 }

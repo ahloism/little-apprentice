@@ -4,133 +4,133 @@
   "words": [
     {
       "word": "「他",
-      "start_ms": 41.687,
-      "duration_ms": 197.875
+      "start_ms": 50.0,
+      "duration_ms": 237.5
     },
     {
       "word": "就是",
-      "start_ms": 239.562,
-      "duration_ms": 437.5
+      "start_ms": 287.5,
+      "duration_ms": 525.0
     },
     {
       "word": "這樣",
-      "start_ms": 677.062,
-      "duration_ms": 500.0
+      "start_ms": 812.5,
+      "duration_ms": 600.0
     },
     {
       "word": "，",
-      "start_ms": 1229.1869,
-      "duration_ms": 31.25
+      "start_ms": 1475.0,
+      "duration_ms": 37.5
     },
     {
       "word": "話",
-      "start_ms": 1604.1869,
-      "duration_ms": 260.375
+      "start_ms": 1925.0,
+      "duration_ms": 312.5
     },
     {
       "word": "少",
-      "start_ms": 1864.562,
-      "duration_ms": 239.56199999999998
+      "start_ms": 2237.5,
+      "duration_ms": 287.5
     },
     {
       "word": "力氣",
-      "start_ms": 2125.0,
-      "duration_ms": 343.75
+      "start_ms": 2550.0,
+      "duration_ms": 412.5
     },
     {
       "word": "大",
-      "start_ms": 2468.75,
-      "duration_ms": 291.68699999999995
+      "start_ms": 2962.5,
+      "duration_ms": 350.0
     },
     {
       "word": "，",
-      "start_ms": 2833.312,
-      "duration_ms": 83.312
+      "start_ms": 3400.0,
+      "duration_ms": 100.0
     },
     {
       "word": "搬",
-      "start_ms": 3156.25,
-      "duration_ms": 260.43699999999995
+      "start_ms": 3787.5,
+      "duration_ms": 312.5
     },
     {
       "word": "得動",
-      "start_ms": 3447.937,
-      "duration_ms": 375.0
+      "start_ms": 4137.5,
+      "duration_ms": 450.0
     },
     {
       "word": "別人",
-      "start_ms": 3822.937,
-      "duration_ms": 406.25
+      "start_ms": 4587.5,
+      "duration_ms": 487.5
     },
     {
       "word": "搬不",
-      "start_ms": 4229.187,
-      "duration_ms": 375.0
+      "start_ms": 5075.0,
+      "duration_ms": 450.0
     },
     {
       "word": "動",
-      "start_ms": 4604.187,
-      "duration_ms": 197.937
+      "start_ms": 5525.0,
+      "duration_ms": 237.5
     },
     {
       "word": "的",
-      "start_ms": 4812.5,
-      "duration_ms": 135.437
+      "start_ms": 5775.0,
+      "duration_ms": 162.5
     },
     {
       "word": "貨",
-      "start_ms": 4947.937,
-      "duration_ms": 343.75
+      "start_ms": 5937.5,
+      "duration_ms": 412.5
     },
     {
       "word": "。",
-      "start_ms": 5291.687,
-      "duration_ms": 31.25
+      "start_ms": 6350.0,
+      "duration_ms": 37.5
     },
     {
       "word": "大家",
-      "start_ms": 6031.25,
-      "duration_ms": 343.75
+      "start_ms": 7237.5,
+      "duration_ms": 412.5
     },
     {
       "word": "叫",
-      "start_ms": 6375.0,
-      "duration_ms": 187.5
+      "start_ms": 7650.0,
+      "duration_ms": 225.0
     },
     {
       "word": "他",
-      "start_ms": 6562.5,
-      "duration_ms": 229.187
+      "start_ms": 7875.0,
+      "duration_ms": 275.0
     },
     {
       "word": "石頭",
-      "start_ms": 6791.687,
-      "duration_ms": 520.812
+      "start_ms": 8150.0,
+      "duration_ms": 625.0
     },
     {
       "word": "，",
-      "start_ms": 7364.562,
-      "duration_ms": 20.812
+      "start_ms": 8837.5,
+      "duration_ms": 25.0
     },
     {
       "word": "像",
-      "start_ms": 7531.25,
-      "duration_ms": 239.56199999999998
+      "start_ms": 9037.5,
+      "duration_ms": 287.5
     },
     {
       "word": "石頭",
-      "start_ms": 7770.812,
-      "duration_ms": 416.68699999999995
+      "start_ms": 9325.0,
+      "duration_ms": 500.0
     },
     {
       "word": "一樣",
-      "start_ms": 8187.5,
-      "duration_ms": 458.312
+      "start_ms": 9825.0,
+      "duration_ms": 550.0
     },
     {
       "word": "。」",
-      "start_ms": 8656.25,
-      "duration_ms": 41.687000000000005
+      "start_ms": 10387.5,
+      "duration_ms": 50.0
     }
   ]
 }

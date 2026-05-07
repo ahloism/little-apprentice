@@ -4,82 +4,82 @@
   "words": [
     {
       "word": "小",
-      "start_ms": 43.75,
-      "duration_ms": 218.75
+      "start_ms": 50.0,
+      "duration_ms": 262.5
     },
     {
       "word": "任務",
-      "start_ms": 272.937,
-      "duration_ms": 437.5
+      "start_ms": 325.0,
+      "duration_ms": 525.0
     },
     {
       "word": "可以",
-      "start_ms": 710.437,
-      "duration_ms": 406.25
+      "start_ms": 850.0,
+      "duration_ms": 487.5
     },
     {
       "word": "重",
-      "start_ms": 1116.6869,
-      "duration_ms": 218.75
+      "start_ms": 1337.5,
+      "duration_ms": 262.5
     },
     {
       "word": "玩",
-      "start_ms": 1335.4369,
-      "duration_ms": 364.562
+      "start_ms": 1600.0,
+      "duration_ms": 437.5
     },
     {
       "word": "，",
-      "start_ms": 1720.812,
-      "duration_ms": 10.437
+      "start_ms": 2062.5,
+      "duration_ms": 12.5
     },
     {
       "word": "銅錢",
-      "start_ms": 2002.062,
-      "duration_ms": 458.312
+      "start_ms": 2400.0,
+      "duration_ms": 550.0
     },
     {
       "word": "也",
-      "start_ms": 2470.812,
-      "duration_ms": 187.5
+      "start_ms": 2962.5,
+      "duration_ms": 225.0
     },
     {
       "word": "會",
-      "start_ms": 2658.312,
-      "duration_ms": 166.687
+      "start_ms": 3187.5,
+      "duration_ms": 200.0
     },
     {
       "word": "再",
-      "start_ms": 2825.0,
-      "duration_ms": 229.187
+      "start_ms": 3387.5,
+      "duration_ms": 275.0
     },
     {
       "word": "賺",
-      "start_ms": 3054.187,
-      "duration_ms": 343.75
+      "start_ms": 3662.5,
+      "duration_ms": 412.5
     },
     {
       "word": "——",
-      "start_ms": 3429.187,
-      "duration_ms": 10.437
+      "start_ms": 4112.5,
+      "duration_ms": 12.5
     },
     {
       "word": "要",
-      "start_ms": 3689.562,
-      "duration_ms": 187.5
+      "start_ms": 4425.0,
+      "duration_ms": 225.0
     },
     {
       "word": "去試試",
-      "start_ms": 3877.062,
-      "duration_ms": 625.0
+      "start_ms": 4650.0,
+      "duration_ms": 750.0
     },
     {
       "word": "嗎",
-      "start_ms": 4502.062,
-      "duration_ms": 239.56199999999998
+      "start_ms": 5400.0,
+      "duration_ms": 287.5
     },
     {
       "word": "？",
-      "start_ms": 4772.937,
+      "start_ms": 5725.0,
       "duration_ms": 0.0
     }
   ]

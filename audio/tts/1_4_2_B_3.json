@@ -4,68 +4,68 @@
   "words": [
     {
       "word": "「算了",
-      "start_ms": 43.75,
-      "duration_ms": 489.562
+      "start_ms": 50.0,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 533.312,
-      "duration_ms": 62.5
+      "start_ms": 637.5,
+      "duration_ms": 75.0
     },
     {
       "word": "你",
-      "start_ms": 720.812,
-      "duration_ms": 239.56199999999998
+      "start_ms": 862.5,
+      "duration_ms": 287.5
     },
     {
       "word": "去",
-      "start_ms": 960.437,
-      "duration_ms": 208.31199999999998
+      "start_ms": 1150.0,
+      "duration_ms": 250.0
     },
     {
       "word": "找",
-      "start_ms": 1168.75,
-      "duration_ms": 239.56199999999998
+      "start_ms": 1400.0,
+      "duration_ms": 287.5
     },
     {
       "word": "找",
-      "start_ms": 1418.75,
-      "duration_ms": 239.56199999999998
+      "start_ms": 1700.0,
+      "duration_ms": 287.5
     },
     {
       "word": "看",
-      "start_ms": 1658.3119,
-      "duration_ms": 333.312
+      "start_ms": 1987.5,
+      "duration_ms": 400.0
     },
     {
       "word": "，",
-      "start_ms": 2002.062,
-      "duration_ms": 93.75
+      "start_ms": 2400.0,
+      "duration_ms": 112.5
     },
     {
       "word": "我",
-      "start_ms": 2241.687,
-      "duration_ms": 208.31199999999998
+      "start_ms": 2687.5,
+      "duration_ms": 250.0
     },
     {
       "word": "在",
-      "start_ms": 2450.0,
-      "duration_ms": 218.75
+      "start_ms": 2937.5,
+      "duration_ms": 262.5
     },
     {
       "word": "這",
-      "start_ms": 2679.187,
-      "duration_ms": 218.75
+      "start_ms": 3212.5,
+      "duration_ms": 262.5
     },
     {
       "word": "等",
-      "start_ms": 2897.937,
-      "duration_ms": 281.25
+      "start_ms": 3475.0,
+      "duration_ms": 337.5
     },
     {
       "word": "。」",
-      "start_ms": 3189.562,
-      "duration_ms": 41.687000000000005
+      "start_ms": 3825.0,
+      "duration_ms": 50.0
     }
   ]
 }

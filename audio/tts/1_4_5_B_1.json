@@ -4,23 +4,23 @@
   "words": [
     {
       "word": "「說",
-      "start_ms": 43.75,
-      "duration_ms": 239.56199999999998
+      "start_ms": 50.0,
+      "duration_ms": 287.5
     },
     {
       "word": "得",
-      "start_ms": 283.312,
-      "duration_ms": 166.687
+      "start_ms": 337.5,
+      "duration_ms": 200.0
     },
     {
       "word": "詳細",
-      "start_ms": 450.0,
-      "duration_ms": 552.062
+      "start_ms": 537.5,
+      "duration_ms": 662.5
     },
     {
       "word": "……」",
-      "start_ms": 1022.937,
-      "duration_ms": 83.312
+      "start_ms": 1225.0,
+      "duration_ms": 100.0
     }
   ]
 }

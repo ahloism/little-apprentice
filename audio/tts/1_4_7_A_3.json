@@ -4,53 +4,53 @@
   "words": [
     {
       "word": "「但",
-      "start_ms": 41.687,
-      "duration_ms": 156.25
+      "start_ms": 50.0,
+      "duration_ms": 187.5
     },
     {
       "word": "說",
-      "start_ms": 197.937,
-      "duration_ms": 229.125
+      "start_ms": 237.5,
+      "duration_ms": 275.0
     },
     {
       "word": "不",
-      "start_ms": 427.062,
-      "duration_ms": 145.81199999999998
+      "start_ms": 512.5,
+      "duration_ms": 175.0
     },
     {
       "word": "清楚",
-      "start_ms": 572.937,
-      "duration_ms": 500.0
+      "start_ms": 687.5,
+      "duration_ms": 600.0
     },
     {
       "word": "不",
-      "start_ms": 1083.3119,
-      "duration_ms": 166.687
+      "start_ms": 1300.0,
+      "duration_ms": 200.0
     },
     {
       "word": "代表",
-      "start_ms": 1250.0,
-      "duration_ms": 395.812
+      "start_ms": 1500.0,
+      "duration_ms": 475.0
     },
     {
       "word": "說",
-      "start_ms": 1645.8119,
-      "duration_ms": 208.31199999999998
+      "start_ms": 1975.0,
+      "duration_ms": 250.0
     },
     {
       "word": "錯",
-      "start_ms": 1854.187,
-      "duration_ms": 239.56199999999998
+      "start_ms": 2225.0,
+      "duration_ms": 287.5
     },
     {
       "word": "了",
-      "start_ms": 2093.75,
-      "duration_ms": 281.25
+      "start_ms": 2512.5,
+      "duration_ms": 337.5
     },
     {
       "word": "。」",
-      "start_ms": 2375.0,
-      "duration_ms": 41.687000000000005
+      "start_ms": 2850.0,
+      "duration_ms": 50.0
     }
   ]
 }

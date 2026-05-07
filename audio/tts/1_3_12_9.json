@@ -4,38 +4,38 @@
   "words": [
     {
       "word": "「怎樣",
-      "start_ms": 43.75,
-      "duration_ms": 479.18699999999995
+      "start_ms": 50.0,
+      "duration_ms": 575.0
     },
     {
       "word": "，",
-      "start_ms": 543.75,
-      "duration_ms": 41.687000000000005
+      "start_ms": 650.0,
+      "duration_ms": 50.0
     },
     {
       "word": "找到",
-      "start_ms": 700.0,
-      "duration_ms": 468.75
+      "start_ms": 837.5,
+      "duration_ms": 562.5
     },
     {
       "word": "老梁",
-      "start_ms": 1179.1869,
-      "duration_ms": 385.375
+      "start_ms": 1412.5,
+      "duration_ms": 462.5
     },
     {
       "word": "了",
-      "start_ms": 1564.5619,
-      "duration_ms": 177.06199999999998
+      "start_ms": 1875.0,
+      "duration_ms": 212.5
     },
     {
       "word": "嗎",
-      "start_ms": 1741.687,
-      "duration_ms": 239.56199999999998
+      "start_ms": 2087.5,
+      "duration_ms": 287.5
     },
     {
       "word": "？」",
-      "start_ms": 2012.5,
-      "duration_ms": 10.437
+      "start_ms": 2412.5,
+      "duration_ms": 12.5
     }
   ]
 }

@@ -4,72 +4,72 @@
   "words": [
     {
       "word": "「這些",
-      "start_ms": 43.75,
-      "duration_ms": 354.18699999999995
+      "start_ms": 50.0,
+      "duration_ms": 425.0
     },
     {
       "word": "繩子",
-      "start_ms": 397.937,
-      "duration_ms": 437.5
+      "start_ms": 475.0,
+      "duration_ms": 525.0
     },
     {
       "word": "沒",
-      "start_ms": 835.437,
-      "duration_ms": 197.875
+      "start_ms": 1000.0,
+      "duration_ms": 237.5
     },
     {
       "word": "錢伯",
-      "start_ms": 1033.3119,
-      "duration_ms": 447.93699999999995
+      "start_ms": 1237.5,
+      "duration_ms": 537.5
     },
     {
       "word": "的",
-      "start_ms": 1481.25,
-      "duration_ms": 156.25
+      "start_ms": 1775.0,
+      "duration_ms": 187.5
     },
     {
       "word": "好",
-      "start_ms": 1637.5,
-      "duration_ms": 333.312
+      "start_ms": 1962.5,
+      "duration_ms": 400.0
     },
     {
       "word": "，",
-      "start_ms": 1981.25,
-      "duration_ms": 41.687000000000005
+      "start_ms": 2375.0,
+      "duration_ms": 50.0
     },
     {
       "word": "錢",
-      "start_ms": 2356.25,
-      "duration_ms": 250.0
+      "start_ms": 2825.0,
+      "duration_ms": 300.0
     },
     {
       "word": "伯",
-      "start_ms": 2606.25,
-      "duration_ms": 229.187
+      "start_ms": 3125.0,
+      "duration_ms": 275.0
     },
     {
       "word": "的",
-      "start_ms": 2835.437,
-      "duration_ms": 177.06199999999998
+      "start_ms": 3400.0,
+      "duration_ms": 212.5
     },
     {
       "word": "才",
-      "start_ms": 3012.5,
-      "duration_ms": 260.43699999999995
+      "start_ms": 3612.5,
+      "duration_ms": 312.5
     },
     {
       "word": "叫",
-      "start_ms": 3272.937,
-      "duration_ms": 197.875
+      "start_ms": 3925.0,
+      "duration_ms": 237.5
     },
     {
       "word": "結實",
-      "start_ms": 3470.812,
-      "duration_ms": 406.25
+      "start_ms": 4162.5,
+      "duration_ms": 487.5
     },
     {
       "word": "。」",
-      "start_ms": 3877.062,
+      "start_ms": 4650.0,
       "duration_ms": 0.0
     }
   ]

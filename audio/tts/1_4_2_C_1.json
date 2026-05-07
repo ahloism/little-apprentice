@@ -4,47 +4,47 @@
   "words": [
     {
       "word": "「王三",
-      "start_ms": 41.687,
-      "duration_ms": 437.5
+      "start_ms": 50.0,
+      "duration_ms": 525.0
     },
     {
       "word": "那",
-      "start_ms": 479.187,
-      "duration_ms": 197.875
+      "start_ms": 575.0,
+      "duration_ms": 237.5
     },
     {
       "word": "個人",
-      "start_ms": 677.062,
-      "duration_ms": 479.18699999999995
+      "start_ms": 812.5,
+      "duration_ms": 575.0
     },
     {
       "word": "，",
-      "start_ms": 1166.6869,
-      "duration_ms": 41.687000000000005
+      "start_ms": 1400.0,
+      "duration_ms": 50.0
     },
     {
       "word": "嘴巴",
-      "start_ms": 1447.9369,
-      "duration_ms": 427.062
+      "start_ms": 1737.5,
+      "duration_ms": 512.5
     },
     {
       "word": "從來",
-      "start_ms": 1885.437,
-      "duration_ms": 427.062
+      "start_ms": 2262.5,
+      "duration_ms": 512.5
     },
     {
       "word": "不停",
-      "start_ms": 2312.5,
-      "duration_ms": 312.5
+      "start_ms": 2775.0,
+      "duration_ms": 375.0
     },
     {
       "word": "的",
-      "start_ms": 2656.25,
-      "duration_ms": 187.5
+      "start_ms": 3187.5,
+      "duration_ms": 225.0
     },
     {
       "word": "。」",
-      "start_ms": 2843.75,
+      "start_ms": 3412.5,
       "duration_ms": 0.0
     }
   ]

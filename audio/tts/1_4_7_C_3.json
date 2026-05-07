@@ -4,63 +4,63 @@
   "words": [
     {
       "word": "「梅",
-      "start_ms": 41.687,
-      "duration_ms": 156.25
-    },
-    {
-      "word": "姐",
-      "start_ms": 197.937,
-      "duration_ms": 208.31199999999998
-    },
-    {
-      "word": "不",
-      "start_ms": 406.25,
-      "duration_ms": 156.25
-    },
-    {
-      "word": "認識",
-      "start_ms": 562.5,
-      "duration_ms": 322.93699999999995
-    },
-    {
-      "word": "你",
-      "start_ms": 885.437,
-      "duration_ms": 312.5
-    },
-    {
-      "word": "，",
-      "start_ms": 1291.6869,
-      "duration_ms": 10.437
-    },
-    {
-      "word": "她",
-      "start_ms": 1500.0,
-      "duration_ms": 229.187
-    },
-    {
-      "word": "為什麼",
-      "start_ms": 1739.562,
-      "duration_ms": 604.187
-    },
-    {
-      "word": "要",
-      "start_ms": 2354.187,
+      "start_ms": 50.0,
       "duration_ms": 187.5
     },
     {
-      "word": "騙",
-      "start_ms": 2541.687,
-      "duration_ms": 197.875
+      "word": "姐",
+      "start_ms": 237.5,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "不",
+      "start_ms": 487.5,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "認識",
+      "start_ms": 675.0,
+      "duration_ms": 387.5
     },
     {
       "word": "你",
-      "start_ms": 2739.562,
-      "duration_ms": 270.812
+      "start_ms": 1062.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1550.0,
+      "duration_ms": 12.5
+    },
+    {
+      "word": "她",
+      "start_ms": 1800.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "為什麼",
+      "start_ms": 2087.5,
+      "duration_ms": 725.0
+    },
+    {
+      "word": "要",
+      "start_ms": 2825.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "騙",
+      "start_ms": 3050.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "你",
+      "start_ms": 3287.5,
+      "duration_ms": 325.0
     },
     {
       "word": "？」",
-      "start_ms": 3020.812,
-      "duration_ms": 31.25
+      "start_ms": 3625.0,
+      "duration_ms": 37.5
     }
   ]
 }

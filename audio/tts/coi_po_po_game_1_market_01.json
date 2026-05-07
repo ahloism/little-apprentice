@@ -4,178 +4,178 @@
   "words": [
     {
       "word": "蔡婆婆",
-      "start_ms": 79.562,
-      "duration_ms": 613.625
+      "start_ms": 87.5,
+      "duration_ms": 675.0
     },
     {
       "word": "指",
-      "start_ms": 693.187,
-      "duration_ms": 181.812
+      "start_ms": 762.5,
+      "duration_ms": 200.0
     },
     {
       "word": "著",
-      "start_ms": 875.0,
-      "duration_ms": 193.187
+      "start_ms": 962.5,
+      "duration_ms": 212.5
     },
     {
       "word": "菜",
-      "start_ms": 1068.1869,
-      "duration_ms": 193.187
+      "start_ms": 1175.0,
+      "duration_ms": 212.5
     },
     {
       "word": "筐",
-      "start_ms": 1261.375,
-      "duration_ms": 215.875
+      "start_ms": 1387.5,
+      "duration_ms": 237.5
     },
     {
       "word": "直",
-      "start_ms": 1477.25,
-      "duration_ms": 125.0
+      "start_ms": 1625.0,
+      "duration_ms": 137.5
     },
     {
       "word": "搖頭",
-      "start_ms": 1602.25,
-      "duration_ms": 522.75
+      "start_ms": 1762.5,
+      "duration_ms": 575.0
     },
     {
       "word": "：",
-      "start_ms": 2261.375,
-      "duration_ms": 170.437
+      "start_ms": 2487.5,
+      "duration_ms": 187.5
     },
     {
       "word": "「",
-      "start_ms": 2431.812,
+      "start_ms": 2675.0,
       "duration_ms": 0.0
     },
     {
       "word": "我",
-      "start_ms": 2431.812,
-      "duration_ms": 193.187
+      "start_ms": 2675.0,
+      "duration_ms": 212.5
     },
     {
       "word": "這",
-      "start_ms": 2625.0,
-      "duration_ms": 159.062
+      "start_ms": 2887.5,
+      "duration_ms": 175.0
     },
     {
       "word": "攤",
-      "start_ms": 2784.062,
-      "duration_ms": 238.625
+      "start_ms": 3062.5,
+      "duration_ms": 262.5
     },
     {
       "word": "今天",
-      "start_ms": 3022.75,
-      "duration_ms": 352.25
+      "start_ms": 3325.0,
+      "duration_ms": 387.5
     },
     {
       "word": "擺",
-      "start_ms": 3375.0,
-      "duration_ms": 193.187
+      "start_ms": 3712.5,
+      "duration_ms": 212.5
     },
     {
       "word": "的",
-      "start_ms": 3568.187,
-      "duration_ms": 102.25
+      "start_ms": 3925.0,
+      "duration_ms": 112.5
     },
     {
       "word": "是",
-      "start_ms": 3670.437,
-      "duration_ms": 181.812
+      "start_ms": 4037.5,
+      "duration_ms": 200.0
     },
     {
       "word": "葉菜",
-      "start_ms": 3852.25,
-      "duration_ms": 363.625
+      "start_ms": 4237.5,
+      "duration_ms": 400.0
     },
     {
       "word": "和",
-      "start_ms": 4215.937,
-      "duration_ms": 159.062
+      "start_ms": 4637.5,
+      "duration_ms": 175.0
     },
     {
       "word": "根菜",
-      "start_ms": 4375.0,
-      "duration_ms": 534.062
+      "start_ms": 4812.5,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 5022.75,
+      "start_ms": 5525.0,
       "duration_ms": 0.0
     },
     {
       "word": "怎麼",
-      "start_ms": 5022.75,
-      "duration_ms": 295.437
+      "start_ms": 5525.0,
+      "duration_ms": 325.0
     },
     {
       "word": "混進",
-      "start_ms": 5318.187,
-      "duration_ms": 329.562
+      "start_ms": 5850.0,
+      "duration_ms": 362.5
     },
     {
       "word": "一條",
-      "start_ms": 5647.75,
-      "duration_ms": 261.312
+      "start_ms": 6212.5,
+      "duration_ms": 287.5
     },
     {
       "word": "大",
-      "start_ms": 5909.062,
-      "duration_ms": 204.56199999999998
+      "start_ms": 6500.0,
+      "duration_ms": 225.0
     },
     {
       "word": "冬瓜",
-      "start_ms": 6113.625,
-      "duration_ms": 488.625
+      "start_ms": 6725.0,
+      "duration_ms": 537.5
     },
     {
       "word": "？",
-      "start_ms": 6602.25,
-      "duration_ms": 79.562
+      "start_ms": 7262.5,
+      "duration_ms": 87.5
     },
     {
       "word": "阿",
-      "start_ms": 7386.375,
-      "duration_ms": 204.56199999999998
+      "start_ms": 8125.0,
+      "duration_ms": 225.0
     },
     {
       "word": "禾",
-      "start_ms": 7590.937,
-      "duration_ms": 340.937
+      "start_ms": 8350.0,
+      "duration_ms": 375.0
     },
     {
       "word": "，",
-      "start_ms": 8022.75,
+      "start_ms": 8825.0,
       "duration_ms": 0.0
     },
     {
       "word": "快",
-      "start_ms": 8022.75,
-      "duration_ms": 250.0
+      "start_ms": 8825.0,
+      "duration_ms": 275.0
     },
     {
       "word": "幫",
-      "start_ms": 8272.75,
-      "duration_ms": 204.5
+      "start_ms": 9100.0,
+      "duration_ms": 225.0
     },
     {
       "word": "我",
-      "start_ms": 8477.25,
-      "duration_ms": 136.375
+      "start_ms": 9325.0,
+      "duration_ms": 150.0
     },
     {
       "word": "找出來",
-      "start_ms": 8613.625,
-      "duration_ms": 715.937
+      "start_ms": 9475.0,
+      "duration_ms": 787.5
     },
     {
       "word": "。",
-      "start_ms": 9409.062,
-      "duration_ms": 431.81199999999995
+      "start_ms": 10350.0,
+      "duration_ms": 475.0
     },
     {
       "word": "」",
-      "start_ms": 9840.937,
-      "duration_ms": 79.562
+      "start_ms": 10825.0,
+      "duration_ms": 87.5
     }
   ]
 }

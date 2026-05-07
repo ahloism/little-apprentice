@@ -4,28 +4,28 @@
   "words": [
     {
       "word": "「好",
-      "start_ms": 41.687,
-      "duration_ms": 187.5
+      "start_ms": 50.0,
+      "duration_ms": 225.0
     },
     {
       "word": "啦",
-      "start_ms": 239.562,
-      "duration_ms": 218.75
+      "start_ms": 287.5,
+      "duration_ms": 262.5
     },
     {
       "word": "好",
-      "start_ms": 458.312,
-      "duration_ms": 197.937
+      "start_ms": 550.0,
+      "duration_ms": 237.5
     },
     {
       "word": "啦",
-      "start_ms": 666.687,
-      "duration_ms": 270.812
+      "start_ms": 800.0,
+      "duration_ms": 325.0
     },
     {
       "word": "」",
-      "start_ms": 937.5,
-      "duration_ms": 10.437
+      "start_ms": 1125.0,
+      "duration_ms": 12.5
     }
   ]
 }

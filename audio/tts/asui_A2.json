@@ -4,173 +4,173 @@
   "words": [
     {
       "word": "商行",
-      "start_ms": 43.75,
-      "duration_ms": 447.93699999999995
+      "start_ms": 50.0,
+      "duration_ms": 537.5
     },
     {
       "word": "去",
-      "start_ms": 491.687,
-      "duration_ms": 177.06199999999998
+      "start_ms": 587.5,
+      "duration_ms": 212.5
     },
     {
       "word": "過",
-      "start_ms": 668.75,
-      "duration_ms": 208.31199999999998
+      "start_ms": 800.0,
+      "duration_ms": 250.0
     },
     {
       "word": "了",
-      "start_ms": 887.5,
-      "duration_ms": 270.812
+      "start_ms": 1062.5,
+      "duration_ms": 325.0
     },
     {
       "word": "，",
-      "start_ms": 1158.3119,
-      "duration_ms": 62.5
+      "start_ms": 1387.5,
+      "duration_ms": 75.0
     },
     {
       "word": "地圖",
-      "start_ms": 1460.4369,
-      "duration_ms": 375.0
+      "start_ms": 1750.0,
+      "duration_ms": 450.0
     },
     {
       "word": "上",
-      "start_ms": 1845.812,
-      "duration_ms": 229.187
+      "start_ms": 2212.5,
+      "duration_ms": 275.0
     },
     {
       "word": "這",
-      "start_ms": 2075.0,
-      "duration_ms": 218.75
+      "start_ms": 2487.5,
+      "duration_ms": 262.5
     },
     {
       "word": "一塊",
-      "start_ms": 2293.75,
-      "duration_ms": 406.25
+      "start_ms": 2750.0,
+      "duration_ms": 487.5
     },
     {
       "word": "就",
-      "start_ms": 2710.437,
-      "duration_ms": 218.75
+      "start_ms": 3250.0,
+      "duration_ms": 262.5
     },
     {
       "word": "畫出來",
-      "start_ms": 2929.187,
-      "duration_ms": 562.5
+      "start_ms": 3512.5,
+      "duration_ms": 675.0
     },
     {
       "word": "了",
-      "start_ms": 3491.687,
-      "duration_ms": 281.25
+      "start_ms": 4187.5,
+      "duration_ms": 337.5
     },
     {
       "word": "！",
-      "start_ms": 3772.937,
-      "duration_ms": 31.25
+      "start_ms": 4525.0,
+      "duration_ms": 37.5
     },
     {
       "word": "去",
-      "start_ms": 4522.937,
-      "duration_ms": 177.06199999999998
+      "start_ms": 5425.0,
+      "duration_ms": 212.5
     },
     {
       "word": "的",
-      "start_ms": 4700.0,
-      "duration_ms": 145.81199999999998
+      "start_ms": 5637.5,
+      "duration_ms": 175.0
     },
     {
       "word": "地方",
-      "start_ms": 4845.812,
-      "duration_ms": 437.5
+      "start_ms": 5812.5,
+      "duration_ms": 525.0
     },
     {
       "word": "越",
-      "start_ms": 5283.312,
-      "duration_ms": 187.5
+      "start_ms": 6337.5,
+      "duration_ms": 225.0
     },
     {
       "word": "多",
-      "start_ms": 5470.812,
-      "duration_ms": 270.812
+      "start_ms": 6562.5,
+      "duration_ms": 325.0
     },
     {
       "word": "，",
-      "start_ms": 5814.562,
-      "duration_ms": 31.25
+      "start_ms": 6975.0,
+      "duration_ms": 37.5
     },
     {
       "word": "地圖",
-      "start_ms": 6022.937,
-      "duration_ms": 385.43699999999995
+      "start_ms": 7225.0,
+      "duration_ms": 462.5
     },
     {
       "word": "就",
-      "start_ms": 6418.75,
-      "duration_ms": 218.75
+      "start_ms": 7700.0,
+      "duration_ms": 262.5
     },
     {
       "word": "越",
-      "start_ms": 6647.937,
-      "duration_ms": 166.625
+      "start_ms": 7975.0,
+      "duration_ms": 200.0
     },
     {
       "word": "靚",
-      "start_ms": 6814.562,
-      "duration_ms": 302.062
+      "start_ms": 8175.0,
+      "duration_ms": 362.5
     },
     {
       "word": "——",
-      "start_ms": 7241.687,
-      "duration_ms": 10.437
+      "start_ms": 8687.5,
+      "duration_ms": 12.5
     },
     {
       "word": "快",
-      "start_ms": 7585.437,
-      "duration_ms": 260.375
+      "start_ms": 9100.0,
+      "duration_ms": 312.5
     },
     {
       "word": "走",
-      "start_ms": 7845.812,
-      "duration_ms": 322.93699999999995
+      "start_ms": 9412.5,
+      "duration_ms": 387.5
     },
     {
       "word": "，",
-      "start_ms": 8168.75,
-      "duration_ms": 62.5
+      "start_ms": 9800.0,
+      "duration_ms": 75.0
     },
     {
       "word": "還有",
-      "start_ms": 8585.437,
-      "duration_ms": 541.625
+      "start_ms": 10300.0,
+      "duration_ms": 650.0
     },
     {
       "word": "好多",
-      "start_ms": 9127.062,
-      "duration_ms": 406.25
+      "start_ms": 10950.0,
+      "duration_ms": 487.5
     },
     {
       "word": "地方",
-      "start_ms": 9543.75,
-      "duration_ms": 427.062
+      "start_ms": 11450.0,
+      "duration_ms": 512.5
     },
     {
       "word": "等",
-      "start_ms": 9981.25,
-      "duration_ms": 177.06199999999998
+      "start_ms": 11975.0,
+      "duration_ms": 212.5
     },
     {
       "word": "著",
-      "start_ms": 10158.312,
-      "duration_ms": 239.56199999999998
+      "start_ms": 12187.5,
+      "duration_ms": 287.5
     },
     {
       "word": "呢",
-      "start_ms": 10397.937,
-      "duration_ms": 260.43699999999995
+      "start_ms": 12475.0,
+      "duration_ms": 312.5
     },
     {
       "word": "。",
-      "start_ms": 10689.562,
-      "duration_ms": 31.25
+      "start_ms": 12825.0,
+      "duration_ms": 37.5
     }
   ]
 }

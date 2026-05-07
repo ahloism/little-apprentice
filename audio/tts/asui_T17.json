@@ -4,93 +4,93 @@
   "words": [
     {
       "word": "去",
-      "start_ms": 43.75,
-      "duration_ms": 177.06199999999998
+      "start_ms": 50.0,
+      "duration_ms": 212.5
     },
     {
       "word": "過",
-      "start_ms": 220.812,
-      "duration_ms": 197.937
+      "start_ms": 262.5,
+      "duration_ms": 237.5
     },
     {
       "word": "的",
-      "start_ms": 418.75,
-      "duration_ms": 145.81199999999998
+      "start_ms": 500.0,
+      "duration_ms": 175.0
     },
     {
       "word": "地方",
-      "start_ms": 564.562,
-      "duration_ms": 447.93699999999995
+      "start_ms": 675.0,
+      "duration_ms": 537.5
     },
     {
       "word": "不是",
-      "start_ms": 1022.937,
-      "duration_ms": 385.375
+      "start_ms": 1225.0,
+      "duration_ms": 462.5
     },
     {
       "word": "走",
-      "start_ms": 1408.3119,
-      "duration_ms": 229.187
+      "start_ms": 1687.5,
+      "duration_ms": 275.0
     },
     {
       "word": "完",
-      "start_ms": 1647.9369,
-      "duration_ms": 197.875
+      "start_ms": 1975.0,
+      "duration_ms": 237.5
     },
     {
       "word": "就算",
-      "start_ms": 1845.812,
-      "duration_ms": 562.5
+      "start_ms": 2212.5,
+      "duration_ms": 675.0
     },
     {
       "word": "，",
-      "start_ms": 2418.75,
-      "duration_ms": 62.5
+      "start_ms": 2900.0,
+      "duration_ms": 75.0
     },
     {
       "word": "再",
-      "start_ms": 2866.687,
-      "duration_ms": 239.56199999999998
+      "start_ms": 3437.5,
+      "duration_ms": 287.5
     },
     {
       "word": "去",
-      "start_ms": 3106.25,
-      "duration_ms": 166.687
+      "start_ms": 3725.0,
+      "duration_ms": 200.0
     },
     {
       "word": "一次",
-      "start_ms": 3272.937,
-      "duration_ms": 385.375
+      "start_ms": 3925.0,
+      "duration_ms": 462.5
     },
     {
       "word": "說不",
-      "start_ms": 3658.312,
-      "duration_ms": 385.43699999999995
+      "start_ms": 4387.5,
+      "duration_ms": 462.5
     },
     {
       "word": "定",
-      "start_ms": 4043.75,
-      "duration_ms": 156.25
-    },
-    {
-      "word": "有",
-      "start_ms": 4241.687,
+      "start_ms": 4850.0,
       "duration_ms": 187.5
     },
     {
+      "word": "有",
+      "start_ms": 5087.5,
+      "duration_ms": 225.0
+    },
+    {
       "word": "新",
-      "start_ms": 4439.562,
-      "duration_ms": 218.75
+      "start_ms": 5325.0,
+      "duration_ms": 262.5
     },
     {
       "word": "發現",
-      "start_ms": 4658.312,
-      "duration_ms": 541.687
+      "start_ms": 5587.5,
+      "duration_ms": 650.0
     },
     {
       "word": "！",
-      "start_ms": 5200.0,
-      "duration_ms": 41.687000000000005
+      "start_ms": 6237.5,
+      "duration_ms": 50.0
     }
   ]
 }

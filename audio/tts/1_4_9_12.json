@@ -4,68 +4,68 @@
   "words": [
     {
       "word": "「我",
-      "start_ms": 43.75,
-      "duration_ms": 166.687
+      "start_ms": 50.0,
+      "duration_ms": 200.0
     },
     {
       "word": "心裡",
-      "start_ms": 210.437,
-      "duration_ms": 395.812
+      "start_ms": 250.0,
+      "duration_ms": 475.0
     },
     {
       "word": "有",
-      "start_ms": 606.25,
-      "duration_ms": 208.31199999999998
+      "start_ms": 725.0,
+      "duration_ms": 250.0
     },
     {
       "word": "個",
-      "start_ms": 814.562,
-      "duration_ms": 166.687
+      "start_ms": 975.0,
+      "duration_ms": 200.0
     },
     {
       "word": "答案",
-      "start_ms": 991.687,
-      "duration_ms": 395.812
+      "start_ms": 1187.5,
+      "duration_ms": 475.0
     },
     {
       "word": "了",
-      "start_ms": 1387.5,
-      "duration_ms": 281.25
+      "start_ms": 1662.5,
+      "duration_ms": 337.5
     },
     {
       "word": "，",
-      "start_ms": 1668.75,
-      "duration_ms": 93.75
+      "start_ms": 2000.0,
+      "duration_ms": 112.5
     },
     {
       "word": "不過",
-      "start_ms": 1939.562,
-      "duration_ms": 395.812
+      "start_ms": 2325.0,
+      "duration_ms": 475.0
     },
     {
       "word": "你",
-      "start_ms": 2335.437,
-      "duration_ms": 187.5
+      "start_ms": 2800.0,
+      "duration_ms": 225.0
     },
     {
       "word": "自己",
-      "start_ms": 2522.937,
-      "duration_ms": 395.812
+      "start_ms": 3025.0,
+      "duration_ms": 475.0
     },
     {
       "word": "想",
-      "start_ms": 2918.75,
-      "duration_ms": 208.31199999999998
+      "start_ms": 3500.0,
+      "duration_ms": 250.0
     },
     {
       "word": "清楚",
-      "start_ms": 3127.062,
-      "duration_ms": 531.25
+      "start_ms": 3750.0,
+      "duration_ms": 637.5
     },
     {
       "word": "。」",
-      "start_ms": 3658.312,
-      "duration_ms": 20.812
+      "start_ms": 4387.5,
+      "duration_ms": 25.0
     }
   ]
 }

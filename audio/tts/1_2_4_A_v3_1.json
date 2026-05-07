@@ -4,43 +4,43 @@
   "words": [
     {
       "word": "「還",
-      "start_ms": 41.687,
-      "duration_ms": 208.31199999999998
+      "start_ms": 50.0,
+      "duration_ms": 250.0
     },
     {
       "word": "看",
-      "start_ms": 250.0,
-      "duration_ms": 322.93699999999995
+      "start_ms": 300.0,
+      "duration_ms": 387.5
     },
     {
       "word": "？",
-      "start_ms": 593.75,
-      "duration_ms": 20.812
+      "start_ms": 712.5,
+      "duration_ms": 25.0
     },
     {
       "word": "走",
-      "start_ms": 1356.25,
-      "duration_ms": 166.687
+      "start_ms": 1625.0,
+      "duration_ms": 200.0
     },
     {
       "word": "啦",
-      "start_ms": 1543.75,
-      "duration_ms": 197.937
+      "start_ms": 1850.0,
+      "duration_ms": 237.5
     },
     {
       "word": "走",
-      "start_ms": 1752.062,
-      "duration_ms": 239.56199999999998
+      "start_ms": 2100.0,
+      "duration_ms": 287.5
     },
     {
       "word": "啦",
-      "start_ms": 2012.5,
-      "duration_ms": 281.25
+      "start_ms": 2412.5,
+      "duration_ms": 337.5
     },
     {
       "word": "。」",
-      "start_ms": 2304.187,
-      "duration_ms": 31.25
+      "start_ms": 2762.5,
+      "duration_ms": 37.5
     }
   ]
 }

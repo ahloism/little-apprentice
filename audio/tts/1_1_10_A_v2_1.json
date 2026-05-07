@@ -4,42 +4,42 @@
   "words": [
     {
       "word": "「又",
-      "start_ms": 41.687,
-      "duration_ms": 166.625
+      "start_ms": 50.0,
+      "duration_ms": 200.0
     },
     {
       "word": "看",
-      "start_ms": 208.312,
-      "duration_ms": 239.56199999999998
+      "start_ms": 250.0,
+      "duration_ms": 287.5
     },
     {
       "word": "這個",
-      "start_ms": 447.937,
-      "duration_ms": 489.562
+      "start_ms": 537.5,
+      "duration_ms": 587.5
     },
     {
       "word": "？",
-      "start_ms": 937.5,
-      "duration_ms": 31.25
+      "start_ms": 1125.0,
+      "duration_ms": 37.5
     },
     {
       "word": "是不是",
-      "start_ms": 1689.562,
-      "duration_ms": 604.187
+      "start_ms": 2025.0,
+      "duration_ms": 725.0
     },
     {
       "word": "想",
-      "start_ms": 2293.75,
-      "duration_ms": 239.56199999999998
+      "start_ms": 2750.0,
+      "duration_ms": 287.5
     },
     {
       "word": "吃",
-      "start_ms": 2533.312,
-      "duration_ms": 250.0
+      "start_ms": 3037.5,
+      "duration_ms": 300.0
     },
     {
       "word": "？」",
-      "start_ms": 2783.312,
+      "start_ms": 3337.5,
       "duration_ms": 0.0
     }
   ]

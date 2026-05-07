@@ -4,33 +4,33 @@
   "words": [
     {
       "word": "哎呀",
-      "start_ms": 46.562,
-      "duration_ms": 477.25
+      "start_ms": 50.0,
+      "duration_ms": 525.0
     },
     {
       "word": "，",
-      "start_ms": 626.125,
+      "start_ms": 687.5,
       "duration_ms": 0.0
     },
     {
       "word": "幸好",
-      "start_ms": 626.125,
-      "duration_ms": 375.0
+      "start_ms": 687.5,
+      "duration_ms": 412.5
     },
     {
       "word": "你",
-      "start_ms": 1001.125,
-      "duration_ms": 147.75
+      "start_ms": 1100.0,
+      "duration_ms": 162.5
     },
     {
       "word": "眼利",
-      "start_ms": 1148.875,
-      "duration_ms": 568.187
+      "start_ms": 1262.5,
+      "duration_ms": 625.0
     },
     {
       "word": "。",
-      "start_ms": 1717.062,
-      "duration_ms": 79.562
+      "start_ms": 1887.5,
+      "duration_ms": 87.5
     }
   ]
 }

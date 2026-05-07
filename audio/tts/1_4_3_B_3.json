@@ -4,38 +4,38 @@
   "words": [
     {
       "word": "「王三",
-      "start_ms": 41.687,
-      "duration_ms": 447.93699999999995
+      "start_ms": 50.0,
+      "duration_ms": 537.5
     },
     {
       "word": "也",
-      "start_ms": 500.0,
-      "duration_ms": 197.937
+      "start_ms": 600.0,
+      "duration_ms": 237.5
     },
     {
       "word": "在",
-      "start_ms": 697.937,
-      "duration_ms": 218.75
+      "start_ms": 837.5,
+      "duration_ms": 262.5
     },
     {
       "word": "這裡",
-      "start_ms": 916.687,
-      "duration_ms": 437.5
+      "start_ms": 1100.0,
+      "duration_ms": 525.0
     },
     {
       "word": "做生意",
-      "start_ms": 1354.1869,
-      "duration_ms": 645.812
+      "start_ms": 1625.0,
+      "duration_ms": 775.0
     },
     {
       "word": "啊",
-      "start_ms": 2020.812,
-      "duration_ms": 218.75
+      "start_ms": 2425.0,
+      "duration_ms": 262.5
     },
     {
       "word": "。」",
-      "start_ms": 2250.0,
-      "duration_ms": 31.25
+      "start_ms": 2700.0,
+      "duration_ms": 37.5
     }
   ]
 }

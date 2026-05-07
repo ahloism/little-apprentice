@@ -4,23 +4,23 @@
   "words": [
     {
       "word": "「不",
-      "start_ms": 41.687,
-      "duration_ms": 125.0
+      "start_ms": 50.0,
+      "duration_ms": 150.0
     },
     {
       "word": "認識",
-      "start_ms": 166.687,
-      "duration_ms": 375.0
+      "start_ms": 200.0,
+      "duration_ms": 450.0
     },
     {
       "word": "你",
-      "start_ms": 541.687,
-      "duration_ms": 260.43699999999995
+      "start_ms": 650.0,
+      "duration_ms": 312.5
     },
     {
       "word": "……」",
-      "start_ms": 812.5,
-      "duration_ms": 41.687000000000005
+      "start_ms": 975.0,
+      "duration_ms": 50.0
     }
   ]
 }

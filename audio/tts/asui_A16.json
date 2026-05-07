@@ -4,153 +4,153 @@
   "words": [
     {
       "word": "畫完",
-      "start_ms": 41.687,
-      "duration_ms": 364.562
+      "start_ms": 50.0,
+      "duration_ms": 437.5
     },
     {
       "word": "了",
-      "start_ms": 406.25,
-      "duration_ms": 302.062
+      "start_ms": 487.5,
+      "duration_ms": 362.5
     },
     {
       "word": "！",
-      "start_ms": 708.312,
-      "duration_ms": 31.25
+      "start_ms": 850.0,
+      "duration_ms": 37.5
     },
     {
       "word": "大",
-      "start_ms": 1458.3119,
-      "duration_ms": 135.437
+      "start_ms": 1750.0,
+      "duration_ms": 162.5
     },
     {
       "word": "梁",
-      "start_ms": 1593.75,
-      "duration_ms": 187.5
+      "start_ms": 1912.5,
+      "duration_ms": 225.0
     },
     {
       "word": "城",
-      "start_ms": 1781.25,
-      "duration_ms": 187.5
+      "start_ms": 2137.5,
+      "duration_ms": 225.0
     },
     {
       "word": "每個",
-      "start_ms": 1979.187,
-      "duration_ms": 385.375
+      "start_ms": 2375.0,
+      "duration_ms": 462.5
     },
     {
       "word": "角落",
-      "start_ms": 2364.562,
-      "duration_ms": 385.43699999999995
+      "start_ms": 2837.5,
+      "duration_ms": 462.5
     },
     {
       "word": "我們",
-      "start_ms": 2750.0,
-      "duration_ms": 375.0
+      "start_ms": 3300.0,
+      "duration_ms": 450.0
     },
     {
       "word": "都",
-      "start_ms": 3135.437,
-      "duration_ms": 166.687
+      "start_ms": 3762.5,
+      "duration_ms": 200.0
     },
     {
       "word": "去",
-      "start_ms": 3312.5,
-      "duration_ms": 197.937
+      "start_ms": 3975.0,
+      "duration_ms": 237.5
     },
     {
       "word": "過",
-      "start_ms": 3510.437,
-      "duration_ms": 208.31199999999998
+      "start_ms": 4212.5,
+      "duration_ms": 250.0
     },
     {
       "word": "了",
-      "start_ms": 3718.75,
-      "duration_ms": 177.06199999999998
+      "start_ms": 4462.5,
+      "duration_ms": 212.5
     },
     {
       "word": "……",
-      "start_ms": 3895.812,
-      "duration_ms": 31.25
+      "start_ms": 4675.0,
+      "duration_ms": 37.5
     },
     {
       "word": "等等",
-      "start_ms": 3937.5,
-      "duration_ms": 510.437
+      "start_ms": 4725.0,
+      "duration_ms": 612.5
     },
     {
       "word": "，",
-      "start_ms": 4489.562,
-      "duration_ms": 10.437
+      "start_ms": 5387.5,
+      "duration_ms": 12.5
     },
     {
       "word": "好像",
-      "start_ms": 4968.75,
-      "duration_ms": 447.93699999999995
+      "start_ms": 5962.5,
+      "duration_ms": 537.5
     },
     {
       "word": "還有",
-      "start_ms": 5416.687,
-      "duration_ms": 406.25
+      "start_ms": 6500.0,
+      "duration_ms": 487.5
     },
     {
       "word": "什麼",
-      "start_ms": 5833.312,
-      "duration_ms": 406.25
+      "start_ms": 7000.0,
+      "duration_ms": 487.5
     },
     {
       "word": "事",
-      "start_ms": 6250.0,
-      "duration_ms": 218.75
+      "start_ms": 7500.0,
+      "duration_ms": 262.5
     },
     {
       "word": "要",
-      "start_ms": 6468.75,
-      "duration_ms": 218.75
+      "start_ms": 7762.5,
+      "duration_ms": 262.5
     },
     {
       "word": "發生",
-      "start_ms": 6687.5,
-      "duration_ms": 458.312
+      "start_ms": 8025.0,
+      "duration_ms": 550.0
     },
     {
       "word": "？",
-      "start_ms": 7187.5,
-      "duration_ms": 10.437
+      "start_ms": 8625.0,
+      "duration_ms": 12.5
     },
     {
       "word": "繼續",
-      "start_ms": 7916.687,
-      "duration_ms": 312.5
+      "start_ms": 9500.0,
+      "duration_ms": 375.0
     },
     {
       "word": "冒險",
-      "start_ms": 8229.187,
-      "duration_ms": 489.562
+      "start_ms": 9875.0,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 8760.437,
-      "duration_ms": 62.5
+      "start_ms": 10512.5,
+      "duration_ms": 75.0
     },
     {
       "word": "快",
-      "start_ms": 8864.562,
-      "duration_ms": 281.25
+      "start_ms": 10637.5,
+      "duration_ms": 337.5
     },
     {
       "word": "去",
-      "start_ms": 9145.812,
-      "duration_ms": 187.5
+      "start_ms": 10975.0,
+      "duration_ms": 225.0
     },
     {
       "word": "看看",
-      "start_ms": 9333.312,
-      "duration_ms": 604.187
+      "start_ms": 11200.0,
+      "duration_ms": 725.0
     },
     {
       "word": "！",
-      "start_ms": 9947.937,
-      "duration_ms": 20.812
+      "start_ms": 11937.5,
+      "duration_ms": 25.0
     }
   ]
 }

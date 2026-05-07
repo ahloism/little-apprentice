@@ -4,32 +4,32 @@
   "words": [
     {
       "word": "「別人",
-      "start_ms": 41.687,
-      "duration_ms": 343.75
+      "start_ms": 50.0,
+      "duration_ms": 412.5
     },
     {
       "word": "不敢",
-      "start_ms": 385.437,
-      "duration_ms": 385.43699999999995
+      "start_ms": 462.5,
+      "duration_ms": 462.5
     },
     {
       "word": "惹",
-      "start_ms": 781.25,
-      "duration_ms": 218.75
+      "start_ms": 937.5,
+      "duration_ms": 262.5
     },
     {
       "word": "他",
-      "start_ms": 1000.0,
-      "duration_ms": 218.75
+      "start_ms": 1200.0,
+      "duration_ms": 262.5
     },
     {
       "word": "的",
-      "start_ms": 1229.1869,
-      "duration_ms": 187.5
+      "start_ms": 1475.0,
+      "duration_ms": 225.0
     },
     {
       "word": "。」",
-      "start_ms": 1416.6869,
+      "start_ms": 1700.0,
       "duration_ms": 0.0
     }
   ]

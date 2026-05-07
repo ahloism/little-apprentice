@@ -4,58 +4,58 @@
   "words": [
     {
       "word": "「跟",
-      "start_ms": 41.687,
-      "duration_ms": 145.81199999999998
+      "start_ms": 50.0,
+      "duration_ms": 175.0
     },
     {
       "word": "住",
-      "start_ms": 187.5,
-      "duration_ms": 239.56199999999998
+      "start_ms": 225.0,
+      "duration_ms": 287.5
     },
     {
       "word": "我",
-      "start_ms": 427.062,
-      "duration_ms": 208.31199999999998
-    },
-    {
-      "word": "就",
-      "start_ms": 635.437,
-      "duration_ms": 229.125
-    },
-    {
-      "word": "好",
-      "start_ms": 864.562,
-      "duration_ms": 302.062
-    },
-    {
-      "word": "，",
-      "start_ms": 1177.0619,
-      "duration_ms": 41.687000000000005
-    },
-    {
-      "word": "包",
-      "start_ms": 1354.1869,
+      "start_ms": 512.5,
       "duration_ms": 250.0
     },
     {
-      "word": "你",
+      "word": "就",
+      "start_ms": 762.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "好",
+      "start_ms": 1037.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1412.5,
+      "duration_ms": 50.0
+    },
+    {
+      "word": "包",
       "start_ms": 1625.0,
-      "duration_ms": 187.5
+      "duration_ms": 300.0
+    },
+    {
+      "word": "你",
+      "start_ms": 1950.0,
+      "duration_ms": 225.0
     },
     {
       "word": "沒",
-      "start_ms": 1822.937,
-      "duration_ms": 177.06199999999998
+      "start_ms": 2187.5,
+      "duration_ms": 212.5
     },
     {
       "word": "問題",
-      "start_ms": 2000.0,
-      "duration_ms": 458.312
+      "start_ms": 2400.0,
+      "duration_ms": 550.0
     },
     {
       "word": "。」",
-      "start_ms": 2479.187,
-      "duration_ms": 52.062
+      "start_ms": 2975.0,
+      "duration_ms": 62.5
     }
   ]
 }

@@ -4,78 +4,78 @@
   "words": [
     {
       "word": "下",
-      "start_ms": 43.75,
-      "duration_ms": 187.5
+      "start_ms": 50.0,
+      "duration_ms": 225.0
     },
     {
       "word": "一",
-      "start_ms": 231.25,
-      "duration_ms": 156.25
+      "start_ms": 275.0,
+      "duration_ms": 187.5
     },
     {
       "word": "站",
-      "start_ms": 387.5,
-      "duration_ms": 291.68699999999995
+      "start_ms": 462.5,
+      "duration_ms": 350.0
     },
     {
       "word": "還",
-      "start_ms": 679.187,
-      "duration_ms": 218.75
+      "start_ms": 812.5,
+      "duration_ms": 262.5
     },
     {
       "word": "沒",
-      "start_ms": 897.937,
-      "duration_ms": 166.625
+      "start_ms": 1075.0,
+      "duration_ms": 200.0
     },
     {
       "word": "去",
-      "start_ms": 1064.5619,
-      "duration_ms": 197.937
+      "start_ms": 1275.0,
+      "duration_ms": 237.5
     },
     {
       "word": "呢",
-      "start_ms": 1262.5,
-      "duration_ms": 260.43699999999995
+      "start_ms": 1512.5,
+      "duration_ms": 312.5
     },
     {
       "word": "，",
-      "start_ms": 1554.1869,
-      "duration_ms": 72.937
+      "start_ms": 1862.5,
+      "duration_ms": 87.5
     },
     {
       "word": "跟",
-      "start_ms": 1866.687,
-      "duration_ms": 177.06199999999998
+      "start_ms": 2237.5,
+      "duration_ms": 212.5
     },
     {
       "word": "著",
-      "start_ms": 2043.75,
-      "duration_ms": 229.187
+      "start_ms": 2450.0,
+      "duration_ms": 275.0
     },
     {
       "word": "繼續",
-      "start_ms": 2272.937,
-      "duration_ms": 375.0
+      "start_ms": 2725.0,
+      "duration_ms": 450.0
     },
     {
       "word": "冒險",
-      "start_ms": 2647.937,
-      "duration_ms": 458.312
+      "start_ms": 3175.0,
+      "duration_ms": 550.0
     },
     {
       "word": "，",
-      "start_ms": 3137.5,
-      "duration_ms": 52.062
+      "start_ms": 3762.5,
+      "duration_ms": 62.5
     },
     {
       "word": "走",
-      "start_ms": 3200.0,
-      "duration_ms": 343.75
+      "start_ms": 3837.5,
+      "duration_ms": 412.5
     },
     {
       "word": "！",
-      "start_ms": 3554.187,
-      "duration_ms": 20.812
+      "start_ms": 4262.5,
+      "duration_ms": 25.0
     }
   ]
 }

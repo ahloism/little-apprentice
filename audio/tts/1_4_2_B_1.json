@@ -4,33 +4,33 @@
   "words": [
     {
       "word": "「阿乖",
-      "start_ms": 43.75,
-      "duration_ms": 489.562
+      "start_ms": 50.0,
+      "duration_ms": 587.5
     },
     {
       "word": "？",
-      "start_ms": 564.562,
-      "duration_ms": 31.25
+      "start_ms": 675.0,
+      "duration_ms": 37.5
     },
     {
       "word": "你",
-      "start_ms": 1325.0,
-      "duration_ms": 156.25
+      "start_ms": 1587.5,
+      "duration_ms": 187.5
     },
     {
       "word": "信",
-      "start_ms": 1481.25,
-      "duration_ms": 197.937
+      "start_ms": 1775.0,
+      "duration_ms": 237.5
     },
     {
       "word": "他",
-      "start_ms": 1679.187,
-      "duration_ms": 281.25
+      "start_ms": 2012.5,
+      "duration_ms": 337.5
     },
     {
       "word": "？」",
-      "start_ms": 1970.812,
-      "duration_ms": 10.437
+      "start_ms": 2362.5,
+      "duration_ms": 12.5
     }
   ]
 }

@@ -4,133 +4,133 @@
   "words": [
     {
       "word": "做完",
-      "start_ms": 43.75,
-      "duration_ms": 375.0
+      "start_ms": 50.0,
+      "duration_ms": 450.0
     },
     {
       "word": "了",
-      "start_ms": 418.75,
-      "duration_ms": 312.5
+      "start_ms": 500.0,
+      "duration_ms": 375.0
     },
     {
       "word": "！",
-      "start_ms": 731.25,
-      "duration_ms": 31.25
+      "start_ms": 875.0,
+      "duration_ms": 37.5
     },
     {
       "word": "地圖",
-      "start_ms": 1479.1869,
-      "duration_ms": 343.75
+      "start_ms": 1775.0,
+      "duration_ms": 412.5
     },
     {
       "word": "著色",
-      "start_ms": 1833.312,
-      "duration_ms": 364.562
-    },
-    {
-      "word": "了",
-      "start_ms": 2197.937,
-      "duration_ms": 302.062
-    },
-    {
-      "word": "——",
-      "start_ms": 2500.0,
-      "duration_ms": 62.5
-    },
-    {
-      "word": "五個",
-      "start_ms": 2906.25,
-      "duration_ms": 416.68699999999995
-    },
-    {
-      "word": "地方",
-      "start_ms": 3333.312,
-      "duration_ms": 395.812
-    },
-    {
-      "word": "全",
-      "start_ms": 3729.187,
-      "duration_ms": 218.75
-    },
-    {
-      "word": "著色",
-      "start_ms": 3947.937,
-      "duration_ms": 468.75
-    },
-    {
-      "word": "，",
-      "start_ms": 4437.5,
-      "duration_ms": 10.437
-    },
-    {
-      "word": "好像",
-      "start_ms": 4864.562,
-      "duration_ms": 427.062
-    },
-    {
-      "word": "有",
-      "start_ms": 5302.062,
-      "duration_ms": 187.5
-    },
-    {
-      "word": "什麼",
-      "start_ms": 5500.0,
-      "duration_ms": 364.562
-    },
-    {
-      "word": "事會",
-      "start_ms": 5875.0,
+      "start_ms": 2200.0,
       "duration_ms": 437.5
     },
     {
-      "word": "發生",
-      "start_ms": 6312.5,
-      "duration_ms": 479.18699999999995
+      "word": "了",
+      "start_ms": 2637.5,
+      "duration_ms": 362.5
     },
     {
-      "word": "？",
-      "start_ms": 6822.937,
-      "duration_ms": 31.25
+      "word": "——",
+      "start_ms": 3000.0,
+      "duration_ms": 75.0
     },
     {
-      "word": "我",
-      "start_ms": 7585.437,
-      "duration_ms": 156.25
+      "word": "五個",
+      "start_ms": 3487.5,
+      "duration_ms": 500.0
     },
     {
-      "word": "也",
-      "start_ms": 7752.062,
-      "duration_ms": 208.31199999999998
+      "word": "地方",
+      "start_ms": 4000.0,
+      "duration_ms": 475.0
     },
     {
-      "word": "不",
-      "start_ms": 7960.437,
-      "duration_ms": 156.25
+      "word": "全",
+      "start_ms": 4475.0,
+      "duration_ms": 262.5
     },
     {
-      "word": "確定",
-      "start_ms": 8116.687,
-      "duration_ms": 447.93699999999995
+      "word": "著色",
+      "start_ms": 4737.5,
+      "duration_ms": 562.5
     },
     {
       "word": "，",
-      "start_ms": 8658.312,
-      "duration_ms": 20.812
+      "start_ms": 5325.0,
+      "duration_ms": 12.5
+    },
+    {
+      "word": "好像",
+      "start_ms": 5837.5,
+      "duration_ms": 512.5
+    },
+    {
+      "word": "有",
+      "start_ms": 6362.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "什麼",
+      "start_ms": 6600.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "事會",
+      "start_ms": 7050.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "發生",
+      "start_ms": 7575.0,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "？",
+      "start_ms": 8187.5,
+      "duration_ms": 37.5
+    },
+    {
+      "word": "我",
+      "start_ms": 9100.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "也",
+      "start_ms": 9300.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "不",
+      "start_ms": 9550.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "確定",
+      "start_ms": 9737.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "，",
+      "start_ms": 10387.5,
+      "duration_ms": 25.0
     },
     {
       "word": "試試",
-      "start_ms": 8752.062,
-      "duration_ms": 489.562
+      "start_ms": 10500.0,
+      "duration_ms": 587.5
     },
     {
       "word": "看",
-      "start_ms": 9241.687,
-      "duration_ms": 375.0
+      "start_ms": 11087.5,
+      "duration_ms": 450.0
     },
     {
       "word": "！",
-      "start_ms": 9616.687,
-      "duration_ms": 10.437
+      "start_ms": 11537.5,
+      "duration_ms": 12.5
     }
   ]
 }

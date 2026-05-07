@@ -4,143 +4,143 @@
   "words": [
     {
       "word": "石頭",
-      "start_ms": 43.75,
-      "duration_ms": 416.68699999999995
-    },
-    {
-      "word": "那",
-      "start_ms": 470.812,
-      "duration_ms": 197.937
-    },
-    {
-      "word": "個人",
-      "start_ms": 668.75,
-      "duration_ms": 395.812
-    },
-    {
-      "word": "……",
-      "start_ms": 1095.8119,
-      "duration_ms": 20.812
-    },
-    {
-      "word": "一",
-      "start_ms": 1408.3119,
-      "duration_ms": 125.0
-    },
-    {
-      "word": "動不動",
-      "start_ms": 1533.3119,
-      "duration_ms": 520.812
-    },
-    {
-      "word": "盯",
-      "start_ms": 2075.0,
-      "duration_ms": 187.5
-    },
-    {
-      "word": "著",
-      "start_ms": 2283.312,
-      "duration_ms": 239.56199999999998
-    },
-    {
-      "word": "我們",
-      "start_ms": 2522.937,
-      "duration_ms": 479.18699999999995
-    },
-    {
-      "word": "，",
-      "start_ms": 3012.5,
-      "duration_ms": 52.062
-    },
-    {
-      "word": "我",
-      "start_ms": 3564.562,
-      "duration_ms": 270.812
-    },
-    {
-      "word": "當時",
-      "start_ms": 3866.687,
-      "duration_ms": 447.875
-    },
-    {
-      "word": "真的",
-      "start_ms": 4314.562,
-      "duration_ms": 354.18699999999995
-    },
-    {
-      "word": "不知道",
-      "start_ms": 4668.75,
-      "duration_ms": 614.562
-    },
-    {
-      "word": "他",
-      "start_ms": 5304.187,
-      "duration_ms": 229.125
-    },
-    {
-      "word": "想",
-      "start_ms": 5533.312,
-      "duration_ms": 239.56199999999998
-    },
-    {
-      "word": "做",
-      "start_ms": 5772.937,
-      "duration_ms": 208.31199999999998
-    },
-    {
-      "word": "什麼",
-      "start_ms": 5981.25,
+      "start_ms": 50.0,
       "duration_ms": 500.0
     },
     {
-      "word": "。",
-      "start_ms": 6481.25,
-      "duration_ms": 31.25
+      "word": "那",
+      "start_ms": 562.5,
+      "duration_ms": 237.5
     },
     {
-      "word": "下",
-      "start_ms": 7220.812,
-      "duration_ms": 197.937
+      "word": "個人",
+      "start_ms": 800.0,
+      "duration_ms": 475.0
+    },
+    {
+      "word": "……",
+      "start_ms": 1312.5,
+      "duration_ms": 25.0
     },
     {
       "word": "一",
-      "start_ms": 7418.75,
-      "duration_ms": 145.81199999999998
+      "start_ms": 1687.5,
+      "duration_ms": 150.0
     },
     {
-      "word": "站",
-      "start_ms": 7564.562,
-      "duration_ms": 281.25
+      "word": "動不動",
+      "start_ms": 1837.5,
+      "duration_ms": 625.0
     },
     {
-      "word": "是",
-      "start_ms": 7845.812,
-      "duration_ms": 218.75
+      "word": "盯",
+      "start_ms": 2487.5,
+      "duration_ms": 225.0
     },
     {
-      "word": "橋",
-      "start_ms": 8064.562,
-      "duration_ms": 218.75
+      "word": "著",
+      "start_ms": 2737.5,
+      "duration_ms": 287.5
     },
     {
-      "word": "邊",
-      "start_ms": 8283.312,
-      "duration_ms": 281.25
+      "word": "我們",
+      "start_ms": 3025.0,
+      "duration_ms": 575.0
     },
     {
       "word": "，",
-      "start_ms": 8575.0,
+      "start_ms": 3612.5,
       "duration_ms": 62.5
     },
     {
+      "word": "我",
+      "start_ms": 4275.0,
+      "duration_ms": 325.0
+    },
+    {
+      "word": "當時",
+      "start_ms": 4637.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "真的",
+      "start_ms": 5175.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "不知道",
+      "start_ms": 5600.0,
+      "duration_ms": 737.5
+    },
+    {
+      "word": "他",
+      "start_ms": 6362.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "想",
+      "start_ms": 6637.5,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "做",
+      "start_ms": 6925.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "什麼",
+      "start_ms": 7175.0,
+      "duration_ms": 600.0
+    },
+    {
+      "word": "。",
+      "start_ms": 7775.0,
+      "duration_ms": 37.5
+    },
+    {
+      "word": "下",
+      "start_ms": 8662.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "一",
+      "start_ms": 8900.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "站",
+      "start_ms": 9075.0,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "是",
+      "start_ms": 9412.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "橋",
+      "start_ms": 9675.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "邊",
+      "start_ms": 9937.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "，",
+      "start_ms": 10287.5,
+      "duration_ms": 75.0
+    },
+    {
       "word": "走",
-      "start_ms": 8668.75,
-      "duration_ms": 343.75
+      "start_ms": 10400.0,
+      "duration_ms": 412.5
     },
     {
       "word": "！",
-      "start_ms": 9012.5,
-      "duration_ms": 31.25
+      "start_ms": 10812.5,
+      "duration_ms": 37.5
     }
   ]
 }

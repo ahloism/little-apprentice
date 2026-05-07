@@ -4,82 +4,82 @@
   "words": [
     {
       "word": "這邊",
-      "start_ms": 43.75,
-      "duration_ms": 354.18699999999995
+      "start_ms": 50.0,
+      "duration_ms": 425.0
     },
     {
       "word": "都",
-      "start_ms": 397.937,
-      "duration_ms": 177.06199999999998
+      "start_ms": 475.0,
+      "duration_ms": 212.5
     },
     {
       "word": "搞定",
-      "start_ms": 575.0,
-      "duration_ms": 354.18699999999995
+      "start_ms": 687.5,
+      "duration_ms": 425.0
     },
     {
       "word": "了",
-      "start_ms": 960.437,
-      "duration_ms": 270.812
+      "start_ms": 1150.0,
+      "duration_ms": 325.0
     },
     {
       "word": "，",
-      "start_ms": 1231.25,
-      "duration_ms": 62.5
+      "start_ms": 1475.0,
+      "duration_ms": 75.0
     },
     {
       "word": "故事",
-      "start_ms": 1554.1869,
-      "duration_ms": 427.062
+      "start_ms": 1862.5,
+      "duration_ms": 512.5
     },
     {
       "word": "還",
-      "start_ms": 1981.25,
-      "duration_ms": 218.75
+      "start_ms": 2375.0,
+      "duration_ms": 262.5
     },
     {
       "word": "在",
-      "start_ms": 2200.0,
-      "duration_ms": 218.75
+      "start_ms": 2637.5,
+      "duration_ms": 262.5
     },
     {
       "word": "等",
-      "start_ms": 2418.75,
-      "duration_ms": 166.687
+      "start_ms": 2900.0,
+      "duration_ms": 200.0
     },
     {
       "word": "你",
-      "start_ms": 2585.437,
-      "duration_ms": 250.0
+      "start_ms": 3100.0,
+      "duration_ms": 300.0
     },
     {
       "word": "——",
-      "start_ms": 2845.812,
-      "duration_ms": 52.062
+      "start_ms": 3412.5,
+      "duration_ms": 62.5
     },
     {
       "word": "點",
-      "start_ms": 3054.187,
-      "duration_ms": 166.687
+      "start_ms": 3662.5,
+      "duration_ms": 200.0
     },
     {
       "word": "『",
-      "start_ms": 3252.062,
-      "duration_ms": 41.687000000000005
+      "start_ms": 3900.0,
+      "duration_ms": 50.0
     },
     {
       "word": "繼續",
-      "start_ms": 3293.75,
-      "duration_ms": 385.43699999999995
+      "start_ms": 3950.0,
+      "duration_ms": 462.5
     },
     {
       "word": "冒險",
-      "start_ms": 3679.187,
-      "duration_ms": 468.75
+      "start_ms": 4412.5,
+      "duration_ms": 562.5
     },
     {
       "word": "』。",
-      "start_ms": 4200.0,
+      "start_ms": 5037.5,
       "duration_ms": 0.0
     }
   ]
