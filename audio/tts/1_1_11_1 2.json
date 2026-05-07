@@ -1,0 +1,66 @@
+{
+  "filename": "1_1_11_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「這",
+      "start_ms": 43.75,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "三",
+      "start_ms": 220.812,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "樣",
+      "start_ms": 470.812,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "我",
+      "start_ms": 689.562,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "最",
+      "start_ms": 877.062,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "清楚",
+      "start_ms": 1095.8119,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "，",
+      "start_ms": 1668.75,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "讓",
+      "start_ms": 1866.687,
+      "duration_ms": 260.375
+    },
+    {
+      "word": "我",
+      "start_ms": 2127.062,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "來",
+      "start_ms": 2304.187,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "說",
+      "start_ms": 2481.25,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 2762.5,
+      "duration_ms": 0.0
+    }
+  ]
+}

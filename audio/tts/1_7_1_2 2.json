@@ -1,0 +1,51 @@
+{
+  "filename": "1_7_1_2.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「那",
+      "start_ms": 43.75,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "是",
+      "start_ms": 220.812,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "錢平",
+      "start_ms": 460.437,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "師兄",
+      "start_ms": 918.75,
+      "duration_ms": 468.75
+    },
+    {
+      "word": "，",
+      "start_ms": 1439.5619,
+      "duration_ms": 93.75
+    },
+    {
+      "word": "專管",
+      "start_ms": 1731.25,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "帳房",
+      "start_ms": 2168.75,
+      "duration_ms": 489.562
+    },
+    {
+      "word": "的",
+      "start_ms": 2668.75,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "。」",
+      "start_ms": 2866.687,
+      "duration_ms": 0.0
+    }
+  ]
+}

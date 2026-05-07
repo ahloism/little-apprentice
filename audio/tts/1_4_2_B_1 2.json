@@ -1,0 +1,36 @@
+{
+  "filename": "1_4_2_B_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「阿乖",
+      "start_ms": 43.75,
+      "duration_ms": 489.562
+    },
+    {
+      "word": "？",
+      "start_ms": 564.562,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "你",
+      "start_ms": 1325.0,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "信",
+      "start_ms": 1481.25,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "他",
+      "start_ms": 1679.187,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "？」",
+      "start_ms": 1970.812,
+      "duration_ms": 10.437
+    }
+  ]
+}

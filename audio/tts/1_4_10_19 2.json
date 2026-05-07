@@ -1,0 +1,46 @@
+{
+  "filename": "1_4_10_19.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「哎呀",
+      "start_ms": 43.75,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "！",
+      "start_ms": 502.062,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "你",
+      "start_ms": 1272.9369,
+      "duration_ms": 166.625
+    },
+    {
+      "word": "去",
+      "start_ms": 1439.5619,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "了",
+      "start_ms": 1647.9369,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "哪裡",
+      "start_ms": 1877.062,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "啊",
+      "start_ms": 2325.0,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "！」",
+      "start_ms": 2564.562,
+      "duration_ms": 20.812
+    }
+  ]
+}

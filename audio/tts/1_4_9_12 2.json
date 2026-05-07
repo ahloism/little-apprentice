@@ -1,0 +1,71 @@
+{
+  "filename": "1_4_9_12.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「我",
+      "start_ms": 43.75,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "心裡",
+      "start_ms": 210.437,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "有",
+      "start_ms": 606.25,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "個",
+      "start_ms": 814.562,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "答案",
+      "start_ms": 991.687,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "了",
+      "start_ms": 1387.5,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "，",
+      "start_ms": 1668.75,
+      "duration_ms": 93.75
+    },
+    {
+      "word": "不過",
+      "start_ms": 1939.562,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "你",
+      "start_ms": 2335.437,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "自己",
+      "start_ms": 2522.937,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "想",
+      "start_ms": 2918.75,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "清楚",
+      "start_ms": 3127.062,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 3658.312,
+      "duration_ms": 20.812
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "filename": "1_4_5_A_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「梅",
+      "start_ms": 41.687,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "姐",
+      "start_ms": 197.937,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "也",
+      "start_ms": 447.937,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "在",
+      "start_ms": 656.25,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "這裡",
+      "start_ms": 875.0,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "啊",
+      "start_ms": 1312.5,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "。」",
+      "start_ms": 1531.25,
+      "duration_ms": 31.25
+    }
+  ]
+}

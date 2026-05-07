@@ -1,0 +1,86 @@
+{
+  "filename": "asui_T7.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "銅錢",
+      "start_ms": 41.687,
+      "duration_ms": 385.375
+    },
+    {
+      "word": "還",
+      "start_ms": 427.062,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "不夠",
+      "start_ms": 645.812,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 1104.1869,
+      "duration_ms": 72.937
+    },
+    {
+      "word": "繼續",
+      "start_ms": 1312.5,
+      "duration_ms": 364.562
+    },
+    {
+      "word": "去",
+      "start_ms": 1677.0619,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "走走",
+      "start_ms": 1864.562,
+      "duration_ms": 510.437
+    },
+    {
+      "word": "，",
+      "start_ms": 2385.437,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "答",
+      "start_ms": 2635.437,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "得",
+      "start_ms": 2854.187,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "好",
+      "start_ms": 3031.25,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "一點",
+      "start_ms": 3250.0,
+      "duration_ms": 385.43699999999995
+    },
+    {
+      "word": "就",
+      "start_ms": 3645.812,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "有",
+      "start_ms": 3885.437,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "了",
+      "start_ms": 4093.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。",
+      "start_ms": 4375.0,
+      "duration_ms": 31.25
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "filename": "1_1_11_A_1.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "「糖葫蘆",
+      "start_ms": 50.0,
+      "duration_ms": 958.312
+    },
+    {
+      "word": "，",
+      "start_ms": 1175.0,
+      "duration_ms": 222.25
+    },
+    {
+      "word": "不是",
+      "start_ms": 1397.25,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "糖餅",
+      "start_ms": 1772.25,
+      "duration_ms": 708.312
+    },
+    {
+      "word": "。",
+      "start_ms": 2647.25,
+      "duration_ms": 402.75
+    },
+    {
+      "word": "」",
+      "start_ms": 3050.0,
+      "duration_ms": 97.25
+    }
+  ]
+}

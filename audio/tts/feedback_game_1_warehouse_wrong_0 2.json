@@ -1,0 +1,26 @@
+{
+  "filename": "feedback_game_1_warehouse_wrong_0.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "做事",
+      "start_ms": 50.0,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "要",
+      "start_ms": 591.687,
+      "duration_ms": 180.562
+    },
+    {
+      "word": "小心",
+      "start_ms": 772.25,
+      "duration_ms": 652.75
+    },
+    {
+      "word": "。",
+      "start_ms": 1438.875,
+      "duration_ms": 97.25
+    }
+  ]
+}

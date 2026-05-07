@@ -1,0 +1,56 @@
+{
+  "filename": "1_4_7_A_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「但",
+      "start_ms": 41.687,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "說",
+      "start_ms": 197.937,
+      "duration_ms": 229.125
+    },
+    {
+      "word": "不",
+      "start_ms": 427.062,
+      "duration_ms": 145.81199999999998
+    },
+    {
+      "word": "清楚",
+      "start_ms": 572.937,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "不",
+      "start_ms": 1083.3119,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "代表",
+      "start_ms": 1250.0,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "說",
+      "start_ms": 1645.8119,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "錯",
+      "start_ms": 1854.187,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "了",
+      "start_ms": 2093.75,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 2375.0,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

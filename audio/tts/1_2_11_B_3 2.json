@@ -1,0 +1,46 @@
+{
+  "filename": "1_2_11_B_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「夠",
+      "start_ms": 41.687,
+      "duration_ms": 156.25
+    },
+    {
+      "word": "了",
+      "start_ms": 208.312,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "夠",
+      "start_ms": 395.812,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "了",
+      "start_ms": 614.562,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "，",
+      "start_ms": 875.0,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "走",
+      "start_ms": 958.312,
+      "duration_ms": 260.43699999999995
+    },
+    {
+      "word": "啦",
+      "start_ms": 1229.1869,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 1520.8119,
+      "duration_ms": 20.812
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "filename": "1_4_12_5.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「等",
+      "start_ms": 41.687,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "吧",
+      "start_ms": 166.687,
+      "duration_ms": 291.68699999999995
+    },
+    {
+      "word": "，",
+      "start_ms": 468.75,
+      "duration_ms": 41.687000000000005
+    },
+    {
+      "word": "老梁應該",
+      "start_ms": 781.25,
+      "duration_ms": 822.937
+    },
+    {
+      "word": "快",
+      "start_ms": 1614.5619,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "回來",
+      "start_ms": 1854.187,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "了",
+      "start_ms": 2250.0,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 2531.25,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

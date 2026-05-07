@@ -1,0 +1,106 @@
+{
+  "filename": "asui_T15.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "全部",
+      "start_ms": 43.75,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "都",
+      "start_ms": 450.0,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "做完",
+      "start_ms": 637.5,
+      "duration_ms": 416.68699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 1054.1869,
+      "duration_ms": 270.812
+    },
+    {
+      "word": "？",
+      "start_ms": 1335.4369,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "不如",
+      "start_ms": 2083.312,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "再",
+      "start_ms": 2395.812,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "去",
+      "start_ms": 2635.437,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "重",
+      "start_ms": 2812.5,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "玩",
+      "start_ms": 3041.687,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "一次",
+      "start_ms": 3250.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3718.75,
+      "duration_ms": 104.187
+    },
+    {
+      "word": "看看",
+      "start_ms": 4187.5,
+      "duration_ms": 479.18699999999995
+    },
+    {
+      "word": "有",
+      "start_ms": 4666.687,
+      "duration_ms": 197.875
+    },
+    {
+      "word": "沒有",
+      "start_ms": 4864.562,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "答",
+      "start_ms": 5270.812,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "得",
+      "start_ms": 5468.75,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "更",
+      "start_ms": 5635.437,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "好",
+      "start_ms": 5854.187,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "？",
+      "start_ms": 6166.687,
+      "duration_ms": 10.437
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "filename": "1_2_4_C_v3_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「還",
+      "start_ms": 41.687,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "看",
+      "start_ms": 250.0,
+      "duration_ms": 322.93699999999995
+    },
+    {
+      "word": "？",
+      "start_ms": 593.75,
+      "duration_ms": 20.812
+    },
+    {
+      "word": "走",
+      "start_ms": 1356.25,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "啦",
+      "start_ms": 1543.75,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "走",
+      "start_ms": 1752.062,
+      "duration_ms": 239.56199999999998
+    },
+    {
+      "word": "啦",
+      "start_ms": 2012.5,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 2304.187,
+      "duration_ms": 31.25
+    }
+  ]
+}

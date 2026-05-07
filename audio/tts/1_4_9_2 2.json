@@ -1,0 +1,26 @@
+{
+  "filename": "1_4_9_2.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「你",
+      "start_ms": 43.75,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "說",
+      "start_ms": 210.437,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "的",
+      "start_ms": 429.187,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "……」",
+      "start_ms": 606.25,
+      "duration_ms": 52.062
+    }
+  ]
+}

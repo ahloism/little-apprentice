@@ -1,0 +1,66 @@
+{
+  "filename": "1_4_12_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「梅",
+      "start_ms": 41.687,
+      "duration_ms": 135.375
+    },
+    {
+      "word": "姐",
+      "start_ms": 177.062,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "就",
+      "start_ms": 395.812,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "在",
+      "start_ms": 604.187,
+      "duration_ms": 197.875
+    },
+    {
+      "word": "這裡",
+      "start_ms": 802.062,
+      "duration_ms": 489.562
+    },
+    {
+      "word": "，",
+      "start_ms": 1322.9369,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "老",
+      "start_ms": 1677.0619,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "梁",
+      "start_ms": 1885.437,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "叫",
+      "start_ms": 2093.75,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "她",
+      "start_ms": 2302.062,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "幫手",
+      "start_ms": 2520.812,
+      "duration_ms": 552.062
+    },
+    {
+      "word": "。」",
+      "start_ms": 3072.937,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

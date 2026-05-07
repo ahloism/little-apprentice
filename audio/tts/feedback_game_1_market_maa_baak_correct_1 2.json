@@ -1,0 +1,36 @@
+{
+  "filename": "feedback_game_1_market_maa_baak_correct_1.mp3",
+  "speaker": "馬伯",
+  "words": [
+    {
+      "word": "你",
+      "start_ms": 50.0,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "倒",
+      "start_ms": 327.75,
+      "duration_ms": 222.25
+    },
+    {
+      "word": "看",
+      "start_ms": 550.0,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "得",
+      "start_ms": 813.875,
+      "duration_ms": 111.125
+    },
+    {
+      "word": "仔細",
+      "start_ms": 925.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "。",
+      "start_ms": 1563.875,
+      "duration_ms": 97.25
+    }
+  ]
+}

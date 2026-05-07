@@ -1,0 +1,86 @@
+{
+  "filename": "1_2_10_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「石頭",
+      "start_ms": 43.75,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "哥",
+      "start_ms": 439.562,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "，",
+      "start_ms": 700.0,
+      "duration_ms": 31.25
+    },
+    {
+      "word": "不好",
+      "start_ms": 908.312,
+      "duration_ms": 354.18699999999995
+    },
+    {
+      "word": "意思",
+      "start_ms": 1272.9369,
+      "duration_ms": 385.43699999999995
+    },
+    {
+      "word": "啊",
+      "start_ms": 1689.562,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "，",
+      "start_ms": 1950.0,
+      "duration_ms": 72.937
+    },
+    {
+      "word": "我",
+      "start_ms": 2314.562,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "這",
+      "start_ms": 2533.312,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "師弟",
+      "start_ms": 2741.687,
+      "duration_ms": 427.062
+    },
+    {
+      "word": "剛",
+      "start_ms": 3168.75,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "從",
+      "start_ms": 3397.937,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "鄉下來",
+      "start_ms": 3616.687,
+      "duration_ms": 635.437
+    },
+    {
+      "word": "，",
+      "start_ms": 4304.187,
+      "duration_ms": 72.937
+    },
+    {
+      "word": "不熟路",
+      "start_ms": 4387.5,
+      "duration_ms": 645.812
+    },
+    {
+      "word": "。」",
+      "start_ms": 5033.312,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

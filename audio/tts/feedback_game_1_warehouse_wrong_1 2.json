@@ -1,0 +1,21 @@
+{
+  "filename": "feedback_game_1_warehouse_wrong_1.mp3",
+  "speaker": "錢伯",
+  "words": [
+    {
+      "word": "不要",
+      "start_ms": 50.0,
+      "duration_ms": 402.75
+    },
+    {
+      "word": "馬虎",
+      "start_ms": 452.75,
+      "duration_ms": 638.875
+    },
+    {
+      "word": "。",
+      "start_ms": 1105.5619,
+      "duration_ms": 97.25
+    }
+  ]
+}

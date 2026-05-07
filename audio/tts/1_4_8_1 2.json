@@ -1,0 +1,61 @@
+{
+  "filename": "1_4_8_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「那",
+      "start_ms": 43.75,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "另外",
+      "start_ms": 231.25,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "兩個",
+      "start_ms": 627.062,
+      "duration_ms": 395.812
+    },
+    {
+      "word": "呢",
+      "start_ms": 1022.937,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "？",
+      "start_ms": 1231.25,
+      "duration_ms": 10.437
+    },
+    {
+      "word": "你",
+      "start_ms": 1960.437,
+      "duration_ms": 166.687
+    },
+    {
+      "word": "為什麼",
+      "start_ms": 2137.5,
+      "duration_ms": 593.75
+    },
+    {
+      "word": "不",
+      "start_ms": 2731.25,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "信",
+      "start_ms": 2856.25,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "他們",
+      "start_ms": 3085.437,
+      "duration_ms": 531.25
+    },
+    {
+      "word": "？」",
+      "start_ms": 3627.062,
+      "duration_ms": 10.437
+    }
+  ]
+}

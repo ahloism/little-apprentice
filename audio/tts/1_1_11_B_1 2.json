@@ -1,0 +1,41 @@
+{
+  "filename": "1_1_11_B_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「對",
+      "start_ms": 41.687,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "，",
+      "start_ms": 291.687,
+      "duration_ms": 41.687000000000005
+    },
+    {
+      "word": "糖餅",
+      "start_ms": 364.562,
+      "duration_ms": 541.687
+    },
+    {
+      "word": "，",
+      "start_ms": 927.062,
+      "duration_ms": 52.062
+    },
+    {
+      "word": "記住",
+      "start_ms": 1031.25,
+      "duration_ms": 447.93699999999995
+    },
+    {
+      "word": "了",
+      "start_ms": 1479.1869,
+      "duration_ms": 281.25
+    },
+    {
+      "word": "。」",
+      "start_ms": 1760.437,
+      "duration_ms": 41.687000000000005
+    }
+  ]
+}

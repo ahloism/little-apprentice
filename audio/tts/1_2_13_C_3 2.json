@@ -1,0 +1,36 @@
+{
+  "filename": "1_2_13_C_3.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「別人",
+      "start_ms": 41.687,
+      "duration_ms": 343.75
+    },
+    {
+      "word": "不敢",
+      "start_ms": 385.437,
+      "duration_ms": 385.43699999999995
+    },
+    {
+      "word": "惹",
+      "start_ms": 781.25,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "他",
+      "start_ms": 1000.0,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "的",
+      "start_ms": 1229.1869,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "。」",
+      "start_ms": 1416.6869,
+      "duration_ms": 0.0
+    }
+  ]
+}
