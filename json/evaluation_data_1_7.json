@@ -10,7 +10,12 @@
       "support_option": [
         "A",
         "B"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_7_4",
@@ -21,7 +26,12 @@
       "support_option": [
         "B",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0.5
+      }
     },
     {
       "scene_id": "1_7_5",
@@ -32,7 +42,12 @@
       "support_option": [
         "A",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0.5,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_7_6",
@@ -43,7 +58,12 @@
       "support_option": [
         "A",
         "B"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_7_7",
@@ -54,7 +74,12 @@
       "support_option": [
         "B",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_7_8",
@@ -65,7 +90,12 @@
       "support_option": [
         "A",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_7_10",

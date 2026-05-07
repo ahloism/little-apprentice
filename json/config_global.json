@@ -1,5 +1,6 @@
 {
   "config_id": "global",
+  "last_updated": "2026-05-07",
   "json_version": 1,
   "scoring_rules": {
     "primary_weight": 1,
@@ -58,12 +59,12 @@
         "pitch": "+0st"
       },
       "阿水": {
-        "rate": "+20%",
-        "pitch": "+1.5st"
+        "rate": "+0%",
+        "pitch": "+0st"
       },
       "錢伯": {
-        "rate": "-20%",
-        "pitch": "-3st"
+        "rate": "-10%",
+        "pitch": "+0st"
       },
       "錢平": {
         "rate": "-10%",
@@ -78,8 +79,8 @@
         "pitch": "+1st"
       },
       "石頭": {
-        "rate": "-20%",
-        "pitch": "-3st"
+        "rate": "+0%",
+        "pitch": "+0st"
       },
       "梅姐": {
         "rate": "-10%",
@@ -87,31 +88,31 @@
       },
       "阿乖": {
         "rate": "+10%",
-        "pitch": "-3st"
+        "pitch": "+0st"
       },
       "王三": {
         "rate": "+20%",
-        "pitch": "+1st"
+        "pitch": "+0st"
       },
       "蔡婆婆": {
-        "rate": "+10%",
-        "pitch": "+3st"
+        "rate": "+0%",
+        "pitch": "+0st"
       },
       "余老大": {
-        "rate": "+0%",
-        "pitch": "-3st"
+        "rate": "-10%",
+        "pitch": "+0st"
       },
       "阿萍": {
         "rate": "-10%",
         "pitch": "+0st"
       },
       "馬伯": {
-        "rate": "-20%",
-        "pitch": "-3st"
+        "rate": "-10%",
+        "pitch": "+0st"
       },
       "阿毛": {
         "rate": "+20%",
-        "pitch": "+3st"
+        "pitch": "+0st"
       },
       "細狗": {
         "rate": "+10%",

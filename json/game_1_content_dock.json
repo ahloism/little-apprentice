@@ -294,20 +294,23 @@
         {
           "item_id": "opt_candles",
           "item_word": "蠟燭",
-          "correct_measure_id": "opt_go3"
+          "correct_measure_id": "opt_go3",
+          "quantity": 3
         },
         {
           "item_id": "opt_crab",
           "item_word": "蟹",
-          "correct_measure_id": "opt_zek3"
+          "correct_measure_id": "opt_zek3",
+          "quantity": 2
         },
         {
           "item_id": "opt_silk",
           "item_word": "絲綢",
-          "correct_measure_id": "opt_gin6"
+          "correct_measure_id": "opt_gin6",
+          "quantity": 5
         }
       ],
-      "answer_restate": "應是一個蠟燭、一隻蟹、一件絲綢。",
+      "answer_restate": "應是三個蠟燭、兩隻蟹、五件絲綢。",
       "combo_options": [
         {
           "combo_id": "combo_dock_01_A",
@@ -342,20 +345,23 @@
         {
           "item_id": "opt_hemp_rope",
           "item_word": "麻繩",
-          "correct_measure_id": "opt_tiu4"
+          "correct_measure_id": "opt_tiu4",
+          "quantity": 4
         },
         {
           "item_id": "opt_lotus_root",
           "item_word": "蓮藕",
-          "correct_measure_id": "opt_gan1"
+          "correct_measure_id": "opt_gan1",
+          "quantity": 6
         },
         {
           "item_id": "opt_cotton_cloth",
           "item_word": "棉布",
-          "correct_measure_id": "opt_zoeng1"
+          "correct_measure_id": "opt_zoeng1",
+          "quantity": 7
         }
       ],
-      "answer_restate": "應是一條麻繩、一根蓮藕、一張棉布。",
+      "answer_restate": "應是四條麻繩、六根蓮藕、七張棉布。",
       "combo_options": [
         {
           "combo_id": "combo_dock_02_A",
@@ -390,20 +396,23 @@
         {
           "item_id": "opt_candied_hawthorn",
           "item_word": "糖葫蘆",
-          "correct_measure_id": "opt_cyun3"
+          "correct_measure_id": "opt_cyun3",
+          "quantity": 8
         },
         {
           "item_id": "opt_tofu",
           "item_word": "豆腐",
-          "correct_measure_id": "opt_faai3"
+          "correct_measure_id": "opt_faai3",
+          "quantity": 9
         },
         {
           "item_id": "opt_wood_ear",
           "item_word": "木耳",
-          "correct_measure_id": "opt_pin3"
+          "correct_measure_id": "opt_pin3",
+          "quantity": 10
         }
       ],
-      "answer_restate": "應是一串糖葫蘆、一塊豆腐、一片木耳。",
+      "answer_restate": "應是八串糖葫蘆、九塊豆腐、十片木耳。",
       "combo_options": [
         {
           "combo_id": "combo_dock_03_A",
@@ -438,20 +447,23 @@
         {
           "item_id": "opt_white_rice",
           "item_word": "白米",
-          "correct_measure_id": "opt_doi6"
+          "correct_measure_id": "opt_doi6",
+          "quantity": 2
         },
         {
           "item_id": "opt_rapeseed_oil",
           "item_word": "菜油",
-          "correct_measure_id": "opt_tung4"
+          "correct_measure_id": "opt_tung4",
+          "quantity": 5
         },
         {
           "item_id": "opt_pear",
           "item_word": "梨",
-          "correct_measure_id": "opt_laam4"
+          "correct_measure_id": "opt_laam4",
+          "quantity": 3
         }
       ],
-      "answer_restate": "應是一袋白米、一桶菜油、一籃梨。",
+      "answer_restate": "應是兩袋白米、五桶菜油、三籃梨。",
       "combo_options": [
         {
           "combo_id": "combo_dock_04_A",
@@ -486,20 +498,23 @@
         {
           "item_id": "opt_duck_eggs",
           "item_word": "鴨蛋",
-          "correct_measure_id": "opt_soeng1"
+          "correct_measure_id": "opt_soeng1",
+          "quantity": 6
         },
         {
           "item_id": "opt_crab",
           "item_word": "蟹",
-          "correct_measure_id": "opt_lung4"
+          "correct_measure_id": "opt_lung4",
+          "quantity": 4
         },
         {
           "item_id": "opt_herbal_tea",
           "item_word": "涼茶",
-          "correct_measure_id": "opt_wu4"
+          "correct_measure_id": "opt_wu4",
+          "quantity": 8
         }
       ],
-      "answer_restate": "應是一箱鴨蛋、一籠蟹、一壺涼茶。",
+      "answer_restate": "應是六箱鴨蛋、四籠蟹、八壺涼茶。",
       "combo_options": [
         {
           "combo_id": "combo_dock_05_A",
@@ -534,20 +549,23 @@
         {
           "item_id": "opt_roasted_peanuts",
           "item_word": "炒花生",
-          "correct_measure_id": "opt_wun2"
+          "correct_measure_id": "opt_wun2",
+          "quantity": 7
         },
         {
           "item_id": "opt_tea_leaves",
           "item_word": "茶",
-          "correct_measure_id": "opt_zang2"
+          "correct_measure_id": "opt_zang2",
+          "quantity": 9
         },
         {
           "item_id": "opt_salt",
           "item_word": "食鹽",
-          "correct_measure_id": "opt_baau1"
+          "correct_measure_id": "opt_baau1",
+          "quantity": 5
         }
       ],
-      "answer_restate": "應是一碗炒花生、一盞茶、一包食鹽。",
+      "answer_restate": "應是七碗炒花生、九盞茶、五包食鹽。",
       "combo_options": [
         {
           "combo_id": "combo_dock_06_A",
@@ -582,20 +600,23 @@
         {
           "item_id": "opt_hemp_rope",
           "item_word": "麻繩",
-          "correct_measure_id": "opt_kwan2"
+          "correct_measure_id": "opt_kwan2",
+          "quantity": 10
         },
         {
           "item_id": "opt_cotton_cloth",
           "item_word": "棉布",
-          "correct_measure_id": "opt_dip6"
+          "correct_measure_id": "opt_dip6",
+          "quantity": 6
         },
         {
           "item_id": "opt_candles",
           "item_word": "蠟燭",
-          "correct_measure_id": "opt_pai1"
+          "correct_measure_id": "opt_pai1",
+          "quantity": 2
         }
       ],
-      "answer_restate": "應是一捆麻繩、一疊棉布、一批蠟燭。",
+      "answer_restate": "應是十捆麻繩、六疊棉布、兩批蠟燭。",
       "combo_options": [
         {
           "combo_id": "combo_dock_07_A",
@@ -630,20 +651,23 @@
         {
           "item_id": "opt_sweet_potato",
           "item_word": "番薯",
-          "correct_measure_id": "opt_deoi1"
+          "correct_measure_id": "opt_deoi1",
+          "quantity": 8
         },
         {
           "item_id": "opt_pancake",
           "item_word": "煎餅",
-          "correct_measure_id": "opt_dip6"
+          "correct_measure_id": "opt_dip6",
+          "quantity": 4
         },
         {
           "item_id": "opt_celery",
           "item_word": "芹菜",
-          "correct_measure_id": "opt_zaat3"
+          "correct_measure_id": "opt_zaat3",
+          "quantity": 9
         }
       ],
-      "answer_restate": "應是一堆番薯、一疊煎餅、一紮芹菜。",
+      "answer_restate": "應是八堆番薯、四疊煎餅、九紮芹菜。",
       "combo_options": [
         {
           "combo_id": "combo_dock_08_A",
@@ -678,20 +702,23 @@
         {
           "item_id": "opt_beef",
           "item_word": "牛肉",
-          "correct_measure_id": "opt_gan1_weight"
+          "correct_measure_id": "opt_gan1_weight",
+          "quantity": 3
         },
         {
           "item_id": "opt_dried_shrimp",
           "item_word": "蝦米",
-          "correct_measure_id": "opt_loeng5"
+          "correct_measure_id": "opt_loeng5",
+          "quantity": 10
         },
         {
           "item_id": "opt_ginger",
           "item_word": "薑",
-          "correct_measure_id": "opt_cin4_weight"
+          "correct_measure_id": "opt_cin4_weight",
+          "quantity": 7
         }
       ],
-      "answer_restate": "應是一斤牛肉、一兩蝦米、一錢薑。",
+      "answer_restate": "應是三斤牛肉、十兩蝦米、七錢薑。",
       "combo_options": [
         {
           "combo_id": "combo_dock_09_A",
@@ -726,20 +753,23 @@
         {
           "item_id": "opt_silk",
           "item_word": "絲綢",
-          "correct_measure_id": "opt_cek3_length"
+          "correct_measure_id": "opt_cek3_length",
+          "quantity": 5
         },
         {
           "item_id": "opt_hemp_rope",
           "item_word": "麻繩",
-          "correct_measure_id": "opt_zoeng6"
+          "correct_measure_id": "opt_zoeng6",
+          "quantity": 6
         },
         {
           "item_id": "opt_tofu",
           "item_word": "豆腐",
-          "correct_measure_id": "opt_cyun3_length"
+          "correct_measure_id": "opt_cyun3_length",
+          "quantity": 4
         }
       ],
-      "answer_restate": "應是一尺絲綢、一丈麻繩、一寸豆腐。",
+      "answer_restate": "應是五尺絲綢、六丈麻繩、四寸豆腐。",
       "combo_options": [
         {
           "combo_id": "combo_dock_10_A",

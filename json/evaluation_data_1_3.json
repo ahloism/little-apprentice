@@ -18,7 +18,12 @@
       "support_option": [
         "B",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0.5,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_3_7",
@@ -38,7 +43,12 @@
       "support_option": [
         "A",
         "B"
-      ]
+      ],
+      "scoring": {
+        "A": 0,
+        "B": 0,
+        "C": 1
+      }
     },
     {
       "scene_id": "1_3_10",
@@ -53,7 +63,12 @@
       "support_option": [
         "A",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 0,
+        "B": 1,
+        "C": 0.5
+      }
     }
   ]
 }

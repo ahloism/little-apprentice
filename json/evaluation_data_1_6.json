@@ -18,7 +18,12 @@
       "support_option": [
         "B",
         "C"
-      ]
+      ],
+      "scoring": {
+        "A": 1,
+        "B": 0,
+        "C": 0
+      }
     },
     {
       "scene_id": "1_6_9",
