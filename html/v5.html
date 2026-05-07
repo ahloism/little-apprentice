@@ -11,13 +11,51 @@
   <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
 
   <style>
+    /* ========== 核心層：Design Token ========== */
+    :root {
+      /* 書頁 */
+      --paper:        #F5F0E8;
+      --paper-warm:   #EFE6D6;
+      --paper-deep:   #E6DAC5;
+
+      /* 木色框架 */
+      --wood-top:     #5a3a10;
+      --wood-bot:     #3a2a10;
+      --wood-edge:    #2a1a08;
+      --wood-light:   #6e4a1c;
+
+      /* 金色系 */
+      --gold:         #c8943a;
+      --gold-soft:    #d8ad58;
+      --gold-deep:    #a07320;
+      --page-gold:    #b88a3a;
+
+      /* 主操作按鈕（木牌感） */
+      --sign-fill:    #edd9a3;
+      --sign-border:  #5a3a10;
+      --sign-text:    #3a2a1a;
+
+      /* 朱紅（章回標籤） */
+      --vermillion:   #b04428;
+      --vermillion-d: #8a3220;
+
+      /* 文字層級 */
+      --ink:          #2a1f12;
+      --ink-soft:     #5a4632;
+      --ink-quiet:    #7a6549;
+
+      /* 字體 */
+      --serif: 'Noto Serif TC', 'Songti TC', 'STSong', serif;
+      --hei:   'PingFang TC', 'Noto Sans TC', '微軟正黑體', sans-serif;
+    }
+
     /* ========== 核心層：基礎樣式 ========== */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #3a2a10;
+      background: var(--wood-bot);
       width: 100vw; height: 100vh;
       overflow: hidden;
-      font-family: 'Noto Serif TC', 'STKaiti', 'KaiTi', serif;
+      font-family: var(--serif);
       user-select: none;
     }
     .hidden { display: none !important; }
@@ -37,11 +75,94 @@
     }
     #global-ui {
       width: 100%; height: 48px;
-      background: #5a3a10;
+      background: var(--wood-top);
       display: flex; align-items: center;
-      padding: 0 16px; gap: 12px;
+      padding: 0 16px; gap: 8px;
       flex-shrink: 0;
+      font-family: var(--hei);
     }
+    #global-ui-left {
+      display: flex; align-items: center;
+      gap: 8px; flex: 1;
+    }
+    #global-ui-right {
+      display: flex; align-items: center;
+      gap: 8px;
+    }
+    #global-ui button {
+      font-family: var(--hei);
+      font-size: 12px;
+      background: rgba(200,148,58,0.15);
+      border: 0.5px solid var(--gold);
+      color: var(--gold);
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+      display: flex; align-items: center; gap: 4px;
+    }
+    #display-coins {
+      font-family: var(--hei);
+      font-size: 13px;
+      color: var(--gold);
+      background: var(--wood-bot);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-weight: 500;
+    }
+    #btn-account {
+      background: transparent !important;
+      border-color: rgba(200,148,58,0.4) !important;
+      color: var(--ink-quiet) !important;
+      font-size: 11px !important;
+    }
+
+    /* ========== 核心層：底部導航列 ========== */
+    #bottom-nav {
+      width: 100%; height: 48px;
+      background: var(--wood-top);
+      display: flex; align-items: center;
+      padding: 0 16px;
+      flex-shrink: 0;
+      font-family: var(--hei);
+      border-top: 1px solid var(--gold-deep);
+    }
+    #bottom-nav-left {
+      width: 120px;
+    }
+    #bottom-nav-center {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      gap: 8px;
+    }
+    #bottom-nav-right {
+      width: 120px;
+      display: flex; justify-content: flex-end;
+    }
+    #bottom-nav button {
+      font-family: var(--hei);
+      font-size: 12px;
+      background: rgba(200,148,58,0.15);
+      border: 0.5px solid var(--gold);
+      color: var(--gold);
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    .chapter-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--gold-deep);
+      transition: background 0.3s;
+    }
+    .chapter-dot.active {
+      background: var(--gold);
+    }
+    .chapter-dot.visited {
+      background: var(--gold-soft);
+    }
+    /* ========== /核心層：底部導航列 ========== */
+
     #book {
       flex: 1; display: flex;
       position: relative; overflow: hidden;
@@ -52,16 +173,72 @@
       z-index: 10;
       display: flex; align-items: center; justify-content: center;
     }
+    @keyframes fadeToWhite {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes fadeFromWhite {
+      from { opacity: 1; }
+      to   { opacity: 0; }
+    }
+    #white-overlay {
+      position: fixed; inset: 0;
+      background: #fff;
+      z-index: 500;
+      pointer-events: none;
+      opacity: 0;
+    }
     #page-left {
       width: 50%; height: 100%;
-      background: #F5F0E8;
-      border-right: 2px solid #c8a060;
+      background: var(--paper);
+      border-right: 2px solid var(--page-gold);
       overflow-y: auto;
+      box-shadow: inset -4px 0 12px rgba(90,58,16,0.08), inset 0 0 40px rgba(200,148,58,0.04);
     }
     #page-right {
       width: 50%; height: 100%;
-      background: #F5F0E8;
+      background: var(--paper);
       overflow-y: auto;
+      box-shadow: inset 4px 0 12px rgba(90,58,16,0.06);
+    }
+    .scene-chapter-tag {
+      display: inline-block;
+      background: var(--vermillion);
+      color: #fff;
+      font-family: var(--hei);
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+    .story-header-text {
+      font-family: var(--hei);
+      font-size: 12px;
+      color: var(--ink-quiet);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .story-scene-title {
+      font-family: var(--serif);
+      font-size: 22px;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(90,58,16,0.12);
+    }
+    .hl-first {
+      font-size: 2.2em;
+      line-height: 0.85;
+      float: left;
+      margin-right: 4px;
+      color: var(--ink);
+      font-family: var(--serif);
+    }
+    #map-house {
+      position: relative;
+      width: 100%; height: 100%;
+      box-shadow: inset 0 0 60px rgba(90,58,16,0.12), inset 0 0 20px rgba(200,148,58,0.06);
     }
 
     /* ========== 模塊：學習進度面板 ========== */
@@ -78,7 +255,7 @@
     #progress-panel {
       width: 100%;
       height: 100%;
-      background: var(--page-bg, #f5ead0);
+      background: var(--paper);
       border-radius: 12px 12px 0 0;
       display: flex;
       flex-direction: column;
@@ -90,7 +267,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 12px 16px;
-      border-bottom: 1px solid var(--border-color, #c8b89a);
+      border-bottom: 1px solid var(--gold-soft);
       flex-shrink: 0;
     }
 
@@ -110,8 +287,8 @@
     }
 
     .progress-tab.active {
-      border-bottom: 2px solid var(--accent-color, #8b5e3c);
-      color: var(--text-color, #3a2a1a);
+      border-bottom: 2px solid var(--gold);
+      color: var(--ink);
       font-weight: bold;
     }
 
@@ -120,7 +297,7 @@
       border: none;
       font-size: 1.4rem;
       cursor: pointer;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
       line-height: 1;
     }
 
@@ -142,12 +319,12 @@
       font-size: 1.1rem;
       font-weight: bold;
       margin-bottom: 12px;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
     }
 
     .progress-chapter {
       margin-bottom: 8px;
-      border: 1px solid var(--border-color, #c8b89a);
+      border: 1px solid var(--gold-soft);
       border-radius: 8px;
       overflow: hidden;
     }
@@ -157,7 +334,7 @@
       align-items: center;
       justify-content: space-between;
       padding: 10px 14px;
-      background: var(--page-bg, #f5ead0);
+      background: var(--paper);
     }
 
     .progress-chapter-header.unlocked {
@@ -175,7 +352,7 @@
 
     .chapter-title {
       font-size: 0.95rem;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
     }
 
     .chapter-toggle-icon,
@@ -187,8 +364,8 @@
 
     .progress-scenes {
       padding: 8px 14px;
-      background: var(--page-bg-light, #fdf6e8);
-      border-top: 1px solid var(--border-color, #c8b89a);
+      background: var(--paper-warm);
+      border-top: 1px solid var(--gold-soft);
     }
 
     .progress-scene {
@@ -199,7 +376,7 @@
       font-size: 0.9rem;
       cursor: pointer;
       padding: 4px 0;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
     }
 
     .progress-scene-title:hover {
@@ -236,7 +413,8 @@
     }
 
     #notebook-popup-inner {
-      background: var(--page-bg, #f5ead0);
+      background: var(--paper);
+      font-family: var(--hei);
       border-radius: 12px;
       width: 90%;
       max-height: 85vh;
@@ -254,18 +432,18 @@
       border: none;
       font-size: 1.4rem;
       cursor: pointer;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
     }
 
     .notebook-popup-section {
       margin: 0 0 18px;
-      color: var(--text-color, #3a2a1a);
+      color: var(--ink);
     }
 
     .notebook-popup-section h3 {
       font-size: 1rem;
       margin: 0 0 8px;
-      color: var(--accent-color, #8b5e3c);
+      color: var(--gold);
     }
 
     .notebook-popup-section ul {
@@ -280,10 +458,10 @@
     }
 
     .notebook-popup-tag {
-      border: 1px solid var(--border-color, #c8b89a);
+      border: 1px solid var(--gold-soft);
       border-radius: 999px;
       padding: 4px 10px;
-      background: var(--page-bg-light, #fdf6e8);
+      background: var(--paper-warm);
     }
 
     .notebook-tts-btn {
@@ -348,14 +526,15 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(255, 248, 220, 0.97);
-      border-top: 2px solid #c8a96e;
-      padding: 16px 20px 16px 260px;
+      background: rgba(245, 240, 232, 0.97);
+      border-top: 2px solid var(--gold);
+      padding: 16px 20px 16px 140px;
       box-sizing: border-box;
       z-index: 101;
       pointer-events: auto;
       transform: translateY(100%);
       transition: transform 0.3s ease;
+      font-family: var(--hei);
     }
     #asui-dialogue.visible {
       transform: translateY(0);
@@ -373,16 +552,19 @@
     }
     .asui-btn {
       padding: 8px 20px;
-      border: 1.5px solid #c8a96e;
-      border-radius: 20px;
-      background: #fff8dc;
-      color: #3a2a1a;
+      border: 1.5px solid var(--sign-border);
+      border-radius: 6px;
+      background: var(--sign-fill);
+      color: var(--sign-text);
       font-size: 0.9rem;
       cursor: pointer;
+      font-family: var(--hei);
     }
     .asui-btn:hover {
-      background: #c8a96e;
-      color: #fff;
+      background: var(--paper-deep);
+    }
+    .asui-above-bottom-nav #asui-dialogue {
+      bottom: 48px;
     }
     /* ========== /模塊：阿水層 ========== */
 
@@ -491,10 +673,11 @@
     }
     .game-option-btn,
     .game-action-btn {
-      border: 2px solid #b9812f;
-      border-radius: 8px;
-      background: #fff8dc;
-      color: #3a2a1a;
+      border: 2px solid var(--sign-border);
+      border-radius: 6px;
+      background: var(--sign-fill);
+      color: var(--sign-text);
+      font-family: var(--hei);
       font-size: 1.1rem;
       padding: 12px 18px;
       cursor: pointer;
@@ -502,9 +685,6 @@
     }
     .game-action-btn {
       align-self: flex-start;
-      background: #d4870a;
-      border-color: #d4870a;
-      color: #fff;
       text-align: center;
     }
     .game-option-btn:disabled {
@@ -813,12 +993,16 @@
 
     <!-- 全局UI層 -->
     <div id="global-ui">
-      <button id="btn-bgm">♪</button>
-      <button id="btn-tts">語音</button>
-      <button id="btn-speed">正常</button>
-      <span id="display-coins">🪙 0</span>
-      <button id="btn-progress">進度</button>
-      <button id="btn-account">登入</button>
+      <div id="global-ui-left">
+        <span id="global-brand" style="font-family:var(--hei);font-size:13px;color:var(--gold-soft);font-weight:500;">小學徒大世界</span>
+      </div>
+      <div id="global-ui-right">
+        <button id="btn-bgm">🎵 音樂</button>
+        <button id="btn-tts">🔊 語音</button>
+        <button id="btn-speed">正常</button>
+        <span id="display-coins">🪙 0 文</span>
+        <button id="btn-account">登入</button>
+      </div>
     </div>
 
     <div id="notebook-house" class="hidden">
@@ -862,6 +1046,21 @@
       <div id="page-right"></div>
       <!-- 大地圖（全幅，與雙頁並列） -->
       <div id="map-house" class="hidden"></div>
+    </div>
+
+    <!-- 底部導航列 -->
+    <div id="bottom-nav" class="hidden">
+      <div id="bottom-nav-left">
+        <button id="btn-notebook-nav">📖 學徒筆記</button>
+      </div>
+      <div id="bottom-nav-center">
+        <div id="chapter-progress-dots" style="display:flex;align-items:center;gap:8px;">
+          <!-- 章節進度點由JS動態生成 -->
+        </div>
+      </div>
+      <div id="bottom-nav-right">
+        <button id="btn-back-to-map-nav">🗺️ 回目錄</button>
+      </div>
     </div>
 
     <!-- Report房（全幅，使用全局UI但不在book內） -->
@@ -945,6 +1144,8 @@
   </div>
   <!-- ========== /模塊：學習進度面板 ========== -->
 
+  <div id="white-overlay"></div>
+
   <script>
   // ========== 核心層：系統骨架 + 書本框架 ==========
   // 規格依據：核心層規格文件.md §一
@@ -952,6 +1153,25 @@
   function showRoom(roomId) {
     // 隱藏所有房間內容
     const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house'];
+    // 底部導航列：Story房和小遊戲房顯示，其餘隱藏
+    const bottomNavRooms = ['story-house', 'game-house'];
+    const bottomNav = document.getElementById('bottom-nav');
+    if (bottomNav) {
+      if (bottomNavRooms.includes(roomId)) {
+        bottomNav.classList.remove('hidden');
+      } else {
+        bottomNav.classList.add('hidden');
+      }
+    }
+    // 阿水條位置：Story房和小遊戲房上移避開底部導航列
+    const asuiLayer = document.getElementById('asui-layer');
+    if (asuiLayer) {
+      if (bottomNavRooms.includes(roomId)) {
+        asuiLayer.classList.add('asui-above-bottom-nav');
+      } else {
+        asuiLayer.classList.remove('asui-above-bottom-nav');
+      }
+    }
     rooms.forEach(id => {
       const el = document.getElementById(id);
       if (el) el.classList.add('hidden');
@@ -962,13 +1182,20 @@
   }
 
   function playBookOpenAnimation(onComplete) {
-    const anim = document.getElementById('book-open-animation');
-    anim.classList.remove('hidden');
-    // 書本展開 CSS transition，800ms
+    const overlay = document.getElementById('white-overlay');
+    if (!overlay) { if (onComplete) onComplete(); return; }
+    // 第一段：漸白（300ms）
+    overlay.style.transition = 'opacity 0.3s ease';
+    overlay.style.opacity = '1';
     setTimeout(() => {
-      anim.classList.add('hidden');
+      // 切換房間
       if (onComplete) onComplete();
-    }, 800);
+      // 第二段：從白淡入（400ms）
+      setTimeout(() => {
+        overlay.style.transition = 'opacity 0.4s ease';
+        overlay.style.opacity = '0';
+      }, 50);
+    }, 320);
   }
 
   // ========== 核心層：Firebase ==========
@@ -1018,6 +1245,16 @@
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider).catch(e => logError(e.message, 'signInWithPopup', null));
     }
+  });
+
+  // 底部導航列
+  document.getElementById('btn-notebook-nav')?.addEventListener('click', () => {
+    // 觸發學習進度面板（與現有btn-progress邏輯一致）
+    if (typeof openProgressPanel === 'function') openProgressPanel();
+  });
+  document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
+    showRoom('map-house');
+    if (typeof enterMap === 'function') enterMap();
   });
 
   async function loadProgress(uid) {
@@ -1635,7 +1872,7 @@
   // 規格依據：核心層規格文件.md §七
 
   function updateCoinDisplay() {
-    document.getElementById('display-coins').textContent = '🪙 ' + state.coins;
+    document.getElementById('display-coins').textContent = '🪙 ' + state.coins + ' 文';
   }
 
   function initGlobalUI() {
@@ -1647,13 +1884,13 @@
     btnBGM.addEventListener('click', () => {
       state.bgm_on = !state.bgm_on;
       setMuted('bgm', !state.bgm_on);
-      btnBGM.textContent = state.bgm_on ? '♪' : '♪✕';
+      btnBGM.textContent = state.bgm_on ? '🎵 音樂' : '🎵 音樂✕';
       unlockAudioContext();
     });
 
     btnTTS.addEventListener('click', () => {
       state.tts_on = !state.tts_on;
-      btnTTS.textContent = state.tts_on ? '語音' : '語音✕';
+      btnTTS.textContent = state.tts_on ? '🔊 語音' : '🔊 語音✕';
       btnSpeed.disabled = !state.tts_on;
       btnSpeed.style.opacity = state.tts_on ? '1' : '0.4';
       if (!state.tts_on) {
@@ -1673,7 +1910,7 @@
       unlockAudioContext();
     });
 
-    btnProgress.addEventListener('click', () => {
+    btnProgress?.addEventListener('click', () => {
       openProgressPanel();
     });
 
@@ -1780,7 +2017,7 @@
       });
     } else if (!state.current_scene) {
       // 已登入，無進度
-      btns.innerHTML = `<button id="btn-start" style="background:#d4870a;color:#fff;border:none;border-radius:12px;padding:16px 40px;font-size:22px;cursor:pointer;">開始冒險</button>`;
+      btns.innerHTML = `<button id="btn-start" style="background:var(--sign-fill);color:var(--sign-text);border:2px solid var(--sign-border);border-radius:8px;padding:16px 40px;font-size:22px;cursor:pointer;font-family:var(--hei);">開始冒險</button>`;
       document.getElementById('btn-start').addEventListener('click', () => {
         unlockAudioContext();
         _enterStory('1_1_1');
@@ -1790,8 +2027,8 @@
       const eventId = state.current_scene.split('_').slice(0,2).join('_');
       loadEventData(eventId); // 靜默預載
       btns.innerHTML = `
-        <button id="btn-continue" style="background:#d4870a;color:#fff;border:none;border-radius:12px;padding:16px 40px;font-size:22px;cursor:pointer;">繼續冒險</button>
-        <button id="btn-restart" style="background:transparent;color:#fff;border:2px solid #fff;border-radius:12px;padding:12px 32px;font-size:18px;cursor:pointer;">重新開始</button>
+        <button id="btn-continue" style="background:var(--sign-fill);color:var(--sign-text);border:2px solid var(--sign-border);border-radius:8px;padding:16px 40px;font-size:22px;cursor:pointer;font-family:var(--hei);">繼續冒險</button>
+        <button id="btn-restart" style="background:transparent;color:rgba(255,255,255,0.85);border:1.5px solid rgba(255,255,255,0.5);border-radius:8px;padding:12px 32px;font-size:18px;cursor:pointer;font-family:var(--hei);">重新開始</button>
       `;
       document.getElementById('btn-continue').addEventListener('click', () => {
         unlockAudioContext();
@@ -1925,19 +2162,23 @@
       <div id="story-image-display" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin-top:14px;"></div>
     `;
     right.innerHTML = `
-      <div id="story-header" style="height:40px;display:flex;align-items:center;color:#6b4e2e;font-weight:700;">
-        <span id="story-event-label"></span>
+      <div id="story-header" style="margin-bottom:4px;">
+        <div class="story-header-text" id="story-event-label"></div>
+        <div class="story-scene-title" id="story-scene-title-el"></div>
       </div>
-      <div id="story-text-area" style="height:calc(100% - 190px);overflow:auto;font-size:21px;line-height:1.8;color:#2f2418;"></div>
-      <div id="story-question-area" style="min-height:42px;margin-top:12px;font-size:22px;font-weight:700;color:#3a2a18;"></div>
-      <div id="story-choices-area" style="min-height:96px;display:flex;flex-direction:column;gap:10px;margin-top:12px;"></div>
-      <div id="story-advance-btn" style="min-height:54px;margin-top:12px;display:flex;justify-content:flex-end;align-items:center;"></div>
+      <div id="story-text-area" style="flex:1;overflow-y:auto;font-size:21px;line-height:1.8;color:var(--ink);font-family:var(--serif);"></div>
+      <div style="border-top:1px solid rgba(90,58,16,0.12);margin:12px 0 8px;"></div>
+      <div id="story-question-area" style="min-height:42px;font-size:20px;font-weight:700;color:var(--ink);font-family:var(--hei);"></div>
+      <div id="story-choices-area" style="display:flex;flex-direction:column;gap:10px;margin-top:8px;"></div>
+      <div id="story-advance-btn" style="min-height:54px;margin-top:8px;display:flex;justify-content:flex-end;align-items:center;"></div>
     `;
     left.style.position = 'relative';
     left.style.boxSizing = 'border-box';
     left.style.padding = '24px';
     right.style.boxSizing = 'border-box';
     right.style.padding = '24px';
+    right.style.display = 'flex';
+    right.style.flexDirection = 'column';
   }
 
   function _storyList(data) {
@@ -2038,7 +2279,10 @@
   function _renderLines(lines, container) {
     container.innerHTML = (lines || []).map((line, lineIndex) => {
       const text = _lineText(line);
-      const chars = Array.from(text).map(ch => `<span class="hl">${ch}</span>`).join('');
+      const chars = Array.from(text).map((ch, charIndex) => {
+        const extra = (lineIndex === 0 && charIndex === 0) ? ' hl-first' : '';
+        return `<span class="hl${extra}">${ch}</span>`;
+      }).join('');
       return `<p data-line-index="${lineIndex}" style="margin:0 0 14px;">${chars}</p>`;
     }).join('');
   }
@@ -2099,7 +2343,7 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.dataset.choiceIndex = String(index);
-    btn.style.cssText = `text-align:left;border:2px solid ${explored ? '#a98d62' : '#d4870a'};background:${explored ? '#efe3cf' : '#fff8ec'};color:#2f2418;border-radius:10px;padding:12px 16px;font-size:18px;line-height:1.45;cursor:pointer;`;
+    btn.style.cssText = `text-align:left;border:2px solid var(--sign-border);background:${explored ? 'var(--paper-deep)' : 'var(--sign-fill)'};color:var(--sign-text);border-radius:6px;padding:12px 16px;font-size:18px;line-height:1.45;cursor:pointer;font-family:var(--hei);`;
     btn.innerHTML = `<strong>${choice.label || String.fromCharCode(65 + index)}.</strong> ${choice.text || ''}${explored ? ' <span style="color:#7a6241;">（已探索）</span>' : ''}`;
     btn.disabled = true;
     btn.addEventListener('click', () => onClick(choice, index));
@@ -2120,7 +2364,7 @@
     const btn = document.createElement('button');
     btn.type = 'button';
     btn.textContent = label || eventData.presentation?.default_advance_label || '繼續';
-    btn.style.cssText = 'background:#d4870a;color:#fff;border:none;border-radius:12px;padding:14px 34px;font-size:20px;cursor:pointer;';
+    btn.style.cssText = 'background:var(--sign-fill);color:var(--sign-text);border:2px solid var(--sign-border);border-radius:6px;padding:14px 34px;font-size:20px;cursor:pointer;font-family:var(--hei);';
     btn.addEventListener('click', onClick);
     area.appendChild(btn);
   }
@@ -2201,6 +2445,7 @@
 
     setCurrentScene(sceneId);
     document.getElementById('story-event-label').textContent = _storyLocationLabel();
+    document.getElementById('story-scene-title-el').textContent = scene.title || '';
     _clearStoryControls();
     updateStoryImage(presentation);
     _renderLines(_linesForVisit(scene), textArea);
@@ -3549,26 +3794,41 @@
   async function renderGameVocab() {
     const variation = gameState.contentVariation;
     const vocabIds = variation?.vocabulary_intro_ids || [];
-    const cards = vocabIds.map(id => {
+    const rightCards = vocabIds.map((id, idx) => {
       const vocab = gameData.content.vocabulary_bank?.[id] || {};
-      const asset = gameData.presentation.vocabulary_assets?.[id] || {};
       return `
-        <div class="game-vocab-card">
-          ${asset.image ? `<img src="${_assetPath(asset.image)}" alt="">` : '<div></div>'}
-          <div>
-            <div class="game-vocab-word">${_escape(vocab.word || '')}</div>
-            <div class="game-vocab-desc">${_escape(vocab.intro_text || vocab.description || '')}</div>
-          </div>
+        <div class="game-vocab-text-card" id="vocab-card-${idx}" style="margin-bottom:16px;padding:12px 0;border-bottom:1px solid rgba(90,58,16,0.1);">
+          <div style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;">${_escape(vocab.word || '')}</div>
+          <div style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${_escape(vocab.intro_text || vocab.description || '')}</div>
         </div>`;
     }).join('');
-    const introImage = GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse;
+
+    const firstAsset = gameData.presentation.vocabulary_assets?.[vocabIds[0]] || {};
+    const firstImage = firstAsset.image
+      ? `<img class="game-image-main" src="${_assetPath(firstAsset.image)}" alt="">`
+      : `<img class="game-image-main" src="${_assetPath(GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse)}" alt="">`;
+
     _setGamePages(
-      `<img class="game-image-main" src="${_assetPath(introImage)}" alt="">`,
-      `<div id="game-vocab-cards-mounted">${cards}</div>${_button('game-vocab-btn-mounted', '開始小任務')}`
+      `<div id="vocab-left-image">${firstImage}</div>`,
+      `<div id="game-vocab-cards-mounted">${rightCards}</div>${_button('game-vocab-btn-mounted', '開始小任務')}`
     );
+
     const btn = document.getElementById('game-vocab-btn-mounted');
     btn.onclick = () => renderGameScreen('answer');
-    await _playGameTTSSequence(vocabIds.map(id => gameData.presentation.vocabulary_assets?.[id]?.audio));
+
+    for (let i = 0; i < vocabIds.length; i++) {
+      const id = vocabIds[i];
+      const asset = gameData.presentation.vocabulary_assets?.[id] || {};
+      const leftEl = document.getElementById('vocab-left-image');
+      if (leftEl && asset.image) {
+        leftEl.innerHTML = `<img class="game-image-main" src="${_assetPath(asset.image)}" alt="">`;
+      }
+      if (asset.audio) {
+        const textEl = document.getElementById(`vocab-card-${i}`);
+        await _playGameTTS(asset.audio, { textElement: textEl });
+      }
+    }
+
     btn.classList.remove('hidden');
   }
 
