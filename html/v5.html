@@ -235,6 +235,8 @@
       color: var(--ink);
       font-family: var(--serif);
     }
+    .hl { transition: background 0.05s; border-radius: 2px; }
+    .hl.on { background: rgba(200, 148, 58, 0.35); }
     #map-house {
       position: relative;
       width: 100%; height: 100%;
@@ -1833,9 +1835,18 @@
     if (bgm) setTimeout(() => playBGM(bgm), 300);
     // 阿水角色圖只在大地圖房顯示
     const asuiChar = document.getElementById('asui-character');
+    const isMap = (newRoom === 'map' || newRoom === 'room-map');
     if (asuiChar) {
-      const isMap = (newRoom === 'map' || newRoom === 'room-map');
       asuiChar.style.display = isMap ? '' : 'none';
+    }
+    // 切換房間時先收起上一個阿水對白條；大地圖內後續觸發可重新顯示
+    const asuiBar = document.getElementById('asui-dialogue');
+    if (asuiBar?.classList.contains('visible')) {
+      asuiBar.classList.remove('visible');
+      asuiBar.classList.add('hidden');
+      asuiBar.querySelector('.asui-text').textContent = '';
+      asuiBar.querySelector('.asui-buttons').innerHTML = '';
+      if (typeof setAsuiCharacter === 'function') setAsuiCharacter('A27');
     }
   }
 
@@ -2225,6 +2236,37 @@
     return chapterNum ? `第${chapterNum}章·${locationName}` : locationName;
   }
 
+  async function _updateChapterProgressDots(currentSceneId) {
+    const dotsContainer = document.getElementById('chapter-progress-dots');
+    if (!dotsContainer) return;
+    dotsContainer.innerHTML = '';
+
+    try {
+      const progressContent = await loadJSON('json/progress_content_1.json');
+      const chapters = progressContent?.chapters || [];
+      const parts = (currentSceneId || '').split('_');
+      const chapterId = parts.slice(0, 2).join('_');
+      const chapter = chapters.find(c => c.chapter_id === chapterId);
+      if (!chapter) return;
+
+      const scenes = chapter.scenes || [];
+      const completedScenes = state.completed_events || [];
+
+      scenes.forEach(s => {
+        const dot = document.createElement('div');
+        dot.className = 'chapter-dot';
+        if (s.scene_id === currentSceneId) {
+          dot.classList.add('active');
+        } else if (completedScenes.includes(s.scene_id)) {
+          dot.classList.add('visited');
+        }
+        dotsContainer.appendChild(dot);
+      });
+    } catch (e) {
+      // 靜默失敗，不影響主流程
+    }
+  }
+
   function _storyImagePath(imageId) {
     if (!imageId) return '';
     const file = STORY_IMAGE_FILES[imageId] || imageId;
@@ -2444,8 +2486,14 @@
     const textArea = document.getElementById('story-text-area');
 
     setCurrentScene(sceneId);
-    document.getElementById('story-event-label').textContent = _storyLocationLabel();
+    const parts = (_storyEventId || '').split('_');
+    const chapterNum = parts[1] || '';
+    const tagHtml = chapterNum
+      ? `<span class="scene-chapter-tag">第${chapterNum}回</span> `
+      : '';
+    document.getElementById('story-event-label').innerHTML = tagHtml + _storyLocationLabel();
     document.getElementById('story-scene-title-el').textContent = scene.title || '';
+    _updateChapterProgressDots(sceneId);
     _clearStoryControls();
     updateStoryImage(presentation);
     _renderLines(_linesForVisit(scene), textArea);
