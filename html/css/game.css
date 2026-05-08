@@ -45,9 +45,9 @@
       gap: 12px;
       min-height: 84px;
       padding: 8px 10px;
-      border: 1px solid #d8c49d;
+      border: 1px solid var(--gold-soft);
       border-radius: 8px;
-      background: #fffaf0;
+      background: var(--paper-warm);
     }
     .game-left-item img {
       width: 96px;
@@ -57,28 +57,28 @@
     }
     .game-left-item span {
       font-size: 1.05rem;
-      color: #3a2a1a;
+      color: var(--sign-text);
     }
     .game-text {
       font-size: 1.25rem;
       line-height: 1.8;
-      color: #3a2a1a;
+      color: var(--sign-text);
       white-space: pre-wrap;
     }
     .game-title {
       font-size: 1.6rem;
       font-weight: bold;
       margin-bottom: 12px;
-      color: #3a2a1a;
+      color: var(--sign-text);
     }
     .game-vocab-card {
       display: grid;
       grid-template-columns: 96px 1fr;
       gap: 12px;
       padding: 10px;
-      border: 1px solid #d8c49d;
+      border: 1px solid var(--gold-soft);
       border-radius: 8px;
-      background: #fffaf0;
+      background: var(--paper-warm);
     }
     .game-vocab-card img {
       width: 96px;
@@ -88,12 +88,12 @@
     .game-vocab-word {
       font-size: 1.15rem;
       font-weight: bold;
-      color: #3a2a1a;
+      color: var(--sign-text);
     }
     .game-vocab-desc {
       font-size: 0.95rem;
       line-height: 1.5;
-      color: #5b4730;
+      color: var(--ink-soft);
     }
     .game-options {
       display: flex;
@@ -130,18 +130,17 @@
       flex-direction: column;
       gap: 8px;
       padding: 12px;
-      border: 1px solid #d8c49d;
+      border: 1px solid var(--gold-soft);
       border-radius: 8px;
-      background: #fffaf0;
+      background: var(--paper-warm);
       font-size: 1.1rem;
-      color: #3a2a1a;
+      color: var(--sign-text);
     }
     .game-measure-blank {
       display: inline-block;
       min-width: 3em;
       text-align: center;
-      border-bottom: 2px solid #8b5e3c;
+      border-bottom: 2px solid var(--wood-light);
       margin: 0 2px;
     }
     /* ========== /模塊：小遊戲房 ========== */
-

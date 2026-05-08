@@ -36,11 +36,11 @@
         <span id="global-brand" style="font-family:var(--hei);font-size:13px;color:var(--gold-soft);font-weight:500;">小學徒大世界</span>
       </div>
       <div id="global-ui-right">
-        <button id="btn-bgm">🎵 音樂</button>
-        <button id="btn-tts">🔊 語音</button>
-        <button id="btn-speed">正常</button>
+        <button id="btn-bgm" class="global-tool-btn">🎵 音樂</button>
+        <button id="btn-tts" class="global-tool-btn">🔊 語音</button>
+        <button id="btn-speed" class="global-tool-btn">正常</button>
         <span id="display-coins">🪙 0 文</span>
-        <button id="btn-account">登入</button>
+        <button id="btn-account" class="global-account-btn">登入</button>
       </div>
     </div>
 
@@ -98,7 +98,7 @@
         </div>
       </div>
       <div id="bottom-nav-right">
-        <button id="btn-back-to-map-nav">🗺️ 回目錄</button>
+        <button id="btn-back-to-map-nav">🗺️ 回大地圖</button>
       </div>
     </div>
 
@@ -190,6 +190,7 @@
   // 規格依據：核心層規格文件.md §一
 
   function showRoom(roomId) {
+    document.getElementById('page-left')?.classList.remove('scrollable');
     // 隱藏所有房間內容
     const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house'];
     // 底部導航列：Story房和小遊戲房顯示，其餘隱藏
@@ -1352,6 +1353,7 @@
         </div>
       `).join('');
     }
+    _updatePageLeftScrollable();
   }
 
   function _triggerImageCue(presentation, lineIndex) {
@@ -1848,6 +1850,7 @@
       const el = document.getElementById(id);
       if (el) right.appendChild(el);
     });
+    _updatePageLeftScrollable();
   }
 
   function selectReflections(eventId, assessmentChoices, content, presentation) {
@@ -2832,6 +2835,18 @@
   function _setGamePages(leftHTML, rightHTML) {
     document.getElementById('page-left').innerHTML = `<div class="game-page game-page-left">${leftHTML}</div>`;
     document.getElementById('page-right').innerHTML = `<div class="game-page game-page-right">${rightHTML}</div>`;
+    _updatePageLeftScrollable();
+  }
+
+  function _updatePageLeftScrollable() {
+    const left = document.getElementById('page-left');
+    if (!left) return;
+    left.classList.remove('scrollable');
+    requestAnimationFrame(() => {
+      if (left.scrollHeight > left.clientHeight) {
+        left.classList.add('scrollable');
+      }
+    });
   }
 
   function _assetPath(path, base = IMAGE_BASE) {
@@ -2997,13 +3012,16 @@
     if (kind === 'market') {
       // Replace vendor with object choices after the question has been heard.
       visual.innerHTML = _optionImages(optionIds);
+      _updatePageLeftScrollable();
       return;
     }
     if (kind === 'inn') {
       visual.innerHTML = _optionImages(optionIds);
+      _updatePageLeftScrollable();
       return;
     }
     visual.innerHTML = _optionImages(optionIds);
+    _updatePageLeftScrollable();
   }
 
   function _optionImages(optionIds) {
@@ -3117,6 +3135,7 @@
       const asset = p.item_assets?.[item.item_id] || {};
       return `<div class="game-left-item">${asset.image ? `<img src="${_assetPath(asset.image)}" alt="">` : ''}<span>${_escape(item.item_word)}</span></div>`;
     }).join('');
+    _updatePageLeftScrollable();
     await _playGameTTSSequence(combos.map(combo => p.option_assets?.[combo.measures?.[0]]?.audio));
     _unlockGameOptions();
   }

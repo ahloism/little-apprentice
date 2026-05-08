@@ -27,9 +27,12 @@
       width: 50%; height: 100%;
       background: var(--paper);
       border-right: 2px solid var(--page-gold);
-      overflow-y: auto;
+      overflow: hidden;
       position: relative;
       box-shadow: inset -4px 0 12px rgba(90,58,16,0.08), inset 0 0 40px rgba(200,148,58,0.04);
+    }
+    #page-left.scrollable {
+      overflow-y: auto;
     }
     #page-right {
       width: 50%; height: 100%;
@@ -62,6 +65,20 @@
       margin-bottom: 16px;
       padding-bottom: 8px;
       border-bottom: 1px solid rgba(90,58,16,0.12);
+    }
+    .story-text-area {
+      font-family: var(--serif);
+      font-size: 21px;
+      line-height: 1.8;
+      color: var(--ink);
+      flex: 1;
+      overflow-y: auto;
+    }
+    .ui-btn-primary:hover {
+      filter: brightness(1.04);
+    }
+    .ui-btn-primary:active {
+      transform: translateY(1px);
     }
     .hl-first {
       font-size: 2.2em;

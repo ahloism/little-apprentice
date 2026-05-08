@@ -3,7 +3,7 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: #F5F0E8;
+      background: var(--paper);
       z-index: 200;
       overflow: hidden;
     }
@@ -15,13 +15,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #F5F0E8;
+      background: var(--paper);
     }
 
     #report-transition-text {
       font-size: 2.4rem;
-      font-family: var(--font-heading, serif);
-      color: var(--color-ink, #2C1810);
+      font-family: var(--serif);
+      color: var(--ink);
       letter-spacing: 0.2em;
       opacity: 0;
       animation: reportFadeInOut 2.8s ease forwards;
@@ -64,15 +64,15 @@
 
     #report-title {
       font-size: 1.6rem;
-      font-family: var(--font-heading, serif);
-      color: var(--color-ink, #2C1810);
+      font-family: var(--hei);
+      color: var(--ink);
       text-align: center;
       margin-bottom: 4px;
     }
 
     #report-subtitle {
       font-size: 1rem;
-      color: var(--color-ink-light, #7A6652);
+      color: var(--ink-quiet);
       text-align: center;
       margin-bottom: 40px;
     }
@@ -87,19 +87,19 @@
 
     .dimension-label {
       font-size: 0.85rem;
-      color: var(--color-ink-light, #7A6652);
+      color: var(--ink-quiet);
       margin-bottom: 4px;
     }
 
     .dimension-stars {
       font-size: 1.3rem;
-      color: #C9A84C;
+      color: var(--gold-soft);
       margin-bottom: 6px;
     }
 
     .dimension-desc {
       font-size: 0.95rem;
-      color: var(--color-ink, #2C1810);
+      color: var(--ink);
       line-height: 1.6;
     }
 
@@ -109,18 +109,18 @@
       padding: 24px;
       background: rgba(201, 168, 76, 0.08);
       border-radius: 8px;
-      border-left: 3px solid #C9A84C;
+      border-left: 3px solid var(--gold-soft);
     }
 
     #report-qualitative-text {
       font-size: 0.95rem;
-      color: var(--color-ink, #2C1810);
+      color: var(--ink);
       line-height: 1.8;
     }
 
     #report-qualitative-loading {
       font-size: 0.9rem;
-      color: var(--color-ink-light, #7A6652);
+      color: var(--ink-quiet);
       text-align: center;
       padding: 16px 0;
     }
@@ -134,7 +134,7 @@
 
     #btn-download-report {
       padding: 12px 28px;
-      background: #C9A84C;
+      background: var(--gold-soft);
       color: white;
       border: none;
       border-radius: 6px;
@@ -145,7 +145,7 @@
     #btn-back-to-map {
       padding: 12px 28px;
       background: transparent;
-      color: var(--color-ink, #2C1810);
+      color: var(--ink);
       border: 2px solid rgba(0,0,0,0.2);
       border-radius: 6px;
       font-size: 1rem;
@@ -155,7 +155,7 @@
     #report-teaser {
       text-align: center;
       font-size: 0.85rem;
-      color: var(--color-ink-light, #7A6652);
+      color: var(--ink-quiet);
       letter-spacing: 0.1em;
       padding-bottom: 40px;
     }

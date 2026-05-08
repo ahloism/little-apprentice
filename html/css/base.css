@@ -7,6 +7,11 @@
       font-family: var(--serif);
       user-select: none;
     }
+    .story-text-area,
+    #report-scroll,
+    #notebook-popup-inner {
+      user-select: text;
+    }
     .hidden { display: none !important; }
 
     /* ========== 核心層：Opening房外層 ========== */
@@ -16,4 +21,3 @@
       background: #c8b08a;
       z-index: 100;
     }
-
