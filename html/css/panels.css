@@ -1,0 +1,254 @@
+    /* ========== 模塊：學習進度面板 ========== */
+
+    #progress-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #progress-panel {
+      width: 100%;
+      height: 100%;
+      background: var(--paper);
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    #progress-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--gold-soft);
+      flex-shrink: 0;
+    }
+
+    #progress-tabs {
+      display: flex;
+      gap: 8px;
+    }
+
+    .progress-tab {
+      padding: 6px 16px;
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      color: var(--text-muted, #999);
+    }
+
+    .progress-tab.active {
+      border-bottom: 2px solid var(--gold);
+      color: var(--ink);
+      font-weight: bold;
+    }
+
+    #progress-close-btn {
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--ink);
+      line-height: 1;
+    }
+
+    #progress-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
+    }
+
+    .tab-content {
+      display: block;
+    }
+
+    .tab-content.hidden {
+      display: none;
+    }
+
+    .progress-event-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: var(--ink);
+    }
+
+    .progress-chapter {
+      margin-bottom: 8px;
+      border: 1px solid var(--gold-soft);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .progress-chapter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: var(--paper);
+    }
+
+    .progress-chapter-header.unlocked {
+      cursor: pointer;
+    }
+
+    .progress-chapter-header.unlocked:hover {
+      background: var(--hover-bg, #ede0c4);
+    }
+
+    .progress-chapter-header.locked {
+      cursor: default;
+      opacity: 0.5;
+    }
+
+    .chapter-title {
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+
+    .chapter-toggle-icon,
+    .chapter-arrow,
+    .lock-icon {
+      font-size: 0.85rem;
+      color: var(--text-muted, #999);
+    }
+
+    .progress-scenes {
+      padding: 8px 14px;
+      background: var(--paper-warm);
+      border-top: 1px solid var(--gold-soft);
+    }
+
+    .progress-scene {
+      margin-bottom: 6px;
+    }
+
+    .progress-scene-title {
+      font-size: 0.9rem;
+      cursor: pointer;
+      padding: 4px 0;
+      color: var(--ink);
+    }
+
+    .progress-scene-title:hover {
+      text-decoration: underline;
+    }
+
+    .progress-scene-summary {
+      font-size: 0.82rem;
+      color: var(--text-muted, #666);
+      padding: 4px 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .scene-tts-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    /* Notebook Popup */
+    #notebook-popup {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 210;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #notebook-popup-inner {
+      background: var(--paper);
+      font-family: var(--hei);
+      border-radius: 12px;
+      width: 90%;
+      max-height: 85vh;
+      overflow-y: auto;
+      padding: 20px;
+      position: relative;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    }
+
+    #notebook-popup-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: none;
+      border: none;
+      font-size: 1.4rem;
+      cursor: pointer;
+      color: var(--ink);
+    }
+
+    .notebook-popup-section {
+      margin: 0 0 18px;
+      color: var(--ink);
+    }
+
+    .notebook-popup-section h3 {
+      font-size: 1rem;
+      margin: 0 0 8px;
+      color: var(--gold);
+    }
+
+    .notebook-popup-section ul {
+      padding-left: 1.2em;
+      line-height: 1.7;
+    }
+
+    .notebook-popup-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .notebook-popup-tag {
+      border: 1px solid var(--gold-soft);
+      border-radius: 999px;
+      padding: 4px 10px;
+      background: var(--paper-warm);
+    }
+
+    .notebook-tts-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 0.9rem;
+      margin-left: 6px;
+    }
+
+    .notebook-anchor-image {
+      display: block;
+      width: min(240px, 70%);
+      margin: 10px auto 0;
+      object-fit: contain;
+    }
+
+    #dev-progress-panel-button {
+      position: fixed;
+      right: 12px;
+      bottom: 12px;
+      z-index: 300;
+      background: #8b5e3c;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 14px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+
+    /* ========== /模塊：學習進度面板 ========== */
+

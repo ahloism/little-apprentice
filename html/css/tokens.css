@@ -1,0 +1,38 @@
+    /* ========== 核心層：Design Token ========== */
+    :root {
+      /* 書頁 */
+      --paper:        #F5F0E8;
+      --paper-warm:   #EFE6D6;
+      --paper-deep:   #E6DAC5;
+
+      /* 木色框架 */
+      --wood-top:     #5a3a10;
+      --wood-bot:     #3a2a10;
+      --wood-edge:    #2a1a08;
+      --wood-light:   #6e4a1c;
+
+      /* 金色系 */
+      --gold:         #c8943a;
+      --gold-soft:    #d8ad58;
+      --gold-deep:    #a07320;
+      --page-gold:    #b88a3a;
+
+      /* 主操作按鈕（木牌感） */
+      --sign-fill:    #edd9a3;
+      --sign-border:  #5a3a10;
+      --sign-text:    #3a2a1a;
+
+      /* 朱紅（章回標籤） */
+      --vermillion:   #b04428;
+      --vermillion-d: #8a3220;
+
+      /* 文字層級 */
+      --ink:          #2a1f12;
+      --ink-soft:     #5a4632;
+      --ink-quiet:    #7a6549;
+
+      /* 字體 */
+      --serif: 'Noto Serif TC', 'Songti TC', 'STSong', serif;
+      --hei:   'PingFang TC', 'Noto Sans TC', '微軟正黑體', sans-serif;
+    }
+

@@ -1,0 +1,104 @@
+    /* ========== 模塊：大地圖房 ========== */
+    #map-house {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #f5f0e8;
+      z-index: 5;
+    }
+
+    #map-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #map-pins {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .map-pin {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      pointer-events: none;
+    }
+
+    .map-pin * {
+      pointer-events: auto;
+    }
+
+    .pin-story-btn {
+      transform: translateY(-100%);
+      background: #c8860a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .pin-label {
+      font-size: 0.8rem;
+      color: #3a2a10;
+      background: rgba(255,255,220,0.85);
+      border-radius: 4px;
+      padding: 1px 6px;
+      white-space: nowrap;
+    }
+
+    .pin-game-btn {
+      transform: translateY(100%);
+      border: none;
+      border-radius: 8px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .pin-game-locked {
+      background: #aaa;
+      color: #fff;
+      cursor: default;
+    }
+
+    .pin-game-show-cost {
+      opacity: 0.92;
+    }
+
+    .pin-game-unlockable {
+      background: #e8c84a;
+      color: #3a2a10;
+    }
+
+    .pin-game-ready {
+      background: #4caf50;
+      color: #fff;
+    }
+
+    .pin-game-done {
+      background: #2196f3;
+      color: #fff;
+    }
+
+    #map-asui {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      pointer-events: none;
+    }
+    /* ========== /模塊：大地圖房 ========== */
+

@@ -1,0 +1,19 @@
+    /* ========== 核心層：基礎樣式 ========== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: var(--wood-bot);
+      width: 100vw; height: 100vh;
+      overflow: hidden;
+      font-family: var(--serif);
+      user-select: none;
+    }
+    .hidden { display: none !important; }
+
+    /* ========== 核心層：Opening房外層 ========== */
+    #opening-house {
+      position: fixed; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      background: #c8b08a;
+      z-index: 100;
+    }
+

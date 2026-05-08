@@ -1,0 +1,147 @@
+    /* ========== 模塊：小遊戲房 ========== */
+    .game-page {
+      width: 100%;
+      min-height: 100%;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .game-page-left {
+      align-items: center;
+      justify-content: center;
+    }
+    .game-page-right {
+      justify-content: space-between;
+    }
+    .game-image-main {
+      width: 100%;
+      max-height: 44vh;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+    .game-character-img {
+      width: 100%;
+      max-height: 30vh;
+      object-fit: contain;
+    }
+    .game-left-top {
+      min-height: 32%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .game-left-bottom {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+    }
+    .game-left-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 84px;
+      padding: 8px 10px;
+      border: 1px solid #d8c49d;
+      border-radius: 8px;
+      background: #fffaf0;
+    }
+    .game-left-item img {
+      width: 96px;
+      height: 72px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .game-left-item span {
+      font-size: 1.05rem;
+      color: #3a2a1a;
+    }
+    .game-text {
+      font-size: 1.25rem;
+      line-height: 1.8;
+      color: #3a2a1a;
+      white-space: pre-wrap;
+    }
+    .game-title {
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-bottom: 12px;
+      color: #3a2a1a;
+    }
+    .game-vocab-card {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 12px;
+      padding: 10px;
+      border: 1px solid #d8c49d;
+      border-radius: 8px;
+      background: #fffaf0;
+    }
+    .game-vocab-card img {
+      width: 96px;
+      height: 72px;
+      object-fit: contain;
+    }
+    .game-vocab-word {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #3a2a1a;
+    }
+    .game-vocab-desc {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #5b4730;
+    }
+    .game-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .game-option-btn,
+    .game-action-btn {
+      border: 2px solid var(--sign-border);
+      border-radius: 6px;
+      background: var(--sign-fill);
+      color: var(--sign-text);
+      font-family: var(--hei);
+      font-size: 1.1rem;
+      padding: 12px 18px;
+      cursor: pointer;
+      text-align: left;
+    }
+    .game-action-btn {
+      align-self: flex-start;
+      text-align: center;
+    }
+    .game-option-btn:disabled {
+      opacity: 0.45;
+      cursor: default;
+    }
+    .game-option-btn:not(:disabled):hover,
+    .game-action-btn:hover {
+      filter: brightness(0.96);
+    }
+    .game-invoice {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 12px;
+      border: 1px solid #d8c49d;
+      border-radius: 8px;
+      background: #fffaf0;
+      font-size: 1.1rem;
+      color: #3a2a1a;
+    }
+    .game-measure-blank {
+      display: inline-block;
+      min-width: 3em;
+      text-align: center;
+      border-bottom: 2px solid #8b5e3c;
+      margin: 0 2px;
+    }
+    /* ========== /模塊：小遊戲房 ========== */
+

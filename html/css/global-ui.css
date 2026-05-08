@@ -1,0 +1,108 @@
+    /* ========== 核心層：書本外框 ========== */
+    #book-wrapper {
+      width: 100vw; height: 100vh;
+      display: flex; flex-direction: column;
+    }
+    #global-ui {
+      width: 100%; height: 48px;
+      background: var(--wood-top);
+      display: flex; align-items: center;
+      padding: 0 16px; gap: 8px;
+      flex-shrink: 0;
+      font-family: var(--hei);
+    }
+    #global-ui-left {
+      display: flex; align-items: center;
+      gap: 8px; flex: 1;
+    }
+    #global-ui-right {
+      display: flex; align-items: center;
+      gap: 8px;
+    }
+    #global-ui button {
+      font-family: var(--hei);
+      font-size: 12px;
+      background: rgba(200,148,58,0.15);
+      border: 0.5px solid var(--gold);
+      color: var(--gold);
+      border-radius: 6px;
+      padding: 4px 10px;
+      cursor: pointer;
+      display: flex; align-items: center; gap: 4px;
+    }
+    #display-coins {
+      font-family: var(--hei);
+      font-size: 13px;
+      color: var(--gold);
+      background: var(--wood-bot);
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      padding: 3px 10px;
+      font-weight: 500;
+    }
+    #btn-account {
+      background: transparent !important;
+      border-color: rgba(200,148,58,0.4) !important;
+      color: var(--ink-quiet) !important;
+      font-size: 11px !important;
+    }
+
+    /* ========== 核心層：底部導航列 ========== */
+    #bottom-nav {
+      width: 100%; height: 48px;
+      background: var(--paper);
+      display: flex; align-items: center;
+      padding: 0 16px;
+      flex-shrink: 0;
+      font-family: var(--hei);
+      border-top: 1px solid rgba(90,58,16,0.12);
+    }
+    #bottom-nav-left {
+      width: 120px;
+    }
+    #bottom-nav-center {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center;
+      gap: 0;
+    }
+    #bottom-nav-right {
+      width: 120px;
+      display: flex; justify-content: flex-end;
+    }
+    #bottom-nav button {
+      font-family: var(--hei);
+      font-size: 12px;
+      background: transparent;
+      border: none;
+      color: var(--ink-soft);
+      padding: 4px 10px;
+      cursor: pointer;
+    }
+    #bottom-nav button:hover {
+      color: var(--ink);
+    }
+    .chapter-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(90,58,16,0.2);
+      flex-shrink: 0;
+      transition: background 0.3s;
+    }
+    .chapter-dot.active {
+      background: var(--ink-soft);
+      width: 10px; height: 10px;
+    }
+    .chapter-dot.visited {
+      background: rgba(90,58,16,0.45);
+    }
+    .chapter-dot-line {
+      height: 1px;
+      width: 10px;
+      background: rgba(90,58,16,0.2);
+      flex-shrink: 0;
+    }
+    .chapter-dot-line.visited {
+      background: rgba(90,58,16,0.4);
+    }
+    /* ========== /核心層：底部導航列 ========== */
+
