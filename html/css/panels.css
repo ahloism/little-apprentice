@@ -40,7 +40,7 @@
       font-size: 1rem;
       cursor: pointer;
       border-bottom: 2px solid transparent;
-      color: var(--text-muted, #999);
+      color: var(--ink-quiet);
     }
 
     .progress-tab.active {
@@ -99,7 +99,7 @@
     }
 
     .progress-chapter-header.unlocked:hover {
-      background: var(--hover-bg, #ede0c4);
+      background: var(--paper-warm);
     }
 
     .progress-chapter-header.locked {
@@ -116,7 +116,7 @@
     .chapter-arrow,
     .lock-icon {
       font-size: 0.85rem;
-      color: var(--text-muted, #999);
+      color: var(--ink-quiet);
     }
 
     .progress-scenes {
@@ -142,7 +142,7 @@
 
     .progress-scene-summary {
       font-size: 0.82rem;
-      color: var(--text-muted, #666);
+      color: var(--ink-quiet);
       padding: 4px 8px;
       display: flex;
       align-items: center;
@@ -231,9 +231,68 @@
 
     .notebook-anchor-image {
       display: block;
-      width: min(240px, 70%);
+      max-height: 120px;
+      width: auto;
       margin: 10px auto 0;
       object-fit: contain;
+    }
+
+    /* 學徒筆記欄目小標題 */
+    #notebook-section-adventure {
+      font-family: var(--hei);
+      font-size: 15px;
+      color: var(--wood-light);
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--gold-soft);
+    }
+    /* 地點／人物前綴 */
+    .notebook-meta-label {
+      font-size: 13px;
+      color: var(--ink-quiet);
+      margin-right: 4px;
+    }
+
+    /* 學徒筆記分區標題 — #004-2 */
+    #notebook-title-left,
+    #notebook-title-right {
+      font-family: var(--hei);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--gold);
+      margin-bottom: 12px;
+    }
+    #notebook-reflection-title {
+      font-family: var(--hei);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--ink-quiet);
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--paper-deep);
+      margin-top: 16px;
+      margin-bottom: 8px;
+    }
+
+    /* 學徒筆記完成按鈕 — #004-4 */
+    #notebook-advance-btn {
+      display: block;
+      width: 100%;
+      padding: 12px 0;
+      margin-top: 20px;
+      background: var(--wood-light);
+      color: var(--white);
+      font-family: var(--hei);
+      font-size: 16px;
+      text-align: center;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #notebook-advance-btn:hover {
+      background: var(--wood-dark);
     }
 
     #dev-progress-panel-button {
@@ -241,8 +300,8 @@
       right: 12px;
       bottom: 12px;
       z-index: 300;
-      background: #8b5e3c;
-      color: #fff;
+      background: var(--wood-light);
+      color: var(--white);
       border: none;
       border-radius: 8px;
       padding: 10px 14px;
@@ -251,4 +310,3 @@
     }
 
     /* ========== /模塊：學習進度面板 ========== */
-
