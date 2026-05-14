@@ -977,12 +977,10 @@
     };
     const bgm = bgmMap[newRoom];
     if (bgm) setTimeout(() => playBGM(bgm), 300);
-    // 地圖房使用 map-asui-static；其他房間恢復全局阿水圖
     const asuiChar = document.getElementById('asui-character');
-    const isMap = (newRoom === 'map' || newRoom === 'room-map');
     if (asuiChar) {
-      if (isMap) asuiChar.style.display = 'none';
-      // 非地圖房：不覆蓋 CSS display:none，阿水圖由 showAsuiDialogueBar 按需顯示
+      // 切換任何房間時先強制隱藏；showAsuiDialogueBar 在需要時重新開啟
+      asuiChar.style.display = 'none';
     }
     // 切換房間時先收起上一個阿水對白條；大地圖內後續觸發可重新顯示
     const asuiBar = document.getElementById('asui-dialogue');
