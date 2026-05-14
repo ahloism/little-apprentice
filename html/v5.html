@@ -3480,16 +3480,6 @@
     pinsContainer.id = 'map-pins';
     mapImageFrame.appendChild(pinsContainer);
 
-    mapStage.appendChild(mapImageFrame);
-    mapHouse.appendChild(mapStage);
-    requestAnimationFrame(resizeMapFrame);
-
-    // 建立 map-overlay，把 asui-layer 移入
-    const mapOverlay = document.createElement('div');
-    mapOverlay.id = 'map-overlay';
-    const asuiLayer = existingAsuiLayer || document.getElementById('asui-layer');
-    if (asuiLayer) mapOverlay.appendChild(asuiLayer);
-
     // 學徒筆記入口按鈕（左下角）
     const mapNotebookBtn = document.createElement('button');
     mapNotebookBtn.id = 'map-notebook-btn';
@@ -3515,7 +3505,17 @@
       const lastChapter = completed[completed.length - 1];
       if (typeof enterNotebookReview === 'function') enterNotebookReview(lastChapter);
     });
-    mapOverlay.appendChild(mapNotebookBtn);
+
+    mapImageFrame.appendChild(mapNotebookBtn);
+    mapStage.appendChild(mapImageFrame);
+    mapHouse.appendChild(mapStage);
+    requestAnimationFrame(resizeMapFrame);
+
+    // 建立 map-overlay，把 asui-layer 移入
+    const mapOverlay = document.createElement('div');
+    mapOverlay.id = 'map-overlay';
+    const asuiLayer = existingAsuiLayer || document.getElementById('asui-layer');
+    if (asuiLayer) mapOverlay.appendChild(asuiLayer);
 
     mapHouse.appendChild(mapOverlay);
 
