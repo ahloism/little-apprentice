@@ -22,7 +22,7 @@
     .global-tool-btn {
       font-family: var(--hei);
       font-size: 12px;
-      background: rgba(200,148,58,0.15);
+      background: var(--gold-alpha-light);
       border: 0.5px solid var(--gold);
       color: var(--gold);
       border-radius: 6px;
@@ -44,7 +44,7 @@
     }
     .global-account-btn {
       background: transparent;
-      border-color: rgba(200,148,58,0.4);
+      border-color: var(--gold-alpha-mid);
       color: var(--ink-quiet);
       font-size: 11px;
     }

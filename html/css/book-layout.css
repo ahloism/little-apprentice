@@ -4,7 +4,7 @@
     }
     #book-open-animation {
       position: absolute; inset: 0;
-      background: #c8b08a;
+      background: var(--cover-bg);
       z-index: 10;
       display: flex; align-items: center; justify-content: center;
     }
@@ -18,7 +18,7 @@
     }
     #white-overlay {
       position: fixed; inset: 0;
-      background: #fff;
+      background: var(--white);
       z-index: 500;
       pointer-events: none;
       opacity: 0;
@@ -43,16 +43,16 @@
     .scene-chapter-tag {
       display: inline-block;
       background: var(--vermillion);
-      color: #fff;
+      color: var(--white);
       font-family: var(--hei);
-      font-size: 12px;
-      padding: 2px 8px;
-      border-radius: 3px;
+      font-size: 16px;
+      padding: 4px 12px;
+      border-radius: 4px;
       margin-bottom: 8px;
     }
     .story-header-text {
       font-family: var(--hei);
-      font-size: 12px;
+      font-size: 18px;
       color: var(--ink-quiet);
       letter-spacing: 0.05em;
       margin-bottom: 4px;

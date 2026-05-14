@@ -114,7 +114,7 @@
       text-align: left;
     }
     .game-action-btn {
-      align-self: flex-start;
+      align-self: flex-end;
       text-align: center;
     }
     .game-option-btn:disabled {

@@ -17,6 +17,10 @@
       --gold-deep:    #a07320;
       --page-gold:    #b88a3a;
 
+      /* 金色 alpha */
+      --gold-alpha-light: rgba(200,148,58,0.15);
+      --gold-alpha-mid:   rgba(200,148,58,0.4);
+
       /* 主操作按鈕（木牌感） */
       --sign-fill:    #edd9a3;
       --sign-border:  #5a3a10;
@@ -31,8 +35,22 @@
       --ink-soft:     #5a4632;
       --ink-quiet:    #7a6549;
 
+      /* Overlay */
+      --paper-overlay: rgba(245,240,232,0.97);
+      --pin-label-bg:  rgba(255,255,220,0.85);
+      --ink-overlay:   rgba(47,36,24,0.92);
+
       /* 字體 */
       --serif: 'Noto Serif TC', 'Songti TC', 'STSong', serif;
       --hei:   'PingFang TC', 'Noto Sans TC', '微軟正黑體', sans-serif;
-    }
 
+      /* 封面 */
+      --cover-bg: #c8b08a;
+
+      /* 純白 */
+      --white: #fff;
+
+      /* 狀態色 */
+      --state-ready: #4caf50;
+      --state-done:  #2196f3;
+    }

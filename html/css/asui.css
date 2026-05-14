@@ -11,27 +11,29 @@
       position: fixed;
       bottom: 0;
       left: 0;
-      width: 240px;
+      width: 280px;
       height: auto;
       pointer-events: auto;
       cursor: pointer;
       transition: opacity 0.3s ease;
       z-index: 102;
+      background: transparent;
+      display: none;
     }
     #asui-character canvas {
       display: block;
       width: 100%;
       height: auto;
-      background: transparent;
+      background: transparent !important;
     }
     #asui-dialogue {
       position: fixed;
       bottom: 0;
       left: 0;
       width: 100%;
-      background: rgba(245, 240, 232, 0.97);
+      background: var(--paper-overlay);
       border-top: 2px solid var(--gold);
-      padding: 16px 20px 16px 140px;
+      padding: 16px 20px 16px 300px;
       box-sizing: border-box;
       z-index: 101;
       pointer-events: auto;
@@ -43,8 +45,8 @@
       transform: translateY(0);
     }
     .asui-text {
-      font-size: 1rem;
-      color: #3a2a1a;
+      font-size: 20px;
+      color: var(--sign-text);
       line-height: 1.6;
       min-height: 2em;
     }
@@ -70,4 +72,3 @@
       bottom: 48px;
     }
     /* ========== /模塊：阿水層 ========== */
-

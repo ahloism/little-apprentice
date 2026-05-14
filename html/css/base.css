@@ -18,6 +18,6 @@
     #opening-house {
       position: fixed; inset: 0;
       display: flex; align-items: center; justify-content: center;
-      background: #c8b08a;
+      background: var(--cover-bg);
       z-index: 100;
     }
