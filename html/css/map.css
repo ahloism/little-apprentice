@@ -1,104 +1,172 @@
-    /* ========== 模塊：大地圖房 ========== */
-    #map-house {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #f5f0e8;
-      z-index: 5;
-    }
+/* ========== 模塊：大地圖房 ========== */
+#map-house {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--paper);
+  z-index: 5;
+}
 
-    #map-bg {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+#map-stage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-    #map-pins {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-    }
+#map-image-frame {
+  position: relative;
+  /* 寬高由 JS resizeMapFrame() 動態寫入，不在 CSS 設死尺寸 */
+}
 
-    .map-pin {
-      position: absolute;
-      transform: translate(-50%, -50%);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
-      pointer-events: none;
-    }
+#map-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 
-    .map-pin * {
-      pointer-events: auto;
-    }
+#map-asui-static {
+  position: absolute;
+  width: 18%;
+  pointer-events: auto;
+  cursor: pointer;
+}
 
-    .pin-story-btn {
-      transform: translateY(-100%);
-      background: #c8860a;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      padding: 4px 10px;
-      font-size: 0.85rem;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+#map-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+}
 
-    .pin-label {
-      font-size: 0.8rem;
-      color: #3a2a10;
-      background: rgba(255,255,220,0.85);
-      border-radius: 4px;
-      padding: 1px 6px;
-      white-space: nowrap;
-    }
+#map-pins {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
 
-    .pin-game-btn {
-      transform: translateY(100%);
-      border: none;
-      border-radius: 8px;
-      padding: 4px 10px;
-      font-size: 0.8rem;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+.map-pin {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  pointer-events: none;
+}
 
-    .pin-game-locked {
-      background: #aaa;
-      color: #fff;
-      cursor: default;
-    }
+.map-pin * {
+  pointer-events: auto;
+}
 
-    .pin-game-show-cost {
-      opacity: 0.92;
-    }
+.pin-story-btn {
+  transform: translateY(-100%);
+  background: var(--gold);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-    .pin-game-unlockable {
-      background: #e8c84a;
-      color: #3a2a10;
-    }
+.pin-label {
+  font-size: 0.8rem;
+  color: var(--wood-bot);
+  background: var(--pin-label-bg);
+  border-radius: 4px;
+  padding: 1px 6px;
+  white-space: nowrap;
+}
 
-    .pin-game-ready {
-      background: #4caf50;
-      color: #fff;
-    }
+.pin-game-btn {
+  transform: translateY(100%);
+  border: none;
+  border-radius: 8px;
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
 
-    .pin-game-done {
-      background: #2196f3;
-      color: #fff;
-    }
+.pin-game-locked {
+  background: var(--ink-quiet);
+  color: var(--white);
+  cursor: default;
+}
 
-    #map-asui {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      pointer-events: none;
-    }
-    /* ========== /模塊：大地圖房 ========== */
+.pin-game-show-cost {
+  opacity: 0.92;
+}
 
+.pin-game-unlockable {
+  background: var(--gold-soft);
+  color: var(--wood-bot);
+}
+
+.pin-game-ready {
+  background: var(--state-ready);
+  color: var(--white);
+}
+
+.pin-game-done {
+  background: var(--state-done);
+  color: var(--white);
+}
+
+/* 地圖房內的阿水層覆蓋 map-overlay */
+#map-overlay #asui-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+#map-overlay #asui-character {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 180px;
+  height: auto;
+  pointer-events: auto;
+  z-index: 22;
+}
+
+#map-overlay #asui-dialogue {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 132px;
+  background: var(--paper-overlay);
+  border-top: 2px solid var(--gold);
+  padding: 16px 20px 16px 200px;
+  box-sizing: border-box;
+  z-index: 21;
+  pointer-events: auto;
+  font-family: var(--hei);
+  font-size: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+#map-overlay #asui-dialogue.visible {
+  transform: translateY(0);
+}
+
+/* map-asui 定位錨點（保留供參考） */
+#map-asui {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+/* ========== /模塊：大地圖房 ========== */
