@@ -46,6 +46,7 @@
 
     <div id="notebook-house" class="hidden">
       <div id="notebook-title-left"></div>
+      <div id="notebook-section-adventure"></div>
       <div id="notebook-story-progress"></div>
       <div id="notebook-places"></div>
       <div id="notebook-people"></div>
@@ -185,6 +186,13 @@
 
   <div id="white-overlay"></div>
 
+  <!-- ========== JS render helper 模塊（V5.1.7） ========== -->
+  <script src="./js/story-render.js"></script>
+  <script src="./js/notebook-render.js"></script>
+  <script src="./js/game-render.js"></script>
+  <script src="./js/report-render.js"></script>
+  <!-- ========== /JS render helper 模塊 ========== -->
+
   <script>
   // ========== 核心層：系統骨架 + 書本框架 ==========
   // 規格依據：核心層規格文件.md §一
@@ -210,6 +218,39 @@
         asuiLayer.classList.add('asui-above-bottom-nav');
       } else {
         asuiLayer.classList.remove('asui-above-bottom-nav');
+      }
+    }
+    // 離開地圖房時把 asui-layer 移回 #book-wrapper
+    if (roomId !== 'map-house' && roomId !== 'room-map') {
+      const asuiLayer = document.getElementById('asui-layer');
+      if (asuiLayer && asuiLayer.parentElement?.id === 'map-overlay') {
+        const bookWrapper = document.getElementById('book-wrapper');
+        if (bookWrapper) {
+          bookWrapper.appendChild(asuiLayer);
+          // 清除地圖房內的 map-specific style
+          asuiLayer.style.position = '';
+          asuiLayer.style.inset = '';
+          const asuiChar = document.getElementById('asui-character');
+          if (asuiChar) {
+            asuiChar.style.display = '';
+            asuiChar.style.position = '';
+            asuiChar.style.bottom = '';
+            asuiChar.style.left = '';
+            asuiChar.style.width = '';
+            asuiChar.style.height = '';
+          }
+          const asuiDialogue = document.getElementById('asui-dialogue');
+          if (asuiDialogue) {
+            asuiDialogue.style.position = '';
+            asuiDialogue.style.bottom = '';
+            asuiDialogue.style.inset = '';
+            asuiDialogue.style.fontSize = '';
+            asuiDialogue.style.padding = '';
+            if (!asuiDialogue.classList.contains('visible')) {
+              asuiDialogue.classList.add('hidden');
+            }
+          }
+        }
       }
     }
     rooms.forEach(id => {
@@ -335,10 +376,13 @@
       console.warn('[Dev] logError skipped:', message, context, userId);
       return;
     }
+    if (!userId) {
+      console.warn('[logError] no userId, skipping Firestore write:', message, context);
+      return;
+    }
     try {
-      await db.collection('errors').add({
+      await db.collection('users').doc(userId).collection('errors').add({
         message, context,
-        user_id: userId || null,
         timestamp: firebase.firestore.FieldValue.serverTimestamp()
       });
     } catch (e) {
@@ -541,6 +585,7 @@
       explored_scenes: state.explored_scenes,
       visited_sub_scenes: state.visited_sub_scenes,
       claimed_rewards: state.claimed_rewards,
+      assessment_nodes: state.assessment_nodes,
     });
   }
 
@@ -607,6 +652,10 @@
     const exists = state.assessment_nodes.some(n => n.sceneId === sceneId);
     if (exists) return;
     state.assessment_nodes.push({ sceneId, ...data });
+    // 同步寫入 la_assessment，供 session 重啟後 fallback 讀取
+    try {
+      localStorage.setItem('la_assessment', JSON.stringify({ nodes: [...state.assessment_nodes] }));
+    } catch {}
     const cooldownKey = 'assessment_' + sceneId;
     const now = Date.now();
     if (!_saveCooldown[cooldownKey] || now - _saveCooldown[cooldownKey] >= 5000) {
@@ -645,20 +694,26 @@
 
   let _ttsAudio = null;
   let _ttsHighlightTimer = null;
+  let _ttsHighlightTimers = [];
   let _ttsStopped = false;
+  let _ttsResolve = null;
 
   async function playLine(audioPath, timestampsPath, textElement) {
     if (!state.tts_on) return Promise.resolve();
     stopTTS();
     _ttsStopped = false;
     return new Promise(async (resolve) => {
+      _ttsResolve = resolve;
       let timestamps = null;
       try {
-        const res = await fetch(BASE_PATH + timestampsPath);
+        const res = await fetch(encodeURI(BASE_PATH + timestampsPath));
         if (res.ok) timestamps = await res.json();
       } catch (e) { /* fallback */ }
 
-      _ttsAudio = new Audio(BASE_PATH + audioPath);
+      // fetch 完成後若玩家已關閉語音，直接終止播放流程
+      if (_ttsStopped) { resolve(); return; }
+
+      _ttsAudio = new Audio(encodeURI(BASE_PATH + audioPath));
       _ttsAudio.playbackRate = SPEED_RATE[state.speed];
 
       // 逐字高亮
@@ -669,12 +724,14 @@
       }
 
       _ttsAudio.addEventListener('ended', () => {
+        _ttsResolve = null;
         document.dispatchEvent(new Event('tts:ended'));
         resolve();
       });
       _ttsAudio.addEventListener('error', async () => {
         logError('TTS mp3 failed, fallback', audioPath, state.uid);
         await _ttsWebSpeechFallback(textElement);
+        _ttsResolve = null;
         resolve();
       });
 
@@ -682,6 +739,7 @@
         await _ttsAudio.play();
       } catch (e) {
         await _ttsWebSpeechFallback(textElement);
+        _ttsResolve = null;
         resolve();
       }
     });
@@ -707,8 +765,14 @@
   function stopTTS() {
     _ttsStopped = true;
     if (_ttsAudio) { _ttsAudio.pause(); _ttsAudio = null; }
+    // 清除所有高亮 timer
+    _ttsHighlightTimers.forEach(id => clearTimeout(id));
+    _ttsHighlightTimers = [];
     if (_ttsHighlightTimer) { clearTimeout(_ttsHighlightTimer); _ttsHighlightTimer = null; }
+    // 清除殘留高亮
+    document.querySelectorAll('.hl.on').forEach(s => s.classList.remove('on'));
     window.speechSynthesis && window.speechSynthesis.cancel();
+    if (_ttsResolve) { _ttsResolve(); _ttsResolve = null; }
   }
 
   function setSpeed(speed) {
@@ -717,15 +781,56 @@
   }
 
   function _scheduleHighlights(words, el) {
-    if (!el || !words) return;
+    if (!el || !words || words.length === 0) return;
     const spans = el.querySelectorAll('.hl');
-    words.forEach((w, i) => {
-      const adjusted = w.start_ms / (SPEED_RATE[state.speed]);
-      _ttsHighlightTimer = setTimeout(() => {
-        spans.forEach(s => s.classList.remove('on'));
-        if (spans[i]) spans[i].classList.add('on');
-      }, adjusted);
+    if (spans.length === 0) return;
+    const rate = SPEED_RATE[state.speed] || 1;
+    const timers = [];
+
+    let charOffset = 0;
+    words.forEach((w) => {
+      const chars = Array.from(w.word || '');
+      const wordLen = chars.length || 1;
+      const startIdx = charOffset;
+      charOffset += wordLen;
+
+      const wordDuration = w.duration_ms || 300;
+      const charInterval = wordDuration / wordLen;
+
+      // 每個字符獨立 setTimeout，時機 = word start + 字符在詞內的位置 * 平均間距
+      chars.forEach((_, ci) => {
+        const charMs = (w.start_ms + ci * charInterval) / rate;
+        const spanIdx = startIdx + ci;
+        const tid = setTimeout(() => {
+          if (_ttsStopped) return;
+          spans.forEach(s => s.classList.remove('on'));
+          const span = spans[spanIdx];
+          if (span) {
+            span.classList.add('on');
+            // 自動捲動
+            const scrollContainer = span.closest('#story-text-area') || span.closest('[style*="overflow"]') || span.parentElement;
+            if (scrollContainer) {
+              const spanRect = span.getBoundingClientRect();
+              const containerRect = scrollContainer.getBoundingClientRect();
+              if (spanRect.bottom > containerRect.bottom || spanRect.top < containerRect.top) {
+                span.scrollIntoView({ block: 'center', behavior: 'smooth' });
+              }
+            }
+          }
+        }, charMs);
+        timers.push(tid);
+      });
     });
+
+    // 播完後清除所有高亮
+    const lastWord = words[words.length - 1];
+    const endMs = (lastWord.start_ms + (lastWord.duration_ms || 300)) / rate;
+    const endTid = setTimeout(() => {
+      spans.forEach(s => s.classList.remove('on'));
+    }, endMs + 150);
+    timers.push(endTid);
+
+    _ttsHighlightTimers = timers;
   }
 
   async function _ttsWebSpeechFallback(textElement) {
@@ -807,10 +912,11 @@
   function stopBGM(options = {}) {
     if (!_bgmAudio) return;
     const fadeMs = options.fadeMs || 500;
-    _fadeVolume(_bgmAudio, _bgmAudio.volume, 0, fadeMs, () => {
-      _bgmAudio.pause();
-      _bgmAudio = null;
-      _bgmTrack = null;
+    const audioToStop = _bgmAudio;
+    _bgmAudio = null;
+    _bgmTrack = null;
+    _fadeVolume(audioToStop, audioToStop.volume, 0, fadeMs, () => {
+      try { if (!audioToStop.paused) audioToStop.pause(); } catch (e) {}
     });
   }
 
@@ -871,11 +977,12 @@
     };
     const bgm = bgmMap[newRoom];
     if (bgm) setTimeout(() => playBGM(bgm), 300);
-    // 阿水角色圖只在大地圖房顯示
+    // 地圖房使用 map-asui-static；其他房間恢復全局阿水圖
     const asuiChar = document.getElementById('asui-character');
     const isMap = (newRoom === 'map' || newRoom === 'room-map');
     if (asuiChar) {
-      asuiChar.style.display = isMap ? '' : 'none';
+      if (isMap) asuiChar.style.display = 'none';
+      // 非地圖房：不覆蓋 CSS display:none，阿水圖由 showAsuiDialogueBar 按需顯示
     }
     // 切換房間時先收起上一個阿水對白條；大地圖內後續觸發可重新顯示
     const asuiBar = document.getElementById('asui-dialogue');
@@ -885,6 +992,16 @@
       asuiBar.querySelector('.asui-text').textContent = '';
       asuiBar.querySelector('.asui-buttons').innerHTML = '';
       if (typeof setAsuiCharacter === 'function') setAsuiCharacter('A27');
+    }
+    // 重置 asui playback state，確保離房後阿水可再次觸發
+    // 不清 queue：queue 可能帶有準備在新房間播放的對白
+    if (typeof asuiState !== 'undefined') {
+      asuiState.isPlaying = false;
+      asuiState.currentDialogue = null;
+      asuiState.currentLineIndex = 0;
+    }
+    if (typeof _asuiOnComplete !== 'undefined' && _asuiOnComplete) {
+      _asuiOnComplete = null;
     }
   }
 
@@ -903,16 +1020,28 @@
   }
 
   function _fadeVolume(audio, from, to, ms, onDone) {
+    if (!audio) {
+      if (onDone) onDone();
+      return;
+    }
     const steps = 20;
     const stepMs = ms / steps;
     const diff = (to - from) / steps;
     let step = 0;
     const timer = setInterval(() => {
-      step++;
-      audio.volume = Math.max(0, Math.min(1, from + diff * step));
-      if (step >= steps) {
+      if (!audio) {
         clearInterval(timer);
-        if (onDone) onDone();
+        return;
+      }
+      try {
+        step++;
+        audio.volume = Math.max(0, Math.min(1, from + diff * step));
+        if (step >= steps) {
+          clearInterval(timer);
+          if (onDone) onDone();
+        }
+      } catch (e) {
+        clearInterval(timer);
       }
     }, stepMs);
   }
@@ -1012,10 +1141,10 @@
         <div id="opening-buttons" style="display:flex;flex-direction:column;align-items:center;gap:16px;"></div>
       </div>
       <div id="opening-confirm" class="hidden" style="position:absolute;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;">
-        <div style="background:#fff;border-radius:16px;padding:32px;text-align:center;max-width:320px;">
+        <div style="background:var(--white);border-radius:16px;padding:32px;text-align:center;max-width:320px;">
           <p style="font-size:18px;margin-bottom:24px;">重新開始會清除所有進度，確定嗎？</p>
           <div style="display:flex;gap:16px;justify-content:center;">
-            <button id="btn-confirm-restart" style="background:#d4870a;color:#fff;border:none;border-radius:8px;padding:12px 24px;font-size:16px;cursor:pointer;">確定重新開始</button>
+            <button id="btn-confirm-restart" style="background:#d4870a;color:var(--white);border:none;border-radius:8px;padding:12px 24px;font-size:16px;cursor:pointer;">確定重新開始</button>
             <button id="btn-cancel-restart" style="background:transparent;color:#333;border:2px solid #333;border-radius:8px;padding:12px 24px;font-size:16px;cursor:pointer;">取消</button>
           </div>
         </div>
@@ -1058,7 +1187,7 @@
         <div id="g-signin-btn" style="cursor:pointer;">
           <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" alt="Sign in with Google" style="height:50px;" />
         </div>
-        ${!_firebaseReady ? '<div style="color:#fff;background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:8px;font-size:14px;">Firebase config 未設定，登入功能未啟用</div>' : ''}
+        ${!_firebaseReady ? '<div style="color:var(--white);background:rgba(0,0,0,0.55);padding:8px 12px;border-radius:8px;font-size:14px;">Firebase config 未設定，登入功能未啟用</div>' : ''}
       `;
       document.getElementById('g-signin-btn').addEventListener('click', () => {
         unlockAudioContext();
@@ -1194,44 +1323,6 @@
   let _storyParentSceneId = null;
   const _storyVisitCounts = {};
 
-  function _ensureStoryDOM() {
-    const book = document.getElementById('book');
-    if (!document.getElementById('story-house')) {
-      const marker = document.createElement('div');
-      marker.id = 'story-house';
-      marker.className = 'hidden';
-      marker.style.display = 'contents';
-      book.appendChild(marker);
-    }
-
-    const left = document.getElementById('page-left');
-    const right = document.getElementById('page-right');
-    left.innerHTML = `
-      <div id="scene-chapter-tag-container" style="position:absolute;top:12px;left:12px;z-index:2;"></div>
-      <div id="story-image-main" style="width:100%;aspect-ratio:16/9;background:#f6efe3;border-radius:8px;background-size:contain;background-repeat:no-repeat;background-position:center;position:relative;"></div>
-      <div id="story-image-overlay" style="width:100%;aspect-ratio:16/9;background-size:contain;background-repeat:no-repeat;background-position:center;position:absolute;left:0;right:0;top:0;pointer-events:none;transform:translateY(20px);opacity:0;transition:opacity .35s ease, transform .35s ease;"></div>
-      <div id="story-image-caption" style="min-height:24px;font-size:14px;color:#6b4e2e;text-align:center;margin-top:8px;"></div>
-      <div id="story-image-display" style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin-top:14px;"></div>
-    `;
-    right.innerHTML = `
-      <div id="story-header" style="margin-bottom:4px;">
-        <div class="story-header-text" id="story-event-label"></div>
-        <div class="story-scene-title" id="story-scene-title-el"></div>
-      </div>
-      <div id="story-text-area" style="flex:1;overflow-y:auto;font-size:21px;line-height:1.8;color:var(--ink);font-family:var(--serif);"></div>
-      <div style="border-top:1px solid rgba(90,58,16,0.12);margin:12px 0 8px;"></div>
-      <div id="story-question-area" style="min-height:42px;font-size:20px;font-weight:700;color:var(--ink);font-family:var(--hei);"></div>
-      <div id="story-choices-area" style="display:flex;flex-direction:column;gap:10px;margin-top:8px;"></div>
-      <div id="story-advance-btn" style="min-height:54px;margin-top:8px;display:flex;justify-content:flex-end;align-items:center;"></div>
-    `;
-    left.style.position = 'relative';
-    left.style.boxSizing = 'border-box';
-    left.style.padding = '24px';
-    right.style.boxSizing = 'border-box';
-    right.style.padding = '24px';
-    right.style.display = 'flex';
-    right.style.flexDirection = 'column';
-  }
 
   function _storyList(data) {
     if (!data) return [];
@@ -1240,7 +1331,14 @@
 
   function _storyEvalList() {
     if (!eventData.evaluation) return [];
-    return Array.isArray(eventData.evaluation) ? eventData.evaluation : (eventData.evaluation.nodes || eventData.evaluation.evaluation_nodes || []);
+    return Array.isArray(eventData.evaluation)
+      ? eventData.evaluation
+      : (
+          eventData.evaluation.scenes ||
+          eventData.evaluation.nodes ||
+          eventData.evaluation.evaluation_nodes ||
+          []
+        );
   }
 
   function _findByScene(list, sceneId) {
@@ -1269,12 +1367,17 @@
     dock: '碼頭',
   };
 
+  function _chapterToChinese(n) {
+    return ({1:'一',2:'二',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十'})[n] || String(n || '');
+  }
+
   function _storyLocationLabel() {
     const parts = (_storyEventId || '').split('_');
     const chapterNum = parts[1] || '';
     const location = eventData.manifest?.location || '';
     const locationName = _LOCATION_NAMES[location] || location;
-    return chapterNum ? `第${chapterNum}章·${locationName}` : locationName;
+    const eventTitle = eventData.story?.title || locationName;
+    return chapterNum ? `第${_chapterToChinese(parseInt(chapterNum))}章·${eventTitle}` : eventTitle;
   }
 
   async function _updateChapterProgressDots(currentSceneId) {
@@ -1323,72 +1426,15 @@
     return `${BASE_PATH}${IMAGE_BASE}${file}`;
   }
 
-  function _setBackgroundImage(el, imageId) {
-    if (!el || !imageId) {
-      if (el) el.style.backgroundImage = '';
-      return;
-    }
-    el.style.backgroundImage = `url("${_storyImagePath(imageId)}")`;
-  }
 
-  function updateStoryImage(presentation) {
-    const main = document.getElementById('story-image-main');
-    const overlay = document.getElementById('story-image-overlay');
-    const display = document.getElementById('story-image-display');
-    const caption = document.getElementById('story-image-caption');
 
-    _setBackgroundImage(main, presentation?.image);
-    if (caption) caption.textContent = presentation?.caption || '';
-    if (overlay) {
-      overlay.style.opacity = '0';
-      overlay.style.transform = 'translateY(20px)';
-      overlay.style.backgroundImage = '';
-    }
-    if (display) {
-      const images = presentation?.display_images || [];
-      display.innerHTML = images.map(item => `
-        <div style="min-width:0;">
-          <div style="aspect-ratio:1/1;background:#f8f1e6;border-radius:8px;background-image:url('${_storyImagePath(item.image)}');background-size:contain;background-repeat:no-repeat;background-position:center;"></div>
-          <div style="font-size:13px;text-align:center;color:#6b4e2e;margin-top:4px;white-space:normal;">${item.caption || ''}</div>
-        </div>
-      `).join('');
-    }
-    _updatePageLeftScrollable();
-  }
-
-  function _triggerImageCue(presentation, lineIndex) {
-    const cue = (presentation?.image_cues || []).find(item => item.trigger_line_index === lineIndex);
-    const overlay = document.getElementById('story-image-overlay');
-    if (!cue || !overlay) return;
-    _setBackgroundImage(overlay, cue.image);
-    overlay.style.opacity = '1';
-    overlay.style.transform = 'translateY(0)';
-  }
 
   function _lineText(line) {
     return typeof line === 'string' ? line : (line?.text || '');
   }
 
-  function _renderLines(lines, container) {
-    container.innerHTML = (lines || []).map((line, lineIndex) => {
-      const text = _lineText(line);
-      const chars = Array.from(text).map((ch, charIndex) => {
-        const extra = (lineIndex === 0 && charIndex === 0) ? ' hl-first' : '';
-        return `<span class="hl${extra}">${ch}</span>`;
-      }).join('');
-      return `<p data-line-index="${lineIndex}" style="margin:0 0 14px;">${chars}</p>`;
-    }).join('');
-  }
 
-  function _setQuestion(text) {
-    document.getElementById('story-question-area').textContent = text || '';
-  }
 
-  function _clearStoryControls() {
-    _setQuestion('');
-    document.getElementById('story-choices-area').innerHTML = '';
-    document.getElementById('story-advance-btn').innerHTML = '';
-  }
 
   function _audioPath(filename) {
     return filename ? `${TTS_BASE}${filename}` : '';
@@ -1424,10 +1470,12 @@
     playSFX('SFX_01');
     choicesArea.querySelectorAll('button').forEach(btn => btn.disabled = true);
     const choiceAudios = presentation?.audio?.choices || [];
-    for (let i = 0; i < choiceAudios.length; i++) {
+    const playableChoiceCount = Math.min(choiceAudios.length, scene.choices?.length || 0);
+    for (let i = 0; i < playableChoiceCount; i++) {
       const btn = choicesArea.querySelector(`[data-choice-index="${i}"]`);
       if (btn) btn.classList.add('listening');
-      await playLine(_audioPath(choiceAudios[i]), _timestampPath(choiceAudios[i]), btn);
+      const choiceTextEl = btn ? btn.querySelector('.choice-hl-text') : null;
+      await playLine(_audioPath(choiceAudios[i]), _timestampPath(choiceAudios[i]), choiceTextEl || btn);
       if (btn) btn.classList.remove('listening');
     }
     choicesArea.querySelectorAll('button').forEach(btn => btn.disabled = false);
@@ -1438,7 +1486,10 @@
     btn.type = 'button';
     btn.dataset.choiceIndex = String(index);
     btn.style.cssText = `text-align:left;border:2px solid var(--sign-border);background:${explored ? 'var(--paper-deep)' : 'var(--sign-fill)'};color:var(--sign-text);border-radius:6px;padding:12px 16px;font-size:18px;line-height:1.45;cursor:pointer;font-family:var(--hei);`;
-    btn.innerHTML = `<strong>${choice.label || String.fromCharCode(65 + index)}.</strong> ${choice.text || ''}${explored ? ' <span style="color:#7a6241;">（已探索）</span>' : ''}`;
+    const labelStr = choice.label || String.fromCharCode(65 + index);
+    const choiceText = choice.text || '';
+    const hlSpans = Array.from(choiceText).map(ch => `<span class="hl">${ch}</span>`).join('');
+    btn.innerHTML = `<strong>${labelStr}.</strong> <span class="choice-hl-text">${hlSpans}</span>${explored ? ' <span style="color:#7a6241;">（已探索）</span>' : ''}`;
     btn.disabled = true;
     btn.addEventListener('click', () => onClick(choice, index));
     return btn;
@@ -1514,6 +1565,7 @@
     showRoom('story-house');
     handleRoomTransition('room-story');
     await loadEventData(eventId);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
 
     const forcedStartEvents = new Set(['1_4', '1_7']);
     const sameEventSavedScene = getSavedSceneForEvent(eventId);
@@ -1534,6 +1586,9 @@
     const presentation = _findByScene(_storyList(eventData.presentation), sceneId) || {};
     const manifestScene = _findByScene(_storyList(eventData.manifest), sceneId);
     const evaluation = _findByScene(_storyEvalList(), sceneId);
+    if (!evaluation && ['assessment','hidden_assessment','hidden_remedial'].includes(manifestScene?.type)) {
+      console.warn('[Assessment] evaluation missing for', sceneId, 'type:', manifestScene?.type);
+    }
     const type = manifestScene?.type || 'feedback';
     const textArea = document.getElementById('story-text-area');
 
@@ -1543,7 +1598,7 @@
     const tagContainer = document.getElementById('scene-chapter-tag-container');
     if (tagContainer) {
       tagContainer.innerHTML = chapterNum
-        ? `<span class="scene-chapter-tag">第${chapterNum}回</span>`
+        ? `<span class="scene-chapter-tag">第${_chapterToChinese(parseInt(chapterNum))}章</span>`
         : '';
     }
     document.getElementById('story-event-label').textContent = _storyLocationLabel();
@@ -1552,7 +1607,10 @@
     _clearStoryControls();
     updateStoryImage(presentation);
     _renderLines(_linesForVisit(scene), textArea);
-    if (isSavePoint(sceneId)) await saveCurrentProgress();
+    if (isSavePoint(sceneId)) {
+      await saveCurrentProgress();
+      if (document.getElementById('story-house')?.classList.contains('hidden')) return;
+    }
 
     const handlers = {
       story: handleStoryScene,
@@ -1572,9 +1630,17 @@
   async function handleStoryScene(scene, presentation, manifestScene) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
-    _renderAdvance(presentation?.advance_label, () => {
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
+    _renderAdvance(presentation?.advance_label, async () => {
       const amount = _rewardAmount(manifestScene);
       if (amount) claimReward('scene_reward_' + scene.scene_id, amount);
+      if (['1_1_5_A', '1_1_5_B', '1_1_5_C'].includes(scene.scene_id)) {
+        const seenKey = 'asui_seen_auto_M1';
+        if (!localStorage.getItem(seenKey)) {
+          await new Promise(resolve => playAsuiDialogue('M1', resolve));
+          localStorage.setItem(seenKey, '1');
+        }
+      }
       if (scene.next_scene) renderScene(scene.next_scene);
     });
   }
@@ -1582,34 +1648,43 @@
   async function handleExploreScene(scene, presentation, manifestScene) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
     _renderChoices(scene, (choice) => {
+      document.getElementById('story-choices-area')?.querySelectorAll('button').forEach(btn => btn.disabled = true);
       const amount = _rewardAmount(manifestScene);
       if (amount) claimReward('scene_reward_' + scene.scene_id, amount);
       _markVisitedSubScene(scene.scene_id, { ...choice, exp_tag: manifestScene?.exp_tag || choice.label });
       if (choice.next_scene) renderScene(choice.next_scene);
     });
     await _playQuestionAndChoices(scene, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
   }
 
   async function handleFreeExploreScene(scene, presentation, manifestScene) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
     const visited = _visitedLabels(scene.scene_id);
     _renderChoices(scene, (choice) => {
+      document.getElementById('story-choices-area')?.querySelectorAll('button').forEach(btn => btn.disabled = true);
       _storyParentSceneId = scene.scene_id;
       _markVisitedSubScene(scene.scene_id, { ...choice, exp_tag: choice.label });
       if (choice.next_scene) renderScene(choice.next_scene);
     }, visited);
     await _playQuestionAndChoices(scene, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
 
     const threshold = manifestScene?.unlock_threshold || scene.choices?.length || 0;
     if (visited.size >= threshold) {
-      _renderAdvance(presentation?.advance_label || '繼續', () => {
+      const exitOption = scene.exit_option;
+      const exitLabel = exitOption?.text || presentation?.advance_label || '繼續';
+      const exitNext = exitOption?.next_scene || scene.next_scene;
+      _renderAdvance(exitLabel, () => {
         const allExplored = visited.size >= (scene.choices?.length || 0);
         const amount = _rewardAmount(manifestScene, allExplored, allExplored);
         const rewardId = allExplored ? 'free_explore_bonus_' + scene.scene_id : 'scene_reward_' + scene.scene_id;
         if (amount) claimReward(rewardId, amount);
-        if (scene.next_scene) renderScene(scene.next_scene);
+        if (exitNext) renderScene(exitNext);
       });
     }
   }
@@ -1617,7 +1692,9 @@
   async function handleAssessmentScene(scene, presentation, manifestScene, evaluation) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
     _renderChoices(scene, async (choice) => {
+      document.getElementById('story-choices-area')?.querySelectorAll('button').forEach(btn => btn.disabled = true);
       const correct = _isCorrectChoice(evaluation, choice);
       recordAssessment(_storyEventId, scene.scene_id, _collectAssessmentPayload(scene, evaluation, choice, correct));
       await playSFX(correct ? 'SFX_02' : 'SFX_03');
@@ -1626,6 +1703,7 @@
       if (choice.next_scene) renderScene(choice.next_scene);
     });
     await _playQuestionAndChoices(scene, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
   }
 
   async function handleAssessmentRemedialScene(scene, presentation, manifestScene, evaluation) {
@@ -1635,30 +1713,55 @@
   async function handleHiddenAssessmentScene(scene, presentation, manifestScene, evaluation) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
-    _renderAdvance(presentation?.advance_label, () => {
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
+
+    if (scene.choices && scene.choices.length > 0) {
+      // 評估型隱藏節點：顯示選項，靜默記錄，不顯示對錯反饋
+      // 注意：_renderChoices 先於 await _playQuestionAndChoices，與 handleAssessmentScene 一致
+      // 已知風險：TTS 播放期間玩家可點選項推進，日後可改為 await TTS 後再 render choices
+      _renderChoices(scene, (choice) => {
+        document.getElementById('story-choices-area')?.querySelectorAll('button').forEach(btn => btn.disabled = true);
+        recordAssessment(_storyEventId, scene.scene_id, _collectAssessmentPayload(scene, evaluation, choice, null));
+        if (choice.next_scene) renderScene(choice.next_scene);
+      });
+      await _playQuestionAndChoices(scene, presentation);
+      if (document.getElementById('story-house')?.classList.contains('hidden')) return;
+    } else {
+      // 補救型隱藏節點：無選項，系統標記，直接推進
       recordAssessment(_storyEventId, scene.scene_id, _collectAssessmentPayload(scene, evaluation, null, null));
       if (scene.next_scene) renderScene(scene.next_scene);
-    });
+    }
   }
 
   async function handleEventEndScene(scene, presentation, manifestScene) {
     const textArea = document.getElementById('story-text-area');
     await playLinesSequence(presentation?.audio?.lines || [], Array.from(textArea.children).map(el => ({ text: el.textContent })), textArea, presentation);
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
     const amount = _rewardAmount(manifestScene);
     if (amount) claimReward('event_complete_' + _storyEventId, amount);
     const location = eventData.manifest?.location;
     markEventCompleted(_storyEventId, location);
     await saveCurrentProgress();
+    if (document.getElementById('story-house')?.classList.contains('hidden')) return;
     if (manifestScene?.next_story === 'event_1_report' && typeof enterReport === 'function') {
-      await enterReport();
+      _renderAdvance('查看學習報告', () => {
+        const btn = document.querySelector('#story-advance-btn button');
+        if (btn) btn.disabled = true;
+        enterReport();
+      });
       return;
     }
-    if (typeof enterNotebook === 'function') {
-      enterNotebook(_storyEventId);
-    } else {
-      showRoom('map-house');
-      handleRoomTransition('room-map');
-    }
+    const eventIdForNotebook = _storyEventId;
+    _renderAdvance('本章完，閱讀學徒筆記', () => {
+      const btn = document.querySelector('#story-advance-btn button');
+      if (btn) btn.disabled = true;
+      if (typeof enterNotebook === 'function') {
+        enterNotebook(eventIdForNotebook);
+      } else {
+        showRoom('map-house');
+        handleRoomTransition('room-map');
+      }
+    });
   }
 
   async function handleFeedbackScene(scene, presentation, manifestScene) {
@@ -1667,7 +1770,6 @@
 
   async function checkAsuiStoryRules(eventId) {
     const conditionMap = {
-      '1_1': 'story_1_1_asui_appears',
       '1_4': 'before_event_1_4',
       '1_7': 'before_event_1_7',
     };
@@ -1689,7 +1791,7 @@
     if (!overlay) {
       overlay = document.createElement('div');
       overlay.id = 'story-asui-overlay';
-      overlay.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:30;background:rgba(47,36,24,.92);color:#fff;padding:22px 28px;font-size:20px;line-height:1.7;cursor:pointer;';
+      overlay.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink-overlay);color:var(--white);padding:22px 28px;font-size:20px;line-height:1.7;cursor:pointer;';
       document.body.appendChild(overlay);
     }
     overlay.classList.remove('hidden');
@@ -1714,8 +1816,19 @@
   async function enterNotebook(eventId) {
     showRoom('notebook-house');
     handleRoomTransition('notebook');
-    await loadNotebookData(eventId);
-    await renderNotebook(eventId);
+    try {
+      await loadNotebookData(eventId);
+      await renderNotebook(eventId);
+    } catch (e) {
+      console.error('[enterNotebook] crash, showing recovery button:', e);
+      logError(e?.message || 'notebook crash', 'enterNotebook', state.uid);
+      const advBtn = document.getElementById('notebook-advance-btn');
+      if (advBtn) {
+        advBtn.textContent = '回到大地圖';
+        advBtn.classList.remove('hidden');
+        advBtn.onclick = exitNotebook;
+      }
+    }
   }
 
   async function enterNotebookReview(eventId) {
@@ -1744,19 +1857,20 @@
     const { content, presentation } = _notebookDataCache[eventId];
 
     const assessmentChoices = {};
-    (state.assessment_nodes || []).forEach(item => {
+    const nodes = getNotebookAssessmentNodes();
+    nodes.forEach(item => {
       if (item.sceneId && item.label) assessmentChoices[item.sceneId] = item.label;
     });
 
     const reflectionList = selectReflections(eventId, assessmentChoices, content, presentation);
 
-    renderNotebookLeft(content, reflectionList);
+    renderNotebookLeft(content, reflectionList, eventId);
     renderNotebookRight(content);
     _mountNotebookPages();
 
     const advBtn = document.getElementById('notebook-advance-btn');
     const chapterNum = eventId.split('_')[1] || '1';
-    advBtn.textContent = reviewMode ? '關閉筆記' : `完成第${chapterNum}章，回到大地圖`;
+    advBtn.textContent = reviewMode ? '關閉筆記' : `完成第${_chapterToChinese(parseInt(chapterNum))}章，回到大地圖`;
     advBtn.classList.add('hidden');
     advBtn.onclick = reviewMode ? _exitNotebookReview : exitNotebook;
 
@@ -1764,93 +1878,36 @@
       advBtn.classList.remove('hidden');
     } else {
       await playNotebookTTS(eventId, reflectionList, presentation);
-      advBtn.classList.remove('hidden');
+      if (!document.getElementById('notebook-house')?.classList.contains('hidden')) {
+        advBtn.classList.remove('hidden');
+      }
     }
   }
 
-  function renderNotebookLeft(content, reflectionList) {
-    const left = content.notebook_left || {};
-    document.getElementById('notebook-title-left').textContent = '今次的冒險……';
 
-    const progressEl = document.getElementById('notebook-story-progress');
-    progressEl.innerHTML = '';
-    (left.story_progress || []).forEach(sentence => {
-      const p = document.createElement('p');
-      p.textContent = sentence;
-      progressEl.appendChild(p);
-    });
 
-    const placesEl = document.getElementById('notebook-places');
-    placesEl.innerHTML = '';
-    (left.places_visited || []).forEach(place => {
-      const tag = document.createElement('span');
-      tag.className = 'notebook-tag';
-      tag.textContent = place;
-      placesEl.appendChild(tag);
-    });
 
-    const peopleEl = document.getElementById('notebook-people');
-    peopleEl.innerHTML = '';
-    (left.people_met || []).forEach(person => {
-      const tag = document.createElement('span');
-      tag.className = 'notebook-tag';
-      tag.textContent = person;
-      peopleEl.appendChild(tag);
-    });
-
-    document.getElementById('notebook-reflection-title').textContent = '阿禾的筆記';
-
-    const reflEl = document.getElementById('notebook-reflections');
-    reflEl.innerHTML = '';
-    reflectionList.forEach(r => {
-      const p = document.createElement('p');
-      p.className = 'notebook-reflection';
-      p.textContent = r.text;
-      reflEl.appendChild(p);
-    });
-  }
-
-  function renderNotebookRight(content) {
-    const right = content.notebook_right || {};
-    document.getElementById('notebook-title-right').textContent = '今次學到了……';
-
-    const lpEl = document.getElementById('notebook-learned-points');
-    lpEl.innerHTML = '';
-    (right.learned_points || []).forEach(lp => {
-      const p = document.createElement('p');
-      p.className = `notebook-lp notebook-lp-${lp.type || 'default'}`;
-      p.textContent = lp.content;
-      lpEl.appendChild(p);
-    });
-
-    const imgEl = document.getElementById('notebook-anchor-image');
-    imgEl.innerHTML = '';
-    if (right.anchor_image) {
-      const img = document.createElement('img');
-      img.src = _storyImagePath(right.anchor_image);
-      img.className = 'notebook-anchor-img';
-      imgEl.appendChild(img);
+  function getNotebookAssessmentNodes() {
+    if (Array.isArray(state.assessment_nodes) && state.assessment_nodes.length) {
+      return state.assessment_nodes;
     }
-  }
 
-  function _mountNotebookPages() {
-    const left = document.getElementById('page-left');
-    const right = document.getElementById('page-right');
-    left.innerHTML = '';
-    right.innerHTML = '';
+    try {
+      const progress = JSON.parse(localStorage.getItem('la_progress') || '{}');
+      if (Array.isArray(progress.assessment_nodes) && progress.assessment_nodes.length) {
+        return progress.assessment_nodes;
+      }
+    } catch {}
 
-    const leftIds = ['notebook-title-left','notebook-story-progress','notebook-places','notebook-people','notebook-reflection-title','notebook-reflections'];
-    const rightIds = ['notebook-title-right','notebook-learned-points','notebook-anchor-image','notebook-advance-btn'];
-
-    leftIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) left.appendChild(el);
-    });
-    rightIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) right.appendChild(el);
-    });
-    _updatePageLeftScrollable();
+    try {
+      const cached = JSON.parse(localStorage.getItem('la_assessment') || '{}');
+      if (Array.isArray(cached.nodes)) return cached.nodes;
+      return Object.entries(cached)
+        .filter(([sceneId, data]) => sceneId && data && typeof data === 'object')
+        .map(([sceneId, data]) => ({ sceneId, ...data }));
+    } catch {
+      return [];
+    }
   }
 
   function selectReflections(eventId, assessmentChoices, content, presentation) {
@@ -1914,8 +1971,26 @@
 
     for (const item of sequence) {
       if (!state.tts_on) break;
+      if (document.getElementById('notebook-house')?.classList.contains('hidden')) break;
       await playTTS(item.file);
+      if (document.getElementById('notebook-house')?.classList.contains('hidden')) break;
     }
+  }
+
+  function cleanupStoryRoom() {
+    // 供日後故事房離場路徑使用，暫未接入
+    stopTTS();
+    _lockUI(false);
+  }
+
+  function cleanupGameRoom() {
+    stopTTS();
+    _lockUI(false);
+  }
+
+  function cleanupReportRoom() {
+    stopTTS();
+    _lockUI(false);
   }
 
   async function exitNotebook() {
@@ -2296,6 +2371,9 @@
   let asuiDialogues = null;
   let asuiManifest = null;
   let asuiPresentation = null;
+  let _asuiOnComplete = null;
+  let _asuiHideTimer = null;
+  let _asuiHideToken = 0;
 
   // --- 初始化 ---
   async function initAsui() {
@@ -2315,39 +2393,23 @@
   function setAsuiCharacter(stateId) {
     const el = document.getElementById('asui-character');
     if (!el) return;
-    const img = new Image();
+    el.innerHTML = '';
+    const img = document.createElement('img');
     img.src = BASE_PATH + (ASUI_IMAGES[stateId] || ASUI_IMAGES.A27);
-    img.onload = () => {
-      el.innerHTML = '';
-      const canvas = document.createElement('canvas');
-      canvas.width = img.naturalWidth;
-      canvas.height = img.naturalHeight;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-      el._imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      el.appendChild(canvas);
-    };
+    img.style.cssText = 'display:block;width:100%;height:auto;background:transparent;';
+    img.alt = '';
+    el.appendChild(img);
   }
 
+  // pixel hit-test 暫停使用，改用 bounding box 觸發（技術債：V5.2再評估）
   function isAsuiPixelTransparent(e) {
-    const el = document.getElementById('asui-character');
-    if (!el._imageData) return false;
-    const canvas = el.querySelector('canvas');
-    if (!canvas) return true;
-    const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width;
-    const scaleY = canvas.height / rect.height;
-    const px = Math.floor((e.clientX - rect.left) * scaleX);
-    const py = Math.floor((e.clientY - rect.top) * scaleY);
-    if (px < 0 || py < 0 || px >= canvas.width || py >= canvas.height) return true;
-    const index = (py * canvas.width + px) * 4;
-    return el._imageData.data[index + 3] < 10;
+    return false;
   }
 
   // --- Tap對白觸發 ---
   function onAsuiCharacterTap(e) {
     if (asuiState.isPlaying) return;
-    if (isAsuiPixelTransparent(e)) return;
+    if (e?.currentTarget?.id !== 'map-asui-static' && isAsuiPixelTransparent(e)) return;
     const playerState = getAsuiPlayerState();
     const rule = getAsuiTapRule(playerState);
     if (!rule) return;
@@ -2452,14 +2514,54 @@
   }
 
   // --- 對白播放 ---
-  function playAsuiDialogue(dialogueId) {
+  function _resolveAsuiTemplate(text) {
+    if (!text || !text.includes('{{')) return text;
+
+    // {{last_event_title}}：最後完成的小事件標題
+    if (text.includes('{{last_event_title}}')) {
+      const eventTitles = {
+        '1_1': '商行取貨', '1_2': '市集小意外', '1_3': '橋邊打聽',
+        '1_4': '橋邊推理', '1_5': '客棧說書', '1_6': '碼頭面對問題', '1_7': '帳房考問'
+      };
+      const completed = state.completed_events || [];
+      const lastEvent = completed[completed.length - 1];
+      const lastId = lastEvent ? String(lastEvent).replace(/^story_/, '') : '';
+      const title = eventTitles[lastId] || '上一章';
+      text = text.replace('{{last_event_title}}', title);
+    }
+
+    // {{state_suggestion}}：按玩家狀態選對應提示
+    if (text.includes('{{state_suggestion}}')) {
+      const completed = state.completed_events || [];
+      const allDone = completed.length >= 7;
+      const hasUnlockable = asuiHasUnlockableLocation();
+      let suggestion = '下一站還沒去——繼續冒險吧！';
+      if (allDone && hasUnlockable) {
+        suggestion = '故事走完了！還有小任務等著你。';
+      } else if (allDone) {
+        suggestion = '都解鎖了！去大梁城四處探索看看。';
+      } else if (hasUnlockable) {
+        suggestion = '有地方可以解鎖！要解鎖嗎？';
+      }
+      text = text.replace('{{state_suggestion}}', suggestion);
+    }
+
+    return text;
+  }
+
+  function playAsuiDialogue(dialogueId, onComplete) {
     const dialogue = asuiDialogues?.dialogues?.find(d => d.id === dialogueId);
-    if (!dialogue) return;
+    if (!dialogue) { if (onComplete) onComplete(); return; }
+    if (onComplete) {
+      if (_asuiOnComplete) _asuiOnComplete();
+      _asuiOnComplete = onComplete;
+    }
     asuiState.isPlaying = true;
     asuiState.currentDialogue = { ...dialogue };
     asuiState.currentLineIndex = 0;
     setAsuiCharacter(dialogue.visual_state || 'A27');
-    const text = dialogue.lines ? dialogue.lines[0] : (dialogue._resolvedText || dialogue.text || '');
+    const rawText = dialogue.lines ? dialogue.lines[0] : (dialogue._resolvedText || dialogue.text || '');
+    const text = _resolveAsuiTemplate(rawText);
     showAsuiDialogueBar(text, dialogue);
     const audio = getAsuiAudioForDialogue(dialogueId, 0);
     if (audio) playAsuiTTS(audio, text);
@@ -2467,25 +2569,50 @@
   }
 
   function showAsuiDialogueBar(text, dialogue) {
+    // 對話開始時隱藏地圖靜止阿水
+    const staticAsui = document.getElementById('map-asui-static');
+    if (staticAsui) staticAsui.style.display = 'none';
+    // 顯示阿水圖
+    const asuiChar = document.getElementById('asui-character');
+    if (asuiChar) asuiChar.style.display = 'block';
     const bar = document.getElementById('asui-dialogue');
     bar.querySelector('.asui-text').textContent = text;
     bar.querySelector('.asui-buttons').innerHTML = '';
     const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
-    if (override?.confirm_buttons || dialogue.confirm_buttons) {
+    if ((override?.confirm_buttons || dialogue.confirm_buttons) && (!dialogue.lines || dialogue.lines.length <= 1)) {
       renderAsuiButtons(override?.confirm_buttons || dialogue.confirm_buttons, dialogue.id);
     }
+    _asuiHideToken++;
+    if (_asuiHideTimer) { clearTimeout(_asuiHideTimer); _asuiHideTimer = null; }
     bar.classList.remove('hidden');
     requestAnimationFrame(() => bar.classList.add('visible'));
   }
 
   function hideAsuiDialogueBar() {
     const bar = document.getElementById('asui-dialogue');
+    if (!bar) return;
+
+    const token = ++_asuiHideToken;
     bar.classList.remove('visible');
-    setTimeout(() => {
+
+    if (_asuiHideTimer) { clearTimeout(_asuiHideTimer); _asuiHideTimer = null; }
+
+    _asuiHideTimer = setTimeout(() => {
+      if (token !== _asuiHideToken) return;
+      _asuiHideTimer = null;
+
       bar.classList.add('hidden');
       bar.querySelector('.asui-text').textContent = '';
       bar.querySelector('.asui-buttons').innerHTML = '';
-      setAsuiCharacter('A27');
+
+      const asuiChar = document.getElementById('asui-character');
+      if (asuiChar) {
+        asuiChar.style.display = 'none';
+        asuiChar.style.bottom = '';
+      }
+
+      const staticAsui = document.getElementById('map-asui-static');
+      if (staticAsui) staticAsui.style.display = '';
     }, 300);
   }
 
@@ -2499,11 +2626,16 @@
       asuiState.currentLineIndex++;
       if (asuiState.currentLineIndex >= dialogue.lines.length) {
         hideAsuiDialogueBar();
+        if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
         playNextAsuiInQueue();
         return;
       }
-      const text = dialogue.lines[asuiState.currentLineIndex];
+      const text = _resolveAsuiTemplate(dialogue.lines[asuiState.currentLineIndex]);
       document.querySelector('.asui-text').textContent = text;
+      if (asuiState.currentLineIndex === dialogue.lines.length - 1 && dialogue.confirm_buttons) {
+        const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
+        renderAsuiButtons(override?.confirm_buttons || dialogue.confirm_buttons, dialogue.id);
+      }
       const audio = getAsuiAudioForDialogue(dialogue.id, asuiState.currentLineIndex);
       if (audio) playAsuiTTS(audio, text);
       return;
@@ -2526,6 +2658,7 @@
 
     hideAsuiDialogueBar();
     asuiState.isPlaying = false;
+    if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
     playNextAsuiInQueue();
   }
 
@@ -2559,6 +2692,7 @@
   // --- 兜底對白 ---
   function playAsuiFallback(room) {
     if (room !== 'map') return;
+    if (document.getElementById('map-house')?.classList.contains('hidden')) return;
     const isReload = sessionStorage.getItem('asui_is_reload') === 'true';
     sessionStorage.removeItem('asui_is_reload');
     if (isReload && (state.completed_events?.length > 0)) {
@@ -2607,13 +2741,22 @@
     hideAsuiDialogueBar();
     asuiState.isPlaying = false;
     asuiState.queue = [];
+    if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
     setAsuiCharacter('A27');
     if (dialogueId === 'return_to_map_reload') {
       if (action === 'review') openProgressPanel();
-      else if (action === 'continue') { /* 繼續主線，地圖房處理 */ }
+      // 'continue'：只關閉對白條，玩家自行點地圖主線按鈕
     } else if (dialogueId === 'return_to_map_normal') {
-      if (action === 'unlock') { /* 箭嘴指向可解鎖地點，地圖房實作 */ }
-      else if (action === 'continue') { /* 箭嘴指向下一主線地點，地圖房實作 */ }
+      // 'continue'：只關閉對白條，玩家自行點地圖主線按鈕
+      if (action === 'unlock') {
+        // 高亮第一個可解鎖地點的 pin（視覺提示）
+        const unlockablePin = document.querySelector('.pin-game-unlockable');
+        if (unlockablePin) {
+          unlockablePin.scrollIntoView?.({ behavior: 'smooth', block: 'nearest' });
+          unlockablePin.style.outline = '3px solid var(--gold)';
+          setTimeout(() => { unlockablePin.style.outline = ''; }, 2000);
+        }
+      }
     } else if (['R1','R2','R3','R4','R5'].includes(dialogueId)) {
       if (action === 'confirm') { /* 執行解鎖，地圖房實作 */ }
     }
@@ -2790,6 +2933,7 @@
     showRoom('game-house');
     handleRoomTransition('game');
     await loadGameData(location);
+    if (document.getElementById('game-house')?.classList.contains('hidden')) return;
     gameState.gameId = gameData.content?.game_id || gameId;
     gameState.location = location;
     gameState.variationId = pickVariation(gameState.gameId);
@@ -2832,11 +2976,6 @@
     if (screen === 'feedback') return renderGameFeedback();
   }
 
-  function _setGamePages(leftHTML, rightHTML) {
-    document.getElementById('page-left').innerHTML = `<div class="game-page game-page-left">${leftHTML}</div>`;
-    document.getElementById('page-right').innerHTML = `<div class="game-page game-page-right">${rightHTML}</div>`;
-    _updatePageLeftScrollable();
-  }
 
   function _updatePageLeftScrollable() {
     const left = document.getElementById('page-left');
@@ -2874,9 +3013,6 @@
     }
   }
 
-  function _button(id, text, extraClass = '') {
-    return `<button id="${id}" class="game-action-btn ${extraClass} hidden">${_escape(text)}</button>`;
-  }
 
   function _escape(value) {
     return String(value ?? '').replace(/[&<>"']/g, ch => ({
@@ -2900,6 +3036,7 @@
     btn.onclick = () => renderGameScreen('vocab');
     const entryAudio = _entryAudioForGame();
     await _playGameTTS(entryAudio, { textElement: document.getElementById('game-intro-text-mounted') });
+    if (document.getElementById('game-house')?.classList.contains('hidden')) return;
     btn.classList.remove('hidden');
   }
 
@@ -2919,13 +3056,16 @@
         </div>`;
     }).join('');
 
-    const firstAsset = gameData.presentation.vocabulary_assets?.[vocabIds[0]] || {};
-    const firstImage = firstAsset.image
-      ? `<img class="game-image-main" src="${_assetPath(firstAsset.image)}" alt="">`
-      : `<img class="game-image-main" src="${_assetPath(GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse)}" alt="">`;
+    const allVocabImages = vocabIds.map(id => {
+      const asset = gameData.presentation.vocabulary_assets?.[id] || {};
+      return asset.image
+        ? `<img class="game-image-main" src="${_assetPath(asset.image)}" alt="" style="max-height:120px;width:auto;margin-bottom:12px;display:block;">`
+        : '';
+    }).join('');
+    const fallbackImage = `<img class="game-image-main" src="${_assetPath(GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse)}" alt="">`;
 
     _setGamePages(
-      `<div id="vocab-left-image">${firstImage}</div>`,
+      `<div id="vocab-left-images" style="overflow-y:auto;height:100%;padding:12px 0;">${allVocabImages || fallbackImage}</div>`,
       `<div id="game-vocab-cards-mounted">${rightCards}</div>${_button('game-vocab-btn-mounted', '開始小任務')}`
     );
 
@@ -2935,10 +3075,6 @@
     for (let i = 0; i < vocabIds.length; i++) {
       const id = vocabIds[i];
       const asset = gameData.presentation.vocabulary_assets?.[id] || {};
-      const leftEl = document.getElementById('vocab-left-image');
-      if (leftEl && asset.image) {
-        leftEl.innerHTML = `<img class="game-image-main" src="${_assetPath(asset.image)}" alt="">`;
-      }
       if (asset.audio) {
         const textEl = document.getElementById(`vocab-card-${i}`);
         await _playGameTTS(asset.audio, { textElement: textEl });
@@ -3006,23 +3142,6 @@
     return '';
   }
 
-  function _showSecondStateVisuals(kind, optionIds) {
-    const visual = document.getElementById('game-answer-visuals');
-    if (!visual) return;
-    if (kind === 'market') {
-      // Replace vendor with object choices after the question has been heard.
-      visual.innerHTML = _optionImages(optionIds);
-      _updatePageLeftScrollable();
-      return;
-    }
-    if (kind === 'inn') {
-      visual.innerHTML = _optionImages(optionIds);
-      _updatePageLeftScrollable();
-      return;
-    }
-    visual.innerHTML = _optionImages(optionIds);
-    _updatePageLeftScrollable();
-  }
 
   function _optionImages(optionIds) {
     return optionIds.map(optionId => {
@@ -3054,9 +3173,6 @@
     });
   }
 
-  function _unlockGameOptions() {
-    document.querySelectorAll('.game-option-btn').forEach(btn => { btn.disabled = false; });
-  }
 
   async function onGameOptionSelected(optionId) {
     gameState.selectedOptionId = optionId;
@@ -3154,9 +3270,6 @@
     renderGameScreen('feedback');
   }
 
-  function _numberToChinese(n) {
-    return ({1:'一',2:'兩',3:'三',4:'四',5:'五',6:'六',7:'七',8:'八',9:'九',10:'十'})[n] || String(n || '');
-  }
 
   async function renderGameFeedback() {
     const text = _feedbackText();
@@ -3171,10 +3284,12 @@
         const firstAttempt = true;
         onGameComplete(gameState.isCorrect ? (firstAttempt ? 'correct_first' : 'correct_replay') : (firstAttempt ? 'wrong_first' : 'wrong_replay'));
       }
+      cleanupGameRoom();
       showRoom('map-house');
       if (typeof enterMap === 'function') enterMap();
     };
     await _playFeedbackAudio();
+    if (document.getElementById('game-house')?.classList.contains('hidden')) return;
     btn.classList.remove('hidden');
   }
 
@@ -3265,7 +3380,55 @@
     dock: 'R5',
   };
 
+  let _mapResizeBound = false;
+
+  function resizeMapFrame() {
+    const stage = document.getElementById('map-stage');
+    const frame = document.getElementById('map-image-frame');
+    const bg = document.getElementById('map-bg');
+    if (!stage || !frame || !bg || !bg.naturalWidth || !bg.naturalHeight) return;
+
+    const stageW = stage.clientWidth;
+    const stageH = stage.clientHeight;
+    if (!stageW || !stageH) return;
+
+    const imgRatio = bg.naturalWidth / bg.naturalHeight;
+    const stageRatio = stageW / stageH;
+
+    let w, h;
+    if (stageRatio > imgRatio) {
+      h = stageH;
+      w = h * imgRatio;
+    } else {
+      w = stageW;
+      h = w / imgRatio;
+    }
+
+    frame.style.width = `${w}px`;
+    frame.style.height = `${h}px`;
+  }
+
+  function handleMapResize() {
+    const mapHouse = document.getElementById('map-house');
+    if (mapHouse && !mapHouse.classList.contains('hidden')) {
+      resizeMapFrame();
+    }
+  }
+
+  function bindMapResize() {
+    if (_mapResizeBound) return;
+    window.addEventListener('resize', handleMapResize);
+    _mapResizeBound = true;
+  }
+
+  function unbindMapResize() {
+    if (!_mapResizeBound) return;
+    window.removeEventListener('resize', handleMapResize);
+    _mapResizeBound = false;
+  }
+
   function enterMap() {
+    bindMapResize();
     setGlobalUIState({ music: true, voice: true, speed: true, coins: true, account: true });
     updateCoinDisplay();
     handleRoomTransition('room-map');
@@ -3277,23 +3440,58 @@
     }
 
     const mapHouse = document.getElementById('map-house');
+    const existingAsuiLayer = document.getElementById('asui-layer');
+    // 隱藏全局阿水圖，地圖房改用 map-asui-static
+    const asuiChar = document.getElementById('asui-character');
+    if (asuiChar) asuiChar.style.display = 'none';
     mapHouse.innerHTML = '';
+
+    // 建立 map-stage
+    const mapStage = document.createElement('div');
+    mapStage.id = 'map-stage';
+
+    // 建立 map-image-frame（pin座標基準層，與地圖圖片同比例）
+    const mapImageFrame = document.createElement('div');
+    mapImageFrame.id = 'map-image-frame';
 
     const bg = document.createElement('img');
     bg.id = 'map-bg';
     bg.src = `${BASE_PATH}${IMAGE_BASE}${mapData.map_image}.png`;
     bg.alt = mapData.display_name || '大地圖';
-    mapHouse.appendChild(bg);
+    bg.onload = () => { resizeMapFrame(); };
+    if (bg.complete) resizeMapFrame();
+    mapImageFrame.appendChild(bg);
+
+    // 靜止阿水（相對 map-image-frame 定位）
+    const staticAsui = document.createElement('img');
+    staticAsui.id = 'map-asui-static';
+    staticAsui.src = `${BASE_PATH}image/A27_阿水——閒置 idle.png`;
+    staticAsui.alt = '阿水';
+    staticAsui.style.left = `${mapData.asui_position?.x ?? 18}%`;
+    staticAsui.style.top = `${mapData.asui_position?.y ?? 72}%`;
+    staticAsui.addEventListener('click', onAsuiCharacterTap);
+    mapImageFrame.appendChild(staticAsui);
 
     const asuiAnchor = document.createElement('div');
     asuiAnchor.id = 'map-asui';
     asuiAnchor.style.left = `${mapData.asui_position?.x ?? 18}%`;
     asuiAnchor.style.top = `${mapData.asui_position?.y ?? 72}%`;
-    mapHouse.appendChild(asuiAnchor);
+    mapImageFrame.appendChild(asuiAnchor);
 
     const pinsContainer = document.createElement('div');
     pinsContainer.id = 'map-pins';
-    mapHouse.appendChild(pinsContainer);
+    mapImageFrame.appendChild(pinsContainer);
+
+    mapStage.appendChild(mapImageFrame);
+    mapHouse.appendChild(mapStage);
+    requestAnimationFrame(resizeMapFrame);
+
+    // 建立 map-overlay，把 asui-layer 移入
+    const mapOverlay = document.createElement('div');
+    mapOverlay.id = 'map-overlay';
+    const asuiLayer = existingAsuiLayer || document.getElementById('asui-layer');
+    if (asuiLayer) mapOverlay.appendChild(asuiLayer);
+    mapHouse.appendChild(mapOverlay);
 
     const completed = _completedChapterIds();
     const nextChapter = MAP_CHAPTER_SEQUENCE.find(item => !completed.includes(item.chapter));
@@ -3311,7 +3509,7 @@
       storyBtn.className = 'pin-story-btn';
       storyBtn.textContent = mapData.main_story_label || '繼續冒險';
       if (nextChapter && nextChapter.location === loc.location_id) {
-        storyBtn.addEventListener('click', () => enterStory(_nextStoryTarget(nextChapter.chapter)));
+        storyBtn.addEventListener('click', () => { unbindMapResize(); enterStory(_nextStoryTarget(nextChapter.chapter)); });
       } else {
         storyBtn.classList.add('hidden');
       }
@@ -3335,7 +3533,11 @@
   }
 
   function _completedChapterIds() {
-    return (state.completed_events || []).map(eventId => String(eventId).replace(/^story_/, ''));
+    return (state.completed_events || []).map(eventId => {
+      const s = String(eventId).replace(/^story_/, '');
+      // 支援 '1.1' 格式（舊資料）→ 統一轉為 '1_1'
+      return s.replace(/\./g, '_');
+    });
   }
 
   function _isLocationVisible(loc, completed) {
@@ -3368,12 +3570,12 @@
       case 'ready':
         btn.classList.add('pin-game-ready');
         btn.textContent = _gameTitleForLocation(loc);
-        btn.addEventListener('click', () => enterGame(loc.location_id));
+        btn.addEventListener('click', () => { unbindMapResize(); enterGame(loc.location_id); });
         break;
       case 'done':
         btn.classList.add('pin-game-done');
         btn.textContent = _gameTitleForLocation(loc);
-        btn.addEventListener('click', () => enterGame(loc.location_id));
+        btn.addEventListener('click', () => { unbindMapResize(); enterGame(loc.location_id); });
         break;
     }
   }
@@ -3606,41 +3808,37 @@
   }
 
   function _extractExplorationData() {
+    // exploration：從 visited_sub_scenes 讀取，配合 evaluation 場景清單
+    const evalScenes = Array.isArray(eventData.evaluation)
+      ? eventData.evaluation
+      : (eventData.evaluation?.scenes || eventData.evaluation?.nodes || eventData.evaluation?.evaluation_nodes || []);
+
+    const explorationSceneIds = new Set(
+      evalScenes
+        .filter(s => s.collect_type === 'exploration' || s.collect_type === 'hidden_assessment')
+        .map(s => s.scene_id)
+    );
+
+    const visitedSubs = state.visited_sub_scenes || {};
+    // 注意：exp_tag/label 目前以玩家選項 label（A/B/C）為準
+    // 日後若 evaluation data 補入 choice metadata，再映射為語義標籤
+    const exploration = Object.entries(visitedSubs)
+      .filter(([sceneId]) => explorationSceneIds.has(sceneId))
+      .flatMap(([sceneId, tags]) =>
+        (tags || []).map(tag => ({ scene_id: sceneId, exp_tag: tag, label: tag }))
+      );
+
+    // hiddenNodes：從 assessment_nodes 讀取
     const nodes = _reportAssessmentNodes();
-    const exploration = nodes
-      .filter(n => n.collect_type === 'exploration' || n.collect_type === 'hidden_assessment')
-      .map(n => ({ scene_id: n.sceneId, exp_tag: n.exp_tag, label: n.label }));
     const hiddenNodes = nodes
       .filter(n => n.collect_type === 'hidden_remedial' || n.collect_type === 'hidden_assessment')
       .map(n => ({ scene_id: n.sceneId, trigger: n.trigger }));
+
     return { exploration, hiddenNodes };
   }
 
-  function _renderDimensions(dimensions) {
-    const container = document.getElementById('report-dimensions');
-    container.innerHTML = '';
-    DIMENSION_CONFIG.forEach(({ key, label }) => {
-      const level = dimensions[key] || 4;
-      const row = document.createElement('div');
-      row.className = 'report-dimension-row';
-      row.innerHTML = `
-        <div class="dimension-label">${label}</div>
-        <div class="dimension-stars">${_reportLevelToStars(level)}</div>
-        <div class="dimension-desc">${DIMENSION_DESCRIPTIONS[key][level - 1]}</div>
-      `;
-      container.appendChild(row);
-    });
-  }
 
-  function _showQualitativeLoading() {
-    document.getElementById('report-qualitative-text').textContent = '';
-    document.getElementById('report-qualitative-loading').classList.remove('hidden');
-  }
 
-  function _fillQualitativeReport(text) {
-    document.getElementById('report-qualitative-loading').classList.add('hidden');
-    document.getElementById('report-qualitative-text').textContent = text;
-  }
 
   async function _loadScript(src) {
     return new Promise((resolve, reject) => {
@@ -3687,6 +3885,7 @@
   }
 
   function leaveReport() {
+    cleanupReportRoom();
     showRoom('map-house');
     enterMap();
   }
@@ -3715,6 +3914,7 @@
     body.classList.remove('visible');
 
     await new Promise(resolve => setTimeout(resolve, 2800));
+    if (document.getElementById('report-house')?.classList.contains('hidden')) return;
 
     transition.style.display = 'none';
     body.classList.remove('hidden');
@@ -3723,6 +3923,7 @@
     _renderDimensions(dimensions);
 
     const reportText = await reportPromise;
+    if (document.getElementById('report-house')?.classList.contains('hidden')) return;
     _fillQualitativeReport(reportText);
 
     document.getElementById('btn-download-report').onclick = downloadReport;
