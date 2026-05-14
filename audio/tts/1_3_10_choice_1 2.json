@@ -1,0 +1,71 @@
+{
+  "filename": "1_3_10_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "說話",
+      "start_ms": 250.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "的",
+      "start_ms": 662.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "樣子",
+      "start_ms": 775.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "——",
+      "start_ms": 1487.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "嘴巴",
+      "start_ms": 1487.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "一",
+      "start_ms": 1912.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "直",
+      "start_ms": 2062.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "動",
+      "start_ms": 2225.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2725.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "手",
+      "start_ms": 2725.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "一直",
+      "start_ms": 3000.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "比劃",
+      "start_ms": 3287.5,
+      "duration_ms": 512.5
+    }
+  ]
+}

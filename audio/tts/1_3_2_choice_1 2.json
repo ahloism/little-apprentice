@@ -1,0 +1,66 @@
+{
+  "filename": "1_3_2_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "橋",
+      "start_ms": 75.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "上",
+      "start_ms": 275.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "的",
+      "start_ms": 512.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "攤檔",
+      "start_ms": 625.0,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1400.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "賣",
+      "start_ms": 1400.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1637.5,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 1787.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "跟",
+      "start_ms": 2175.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "市集",
+      "start_ms": 2387.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "不一樣",
+      "start_ms": 2800.0,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "？",
+      "start_ms": 3487.5,
+      "duration_ms": 87.5
+    }
+  ]
+}

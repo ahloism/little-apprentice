@@ -1,0 +1,31 @@
+{
+  "filename": "1_3_9_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "種田",
+      "start_ms": 87.5,
+      "duration_ms": 662.5
+    },
+    {
+      "word": "、",
+      "start_ms": 862.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "耕作",
+      "start_ms": 862.5,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1387.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "地方",
+      "start_ms": 1500.0,
+      "duration_ms": 675.0
+    }
+  ]
+}

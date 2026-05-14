@@ -1,0 +1,41 @@
+{
+  "filename": "1_7_5_C_0.mp3",
+  "speaker": "錢平",
+  "words": [
+    {
+      "word": "「阿",
+      "start_ms": 54.187,
+      "duration_ms": 263.875
+    },
+    {
+      "word": "水",
+      "start_ms": 318.062,
+      "duration_ms": 333.312
+    },
+    {
+      "word": "不",
+      "start_ms": 651.375,
+      "duration_ms": 180.562
+    },
+    {
+      "word": "總是",
+      "start_ms": 831.937,
+      "duration_ms": 611.125
+    },
+    {
+      "word": "對",
+      "start_ms": 1443.0619,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "的",
+      "start_ms": 1706.937,
+      "duration_ms": 277.75
+    },
+    {
+      "word": "。」",
+      "start_ms": 1984.75,
+      "duration_ms": 0.0
+    }
+  ]
+}

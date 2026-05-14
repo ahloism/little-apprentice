@@ -1,0 +1,116 @@
+{
+  "filename": "1_5_2_c_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "下棋",
+      "start_ms": 87.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "的",
+      "start_ms": 512.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "人",
+      "start_ms": 637.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1125.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "兩個",
+      "start_ms": 1125.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "老頭",
+      "start_ms": 1537.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "對坐",
+      "start_ms": 1937.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2675.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一",
+      "start_ms": 2675.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "個",
+      "start_ms": 2862.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "摸",
+      "start_ms": 2987.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 3200.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "鬍子",
+      "start_ms": 3425.0,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "，",
+      "start_ms": 4075.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "一",
+      "start_ms": 4075.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "個",
+      "start_ms": 4262.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "手",
+      "start_ms": 4375.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "懸",
+      "start_ms": 4612.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "在",
+      "start_ms": 4825.0,
+      "duration_ms": 150.0
+    },
+    {
+      "word": "棋盤",
+      "start_ms": 4975.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "上不",
+      "start_ms": 5400.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "動",
+      "start_ms": 5775.0,
+      "duration_ms": 362.5
+    }
+  ]
+}

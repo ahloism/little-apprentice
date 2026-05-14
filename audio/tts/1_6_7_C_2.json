@@ -1,0 +1,51 @@
+{
+  "filename": "1_6_7_c_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "沉默",
+      "start_ms": 87.5,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "——",
+      "start_ms": 675.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "低",
+      "start_ms": 675.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著",
+      "start_ms": 887.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "頭",
+      "start_ms": 1125.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 1625.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "說不出",
+      "start_ms": 1625.0,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "話",
+      "start_ms": 2175.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "來",
+      "start_ms": 2400.0,
+      "duration_ms": 337.5
+    }
+  ]
+}

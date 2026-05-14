@@ -1,0 +1,91 @@
+{
+  "filename": "1_5_2_c_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "茶水",
+      "start_ms": 87.5,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "台",
+      "start_ms": 512.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1037.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "五六",
+      "start_ms": 1037.5,
+      "duration_ms": 362.5
+    },
+    {
+      "word": "個",
+      "start_ms": 1400.0,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "大",
+      "start_ms": 1512.5,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "茶",
+      "start_ms": 1750.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "甕",
+      "start_ms": 2025.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2475.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "台下",
+      "start_ms": 2475.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "排",
+      "start_ms": 2887.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "著",
+      "start_ms": 3112.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "茶杯",
+      "start_ms": 3287.5,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "，店",
+      "start_ms": 4025.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "夥計",
+      "start_ms": 4225.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "在",
+      "start_ms": 4600.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "擦",
+      "start_ms": 4800.0,
+      "duration_ms": 387.5
+    }
+  ]
+}

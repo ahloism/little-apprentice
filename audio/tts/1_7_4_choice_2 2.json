@@ -1,0 +1,41 @@
+{
+  "filename": "1_7_4_choice_2.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "因為",
+      "start_ms": 87.5,
+      "duration_ms": 337.5
+    },
+    {
+      "word": "阿乖",
+      "start_ms": 425.0,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "和",
+      "start_ms": 887.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "王三",
+      "start_ms": 1087.5,
+      "duration_ms": 512.5
+    },
+    {
+      "word": "看起來",
+      "start_ms": 1600.0,
+      "duration_ms": 612.5
+    },
+    {
+      "word": "不像",
+      "start_ms": 2212.5,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "好人",
+      "start_ms": 2600.0,
+      "duration_ms": 575.0
+    }
+  ]
+}

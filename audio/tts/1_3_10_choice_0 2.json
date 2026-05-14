@@ -1,0 +1,61 @@
+{
+  "filename": "1_3_10_choice_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "他",
+      "start_ms": 75.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "攤子",
+      "start_ms": 237.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "上",
+      "start_ms": 650.0,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "的",
+      "start_ms": 862.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "東西",
+      "start_ms": 987.5,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1662.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "什麼",
+      "start_ms": 1662.5,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "都",
+      "start_ms": 2062.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "有",
+      "start_ms": 2225.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2725.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "密密麻麻",
+      "start_ms": 2725.0,
+      "duration_ms": 1000.0
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "filename": "1_5_6_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "睡覺",
+      "start_ms": 87.5,
+      "duration_ms": 675.0
+    },
+    {
+      "word": "，",
+      "start_ms": 875.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "在",
+      "start_ms": 875.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "床上",
+      "start_ms": 1100.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "休息",
+      "start_ms": 1600.0,
+      "duration_ms": 450.0
+    }
+  ]
+}

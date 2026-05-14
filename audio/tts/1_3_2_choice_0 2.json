@@ -1,0 +1,66 @@
+{
+  "filename": "1_3_2_choice_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "河",
+      "start_ms": 87.5,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "裡",
+      "start_ms": 312.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "的",
+      "start_ms": 487.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "船",
+      "start_ms": 600.0,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "——",
+      "start_ms": 1150.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "那些",
+      "start_ms": 1150.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "大",
+      "start_ms": 1550.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "船",
+      "start_ms": 1750.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "在",
+      "start_ms": 1987.5,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "做",
+      "start_ms": 2162.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "什麼",
+      "start_ms": 2325.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "？",
+      "start_ms": 2825.0,
+      "duration_ms": 87.5
+    }
+  ]
+}

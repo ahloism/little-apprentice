@@ -1,0 +1,56 @@
+{
+  "filename": "1_7_5_choice_0.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "因為",
+      "start_ms": 75.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "他們",
+      "start_ms": 425.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "指",
+      "start_ms": 875.0,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "的",
+      "start_ms": 1037.5,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "方向",
+      "start_ms": 1162.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "最後",
+      "start_ms": 1700.0,
+      "duration_ms": 350.0
+    },
+    {
+      "word": "證明",
+      "start_ms": 2050.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "是",
+      "start_ms": 2450.0,
+      "duration_ms": 175.0
+    },
+    {
+      "word": "錯",
+      "start_ms": 2625.0,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "的",
+      "start_ms": 2875.0,
+      "duration_ms": 237.5
+    }
+  ]
+}

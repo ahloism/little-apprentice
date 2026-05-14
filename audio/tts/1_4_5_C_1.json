@@ -1,0 +1,61 @@
+{
+  "filename": "1_4_5_C_1.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "「他",
+      "start_ms": 41.687,
+      "duration_ms": 177.06199999999998
+    },
+    {
+      "word": "說",
+      "start_ms": 218.75,
+      "duration_ms": 250.0
+    },
+    {
+      "word": "阿",
+      "start_ms": 468.75,
+      "duration_ms": 218.75
+    },
+    {
+      "word": "乖",
+      "start_ms": 687.5,
+      "duration_ms": 208.31199999999998
+    },
+    {
+      "word": "不好",
+      "start_ms": 895.812,
+      "duration_ms": 458.312
+    },
+    {
+      "word": "，",
+      "start_ms": 1364.5619,
+      "duration_ms": 41.687000000000005
+    },
+    {
+      "word": "就",
+      "start_ms": 1604.1869,
+      "duration_ms": 197.937
+    },
+    {
+      "word": "說明",
+      "start_ms": 1812.5,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "他",
+      "start_ms": 2208.312,
+      "duration_ms": 229.187
+    },
+    {
+      "word": "好",
+      "start_ms": 2437.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "？」",
+      "start_ms": 2750.0,
+      "duration_ms": 10.437
+    }
+  ]
+}

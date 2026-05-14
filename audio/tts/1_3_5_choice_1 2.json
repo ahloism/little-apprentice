@@ -1,0 +1,81 @@
+{
+  "filename": "1_3_5_choice_1.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "她",
+      "start_ms": 87.5,
+      "duration_ms": 162.5
+    },
+    {
+      "word": "走路",
+      "start_ms": 250.0,
+      "duration_ms": 425.0
+    },
+    {
+      "word": "的",
+      "start_ms": 675.0,
+      "duration_ms": 100.0
+    },
+    {
+      "word": "樣子",
+      "start_ms": 775.0,
+      "duration_ms": 625.0
+    },
+    {
+      "word": "——",
+      "start_ms": 1500.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "腳步",
+      "start_ms": 1500.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "很",
+      "start_ms": 1912.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "快",
+      "start_ms": 2125.0,
+      "duration_ms": 375.0
+    },
+    {
+      "word": "，",
+      "start_ms": 2625.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "像",
+      "start_ms": 2625.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "個",
+      "start_ms": 2862.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "停",
+      "start_ms": 2975.0,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "不下來",
+      "start_ms": 3175.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "的",
+      "start_ms": 3675.0,
+      "duration_ms": 125.0
+    },
+    {
+      "word": "人",
+      "start_ms": 3800.0,
+      "duration_ms": 362.5
+    }
+  ]
+}
