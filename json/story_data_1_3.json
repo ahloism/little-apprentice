@@ -474,13 +474,12 @@
           "label": "C",
           "text": "那個空竹簍——空的，但聞起來有點香",
           "next_scene": "1_3_7_C"
-        },
-        {
-          "label": "D",
-          "text": "看完了，等阿水回來",
-          "next_scene": "1_3_8"
         }
-      ]
+      ],
+      "exit_option": {
+        "text": "看完了，等阿水回來",
+        "next_scene": "1_3_8"
+      }
     },
     {
       "scene_id": "1_3_7_A",

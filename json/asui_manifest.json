@@ -298,6 +298,7 @@
       "dialogue_id": "M1",
       "trigger_type": "auto",
       "trigger_condition": "story_1_1_asui_appears",
+      "trigger_after_scene": "1_1_5",
       "repeat": false,
       "room": "story",
       "priority": 11

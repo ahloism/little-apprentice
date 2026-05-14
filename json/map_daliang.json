@@ -13,7 +13,6 @@
       "map_y": 18,
       "icon": "🏪",
       "story_id": "story_1_1",
-      "appears_after_event": "story_1_1",
       "game_ref": "game_warehouse",
       "unlock_cost": 15
     },
@@ -25,7 +24,7 @@
       "map_y": 15,
       "icon": "🛒",
       "story_id": "story_1_2",
-      "appears_after_event": "story_1_2",
+      "appears_after_event": "story_1_1",
       "game_ref": "game_market",
       "unlock_cost": 20
     },
@@ -37,7 +36,7 @@
       "map_y": 48,
       "icon": "🌉",
       "story_id": "story_1_3",
-      "appears_after_event": "story_1_3",
+      "appears_after_event": "story_1_2",
       "game_ref": "game_bridge",
       "unlock_cost": 25
     },
@@ -49,7 +48,7 @@
       "map_y": 25,
       "icon": "🏨",
       "story_id": "story_1_5",
-      "appears_after_event": "story_1_5",
+      "appears_after_event": "story_1_4",
       "game_ref": "game_inn",
       "unlock_cost": 20
     },
@@ -61,7 +60,7 @@
       "map_y": 75,
       "icon": "⚓",
       "story_id": "story_1_6",
-      "appears_after_event": "story_1_6",
+      "appears_after_event": "story_1_5",
       "game_ref": "game_dock",
       "unlock_cost": 25
     }
