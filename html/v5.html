@@ -3489,6 +3489,34 @@
     mapOverlay.id = 'map-overlay';
     const asuiLayer = existingAsuiLayer || document.getElementById('asui-layer');
     if (asuiLayer) mapOverlay.appendChild(asuiLayer);
+
+    // 學徒筆記入口按鈕（左下角）
+    const mapNotebookBtn = document.createElement('button');
+    mapNotebookBtn.id = 'map-notebook-btn';
+    mapNotebookBtn.textContent = '📖 學徒筆記';
+    mapNotebookBtn.style.cssText = [
+      'position:absolute',
+      'left:12px',
+      'bottom:12px',
+      'z-index:30',
+      'background:var(--wood-light)',
+      'color:var(--white)',
+      'border:none',
+      'border-radius:8px',
+      'padding:8px 14px',
+      'font-family:var(--hei)',
+      'font-size:15px',
+      'cursor:pointer',
+      'box-shadow:0 2px 8px rgba(0,0,0,0.25)'
+    ].join(';');
+    mapNotebookBtn.addEventListener('click', () => {
+      const completed = _completedChapterIds();
+      if (completed.length === 0) return;
+      const lastChapter = completed[completed.length - 1];
+      if (typeof enterNotebookReview === 'function') enterNotebookReview(lastChapter);
+    });
+    mapOverlay.appendChild(mapNotebookBtn);
+
     mapHouse.appendChild(mapOverlay);
 
     const completed = _completedChapterIds();
