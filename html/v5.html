@@ -1840,6 +1840,7 @@
 
   let _notebookReviewMode = false;
   let _notebookReviewSource = 'progress'; // 'progress' | 'map'
+  let _progressPanelSource = null; // null | 'map'
   const _notebookDataCache = {};
 
   async function loadNotebookData(eventId) {
@@ -2007,8 +2008,8 @@
     const source = _notebookReviewSource;
     _notebookReviewSource = 'progress';
     if (source === 'map') {
-      showRoom('map-house');
-      if (typeof enterMap === 'function') enterMap();
+      _progressPanelSource = 'map';
+      if (typeof openProgressPanel === 'function') openProgressPanel();
     } else {
       if (typeof openProgressPanel === 'function') openProgressPanel();
     }
@@ -2035,6 +2036,12 @@
   function closeProgressPanel() {
     document.getElementById('progress-overlay').classList.add('hidden');
     closeNotebookPopup();
+    const src = _progressPanelSource;
+    _progressPanelSource = null;
+    if (src === 'map') {
+      showRoom('map-house');
+      if (typeof enterMap === 'function') enterMap();
+    }
   }
 
   function resetProgressPanel() {
@@ -3495,7 +3502,7 @@
     mapNotebookBtn.textContent = '📖 學徒筆記';
     mapNotebookBtn.style.cssText = [
       'position:absolute',
-      'left:12px',
+      'right:12px',
       'bottom:12px',
       'z-index:30',
       'background:var(--wood-light)',
