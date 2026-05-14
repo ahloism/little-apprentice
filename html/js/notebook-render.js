@@ -108,3 +108,27 @@ function _mountNotebookPages() {
   });
   _updatePageLeftScrollable();
 }
+
+function returnNotebookElementsToHouse() {
+  const notebookHouse = document.getElementById('notebook-house');
+  if (!notebookHouse) return;
+  const ids = [
+    'notebook-title-left',
+    'notebook-section-adventure',
+    'notebook-story-progress',
+    'notebook-places',
+    'notebook-people',
+    'notebook-reflection-title',
+    'notebook-reflections',
+    'notebook-title-right',
+    'notebook-learned-points',
+    'notebook-anchor-image',
+    'notebook-advance-btn'
+  ];
+  ids.forEach(id => {
+    const el = document.getElementById(id);
+    if (el && el.parentElement !== notebookHouse) notebookHouse.appendChild(el);
+  });
+}
+
+window.returnNotebookElementsToHouse = returnNotebookElementsToHouse;

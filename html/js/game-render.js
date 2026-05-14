@@ -2,6 +2,7 @@
 // 依賴：_updatePageLeftScrollable, _optionImages, _escape（保留於 v5.html）
 
 function _setGamePages(leftHTML, rightHTML) {
+  window.returnNotebookElementsToHouse?.();
   document.getElementById('page-left').innerHTML = `<div class="game-page game-page-left">${leftHTML}</div>`;
   document.getElementById('page-right').innerHTML = `<div class="game-page game-page-right">${rightHTML}</div>`;
   _updatePageLeftScrollable();

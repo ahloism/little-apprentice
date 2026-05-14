@@ -17,16 +17,7 @@ function _ensureStoryDOM() {
   // Story DOM 已存在則不重建（避免每次 renderScene 都清空 page-left/page-right）
   if (document.getElementById('story-text-area')) return;
 
-  // 清空前先把筆記元素歸還 notebook-house，防止銷毀
-  const notebookHouse = document.getElementById('notebook-house');
-  if (notebookHouse) {
-    const notebookIds = ['notebook-title-left','notebook-section-adventure','notebook-story-progress','notebook-places','notebook-people','notebook-reflection-title','notebook-reflections','notebook-title-right','notebook-learned-points','notebook-anchor-image','notebook-advance-btn'];
-    notebookIds.forEach(id => {
-      const el = document.getElementById(id);
-      if (el && el.parentElement !== notebookHouse) notebookHouse.appendChild(el);
-    });
-  }
-
+  window.returnNotebookElementsToHouse?.();
   left.innerHTML = `
     <div id="scene-chapter-tag-container" style="position:absolute;top:12px;left:12px;z-index:2;"></div>
     <div id="story-image-main" style="width:100%;aspect-ratio:16/9;background:#f6efe3;border-radius:8px;background-size:contain;background-repeat:no-repeat;background-position:center;position:relative;"></div>
