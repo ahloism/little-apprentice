@@ -1829,8 +1829,9 @@
     }
   }
 
-  async function enterNotebookReview(eventId) {
+  async function enterNotebookReview(eventId, source = 'progress') {
     _notebookReviewMode = true;
+    _notebookReviewSource = source;
     showRoom('notebook-house');
     handleRoomTransition('notebook');
     await loadNotebookData(eventId);
@@ -1838,6 +1839,7 @@
   }
 
   let _notebookReviewMode = false;
+  let _notebookReviewSource = 'progress'; // 'progress' | 'map'
   const _notebookDataCache = {};
 
   async function loadNotebookData(eventId) {
@@ -2002,7 +2004,14 @@
   function _exitNotebookReview() {
     stopTTS();
     _notebookReviewMode = false;
-    if (typeof openProgressPanel === 'function') openProgressPanel();
+    const source = _notebookReviewSource;
+    _notebookReviewSource = 'progress';
+    if (source === 'map') {
+      showRoom('map-house');
+      if (typeof enterMap === 'function') enterMap();
+    } else {
+      if (typeof openProgressPanel === 'function') openProgressPanel();
+    }
   }
 
   // ========== /模塊：學徒筆記層 ==========
@@ -3503,7 +3512,7 @@
       const completed = _completedChapterIds();
       if (completed.length === 0) return;
       const lastChapter = completed[completed.length - 1];
-      if (typeof enterNotebookReview === 'function') enterNotebookReview(lastChapter);
+      if (typeof enterNotebookReview === 'function') enterNotebookReview(lastChapter, 'map');
     });
 
     mapImageFrame.appendChild(mapNotebookBtn);
