@@ -1,0 +1,16 @@
+{
+  "filename": "opt_bridge_caa_lau.mp3",
+  "speaker": "Margaret",
+  "words": [
+    {
+      "word": "茶樓",
+      "start_ms": 109.375,
+      "duration_ms": 828.125
+    },
+    {
+      "word": "。",
+      "start_ms": 937.5,
+      "duration_ms": 109.375
+    }
+  ]
+}

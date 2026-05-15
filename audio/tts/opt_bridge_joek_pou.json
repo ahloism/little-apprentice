@@ -1,0 +1,21 @@
+{
+  "filename": "opt_bridge_joek_pou.mp3",
+  "speaker": "Edmund",
+  "words": [
+    {
+      "word": "藥",
+      "start_ms": 50.0,
+      "duration_ms": 272.75
+    },
+    {
+      "word": "鋪",
+      "start_ms": 322.75,
+      "duration_ms": 352.25
+    },
+    {
+      "word": "。",
+      "start_ms": 686.375,
+      "duration_ms": 79.562
+    }
+  ]
+}
