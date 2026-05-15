@@ -9,7 +9,7 @@
   },
   "location": "bridge",
   "game_type": "identify_place",
-  "fixed_sentence": "那是什麼地方？",
+  "fixed_sentence": "",
   "vocabulary_bank": {
     "soeng_hang": {
       "word": "商行",

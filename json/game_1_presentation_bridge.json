@@ -280,181 +280,181 @@
     "opt_soeng_hang": {
       "word": "商行",
       "caption": "商行",
-      "audio": "vocab_bridge_soeng_hang.mp3",
+      "audio": "audio/tts/opt_bridge_soeng_hang.mp3",
       "image": "image/S02_商行門口.png"
     },
     "opt_si_zaap": {
       "word": "市集",
       "caption": "市集",
-      "audio": "vocab_bridge_si_zaap.mp3",
+      "audio": "audio/tts/opt_bridge_si_zaap.mp3",
       "image": "image/S04_市集街道.png"
     },
     "opt_haak_zaan": {
       "word": "客棧",
       "caption": "客棧",
-      "audio": "vocab_bridge_haak_zaan.mp3",
+      "audio": "audio/tts/opt_bridge_haak_zaan.mp3",
       "image": "image/S13_客棧門口.png"
     },
     "opt_maa_tau": {
       "word": "碼頭",
       "caption": "碼頭",
-      "audio": "vocab_bridge_maa_tau.mp3",
+      "audio": "audio/tts/opt_bridge_maa_tau.mp3",
       "image": "image/S16_碼頭.png"
     },
     "opt_cong_fu": {
       "word": "倉庫",
       "caption": "倉庫",
-      "audio": "vocab_bridge_cong_fu.mp3",
+      "audio": "audio/tts/opt_bridge_cong_fu.mp3",
       "image": "image/S03_倉庫.png"
     },
     "opt_maa_geoi": {
       "word": "馬廄",
       "caption": "馬廄",
-      "audio": "vocab_bridge_maa_geoi.mp3",
+      "audio": "audio/tts/opt_bridge_maa_geoi.mp3",
       "image": "image/S22_馬廄.png"
     },
     "opt_kiu": {
       "word": "橋",
       "caption": "橋",
-      "audio": "vocab_bridge_kiu.mp3",
+      "audio": "audio/tts/opt_bridge_kiu.mp3",
       "image": "image/S07_梁河橋邊.png"
     },
     "opt_hong_zi": {
       "word": "巷子",
       "caption": "巷子",
-      "audio": "vocab_bridge_hong_zi.mp3",
+      "audio": "audio/tts/opt_bridge_hong_zi.mp3",
       "image": "image/S23_巷子.png"
     },
     "opt_gaai_dou": {
       "word": "街道",
       "caption": "街道",
-      "audio": "vocab_bridge_gaai_dou.mp3",
+      "audio": "audio/tts/opt_bridge_gaai_dou.mp3",
       "image": "image/S01_大梁城街道.png"
     },
     "opt_caa_seoi_taan": {
       "word": "茶水攤",
       "caption": "茶水攤",
-      "audio": "vocab_bridge_caa_seoi_taan.mp3",
+      "audio": "audio/tts/opt_bridge_caa_seoi_taan.mp3",
       "image": "image/S24_茶水攤.png"
     },
     "opt_zau_gun": {
       "word": "酒館",
       "caption": "酒館",
-      "audio": "vocab_bridge_zau_gun.mp3",
+      "audio": "audio/tts/opt_bridge_zau_gun.mp3",
       "image": "image/S25_酒館.png"
     },
     "opt_sik_si": {
       "word": "食肆",
       "caption": "食肆",
-      "audio": "vocab_bridge_sik_si.mp3",
+      "audio": "audio/tts/opt_bridge_sik_si.mp3",
       "image": "image/S26_食肆.png"
     },
     "opt_joek_pou": {
       "word": "藥鋪",
       "caption": "藥鋪",
-      "audio": "vocab_bridge_joek_pou.mp3",
+      "audio": "audio/tts/opt_bridge_joek_pou.mp3",
       "image": "image/S27_藥鋪.png"
     },
     "opt_bou_zong": {
       "word": "布莊",
       "caption": "布莊",
-      "audio": "vocab_bridge_bou_zong.mp3",
+      "audio": "audio/tts/opt_bridge_bou_zong.mp3",
       "image": "image/S28_布莊.png"
     },
     "opt_loeng_dim": {
       "word": "糧店",
       "caption": "糧店",
-      "audio": "vocab_bridge_loeng_dim.mp3",
+      "audio": "audio/tts/opt_bridge_loeng_dim.mp3",
       "image": "image/S29_糧店.png"
     },
     "opt_cin_zong": {
       "word": "錢莊",
       "caption": "錢莊",
-      "audio": "vocab_bridge_cin_zong.mp3",
+      "audio": "audio/tts/opt_bridge_cin_zong.mp3",
       "image": "image/S30_錢莊.png"
     },
     "opt_dong_pou": {
       "word": "當鋪",
       "caption": "當鋪",
-      "audio": "vocab_bridge_dong_pou.mp3",
+      "audio": "audio/tts/opt_bridge_dong_pou.mp3",
       "image": "image/S31_當鋪.png"
     },
     "opt_dou_fong": {
       "word": "賭坊",
       "caption": "賭坊",
-      "audio": "vocab_bridge_dou_fong.mp3",
+      "audio": "audio/tts/opt_bridge_dou_fong.mp3",
       "image": "image/S12_賭坊巷口.png"
     },
     "opt_miu_jyu": {
       "word": "廟宇",
       "caption": "廟宇",
-      "audio": "vocab_bridge_miu_jyu.mp3",
+      "audio": "audio/tts/opt_bridge_miu_jyu.mp3",
       "image": "image/S33_廟宇.png"
     },
     "opt_sing_mun": {
       "word": "城門",
       "caption": "城門",
-      "audio": "vocab_bridge_sing_mun.mp3",
+      "audio": "audio/tts/opt_bridge_sing_mun.mp3",
       "image": "image/S34_城門.png"
     },
     "opt_gun_fu": {
       "word": "官府",
       "caption": "官府",
-      "audio": "vocab_bridge_gun_fu.mp3",
+      "audio": "audio/tts/opt_bridge_gun_fu.mp3",
       "image": "image/S35_官府.png"
     },
     "opt_syu_jyun": {
       "word": "書院",
       "caption": "書院",
-      "audio": "vocab_bridge_syu_jyun.mp3",
+      "audio": "audio/tts/opt_bridge_syu_jyun.mp3",
       "image": "image/S36_書院.png"
     },
     "opt_caa_lau": {
       "word": "茶樓",
       "caption": "茶樓",
-      "audio": "vocab_bridge_caa_lau.mp3",
+      "audio": "audio/tts/opt_bridge_caa_lau.mp3",
       "image": "image/S37_茶樓.png"
     },
     "opt_syut_syu_toi": {
       "word": "說書台",
       "caption": "說書台",
-      "audio": "vocab_bridge_syut_syu_toi.mp3",
+      "audio": "audio/tts/opt_bridge_syut_syu_toi.mp3",
       "image": "image/S15_說書台.png"
     },
     "opt_jik_zaam": {
       "word": "驛站",
       "caption": "驛站",
-      "audio": "vocab_bridge_jik_zaam.mp3",
+      "audio": "audio/tts/opt_bridge_jik_zaam.mp3",
       "image": "image/S38_驛站.png"
     },
     "opt_ji_gun": {
       "word": "醫館",
       "caption": "醫館",
-      "audio": "vocab_bridge_ji_gun.mp3",
+      "audio": "audio/tts/opt_bridge_ji_gun.mp3",
       "image": "image/S39_醫館.png"
     },
     "opt_faan_si_ci": {
       "word": "化糞池",
       "caption": "化糞池",
-      "audio": "vocab_bridge_faan_si_ci.mp3",
+      "audio": "audio/tts/opt_bridge_faan_si_ci.mp3",
       "image": "image/S11_化糞池門口.png"
     },
     "opt_gwong_coeng": {
       "word": "廣場",
       "caption": "廣場",
-      "audio": "vocab_bridge_gwong_coeng.mp3",
+      "audio": "audio/tts/opt_bridge_gwong_coeng.mp3",
       "image": "image/S05_雜耍空地.png"
     },
     "opt_paai_fong": {
       "word": "牌坊",
       "caption": "牌坊",
-      "audio": "vocab_bridge_paai_fong.mp3",
+      "audio": "audio/tts/opt_bridge_paai_fong.mp3",
       "image": "image/S41_牌坊.png"
     },
     "opt_sing_lau": {
       "word": "城樓",
       "caption": "城樓",
-      "audio": "vocab_bridge_sing_lau.mp3",
+      "audio": "audio/tts/opt_bridge_sing_lau.mp3",
       "image": "image/S42_城樓.png"
     }
   }

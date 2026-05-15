@@ -712,6 +712,7 @@
 
       // fetch 完成後若玩家已關閉語音，直接終止播放流程
       if (_ttsStopped) { resolve(); return; }
+
       _ttsAudio = new Audio(encodeURI(BASE_PATH + audioPath));
       _ttsAudio.playbackRate = SPEED_RATE[state.speed];
 

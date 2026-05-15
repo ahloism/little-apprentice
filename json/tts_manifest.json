@@ -10504,5 +10504,245 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>城樓。建在城牆上的樓，可以俯瞰整個城市。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_soeng_hang.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>商行。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_si_zaap.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>市集。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_haak_zaan.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>客棧。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_maa_tau.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>碼頭。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_cong_fu.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>倉庫。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_maa_geoi.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>馬廄。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_kiu.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>橋。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_hong_zi.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>巷子。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_gaai_dou.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>街道。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_caa_seoi_taan.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>茶水攤。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_zau_gun.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>酒館。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_sik_si.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>食肆。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_joek_pou.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>藥鋪。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_bou_zong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>布莊。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_loeng_dim.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>糧店。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_cin_zong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>錢莊。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_dong_pou.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>當鋪。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_dou_fong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>賭坊。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_miu_jyu.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>廟宇。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_sing_mun.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>城門。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_gun_fu.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>官府。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_syu_jyun.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>書院。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_caa_lau.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>茶樓。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_syut_syu_toi.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>說書台。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_jik_zaam.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>驛站。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_ji_gun.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>醫館。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_faan_si_ci.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>化糞池。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "Edmund"
+  },
+  {
+    "filename": "opt_bridge_gwong_coeng.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>廣場。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_paai_fong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>牌坊。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "opt_bridge_sing_lau.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>城樓。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "Margaret"
+  },
+  {
+    "filename": "game_1_bridge_01_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有個賣餅的小販指給我看，說Margaret走進一間給外地人住宿、有床有飯的地方。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_02_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我們說好，若走散了，就在有船靠岸、工人搬貨的地方等。Edmund，你可記得？那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_03_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我遠遠看見Margaret走上一個橫跨河面、讓人走到對岸的建築。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_04_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有個老婆婆說，Edmund走到街邊一個擺著茶壺茶碗、賣茶水的攤子旁邊，還站在那裡喝了一碗。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_05_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我們說好，若走散了，就在掛著各色布匹、賣布料的地方碰頭。Margaret最喜歡那種地方了。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_06_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我好像看見Edmund走進一間可以把東西押在那裡換錢的地方，還把帽子拿在手上比劃。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_07_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有個士兵告訴我，Margaret站在進出城市的大門旁邊，說要等一個人。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_08_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我們說好，若走散了，就在有人站台上講故事、台下坐滿聽眾的地方等。Edmund一定坐下來聽書了。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_09_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>我好像看見Margaret走進一個供旅客歇腳換馬的地方，還問了裡面的人一些事。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_10_q.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有個孩子跑來告訴我，Edmund站在一個空曠的大空地上，四處張望，樣子很慌張。那是什麼地方？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
   }
 ]
