@@ -3903,20 +3903,24 @@
       const scrollEl = document.getElementById('report-scroll');
       const actionsEl = document.getElementById('report-actions');
       const prevScrollTop = scrollEl.scrollTop;
+      const prevOverflow = scrollEl.style.overflow;
+      const prevHeight = scrollEl.style.height;
 
       let canvas;
       try {
         scrollEl.scrollTop = 0;
+        scrollEl.style.overflow = 'visible';
+        scrollEl.style.height = 'auto';
         if (actionsEl) actionsEl.style.visibility = 'hidden';
 
         canvas = await html2canvas(scrollEl, {
           scale: 2,
           useCORS: true,
-          backgroundColor: '#F5F0E8',
-          scrollY: 0,
-          windowHeight: scrollEl.scrollHeight
+          backgroundColor: '#F5F0E8'
         });
       } finally {
+        scrollEl.style.overflow = prevOverflow;
+        scrollEl.style.height = prevHeight;
         scrollEl.scrollTop = prevScrollTop;
         if (actionsEl) actionsEl.style.visibility = '';
       }
