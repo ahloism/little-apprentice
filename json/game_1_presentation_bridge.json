@@ -172,8 +172,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_01_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_01_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_01_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_0.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_edmund.mp3"
+        ]
       }
     },
     {
@@ -183,8 +186,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_02_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_02_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_02_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_1.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_margaret.mp3"
+        ]
       }
     },
     {
@@ -194,8 +200,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_03_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_03_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_03_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_0.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_1_edmund.mp3"
+        ]
       }
     },
     {
@@ -205,8 +214,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_04_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_04_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_04_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_1.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_1_margaret.mp3"
+        ]
       }
     },
     {
@@ -216,8 +228,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_05_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_05_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_05_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_0.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_edmund.mp3"
+        ]
       }
     },
     {
@@ -227,8 +242,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_06_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_06_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_06_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_1.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_margaret.mp3"
+        ]
       }
     },
     {
@@ -238,8 +256,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_07_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_07_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_07_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_0.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_1_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_1_edmund.mp3"
+        ]
       }
     },
     {
@@ -249,8 +270,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_08_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_08_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_08_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_1.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_1_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_1_margaret.mp3"
+        ]
       }
     },
     {
@@ -260,8 +284,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_09_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_09_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_09_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_0.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_edmund_0_edmund.mp3"
+        ]
       }
     },
     {
@@ -271,8 +298,11 @@
       "reunion_image": "image/A26_Edmund_Margaret重逢.png",
       "question_audio": "audio/tts/game_1_bridge_10_q.mp3",
       "feedback_audio": {
-        "correct": "audio/tts/game_1_bridge_10_correct.mp3",
-        "wrong": "audio/tts/game_1_bridge_10_wrong.mp3"
+        "correct": "audio/tts/feedback_game_1_bridge_correct_1.mp3",
+        "wrong": [
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_narrator.mp3",
+          "audio/tts/feedback_game_1_bridge_wrong_margaret_0_margaret.mp3"
+        ]
       }
     }
   ],
