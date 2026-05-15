@@ -311,6 +311,11 @@
         }
       ],
       "answer_restate": "應是三個蠟燭、兩隻蟹、五件絲綢。",
+      "vocabulary_intro_ids": [
+        "go3",
+        "zek3",
+        "gin6"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_01_A",
@@ -362,6 +367,11 @@
         }
       ],
       "answer_restate": "應是四條麻繩、六根蓮藕、七張棉布。",
+      "vocabulary_intro_ids": [
+        "tiu4",
+        "gan1",
+        "zoeng1"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_02_A",
@@ -413,6 +423,11 @@
         }
       ],
       "answer_restate": "應是八串糖葫蘆、九塊豆腐、十片木耳。",
+      "vocabulary_intro_ids": [
+        "cyun3",
+        "faai3",
+        "pin3"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_03_A",
@@ -464,6 +479,11 @@
         }
       ],
       "answer_restate": "應是兩袋白米、五桶菜油、三籃梨。",
+      "vocabulary_intro_ids": [
+        "doi6",
+        "tung4",
+        "laam4"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_04_A",
@@ -515,6 +535,11 @@
         }
       ],
       "answer_restate": "應是六箱鴨蛋、四籠蟹、八壺涼茶。",
+      "vocabulary_intro_ids": [
+        "soeng1",
+        "lung4",
+        "wu4"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_05_A",
@@ -566,6 +591,11 @@
         }
       ],
       "answer_restate": "應是七碗炒花生、九盞茶、五包食鹽。",
+      "vocabulary_intro_ids": [
+        "wun2",
+        "zang2",
+        "baau1"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_06_A",
@@ -617,6 +647,11 @@
         }
       ],
       "answer_restate": "應是十捆麻繩、六疊棉布、兩批蠟燭。",
+      "vocabulary_intro_ids": [
+        "kwan2",
+        "dip6",
+        "pai1"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_07_A",
@@ -668,6 +703,11 @@
         }
       ],
       "answer_restate": "應是八堆番薯、四疊煎餅、九紮芹菜。",
+      "vocabulary_intro_ids": [
+        "deoi1",
+        "dip6",
+        "zaat3"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_08_A",
@@ -719,6 +759,11 @@
         }
       ],
       "answer_restate": "應是三斤牛肉、十兩蝦米、七錢薑。",
+      "vocabulary_intro_ids": [
+        "gan1_weight",
+        "loeng5",
+        "cin4_weight"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_09_A",
@@ -770,6 +815,11 @@
         }
       ],
       "answer_restate": "應是五尺絲綢、六丈麻繩、四寸豆腐。",
+      "vocabulary_intro_ids": [
+        "cek3_length",
+        "zoeng6",
+        "cyun3_length"
+      ],
       "combo_options": [
         {
           "combo_id": "combo_dock_10_A",

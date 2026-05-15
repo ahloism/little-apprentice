@@ -3189,6 +3189,7 @@
 
 
   async function onGameOptionSelected(optionId) {
+    document.querySelectorAll('.game-option-btn').forEach(btn => { btn.disabled = true; });
     gameState.selectedOptionId = optionId;
     gameState.isCorrect = _isCorrectOption(optionId);
     _recordGameAssessment(gameState.isCorrect, optionId);
