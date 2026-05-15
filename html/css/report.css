@@ -116,6 +116,13 @@
       font-size: 0.95rem;
       color: var(--ink);
       line-height: 1.8;
+      display: block;
+      white-space: pre-line;
+      word-break: break-word;
+      overflow-wrap: anywhere;
+      height: auto;
+      max-height: none;
+      overflow: visible;
     }
 
     #report-qualitative-loading {
