@@ -3900,11 +3900,26 @@
     try {
       await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js');
       await _loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
-      const canvas = await html2canvas(document.getElementById('report-scroll'), {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#F5F0E8'
-      });
+      const scrollEl = document.getElementById('report-scroll');
+      const actionsEl = document.getElementById('report-actions');
+      const prevScrollTop = scrollEl.scrollTop;
+
+      let canvas;
+      try {
+        scrollEl.scrollTop = 0;
+        if (actionsEl) actionsEl.style.visibility = 'hidden';
+
+        canvas = await html2canvas(scrollEl, {
+          scale: 2,
+          useCORS: true,
+          backgroundColor: '#F5F0E8',
+          scrollY: 0,
+          windowHeight: scrollEl.scrollHeight
+        });
+      } finally {
+        scrollEl.scrollTop = prevScrollTop;
+        if (actionsEl) actionsEl.style.visibility = '';
+      }
       const { jsPDF } = window.jspdf;
       const pdf = new jsPDF({ orientation: 'portrait', unit: 'px', format: 'a4' });
       const pageWidth = pdf.internal.pageSize.getWidth();
