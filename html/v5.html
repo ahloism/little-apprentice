@@ -1957,6 +1957,7 @@
     const sequence = [];
 
     if (left.title) sequence.push({ file: left.title, elId: 'notebook-title-left' });
+    if (left.section_adventure) sequence.push({ file: left.section_adventure, elId: 'notebook-section-adventure' });
     (left.story_progress || []).forEach((file, i) => {
       sequence.push({ file, elId: 'notebook-story-progress', index: i });
     });

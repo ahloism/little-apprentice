@@ -10798,5 +10798,11 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>大梁城每個角落都去過了！繼續在城裡探索吧。</prosody></voice></speak>",
     "voice": "zh-HK-HiuGaaiNeural",
     "speaker": "阿水"
+  },
+  {
+    "filename": "nb_section_adventure.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>今次的冒險……</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
   }
 ]

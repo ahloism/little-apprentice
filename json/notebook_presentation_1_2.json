@@ -2,6 +2,7 @@
   "event_id": "1_2",
   "left": {
     "title": "nb_1_2_title_left.mp3",
+    "section_adventure": "nb_section_adventure.mp3",
     "story_progress": [
       "nb_1_2_0.mp3",
       "nb_1_2_1.mp3",

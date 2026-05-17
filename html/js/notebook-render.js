@@ -7,7 +7,7 @@ function renderNotebookLeft(content, reflectionList, eventId) {
   const _chapterNameMap = { 1: '商行取貨', 2: '市集小意外', 3: '橋邊打聽', 4: '橋邊推理', 5: '客棧說書', 6: '碼頭面對問題', 7: '帳房考問' };
   const _chapterName = _chapterNameMap[parseInt(chapterNum)] || '';
   setHLText(document.getElementById('notebook-title-left'), `學徒筆記．第${_chapterToChinese(parseInt(chapterNum))}章，${_chapterName}`);
-  document.getElementById('notebook-section-adventure').textContent = '今次的冒險……';
+  setHLText(document.getElementById('notebook-section-adventure'), '今次的冒險……');
 
   const progressEl = document.getElementById('notebook-story-progress');
   progressEl.innerHTML = '';
