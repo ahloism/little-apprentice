@@ -10762,5 +10762,41 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+0%' pitch='+0st'>不對，再看清楚。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "石頭"
+  },
+  {
+    "filename": "asui_return_normal_line1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>你回來了，下一步做什麼呢？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_normal_s1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>下一站還沒去——繼續冒險吧！</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_normal_s2.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>有地方可以解鎖！要解鎖嗎？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_normal_s3.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>故事走完了！還有小任務等著你。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_normal_s4.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>都解鎖了！去大梁城四處探索看看。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_normal_s5.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>大梁城每個角落都去過了！繼續在城裡探索吧。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
   }
 ]

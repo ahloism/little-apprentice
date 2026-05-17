@@ -1,0 +1,51 @@
+{
+  "filename": "asui_return_normal_s2.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "有",
+      "start_ms": 50.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "地方",
+      "start_ms": 262.5,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "可以",
+      "start_ms": 825.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "解鎖",
+      "start_ms": 1325.0,
+      "duration_ms": 700.0
+    },
+    {
+      "word": "！",
+      "start_ms": 2037.5,
+      "duration_ms": 25.0
+    },
+    {
+      "word": "要",
+      "start_ms": 2925.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "解鎖",
+      "start_ms": 3112.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "嗎",
+      "start_ms": 3687.5,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "？",
+      "start_ms": 4000.0,
+      "duration_ms": 12.5
+    }
+  ]
+}
