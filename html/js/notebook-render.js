@@ -25,7 +25,7 @@ function renderNotebookLeft(content, reflectionList, eventId) {
     (left.places_visited).forEach(place => {
       const tag = document.createElement('span');
       tag.className = 'notebook-tag';
-      tag.textContent = place;
+      setHLText(tag, place);
       placesEl.appendChild(tag);
     });
   }
@@ -40,12 +40,12 @@ function renderNotebookLeft(content, reflectionList, eventId) {
     (left.people_met).forEach(person => {
       const tag = document.createElement('span');
       tag.className = 'notebook-tag';
-      tag.textContent = person;
+      setHLText(tag, person);
       peopleEl.appendChild(tag);
     });
   }
 
-  setHLText(document.getElementById('notebook-reflection-title'), '阿禾的筆記');
+  setHLText(document.getElementById('notebook-reflection-title'), '我的反思');
 
   const reflEl = document.getElementById('notebook-reflections');
   reflEl.innerHTML = '';

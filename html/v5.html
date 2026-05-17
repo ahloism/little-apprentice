@@ -1963,8 +1963,8 @@
     if (left.places) sequence.push({ file: left.places, elId: 'notebook-places' });
     if (left.people) sequence.push({ file: left.people, elId: 'notebook-people' });
     if (presentation.reflections?.title) sequence.push({ file: presentation.reflections.title, elId: 'notebook-reflection-title' });
-    reflectionList.forEach(r => {
-      if (r.audio) sequence.push({ file: r.audio, elId: 'notebook-reflections' });
+    reflectionList.forEach((r, i) => {
+      if (r.audio) sequence.push({ file: r.audio, elId: 'notebook-reflections', index: i });
     });
     if (right.title) sequence.push({ file: right.title, elId: 'notebook-title-right' });
     (right.learned_points || []).forEach((file, i) => {
