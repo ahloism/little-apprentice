@@ -3,34 +3,44 @@
   "speaker": "narrator",
   "words": [
     {
-      "word": "梅",
+      "word": "遇到",
       "start_ms": 87.5,
-      "duration_ms": 200.0
+      "duration_ms": 575.0
+    },
+    {
+      "word": "：",
+      "start_ms": 775.0,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "梅",
+      "start_ms": 775.0,
+      "duration_ms": 237.5
     },
     {
       "word": "姐",
-      "start_ms": 287.5,
-      "duration_ms": 400.0
+      "start_ms": 1012.5,
+      "duration_ms": 387.5
     },
     {
       "word": "、",
-      "start_ms": 787.5,
+      "start_ms": 1487.5,
       "duration_ms": 0.0
     },
     {
       "word": "阿乖",
-      "start_ms": 787.5,
+      "start_ms": 1487.5,
       "duration_ms": 687.5
     },
     {
       "word": "、",
-      "start_ms": 1587.5,
+      "start_ms": 2287.5,
       "duration_ms": 0.0
     },
     {
       "word": "王三",
-      "start_ms": 1587.5,
-      "duration_ms": 775.0
+      "start_ms": 2287.5,
+      "duration_ms": 762.5
     }
   ]
 }

@@ -3,14 +3,29 @@
   "speaker": "narrator",
   "words": [
     {
+      "word": "去",
+      "start_ms": 87.5,
+      "duration_ms": 200.0
+    },
+    {
+      "word": "了",
+      "start_ms": 287.5,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "：",
+      "start_ms": 800.0,
+      "duration_ms": 0.0
+    },
+    {
       "word": "橋",
-      "start_ms": 75.0,
-      "duration_ms": 250.0
+      "start_ms": 800.0,
+      "duration_ms": 287.5
     },
     {
       "word": "邊",
-      "start_ms": 325.0,
-      "duration_ms": 462.5
+      "start_ms": 1087.5,
+      "duration_ms": 450.0
     }
   ]
 }

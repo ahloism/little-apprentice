@@ -8,14 +8,19 @@
       "duration_ms": 412.5
     },
     {
-      "word": "學",
+      "word": "學到",
       "start_ms": 500.0,
-      "duration_ms": 250.0
+      "duration_ms": 425.0
     },
     {
       "word": "了",
-      "start_ms": 750.0,
-      "duration_ms": 362.5
+      "start_ms": 925.0,
+      "duration_ms": 387.5
+    },
+    {
+      "word": "……",
+      "start_ms": 1312.5,
+      "duration_ms": 87.5
     }
   ]
 }
