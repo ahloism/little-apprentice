@@ -16,44 +16,20 @@
   ],
   "feedback_templates": {
     "coi_po_po": {
-      "correct": [
-        "哎呀，幸好你眼利。",
-        "對啦對啦，你幫我找到了。"
-      ],
-      "wrong": [
-        "唉，這次你沒幫上忙，[answer_restate]",
-        "哎呀，不是這個。[answer_restate]"
-      ]
+      "correct": "哎呀，幸好你眼利。",
+      "wrong": "唉，這次你沒幫上忙。"
     },
     "jyu_lou_daai": {
-      "correct": [
-        "對，就是這樣，別讓它混在這裡。",
-        "眼力不錯，一下就看出來了。"
-      ],
-      "wrong": [
-        "不對，別亂指。[answer_restate]",
-        "看清楚再說。[answer_restate]"
-      ]
+      "correct": "對，就是這樣，別讓它混在這裡。",
+      "wrong": "不對，別亂指。"
     },
     "aa_ping": {
-      "correct": [
-        "謝謝你，總算找出來了。",
-        "對，就是那樣，我剛才也在找。"
-      ],
-      "wrong": [
-        "不是這個呢。[answer_restate]",
-        "唉，還差一點。[answer_restate]"
-      ]
+      "correct": "謝謝你，總算找出來了。",
+      "wrong": "不是這個呢。"
     },
     "maa_baak": {
-      "correct": [
-        "嗯，這樣才對。",
-        "你倒看得仔細。"
-      ],
-      "wrong": [
-        "慢慢看，別急。[answer_restate]",
-        "唉，老眼都看見了。[answer_restate]"
-      ]
+      "correct": "嗯，這樣才對。",
+      "wrong": "慢慢看，別急。"
     }
   },
   "vocabulary_bank": {

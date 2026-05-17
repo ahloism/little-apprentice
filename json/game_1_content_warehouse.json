@@ -11,16 +11,8 @@
   "character": "cin_baak",
   "fixed_sentence": "阿禾聽完後，去拿起___。",
   "feedback_templates": {
-    "correct": [
-      "不錯。",
-      "做得好。",
-      "嗯。"
-    ],
-    "wrong": [
-      "做事要小心。",
-      "不要馬虎。",
-      "仔細看清楚。"
-    ]
+    "correct": "不錯。",
+    "wrong": "做事要小心。"
   },
   "vocabulary_bank": {
     "white_rice": {

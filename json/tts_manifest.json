@@ -10744,5 +10744,23 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有個孩子跑來告訴我，Edmund站在一個空曠的大空地上，四處張望，樣子很慌張。那是什麼地方？</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_correct.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>「我就知道你會找到我！」兩人先互相埋怨了兩句，然後一起向阿禾道謝。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "game_1_bridge_wrong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>阿禾指的地方似乎不對，Edmund 和 Margaret 一直找不到對方。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "feedback_game_1_dock_wrong.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+0%' pitch='+0st'>不對，再看清楚。</prosody></voice></speak>",
+    "voice": "zh-HK-WanLungNeural",
+    "speaker": "石頭"
   }
 ]

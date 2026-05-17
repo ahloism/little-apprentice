@@ -275,16 +275,8 @@
     }
   },
   "feedback_templates": {
-    "correct": [
-      "對。",
-      "好。",
-      "嗯。"
-    ],
-    "wrong": [
-      "不對。[answer_restate]",
-      "錯。[answer_restate]",
-      "再看。[answer_restate]"
-    ]
+    "correct": "對。",
+    "wrong": "不對，再看清楚。"
   },
   "variations": [
     {

@@ -104,16 +104,8 @@
     }
   },
   "feedback_templates": {
-    "correct": [
-      "嗯，還算看得出來。",
-      "不錯，比老夫預期的好一點。",
-      "對了，這點眼力還是有的。"
-    ],
-    "wrong": [
-      "唉，看來你沒有認真聽。[answer_restate]",
-      "老夫說得這麼清楚，還是猜錯。[answer_restate]",
-      "差得遠了。[answer_restate]"
-    ]
+    "correct": "嗯，還算看得出來。",
+    "wrong": "唉，看來你沒有認真聽。"
   },
   "variations": [
     {

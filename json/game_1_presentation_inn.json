@@ -153,23 +153,11 @@
     }
   ],
   "feedback_assets": {
-    "correct_0": {
-      "audio": "feedback_game_1_inn_correct_0.mp3"
+    "correct": {
+      "audio": "audio/tts/feedback_game_1_inn_correct_0.mp3"
     },
-    "correct_1": {
-      "audio": "feedback_game_1_inn_correct_1.mp3"
-    },
-    "correct_2": {
-      "audio": "feedback_game_1_inn_correct_2.mp3"
-    },
-    "wrong_0": {
-      "audio": "feedback_game_1_inn_wrong_0.mp3"
-    },
-    "wrong_1": {
-      "audio": "feedback_game_1_inn_wrong_1.mp3"
-    },
-    "wrong_2": {
-      "audio": "feedback_game_1_inn_wrong_2.mp3"
+    "wrong": {
+      "audio": "audio/tts/feedback_game_1_inn_wrong_0.mp3"
     }
   }
 }

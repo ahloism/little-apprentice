@@ -378,53 +378,29 @@
     }
   ],
   "feedback_assets": {
-    "coi_po_po_correct_0": {
-      "audio": "feedback_game_1_market_coi_po_po_correct_0.mp3"
+    "coi_po_po_correct": {
+      "audio": "audio/tts/feedback_game_1_market_coi_po_po_correct_0.mp3"
     },
-    "coi_po_po_correct_1": {
-      "audio": "feedback_game_1_market_coi_po_po_correct_1.mp3"
+    "coi_po_po_wrong": {
+      "audio": "audio/tts/feedback_game_1_market_coi_po_po_wrong_0.mp3"
     },
-    "coi_po_po_wrong_0": {
-      "audio": "feedback_game_1_market_coi_po_po_wrong_0.mp3"
+    "jyu_lou_daai_correct": {
+      "audio": "audio/tts/feedback_game_1_market_jyu_lou_daai_correct_0.mp3"
     },
-    "coi_po_po_wrong_1": {
-      "audio": "feedback_game_1_market_coi_po_po_wrong_1.mp3"
+    "jyu_lou_daai_wrong": {
+      "audio": "audio/tts/feedback_game_1_market_jyu_lou_daai_wrong_0.mp3"
     },
-    "jyu_lou_daai_correct_0": {
-      "audio": "feedback_game_1_market_jyu_lou_daai_correct_0.mp3"
+    "aa_ping_correct": {
+      "audio": "audio/tts/feedback_game_1_market_aa_ping_correct_0.mp3"
     },
-    "jyu_lou_daai_correct_1": {
-      "audio": "feedback_game_1_market_jyu_lou_daai_correct_1.mp3"
+    "aa_ping_wrong": {
+      "audio": "audio/tts/feedback_game_1_market_aa_ping_wrong_0.mp3"
     },
-    "jyu_lou_daai_wrong_0": {
-      "audio": "feedback_game_1_market_jyu_lou_daai_wrong_0.mp3"
+    "maa_baak_correct": {
+      "audio": "audio/tts/feedback_game_1_market_maa_baak_correct_0.mp3"
     },
-    "jyu_lou_daai_wrong_1": {
-      "audio": "feedback_game_1_market_jyu_lou_daai_wrong_1.mp3"
-    },
-    "aa_ping_correct_0": {
-      "audio": "feedback_game_1_market_aa_ping_correct_0.mp3"
-    },
-    "aa_ping_correct_1": {
-      "audio": "feedback_game_1_market_aa_ping_correct_1.mp3"
-    },
-    "aa_ping_wrong_0": {
-      "audio": "feedback_game_1_market_aa_ping_wrong_0.mp3"
-    },
-    "aa_ping_wrong_1": {
-      "audio": "feedback_game_1_market_aa_ping_wrong_1.mp3"
-    },
-    "maa_baak_correct_0": {
-      "audio": "feedback_game_1_market_maa_baak_correct_0.mp3"
-    },
-    "maa_baak_correct_1": {
-      "audio": "feedback_game_1_market_maa_baak_correct_1.mp3"
-    },
-    "maa_baak_wrong_0": {
-      "audio": "feedback_game_1_market_maa_baak_wrong_0.mp3"
-    },
-    "maa_baak_wrong_1": {
-      "audio": "feedback_game_1_market_maa_baak_wrong_1.mp3"
+    "maa_baak_wrong": {
+      "audio": "audio/tts/feedback_game_1_market_maa_baak_wrong_0.mp3"
     }
   }
 }

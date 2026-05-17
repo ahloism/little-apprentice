@@ -3310,25 +3310,11 @@
 
   function _feedbackText() {
     const templates = gameData.content.feedback_templates || {};
-    let pool = null;
-    if (gameState.isCorrect) {
-      if (gameData.content.game_type === 'find_the_odd_one_out' || gameState.location === 'market') {
-        pool = templates[gameState.contentVariation.vendor_id]?.correct;
-      } else {
-        pool = templates.correct;
-      }
-    } else if (gameState.location === 'bridge') {
-      pool = gameState.contentVariation.speaker_id === 'edmund' ? templates.wrong_edmund : templates.wrong_margaret;
-    } else if (gameState.location === 'market') {
-      pool = templates[gameState.contentVariation.vendor_id]?.wrong;
-    } else {
-      pool = templates.wrong;
+    if (gameState.location === 'market') {
+      const vendor = templates[gameState.contentVariation.vendor_id] || {};
+      return gameState.isCorrect ? (vendor.correct || '') : (vendor.wrong || '');
     }
-    let text = _randomFrom(pool) || '';
-    const restate = gameState.contentVariation?.answer_restate || '';
-    text = text.replace('[answer_restate]', restate);
-    if (!gameState.isCorrect && restate && !text.includes(restate)) text += ` ${restate}`;
-    return text;
+    return gameState.isCorrect ? (templates.correct || '') : (templates.wrong || '');
   }
 
   function _feedbackImage() {
@@ -3346,19 +3332,16 @@
 
   async function _playFeedbackAudio() {
     const p = gameData.presentation;
-    const pVar = gameState.presentationVariation || {};
+    const result = gameState.isCorrect ? 'correct' : 'wrong';
     let audio = null;
-    if (pVar.feedback_audio) {
-      audio = gameState.isCorrect ? pVar.feedback_audio.correct : pVar.feedback_audio.wrong;
-    }
-    if (!audio && p.feedback_assets) {
-      const prefix = gameState.location === 'market' ? `${gameState.contentVariation.vendor_id}_` : '';
-      const keys = Object.keys(p.feedback_assets).filter(k => k.startsWith(`${prefix}${gameState.isCorrect ? 'correct' : 'wrong'}_`));
-      const key = _randomFrom(keys);
+    if (p.feedback_audio) {
+      audio = p.feedback_audio[result];
+    } else if (p.feedback_assets) {
+      const key = gameState.location === 'market'
+        ? `${gameState.contentVariation.vendor_id}_${result}`
+        : result;
       audio = p.feedback_assets[key]?.audio;
     }
-    if (audio?.parts) return _playGameTTSSequence(audio.parts.map(part => part.audio || part));
-    if (Array.isArray(audio)) return _playGameTTSSequence(audio);
     await _playGameTTS(audio);
   }
 

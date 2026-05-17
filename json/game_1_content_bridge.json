@@ -14,167 +14,217 @@
     "soeng_hang": {
       "word": "商行",
       "intro_text": "買賣貨物的地方，裡面有掌櫃和夥計打理生意。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "si_zaap": {
       "word": "市集",
       "intro_text": "很多攤檔聚在一起，熱熱鬧鬧地賣各種東西。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "haak_zaan": {
       "word": "客棧",
       "intro_text": "給外地人住宿的地方，有床有飯，可以過夜。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "maa_tau": {
       "word": "碼頭",
       "intro_text": "船隻停靠的地方，工人在這裡搬運貨物上落。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "cong_fu": {
       "word": "倉庫",
       "intro_text": "存放貨物的大房間，裡面堆滿箱子和麻袋。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "maa_geoi": {
       "word": "馬廄",
       "intro_text": "養馬的地方，有草料和馬糞的氣味。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "kiu": {
       "word": "橋",
       "intro_text": "跨過河面讓人通行的建築，可以走到對岸。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "hong_zi": {
       "word": "巷子",
       "intro_text": "兩排房子之間窄窄的通道，人要側身才過得去。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "gaai_dou": {
       "word": "街道",
       "intro_text": "城裡寬闊的通道，兩旁有店鋪和行人。",
-      "features": { "place_type": "basic" }
+      "features": {
+        "place_type": "basic"
+      }
     },
     "caa_seoi_taan": {
       "word": "茶水攤",
       "intro_text": "在街邊擺攤賣茶水的地方，有茶壺和茶碗，客人站著或坐著喝。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "zau_gun": {
       "word": "酒館",
       "intro_text": "喝酒吃飯的地方，晚上特別熱鬧。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "sik_si": {
       "word": "食肆",
       "intro_text": "專門賣飯菜的地方，肚子餓了可以進去吃。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "joek_pou": {
       "word": "藥鋪",
       "intro_text": "賣草藥的地方，裡面有很多抽屜裝著各種藥材。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "bou_zong": {
       "word": "布莊",
       "intro_text": "賣布料的地方，掛著各色各樣的布匹。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "loeng_dim": {
       "word": "糧店",
       "intro_text": "賣米糧的地方，有很多大袋米和雜糧。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "cin_zong": {
       "word": "錢莊",
       "intro_text": "可以換錢或存錢的地方，掌櫃算盤打得很快。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "dong_pou": {
       "word": "當鋪",
       "intro_text": "可以把東西押在這裡換錢的地方。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "dou_fong": {
       "word": "賭坊",
       "intro_text": "有人在裡面賭錢的地方，門口常有人進進出出。",
-      "features": { "place_type": "commercial" }
+      "features": {
+        "place_type": "commercial"
+      }
     },
     "miu_jyu": {
       "word": "廟宇",
       "intro_text": "供奉神明的地方，有香爐和牌位，人們來這裡拜神。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "sing_mun": {
       "word": "城門",
       "intro_text": "進出城市的大門，又高又厚，有士兵把守。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "gun_fu": {
       "word": "官府",
       "intro_text": "官員處理公務的地方，大門前有衙差站崗。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "syu_jyun": {
       "word": "書院",
       "intro_text": "讀書求學的地方，學生在這裡跟先生學習。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "caa_lau": {
       "word": "茶樓",
       "intro_text": "比茶館更大的喝茶地方，有點心可以叫來吃。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "syut_syu_toi": {
       "word": "說書台",
       "intro_text": "說書人站在台上講故事，台下坐滿來聽書的人。",
-      "features": { "place_type": "public" }
+      "features": {
+        "place_type": "public"
+      }
     },
     "jik_zaam": {
       "word": "驛站",
       "intro_text": "供傳信人和旅客歇腳換馬的地方。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     },
     "ji_gun": {
       "word": "醫館",
       "intro_text": "看病的地方，大夫在這裡替病人診脈開藥。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     },
     "faan_si_ci": {
       "word": "化糞池",
       "intro_text": "處理污物的地方，氣味很難聞，人們都不願靠近。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     },
     "gwong_coeng": {
       "word": "廣場",
       "intro_text": "空曠的大空地，人們在這裡聚集、做買賣或看熱鬧。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     },
     "paai_fong": {
       "word": "牌坊",
       "intro_text": "街上高高的石門，上面刻著字，是重要地方的標誌。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     },
     "sing_lau": {
       "word": "城樓",
       "intro_text": "建在城牆上的樓，可以俯瞰整個城市。",
-      "features": { "place_type": "city" }
+      "features": {
+        "place_type": "city"
+      }
     }
   },
   "feedback_templates": {
-    "correct": [
-      "啊，終於找到了！Thank you, Ah Wo. 原來是在[answer_restate]",
-      "「我就知道你會找到我！」兩人先互相埋怨了兩句，然後一起向阿禾道謝：「多謝你，原來是在[answer_restate]」"
-    ],
-    "wrong_edmund": [
-      "Edmund皺起眉頭：「No, no, no，我明明不是這樣說的。那裡是[answer_restate]」",
-      "Edmund急得扶一扶帽子：「你怎會聽成那樣？她是在[answer_restate]」"
-    ],
-    "wrong_margaret": [
-      "Margaret輕輕嘆氣：「不是那裡。那裡是[answer_restate]」",
-      "Margaret無奈地看了阿禾一眼：「我想我已經說得很清楚了。那裡是[answer_restate]」"
-    ]
+    "correct": "「我就知道你會找到我！」兩人先互相埋怨了兩句，然後一起向阿禾道謝。",
+    "wrong": "阿禾指的地方似乎不對，Edmund 和 Margaret 一直找不到對方。"
   },
   "variations": [
     {
@@ -182,7 +232,11 @@
       "speaker_id": "edmund",
       "story_logic": "third_party_report",
       "question_text": "有個賣餅的小販指給我看，說Margaret走進一間給外地人住宿、有床有飯的地方。那是什麼地方？",
-      "vocabulary_intro_ids": ["soeng_hang", "si_zaap", "haak_zaan"],
+      "vocabulary_intro_ids": [
+        "soeng_hang",
+        "si_zaap",
+        "haak_zaan"
+      ],
       "answer_restate": "客棧。"
     },
     {
@@ -190,7 +244,11 @@
       "speaker_id": "margaret",
       "story_logic": "meeting_point",
       "question_text": "我們說好，若走散了，就在有船靠岸、工人搬貨的地方等。Edmund，你可記得？那是什麼地方？",
-      "vocabulary_intro_ids": ["maa_tau", "cong_fu", "maa_geoi"],
+      "vocabulary_intro_ids": [
+        "maa_tau",
+        "cong_fu",
+        "maa_geoi"
+      ],
       "answer_restate": "碼頭。"
     },
     {
@@ -198,7 +256,11 @@
       "speaker_id": "edmund",
       "story_logic": "far_sighting",
       "question_text": "我遠遠看見Margaret走上一個橫跨河面、讓人走到對岸的建築。那是什麼地方？",
-      "vocabulary_intro_ids": ["kiu", "hong_zi", "gaai_dou"],
+      "vocabulary_intro_ids": [
+        "kiu",
+        "hong_zi",
+        "gaai_dou"
+      ],
       "answer_restate": "橋。"
     },
     {
@@ -206,7 +268,11 @@
       "speaker_id": "margaret",
       "story_logic": "third_party_report",
       "question_text": "有個老婆婆說，Edmund走到街邊一個擺著茶壺茶碗、賣茶水的攤子旁邊，還站在那裡喝了一碗。那是什麼地方？",
-      "vocabulary_intro_ids": ["caa_seoi_taan", "zau_gun", "sik_si"],
+      "vocabulary_intro_ids": [
+        "caa_seoi_taan",
+        "zau_gun",
+        "sik_si"
+      ],
       "answer_restate": "茶水攤。"
     },
     {
@@ -214,7 +280,11 @@
       "speaker_id": "edmund",
       "story_logic": "meeting_point",
       "question_text": "我們說好，若走散了，就在掛著各色布匹、賣布料的地方碰頭。Margaret最喜歡那種地方了。那是什麼地方？",
-      "vocabulary_intro_ids": ["joek_pou", "bou_zong", "loeng_dim"],
+      "vocabulary_intro_ids": [
+        "joek_pou",
+        "bou_zong",
+        "loeng_dim"
+      ],
       "answer_restate": "布莊。"
     },
     {
@@ -222,7 +292,11 @@
       "speaker_id": "margaret",
       "story_logic": "far_sighting",
       "question_text": "我好像看見Edmund走進一間可以把東西押在那裡換錢的地方，還把帽子拿在手上比劃。那是什麼地方？",
-      "vocabulary_intro_ids": ["cin_zong", "dong_pou", "dou_fong"],
+      "vocabulary_intro_ids": [
+        "cin_zong",
+        "dong_pou",
+        "dou_fong"
+      ],
       "answer_restate": "當鋪。"
     },
     {
@@ -230,7 +304,11 @@
       "speaker_id": "edmund",
       "story_logic": "third_party_report",
       "question_text": "有個士兵告訴我，Margaret站在進出城市的大門旁邊，說要等一個人。那是什麼地方？",
-      "vocabulary_intro_ids": ["miu_jyu", "sing_mun", "gun_fu"],
+      "vocabulary_intro_ids": [
+        "miu_jyu",
+        "sing_mun",
+        "gun_fu"
+      ],
       "answer_restate": "城門。"
     },
     {
@@ -238,7 +316,11 @@
       "speaker_id": "margaret",
       "story_logic": "meeting_point",
       "question_text": "我們說好，若走散了，就在有人站台上講故事、台下坐滿聽眾的地方等。Edmund一定坐下來聽書了。那是什麼地方？",
-      "vocabulary_intro_ids": ["syu_jyun", "caa_lau", "syut_syu_toi"],
+      "vocabulary_intro_ids": [
+        "syu_jyun",
+        "caa_lau",
+        "syut_syu_toi"
+      ],
       "answer_restate": "說書台。"
     },
     {
@@ -246,7 +328,11 @@
       "speaker_id": "edmund",
       "story_logic": "far_sighting",
       "question_text": "我好像看見Margaret走進一個供旅客歇腳換馬的地方，還問了裡面的人一些事。那是什麼地方？",
-      "vocabulary_intro_ids": ["jik_zaam", "ji_gun", "faan_si_ci"],
+      "vocabulary_intro_ids": [
+        "jik_zaam",
+        "ji_gun",
+        "faan_si_ci"
+      ],
       "answer_restate": "驛站。"
     },
     {
@@ -254,7 +340,11 @@
       "speaker_id": "margaret",
       "story_logic": "third_party_report",
       "question_text": "有個孩子跑來告訴我，Edmund站在一個空曠的大空地上，四處張望，樣子很慌張。那是什麼地方？",
-      "vocabulary_intro_ids": ["gwong_coeng", "paai_fong", "sing_lau"],
+      "vocabulary_intro_ids": [
+        "gwong_coeng",
+        "paai_fong",
+        "sing_lau"
+      ],
       "answer_restate": "廣場。"
     }
   ]
