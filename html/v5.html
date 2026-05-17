@@ -187,6 +187,7 @@
   <div id="white-overlay"></div>
 
   <!-- ========== JS render helper 模塊（V5.1.7） ========== -->
+  <script src="./js/highlight-core.js"></script>
   <script src="./js/story-render.js"></script>
   <script src="./js/notebook-render.js"></script>
   <script src="./js/game-render.js"></script>
@@ -2590,7 +2591,7 @@
     const asuiChar = document.getElementById('asui-character');
     if (asuiChar) asuiChar.style.display = 'block';
     const bar = document.getElementById('asui-dialogue');
-    bar.querySelector('.asui-text').textContent = text;
+    setHLText(bar.querySelector('.asui-text'), text);
     bar.querySelector('.asui-buttons').innerHTML = '';
     const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
     if ((override?.confirm_buttons || dialogue.confirm_buttons) && (!dialogue.lines || dialogue.lines.length <= 1)) {
@@ -2645,7 +2646,7 @@
         return;
       }
       const text = _resolveAsuiTemplate(dialogue.lines[asuiState.currentLineIndex]);
-      document.querySelector('.asui-text').textContent = text;
+      setHLText(document.querySelector('.asui-text'), text);
       if (asuiState.currentLineIndex === dialogue.lines.length - 1 && dialogue.confirm_buttons) {
         const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
         renderAsuiButtons(override?.confirm_buttons || dialogue.confirm_buttons, dialogue.id);
@@ -2659,7 +2660,7 @@
       asuiState.currentLineIndex = 1;
       const playerState = getAsuiPlayerState();
       const suggestion = getAsuiStateSuggestion(playerState);
-      document.querySelector('.asui-text').textContent = suggestion;
+      setHLText(document.querySelector('.asui-text'), suggestion);
       if (playerState === 'main_incomplete_unlock_available') {
         renderAsuiButtons({ unlock: '解鎖', continue: '繼續冒險' }, 'return_to_map_normal');
       }
