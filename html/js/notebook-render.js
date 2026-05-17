@@ -4,14 +4,14 @@
 function renderNotebookLeft(content, reflectionList, eventId) {
   const left = content.notebook_left || {};
   const chapterNum = (eventId || '').split('_')[1] || '1';
-  document.getElementById('notebook-title-left').textContent = `學徒筆記．第${_chapterToChinese(parseInt(chapterNum))}章`;
+  setHLText(document.getElementById('notebook-title-left'), `學徒筆記．第${_chapterToChinese(parseInt(chapterNum))}章`);
   document.getElementById('notebook-section-adventure').textContent = '今次的冒險……';
 
   const progressEl = document.getElementById('notebook-story-progress');
   progressEl.innerHTML = '';
   (left.story_progress || []).forEach(sentence => {
     const p = document.createElement('p');
-    p.textContent = sentence;
+    setHLText(p, sentence);
     progressEl.appendChild(p);
   });
 
@@ -45,28 +45,28 @@ function renderNotebookLeft(content, reflectionList, eventId) {
     });
   }
 
-  document.getElementById('notebook-reflection-title').textContent = '阿禾的筆記';
+  setHLText(document.getElementById('notebook-reflection-title'), '阿禾的筆記');
 
   const reflEl = document.getElementById('notebook-reflections');
   reflEl.innerHTML = '';
   reflectionList.forEach(r => {
     const p = document.createElement('p');
     p.className = 'notebook-reflection';
-    p.textContent = r.text;
+    setHLText(p, r.text);
     reflEl.appendChild(p);
   });
 }
 
 function renderNotebookRight(content) {
   const right = content.notebook_right || {};
-  document.getElementById('notebook-title-right').textContent = '今次學到了……';
+  setHLText(document.getElementById('notebook-title-right'), '今次學到了……');
 
   const lpEl = document.getElementById('notebook-learned-points');
   lpEl.innerHTML = '';
   (right.learned_points || []).forEach(lp => {
     const p = document.createElement('p');
     p.className = `notebook-lp notebook-lp-${lp.type || 'default'}`;
-    p.textContent = lp.content;
+    setHLText(p, lp.content);
     lpEl.appendChild(p);
   });
 

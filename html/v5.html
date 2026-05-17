@@ -1974,7 +1974,11 @@
     for (const item of sequence) {
       if (!state.tts_on) break;
       if (document.getElementById('notebook-house')?.classList.contains('hidden')) break;
-      await playTTS(item.file);
+      const container = item.elId ? document.getElementById(item.elId) : null;
+      const textEl = container
+        ? (item.index !== undefined ? (container.children[item.index] || container) : container)
+        : null;
+      await playTTS(item.file, { textElement: textEl });
       if (document.getElementById('notebook-house')?.classList.contains('hidden')) break;
     }
   }
@@ -3045,7 +3049,7 @@
     const introImage = GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse;
     _setGamePages(
       `<img class="game-image-main" src="${_assetPath(introImage)}" alt="">`,
-      `<div><div class="game-title">${_escape(entry.title || gameData.content?.game_name || '')}</div><div id="game-intro-text-mounted" class="game-text">${_escape(entry.intro_text || '')}</div></div>${_button('game-intro-btn-mounted', '繼續')}`
+      `<div><div class="game-title">${_escape(entry.title || gameData.content?.game_name || '')}</div><div id="game-intro-text-mounted" class="game-text">${renderHLText(entry.intro_text || '')}</div></div>${_button('game-intro-btn-mounted', '繼續')}`
     );
     const btn = document.getElementById('game-intro-btn-mounted');
     btn.onclick = () => renderGameScreen('vocab');
@@ -3066,7 +3070,7 @@
       const vocab = gameData.content.vocabulary_bank?.[id] || {};
       return `
         <div class="game-vocab-text-card" id="vocab-card-${idx}" style="margin-bottom:16px;padding:12px 0;border-bottom:1px solid rgba(90,58,16,0.1);">
-          <div style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;">${_escape(vocab.word || '')}</div>
+          <div class="vocab-word-hl" style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;">${renderHLText(vocab.word || '')}</div>
           <div style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${_escape(vocab.intro_text || vocab.description || '')}</div>
         </div>`;
     }).join('');
@@ -3123,7 +3127,7 @@
     }).join('');
     _setGamePages(
       `<div class="game-left-top">${topImage ? `<img class="game-character-img" id="game-answer-top-image" src="${_assetPath(topImage)}" alt="">` : ''}</div><div id="game-answer-visuals" class="game-left-bottom">${firstStateBottom}</div>`,
-      `<div><div id="game-question-text" class="game-text">${_escape(cVar.question_text || '')}</div><div id="game-fixed-sentence" class="game-text hidden">${_escape(fixed)}</div></div><div class="game-options">${options}</div>`
+      `<div><div id="game-question-text" class="game-text">${renderHLText(cVar.question_text || '')}</div><div id="game-fixed-sentence" class="game-text hidden">${renderHLText(fixed)}</div></div><div class="game-options">${options}</div>`
     );
     _bindOptionButtons();
     await _playGameTTS(pVar.question_audio, { textElement: document.getElementById('game-question-text') });
@@ -3254,7 +3258,7 @@
     ).join('');
     _setGamePages(
       `<div class="game-left-top"><img class="game-character-img" src="${_assetPath(p.character_assets?.sek_tau?.image)}" alt=""></div><div id="game-answer-visuals" class="game-left-bottom"></div>`,
-      `<div><div id="game-question-text" class="game-text">${_escape(gameData.content.fixed_sentence || '')}</div><div class="game-invoice">${invoice}</div></div><div class="game-options">${comboButtons}</div>`
+      `<div><div id="game-question-text" class="game-text">${renderHLText(gameData.content.fixed_sentence || '')}</div><div class="game-invoice">${invoice}</div></div><div class="game-options">${comboButtons}</div>`
     );
     document.querySelectorAll('.game-option-btn').forEach(btn => {
       btn.addEventListener('click', () => {
@@ -3292,7 +3296,7 @@
     const image = _feedbackImage();
     _setGamePages(
       image ? `<img class="game-image-main" src="${_assetPath(image)}" alt="">` : '',
-      `<div id="game-feedback-text-mounted" class="game-text">${_escape(text)}</div>${_button('game-feedback-btn-mounted', '返回地圖')}`
+      `<div id="game-feedback-text-mounted" class="game-text">${renderHLText(text)}</div>${_button('game-feedback-btn-mounted', '返回地圖')}`
     );
     const btn = document.getElementById('game-feedback-btn-mounted');
     btn.onclick = () => {
@@ -3343,7 +3347,7 @@
         : result;
       audio = p.feedback_assets[key]?.audio;
     }
-    await _playGameTTS(audio);
+    await _playGameTTS(audio, { textElement: document.getElementById('game-feedback-text-mounted') });
   }
 
   window.enterGame = enterGame;
