@@ -3071,7 +3071,7 @@
       return `
         <div class="game-vocab-text-card" id="vocab-card-${idx}" style="margin-bottom:16px;padding:12px 0;border-bottom:1px solid rgba(90,58,16,0.1);">
           <div class="vocab-word-hl" style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;">${renderHLText(vocab.word || '')}</div>
-          <div style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${_escape(vocab.intro_text || vocab.description || '')}</div>
+          <div style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${renderHLText(vocab.intro_text || vocab.description || '')}</div>
         </div>`;
     }).join('');
 
