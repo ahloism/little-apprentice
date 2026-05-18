@@ -10804,5 +10804,35 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>今次的冒險……</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
+  },
+  {
+    "filename": "entry_title_game_1_warehouse.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>商行收貨</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "entry_title_game_1_market.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>市集探案</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "entry_title_game_1_bridge.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>橋邊問路</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "entry_title_game_1_inn.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>客棧聽書</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "entry_title_game_1_dock.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>碼頭點貨</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
   }
 ]

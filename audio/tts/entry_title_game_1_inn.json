@@ -1,0 +1,21 @@
+{
+  "filename": "entry_title_game_1_inn.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "客棧",
+      "start_ms": 87.5,
+      "duration_ms": 487.5
+    },
+    {
+      "word": "聽",
+      "start_ms": 575.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "書",
+      "start_ms": 837.5,
+      "duration_ms": 362.5
+    }
+  ]
+}

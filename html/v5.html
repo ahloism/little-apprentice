@@ -3054,6 +3054,9 @@
     );
     const btn = document.getElementById('game-intro-btn-mounted');
     btn.onclick = () => renderGameScreen('vocab');
+    const titleAudio = `entry_title_${gameState.gameId}.mp3`;
+    const titleEl = document.querySelector('#game-house .game-title');
+    await _playGameTTS(titleAudio, { textElement: titleEl });
     const entryAudio = _entryAudioForGame();
     await _playGameTTS(entryAudio, { textElement: document.getElementById('game-intro-text-mounted') });
     if (document.getElementById('game-house')?.classList.contains('hidden')) return;
