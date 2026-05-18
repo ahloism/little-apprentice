@@ -3050,12 +3050,12 @@
     const introImage = GAME_ENTRY_IMAGES[gameState.location] || GAME_ENTRY_IMAGES.warehouse;
     _setGamePages(
       `<img class="game-image-main" src="${_assetPath(introImage)}" alt="">`,
-      `<div><div class="game-title">${_escape(entry.title || gameData.content?.game_name || '')}</div><div id="game-intro-text-mounted" class="game-text">${renderHLText(entry.intro_text || '')}</div></div>${_button('game-intro-btn-mounted', '繼續')}`
+      `<div><div class="game-title" id="game-intro-title-mounted">${renderHLText(entry.title || gameData.content?.game_name || '')}</div><div id="game-intro-text-mounted" class="game-text">${renderHLText(entry.intro_text || '')}</div></div>${_button('game-intro-btn-mounted', '繼續')}`
     );
     const btn = document.getElementById('game-intro-btn-mounted');
     btn.onclick = () => renderGameScreen('vocab');
     const titleAudio = `entry_title_${gameState.gameId}.mp3`;
-    const titleEl = document.querySelector('#game-house .game-title');
+    const titleEl = document.getElementById('game-intro-title-mounted');
     await _playGameTTS(titleAudio, { textElement: titleEl });
     const entryAudio = _entryAudioForGame();
     await _playGameTTS(entryAudio, { textElement: document.getElementById('game-intro-text-mounted') });
