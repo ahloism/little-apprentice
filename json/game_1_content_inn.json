@@ -9,7 +9,7 @@
   },
   "location": "inn",
   "game_type": "emotion_recognition",
-  "fixed_sentence": "你說，此人心裡是什麼感覺？",
+  "fixed_sentence": "",
   "character": "dou_sin_saang",
   "vocabulary_bank": {
     "hoi1_sam1": {
