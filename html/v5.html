@@ -3191,7 +3191,12 @@
   }
 
   async function _playOptionAudios(optionIds) {
-    await _playGameTTSSequence(optionIds.map(id => _optionAsset(id).audio));
+    for (const id of optionIds) {
+      const audio = _optionAsset(id).audio;
+      if (!audio) continue;
+      const btn = document.querySelector(`.game-option-btn[data-option-id="${id}"]`);
+      await _playGameTTS(audio, { textElement: btn });
+    }
   }
 
   function _bindOptionButtons() {
