@@ -10840,5 +10840,65 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>你說，此人心裡是什麼感覺？</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_hoi1_sam1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>開心</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_giu1_ngou6.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>驕傲</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_gam2_gik1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>感激</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_hoi6_paa3.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>害怕</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_sam1_heoi1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>心虛</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_daam1_sam1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>擔心</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_jau6_ging1_jau6_hei2.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>又驚又喜</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_gaan3_gaai3.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>尷尬</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_jau6_paa3_jau6_soeng2.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>又怕又想</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
+  },
+  {
+    "filename": "vocab_word_bat1_gam1_sam1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>不甘心</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
   }
 ]

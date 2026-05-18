@@ -3098,8 +3098,10 @@
     for (let i = 0; i < vocabIds.length; i++) {
       const id = vocabIds[i];
       const asset = gameData.presentation.vocabulary_assets?.[id] || {};
+      const textEl = document.getElementById(`vocab-card-${i}`);
+      const wordEl = textEl?.querySelector('.vocab-word-hl');
+      await _playGameTTS(`vocab_word_${id}.mp3`, { textElement: wordEl });
       if (asset.audio) {
-        const textEl = document.getElementById(`vocab-card-${i}`);
         await _playGameTTS(asset.audio, { textElement: textEl });
       }
     }
