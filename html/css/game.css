@@ -117,10 +117,6 @@
       align-self: flex-end;
       text-align: center;
     }
-    .game-option-btn:disabled {
-      opacity: 0.45;
-      cursor: default;
-    }
     .game-option-btn:not(:disabled):hover,
     .game-action-btn:hover {
       filter: brightness(0.96);
