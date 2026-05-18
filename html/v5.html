@@ -3130,7 +3130,7 @@
     const fixed = gameData.content.fixed_sentence || '';
     const options = optionIds.map((optionId, index) => {
       const asset = _optionAsset(optionId);
-      return `<button class="game-option-btn" data-option-id="${optionId}" disabled>${String.fromCharCode(65 + index)}. ${_escape(asset.word || asset.caption || optionId)}</button>`;
+      return `<button class="game-option-btn" data-option-id="${optionId}" disabled>${String.fromCharCode(65 + index)}. ${renderHLText(asset.word || asset.caption || optionId)}</button>`;
     }).join('');
     _setGamePages(
       `<div class="game-left-top">${topImage ? `<img class="game-character-img" id="game-answer-top-image" src="${_assetPath(topImage)}" alt="">` : ''}</div><div id="game-answer-visuals" class="game-left-bottom">${firstStateBottom}</div>`,
@@ -3267,7 +3267,7 @@
     const combos = cVar.combo_options || [];
     const comboButtons = combos.map((combo, index) => {
       const label = combo.measures.map(id => p.option_assets?.[id]?.word || id).join(' / ');
-      return `<button class="game-option-btn" data-combo-id="${combo.combo_id}" disabled>${String.fromCharCode(65 + index)}. ${_escape(label)}</button>`;
+      return `<button class="game-option-btn" data-combo-id="${combo.combo_id}" disabled>${String.fromCharCode(65 + index)}. ${renderHLText(label)}</button>`;
     }).join('');
     const invoice = cVar.items.map((item, index) =>
       `<div data-item-index="${index}">${_escape(_numberToChinese(item.quantity))}<span class="game-measure-blank">___</span>${_escape(item.item_word)}</div>`
