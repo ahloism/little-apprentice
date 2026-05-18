@@ -3,109 +3,94 @@
   "speaker": "Margaret",
   "words": [
     {
-      "word": "牌",
-      "start_ms": 93.75,
-      "duration_ms": 281.25
-    },
-    {
-      "word": "坊",
-      "start_ms": 375.0,
-      "duration_ms": 609.375
-    },
-    {
-      "word": "。",
-      "start_ms": 984.375,
-      "duration_ms": 109.375
-    },
-    {
       "word": "街",
-      "start_ms": 2062.5,
-      "duration_ms": 218.75
+      "start_ms": 75.0,
+      "duration_ms": 175.0
     },
     {
       "word": "上",
-      "start_ms": 2281.25,
-      "duration_ms": 359.375
+      "start_ms": 250.0,
+      "duration_ms": 287.5
     },
     {
       "word": "高",
-      "start_ms": 2640.625,
-      "duration_ms": 234.375
-    },
-    {
-      "word": "高",
-      "start_ms": 2875.0,
+      "start_ms": 537.5,
       "duration_ms": 187.5
     },
     {
+      "word": "高",
+      "start_ms": 725.0,
+      "duration_ms": 150.0
+    },
+    {
       "word": "的",
-      "start_ms": 3062.5,
-      "duration_ms": 125.0
+      "start_ms": 875.0,
+      "duration_ms": 100.0
     },
     {
       "word": "石門",
-      "start_ms": 3187.5,
-      "duration_ms": 796.875
+      "start_ms": 975.0,
+      "duration_ms": 637.5
     },
     {
       "word": "，",
-      "start_ms": 4125.0,
+      "start_ms": 1737.5,
       "duration_ms": 0.0
     },
     {
       "word": "上面",
-      "start_ms": 4125.0,
-      "duration_ms": 593.75
+      "start_ms": 1737.5,
+      "duration_ms": 475.0
     },
     {
       "word": "刻",
-      "start_ms": 4718.75,
-      "duration_ms": 250.0
+      "start_ms": 2212.5,
+      "duration_ms": 200.0
     },
     {
       "word": "著",
-      "start_ms": 4968.75,
-      "duration_ms": 265.625
+      "start_ms": 2412.5,
+      "duration_ms": 212.5
     },
     {
       "word": "字",
-      "start_ms": 5234.375,
-      "duration_ms": 406.25
+      "start_ms": 2625.0,
+      "duration_ms": 325.0
     },
     {
       "word": "，",
-      "start_ms": 5796.875,
+      "start_ms": 3075.0,
       "duration_ms": 0.0
     },
     {
       "word": "是",
-      "start_ms": 5796.875,
-      "duration_ms": 265.625
+      "start_ms": 3075.0,
+      "duration_ms": 212.5
     },
     {
       "word": "重要",
-      "start_ms": 6062.5,
-      "duration_ms": 453.125
+      "start_ms": 3287.5,
+      "duration_ms": 362.5
     },
     {
       "word": "地方",
-      "start_ms": 6515.625,
-      "duration_ms": 531.25
+      "start_ms": 3650.0,
+      "duration_ms": 425.0
     },
     {
       "word": "的",
-      "start_ms": 7046.875,
-      "duration_ms": 171.875
+      "start_ms": 4075.0,
+      "duration_ms": 137.5
     },
     {
       "word": "標誌",
-      "start_ms": 7218.75,
-      "duration_ms": 703.125
+      "start_ms": 4212.5,
+      "duration_ms": 550.0
     },
     {
       "word": "。",
-      "start_ms": 7921.875,
-      "duration_ms": 109.375
+      "start_ms": 4762.5,
+      "duration_ms": 87.5
     }
   ]
 }

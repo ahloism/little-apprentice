@@ -3,94 +3,79 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "藥",
-      "start_ms": 50.0,
-      "duration_ms": 272.75
-    },
-    {
-      "word": "鋪",
-      "start_ms": 322.75,
-      "duration_ms": 352.25
-    },
-    {
-      "word": "。",
-      "start_ms": 686.375,
-      "duration_ms": 79.562
-    },
-    {
       "word": "賣",
-      "start_ms": 1447.75,
-      "duration_ms": 261.312
+      "start_ms": 87.5,
+      "duration_ms": 212.5
     },
     {
       "word": "草藥",
-      "start_ms": 1709.062,
-      "duration_ms": 329.562
+      "start_ms": 300.0,
+      "duration_ms": 450.0
     },
     {
       "word": "的",
-      "start_ms": 2038.625,
-      "duration_ms": 79.562
+      "start_ms": 750.0,
+      "duration_ms": 125.0
     },
     {
       "word": "地方",
-      "start_ms": 2118.187,
-      "duration_ms": 500.0
+      "start_ms": 875.0,
+      "duration_ms": 612.5
     },
     {
       "word": "，",
-      "start_ms": 2743.187,
-      "duration_ms": 181.812
+      "start_ms": 1600.0,
+      "duration_ms": 0.0
     },
     {
       "word": "裡面",
-      "start_ms": 2925.0,
-      "duration_ms": 352.25
+      "start_ms": 1600.0,
+      "duration_ms": 400.0
     },
     {
       "word": "有",
-      "start_ms": 3277.25,
-      "duration_ms": 125.0
+      "start_ms": 2000.0,
+      "duration_ms": 187.5
     },
     {
       "word": "很",
-      "start_ms": 3402.25,
-      "duration_ms": 204.562
+      "start_ms": 2187.5,
+      "duration_ms": 212.5
     },
     {
       "word": "多",
-      "start_ms": 3606.812,
-      "duration_ms": 125.0
+      "start_ms": 2400.0,
+      "duration_ms": 150.0
     },
     {
       "word": "抽屜",
-      "start_ms": 3731.812,
-      "duration_ms": 420.437
+      "start_ms": 2550.0,
+      "duration_ms": 437.5
     },
     {
       "word": "裝著",
-      "start_ms": 4152.25,
-      "duration_ms": 386.375
+      "start_ms": 2987.5,
+      "duration_ms": 450.0
     },
     {
       "word": "各",
-      "start_ms": 4538.625,
-      "duration_ms": 159.062
+      "start_ms": 3437.5,
+      "duration_ms": 200.0
     },
     {
       "word": "種",
-      "start_ms": 4697.75,
-      "duration_ms": 147.687
+      "start_ms": 3637.5,
+      "duration_ms": 162.5
     },
     {
       "word": "藥材",
-      "start_ms": 4845.437,
-      "duration_ms": 431.812
+      "start_ms": 3800.0,
+      "duration_ms": 562.5
     },
     {
       "word": "。",
-      "start_ms": 5288.625,
-      "duration_ms": 79.562
+      "start_ms": 4362.5,
+      "duration_ms": 87.5
     }
   ]
 }

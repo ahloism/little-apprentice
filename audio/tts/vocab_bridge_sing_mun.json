@@ -3,89 +3,79 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "城門",
-      "start_ms": 50.0,
-      "duration_ms": 647.75
-    },
-    {
-      "word": "。",
-      "start_ms": 697.75,
-      "duration_ms": 79.562
-    },
-    {
       "word": "進出",
-      "start_ms": 1459.062,
-      "duration_ms": 363.625
+      "start_ms": 87.5,
+      "duration_ms": 325.0
     },
     {
       "word": "城市",
-      "start_ms": 1822.75,
-      "duration_ms": 352.25
+      "start_ms": 412.5,
+      "duration_ms": 375.0
     },
     {
       "word": "的",
-      "start_ms": 2175.0,
-      "duration_ms": 113.625
+      "start_ms": 787.5,
+      "duration_ms": 125.0
     },
     {
       "word": "大門",
-      "start_ms": 2288.625,
-      "duration_ms": 488.625
+      "start_ms": 912.5,
+      "duration_ms": 637.5
     },
     {
       "word": "，",
-      "start_ms": 2890.937,
+      "start_ms": 1662.5,
       "duration_ms": 0.0
     },
     {
       "word": "又",
-      "start_ms": 2890.937,
-      "duration_ms": 227.25
+      "start_ms": 1662.5,
+      "duration_ms": 212.5
     },
     {
       "word": "高",
-      "start_ms": 3118.187,
-      "duration_ms": 181.812
+      "start_ms": 1875.0,
+      "duration_ms": 212.5
     },
     {
       "word": "又",
-      "start_ms": 3300.0,
-      "duration_ms": 147.75
+      "start_ms": 2087.5,
+      "duration_ms": 200.0
     },
     {
       "word": "厚",
-      "start_ms": 3447.75,
-      "duration_ms": 352.25
+      "start_ms": 2287.5,
+      "duration_ms": 400.0
     },
     {
       "word": "，",
-      "start_ms": 3925.0,
+      "start_ms": 2775.0,
       "duration_ms": 0.0
     },
     {
       "word": "有",
-      "start_ms": 3925.0,
-      "duration_ms": 181.812
+      "start_ms": 2775.0,
+      "duration_ms": 175.0
     },
     {
       "word": "士兵",
-      "start_ms": 4106.812,
-      "duration_ms": 386.375
+      "start_ms": 2950.0,
+      "duration_ms": 425.0
     },
     {
       "word": "把",
-      "start_ms": 4493.187,
-      "duration_ms": 147.75
+      "start_ms": 3375.0,
+      "duration_ms": 200.0
     },
     {
       "word": "守",
-      "start_ms": 4640.937,
-      "duration_ms": 363.625
+      "start_ms": 3575.0,
+      "duration_ms": 400.0
     },
     {
       "word": "。",
-      "start_ms": 5004.562,
-      "duration_ms": 79.562
+      "start_ms": 3975.0,
+      "duration_ms": 87.5
     }
   ]
 }

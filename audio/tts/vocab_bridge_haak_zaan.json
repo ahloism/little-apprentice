@@ -3,89 +3,79 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "客棧",
-      "start_ms": 50.0,
-      "duration_ms": 647.75
-    },
-    {
-      "word": "。",
-      "start_ms": 731.812,
-      "duration_ms": 79.562
-    },
-    {
       "word": "給",
-      "start_ms": 1493.187,
-      "duration_ms": 215.875
+      "start_ms": 87.5,
+      "duration_ms": 150.0
     },
     {
       "word": "外地人",
-      "start_ms": 1709.062,
-      "duration_ms": 500.0
+      "start_ms": 237.5,
+      "duration_ms": 562.5
     },
     {
       "word": "住宿",
-      "start_ms": 2209.062,
-      "duration_ms": 329.562
+      "start_ms": 800.0,
+      "duration_ms": 350.0
     },
     {
       "word": "的",
-      "start_ms": 2538.625,
-      "duration_ms": 90.937
+      "start_ms": 1150.0,
+      "duration_ms": 112.5
     },
     {
       "word": "地方",
-      "start_ms": 2629.562,
-      "duration_ms": 500.0
+      "start_ms": 1262.5,
+      "duration_ms": 612.5
     },
     {
       "word": "，",
-      "start_ms": 3254.562,
+      "start_ms": 1962.5,
       "duration_ms": 0.0
     },
     {
       "word": "有",
-      "start_ms": 3254.562,
-      "duration_ms": 193.187
+      "start_ms": 1962.5,
+      "duration_ms": 187.5
     },
     {
       "word": "床",
-      "start_ms": 3447.75,
-      "duration_ms": 215.875
+      "start_ms": 2150.0,
+      "duration_ms": 262.5
     },
     {
       "word": "有",
-      "start_ms": 3663.625,
-      "duration_ms": 136.375
+      "start_ms": 2412.5,
+      "duration_ms": 162.5
     },
     {
       "word": "飯",
-      "start_ms": 3800.0,
-      "duration_ms": 363.625
+      "start_ms": 2575.0,
+      "duration_ms": 425.0
     },
     {
       "word": "，",
-      "start_ms": 4265.937,
+      "start_ms": 3112.5,
       "duration_ms": 0.0
     },
     {
       "word": "可以",
-      "start_ms": 4265.937,
-      "duration_ms": 352.25
+      "start_ms": 3112.5,
+      "duration_ms": 375.0
     },
     {
       "word": "過",
-      "start_ms": 4618.187,
-      "duration_ms": 170.437
+      "start_ms": 3487.5,
+      "duration_ms": 225.0
     },
     {
       "word": "夜",
-      "start_ms": 4788.625,
-      "duration_ms": 306.812
+      "start_ms": 3712.5,
+      "duration_ms": 350.0
     },
     {
       "word": "。",
-      "start_ms": 5106.812,
-      "duration_ms": 79.562
+      "start_ms": 4062.5,
+      "duration_ms": 87.5
     }
   ]
 }

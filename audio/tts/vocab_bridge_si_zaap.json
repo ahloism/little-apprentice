@@ -3,89 +3,79 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "市集",
-      "start_ms": 50.0,
-      "duration_ms": 602.25
-    },
-    {
-      "word": "。",
-      "start_ms": 652.25,
-      "duration_ms": 79.562
-    },
-    {
       "word": "很",
-      "start_ms": 1413.625,
-      "duration_ms": 227.25
+      "start_ms": 87.5,
+      "duration_ms": 187.5
     },
     {
       "word": "多",
-      "start_ms": 1640.937,
-      "duration_ms": 125.0
+      "start_ms": 275.0,
+      "duration_ms": 150.0
     },
     {
       "word": "攤檔",
-      "start_ms": 1765.937,
-      "duration_ms": 409.062
+      "start_ms": 425.0,
+      "duration_ms": 500.0
     },
     {
       "word": "聚",
-      "start_ms": 2175.0,
-      "duration_ms": 159.062
+      "start_ms": 925.0,
+      "duration_ms": 175.0
     },
     {
       "word": "在一起",
-      "start_ms": 2334.062,
-      "duration_ms": 568.187
+      "start_ms": 1100.0,
+      "duration_ms": 737.5
     },
     {
       "word": "，",
-      "start_ms": 3027.25,
-      "duration_ms": 193.187
+      "start_ms": 1962.5,
+      "duration_ms": 0.0
     },
     {
       "word": "熱",
-      "start_ms": 3220.437,
-      "duration_ms": 181.812
+      "start_ms": 1962.5,
+      "duration_ms": 200.0
     },
     {
       "word": "熱鬧",
-      "start_ms": 3402.25,
-      "duration_ms": 272.75
+      "start_ms": 2162.5,
+      "duration_ms": 375.0
     },
     {
       "word": "鬧",
-      "start_ms": 3675.0,
-      "duration_ms": 204.562
+      "start_ms": 2537.5,
+      "duration_ms": 237.5
     },
     {
       "word": "地",
-      "start_ms": 3879.562,
-      "duration_ms": 170.437
+      "start_ms": 2775.0,
+      "duration_ms": 187.5
     },
     {
       "word": "賣",
-      "start_ms": 4050.0,
-      "duration_ms": 204.562
+      "start_ms": 2962.5,
+      "duration_ms": 225.0
     },
     {
       "word": "各",
-      "start_ms": 4254.562,
-      "duration_ms": 181.812
+      "start_ms": 3187.5,
+      "duration_ms": 212.5
     },
     {
       "word": "種",
-      "start_ms": 4436.375,
-      "duration_ms": 159.062
+      "start_ms": 3400.0,
+      "duration_ms": 212.5
     },
     {
       "word": "東西",
-      "start_ms": 4595.437,
-      "duration_ms": 454.562
+      "start_ms": 3612.5,
+      "duration_ms": 537.5
     },
     {
       "word": "。",
-      "start_ms": 5061.375,
-      "duration_ms": 79.562
+      "start_ms": 4150.0,
+      "duration_ms": 87.5
     }
   ]
 }

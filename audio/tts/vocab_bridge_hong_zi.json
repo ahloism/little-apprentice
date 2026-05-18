@@ -3,99 +3,89 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "巷子",
-      "start_ms": 50.0,
-      "duration_ms": 647.75
-    },
-    {
-      "word": "。",
-      "start_ms": 720.437,
-      "duration_ms": 79.562
-    },
-    {
       "word": "兩",
-      "start_ms": 1481.812,
-      "duration_ms": 238.625
+      "start_ms": 87.5,
+      "duration_ms": 212.5
     },
     {
       "word": "排",
-      "start_ms": 1720.437,
-      "duration_ms": 193.187
+      "start_ms": 300.0,
+      "duration_ms": 212.5
     },
     {
       "word": "房子",
-      "start_ms": 1913.625,
-      "duration_ms": 363.625
+      "start_ms": 512.5,
+      "duration_ms": 437.5
     },
     {
       "word": "之間",
-      "start_ms": 2277.25,
-      "duration_ms": 363.625
+      "start_ms": 950.0,
+      "duration_ms": 425.0
     },
     {
       "word": "窄",
-      "start_ms": 2640.937,
-      "duration_ms": 170.437
+      "start_ms": 1375.0,
+      "duration_ms": 187.5
     },
     {
       "word": "窄",
-      "start_ms": 2811.375,
-      "duration_ms": 136.375
+      "start_ms": 1562.5,
+      "duration_ms": 162.5
     },
     {
       "word": "的",
-      "start_ms": 2947.75,
-      "duration_ms": 68.187
+      "start_ms": 1725.0,
+      "duration_ms": 125.0
     },
     {
       "word": "通道",
-      "start_ms": 3015.937,
-      "duration_ms": 511.375
+      "start_ms": 1850.0,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 3663.625,
-      "duration_ms": 90.937
+      "start_ms": 2575.0,
+      "duration_ms": 0.0
     },
     {
       "word": "人",
-      "start_ms": 3754.562,
-      "duration_ms": 193.187
+      "start_ms": 2575.0,
+      "duration_ms": 187.5
     },
     {
       "word": "要",
-      "start_ms": 3947.75,
-      "duration_ms": 113.625
+      "start_ms": 2762.5,
+      "duration_ms": 125.0
     },
     {
       "word": "側身",
-      "start_ms": 4061.375,
-      "duration_ms": 329.562
+      "start_ms": 2887.5,
+      "duration_ms": 325.0
     },
     {
       "word": "才",
-      "start_ms": 4390.937,
-      "duration_ms": 215.875
+      "start_ms": 3212.5,
+      "duration_ms": 225.0
     },
     {
       "word": "過",
-      "start_ms": 4606.812,
-      "duration_ms": 159.062
+      "start_ms": 3437.5,
+      "duration_ms": 187.5
     },
     {
       "word": "得",
-      "start_ms": 4765.937,
-      "duration_ms": 102.25
+      "start_ms": 3625.0,
+      "duration_ms": 137.5
     },
     {
       "word": "去",
-      "start_ms": 4868.187,
-      "duration_ms": 329.562
+      "start_ms": 3762.5,
+      "duration_ms": 362.5
     },
     {
       "word": "。",
-      "start_ms": 5209.062,
-      "duration_ms": 79.562
+      "start_ms": 4125.0,
+      "duration_ms": 87.5
     }
   ]
 }

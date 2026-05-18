@@ -3,74 +3,64 @@
   "speaker": "Margaret",
   "words": [
     {
-      "word": "城樓",
-      "start_ms": 109.375,
-      "duration_ms": 843.75
-    },
-    {
-      "word": "。",
-      "start_ms": 953.125,
-      "duration_ms": 109.375
-    },
-    {
       "word": "建",
-      "start_ms": 2046.875,
-      "duration_ms": 234.375
-    },
-    {
-      "word": "在",
-      "start_ms": 2281.25,
+      "start_ms": 87.5,
       "duration_ms": 187.5
     },
     {
+      "word": "在",
+      "start_ms": 275.0,
+      "duration_ms": 150.0
+    },
+    {
       "word": "城牆",
-      "start_ms": 2468.75,
-      "duration_ms": 562.5
+      "start_ms": 425.0,
+      "duration_ms": 450.0
     },
     {
       "word": "上",
-      "start_ms": 3031.25,
-      "duration_ms": 296.875
+      "start_ms": 875.0,
+      "duration_ms": 237.5
     },
     {
       "word": "的",
-      "start_ms": 3328.125,
-      "duration_ms": 125.0
+      "start_ms": 1112.5,
+      "duration_ms": 100.0
     },
     {
       "word": "樓",
-      "start_ms": 3453.125,
-      "duration_ms": 468.75
+      "start_ms": 1212.5,
+      "duration_ms": 375.0
     },
     {
       "word": "，",
-      "start_ms": 4078.125,
+      "start_ms": 1712.5,
       "duration_ms": 0.0
     },
     {
       "word": "可以",
-      "start_ms": 4078.125,
-      "duration_ms": 437.5
+      "start_ms": 1712.5,
+      "duration_ms": 350.0
     },
     {
       "word": "俯瞰",
-      "start_ms": 4515.625,
-      "duration_ms": 578.125
+      "start_ms": 2062.5,
+      "duration_ms": 462.5
     },
     {
       "word": "整個",
-      "start_ms": 5093.75,
-      "duration_ms": 390.625
+      "start_ms": 2525.0,
+      "duration_ms": 312.5
     },
     {
       "word": "城市",
-      "start_ms": 5484.375,
-      "duration_ms": 796.875
+      "start_ms": 2837.5,
+      "duration_ms": 637.5
     },
     {
       "word": "。",
-      "start_ms": 6281.25,
-      "duration_ms": 109.375
+      "start_ms": 3475.0,
+      "duration_ms": 87.5
     }
   ]
 }

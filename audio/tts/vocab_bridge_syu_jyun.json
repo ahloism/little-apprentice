@@ -3,74 +3,64 @@
   "speaker": "Margaret",
   "words": [
     {
-      "word": "書院",
-      "start_ms": 109.375,
-      "duration_ms": 984.375
-    },
-    {
-      "word": "。",
-      "start_ms": 1093.75,
-      "duration_ms": 109.375
-    },
-    {
       "word": "讀書",
-      "start_ms": 2171.875,
-      "duration_ms": 421.875
+      "start_ms": 75.0,
+      "duration_ms": 337.5
     },
     {
       "word": "求學",
-      "start_ms": 2593.75,
-      "duration_ms": 515.625
+      "start_ms": 412.5,
+      "duration_ms": 412.5
     },
     {
       "word": "的",
-      "start_ms": 3109.375,
-      "duration_ms": 156.25
+      "start_ms": 825.0,
+      "duration_ms": 125.0
     },
     {
       "word": "地方",
-      "start_ms": 3265.625,
-      "duration_ms": 750.0
+      "start_ms": 950.0,
+      "duration_ms": 600.0
     },
     {
       "word": "，",
-      "start_ms": 4171.875,
-      "duration_ms": 46.875
+      "start_ms": 1675.0,
+      "duration_ms": 50.0
     },
     {
       "word": "學生",
-      "start_ms": 4218.75,
-      "duration_ms": 562.5
+      "start_ms": 1725.0,
+      "duration_ms": 450.0
     },
     {
       "word": "在",
-      "start_ms": 4781.25,
-      "duration_ms": 203.125
+      "start_ms": 2175.0,
+      "duration_ms": 162.5
     },
     {
       "word": "這裡",
-      "start_ms": 4984.375,
-      "duration_ms": 500.0
+      "start_ms": 2337.5,
+      "duration_ms": 412.5
     },
     {
       "word": "跟",
-      "start_ms": 5484.375,
-      "duration_ms": 265.625
+      "start_ms": 2750.0,
+      "duration_ms": 212.5
     },
     {
       "word": "先生",
-      "start_ms": 5750.0,
-      "duration_ms": 515.625
+      "start_ms": 2962.5,
+      "duration_ms": 425.0
     },
     {
       "word": "學習",
-      "start_ms": 6265.625,
-      "duration_ms": 593.75
+      "start_ms": 3387.5,
+      "duration_ms": 475.0
     },
     {
       "word": "。",
-      "start_ms": 6859.375,
-      "duration_ms": 109.375
+      "start_ms": 3862.5,
+      "duration_ms": 87.5
     }
   ]
 }

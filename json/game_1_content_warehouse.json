@@ -56,7 +56,7 @@
         "usage": "切開來煮菜",
         "source": "從豬身上切下來"
       },
-      "intro_text": "粉紅一塊，切開來煮菜的肉",
+      "intro_text": "粉紅一塊，切來煮菜的肉",
       "speaker": "narrator"
     },
     "duck_eggs": {
@@ -254,7 +254,7 @@
         "usage": "煮湯炒菜都有鮮味",
         "source": "從水裡撈上來"
       },
-      "intro_text": "彎彎小小，有殼有鬚的水裡東西",
+      "intro_text": "彎彎小小，有殼有鬚的水產",
       "speaker": "narrator"
     },
     "crab": {
@@ -320,7 +320,7 @@
         "usage": "削皮後直接吃",
         "source": "樹上結的果子"
       },
-      "intro_text": "淡黃圓圓，咬下去有很多汁的果子",
+      "intro_text": "淡黃偏綠，咬下去很多汁的果子",
       "speaker": "narrator"
     },
     "peach": {
@@ -331,7 +331,7 @@
         "usage": "洗乾淨後直接吃",
         "source": "樹上結的果子"
       },
-      "intro_text": "圓圓帶毛，熟了會甜的果子",
+      "intro_text": "表皮有細毛，果肉甜甜的果子",
       "speaker": "narrator"
     },
     "herbal_tea": {

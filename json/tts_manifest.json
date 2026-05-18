@@ -8161,7 +8161,7 @@
   },
   {
     "filename": "vocab_crab.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有硬殼和大鉗子的水產。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>橫著走，有硬殼和大鉗子的水裡東西</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
@@ -10327,181 +10327,181 @@
   },
   {
     "filename": "vocab_bridge_soeng_hang.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>商行。買賣貨物的地方，裡面有掌櫃和夥計打理生意。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>買賣貨物的地方，裡面有掌櫃和夥計打理生意。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_si_zaap.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>市集。很多攤檔聚在一起，熱熱鬧鬧地賣各種東西。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>很多攤檔聚在一起，熱熱鬧鬧地賣各種東西。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_haak_zaan.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>客棧。給外地人住宿的地方，有床有飯，可以過夜。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>給外地人住宿的地方，有床有飯，可以過夜。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_maa_tau.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>碼頭。船隻停靠的地方，工人在這裡搬運貨物上落。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>船隻停靠的地方，工人在這裡搬運貨物上落。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_cong_fu.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>倉庫。存放貨物的大房間，裡面堆滿箱子和麻袋。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>存放貨物的大房間，裡面堆滿箱子和麻袋。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_maa_geoi.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>馬廄。養馬的地方，有草料和馬糞的氣味。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>養馬的地方，有草料和馬糞的氣味。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_kiu.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>橋。跨過河面讓人通行的建築，可以走到對岸。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>跨過河面讓人通行的建築，可以走到對岸。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_hong_zi.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>巷子。兩排房子之間窄窄的通道，人要側身才過得去。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>兩排房子之間窄窄的通道，人要側身才過得去。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_gaai_dou.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>街道。城裡寬闊的通道，兩旁有店鋪和行人。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>城裡寬闊的通道，兩旁有店鋪和行人。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_caa_seoi_taan.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>茶水攤。在街邊擺攤賣茶水的地方，有茶壺和茶碗，客人站著或坐著喝。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>在街邊擺攤賣茶水的地方，有茶壺和茶碗，客人站著或坐著喝。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_zau_gun.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>酒館。喝酒吃飯的地方，晚上特別熱鬧。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>喝酒吃飯的地方，晚上特別熱鬧。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_sik_si.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>食肆。專門賣飯菜的地方，肚子餓了可以進去吃。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>專門賣飯菜的地方，肚子餓了可以進去吃。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_joek_pou.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>藥鋪。賣草藥的地方，裡面有很多抽屜裝著各種藥材。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>賣草藥的地方，裡面有很多抽屜裝著各種藥材。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_bou_zong.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>布莊。賣布料的地方，掛著各色各樣的布匹。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>賣布料的地方，掛著各色各樣的布匹。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_loeng_dim.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>糧店。賣米糧的地方，有很多大袋米和雜糧。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>賣米糧的地方，有很多大袋米和雜糧。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_cin_zong.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>錢莊。可以換錢或存錢的地方，掌櫃算盤打得很快。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>可以換錢或存錢的地方，掌櫃算盤打得很快。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_dong_pou.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>當鋪。可以把東西押在這裡換錢的地方。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>可以把東西押在這裡換錢的地方。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_dou_fong.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>賭坊。有人在裡面賭錢的地方，門口常有人進進出出。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>有人在裡面賭錢的地方，門口常有人進進出出。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_miu_jyu.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>廟宇。供奉神明的地方，有香爐和牌位，人們來這裡拜神。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>供奉神明的地方，有香爐和牌位，人們來這裡拜神。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_sing_mun.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>城門。進出城市的大門，又高又厚，有士兵把守。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>進出城市的大門，又高又厚，有士兵把守。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_gun_fu.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>官府。官員處理公務的地方，大門前有衙差站崗。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>官員處理公務的地方，大門前有衙差站崗。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_syu_jyun.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>書院。讀書求學的地方，學生在這裡跟先生學習。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>讀書求學的地方，學生在這裡跟先生學習。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_caa_lau.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>茶樓。比茶館更大的喝茶地方，有點心可以叫來吃。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>比茶館更大的喝茶地方，有點心可以叫來吃。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_syut_syu_toi.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>說書台。說書人站在台上講故事，台下坐滿來聽書的人。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>說書人站在台上講故事，台下坐滿來聽書的人。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_jik_zaam.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>驛站。供傳信人和旅客歇腳換馬的地方。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>供傳信人和旅客歇腳換馬的地方。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_ji_gun.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>醫館。看病的地方，大夫在這裡替病人診脈開藥。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>看病的地方，大夫在這裡替病人診脈開藥。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_faan_si_ci.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-WanLungNeural'><prosody rate='+10%' pitch='+1st'>化糞池。處理污物的地方，氣味很難聞，人們都不願靠近。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>處理污物的地方，氣味很難聞，人們都不願靠近。</prosody></voice></speak>",
     "voice": "zh-HK-WanLungNeural",
     "speaker": "Edmund"
   },
   {
     "filename": "vocab_bridge_gwong_coeng.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>廣場。空曠的大空地，人們在這裡聚集、做買賣或看熱鬧。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>空曠的大空地，人們在這裡聚集、做買賣或看熱鬧。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_paai_fong.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>牌坊。街上高高的石門，上面刻著字，是重要地方的標誌。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>街上高高的石門，上面刻著字，是重要地方的標誌。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },
   {
     "filename": "vocab_bridge_sing_lau.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='-20%' pitch='-1st'>城樓。建在城牆上的樓，可以俯瞰整個城市。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>建在城牆上的樓，可以俯瞰整個城市。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "Margaret"
   },

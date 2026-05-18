@@ -3,74 +3,64 @@
   "speaker": "Edmund",
   "words": [
     {
-      "word": "街道",
-      "start_ms": 50.0,
-      "duration_ms": 602.25
-    },
-    {
-      "word": "。",
-      "start_ms": 720.437,
-      "duration_ms": 79.562
-    },
-    {
       "word": "城",
-      "start_ms": 1481.812,
-      "duration_ms": 272.75
+      "start_ms": 87.5,
+      "duration_ms": 250.0
     },
     {
       "word": "裡",
-      "start_ms": 1754.562,
-      "duration_ms": 113.625
+      "start_ms": 337.5,
+      "duration_ms": 175.0
     },
     {
       "word": "寬闊",
-      "start_ms": 1868.187,
-      "duration_ms": 352.25
+      "start_ms": 512.5,
+      "duration_ms": 400.0
     },
     {
       "word": "的",
-      "start_ms": 2220.437,
-      "duration_ms": 79.562
+      "start_ms": 912.5,
+      "duration_ms": 125.0
     },
     {
       "word": "通道",
-      "start_ms": 2300.0,
-      "duration_ms": 522.75
+      "start_ms": 1037.5,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 2947.75,
+      "start_ms": 1750.0,
       "duration_ms": 0.0
     },
     {
       "word": "兩旁",
-      "start_ms": 2947.75,
-      "duration_ms": 397.687
+      "start_ms": 1750.0,
+      "duration_ms": 475.0
     },
     {
       "word": "有",
-      "start_ms": 3345.437,
-      "duration_ms": 125.0
+      "start_ms": 2225.0,
+      "duration_ms": 137.5
     },
     {
       "word": "店鋪",
-      "start_ms": 3470.437,
-      "duration_ms": 375.0
+      "start_ms": 2362.5,
+      "duration_ms": 425.0
     },
     {
       "word": "和",
-      "start_ms": 3845.437,
-      "duration_ms": 136.375
+      "start_ms": 2787.5,
+      "duration_ms": 175.0
     },
     {
       "word": "行人",
-      "start_ms": 3981.812,
-      "duration_ms": 454.562
+      "start_ms": 2962.5,
+      "duration_ms": 612.5
     },
     {
       "word": "。",
-      "start_ms": 4436.375,
-      "duration_ms": 79.562
+      "start_ms": 3575.0,
+      "duration_ms": 87.5
     }
   ]
 }

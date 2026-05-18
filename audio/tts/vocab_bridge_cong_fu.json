@@ -3,74 +3,64 @@
   "speaker": "Margaret",
   "words": [
     {
-      "word": "倉庫",
-      "start_ms": 109.375,
-      "duration_ms": 875.0
-    },
-    {
-      "word": "。",
-      "start_ms": 984.375,
-      "duration_ms": 109.375
-    },
-    {
       "word": "存放",
-      "start_ms": 2078.125,
-      "duration_ms": 546.875
+      "start_ms": 87.5,
+      "duration_ms": 425.0
     },
     {
       "word": "貨物",
-      "start_ms": 2625.0,
-      "duration_ms": 421.875
+      "start_ms": 512.5,
+      "duration_ms": 337.5
     },
     {
       "word": "的",
-      "start_ms": 3046.875,
-      "duration_ms": 156.25
+      "start_ms": 850.0,
+      "duration_ms": 125.0
     },
     {
       "word": "大",
-      "start_ms": 3203.125,
-      "duration_ms": 250.0
+      "start_ms": 975.0,
+      "duration_ms": 212.5
     },
     {
       "word": "房間",
-      "start_ms": 3453.125,
-      "duration_ms": 828.125
+      "start_ms": 1187.5,
+      "duration_ms": 662.5
     },
     {
       "word": "，",
-      "start_ms": 4390.625,
+      "start_ms": 1937.5,
       "duration_ms": 0.0
     },
     {
       "word": "裡面",
-      "start_ms": 4390.625,
-      "duration_ms": 515.625
+      "start_ms": 1937.5,
+      "duration_ms": 412.5
     },
     {
       "word": "堆滿",
-      "start_ms": 4906.25,
-      "duration_ms": 453.125
+      "start_ms": 2350.0,
+      "duration_ms": 350.0
     },
     {
       "word": "箱子",
-      "start_ms": 5359.375,
-      "duration_ms": 515.625
+      "start_ms": 2700.0,
+      "duration_ms": 412.5
     },
     {
       "word": "和",
-      "start_ms": 5875.0,
-      "duration_ms": 218.75
+      "start_ms": 3112.5,
+      "duration_ms": 187.5
     },
     {
       "word": "麻袋",
-      "start_ms": 6093.75,
-      "duration_ms": 765.625
+      "start_ms": 3300.0,
+      "duration_ms": 612.5
     },
     {
       "word": "。",
-      "start_ms": 6859.375,
-      "duration_ms": 109.375
+      "start_ms": 3912.5,
+      "duration_ms": 87.5
     }
   ]
 }

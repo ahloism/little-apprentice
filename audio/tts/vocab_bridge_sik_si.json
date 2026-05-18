@@ -3,84 +3,69 @@
   "speaker": "Margaret",
   "words": [
     {
-      "word": "食",
-      "start_ms": 109.375,
-      "duration_ms": 281.25
-    },
-    {
-      "word": "肆",
-      "start_ms": 390.625,
-      "duration_ms": 500.0
-    },
-    {
-      "word": "。",
-      "start_ms": 890.625,
-      "duration_ms": 109.375
-    },
-    {
       "word": "專門",
-      "start_ms": 1984.375,
-      "duration_ms": 468.75
+      "start_ms": 87.5,
+      "duration_ms": 375.0
     },
     {
       "word": "賣",
-      "start_ms": 2453.125,
-      "duration_ms": 250.0
+      "start_ms": 462.5,
+      "duration_ms": 200.0
     },
     {
       "word": "飯菜",
-      "start_ms": 2703.125,
-      "duration_ms": 578.125
+      "start_ms": 662.5,
+      "duration_ms": 462.5
     },
     {
       "word": "的",
-      "start_ms": 3281.25,
-      "duration_ms": 140.625
+      "start_ms": 1125.0,
+      "duration_ms": 112.5
     },
     {
       "word": "地方",
-      "start_ms": 3421.875,
-      "duration_ms": 734.375
+      "start_ms": 1237.5,
+      "duration_ms": 587.5
     },
     {
       "word": "，",
-      "start_ms": 4281.25,
+      "start_ms": 1925.0,
       "duration_ms": 0.0
     },
     {
       "word": "肚子",
-      "start_ms": 4281.25,
-      "duration_ms": 500.0
+      "start_ms": 1925.0,
+      "duration_ms": 400.0
     },
     {
       "word": "餓",
-      "start_ms": 4781.25,
-      "duration_ms": 281.25
+      "start_ms": 2325.0,
+      "duration_ms": 225.0
     },
     {
       "word": "了",
-      "start_ms": 5062.5,
-      "duration_ms": 218.75
+      "start_ms": 2550.0,
+      "duration_ms": 187.5
     },
     {
       "word": "可以",
-      "start_ms": 5281.25,
-      "duration_ms": 406.25
+      "start_ms": 2737.5,
+      "duration_ms": 325.0
     },
     {
       "word": "進去",
-      "start_ms": 5687.5,
-      "duration_ms": 500.0
+      "start_ms": 3062.5,
+      "duration_ms": 400.0
     },
     {
       "word": "吃",
-      "start_ms": 6187.5,
-      "duration_ms": 406.25
+      "start_ms": 3462.5,
+      "duration_ms": 325.0
     },
     {
       "word": "。",
-      "start_ms": 6593.75,
-      "duration_ms": 109.375
+      "start_ms": 3787.5,
+      "duration_ms": 87.5
     }
   ]
 }
