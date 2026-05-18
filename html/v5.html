@@ -3136,7 +3136,11 @@
     _bindOptionButtons();
     await _playGameTTS(pVar.question_audio, { textElement: document.getElementById('game-question-text') });
     _showSecondStateVisuals(kind, optionIds);
-    document.getElementById('game-fixed-sentence')?.classList.remove('hidden');
+    const fixedEl = document.getElementById('game-fixed-sentence');
+    fixedEl?.classList.remove('hidden');
+    if (fixedEl && gameData.content.fixed_sentence) {
+      await _playGameTTS(`fixed_${gameState.gameId}.mp3`, { textElement: fixedEl });
+    }
     await _playOptionAudios(optionIds);
     _unlockGameOptions();
   }

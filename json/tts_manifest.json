@@ -10834,5 +10834,11 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>碼頭點貨</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
+  },
+  {
+    "filename": "fixed_game_1_inn.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>你說，此人心裡是什麼感覺？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuMaanNeural",
+    "speaker": "narrator"
   }
 ]
