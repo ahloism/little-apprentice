@@ -1,0 +1,16 @@
+{
+  "filename": "vocab_word_dou_fong.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "賭",
+      "start_ms": 50.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "坊",
+      "start_ms": 287.5,
+      "duration_ms": 487.5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "filename": "vocab_word_roasted_peanuts.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "炒",
+      "start_ms": 75.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "花生",
+      "start_ms": 312.5,
+      "duration_ms": 662.5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "filename": "vocab_word_bou_zong.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "布",
+      "start_ms": 75.0,
+      "duration_ms": 187.5
+    },
+    {
+      "word": "莊",
+      "start_ms": 262.5,
+      "duration_ms": 512.5
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "filename": "vocab_word_joek_pou.mp3",
+  "speaker": "narrator",
+  "words": [
+    {
+      "word": "藥",
+      "start_ms": 87.5,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "鋪",
+      "start_ms": 350.0,
+      "duration_ms": 375.0
+    }
+  ]
+}
