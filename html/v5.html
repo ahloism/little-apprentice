@@ -3075,7 +3075,7 @@
       return `
         <div class="game-vocab-text-card" id="vocab-card-${idx}" style="margin-bottom:16px;padding:12px 0;border-bottom:1px solid rgba(90,58,16,0.1);">
           <div class="vocab-word-hl" style="font-family:var(--serif);font-size:22px;font-weight:700;color:var(--ink);margin-bottom:6px;">${renderHLText(vocab.word || '')}</div>
-          <div style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${renderHLText(vocab.intro_text || vocab.description || '')}</div>
+          <div id="vocab-desc-${idx}" style="font-family:var(--hei);font-size:16px;color:var(--ink-soft);line-height:1.6;">${renderHLText(vocab.intro_text || vocab.description || '')}</div>
         </div>`;
     }).join('');
 
@@ -3100,9 +3100,10 @@
       const asset = gameData.presentation.vocabulary_assets?.[id] || {};
       const textEl = document.getElementById(`vocab-card-${i}`);
       const wordEl = textEl?.querySelector('.vocab-word-hl');
+      const descEl = document.getElementById(`vocab-desc-${i}`);
       await _playGameTTS(`vocab_word_${id}.mp3`, { textElement: wordEl });
       if (asset.audio) {
-        await _playGameTTS(asset.audio, { textElement: textEl });
+        await _playGameTTS(asset.audio, { textElement: descEl });
       }
     }
 
