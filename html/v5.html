@@ -3179,7 +3179,7 @@
     return optionIds.map(optionId => {
       const asset = _optionAsset(optionId);
       const image = asset.image || _vocabImageForOption(optionId);
-      return `<div class="game-left-item">${image ? `<img src="${_assetPath(image)}" alt="">` : ''}<span>${_escape(asset.caption || asset.word || '')}</span></div>`;
+      return `<div class="game-left-item">${image ? `<img src="${_assetPath(image)}" alt="">` : ''}</div>`;
     }).join('');
   }
 
