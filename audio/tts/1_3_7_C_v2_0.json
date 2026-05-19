@@ -15,51 +15,56 @@
     {
       "word": "從",
       "start_ms": 450.0,
-      "duration_ms": 237.5
+      "duration_ms": 225.0
     },
     {
       "word": "旁邊",
-      "start_ms": 687.5,
+      "start_ms": 675.0,
       "duration_ms": 462.5
     },
     {
       "word": "走",
-      "start_ms": 1150.0,
+      "start_ms": 1137.5,
       "duration_ms": 200.0
     },
     {
       "word": "過",
-      "start_ms": 1350.0,
+      "start_ms": 1337.5,
       "duration_ms": 362.5
     },
     {
       "word": "，",
-      "start_ms": 1837.5,
+      "start_ms": 1825.0,
       "duration_ms": 0.0
     },
     {
       "word": "瞥",
-      "start_ms": 1837.5,
+      "start_ms": 1825.0,
       "duration_ms": 225.0
     },
     {
       "word": "了",
-      "start_ms": 2062.5,
+      "start_ms": 2050.0,
       "duration_ms": 125.0
     },
     {
       "word": "一",
-      "start_ms": 2187.5,
-      "duration_ms": 137.5
+      "start_ms": 2175.0,
+      "duration_ms": 125.0
     },
     {
-      "word": "眼竹簍",
-      "start_ms": 2325.0,
-      "duration_ms": 487.5
+      "word": "眼竹",
+      "start_ms": 2300.0,
+      "duration_ms": 400.0
+    },
+    {
+      "word": "籮",
+      "start_ms": 2700.0,
+      "duration_ms": 337.5
     },
     {
       "word": "：",
-      "start_ms": 2812.5,
+      "start_ms": 3037.5,
       "duration_ms": 87.5
     }
   ]
