@@ -1570,7 +1570,7 @@
     const forcedStartEvents = new Set(['1_4', '1_7']);
     const sameEventSavedScene = getSavedSceneForEvent(eventId);
     const startScene = explicitSceneId || (forcedStartEvents.has(eventId) ? _storyStartScene() : (sameEventSavedScene || _storyStartScene()));
-    await checkAsuiStoryRules(eventId);
+    await checkAsuiStoryRules({ eventId });
     await renderScene(startScene);
   }
 
@@ -1625,6 +1625,7 @@
     };
     const handler = handlers[type] || handleFeedbackScene;
     await handler(scene, presentation, manifestScene, evaluation);
+    await checkAsuiStoryRules({ sceneId }); // Story rules must not call renderScene() to avoid recursive scene lifecycle loops.
   }
 
   async function handleStoryScene(scene, presentation, manifestScene) {
@@ -1634,13 +1635,6 @@
     _renderAdvance(presentation?.advance_label, async () => {
       const amount = _rewardAmount(manifestScene);
       if (amount) claimReward('scene_reward_' + scene.scene_id, amount);
-      if (['1_1_5_A', '1_1_5_B', '1_1_5_C'].includes(scene.scene_id)) {
-        const seenKey = 'asui_seen_auto_M1';
-        if (!localStorage.getItem(seenKey)) {
-          await new Promise(resolve => playAsuiDialogue('M1', resolve));
-          localStorage.setItem(seenKey, '1');
-        }
-      }
       if (scene.next_scene) renderScene(scene.next_scene);
     });
   }
@@ -1768,41 +1762,48 @@
     await handleStoryScene(scene, presentation, manifestScene);
   }
 
-  async function checkAsuiStoryRules(eventId) {
-    const conditionMap = {
-      '1_4': 'before_event_1_4',
-      '1_7': 'before_event_1_7',
-    };
-    const condition = conditionMap[_normalizeStoryEventId(eventId)];
-    if (!condition || !globalData.asui_manifest) return;
-    const rule = (globalData.asui_manifest.rules || []).find(item => item.room === 'story' && item.trigger_condition === condition);
-    if (!rule) return;
-    const seenKey = `asui_seen_${rule.rule_id}`;
-    if (rule.repeat === false && localStorage.getItem(seenKey)) return;
-    await _showAsuiStoryDialogue(rule);
-    if (rule.repeat === false) localStorage.setItem(seenKey, '1');
-  }
+  // Story-room Asui rules are lifecycle-based:
+  // before-event rules run from enterStory({ eventId })
+  // after-scene rules run after renderScene({ sceneId })
+  async function checkAsuiStoryRules({ eventId, sceneId } = {}) {
+    if (!globalData.asui_manifest) return;
 
-  async function _showAsuiStoryDialogue(rule) {
-    const dialogue = (globalData.asui_dialogues?.dialogues || []).find(item => item.id === rule.dialogue_id);
-    const assets = globalData.asui_presentation?.dialogue_assets?.[rule.dialogue_id] || {};
-    if (!dialogue) return;
-    let overlay = document.getElementById('story-asui-overlay');
-    if (!overlay) {
-      overlay = document.createElement('div');
-      overlay.id = 'story-asui-overlay';
-      overlay.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ink-overlay);color:var(--white);padding:22px 28px;font-size:20px;line-height:1.7;cursor:pointer;';
-      document.body.appendChild(overlay);
+    if (eventId) {
+      // before-event: 進入大事件前觸發（W1/W2）
+      const conditionMap = {
+        '1_4': 'before_event_1_4',
+        '1_7': 'before_event_1_7',
+      };
+      const condition = conditionMap[_normalizeStoryEventId(eventId)];
+      if (!condition) return;
+      const rule = (globalData.asui_manifest.rules || []).find(item => item.room === 'story' && item.trigger_condition === condition);
+      if (!rule) return;
+      const seenKey = `asui_seen_${rule.rule_id}`;
+      if (rule.repeat === false && localStorage.getItem(seenKey)) return;
+      await new Promise(resolve => playAsuiDialogue(rule.dialogue_id, resolve));
+      if (rule.repeat === false) localStorage.setItem(seenKey, '1');
     }
-    overlay.classList.remove('hidden');
-    const lines = dialogue.lines || [dialogue.text || ''];
-    const audioList = Array.isArray(assets.audio) ? assets.audio : (assets.audio ? [assets.audio] : []);
-    for (let i = 0; i < lines.length; i++) {
-      overlay.innerHTML = `<strong>阿水</strong><div>${lines[i]}</div><div style="font-size:13px;opacity:.75;margin-top:8px;">點擊繼續</div>`;
-      if (audioList[i]) await playTTS(audioList[i], { textElement: overlay, lockUI: false });
-      await new Promise(resolve => overlay.addEventListener('click', resolve, { once: true }));
+
+    if (sceneId) {
+      // after-scene: scene render 完成後觸發（M1 及未來同類）
+      const normalizedSceneId = String(sceneId || '');
+      const fired = getFiredAsuiDialogues();
+      const rules = (globalData.asui_manifest.rules || []).filter(r => {
+        const triggerScene = String(r.trigger_after_scene || '');
+        return (
+          r.trigger_type === 'auto' &&
+          r.room === 'story' &&
+          triggerScene &&
+          (normalizedSceneId === triggerScene ||
+           normalizedSceneId.startsWith(triggerScene + '_')) &&
+          !(r.repeat === false && fired.includes(r.dialogue_id))
+        );
+      });
+      for (const rule of rules) {
+        await new Promise(resolve => playAsuiDialogue(rule.dialogue_id, resolve));
+        if (rule.repeat === false) markAsuiDialogueFired(rule.dialogue_id);
+      }
     }
-    overlay.classList.add('hidden');
   }
 
   document.addEventListener('story:load', (event) => {
