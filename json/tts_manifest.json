@@ -2611,7 +2611,7 @@
   },
   {
     "filename": "1_3_7_3.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>角落裡放著一個空竹簍，靜靜地立在那裡。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>角落裡放著一個空竹籮，靜靜地立在那裡。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
@@ -2635,7 +2635,7 @@
   },
   {
     "filename": "1_3_7_choice_2.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>那個空竹簍——空的，但聞起來有點香</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>那個空竹籮——空的，但聞起來有點香</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
@@ -2725,7 +2725,7 @@
   },
   {
     "filename": "1_3_7_C_v1_0.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>竹簍是用細竹條編的，編得很密。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>竹籮是用細竹條編的，編得很密。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
@@ -2743,7 +2743,7 @@
   },
   {
     "filename": "1_3_7_C_v2_0.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>梅姐從旁邊走過，瞥了一眼竹簍：</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>梅姐從旁邊走過，瞥了一眼竹籮：</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
