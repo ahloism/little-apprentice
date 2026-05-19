@@ -11572,5 +11572,47 @@
     "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>城樓</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
+  },
+  {
+    "filename": "asui_M1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>跟不上的話可以調慢語速——上面那個『正常』按鈕，點一下變『慢速』，試試看！</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_W1.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>這個章節需要一口氣完成，中途離開的話，下次要從頭再來。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_W2.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>這個章節需要一口氣完成，中途離開的話，下次要從頭再來。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_A17.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>對了，想知道自己去過哪裡、學過什麼？點右上角那個書本，隨時都可以回顧。</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_G4.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>差一點點！再來一次，答對了地圖就會著色——我想看！</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_G5.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>沒關係，再來一次試試！</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
+  },
+  {
+    "filename": "asui_return_to_map_normal_0.mp3",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuGaaiNeural'><prosody rate='+0%' pitch='+0st'>你回來了，下一步做什麼呢？</prosody></voice></speak>",
+    "voice": "zh-HK-HiuGaaiNeural",
+    "speaker": "阿水"
   }
 ]
