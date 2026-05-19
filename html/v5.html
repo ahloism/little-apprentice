@@ -3559,9 +3559,8 @@
     // ---- /fog specs ----
 
     (mapData.locations || []).forEach(loc => {
-      if (!_isLocationVisible(loc, completed)) return;
-
-      // fog 先 append（z-index 低，DOM在前，雙保險）
+      // fog 無條件生成全部五個地點（不受 visible 控制）
+      // visible 控的是「互動權限（pin）」，fog 控的是「理解程度（小遊戲完成）」
       const spec = FOG_SPECS[loc.location_id];
       if (spec) {
         const fog = document.createElement('div');
@@ -3592,6 +3591,9 @@
 
         pinsContainer.appendChild(fog);
       }
+
+      // pin 仍受 visible 控制（互動權限）
+      if (!_isLocationVisible(loc, completed)) return;
 
       // pin 後 append（z-index 高，DOM在後）
       const pin = document.createElement('div');
