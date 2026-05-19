@@ -6049,13 +6049,7 @@
   },
   {
     "filename": "1_6_7_0.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>阿禾記得那包花生——在市集的時候，阿水撞上石頭，袋子破了，花生滾了一地。他有撿，但沒全撿到。石頭後來把地上的撿起來拿走了。</prosody></voice></speak>",
-    "voice": "zh-HK-HiuMaanNeural",
-    "speaker": "narrator"
-  },
-  {
-    "filename": "1_6_7_1.mp3",
-    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>阿禾不知道石頭帶著花生就在旁邊。</prosody></voice></speak>",
+    "text": "<speak version='1.0' xml:lang='zh-HK'><voice name='zh-HK-HiuMaanNeural'><prosody rate='+0%' pitch='+0st'>阿禾記得那包花生——在市集的時候，阿水撞上石頭，袋子破了，花生滾了一地。他有撿，但不知有沒有撿全。</prosody></voice></speak>",
     "voice": "zh-HK-HiuMaanNeural",
     "speaker": "narrator"
   },
