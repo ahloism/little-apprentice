@@ -1,0 +1,86 @@
+{
+  "filename": "asui_W2.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "這個",
+      "start_ms": 50.0,
+      "duration_ms": 412.5
+    },
+    {
+      "word": "章節",
+      "start_ms": 462.5,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "需要",
+      "start_ms": 962.5,
+      "duration_ms": 537.5
+    },
+    {
+      "word": "一口氣",
+      "start_ms": 1512.5,
+      "duration_ms": 687.5
+    },
+    {
+      "word": "完成",
+      "start_ms": 2200.0,
+      "duration_ms": 587.5
+    },
+    {
+      "word": "，",
+      "start_ms": 2875.0,
+      "duration_ms": 25.0
+    },
+    {
+      "word": "中途",
+      "start_ms": 3400.0,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "離開",
+      "start_ms": 3912.5,
+      "duration_ms": 462.5
+    },
+    {
+      "word": "的話",
+      "start_ms": 4387.5,
+      "duration_ms": 575.0
+    },
+    {
+      "word": "，",
+      "start_ms": 5012.5,
+      "duration_ms": 112.5
+    },
+    {
+      "word": "下次",
+      "start_ms": 5587.5,
+      "duration_ms": 525.0
+    },
+    {
+      "word": "要",
+      "start_ms": 6112.5,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "從頭",
+      "start_ms": 6412.5,
+      "duration_ms": 550.0
+    },
+    {
+      "word": "再",
+      "start_ms": 6975.0,
+      "duration_ms": 287.5
+    },
+    {
+      "word": "來",
+      "start_ms": 7262.5,
+      "duration_ms": 312.5
+    },
+    {
+      "word": "。",
+      "start_ms": 7600.0,
+      "duration_ms": 25.0
+    }
+  ]
+}

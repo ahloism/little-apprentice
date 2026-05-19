@@ -1,0 +1,91 @@
+{
+  "filename": "asui_G4.mp3",
+  "speaker": "阿水",
+  "words": [
+    {
+      "word": "差一點點",
+      "start_ms": 50.0,
+      "duration_ms": 1000.0
+    },
+    {
+      "word": "！",
+      "start_ms": 1137.5,
+      "duration_ms": 0.0
+    },
+    {
+      "word": "再",
+      "start_ms": 2025.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "來",
+      "start_ms": 2275.0,
+      "duration_ms": 237.5
+    },
+    {
+      "word": "一次",
+      "start_ms": 2512.5,
+      "duration_ms": 512.5
+    },
+    {
+      "word": "，",
+      "start_ms": 3062.5,
+      "duration_ms": 50.0
+    },
+    {
+      "word": "答對",
+      "start_ms": 3425.0,
+      "duration_ms": 450.0
+    },
+    {
+      "word": "了",
+      "start_ms": 3875.0,
+      "duration_ms": 225.0
+    },
+    {
+      "word": "地圖",
+      "start_ms": 4112.5,
+      "duration_ms": 500.0
+    },
+    {
+      "word": "就",
+      "start_ms": 4625.0,
+      "duration_ms": 262.5
+    },
+    {
+      "word": "會",
+      "start_ms": 4887.5,
+      "duration_ms": 212.5
+    },
+    {
+      "word": "著色",
+      "start_ms": 5100.0,
+      "duration_ms": 562.5
+    },
+    {
+      "word": "——",
+      "start_ms": 5712.5,
+      "duration_ms": 25.0
+    },
+    {
+      "word": "我",
+      "start_ms": 5950.0,
+      "duration_ms": 275.0
+    },
+    {
+      "word": "想",
+      "start_ms": 6225.0,
+      "duration_ms": 300.0
+    },
+    {
+      "word": "看",
+      "start_ms": 6525.0,
+      "duration_ms": 437.5
+    },
+    {
+      "word": "！",
+      "start_ms": 6962.5,
+      "duration_ms": 37.5
+    }
+  ]
+}
