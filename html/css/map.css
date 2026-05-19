@@ -60,6 +60,7 @@
   align-items: center;
   gap: 4px;
   pointer-events: none;
+  z-index: 9;
 }
 
 .map-pin * {
@@ -168,5 +169,22 @@
   width: 1px;
   height: 1px;
   pointer-events: none;
+}
+
+/* 地點霧層 */
+.map-fog {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  background: rgba(245, 240, 225, 0.72);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: opacity 0.8s ease, filter 0.8s ease;
+  z-index: 6;
+}
+
+.map-fog.revealed {
+  opacity: 0;
+  filter: blur(20px);
 }
 /* ========== /模塊：大地圖房 ========== */

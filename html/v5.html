@@ -533,6 +533,7 @@
     unlocked_games: [],
     paid_games: [],
     map_colored: [],
+    last_colored_location: null,
     map_segments: {},
     explored_scenes: [],
     visited_sub_scenes: {},
@@ -646,6 +647,7 @@
   function markEventCompleted(eventId, location) {
     if (!state.completed_events.includes(eventId)) state.completed_events.push(eventId);
     if (location && !state.map_colored.includes(location)) state.map_colored.push(location);
+    if (location) state.last_colored_location = location;
   }
 
   function recordAssessment(eventId, sceneId, data) {
@@ -1248,6 +1250,7 @@
       unlocked_games: [],
       paid_games: [],
       map_colored: [],
+      last_colored_location: null,
       map_segments: {},
       explored_scenes: [],
       visited_sub_scenes: {},
@@ -3545,9 +3548,52 @@
     const completed = _completedChapterIds();
     const nextChapter = MAP_CHAPTER_SEQUENCE.find(item => !completed.includes(item.chapter));
 
+    // ---- fog specs ----
+    const FOG_SPECS = {
+      warehouse: { w: 24, h: 22, r: '42% 38% 45% 35%' },
+      market:    { w: 34, h: 26, r: '35% 45% 38% 42%' },
+      bridge:    { w: 32, h: 32, r: '40% 35% 42% 38%' },
+      inn:       { w: 24, h: 22, r: '38% 42% 35% 45%' },
+      dock:      { w: 32, h: 30, r: '45% 35% 40% 38%' },
+    };
+    // ---- /fog specs ----
+
     (mapData.locations || []).forEach(loc => {
       if (!_isLocationVisible(loc, completed)) return;
 
+      // fog 先 append（z-index 低，DOM在前，雙保險）
+      const spec = FOG_SPECS[loc.location_id];
+      if (spec) {
+        const fog = document.createElement('div');
+        fog.className = 'map-fog';
+        fog.id = `fog-${loc.location_id}`;
+        fog.style.left = `${loc.map_x}%`;
+        fog.style.top = `${loc.map_y}%`;
+        fog.style.width = `${spec.w}%`;
+        fog.style.height = `${spec.h}%`;
+        fog.style.borderRadius = spec.r;
+
+        const isColored = _isLocationColored(loc.location_id);
+        const isJustColored = state.last_colored_location === loc.location_id;
+
+        if (isColored && !isJustColored) {
+          // 已著色（舊狀態）：直接隱藏，無動畫
+          fog.style.opacity = '0';
+        } else if (isJustColored) {
+          // 剛完成：0.4秒後播放散開動畫，1.2秒後移除DOM
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              fog.classList.add('revealed');
+              setTimeout(() => fog.remove(), 1200);
+            }, 400);
+          });
+        }
+        // 未著色：維持預設顯示
+
+        pinsContainer.appendChild(fog);
+      }
+
+      // pin 後 append（z-index 高，DOM在後）
       const pin = document.createElement('div');
       pin.className = 'map-pin';
       pin.id = `pin-${loc.location_id}`;
@@ -3577,6 +3623,10 @@
 
       pinsContainer.appendChild(pin);
     });
+
+    // 清空 last_colored_location，同步寫入localStorage防止reload重播動畫
+    state.last_colored_location = null;
+    _saveMapProgress();
 
     if (typeof onEnterMap === 'function') onEnterMap();
   }
