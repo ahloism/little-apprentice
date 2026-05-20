@@ -3,8 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <link rel="icon" type="image/x-icon" href="/little-apprentice/favicon.ico">
+  <link rel="apple-touch-icon" href="/little-apprentice/image/favicon.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>小學徒大世界——大梁城</title>
 
@@ -338,6 +340,7 @@
     if (typeof openProgressPanel === 'function') openProgressPanel();
   });
   document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
+    stopTTS();
     showRoom('map-house');
     if (typeof enterMap === 'function') enterMap();
   });
@@ -1240,12 +1243,7 @@
   async function _doRestart() {
     localStorage.removeItem('la_progress');
     localStorage.removeItem('la_assessment');
-    if (auth && state.uid) {
-      try {
-        await db.collection('users').doc(state.uid).collection('progress').doc('current').delete();
-      } catch(e) { logError(e.message, 'restart_delete', state.uid); }
-    }
-    Object.assign(state, {
+    const cleanProgress = {
       current_scene: null,
       current_event: null,
       coins: 0,
@@ -1259,7 +1257,13 @@
       visited_sub_scenes: {},
       assessment_nodes: [],
       claimed_rewards: [],
-    });
+    };
+    Object.assign(state, cleanProgress);
+    if (auth && state.uid) {
+      try {
+        await db.collection('users').doc(state.uid).collection('progress').doc('current').set(cleanProgress);
+      } catch(e) { logError(e.message, 'restart_save', state.uid); }
+    }
     document.getElementById('opening-confirm').classList.add('hidden');
     _renderOpeningButtons();
   }
