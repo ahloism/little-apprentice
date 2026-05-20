@@ -8,90 +8,119 @@
   },
   "vocabulary_assets": {
     "go3": {
+      "image": "Q10_個.png",
       "audio": "vocab_go3.mp3"
     },
     "zek3": {
+      "image": "Q11_隻.png",
       "audio": "vocab_zek3.mp3"
     },
     "gin6": {
+      "image": "Q12_件.png",
       "audio": "vocab_gin6.mp3"
     },
     "tiu4": {
+      "image": "Q13_條.png",
       "audio": "vocab_tiu4.mp3"
     },
     "gan1": {
+      "image": "Q14_根.png",
       "audio": "vocab_gan1.mp3"
     },
     "zoeng1": {
+      "image": "Q15_張.png",
       "audio": "vocab_zoeng1.mp3"
     },
     "cyun3": {
+      "image": "Q16_串.png",
       "audio": "vocab_cyun3.mp3"
     },
     "faai3": {
+      "image": "Q17_塊.png",
       "audio": "vocab_faai3.mp3"
     },
     "pin3": {
+      "image": "Q18_片.png",
       "audio": "vocab_pin3.mp3"
     },
     "doi6": {
+      "image": "Q01_袋.png",
       "audio": "vocab_doi6.mp3"
     },
     "tung4": {
+      "image": "Q02_桶.png",
       "audio": "vocab_tung4.mp3"
     },
     "laam4": {
+      "image": "Q03_籃.png",
       "audio": "vocab_laam4.mp3"
     },
     "soeng1": {
+      "image": "Q04_箱.png",
       "audio": "vocab_soeng1.mp3"
     },
     "lung4": {
+      "image": "Q05_籠.png",
       "audio": "vocab_lung4.mp3"
     },
     "wu4": {
+      "image": "Q06_壺.png",
       "audio": "vocab_wu4.mp3"
     },
     "wun2": {
+      "image": "Q07_碗.png",
       "audio": "vocab_wun2.mp3"
     },
     "zang2": {
+      "image": "Q08_盞.png",
       "audio": "vocab_zang2.mp3"
     },
     "baau1": {
+      "image": "Q09_包.png",
       "audio": "vocab_baau1.mp3"
     },
     "kwan2": {
+      "image": "Q19_捆.png",
       "audio": "vocab_kwan2.mp3"
     },
     "dip6": {
+      "image": "Q20_疊.png",
       "audio": "vocab_dip6.mp3"
     },
     "pai1": {
+      "image": "Q23_批.png",
       "audio": "vocab_pai1.mp3"
     },
     "deoi1": {
+      "image": "Q21_堆.png",
       "audio": "vocab_deoi1.mp3"
     },
     "zaat3": {
+      "image": "Q22_紮.png",
       "audio": "vocab_zaat3.mp3"
     },
     "gan1_weight": {
+      "image": "Q24_斤.png",
       "audio": "vocab_gan1_weight.mp3"
     },
     "loeng5": {
+      "image": "Q25_兩.png",
       "audio": "vocab_loeng5.mp3"
     },
     "cin4_weight": {
+      "image": "Q26_錢.png",
       "audio": "vocab_cin4_weight.mp3"
     },
     "cek3_length": {
+      "image": "Q27_尺.png",
       "audio": "vocab_cek3_length.mp3"
     },
     "zoeng6": {
+      "image": "Q28_丈.png",
       "audio": "vocab_zoeng6.mp3"
     },
     "cyun3_length": {
+      "image": "Q29_寸.png",
       "audio": "vocab_cyun3_length.mp3"
     }
   },
@@ -99,116 +128,139 @@
     "opt_candles": {
       "word": "蠟燭",
       "image": "O33_蠟燭.png",
+      "measure_image": "Q10_個.png",
       "audio": "item_candles.mp3"
     },
     "opt_crab": {
       "word": "蟹",
       "image": "O46_蟹.png",
+      "measure_image": "Q05_籠.png",
       "audio": "item_crab.mp3"
     },
     "opt_silk": {
       "word": "絲綢",
       "image": "O40_絲綢.png",
+      "measure_image": "Q12_件.png",
       "audio": "item_silk.mp3"
     },
     "opt_hemp_rope": {
       "word": "麻繩",
       "image": "O35_麻繩.png",
+      "measure_image": "Q13_條.png",
       "audio": "item_hemp_rope.mp3"
     },
     "opt_lotus_root": {
       "word": "蓮藕",
       "image": "O42_蓮藕.png",
+      "measure_image": "Q14_根.png",
       "audio": "item_lotus_root.mp3"
     },
     "opt_cotton_cloth": {
       "word": "棉布",
       "image": "O28_棉布.png",
+      "measure_image": "Q15_張.png",
       "audio": "item_cotton_cloth.mp3"
     },
     "opt_candied_hawthorn": {
       "word": "糖葫蘆",
       "image": "O05_糖葫蘆.png",
+      "measure_image": "Q16_串.png",
       "audio": "item_candied_hawthorn.mp3"
     },
     "opt_tofu": {
       "word": "豆腐",
       "image": "O31_豆腐.png",
+      "measure_image": "Q17_塊.png",
       "audio": "item_tofu.mp3"
     },
     "opt_wood_ear": {
       "word": "木耳",
       "image": "O72_木耳.png",
+      "measure_image": "Q18_片.png",
       "audio": "item_wood_ear.mp3"
     },
     "opt_white_rice": {
       "word": "白米",
       "image": "O26_白米.png",
+      "measure_image": "Q01_袋.png",
       "audio": "item_white_rice.mp3"
     },
     "opt_rapeseed_oil": {
       "word": "菜油",
       "image": "O32_菜油.png",
+      "measure_image": "Q02_桶.png",
       "audio": "item_rapeseed_oil.mp3"
     },
     "opt_pear": {
       "word": "梨",
       "image": "O49_梨.png",
+      "measure_image": "Q03_籃.png",
       "audio": "item_pear.mp3"
     },
     "opt_duck_eggs": {
       "word": "鴨蛋",
       "image": "O30_鴨蛋.png",
+      "measure_image": "Q04_箱.png",
       "audio": "item_duck_eggs.mp3"
     },
     "opt_herbal_tea": {
       "word": "涼茶",
       "image": "O12_涼茶.png",
+      "measure_image": "Q06_壺.png",
       "audio": "item_herbal_tea.mp3"
     },
     "opt_roasted_peanuts": {
       "word": "炒花生",
       "image": "O51_炒花生.png",
+      "measure_image": "Q07_碗.png",
       "audio": "item_roasted_peanuts.mp3"
     },
     "opt_tea_leaves": {
       "word": "茶",
       "image": "O27_茶葉.png",
+      "measure_image": "Q08_盞.png",
       "audio": "item_tea_leaves.mp3"
     },
     "opt_salt": {
       "word": "食鹽",
       "image": "O34_食鹽.png",
+      "measure_image": "Q09_包.png",
       "audio": "item_salt.mp3"
     },
     "opt_sweet_potato": {
       "word": "番薯",
       "image": "O58_番薯.png",
+      "measure_image": "Q21_堆.png",
       "audio": "item_sweet_potato.mp3"
     },
     "opt_pancake": {
       "word": "煎餅",
       "image": "O06_煎餅.png",
+      "measure_image": "Q20_疊.png",
       "audio": "item_pancake.mp3"
     },
     "opt_celery": {
       "word": "芹菜",
       "image": "O55_芹菜.png",
+      "measure_image": "Q22_紮.png",
       "audio": "item_celery.mp3"
     },
     "opt_beef": {
       "word": "牛肉",
       "image": "O64_牛肉.png",
+      "measure_image": "Q24_斤.png",
       "audio": "item_beef.mp3"
     },
     "opt_dried_shrimp": {
       "word": "蝦米",
       "image": "O73_蝦米.png",
+      "measure_image": "Q25_兩.png",
       "audio": "item_dried_shrimp.mp3"
     },
     "opt_ginger": {
       "word": "薑",
       "image": "O37_薑.png",
+      "measure_image": "Q26_錢.png",
       "audio": "item_ginger.mp3"
     }
   },
