@@ -790,23 +790,23 @@
         {
           "item_id": "opt_silk",
           "item_word": "絲綢",
-          "correct_measure_id": "opt_cek3_length",
+          "correct_measure_id": "opt_gin6",
           "quantity": 5
         },
         {
           "item_id": "opt_hemp_rope",
           "item_word": "麻繩",
-          "correct_measure_id": "opt_zoeng6",
+          "correct_measure_id": "opt_tiu4",
           "quantity": 6
         },
         {
           "item_id": "opt_tofu",
           "item_word": "豆腐",
-          "correct_measure_id": "opt_cyun3_length",
+          "correct_measure_id": "opt_faai3",
           "quantity": 4
         }
       ],
-      "answer_restate": "應是五尺絲綢、六丈麻繩、四寸豆腐。",
+      "answer_restate": "應是五件絲綢、六條麻繩、四塊豆腐。",
       "vocabulary_intro_ids": [
         "cek3_length",
         "zoeng6",
@@ -816,25 +816,25 @@
         {
           "combo_id": "combo_dock_10_A",
           "measures": [
-            "opt_cek3_length",
-            "opt_zoeng6",
-            "opt_cyun3_length"
+            "opt_gin6",
+            "opt_tiu4",
+            "opt_faai3"
           ]
         },
         {
           "combo_id": "combo_dock_10_B",
           "measures": [
-            "opt_zoeng6",
-            "opt_cyun3_length",
-            "opt_cek3_length"
+            "opt_tiu4",
+            "opt_faai3",
+            "opt_gin6"
           ]
         },
         {
           "combo_id": "combo_dock_10_C",
           "measures": [
-            "opt_cyun3_length",
-            "opt_cek3_length",
-            "opt_zoeng6"
+            "opt_faai3",
+            "opt_gin6",
+            "opt_tiu4"
           ]
         }
       ]
