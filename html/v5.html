@@ -1458,12 +1458,12 @@
     const lineEls = textContainer.querySelectorAll('p[data-line-index]');
     for (let i = 0; i < (textLines || []).length; i++) {
       _triggerImageCue(presentation, i);
-      if (!state.tts_on || _ttsStopped) break;
+      if (!state.tts_on) break;
       const audio = audioList?.[i];
       if (audio) {
         await playLine(_audioPath(audio), _timestampPath(audio), lineEls[i]);
       }
-      if (!state.tts_on || _ttsStopped) break;
+      if (!state.tts_on) break;
     }
     _lockUI(false);
   }
