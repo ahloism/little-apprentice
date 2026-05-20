@@ -3291,7 +3291,7 @@
     await _playGameTTS(pVar.question_audio, { textElement: document.getElementById('game-question-text') });
     document.getElementById('game-answer-visuals').innerHTML = cVar.items.map(item => {
       const asset = p.item_assets?.[item.item_id] || {};
-      return `<div class="game-left-item">${asset.image ? `<img src="${_assetPath(asset.image)}" alt="">` : ''}<span>${_escape(item.item_word)}</span></div>`;
+      return `<div class="game-left-item"><div class="game-left-item-images">${asset.image ? `<img src="${_assetPath(asset.image)}" alt="">` : ''}${asset.measure_image ? `<img src="${_assetPath(asset.measure_image)}" alt="">` : ''}</div></div>`;
     }).join('');
     _updatePageLeftScrollable();
     await _playGameTTSSequence(combos.map(combo => p.option_assets?.[combo.measures?.[0]]?.audio));
