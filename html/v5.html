@@ -709,7 +709,6 @@
 
   async function playLine(audioPath, timestampsPath, textElement) {
     if (!state.tts_on) return Promise.resolve();
-    if (_ttsStopped) return Promise.resolve();
     stopTTS();
     _ttsStopped = false;
     return new Promise(async (resolve) => {
