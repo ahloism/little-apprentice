@@ -340,7 +340,7 @@
     if (typeof openProgressPanel === 'function') openProgressPanel();
   });
   document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
-    stopTTS();
+    cancelTTSQueue();
     showRoom('map-house');
     if (typeof enterMap === 'function') enterMap();
   });
@@ -705,10 +705,12 @@
   let _ttsHighlightTimer = null;
   let _ttsHighlightTimers = [];
   let _ttsStopped = false;
+  let _ttsCancelled = false;
   let _ttsResolve = null;
 
   async function playLine(audioPath, timestampsPath, textElement) {
     if (!state.tts_on) return Promise.resolve();
+    if (_ttsCancelled) return Promise.resolve();
     stopTTS();
     _ttsStopped = false;
     return new Promise(async (resolve) => {
@@ -782,6 +784,15 @@
     document.querySelectorAll('.hl.on').forEach(s => s.classList.remove('on'));
     window.speechSynthesis && window.speechSynthesis.cancel();
     if (_ttsResolve) { _ttsResolve(); _ttsResolve = null; }
+  }
+
+  function cancelTTSQueue() {
+    _ttsCancelled = true;
+    stopTTS();
+  }
+
+  function resumeTTS() {
+    _ttsCancelled = false;
   }
 
   function setSpeed(speed) {
@@ -1079,8 +1090,10 @@
       btnTTS.textContent = state.tts_on ? '🔊 語音' : '🔊 語音✕';
       btnSpeed.disabled = !state.tts_on;
       btnSpeed.style.opacity = state.tts_on ? '1' : '0.4';
-      if (!state.tts_on) {
-        stopTTS();
+      if (state.tts_on) {
+        resumeTTS();
+      } else {
+        cancelTTSQueue();
         _lockUI(false);
         document.dispatchEvent(new Event('tts:ended'));
         setTimeout(() => _lockUI(false), 100);
@@ -1585,6 +1598,7 @@
   }
 
   async function renderScene(sceneId) {
+    resumeTTS();
     _ensureStoryDOM();
     const scene = _findByScene(_storyList(eventData.story), sceneId);
     if (!scene) {
