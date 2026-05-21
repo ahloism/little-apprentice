@@ -3475,6 +3475,7 @@
   }
 
   function enterMap() {
+    resumeTTS();
     bindMapResize();
     setGlobalUIState({ music: true, voice: true, speed: true, coins: true, account: true });
     updateCoinDisplay();
