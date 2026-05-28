@@ -21,7 +21,6 @@
   <link rel="stylesheet" href="./css/global-ui.css">
   <link rel="stylesheet" href="./css/book-layout.css">
   <link rel="stylesheet" href="./css/panels.css">
-  <link rel="stylesheet" href="./css/asui.css">
   <link rel="stylesheet" href="./css/game.css">
   <link rel="stylesheet" href="./css/map.css">
   <link rel="stylesheet" href="./css/report.css">
@@ -142,15 +141,6 @@
       </div>
     </div>
 
-    <!-- ========== 模塊：阿水層 ========== -->
-    <div id="asui-layer">
-      <div id="asui-character"></div>
-      <div id="asui-dialogue" class="hidden">
-        <div class="asui-text"></div>
-        <div class="asui-buttons"></div>
-      </div>
-    </div>
-    <!-- ========== /模塊：阿水層 ========== -->
 
   </div>
 
@@ -222,48 +212,6 @@
         bottomNav.classList.remove('hidden');
       } else {
         bottomNav.classList.add('hidden');
-      }
-    }
-    // 阿水條位置：Story房和小遊戲房上移避開底部導航列
-    const asuiLayer = document.getElementById('asui-layer');
-    if (asuiLayer) {
-      if (bottomNavRooms.includes(roomId)) {
-        asuiLayer.classList.add('asui-above-bottom-nav');
-      } else {
-        asuiLayer.classList.remove('asui-above-bottom-nav');
-      }
-    }
-    // 離開地圖房時把 asui-layer 移回 #book-wrapper
-    if (roomId !== 'map-house' && roomId !== 'room-map') {
-      const asuiLayer = document.getElementById('asui-layer');
-      if (asuiLayer && asuiLayer.parentElement?.id === 'map-overlay') {
-        const bookWrapper = document.getElementById('book-wrapper');
-        if (bookWrapper) {
-          bookWrapper.appendChild(asuiLayer);
-          // 清除地圖房內的 map-specific style
-          asuiLayer.style.position = '';
-          asuiLayer.style.inset = '';
-          const asuiChar = document.getElementById('asui-character');
-          if (asuiChar) {
-            asuiChar.style.display = '';
-            asuiChar.style.position = '';
-            asuiChar.style.bottom = '';
-            asuiChar.style.left = '';
-            asuiChar.style.width = '';
-            asuiChar.style.height = '';
-          }
-          const asuiDialogue = document.getElementById('asui-dialogue');
-          if (asuiDialogue) {
-            asuiDialogue.style.position = '';
-            asuiDialogue.style.bottom = '';
-            asuiDialogue.style.inset = '';
-            asuiDialogue.style.fontSize = '';
-            asuiDialogue.style.padding = '';
-            if (!asuiDialogue.classList.contains('visible')) {
-              asuiDialogue.classList.add('hidden');
-            }
-          }
-        }
       }
     }
     rooms.forEach(id => {
@@ -438,7 +386,6 @@
     A04: 'A04_謎語二示意_馬.png',
     A05: 'A05_誠信木匾.png',
     C01: 'C01_阿禾.png',
-    C02: 'C02_阿水.png',
     C03: 'C03_錢伯.png',
     C04: 'C04_石頭.png',
     C05: 'C05_梅姐.png',
@@ -741,7 +688,6 @@
     const forcedStartEvents = new Set(['1_4', '1_7']);
     const sameEventSavedScene = getSavedSceneForEvent(eventId);
     const startScene = explicitSceneId || (forcedStartEvents.has(eventId) ? _storyStartScene() : (sameEventSavedScene || _storyStartScene()));
-    await checkAsuiStoryRules({ eventId });
     await renderScene(startScene);
   }
 
@@ -797,7 +743,6 @@
     };
     const handler = handlers[type] || handleFeedbackScene;
     await handler(scene, presentation, manifestScene, evaluation);
-    await checkAsuiStoryRules({ sceneId }); // Story rules must not call renderScene() to avoid recursive scene lifecycle loops.
   }
 
   async function handleStoryScene(scene, presentation, manifestScene) {
@@ -932,50 +877,6 @@
 
   async function handleFeedbackScene(scene, presentation, manifestScene) {
     await handleStoryScene(scene, presentation, manifestScene);
-  }
-
-  // Story-room Asui rules are lifecycle-based:
-  // before-event rules run from enterStory({ eventId })
-  // after-scene rules run after renderScene({ sceneId })
-  async function checkAsuiStoryRules({ eventId, sceneId } = {}) {
-    if (!globalData.asui_manifest) return;
-
-    if (eventId) {
-      // before-event: 進入大事件前觸發（W1/W2）
-      const conditionMap = {
-        '1_4': 'before_event_1_4',
-        '1_7': 'before_event_1_7',
-      };
-      const condition = conditionMap[_normalizeStoryEventId(eventId)];
-      if (!condition) return;
-      const rule = (globalData.asui_manifest.rules || []).find(item => item.room === 'story' && item.trigger_condition === condition);
-      if (!rule) return;
-      const seenKey = `asui_seen_${rule.rule_id}`;
-      if (rule.repeat === false && localStorage.getItem(seenKey)) return;
-      await new Promise(resolve => playAsuiDialogue(rule.dialogue_id, resolve));
-      if (rule.repeat === false) localStorage.setItem(seenKey, '1');
-    }
-
-    if (sceneId) {
-      // after-scene: scene render 完成後觸發（M1 及未來同類）
-      const normalizedSceneId = String(sceneId || '');
-      const fired = getFiredAsuiDialogues();
-      const rules = (globalData.asui_manifest.rules || []).filter(r => {
-        const triggerScene = String(r.trigger_after_scene || '');
-        return (
-          r.trigger_type === 'auto' &&
-          r.room === 'story' &&
-          triggerScene &&
-          (normalizedSceneId === triggerScene ||
-           normalizedSceneId.startsWith(triggerScene + '_')) &&
-          !(r.repeat === false && fired.includes(r.dialogue_id))
-        );
-      });
-      for (const rule of rules) {
-        await new Promise(resolve => playAsuiDialogue(rule.dialogue_id, resolve));
-        if (rule.repeat === false) markAsuiDialogueFired(rule.dialogue_id);
-      }
-    }
   }
 
   document.addEventListener('story:load', (event) => {
@@ -1538,546 +1439,6 @@
   // ========== 模塊：Map房 ==========
   // 待實作
 
-  // ========== 模塊：阿水層 ==========
-  // 規格依據：阿水層規格文件.md
-
-  // --- 常數 ---
-  const ASUI_IMAGES = {
-    A27: 'image/A27_阿水——閒置 idle.png',
-    A28: 'image/A28_阿水——開朗引導 guide.png',
-    A29: 'image/A29_阿水——好奇神秘 curious.png',
-    A30: 'image/A30_阿水——沉穩反思 reflective.png',
-    A31: 'image/A31_阿水——誇張得意 expressive.png',
-    A32: 'image/A32_阿水——歡迎重返 welcome.png',
-    A33: 'image/A33_阿水——期待解鎖 eager .png'
-  };
-
-  // --- 狀態 ---
-  const asuiState = {
-    queue: [],
-    isPlaying: false,
-    currentDialogue: null,
-    currentLineIndex: 0,
-    tapRotateIndex: {},
-    lastGameResult: null
-  };
-
-  let asuiDialogues = null;
-  let asuiManifest = null;
-  let asuiPresentation = null;
-  let _asuiOnComplete = null;
-  let _asuiHideTimer = null;
-  let _asuiHideToken = 0;
-
-  // --- 初始化 ---
-  async function initAsui() {
-    try {
-      asuiDialogues = globalData.asui_dialogues || await loadJSON('json/asui_dialogues.json');
-      asuiManifest = globalData.asui_manifest || await loadJSON('json/asui_manifest.json');
-      asuiPresentation = globalData.asui_presentation || await loadJSON('json/asui_presentation.json');
-      setAsuiCharacter('A27');
-      document.getElementById('asui-character').addEventListener('click', onAsuiCharacterTap);
-      document.getElementById('asui-dialogue').addEventListener('click', onDialogueTap);
-    } catch (e) {
-      logError(e.message, 'initAsui', state.uid);
-    }
-  }
-
-  // --- 角色圖管理 ---
-  function setAsuiCharacter(stateId) {
-    const el = document.getElementById('asui-character');
-    if (!el) return;
-    el.innerHTML = '';
-    const img = document.createElement('img');
-    img.src = BASE_PATH + (ASUI_IMAGES[stateId] || ASUI_IMAGES.A27);
-    img.style.cssText = 'display:block;width:100%;height:auto;background:transparent;';
-    img.alt = '';
-    el.appendChild(img);
-  }
-
-  // pixel hit-test 暫停使用，改用 bounding box 觸發（技術債：V5.2再評估）
-  function isAsuiPixelTransparent(e) {
-    return false;
-  }
-
-  // --- Tap對白觸發 ---
-  function onAsuiCharacterTap(e) {
-    if (asuiState.isPlaying) return;
-    if (e?.currentTarget?.id !== 'map-asui-static' && isAsuiPixelTransparent(e)) return;
-    const playerState = getAsuiPlayerState();
-    const rule = getAsuiTapRule(playerState);
-    if (!rule) return;
-    const ids = rule.dialogue_ids || [rule.dialogue_id].filter(Boolean);
-    const key = rule.rule_id;
-    if (!ids.length) return;
-    if (asuiState.tapRotateIndex[key] === undefined) asuiState.tapRotateIndex[key] = 0;
-    const idx = asuiState.tapRotateIndex[key] % ids.length;
-    asuiState.tapRotateIndex[key]++;
-    playAsuiDialogue(ids[idx]);
-  }
-
-  function getAsuiTapRule(playerState) {
-    const conditionMap = {
-      main_incomplete_no_unlock: 'main_story_incomplete',
-      main_incomplete_unlock_available: 'unlock_available_coins_sufficient',
-      main_complete_unlock_available: 'unlock_available_coins_sufficient',
-      main_complete_all_unlocked: 'all_unlocked_story_incomplete',
-      map_all_colored: 'all_colored_story_complete'
-    };
-    const condition = conditionMap[playerState];
-    return asuiManifest?.rules?.find(r => r.trigger_type === 'tap_asui' && r.trigger_condition === condition);
-  }
-
-  // --- Queue管理 ---
-  function buildAsuiQueue(room) {
-    const fired = getFiredAsuiDialogues();
-    const rules = (asuiManifest?.rules || [])
-      .filter(r => r.trigger_type === 'auto' && r.room === room && (r.priority || 0) < 99)
-      .filter(r => {
-        if (!r.repeat && fired.includes(r.dialogue_id)) return false;
-        return checkAsuiTriggerCondition(r.trigger_condition);
-      })
-      .sort((a, b) => (a.priority || 0) - (b.priority || 0));
-    asuiState.queue = rules.map(r => r.dialogue_id);
-  }
-
-  function checkAsuiTriggerCondition(condition) {
-    const progress = state;
-    const fired = getFiredAsuiDialogues();
-    switch (condition) {
-      case 'first_map_entry':
-        return !fired.includes('A1');
-      case 'first_location_appear':
-        return !fired.includes('A2') && (progress.completed_events?.length >= 1);
-      case 'first_coins_earned':
-        return !fired.includes('A3') && progress.coins > 0 && (progress.completed_events?.length >= 1);
-      case 'first_unlock_available':
-        return !fired.includes('A4') && asuiHasUnlockableLocation();
-      case 'after_event_1_1':
-        return asuiEventCompleted('1_1') && !fired.includes('A6');
-      case 'after_event_1_2':
-        return asuiEventCompleted('1_2') && !fired.includes('A7');
-      case 'after_event_1_3':
-        return asuiEventCompleted('1_3') && !fired.includes('A8');
-      case 'after_event_1_4_choice_A':
-        return getAsuiAssessmentChoice('1_4_2') === 'A' && !fired.includes('A9');
-      case 'after_event_1_4_choice_B':
-        return getAsuiAssessmentChoice('1_4_2') === 'B' && !fired.includes('A10');
-      case 'after_event_1_4_choice_C':
-        return getAsuiAssessmentChoice('1_4_2') === 'C' && !fired.includes('A11');
-      case 'after_event_1_5':
-        return asuiEventCompleted('1_5') && !fired.includes('A12');
-      case 'after_event_1_6':
-        return asuiEventCompleted('1_6') && !fired.includes('A13');
-      case 'after_event_1_7':
-        return asuiEventCompleted('1_7') && !fired.includes('A14');
-      case ['map', 'colored', 'gte', '4'].join('_'):
-        return false && !fired.includes('A15');
-      case 'map_all_colored':
-        return asuiMapColoredCount() >= 5 && !fired.includes('A16');
-      case 'minigame_first_correct':
-        return asuiState.lastGameResult === 'correct_first';
-      case 'minigame_replay_correct':
-        return asuiState.lastGameResult === 'correct_replay';
-      case 'minigame_first_wrong':
-        return asuiState.lastGameResult === 'wrong_first';
-      case 'minigame_replay_wrong':
-        return asuiState.lastGameResult === 'wrong_replay';
-      default:
-        return false;
-    }
-  }
-
-  function processAsuiQueue(room) {
-    buildAsuiQueue(room);
-    if (asuiState.queue.length > 0) {
-      playNextAsuiInQueue();
-    } else {
-      playAsuiFallback(room);
-    }
-  }
-
-  function playNextAsuiInQueue() {
-    if (asuiState.queue.length === 0) {
-      asuiState.isPlaying = false;
-      setAsuiCharacter('A27');
-      return;
-    }
-    const id = asuiState.queue.shift();
-    playAsuiDialogue(id);
-  }
-
-  // --- 對白播放 ---
-  function _resolveAsuiTemplate(text) {
-    if (!text || !text.includes('{{')) return text;
-
-    // {{last_event_title}}：最後完成的小事件標題
-    if (text.includes('{{last_event_title}}')) {
-      const eventTitles = {
-        '1_1': '商行取貨', '1_2': '市集小意外', '1_3': '橋邊打聽',
-        '1_4': '橋邊推理', '1_5': '客棧說書', '1_6': '碼頭面對問題', '1_7': '帳房考問'
-      };
-      const completed = state.completed_events || [];
-      const lastEvent = completed[completed.length - 1];
-      const lastId = lastEvent ? String(lastEvent).replace(/^story_/, '') : '';
-      const title = eventTitles[lastId] || '上一章';
-      text = text.replace('{{last_event_title}}', title);
-    }
-
-    // {{state_suggestion}}：按玩家狀態選對應提示
-    if (text.includes('{{state_suggestion}}')) {
-      const completed = state.completed_events || [];
-      const allDone = completed.length >= 7;
-      const hasUnlockable = asuiHasUnlockableLocation();
-      let suggestion = '下一站還沒去——繼續冒險吧！';
-      if (allDone && hasUnlockable) {
-        suggestion = '故事走完了！還有小任務等著你。';
-      } else if (allDone) {
-        suggestion = '都解鎖了！去大梁城四處探索看看。';
-      } else if (hasUnlockable) {
-        suggestion = '有地方可以解鎖！要解鎖嗎？';
-      }
-      text = text.replace('{{state_suggestion}}', suggestion);
-    }
-
-    return text;
-  }
-
-  function playAsuiDialogue(dialogueId, onComplete) {
-    const dialogue = asuiDialogues?.dialogues?.find(d => d.id === dialogueId);
-    if (!dialogue) { if (onComplete) onComplete(); return; }
-    if (onComplete) {
-      if (_asuiOnComplete) _asuiOnComplete();
-      _asuiOnComplete = onComplete;
-    }
-    asuiState.isPlaying = true;
-    asuiState.currentDialogue = { ...dialogue };
-    asuiState.currentLineIndex = 0;
-    setAsuiCharacter(dialogue.visual_state || 'A27');
-    const rawText = dialogue.lines ? dialogue.lines[0] : (dialogue._resolvedText || dialogue.text || '');
-    const text = _resolveAsuiTemplate(rawText);
-    showAsuiDialogueBar(text, dialogue);
-    const audio = getAsuiAudioForDialogue(dialogueId, 0);
-    if (audio) playAsuiTTS(audio, text);
-    markAsuiDialogueFired(dialogueId);
-  }
-
-  function showAsuiDialogueBar(text, dialogue) {
-    // 對話開始時隱藏地圖靜止阿水
-    const staticAsui = document.getElementById('map-asui-static');
-    if (staticAsui) staticAsui.style.display = 'none';
-    // 顯示阿水圖
-    const asuiChar = document.getElementById('asui-character');
-    if (asuiChar) asuiChar.style.display = 'block';
-    const bar = document.getElementById('asui-dialogue');
-    setHLText(bar.querySelector('.asui-text'), text);
-    bar.querySelector('.asui-buttons').innerHTML = '';
-    const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
-    if ((override?.confirm_buttons || dialogue.confirm_buttons) && (!dialogue.lines || dialogue.lines.length <= 1)) {
-      renderAsuiButtons(override?.confirm_buttons || dialogue.confirm_buttons, dialogue.id);
-    }
-    _asuiHideToken++;
-    if (_asuiHideTimer) { clearTimeout(_asuiHideTimer); _asuiHideTimer = null; }
-    bar.classList.remove('hidden');
-    requestAnimationFrame(() => bar.classList.add('visible'));
-  }
-
-  function hideAsuiDialogueBar() {
-    const bar = document.getElementById('asui-dialogue');
-    if (!bar) return;
-
-    const token = ++_asuiHideToken;
-    bar.classList.remove('visible');
-
-    if (_asuiHideTimer) { clearTimeout(_asuiHideTimer); _asuiHideTimer = null; }
-
-    _asuiHideTimer = setTimeout(() => {
-      if (token !== _asuiHideToken) return;
-      _asuiHideTimer = null;
-
-      bar.classList.add('hidden');
-      bar.querySelector('.asui-text').textContent = '';
-      bar.querySelector('.asui-buttons').innerHTML = '';
-
-      const asuiChar = document.getElementById('asui-character');
-      if (asuiChar) {
-        asuiChar.style.display = 'none';
-        asuiChar.style.bottom = '';
-      }
-
-      const staticAsui = document.getElementById('map-asui-static');
-      if (staticAsui) staticAsui.style.display = '';
-    }, 300);
-  }
-
-  function onDialogueTap() {
-    const dialogue = asuiState.currentDialogue;
-    if (!dialogue) return;
-    if (document.querySelector('.asui-buttons').children.length > 0) return;
-    if (_ttsAudio && !_ttsAudio.paused) return;
-
-    if (dialogue.lines) {
-      asuiState.currentLineIndex++;
-      if (asuiState.currentLineIndex >= dialogue.lines.length) {
-        hideAsuiDialogueBar();
-        if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
-        playNextAsuiInQueue();
-        return;
-      }
-      const text = _resolveAsuiTemplate(dialogue.lines[asuiState.currentLineIndex]);
-      setHLText(document.querySelector('.asui-text'), text);
-      if (asuiState.currentLineIndex === dialogue.lines.length - 1 && dialogue.confirm_buttons) {
-        const override = asuiPresentation?.overrides?.find(o => o.applies_to?.includes(dialogue.id));
-        renderAsuiButtons(override?.confirm_buttons || dialogue.confirm_buttons, dialogue.id);
-      }
-      const audio = getAsuiAudioForDialogue(dialogue.id, asuiState.currentLineIndex);
-      if (audio) playAsuiTTS(audio, text);
-      return;
-    }
-
-    if (dialogue.id === 'return_to_map_normal' && asuiState.currentLineIndex === 0) {
-      asuiState.currentLineIndex = 1;
-      const playerState = getAsuiPlayerState();
-      const suggestion = getAsuiStateSuggestion(playerState);
-      setHLText(document.querySelector('.asui-text'), suggestion);
-      if (playerState === 'main_incomplete_unlock_available') {
-        renderAsuiButtons({ unlock: '解鎖', continue: '繼續冒險' }, 'return_to_map_normal');
-      }
-      const assets = asuiPresentation?.dialogue_assets?.return_to_map_normal;
-      if (assets?.audio?.line_2?.[playerState]) {
-        playAsuiTTS(assets.audio.line_2[playerState], suggestion);
-      }
-      return;
-    }
-
-    hideAsuiDialogueBar();
-    asuiState.isPlaying = false;
-    if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
-    playNextAsuiInQueue();
-  }
-
-  // --- 動態對白 ---
-  function getAsuiStateSuggestion(playerState) {
-    const map = {
-      main_incomplete_no_unlock: '下一站還沒去——繼續冒險吧！',
-      main_incomplete_unlock_available: '有地方可以解鎖！要解鎖嗎？',
-      main_complete_unlock_available: '故事走完了！還有小任務等著你。',
-      main_complete_all_unlocked: '都解鎖了！去大梁城四處探索看看。',
-      map_all_colored: '大梁城每個角落都去過了！繼續在城裡探索吧。'
-    };
-    return map[playerState] || '';
-  }
-
-  function resolveReturnReloadText() {
-    const completed = state.completed_events || [];
-    const last = completed[completed.length - 1];
-    if (!last) return '上次完成了一個地方，要繼續嗎？還是先回顧一下？';
-    const normalized = String(last).replace(/^story_/, '');
-    const titleMap = {
-      '1_1': '商行取貨', '1_2': '市集風波',
-      '1_3': '橋邊問路', '1_4': '尋找老梁',
-      '1_5': '客棧聽書', '1_6': '碼頭風波',
-      '1_7': '帳房考驗'
-    };
-    const title = titleMap[normalized] || titleMap[last] || last;
-    return `上次完成了${title}，要繼續嗎？還是先回顧一下？`;
-  }
-
-  // --- 兜底對白 ---
-  function playAsuiFallback(room) {
-    if (room !== 'map') return;
-    if (document.getElementById('map-house')?.classList.contains('hidden')) return;
-    const isReload = sessionStorage.getItem('asui_is_reload') === 'true';
-    sessionStorage.removeItem('asui_is_reload');
-    if (isReload && (state.completed_events?.length > 0)) {
-      const dialogue = asuiDialogues?.dialogues?.find(d => d.id === 'return_to_map_reload');
-      if (dialogue) {
-        dialogue._resolvedText = resolveReturnReloadText();
-        playAsuiDialogue('return_to_map_reload');
-      }
-    } else {
-      playAsuiDialogue('return_to_map_normal');
-    }
-  }
-
-  // --- 地點解鎖確認（R1-R6）---
-  function triggerAsuiLocationDialogue(locationId) {
-    asuiState.queue = [];
-    const costMap = { warehouse: 15, market: 20, bridge: 25, inn: 20, dock: 25 };
-    const dialogueMap = { warehouse: 'R1', market: 'R2', bridge: 'R3', inn: 'R4', dock: 'R5' };
-    const cost = costMap[locationId];
-    const coins = state.coins || 0;
-    if (cost && coins < cost) {
-      playAsuiDialogue('R6');
-      return;
-    }
-    const id = dialogueMap[locationId];
-    if (id) playAsuiDialogue(id);
-  }
-
-  // --- 按鈕渲染 ---
-  function renderAsuiButtons(buttons, dialogueId) {
-    const btnsEl = document.querySelector('.asui-buttons');
-    btnsEl.innerHTML = '';
-    Object.entries(buttons).forEach(([key, label]) => {
-      const btn = document.createElement('button');
-      btn.className = 'asui-btn';
-      btn.textContent = label;
-      btn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        onAsuiButtonClick(key, dialogueId);
-      });
-      btnsEl.appendChild(btn);
-    });
-  }
-
-  function onAsuiButtonClick(action, dialogueId) {
-    hideAsuiDialogueBar();
-    asuiState.isPlaying = false;
-    asuiState.queue = [];
-    if (_asuiOnComplete) { const cb = _asuiOnComplete; _asuiOnComplete = null; cb(); }
-    setAsuiCharacter('A27');
-    if (dialogueId === 'return_to_map_reload') {
-      if (action === 'review') openProgressPanel();
-      // 'continue'：只關閉對白條，玩家自行點地圖主線按鈕
-    } else if (dialogueId === 'return_to_map_normal') {
-      // 'continue'：只關閉對白條，玩家自行點地圖主線按鈕
-      if (action === 'unlock') {
-        // 高亮第一個可解鎖地點的 pin（視覺提示）
-        const readyPin = document.querySelector('.pin-game-ready');
-        if (readyPin) {
-          readyPin.scrollIntoView?.({ behavior: 'smooth', block: 'nearest' });
-          readyPin.style.outline = '3px solid var(--gold)';
-          setTimeout(() => { readyPin.style.outline = ''; }, 2000);
-        }
-      }
-    } else if (['R1','R2','R3','R4','R5'].includes(dialogueId)) {
-      if (action === 'confirm') { /* 執行解鎖，地圖房實作 */ }
-    }
-  }
-
-  // --- Story房觸發 ---
-  function triggerAsuiInStory(condition) {
-    const rule = asuiManifest?.rules?.find(r => r.trigger_condition === condition);
-    if (!rule) return;
-    const fired = getFiredAsuiDialogues();
-    if (!rule.repeat && fired.includes(rule.dialogue_id)) return;
-    playAsuiDialogue(rule.dialogue_id);
-  }
-
-  // --- 玩家狀態判斷 ---
-  function getAsuiPlayerState() {
-    const completed = state.completed_events || [];
-    const unlocked = state.unlocked_games || [];
-    const allEventsComplete = completed.length >= 7;
-    const hasUnlockable = asuiHasUnlockableLocation();
-    const allUnlocked = ['game_1_warehouse','game_1_market','game_1_bridge','game_1_inn','game_1_dock']
-      .every(g => unlocked.includes(g));
-    if (asuiMapColoredCount() >= 5) return 'map_all_colored';
-    if (allEventsComplete && allUnlocked) return 'main_complete_all_unlocked';
-    if (allEventsComplete && hasUnlockable) return 'main_complete_unlock_available';
-    if (!allEventsComplete && hasUnlockable) return 'main_incomplete_unlock_available';
-    return 'main_incomplete_no_unlock';
-  }
-
-  function asuiHasUnlockableLocation() {
-    const completed = state.completed_events || [];
-    const unlocked = state.unlocked_games || [];
-    const coins = state.coins || 0;
-    const gameMap = {
-      '1_1': { game: 'game_1_warehouse', cost: 15 },
-      '1_2': { game: 'game_1_market', cost: 20 },
-      '1_3': { game: 'game_1_bridge', cost: 25 },
-      '1_5': { game: 'game_1_inn', cost: 20 },
-      '1_6': { game: 'game_1_dock', cost: 25 }
-    };
-    return completed.some(e => {
-      const entry = gameMap[String(e).replace(/^story_/, '')];
-      return entry && !unlocked.includes(entry.game) && coins >= entry.cost;
-    });
-  }
-
-  function asuiEventCompleted(eventId) {
-    const completed = state.completed_events || [];
-    return completed.includes(eventId) || completed.includes(`story_${eventId}`);
-  }
-
-  function asuiMapColoredCount() {
-    return 0;
-  }
-
-  // --- 已播記錄 ---
-  function getFiredAsuiDialogues() {
-    try {
-      return JSON.parse(localStorage.getItem('asui_fired') || '[]');
-    } catch { return []; }
-  }
-
-  function markAsuiDialogueFired(id) {
-    const fired = getFiredAsuiDialogues();
-    if (!fired.includes(id)) {
-      fired.push(id);
-      localStorage.setItem('asui_fired', JSON.stringify(fired));
-    }
-  }
-
-  function getAsuiAssessmentChoice(sceneId) {
-    const node = (state.assessment_nodes || []).find(n => n.sceneId === sceneId);
-    return node?.label || null;
-  }
-
-  // --- TTS ---
-  function getAsuiAudioForDialogue(dialogueId, lineIndex = 0) {
-    const assets = asuiPresentation?.dialogue_assets?.[dialogueId];
-    if (!assets?.audio) return null;
-    if (Array.isArray(assets.audio)) {
-      if (dialogueId === 'return_to_map_reload') {
-        const last = (state.completed_events || []).at(-1);
-        const normalized = String(last || '').replace(/^story_/, '');
-        const idxMap = { '1_1': 1, '1_2': 2, '1_3': 3, '1_4': 4, '1_5': 5, '1_6': 6, '1_7': 7 };
-        return assets.audio[idxMap[normalized] || 0];
-      }
-      return assets.audio[lineIndex] || assets.audio[0];
-    }
-    if (typeof assets.audio === 'object') {
-      if (lineIndex === 0) return assets.audio.line_1;
-      const playerState = getAsuiPlayerState();
-      return assets.audio.line_2?.[playerState] || null;
-    }
-    return assets.audio;
-  }
-
-  function playAsuiTTS(audioPath, text) {
-    if (typeof playTTS === 'function' && audioPath) {
-      _lockMapPins(true);
-      playTTS(audioPath, {
-        textElement: document.querySelector('.asui-text'),
-        lockUI: false,
-        onEnd: () => _lockMapPins(false)
-      });
-    }
-  }
-
-  function _lockMapPins(lock) {
-    const pins = document.getElementById('map-pins');
-    if (pins) pins.style.pointerEvents = lock ? 'none' : '';
-  }
-
-  // --- 對外介面 ---
-  function onEnterMap() { processAsuiQueue('map'); }
-  function onEnterMinigame() { processAsuiQueue('minigame'); }
-  function onGameComplete(result) { asuiState.lastGameResult = result; }
-  function onLocationTap(locationId) { triggerAsuiLocationDialogue(locationId); }
-  function onStoryAsuiTrigger(condition) { triggerAsuiInStory(condition); }
-
-  window.initAsui = initAsui;
-  window.onEnterMap = onEnterMap;
-  window.onEnterMinigame = onEnterMinigame;
-  window.onGameComplete = onGameComplete;
-  window.onLocationTap = onLocationTap;
-  window.onStoryAsuiTrigger = onStoryAsuiTrigger;
-
-  // ========== /模塊：阿水層 ==========
 
   // ========== 模塊：小遊戲房 ==========
   // 規格依據：小遊戲房共用規格文件.md + 五份小遊戲房規格文件
@@ -2626,10 +1987,6 @@
     }
 
     const mapHouse = document.getElementById('map-house');
-    const existingAsuiLayer = document.getElementById('asui-layer');
-    // 隱藏全局阿水圖，地圖房改用 map-asui-static
-    const asuiChar = document.getElementById('asui-character');
-    if (asuiChar) asuiChar.style.display = 'none';
     mapHouse.innerHTML = '';
 
     // 建立 map-stage
@@ -2647,22 +2004,6 @@
     bg.onload = () => { resizeMapFrame(); };
     if (bg.complete) resizeMapFrame();
     mapImageFrame.appendChild(bg);
-
-    // 靜止阿水（相對 map-image-frame 定位）
-    const staticAsui = document.createElement('img');
-    staticAsui.id = 'map-asui-static';
-    staticAsui.src = `${BASE_PATH}image/A27_阿水——閒置 idle.png`;
-    staticAsui.alt = '阿水';
-    staticAsui.style.left = `${mapData.asui_position?.x ?? 18}%`;
-    staticAsui.style.top = `${mapData.asui_position?.y ?? 72}%`;
-    staticAsui.addEventListener('click', onAsuiCharacterTap);
-    mapImageFrame.appendChild(staticAsui);
-
-    const asuiAnchor = document.createElement('div');
-    asuiAnchor.id = 'map-asui';
-    asuiAnchor.style.left = `${mapData.asui_position?.x ?? 18}%`;
-    asuiAnchor.style.top = `${mapData.asui_position?.y ?? 72}%`;
-    mapImageFrame.appendChild(asuiAnchor);
 
     const pinsContainer = document.createElement('div');
     pinsContainer.id = 'map-pins';
@@ -2698,14 +2039,6 @@
     mapStage.appendChild(mapImageFrame);
     mapHouse.appendChild(mapStage);
     requestAnimationFrame(resizeMapFrame);
-
-    // 建立 map-overlay，把 asui-layer 移入
-    const mapOverlay = document.createElement('div');
-    mapOverlay.id = 'map-overlay';
-    const asuiLayer = existingAsuiLayer || document.getElementById('asui-layer');
-    if (asuiLayer) mapOverlay.appendChild(asuiLayer);
-
-    mapHouse.appendChild(mapOverlay);
 
     const completed = _completedChapterIds();
     const nextChapter = MAP_CHAPTER_SEQUENCE.find(item => !completed.includes(item.chapter));
@@ -2814,57 +2147,6 @@
       el.disabled = !enabled;
       el.style.opacity = enabled ? '1' : '0.4';
     });
-  }
-
-  function showAsui(dialogueId, handlers = {}) {
-    const dialogue = asuiDialogues?.dialogues?.find(item => item.id === dialogueId);
-    if (!dialogue) return;
-    asuiState.isPlaying = true;
-    asuiState.currentDialogue = { ...dialogue };
-    asuiState.currentLineIndex = 0;
-    setAsuiCharacter(dialogue.visual_state || 'A27');
-    showAsuiDialogueBar(dialogue.text || (dialogue.lines || [])[0] || '', dialogue);
-    const buttonsEl = document.querySelector('.asui-buttons');
-    if (handlers.onConfirm || handlers.onCancel) {
-      buttonsEl.innerHTML = '';
-      const labels = _asuiConfirmLabels(dialogueId);
-      _asuiMapButton(buttonsEl, labels.confirm, () => {
-        hideAsui();
-        handlers.onConfirm && handlers.onConfirm();
-      });
-      _asuiMapButton(buttonsEl, labels.cancel, () => {
-        hideAsui();
-        handlers.onCancel && handlers.onCancel();
-      });
-    }
-    const audio = getAsuiAudioForDialogue(dialogueId, 0);
-    if (audio) playAsuiTTS(audio, dialogue.text || '');
-  }
-
-  function hideAsui() {
-    hideAsuiDialogueBar();
-    asuiState.isPlaying = false;
-    asuiState.currentDialogue = null;
-    setAsuiCharacter('A27');
-  }
-
-  function _asuiConfirmLabels(dialogueId) {
-    const override = asuiPresentation?.overrides?.find(item => item.applies_to?.includes(dialogueId) && item.confirm_buttons);
-    return {
-      confirm: override?.confirm_buttons?.confirm || '確定',
-      cancel: override?.confirm_buttons?.cancel || '取消',
-    };
-  }
-
-  function _asuiMapButton(container, label, onClick) {
-    const btn = document.createElement('button');
-    btn.className = 'asui-btn';
-    btn.textContent = label;
-    btn.addEventListener('click', event => {
-      event.stopPropagation();
-      onClick();
-    });
-    container.appendChild(btn);
   }
 
   window.enterMap = enterMap;
@@ -3118,7 +2400,6 @@
     initGlobalUI();
     initProgressPanelDevEntry();
     await initAudioManager();
-    await initAsui();
     initOpeningHouse();
   })();
 
