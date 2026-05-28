@@ -20,10 +20,6 @@
     current_event: null,
     coins: 0,
     completed_events: [],
-    unlocked_games: [],
-    paid_games: [],
-    map_colored: [],
-    last_colored_location: null,
     map_segments: {},
     explored_scenes: [],
     visited_sub_scenes: {},
@@ -54,7 +50,6 @@
         state.claimed_rewards = [];
       }
     }
-    updateCoinDisplay();
   }
 
   async function saveCurrentProgress() {
@@ -68,9 +63,6 @@
       current_event: state.current_event,
       coins: state.coins,
       completed_events: state.completed_events,
-      unlocked_games: state.unlocked_games,
-      paid_games: state.paid_games,
-      map_colored: state.map_colored,
       map_segments: state.map_segments,
       explored_scenes: state.explored_scenes,
       visited_sub_scenes: state.visited_sub_scenes,
@@ -86,7 +78,6 @@
 
   function addCoins(amount) {
     state.coins += amount;
-    updateCoinDisplay();
     const cooldownKey = 'coins';
     const now = Date.now();
     if (!_saveCooldown[cooldownKey] || now - _saveCooldown[cooldownKey] >= 5000) {
@@ -129,14 +120,15 @@
 
   function markEventCompleted(eventId, location) {
     if (!state.completed_events.includes(eventId)) state.completed_events.push(eventId);
-    if (location && !state.map_colored.includes(location)) state.map_colored.push(location);
-    if (location) state.last_colored_location = location;
   }
 
   function recordAssessment(eventId, sceneId, data) {
     const exists = state.assessment_nodes.some(n => n.sceneId === sceneId);
     if (exists) return;
     state.assessment_nodes.push({ sceneId, ...data });
+    // [DEPRECATED FALLBACK] la_assessment legacy cache
+    // No runtime reads remain. Planned removal after expanded testing + V5.2 stable.
+    // Do not add new reads. Do not rely on this for any feature logic.
     try {
       localStorage.setItem('la_assessment', JSON.stringify({ nodes: [...state.assessment_nodes] }));
     } catch {}
@@ -154,18 +146,6 @@
     state.claimed_rewards.push(rewardId);
     addCoins(amount);
     saveCurrentProgress();
-    return true;
-  }
-
-  function requestUnlock(location) {
-    const mapConfig = globalData.map.locations.find(l => l.location_id === location);
-    if (!mapConfig) return false;
-    const cost = mapConfig.unlock_cost || 0;
-    if (state.coins < cost) return false;
-    state.coins -= cost;
-    if (!state.unlocked_games.includes(location)) state.unlocked_games.push(location);
-    updateCoinDisplay();
-    saveProgress(state.uid, { coins: state.coins, unlocked_games: state.unlocked_games });
     return true;
   }
 

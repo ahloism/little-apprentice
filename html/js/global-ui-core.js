@@ -4,10 +4,6 @@
 
   // ========== Global UI ==========
 
-  function updateCoinDisplay() {
-    document.getElementById('display-coins').textContent = '🪙 ' + state.coins + ' 文';
-  }
-
   function initGlobalUI() {
     const btnBGM = document.getElementById('btn-bgm');
     const btnTTS = document.getElementById('btn-tts');
@@ -51,7 +47,6 @@
       openProgressPanel();
     });
 
-    updateCoinDisplay();
   }
 
   // ========== Cloudflare Workers接口 ==========
