@@ -94,7 +94,7 @@
     <!-- 底部導航列 -->
     <div id="bottom-nav" class="hidden">
       <div id="bottom-nav-left">
-        <button id="btn-notebook-nav">📖 目錄</button>
+        <button id="btn-notebook-nav">📖 學徒筆記</button>
       </div>
       <div id="bottom-nav-center">
         <div id="chapter-progress-dots" style="display:flex;align-items:center;gap:8px;">
@@ -103,27 +103,6 @@
       </div>
       <div id="bottom-nav-right">
         <button id="btn-back-to-map-nav">🗺️ 回大地圖</button>
-      </div>
-    </div>
-
-    <!-- 重讀房（獨立房間，借用故事房渲染，不寫評估） -->
-    <div id="reread-house" class="hidden">
-      <div id="reread-book-wrapper">
-        <div id="reread-page-left">
-          <div id="reread-event-label"></div>
-          <div id="reread-scene-title-el"></div>
-          <div id="reread-text-area"></div>
-        </div>
-        <div id="reread-page-right">
-          <div id="reread-image-area"></div>
-          <div id="reread-choices-area"></div>
-          <div id="reread-advance-area">
-            <!-- 右頁左下：重讀目錄 -->
-            <button id="reread-back-to-catalogue-btn" class="hidden">🔁 重讀目錄</button>
-            <!-- 右頁右下：繼續 -->
-            <button id="reread-advance-btn" class="hidden">繼續</button>
-          </div>
-        </div>
       </div>
     </div>
 
@@ -164,50 +143,6 @@
 
 
   </div>
-
-  <!-- ========== 模塊：目錄面板 ========== -->
-  <div id="catalogue-overlay" class="hidden">
-    <div id="catalogue-panel">
-      <div id="catalogue-header">
-        <div id="catalogue-title">附錄</div>
-        <button id="catalogue-close-btn">×</button>
-      </div>
-      <div id="catalogue-body">
-
-        <!-- 分頁一：主目錄 -->
-        <div class="catalogue-tab-content active" id="catalogue-tab-main">
-          <ul id="catalogue-main-list">
-            <li><button class="catalogue-item-btn" id="catalogue-btn-map">🗺️ 前往大梁城</button></li>
-            <li><button class="catalogue-item-btn" id="catalogue-btn-notebook">📖 學徒筆記</button></li>
-            <li><button class="catalogue-item-btn" id="catalogue-btn-games">🎮 小遊戲</button></li>
-            <li><button class="catalogue-item-btn" id="catalogue-btn-reread">🔁 重讀章節</button></li>
-          </ul>
-        </div>
-
-        <!-- 分頁二：小遊戲清單 -->
-        <div class="catalogue-tab-content hidden" id="catalogue-tab-games">
-          <div class="catalogue-back-row">
-            <button class="catalogue-back-btn" id="catalogue-games-back">← 返回</button>
-          </div>
-          <ul id="catalogue-games-list">
-            <!-- 由JS動態生成 -->
-          </ul>
-        </div>
-
-        <!-- 分頁三：重讀章節清單 -->
-        <div class="catalogue-tab-content hidden" id="catalogue-tab-reread">
-          <div class="catalogue-back-row">
-            <button class="catalogue-back-btn" id="catalogue-reread-back">← 返回</button>
-          </div>
-          <ul id="catalogue-reread-list">
-            <!-- 由JS動態生成 -->
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </div>
-  <!-- ========== /模塊：目錄面板 ========== -->
 
   <!-- ========== 模塊：學習進度面板 ========== -->
   <div id="progress-overlay" class="hidden">
@@ -268,7 +203,7 @@
   function showRoom(roomId) {
     document.getElementById('page-left')?.classList.remove('scrollable');
     // 隱藏所有房間內容
-    const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house', 'reread-house'];
+    const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house'];
     // 底部導航列：Story房和小遊戲房顯示，其餘隱藏
     const bottomNavRooms = ['story-house', 'game-house'];
     const bottomNav = document.getElementById('bottom-nav');
@@ -949,148 +884,6 @@
     const sceneId = event.detail?.sceneId || getCurrentScene() || '1_1_1';
     enterStory(_sceneEventId(sceneId), sceneId);
   });
-
-  // ========== 模塊：目錄面板 ==========
-
-  let _catalogueLastTab = 'main'; // 記住上次分頁
-
-  const GAME_LIST = [
-    { id: 'warehouse', title: '商行收貨', appears_after: null },
-    { id: 'market',    title: '市集探案', appears_after: 'story_1_1' },
-    { id: 'bridge',    title: '橋邊問路', appears_after: 'story_1_2' },
-    { id: 'inn',       title: '客棧聽書', appears_after: 'story_1_4' },
-    { id: 'dock',      title: '碼頭點貨', appears_after: 'story_1_5' },
-  ];
-
-  const REREAD_CHAPTERS = [
-    { id: '1_1', title: '第一章　商行初遇', appears_after: null },
-    { id: '1_2', title: '第二章　市集謎蹤', appears_after: 'story_1_1' },
-    { id: '1_3', title: '第三章　橋邊問路', appears_after: 'story_1_2' },
-    { id: '1_4', title: '第四章　橋邊抉擇', appears_after: 'story_1_3' },
-    { id: '1_5', title: '第五章　客棧聽書', appears_after: 'story_1_4' },
-    { id: '1_6', title: '第六章　碼頭點貨', appears_after: 'story_1_5' },
-    { id: '1_7', title: '第七章　城門送別', appears_after: 'story_1_6' },
-  ];
-
-  function openCataloguePanel() {
-    document.getElementById('catalogue-overlay').classList.remove('hidden');
-    _renderCatalogueGames();
-    _renderCatalogueReread();
-    _switchCatalogueTab(_catalogueLastTab);
-  }
-
-  function closeCataloguePanel() {
-    document.getElementById('catalogue-overlay').classList.add('hidden');
-  }
-
-  function _switchCatalogueTab(tabName) {
-    _catalogueLastTab = tabName;
-    document.querySelectorAll('.catalogue-tab-content').forEach(el => el.classList.add('hidden'));
-    const tab = document.getElementById(`catalogue-tab-${tabName}`);
-    if (tab) tab.classList.remove('hidden');
-  }
-
-  function _isCatalogueGameUnlocked(game) {
-    if (!game.appears_after) return true;
-    const completed = state.completed_events || [];
-    const normalized = completed.map(e => String(e).replace(/^story_/, '').replace(/\./g, '_'));
-    const required = String(game.appears_after).replace(/^story_/, '');
-    return normalized.includes(required);
-  }
-
-  function _isChapterRead(chapter) {
-    if (!chapter.appears_after) return true;
-    const completed = state.completed_events || [];
-    const normalized = completed.map(e => String(e).replace(/^story_/, '').replace(/\./g, '_'));
-    const required = String(chapter.appears_after).replace(/^story_/, '');
-    return normalized.includes(required);
-  }
-
-  function _renderCatalogueGames() {
-    const list = document.getElementById('catalogue-games-list');
-    if (!list) return;
-    list.innerHTML = '';
-    GAME_LIST.forEach(game => {
-      const li = document.createElement('li');
-      const btn = document.createElement('button');
-      btn.className = 'catalogue-item-btn';
-      btn.textContent = game.title;
-      if (_isCatalogueGameUnlocked(game)) {
-        btn.addEventListener('click', () => {
-          _catalogueLastTab = 'games';
-          closeCataloguePanel();
-          _gameSource = 'catalogue';
-          if (typeof enterGame === 'function') enterGame(game.id);
-        });
-      } else {
-        btn.classList.add('disabled');
-      }
-      li.appendChild(btn);
-      list.appendChild(li);
-    });
-  }
-
-  function _renderCatalogueReread() {
-    const list = document.getElementById('catalogue-reread-list');
-    if (!list) return;
-    list.innerHTML = '';
-    REREAD_CHAPTERS.forEach(chapter => {
-      const li = document.createElement('li');
-      const btn = document.createElement('button');
-      btn.className = 'catalogue-item-btn';
-      btn.textContent = chapter.title;
-      if (_isChapterRead(chapter)) {
-        btn.addEventListener('click', () => {
-          _catalogueLastTab = 'reread';
-          closeCataloguePanel();
-          enterReread(chapter.id);
-        });
-      } else {
-        btn.classList.add('disabled');
-      }
-      li.appendChild(btn);
-      list.appendChild(li);
-    });
-  }
-
-  // 目錄面板事件綁定
-  document.getElementById('catalogue-close-btn')?.addEventListener('click', closeCataloguePanel);
-
-  document.getElementById('catalogue-btn-map')?.addEventListener('click', () => {
-    closeCataloguePanel();
-    cancelTTSQueue();
-    showRoom('map-house');
-    if (typeof enterMap === 'function') enterMap();
-  });
-
-  document.getElementById('catalogue-btn-notebook')?.addEventListener('click', () => {
-    closeCataloguePanel();
-    if (typeof openProgressPanel === 'function') {
-      openProgressPanel();
-      if (typeof switchProgressTab === 'function') switchProgressTab('notebook');
-    }
-  });
-
-  document.getElementById('catalogue-btn-games')?.addEventListener('click', () => {
-    _switchCatalogueTab('games');
-  });
-
-  document.getElementById('catalogue-btn-reread')?.addEventListener('click', () => {
-    _switchCatalogueTab('reread');
-  });
-
-  document.getElementById('catalogue-games-back')?.addEventListener('click', () => {
-    _switchCatalogueTab('main');
-  });
-
-  document.getElementById('catalogue-reread-back')?.addEventListener('click', () => {
-    _switchCatalogueTab('main');
-  });
-
-  window.openCataloguePanel = openCataloguePanel;
-  window.closeCataloguePanel = closeCataloguePanel;
-
-  // ========== /模塊：目錄面板 ==========
 
   // ========== 模塊：學徒筆記層 ==========
   // 規格依據：學徒筆記層規格文件.md
@@ -2637,7 +2430,7 @@
   });
 
   document.getElementById('btn-notebook-nav')?.addEventListener('click', () => {
-    if (typeof openCataloguePanel === 'function') openCataloguePanel();
+    if (typeof openProgressPanel === 'function') openProgressPanel();
   });
 
   document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
