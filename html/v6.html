@@ -963,13 +963,13 @@
   ];
 
   const REREAD_CHAPTERS = [
-    { id: '1_1', title: '第一章　商行初遇', appears_after: null },
-    { id: '1_2', title: '第二章　市集謎蹤', appears_after: 'story_1_1' },
-    { id: '1_3', title: '第三章　橋邊問路', appears_after: 'story_1_2' },
-    { id: '1_4', title: '第四章　橋邊抉擇', appears_after: 'story_1_3' },
-    { id: '1_5', title: '第五章　客棧聽書', appears_after: 'story_1_4' },
-    { id: '1_6', title: '第六章　碼頭點貨', appears_after: 'story_1_5' },
-    { id: '1_7', title: '第七章　城門送別', appears_after: 'story_1_6' },
+    { id: '1_1', title: '商行取貨', appears_after: null },
+    { id: '1_2', title: '市集小意外', appears_after: 'story_1_1' },
+    { id: '1_3', title: '橋邊打聽', appears_after: 'story_1_2' },
+    { id: '1_4', title: '橋邊推理', appears_after: 'story_1_3' },
+    { id: '1_5', title: '客棧說書', appears_after: 'story_1_4' },
+    { id: '1_6', title: '碼頭面對問題', appears_after: 'story_1_5' },
+    { id: '1_7', title: '帳房考問', appears_after: 'story_1_6' },
   ];
 
   function openCataloguePanel() {
@@ -1043,7 +1043,7 @@
         btn.addEventListener('click', () => {
           _catalogueLastTab = 'reread';
           closeCataloguePanel();
-          enterReread(chapter.id);
+          if (typeof enterReread === 'function') enterReread(chapter.id);
         });
       } else {
         btn.classList.add('disabled');
