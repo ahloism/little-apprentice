@@ -413,20 +413,3 @@
   color: var(--ink);
 }
 /* ========== /目錄面板 ========== */
-
-/* ========== 重讀房標籤 ========== */
-#reread-mode-label {
-  position: absolute;
-  top: 12px;
-  right: 14px;
-  background: var(--sign-fill);
-  border: 2px solid var(--sign-border);
-  color: var(--sign-text);
-  border-radius: 6px;
-  padding: 4px 12px;
-  font-size: 13px;
-  font-family: var(--hei);
-  pointer-events: none;
-  z-index: 10;
-}
-/* ========== /重讀房標籤 ========== */

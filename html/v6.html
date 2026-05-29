@@ -115,7 +115,6 @@
           <div id="reread-text-area"></div>
         </div>
         <div id="reread-page-right">
-          <div id="reread-mode-label">重讀章節</div>
           <div id="reread-image-area"></div>
           <div id="reread-choices-area"></div>
           <div id="reread-advance-area">
@@ -2114,104 +2113,6 @@
   window.enterGame = enterGame;
   window.renderGameScreen = renderGameScreen;
   window.pickVariation = pickVariation;
-
-  // ========== 模塊：重讀房 ==========
-  // 重讀原則：不呼叫 recordAssessment / saveCurrentProgress /
-  //           markEventCompleted / claimReward；不更新任何進度狀態
-
-  async function enterReread(chapterId) {
-    showRoom('reread-house');
-    const parts = chapterId.split('_');
-    const eventId = parts[0] + '_' + parts[1];
-    await loadEventData(eventId);
-    if (document.getElementById('reread-house')?.classList.contains('hidden')) return;
-    const startScene = chapterId + '_1';
-    await renderRereadScene(startScene);
-  }
-
-  async function renderRereadScene(sceneId) {
-    if (document.getElementById('reread-house')?.classList.contains('hidden')) return;
-
-    // 清空 choices（避免上一個探索節點殘留）
-    const choicesArea = document.getElementById('reread-choices-area');
-    if (choicesArea) choicesArea.innerHTML = '';
-
-    const scene = _findByScene(_storyList(eventData.story), sceneId);
-    if (!scene) {
-      logError('Reread scene not found: ' + sceneId, 'renderRereadScene', null);
-      return;
-    }
-    const presentation = _findByScene(_storyList(eventData.presentation), sceneId) || {};
-    const manifestScene = _findByScene(_storyList(eventData.manifest), sceneId);
-    const type = manifestScene?.type || 'feedback';
-
-    // 渲染文字
-    const eventLabel = document.getElementById('reread-event-label');
-    const titleEl = document.getElementById('reread-scene-title-el');
-    const textArea = document.getElementById('reread-text-area');
-    if (eventLabel) eventLabel.textContent = _storyLocationLabel ? _storyLocationLabel() : '';
-    if (titleEl) titleEl.textContent = scene.title || '';
-    if (textArea) _renderLines(_linesForVisit(scene), textArea);
-
-    // 清除按鈕
-    const advBtn = document.getElementById('reread-advance-btn');
-    const backBtn = document.getElementById('reread-back-to-catalogue-btn');
-    if (advBtn) advBtn.classList.add('hidden');
-    if (backBtn) backBtn.classList.add('hidden');
-
-    // 評估節點統一當 story 節點處理（不記錄）
-    const assessmentTypes = ['assessment', 'assessment_remedial', 'hidden_assessment', 'hidden_remedial'];
-    const effectiveType = assessmentTypes.includes(type) ? 'story' : type;
-
-    function _showBackBtn() {
-      if (backBtn) {
-        backBtn.classList.remove('hidden');
-        backBtn.onclick = function() {
-          cancelTTSQueue();
-          if (typeof openCataloguePanel === 'function') openCataloguePanel();
-        };
-      }
-    }
-
-    const textLines = textArea ? Array.from(textArea.children).map(function(el) { return { text: el.textContent }; }) : [];
-
-    if (effectiveType === 'event_end') {
-      await playLinesSequence(presentation?.audio?.lines || [], textLines, textArea, presentation);
-      if (document.getElementById('reread-house')?.classList.contains('hidden')) return;
-      _showBackBtn();
-
-    } else if (effectiveType === 'story' || effectiveType === 'feedback') {
-      await playLinesSequence(presentation?.audio?.lines || [], textLines, textArea, presentation);
-      if (document.getElementById('reread-house')?.classList.contains('hidden')) return;
-      if (scene.next_scene && advBtn) {
-        advBtn.textContent = presentation?.advance_label || '繼續';
-        advBtn.classList.remove('hidden');
-        advBtn.onclick = function() { renderRereadScene(scene.next_scene); };
-      }
-      _showBackBtn();
-
-    } else if (effectiveType === 'explore' || effectiveType === 'free_explore') {
-      await playLinesSequence(presentation?.audio?.lines || [], textLines, textArea, presentation);
-      if (document.getElementById('reread-house')?.classList.contains('hidden')) return;
-      if (choicesArea && scene.choices) {
-        scene.choices.forEach(function(choice) {
-          const btn = document.createElement('button');
-          btn.className = 'story-choice-btn';
-          btn.textContent = choice.text || choice.label;
-          btn.addEventListener('click', function() {
-            choicesArea.querySelectorAll('button').forEach(function(b) { b.disabled = true; });
-            if (choice.next_scene) renderRereadScene(choice.next_scene);
-          });
-          choicesArea.appendChild(btn);
-        });
-      }
-      _showBackBtn();
-    }
-  }
-
-  window.enterReread = enterReread;
-
-  // ========== /模塊：重讀房 ==========
 
   // ========== 模塊：大地圖房 ==========
   // 規格依據：大地圖房規格文件.md
