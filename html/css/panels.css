@@ -310,3 +310,106 @@
     }
 
     /* ========== /模塊：學習進度面板 ========== */
+
+/* ========== 目錄面板 ========== */
+#catalogue-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#catalogue-overlay.hidden {
+  display: none;
+}
+#catalogue-panel {
+  background: var(--paper);
+  border-radius: 12px;
+  width: min(480px, 92vw);
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-family: var(--hei);
+}
+#catalogue-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(90,58,16,0.12);
+}
+#catalogue-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  color: var(--ink);
+  font-weight: 700;
+}
+#catalogue-close-btn {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 0 4px;
+}
+#catalogue-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px;
+}
+.catalogue-tab-content {
+  display: block;
+}
+.catalogue-tab-content.hidden {
+  display: none;
+}
+#catalogue-main-list,
+#catalogue-games-list,
+#catalogue-reread-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.catalogue-item-btn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid rgba(90,58,16,0.15);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-family: var(--hei);
+  font-size: 17px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.catalogue-item-btn:hover {
+  background: rgba(90,58,16,0.05);
+}
+.catalogue-item-btn.disabled {
+  color: var(--ink-soft);
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+.catalogue-back-row {
+  margin-bottom: 12px;
+}
+.catalogue-back-btn {
+  background: transparent;
+  border: none;
+  font-family: var(--hei);
+  font-size: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  padding: 4px 0;
+}
+.catalogue-back-btn:hover {
+  color: var(--ink);
+}
+/* ========== /目錄面板 ========== */
