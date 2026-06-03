@@ -48,6 +48,17 @@
     </div>
 
     <div id="notebook-house" class="hidden">
+      <!-- 章節列表頁（瀏覽模式，新增） -->
+      <div id="notebook-chapter-list" class="hidden">
+        <div id="notebook-list-inner">
+          <h1 id="notebook-list-title">學徒筆記</h1>
+          <ul id="notebook-list">
+            <!-- 由 renderNotebookChapterList() 動態生成 -->
+          </ul>
+        </div>
+      </div>
+      <!-- 返回列表按鈕（瀏覽模式用，內嵌於筆記內容頁） -->
+      <button id="notebook-back-to-list-btn" style="display:none">返回列表</button>
       <div id="notebook-title-left"></div>
       <div id="notebook-section-adventure"></div>
       <div id="notebook-story-progress"></div>
@@ -89,12 +100,125 @@
       <div id="page-right"></div>
       <!-- 大地圖（全幅，與雙頁並列） -->
       <div id="map-house" class="hidden"></div>
+
+    <!-- 目錄房 -->
+    <div id="catalogue-house" class="hidden">
+      <div id="catalogue-page-main" class="cat-page">
+        <div id="catalogue-inner">
+          <h1 id="catalogue-title">目錄</h1>
+          <ul id="catalogue-list">
+            <!-- 由 enterCatalogue() 動態生成 -->
+          </ul>
+        </div>
+      </div>
+      <div id="catalogue-page-reread" class="cat-page hidden">
+        <div id="cat-reread-inner">
+          <h1 id="cat-reread-title">重讀章節</h1>
+          <ul id="cat-reread-list">
+            <!-- 由 switchCataloguePage('reread') 動態生成 -->
+          </ul>
+        </div>
+      </div>
+      <div id="catalogue-page-games" class="cat-page hidden">
+        <div id="cat-games-inner">
+          <h1 id="cat-games-title">小遊戲</h1>
+          <ul id="cat-games-list">
+            <!-- 由 switchCataloguePage('games') 動態生成 -->
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- 重讀房 -->
+    <div id="reread-house" class="hidden">
+      <div id="reread-page-left">
+        <div id="reread-mode-label">重讀模式</div>
+        <div id="reread-image-main"></div>
+        <div id="reread-image-overlay"></div>
+        <div id="reread-image-display"></div>
+        <div id="reread-image-caption"></div>
+      </div>
+      <div id="reread-page-right">
+        <button id="reread-back-to-list-btn">返回章節列表</button>
+        <div id="reread-header">
+          <span id="reread-event-label"></span>
+        </div>
+        <div id="reread-text-area"></div>
+        <div id="reread-question-area"></div>
+        <div id="reread-choices-area"></div>
+        <div id="reread-nav">
+          <button id="reread-prev-btn">返回</button>
+          <button id="reread-advance-btn">繼續</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 系統設置房 -->
+    <div id="settings-house" class="hidden">
+      <div id="settings-inner">
+        <h1 id="settings-title">系統設置</h1>
+        <ul id="settings-list">
+          <li class="settings-item">
+            <div class="settings-row">
+              <span class="settings-label">音樂</span>
+              <button class="settings-toggle" id="settings-bgm-toggle">開</button>
+            </div>
+            <div class="settings-sub" id="settings-bgm-volume">
+              <span class="settings-sub-label">音量</span>
+              <div class="settings-segment" id="settings-bgm-vol-btns">
+                <button class="seg-btn" data-value="low">低</button>
+                <button class="seg-btn seg-btn-active" data-value="mid">中</button>
+                <button class="seg-btn" data-value="high">高</button>
+              </div>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="settings-row">
+              <span class="settings-label">音效</span>
+              <button class="settings-toggle" id="settings-sfx-toggle">開</button>
+            </div>
+            <div class="settings-sub" id="settings-sfx-volume">
+              <span class="settings-sub-label">音量</span>
+              <div class="settings-segment" id="settings-sfx-vol-btns">
+                <button class="seg-btn" data-value="low">低</button>
+                <button class="seg-btn seg-btn-active" data-value="mid">中</button>
+                <button class="seg-btn" data-value="high">高</button>
+              </div>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="settings-row">
+              <span class="settings-label">語音</span>
+              <button class="settings-toggle" id="settings-tts-toggle">開</button>
+            </div>
+            <div class="settings-sub" id="settings-tts-volume">
+              <span class="settings-sub-label">音量</span>
+              <div class="settings-segment" id="settings-tts-vol-btns">
+                <button class="seg-btn" data-value="low">低</button>
+                <button class="seg-btn seg-btn-active" data-value="mid">中</button>
+                <button class="seg-btn" data-value="high">高</button>
+              </div>
+            </div>
+          </li>
+          <li class="settings-item">
+            <div class="settings-row">
+              <span class="settings-label">語速</span>
+              <div class="settings-segment" id="settings-speed-btns">
+                <button class="seg-btn" data-value="slow">慢</button>
+                <button class="seg-btn seg-btn-active" data-value="normal">正常</button>
+                <button class="seg-btn" data-value="fast">快</button>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
     </div>
 
     <!-- 底部導航列 -->
     <div id="bottom-nav" class="hidden">
       <div id="bottom-nav-left">
-        <button id="btn-notebook-nav">📖 學徒筆記</button>
+        <button id="btn-catalogue-nav">📖 回目錄</button>
       </div>
       <div id="bottom-nav-center">
         <div id="chapter-progress-dots" style="display:flex;align-items:center;gap:8px;">
@@ -203,7 +327,7 @@
   function showRoom(roomId) {
     document.getElementById('page-left')?.classList.remove('scrollable');
     // 隱藏所有房間內容
-    const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house'];
+    const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house', 'catalogue-house', 'reread-house', 'settings-house'];
     // 底部導航列：Story房和小遊戲房顯示，其餘隱藏
     const bottomNavRooms = ['story-house', 'game-house'];
     const bottomNav = document.getElementById('bottom-nav');
@@ -888,9 +1012,14 @@
   // ========== 模塊：學徒筆記層 ==========
   // 規格依據：學徒筆記層規格文件.md
 
-  async function enterNotebook(eventId) {
+  async function enterNotebook(eventId, source = 'story') {
     showRoom('notebook-house');
     handleRoomTransition('notebook');
+    if (source === 'catalogue') {
+      showNotebookPage('chapter-list');
+      renderNotebookChapterList();
+      return;
+    }
     try {
       await loadNotebookData(eventId);
       await renderNotebook(eventId);
@@ -1095,6 +1224,48 @@
     } else {
       if (typeof openProgressPanel === 'function') openProgressPanel();
     }
+  }
+
+  function showNotebookPage(page) {
+    const chapterList = document.getElementById('notebook-chapter-list');
+    const contentPage = document.getElementById('notebook-content-page');
+    if (chapterList) chapterList.classList.toggle('hidden', page !== 'chapter-list');
+    // notebook-content-page 可能不存在（現有結構可能無此ID），退化處理
+    if (contentPage) contentPage.classList.toggle('hidden', page !== 'content');
+  }
+
+  function renderNotebookChapterList() {
+    const list = document.getElementById('notebook-list');
+    if (!list || !globalData?.progressContent?.chapters) return;
+    list.innerHTML = '';
+    globalData.progressContent.chapters.forEach(chapter => {
+      const isCompleted = state.completed_events && state.completed_events.includes(chapter.chapter_id);
+      const li = document.createElement('li');
+      li.className = 'notebook-list-item';
+      const btn = document.createElement('button');
+      btn.className = 'notebook-chapter-btn ' + (isCompleted ? 'notebook-chapter-btn-active' : 'notebook-chapter-btn-locked');
+      btn.textContent = chapter.title || chapter.chapter_id;
+      if (isCompleted) {
+        btn.addEventListener('click', () => onNotebookChapterSelect(chapter.chapter_id));
+      }
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+  }
+
+  function onNotebookChapterSelect(chapterId) {
+    showNotebookPage('content');
+    renderNotebookContent(chapterId, 'catalogue');
+  }
+
+  function renderNotebookContent(chapterId, source = 'story') {
+    const backBtn = document.getElementById('notebook-back-to-list-btn');
+    if (backBtn) {
+      backBtn.style.display = source === 'catalogue' ? 'block' : 'none';
+      backBtn.onclick = () => showNotebookPage('chapter-list');
+    }
+    // 現有筆記渲染邏輯由 enterNotebook(chapterId) 處理
+    // 此函數負責設定 source 相關 UI，不重複渲染內容
   }
 
   // ========== /模塊：學徒筆記層 ==========
@@ -2395,13 +2566,448 @@
   window.downloadReport = downloadReport;
   // ========== 模塊：報告房 END ==========
 
+  // ========== 模塊：目錄房 ==========
+  // 規格依據：目錄房規格文件.md
+
+  function enterCatalogue() {
+    handleRoomTransition('catalogue');
+    const hasCompleted = state.completed_events && state.completed_events.length > 0;
+    renderCatalogueItems({
+      map: true,
+      reread: hasCompleted,
+      game: true,
+      notebook: hasCompleted,
+      settings: true,
+    });
+    switchCataloguePage('main');
+    setGlobalUIState({ music: true, voice: true, speed: true, account: true });
+  }
+
+  function switchCataloguePage(page) {
+    document.querySelectorAll('.cat-page').forEach(el => el.classList.add('hidden'));
+    const target = document.getElementById('catalogue-page-' + page);
+    if (target) target.classList.remove('hidden');
+    if (page === 'reread') renderCatalogueReread();
+    if (page === 'games') renderCatalogueGames();
+  }
+
+  function renderCatalogueItems(unlocked) {
+    const list = document.getElementById('catalogue-list');
+    if (!list) return;
+    const items = [
+      { key: 'map',      label: '前往大梁城',  action: () => { showRoom('map-house'); enterMap(); } },
+      { key: 'reread',   label: '重讀章節',    action: () => switchCataloguePage('reread') },
+      { key: 'game',     label: '小遊戲',      action: () => switchCataloguePage('games') },
+      { key: 'notebook', label: '學徒筆記',    action: () => { showRoom('notebook-house'); enterNotebook(null, 'catalogue'); } },
+      { key: 'settings', label: '系統設置',    action: () => { showRoom('settings-house'); enterSettings(); } },
+    ];
+    list.innerHTML = '';
+    items.forEach(item => {
+      const li = document.createElement('li');
+      li.className = 'catalogue-item';
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn ' + (unlocked[item.key] ? 'cat-btn-active' : 'cat-btn-locked');
+      btn.textContent = item.label;
+      if (unlocked[item.key]) btn.addEventListener('click', item.action);
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+  }
+
+  function renderCatalogueReread() {
+    const list = document.getElementById('cat-reread-list');
+    if (!list || !globalData?.progressContent?.chapters) return;
+    list.innerHTML = '';
+    globalData.progressContent.chapters.forEach(chapter => {
+      const isCompleted = state.completed_events && state.completed_events.includes(chapter.chapter_id);
+      const li = document.createElement('li');
+      li.className = 'cat-reread-item';
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn ' + (isCompleted ? 'cat-btn-active' : 'cat-btn-locked');
+      btn.textContent = chapter.title || chapter.chapter_id;
+      if (isCompleted) btn.addEventListener('click', () => enterReread(chapter.chapter_id));
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+  }
+
+  function renderCatalogueGames() {
+    const list = document.getElementById('cat-games-list');
+    if (!list) return;
+    const games = [
+      { id: 'warehouse', label: '商行收貨' },
+      { id: 'market',    label: '市集探案' },
+      { id: 'bridge',    label: '橋邊問路' },
+      { id: 'inn',       label: '客棧聽書' },
+      { id: 'dock',      label: '碼頭點貨' },
+    ];
+    list.innerHTML = '';
+    games.forEach(game => {
+      const li = document.createElement('li');
+      li.className = 'cat-games-item';
+      const btn = document.createElement('button');
+      btn.className = 'cat-btn cat-btn-active';
+      btn.textContent = game.label;
+      btn.addEventListener('click', () => enterGame(game.id, 'catalogue'));
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+  }
+
+  // ========== /目錄房 ==========
+
+  // ========== 模塊：重讀房 ==========
+  // 規格依據：重讀房規格文件.md
+
+  let _rereadHistory = [];
+
+  async function enterReread(eventId) {
+    showRoom('reread-house');
+    handleRoomTransition('reread');
+    setGlobalUIState({ music: true, voice: true, speed: true, account: true });
+    try {
+      await loadEventData(eventId);
+      _rereadCurrentEventId = eventId;
+      const startScene = eventData.manifest?.start_scene
+        || _storyList(eventData.story)?.[0]?.scene_id
+        || null;
+      if (!startScene) throw new Error('start_scene not found: ' + eventId);
+      _rereadHistory = [];
+      renderRereadScene(startScene, eventId);
+    } catch (e) {
+      console.error('[enterReread] error:', e);
+      logError(e?.message || 'enterReread crash', 'enterReread', state.uid);
+    }
+  }
+
+  async function renderRereadScene(sceneId, eventId) {
+    _rereadHistory.push(sceneId);
+
+    const prevBtn = document.getElementById('reread-prev-btn');
+    if (prevBtn) prevBtn.style.visibility = _rereadHistory.length > 1 ? 'visible' : 'hidden';
+
+    const advBtn = document.getElementById('reread-advance-btn');
+    if (advBtn) { advBtn.classList.add('hidden'); advBtn.onclick = null; }
+
+    const scene = _findByScene(_storyList(eventData.story), sceneId);
+    const manifestScene = _findByScene(_storyList(eventData.manifest), sceneId) || {};
+    const presentation = _findByScene(_storyList(eventData.presentation), sceneId) || {};
+    const type = manifestScene.type || 'story';
+
+    // 更新標題
+    const label = document.getElementById('reread-event-label');
+    if (label) label.textContent = presentation.chapter_label || '';
+
+    // 更新左頁圖像
+    if (presentation.image) {
+      const imgEl = document.getElementById('reread-image-display');
+      if (imgEl) imgEl.style.backgroundImage = `url(${BASE_PATH}${presentation.image})`;
+    }
+
+    // 清空右頁
+    const textArea = document.getElementById('reread-text-area');
+    const questionArea = document.getElementById('reread-question-area');
+    const choicesArea = document.getElementById('reread-choices-area');
+    if (textArea) textArea.innerHTML = '';
+    if (questionArea) questionArea.innerHTML = '';
+    if (choicesArea) choicesArea.innerHTML = '';
+
+    if (!scene) {
+      console.error('[renderRereadScene] scene not found:', sceneId);
+      return;
+    }
+
+    if (type === 'event_end') {
+      if (textArea && scene.lines) {
+        textArea.innerHTML = scene.lines.map((l, i) => `<p data-line-index="${i}">${l.text || l}</p>`).join('');
+      }
+      // TTS：播完才顯示繼續（沿用故事房 playLinesSequence，lockUI不鎖重讀房）
+      const audioLines = presentation?.audio?.lines || [];
+      if (audioLines.length > 0 && textArea) {
+        await playLinesSequence(audioLines, scene.lines, textArea, presentation);
+      }
+      if (advBtn) {
+        advBtn.textContent = '繼續';
+        advBtn.classList.remove('hidden');
+        advBtn.onclick = () => backToRereadList();
+      }
+      return;
+    }
+
+    if (type === 'story' || type === 'feedback') {
+      if (textArea && scene.lines) {
+        textArea.innerHTML = scene.lines.map((l, i) => `<p data-line-index="${i}">${l.text || l}</p>`).join('');
+      }
+      // TTS：播完才顯示繼續（沿用故事房 playLinesSequence，lockUI不鎖重讀房）
+      const audioLines = presentation?.audio?.lines || [];
+      if (audioLines.length > 0 && textArea) {
+        await playLinesSequence(audioLines, scene.lines, textArea, presentation);
+      }
+      if (advBtn) {
+        advBtn.textContent = presentation.advance_label || '繼續';
+        advBtn.classList.remove('hidden');
+        advBtn.onclick = () => {
+          const next = manifestScene.next_scene || scene.next_scene;
+          if (next) renderRereadScene(next, eventId);
+        };
+      }
+      return;
+    }
+
+    if (type === 'assessment' || type === 'assessment_remedial') {
+      if (questionArea && scene.question) {
+        questionArea.innerHTML = `<p>${scene.question}</p>`;
+      }
+      // TTS：播問題音頻
+      if (presentation?.audio?.question && questionArea) {
+        await playLine(_audioPath(presentation.audio.question), _timestampPath(presentation.audio.question), questionArea);
+      }
+      if (choicesArea && scene.choices) {
+        scene.choices.forEach(choice => {
+          const btn = document.createElement('button');
+          btn.className = 'reread-choice-btn';
+          btn.textContent = choice.text || choice;
+          btn.addEventListener('click', () => {
+            // 重讀模式：不呼叫 recordAssessment()
+            const next = choice.next_scene || manifestScene.next_scene;
+            if (next) renderRereadScene(next, eventId);
+          });
+          choicesArea.appendChild(btn);
+        });
+      }
+      return;
+    }
+
+    if (type === 'hidden_assessment' || type === 'hidden_remedial') {
+      if (textArea && scene.lines) {
+        textArea.innerHTML = scene.lines.map((l, i) => `<p data-line-index="${i}">${l.text || l}</p>`).join('');
+      }
+      // TTS：播完才顯示繼續
+      const audioLinesH = presentation?.audio?.lines || [];
+      if (audioLinesH.length > 0 && textArea) {
+        await playLinesSequence(audioLinesH, scene.lines, textArea, presentation);
+      }
+      if (advBtn) {
+        advBtn.textContent = presentation.advance_label || '繼續';
+        advBtn.classList.remove('hidden');
+        advBtn.onclick = () => {
+          const next = manifestScene.next_scene || scene.next_scene;
+          if (next) renderRereadScene(next, eventId);
+        };
+      }
+      return;
+    }
+
+    if (type === 'explore' || type === 'free_explore') {
+      if (questionArea && scene.question) {
+        questionArea.innerHTML = `<p>${scene.question}</p>`;
+      }
+      // TTS：播問題音頻
+      if (presentation?.audio?.question && questionArea) {
+        await playLine(_audioPath(presentation.audio.question), _timestampPath(presentation.audio.question), questionArea);
+      }
+      if (choicesArea && scene.choices) {
+        scene.choices.forEach(choice => {
+          const btn = document.createElement('button');
+          btn.className = 'reread-choice-btn';
+          btn.textContent = choice.text || choice;
+          btn.addEventListener('click', () => {
+            const next = choice.next_scene || manifestScene.next_scene;
+            if (next) renderRereadScene(next, eventId);
+          });
+          choicesArea.appendChild(btn);
+        });
+      }
+      return;
+    }
+  }
+
+  function rereadPrev() {
+    if (_rereadHistory.length <= 1) return;
+    cancelTTSQueue();
+    _rereadHistory.pop();
+    const prevSceneId = _rereadHistory[_rereadHistory.length - 1];
+    _rereadHistory.pop();
+    const currentEventId = _rereadCurrentEventId;
+    renderRereadScene(prevSceneId, currentEventId);
+  }
+
+  let _rereadCurrentEventId = null;
+
+  function backToRereadList() {
+    cancelTTSQueue();
+    showRoom('catalogue-house');
+    switchCataloguePage('reread');
+  }
+
+  // ========== /重讀房 ==========
+
+  // ========== 模塊：系統設置房 ==========
+  // 規格依據：系統設置房規格文件.md
+
+  const VOLUME_SETTINGS_KEY = 'la_volume_settings';
+  const VOLUME_MAP = { low: 0.3, mid: 0.6, high: 1.0 };
+
+  function saveVolumeSettings() {
+    const settings = {
+      bgm_volume: state.bgm_volume,
+      sfx_on: state.sfx_on,
+      sfx_volume: state.sfx_volume,
+      tts_volume: state.tts_volume,
+    };
+    localStorage.setItem(VOLUME_SETTINGS_KEY, JSON.stringify(settings));
+  }
+
+  function loadVolumeSettings() {
+    try {
+      const saved = localStorage.getItem(VOLUME_SETTINGS_KEY);
+      if (!saved) return;
+      const settings = JSON.parse(saved);
+      if (settings.bgm_volume !== undefined) state.bgm_volume = settings.bgm_volume;
+      if (settings.sfx_on !== undefined) state.sfx_on = settings.sfx_on;
+      if (settings.sfx_volume !== undefined) state.sfx_volume = settings.sfx_volume;
+      if (settings.tts_volume !== undefined) state.tts_volume = settings.tts_volume;
+    } catch (e) {
+      console.warn('[loadVolumeSettings] parse error:', e);
+    }
+  }
+
+  function enterSettings() {
+    showRoom('settings-house');
+    handleRoomTransition('settings');
+    setGlobalUIState({ music: true, voice: true, speed: true, account: true });
+    renderSettingsUI();
+  }
+
+  function renderSettingsUI() {
+    // 音樂
+    const bgmToggle = document.getElementById('settings-bgm-toggle');
+    if (bgmToggle) bgmToggle.textContent = state.bgm_on !== false ? '開' : '關';
+    const bgmVol = document.getElementById('settings-bgm-volume');
+    if (bgmVol) bgmVol.classList.toggle('disabled', state.bgm_on === false);
+
+    // 音效
+    const sfxToggle = document.getElementById('settings-sfx-toggle');
+    if (sfxToggle) sfxToggle.textContent = state.sfx_on !== false ? '開' : '關';
+    const sfxVol = document.getElementById('settings-sfx-volume');
+    if (sfxVol) sfxVol.classList.toggle('disabled', state.sfx_on === false);
+
+    // 語音
+    const ttsToggle = document.getElementById('settings-tts-toggle');
+    if (ttsToggle) ttsToggle.textContent = state.tts_on !== false ? '開' : '關';
+    const ttsVol = document.getElementById('settings-tts-volume');
+    if (ttsVol) ttsVol.classList.toggle('disabled', state.tts_on === false);
+
+    // 分段按鈕
+    _highlightSettingsSegBtn('settings-bgm-vol-btns', state.bgm_volume || 'mid');
+    _highlightSettingsSegBtn('settings-sfx-vol-btns', state.sfx_volume || 'mid');
+    _highlightSettingsSegBtn('settings-tts-vol-btns', state.tts_volume || 'mid');
+    _highlightSettingsSegBtn('settings-speed-btns', state.speed || 'normal');
+  }
+
+  function _highlightSettingsSegBtn(containerId, activeValue) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    container.querySelectorAll('.seg-btn').forEach(btn => {
+      btn.classList.toggle('seg-btn-active', btn.dataset.value === activeValue);
+    });
+  }
+
+  function syncSettingsGlobalUI() {
+    const btnBGM = document.getElementById('btn-bgm');
+    if (btnBGM) btnBGM.textContent = state.bgm_on !== false ? '🎵 音樂' : '🎵 音樂✕';
+    const btnTTS = document.getElementById('btn-tts');
+    if (btnTTS) btnTTS.textContent = state.tts_on !== false ? '🔊 語音' : '🔊 語音✕';
+    const btnSpeed = document.getElementById('btn-speed');
+    if (btnSpeed) {
+      const labels = { slow: '慢', normal: '正常', fast: '快' };
+      btnSpeed.textContent = labels[state.speed] || '正常';
+      btnSpeed.disabled = state.tts_on === false;
+      btnSpeed.style.opacity = state.tts_on !== false ? '1' : '0.4';
+    }
+  }
+
+  // 設置房事件綁定（在 DOM ready 後呼叫）
+  function initSettingsBindings() {
+    // 音樂開關
+    document.getElementById('settings-bgm-toggle')?.addEventListener('click', () => {
+      state.bgm_on = state.bgm_on === false ? true : false;
+      setMuted('bgm', !state.bgm_on);
+      renderSettingsUI();
+      syncSettingsGlobalUI();
+    });
+
+    // 音效開關
+    document.getElementById('settings-sfx-toggle')?.addEventListener('click', () => {
+      state.sfx_on = state.sfx_on === false ? true : false;
+      setMuted('sfx', !state.sfx_on);
+      renderSettingsUI();
+    });
+
+    // 語音開關
+    document.getElementById('settings-tts-toggle')?.addEventListener('click', () => {
+      state.tts_on = state.tts_on === false ? true : false;
+      if (!state.tts_on) {
+        cancelTTSQueue();
+        document.dispatchEvent(new Event('tts:ended'));
+      } else {
+        resumeTTS();
+      }
+      renderSettingsUI();
+      syncSettingsGlobalUI();
+    });
+
+    // 音量分段按鈕（BGM）
+    document.getElementById('settings-bgm-vol-btns')?.addEventListener('click', (e) => {
+      const val = e.target.dataset.value;
+      if (!val) return;
+      state.bgm_volume = val;
+      setVolume('bgm', VOLUME_MAP[val]);
+      saveVolumeSettings();
+      _highlightSettingsSegBtn('settings-bgm-vol-btns', val);
+    });
+
+    // 音量分段按鈕（SFX）
+    document.getElementById('settings-sfx-vol-btns')?.addEventListener('click', (e) => {
+      const val = e.target.dataset.value;
+      if (!val) return;
+      state.sfx_volume = val;
+      setVolume('sfx', VOLUME_MAP[val]);
+      saveVolumeSettings();
+      _highlightSettingsSegBtn('settings-sfx-vol-btns', val);
+    });
+
+    // 音量分段按鈕（TTS）
+    document.getElementById('settings-tts-vol-btns')?.addEventListener('click', (e) => {
+      const val = e.target.dataset.value;
+      if (!val) return;
+      state.tts_volume = val;
+      setVolume('tts', VOLUME_MAP[val]);
+      saveVolumeSettings();
+      _highlightSettingsSegBtn('settings-tts-vol-btns', val);
+    });
+
+    // 語速分段按鈕
+    document.getElementById('settings-speed-btns')?.addEventListener('click', (e) => {
+      const val = e.target.dataset.value;
+      if (!val || state.tts_on === false) return;
+      setSpeed(val);
+      syncSettingsGlobalUI();
+      _highlightSettingsSegBtn('settings-speed-btns', val);
+    });
+  }
+
+  // ========== /系統設置房 ==========
+
   // ========== 啟動 ==========
   (async function init() {
     await loadGlobalData();
     initGlobalUI();
     initProgressPanelDevEntry();
     await initAudioManager();
+    loadVolumeSettings();
     initOpeningHouse();
+    initSettingsBindings();
   })();
 
   // DOM + App lifecycle bindings
@@ -2429,8 +3035,10 @@
     }
   });
 
-  document.getElementById('btn-notebook-nav')?.addEventListener('click', () => {
-    if (typeof openProgressPanel === 'function') openProgressPanel();
+  document.getElementById('btn-catalogue-nav')?.addEventListener('click', () => {
+    cancelTTSQueue();
+    showRoom('catalogue-house');
+    if (typeof enterCatalogue === 'function') enterCatalogue();
   });
 
   document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
