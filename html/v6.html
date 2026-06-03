@@ -328,15 +328,25 @@
     document.getElementById('page-left')?.classList.remove('scrollable');
     // 隱藏所有房間內容
     const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house', 'catalogue-house', 'reread-house', 'settings-house'];
-    // 底部導航列：Story房和小遊戲房顯示，其餘隱藏
-    const bottomNavRooms = ['story-house', 'game-house'];
+    // 底部導航列顯示規則
+    const bottomNavRooms = ['story-house', 'game-house', 'catalogue-house', 'reread-house', 'notebook-house', 'settings-house'];
+    // 附錄體系房間：只顯示「回目錄」，隱藏「回大地圖」
+    const catalogueOnlyRooms = ['catalogue-house', 'reread-house', 'notebook-house', 'settings-house'];
     const bottomNav = document.getElementById('bottom-nav');
+    const btnBackToMap = document.getElementById('btn-back-to-map-nav');
+    const btnCatalogue = document.getElementById('btn-catalogue-nav');
     if (bottomNav) {
       if (bottomNavRooms.includes(roomId)) {
         bottomNav.classList.remove('hidden');
       } else {
         bottomNav.classList.add('hidden');
       }
+    }
+    if (btnBackToMap) {
+      btnBackToMap.style.display = catalogueOnlyRooms.includes(roomId) ? 'none' : '';
+    }
+    if (btnCatalogue) {
+      btnCatalogue.style.display = '';
     }
     rooms.forEach(id => {
       const el = document.getElementById(id);

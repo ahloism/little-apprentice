@@ -10,6 +10,7 @@
   let _ttsStopped = false;
   let _ttsCancelled = false;
   let _ttsResolve = null;
+  let _ttsSessionId = 0;
 
   async function playLine(audioPath, timestampsPath, textElement) {
     if (!state.tts_on) return Promise.resolve();
@@ -67,9 +68,11 @@
     const mp3Path = TTS_BASE + filename;
     const tsPath = TTS_BASE + filename.replace('.mp3', '.json');
     const el = options.textElement || null;
+    const mySession = ++_ttsSessionId;
     if (options.duckBGM !== false) duckBGM({ volume: 0.12, fadeMs: 200 });
     if (options.lockUI !== false) _lockUI(true);
     await playLine(mp3Path, tsPath, el);
+    if (mySession !== _ttsSessionId) return;
     if (options.duckBGM !== false) restoreBGM({ fadeMs: 400 });
     if (options.lockUI !== false) _lockUI(false);
     if (options.onEnd) options.onEnd();
@@ -88,6 +91,7 @@
 
   function cancelTTSQueue() {
     _ttsCancelled = true;
+    _ttsSessionId++;
     stopTTS();
   }
 

@@ -15,6 +15,7 @@
     asui_dialogues: null,
     asui_manifest: null,
     asui_presentation: null,
+    progressContent: null,  // V6 第一部暫定 hardcode，多部制再改由 config 決定
   };
 
   const eventData = {
@@ -47,12 +48,14 @@
         globalData.asui_dialogues,
         globalData.asui_manifest,
         globalData.asui_presentation,
+        globalData.progressContent,
       ] = await Promise.all([
         loadJSON('json/config_global.json'),
         loadJSON('json/map_daliang.json'),
         loadJSON('json/asui_dialogues.json'),
         loadJSON('json/asui_manifest.json'),
         loadJSON('json/asui_presentation.json'),
+        loadJSON('json/progress_content_1.json'),
       ]);
       const savedVersion = localStorage.getItem('la_json_version');
       if (savedVersion && savedVersion !== String(globalData.config.json_version)) {
