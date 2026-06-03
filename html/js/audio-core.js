@@ -28,6 +28,7 @@
 
       _ttsAudio = new Audio(encodeURI(BASE_PATH + audioPath));
       _ttsAudio.playbackRate = SPEED_RATE[state.speed];
+      _ttsAudio.volume = _ttsTargetVolume;
 
       if (timestamps && textElement) {
         _ttsAudio.addEventListener('play', () => {
@@ -188,6 +189,8 @@
   let _bgmAudio = null;
   let _bgmTrack = null;
   let _bgmTargetVolume = 0.5;
+  let _sfxTargetVolume = 1.0;
+  let _ttsTargetVolume = 1.0;
   const _sfxCooldown = {};
   const _sfxAudios = {};
 
@@ -249,13 +252,13 @@
   function playSFX(sfxId, options = {}) {
     const path = SFX[sfxId];
     if (!path) return Promise.resolve();
-    if (!state.bgm_on) return Promise.resolve();
+    if (state.sfx_on === false) return Promise.resolve();
     const cooldownMs = options.cooldownMs || 500;
     const now = Date.now();
     if (_sfxCooldown[sfxId] && now - _sfxCooldown[sfxId] < cooldownMs) return Promise.resolve();
     _sfxCooldown[sfxId] = now;
     const a = _sfxAudios[path] ? _sfxAudios[path].cloneNode() : new Audio(BASE_PATH + path);
-    a.volume = options.volume !== undefined ? options.volume : 1.0;
+    a.volume = options.volume !== undefined ? options.volume : _sfxTargetVolume;
     return new Promise(resolve => {
       a.onended = resolve;
       a.onerror = resolve;
@@ -315,11 +318,24 @@
       if (isMuted) stopBGM(); else playBGM(_bgmTrack || 'BGM_01');
     }
     if (type === 'tts') { state.tts_on = !isMuted; }
+    if (type === 'sfx') {
+      state.sfx_on = !isMuted;
+      if (isMuted) stopAllSFX();
+    }
   }
 
   function setVolume(type, value) {
-    if (type === 'bgm' && _bgmAudio) _bgmAudio.volume = value;
-    _bgmTargetVolume = value;
+    if (type === 'bgm') {
+      _bgmTargetVolume = value;
+      if (_bgmAudio) _bgmAudio.volume = value;
+    }
+    if (type === 'sfx') {
+      _sfxTargetVolume = value;
+    }
+    if (type === 'tts') {
+      _ttsTargetVolume = value;
+      if (_ttsAudio) _ttsAudio.volume = value;
+    }
   }
 
   function _fadeVolume(audio, from, to, ms, onDone) {
