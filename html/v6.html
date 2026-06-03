@@ -3043,6 +3043,7 @@
 
   document.getElementById('btn-back-to-map-nav')?.addEventListener('click', () => {
     cancelTTSQueue();
+    handleRoomTransition('room-map');
     showRoom('map-house');
     if (typeof enterMap === 'function') enterMap();
   });

@@ -310,3 +310,372 @@
     }
 
     /* ========== /模塊：學習進度面板 ========== */
+
+/* =========================
+   Catalogue House
+========================= */
+
+#catalogue-house {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--paper);
+}
+
+.cat-page {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#catalogue-inner,
+#cat-reread-inner,
+#cat-games-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 320px;
+}
+
+#catalogue-title,
+#cat-reread-title,
+#cat-games-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+#catalogue-list,
+#cat-reread-list,
+#cat-games-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.catalogue-item,
+.cat-reread-item,
+.cat-games-item {
+  width: 100%;
+}
+
+.cat-btn {
+  width: 100%;
+  font-family: var(--hei);
+  font-size: 20px;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.cat-btn-active {
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  border-color: var(--sign-border);
+}
+
+.cat-btn-locked {
+  background: var(--paper-deep);
+  color: var(--ink-quiet);
+  cursor: default;
+  border-color: transparent;
+}
+
+/* =========================
+   Reread House
+========================= */
+
+#reread-house {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+}
+
+#reread-page-left {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: var(--paper);
+}
+
+#reread-page-right {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 重讀模式標籤（左頁左上角） */
+#reread-mode-label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-family: var(--hei);
+  font-size: 14px;
+  color: var(--ink-quiet);
+  background: var(--paper-deep);
+  padding: 4px 10px;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+/* 返回章節列表（右頁右上角） */
+#reread-back-to-list-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--hei);
+  font-size: 14px;
+  color: var(--ink-quiet);
+  background: transparent;
+  border: 1px solid var(--ink-quiet);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* 底部導航區 */
+#reread-nav {
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+#reread-prev-btn {
+  font-family: var(--hei);
+  font-size: 16px;
+  background: transparent;
+  border: 1.5px solid var(--ink-quiet);
+  color: var(--ink-quiet);
+  border-radius: 6px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#reread-advance-btn {
+  font-family: var(--hei);
+  font-size: 18px;
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  border: 2px solid var(--sign-border);
+  border-radius: 6px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+/* 重讀房右頁內容區：沿用故事房既有 .text-area / .question-area /
+   .choices-area / page-right 相關樣式，不新增專用 CSS。             */
+
+/* =========================
+   Notebook House - Browse Mode
+========================= */
+
+#notebook-chapter-list {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#notebook-list-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 320px;
+}
+
+#notebook-list-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+#notebook-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notebook-list-item {
+  width: 100%;
+}
+
+.notebook-chapter-btn {
+  width: 100%;
+  font-family: var(--hei);
+  font-size: 18px;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  text-align: center;
+}
+
+.notebook-chapter-btn-active {
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  border-color: var(--sign-border);
+}
+
+.notebook-chapter-btn-locked {
+  background: var(--paper-deep);
+  color: var(--ink-quiet);
+  cursor: default;
+}
+
+/* 返回列表按鈕（筆記內容頁右上角） */
+#notebook-back-to-list-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: var(--hei);
+  font-size: 14px;
+  color: var(--ink-quiet);
+  background: transparent;
+  border: 1px solid var(--ink-quiet);
+  border-radius: 4px;
+  padding: 4px 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* =========================
+   Settings House
+========================= */
+
+#settings-house {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#settings-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 360px;
+}
+
+#settings-title {
+  font-family: var(--serif);
+  font-size: 28px;
+  color: var(--ink);
+  margin-bottom: 8px;
+}
+
+#settings-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-item {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.settings-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.settings-label {
+  font-family: var(--hei);
+  font-size: 18px;
+  color: var(--ink);
+}
+
+.settings-toggle {
+  font-family: var(--hei);
+  font-size: 16px;
+  padding: 6px 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--sign-border);
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  cursor: pointer;
+  min-width: 56px;
+}
+
+.settings-sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 16px;
+  width: 100%;
+}
+
+.settings-sub.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.settings-sub-label {
+  font-family: var(--hei);
+  font-size: 15px;
+  color: var(--ink-quiet);
+}
+
+.settings-segment {
+  display: flex;
+  gap: 4px;
+}
+
+.seg-btn {
+  font-family: var(--hei);
+  font-size: 15px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1.5px solid var(--sign-border);
+  background: var(--paper-deep);
+  color: var(--ink-quiet);
+  cursor: pointer;
+}
+
+.seg-btn-active {
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  border-color: var(--sign-border);
+}
