@@ -12,11 +12,18 @@
   let _ttsResolve = null;
   let _ttsSessionId = 0;
 
+  const TTS_DEBUG = true;
+  function ttsLog(...args) {
+    if (TTS_DEBUG) console.log('[TTS]', ...args);
+  }
+
   async function playLine(audioPath, timestampsPath, textElement) {
     if (!state.tts_on) return Promise.resolve();
     if (_ttsCancelled) return Promise.resolve();
     stopTTS();
     _ttsStopped = false;
+    const mySession = _ttsSessionId;
+    ttsLog(`playLine start session=${mySession}`, audioPath.split('/').pop());
     return new Promise(async (resolve) => {
       _ttsResolve = resolve;
       let timestamps = null;
@@ -25,8 +32,12 @@
         if (res.ok) timestamps = await res.json();
       } catch (e) { /* fallback */ }
 
-      if (_ttsStopped) { resolve(); return; }
+      if (mySession !== _ttsSessionId || _ttsCancelled || _ttsStopped) {
+        ttsLog(`playLine aborted after fetch, mySession=${mySession}, current=${_ttsSessionId}`);
+        resolve(); return;
+      }
 
+      ttsLog(`playLine before play session=${mySession}`, audioPath.split('/').pop());
       _ttsAudio = new Audio(encodeURI(BASE_PATH + audioPath));
       _ttsAudio.playbackRate = SPEED_RATE[state.speed];
       _ttsAudio.volume = _ttsTargetVolume;
@@ -38,6 +49,7 @@
       }
 
       _ttsAudio.addEventListener('ended', () => {
+        ttsLog(`playLine ended session=${mySession}`, audioPath.split('/').pop());
         _ttsResolve = null;
         document.dispatchEvent(new Event('tts:ended'));
         resolve();
@@ -79,6 +91,7 @@
   }
 
   function stopTTS() {
+    ttsLog(`stopTTS session=${_ttsSessionId}`);
     _ttsStopped = true;
     if (_ttsAudio) { _ttsAudio.pause(); _ttsAudio = null; }
     _ttsHighlightTimers.forEach(id => clearTimeout(id));
@@ -90,8 +103,9 @@
   }
 
   function cancelTTSQueue() {
-    _ttsCancelled = true;
     _ttsSessionId++;
+    ttsLog(`cancelTTSQueue new session=${_ttsSessionId}`);
+    _ttsCancelled = true;
     stopTTS();
   }
 
