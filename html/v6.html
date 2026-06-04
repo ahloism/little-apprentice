@@ -329,9 +329,9 @@
     // 隱藏所有房間內容
     const rooms = ['opening-house', 'story-house', 'notebook-house', 'game-house', 'map-house', 'report-house', 'catalogue-house', 'reread-house', 'settings-house'];
     // 底部導航列顯示規則
-    const bottomNavRooms = ['story-house', 'game-house', 'catalogue-house', 'reread-house', 'notebook-house', 'settings-house'];
-    // 附錄體系房間：只顯示「回目錄」，隱藏「回大地圖」
-    const catalogueOnlyRooms = ['catalogue-house', 'reread-house', 'notebook-house', 'settings-house'];
+    const bottomNavRooms = ['story-house', 'game-house', 'catalogue-house', 'reread-house', 'notebook-house', 'settings-house', 'map-house'];
+    // 附錄體系房間及大地圖：只顯示「回目錄」，隱藏「回大地圖」
+    const catalogueOnlyRooms = ['catalogue-house', 'reread-house', 'notebook-house', 'settings-house', 'map-house'];
     const bottomNav = document.getElementById('bottom-nav');
     const btnBackToMap = document.getElementById('btn-back-to-map-nav');
     const btnCatalogue = document.getElementById('btn-catalogue-nav');
@@ -2628,13 +2628,13 @@
     const list = document.getElementById('cat-reread-list');
     if (!list || !globalData?.progressContent?.chapters) return;
     list.innerHTML = '';
-    globalData.progressContent.chapters.forEach(chapter => {
+    globalData.progressContent.chapters.forEach((chapter, index) => {
       const isCompleted = state.completed_events && state.completed_events.includes(chapter.chapter_id);
       const li = document.createElement('li');
       li.className = 'cat-reread-item';
       const btn = document.createElement('button');
       btn.className = 'cat-btn ' + (isCompleted ? 'cat-btn-active' : 'cat-btn-locked');
-      btn.textContent = chapter.title || chapter.chapter_id;
+      btn.textContent = `第${index + 1}章　${chapter.title || chapter.chapter_id}`;
       if (isCompleted) btn.addEventListener('click', () => enterReread(chapter.chapter_id));
       li.appendChild(btn);
       list.appendChild(li);

@@ -408,6 +408,11 @@
   width: 50%;
   height: 100%;
   background: var(--paper);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+  box-sizing: border-box;
 }
 
 #reread-page-right {
@@ -417,6 +422,8 @@
   background: var(--paper);
   display: flex;
   flex-direction: column;
+  padding: 64px 48px 56px;
+  box-sizing: border-box;
 }
 
 /* 重讀模式標籤（左頁左上角） */
@@ -483,8 +490,42 @@
   cursor: pointer;
 }
 
-/* 重讀房右頁內容區：沿用故事房既有 .text-area / .question-area /
-   .choices-area / page-right 相關樣式，不新增專用 CSS。             */
+/* 重讀房內容區：對齊故事房視覺 */
+
+#reread-image-display {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: #f6efe3;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  position: relative;
+}
+
+#reread-text-area {
+  flex: 1;
+  overflow-y: auto;
+  font-size: 21px;
+  line-height: 1.8;
+  color: var(--ink);
+  font-family: var(--serif);
+}
+
+#reread-question-area {
+  min-height: 42px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ink);
+  font-family: var(--hei);
+}
+
+#reread-choices-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
 
 /* =========================
    Notebook House - Browse Mode
