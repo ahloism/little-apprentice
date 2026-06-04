@@ -332,13 +332,23 @@
 }
 
 #catalogue-inner,
-#cat-reread-inner,
 #cat-games-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
   width: 320px;
+}
+
+#cat-reread-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 320px;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding: 24px 0;
 }
 
 #catalogue-title,
@@ -578,6 +588,17 @@
 .cat-reread-scene-btn:hover {
   background: var(--sign-fill);
   color: var(--sign-text);
+}
+
+/* =========================
+   Notebook House
+========================= */
+
+#notebook-house {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: var(--paper);
 }
 
 /* =========================
