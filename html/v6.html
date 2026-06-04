@@ -2767,6 +2767,9 @@
     }
 
     if (type === 'assessment' || type === 'assessment_remedial') {
+      if (textArea && scene.lines) {
+        textArea.innerHTML = scene.lines.map((l, i) => `<p data-line-index="${i}">${l.text || l}</p>`).join('');
+      }
       if (questionArea && scene.question) {
         questionArea.innerHTML = `<p>${scene.question}</p>`;
       }
@@ -2811,6 +2814,9 @@
     }
 
     if (type === 'explore' || type === 'free_explore') {
+      if (textArea && scene.lines) {
+        textArea.innerHTML = scene.lines.map((l, i) => `<p data-line-index="${i}">${l.text || l}</p>`).join('');
+      }
       if (questionArea && scene.question) {
         questionArea.innerHTML = `<p>${scene.question}</p>`;
       }
