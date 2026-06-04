@@ -424,6 +424,7 @@
   flex-direction: column;
   padding: 64px 48px 56px;
   box-sizing: border-box;
+  border-left: 1px solid var(--gold-soft);
 }
 
 /* 重讀模式標籤（左頁左上角） */

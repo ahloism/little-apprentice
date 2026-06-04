@@ -2675,6 +2675,8 @@
     showRoom('reread-house');
     handleRoomTransition('reread');
     setGlobalUIState({ music: true, voice: true, speed: true, account: true });
+    const backBtn = document.getElementById('reread-back-to-list-btn');
+    if (backBtn) backBtn.onclick = () => backToRereadList();
     try {
       await loadEventData(eventId);
       _rereadCurrentEventId = eventId;
@@ -2711,7 +2713,7 @@
     // 更新左頁圖像
     if (presentation.image) {
       const imgEl = document.getElementById('reread-image-display');
-      if (imgEl) imgEl.style.backgroundImage = `url(${BASE_PATH}${presentation.image})`;
+      if (imgEl) imgEl.style.backgroundImage = `url("${_storyImagePath(presentation.image)}")`;
     }
 
     // 清空右頁
