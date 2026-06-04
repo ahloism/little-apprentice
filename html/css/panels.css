@@ -544,6 +544,42 @@
   opacity: 0.85;
 }
 
+/* 重讀房節點列表 */
+.cat-reread-scene-list {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.cat-reread-scene-list.hidden {
+  display: none;
+}
+
+.cat-reread-scene-item {
+  width: 100%;
+}
+
+.cat-reread-scene-btn {
+  width: 100%;
+  font-family: var(--hei);
+  font-size: 16px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 1.5px solid var(--sign-border);
+  background: var(--paper-warm);
+  color: var(--ink);
+  text-align: left;
+}
+
+.cat-reread-scene-btn:hover {
+  background: var(--sign-fill);
+  color: var(--sign-text);
+}
+
 /* =========================
    Notebook House - Browse Mode
 ========================= */

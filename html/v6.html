@@ -2632,11 +2632,33 @@
       const isCompleted = state.completed_events && state.completed_events.includes(chapter.chapter_id);
       const li = document.createElement('li');
       li.className = 'cat-reread-item';
+
+      // 章節標題按鈕
       const btn = document.createElement('button');
       btn.className = 'cat-btn ' + (isCompleted ? 'cat-btn-active' : 'cat-btn-locked');
       btn.textContent = `第${index + 1}章　${chapter.title || chapter.chapter_id}`;
-      if (isCompleted) btn.addEventListener('click', () => enterReread(chapter.chapter_id));
       li.appendChild(btn);
+
+      // 節點列表（已完成章節才顯示）
+      if (isCompleted && chapter.scenes && chapter.scenes.length > 0) {
+        const sceneList = document.createElement('ul');
+        sceneList.className = 'cat-reread-scene-list hidden';
+        chapter.scenes.forEach(scene => {
+          const sceneLi = document.createElement('li');
+          sceneLi.className = 'cat-reread-scene-item';
+          const sceneBtn = document.createElement('button');
+          sceneBtn.className = 'cat-reread-scene-btn';
+          sceneBtn.textContent = scene.title || scene.scene_id;
+          sceneBtn.addEventListener('click', () => enterReread(chapter.chapter_id, scene.scene_id));
+          sceneLi.appendChild(sceneBtn);
+          sceneList.appendChild(sceneLi);
+        });
+        btn.addEventListener('click', () => {
+          sceneList.classList.toggle('hidden');
+        });
+        li.appendChild(sceneList);
+      }
+
       list.appendChild(li);
     });
   }
@@ -2671,16 +2693,25 @@
 
   let _rereadHistory = [];
 
-  async function enterReread(eventId) {
+  async function enterReread(eventId, sceneId) {
     showRoom('reread-house');
     handleRoomTransition('reread');
     setGlobalUIState({ music: true, voice: true, speed: true, account: true });
     const backBtn = document.getElementById('reread-back-to-list-btn');
     if (backBtn) backBtn.onclick = () => backToRereadList();
+    const prevBtn = document.getElementById('reread-prev-btn');
+    if (prevBtn) prevBtn.onclick = () => {
+      if (_rereadHistory.length > 1) {
+        _rereadHistory.pop();
+        const prev = _rereadHistory.pop();
+        if (prev) renderRereadScene(prev, _rereadCurrentEventId);
+      }
+    };
     try {
       await loadEventData(eventId);
       _rereadCurrentEventId = eventId;
-      const startScene = eventData.manifest?.start_scene
+      const startScene = sceneId
+        || eventData.manifest?.start_scene
         || _storyList(eventData.story)?.[0]?.scene_id
         || null;
       if (!startScene) throw new Error('start_scene not found: ' + eventId);
