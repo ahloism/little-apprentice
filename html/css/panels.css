@@ -408,10 +408,7 @@
   width: 50%;
   height: 100%;
   background: var(--paper);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px;
+  padding: 80px 48px 48px;
   box-sizing: border-box;
 }
 
@@ -526,6 +523,25 @@
   flex-direction: column;
   gap: 10px;
   margin-top: 8px;
+}
+
+.reread-choice-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 2px solid var(--sign-border);
+  background: var(--sign-fill);
+  color: var(--sign-text);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 18px;
+  line-height: 1.45;
+  cursor: pointer;
+  font-family: var(--hei);
+}
+
+.reread-choice-btn:hover {
+  opacity: 0.85;
 }
 
 /* =========================
