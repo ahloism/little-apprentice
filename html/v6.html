@@ -698,13 +698,22 @@
   }
 
   async function playLinesSequence(audioList, textLines, textContainer, presentation = {}) {
+    const mySession = getTTSSessionId();
     const lineEls = textContainer.querySelectorAll('p[data-line-index]');
     for (let i = 0; i < (textLines || []).length; i++) {
+      if (mySession !== getTTSSessionId()) {
+        console.log('[TTS]', `playLinesSequence aborted session=${mySession}, current=${getTTSSessionId()}`);
+        break;
+      }
       _triggerImageCue(presentation, i);
       if (!state.tts_on) break;
       const audio = audioList?.[i];
       if (audio) {
         await playLine(_audioPath(audio), _timestampPath(audio), lineEls[i]);
+      }
+      if (mySession !== getTTSSessionId()) {
+        console.log('[TTS]', `playLinesSequence aborted session=${mySession}, current=${getTTSSessionId()}`);
+        break;
       }
       if (!state.tts_on) break;
     }
