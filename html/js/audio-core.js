@@ -113,6 +113,11 @@
     _ttsCancelled = false;
   }
 
+  function invalidateTTSSession(reason = '') {
+    _ttsSessionId++;
+    ttsLog(`invalidateTTSSession reason=${reason} new session=${_ttsSessionId}`);
+  }
+
   function setSpeed(speed) {
     state.speed = speed;
     if (_ttsAudio) _ttsAudio.playbackRate = SPEED_RATE[speed];

@@ -828,6 +828,7 @@
 
   async function renderScene(sceneId) {
     resumeTTS();
+    invalidateTTSSession('renderScene');
     _ensureStoryDOM();
     const scene = _findByScene(_storyList(eventData.story), sceneId);
     if (!scene) {
@@ -2158,6 +2159,7 @@
 
   function enterMap() {
     resumeTTS();
+    invalidateTTSSession('enterMap');
     bindMapResize();
     setGlobalUIState({ music: true, voice: true, speed: true, account: true });
     handleRoomTransition('room-map');
