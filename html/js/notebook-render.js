@@ -83,23 +83,14 @@ function renderNotebookRight(content) {
 }
 
 function _mountNotebookPages() {
-  const left = document.getElementById('page-left');
-  const right = document.getElementById('page-right');
-  const notebookHouse = document.getElementById('notebook-house');
-  if (!left || !right || !notebookHouse) return;
+  const left = document.getElementById('notebook-page-left');
+  const right = document.getElementById('notebook-page-right');
+  if (!left || !right) return;
 
   const leftIds = ['notebook-title-left','notebook-section-adventure','notebook-story-progress','notebook-places','notebook-people','notebook-reflection-title','notebook-reflections'];
   const rightIds = ['notebook-title-right','notebook-learned-points','notebook-anchor-image','notebook-advance-btn'];
 
-  // 先把所有筆記元素歸還到 notebook-house，再清空書頁
-  [...leftIds, ...rightIds].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) notebookHouse.appendChild(el);
-  });
-
-  left.innerHTML = '';
-  right.innerHTML = '';
-
+  // 筆記元素已在 notebook-page-left/right 內，確保順序正確
   leftIds.forEach(id => {
     const el = document.getElementById(id);
     if (el) left.appendChild(el);
@@ -108,7 +99,6 @@ function _mountNotebookPages() {
     const el = document.getElementById(id);
     if (el) right.appendChild(el);
   });
-  _updatePageLeftScrollable();
 }
 
 function returnNotebookElementsToHouse() {
