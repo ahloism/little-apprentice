@@ -308,6 +308,8 @@
 
   function handleRoomTransition(newRoom, options = {}) {
     stopAllAudio();
+    const chapterTagContainer = document.getElementById('scene-chapter-tag-container');
+    if (chapterTagContainer) chapterTagContainer.innerHTML = '';
     const bgmMap = {
       'room-story': 'BGM_01',
       'room-map': 'BGM_01',

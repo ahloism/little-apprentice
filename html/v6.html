@@ -1281,9 +1281,6 @@
 
   async function enterNotebookContent(chapterId) {
     showNotebookPage('content');
-    // 清除故事房殘留的章節標籤
-    const tagContainer = document.getElementById('scene-chapter-tag-container');
-    if (tagContainer) tagContainer.innerHTML = '';
     const backBtn = document.getElementById('notebook-back-to-list-btn');
     if (backBtn) {
       backBtn.style.display = 'block';
