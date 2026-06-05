@@ -3096,7 +3096,6 @@
   // 所有函數（state / showRoom / enterMap / openProgressPanel / cancelTTSQueue）此時均已定義
 
   if (auth) auth.onAuthStateChanged(async (user) => {
-    console.log('[AUTH]', user);
     if (user) {
       state.uid = user.uid;
       document.getElementById('btn-account').textContent = user.displayName || user.email;
