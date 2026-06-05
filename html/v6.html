@@ -454,7 +454,7 @@
         unlockAudioContext();
         if (!auth) return;
         const provider = new firebase.auth.GoogleAuthProvider();
-        auth.signInWithRedirect(provider).catch(e => logError(e.message, 'signInWithRedirect', null));
+        auth.signInWithPopup(provider).catch(e => logError(e.message, 'signInWithPopup', null));
       });
     } else if (!state.current_scene) {
       // 已登入，無進度
@@ -3113,7 +3113,7 @@
       auth.signOut();
     } else {
       const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithRedirect(provider).catch(e => logError(e.message, 'signInWithRedirect', null));
+      auth.signInWithPopup(provider).catch(e => logError(e.message, 'signInWithPopup', null));
     }
   });
 
