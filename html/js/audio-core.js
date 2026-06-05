@@ -12,7 +12,7 @@
   let _ttsResolve = null;
   let _ttsSessionId = 0;
 
-  const TTS_DEBUG = true;
+  const TTS_DEBUG = false;
   function ttsLog(...args) {
     if (TTS_DEBUG) console.log('[TTS]', ...args);
   }
