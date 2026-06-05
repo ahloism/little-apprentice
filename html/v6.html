@@ -1274,9 +1274,23 @@
     });
   }
 
+  async function enterNotebookContent(chapterId) {
+    const backBtn = document.getElementById('notebook-back-to-list-btn');
+    if (backBtn) {
+      backBtn.style.display = 'block';
+      backBtn.onclick = () => showNotebookPage('chapter-list');
+    }
+    try {
+      await loadNotebookData(chapterId);
+      await renderNotebook(chapterId);
+    } catch (e) {
+      console.error('[enterNotebookContent] crash:', e);
+      logError(e?.message || 'enterNotebookContent crash', 'enterNotebookContent', state.uid);
+    }
+  }
+
   function onNotebookChapterSelect(chapterId) {
-    showNotebookPage('content');
-    renderNotebookContent(chapterId, 'catalogue');
+    enterNotebookContent(chapterId);
   }
 
   function renderNotebookContent(chapterId, source = 'story') {
